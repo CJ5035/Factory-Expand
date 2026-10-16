@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, realpathSync, mkdirSync, copyFileSync, renameSync, unlinkSync, openSync, closeSync, fsyncSync, rmSync, mkdtempSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, realpathSync, mkdirSync, copyFileSync, renameSync, unlinkSync, openSync, closeSync, fsyncSync, chmodSync, mkdtempSync } from 'node:fs';
 import { dirname, join, resolve, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -7,6 +7,8 @@ import { openAsar, closeAsar, readEntry, sha256, findEntry } from './asar.mjs';
 import { inspectFuse } from './fuses.mjs';
 
 export const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+const windowsPowerShell = join(process.env.SystemRoot ?? 'C:\\Windows', 'System32/WindowsPowerShell/v1.0/powershell.exe');
+const psPrefix = "$ErrorActionPreference='Stop'; $env:PSModulePath=Join-Path $env:WINDIR 'System32\\WindowsPowerShell\\v1.0\\Modules'; [Console]::OutputEncoding=[Text.UTF8Encoding]::new($false); $OutputEncoding=[Console]::OutputEncoding; ";
 export const patchSetDir = (version) => join(REPO_ROOT, 'patches', version);
 export const fileHash = (file) => sha256(readFileSync(file));
 export const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'));
@@ -43,7 +45,7 @@ export function context(args) {
 
 export function powershell(script) {
   if (process.platform !== 'win32') throw new Error('Factory 0.200.0 installer requires Windows');
-  return execFileSync('pwsh.exe', ['-NoProfile', '-NonInteractive', '-Command', `$ErrorActionPreference='Stop'; ${script}`], { encoding: 'utf8', windowsHide: true }).trim();
+  return execFileSync(windowsPowerShell, ['-NoProfile', '-NonInteractive', '-Command', psPrefix + script], { encoding: 'utf8', windowsHide: true }).trim();
 }
 
 export function assertStopped(ctx) {
@@ -143,8 +145,8 @@ export function withLock(ctx, action) {
   const lease = `${ctx.key}:${process.ppid}`;
   if (process.env.FACTORY_EXPAND_MUTEX !== lease) {
     const quote = (value) => "'" + String(value).replaceAll("'", "''") + "'";
-    const command = `$ErrorActionPreference='Stop'; $mutex=[System.Threading.Mutex]::new($false,'Global\\FactoryExpand-${ctx.key}'); $held=$false; try { try { $held=$mutex.WaitOne(0) } catch [System.Threading.AbandonedMutexException] { $held=$true }; if(-not $held){throw 'Another writer owns the target mutex'}; $env:FACTORY_EXPAND_MUTEX='${ctx.key}:'+$PID; & ${quote(process.execPath)} ${process.argv.slice(1).map(quote).join(' ')}; $code=$LASTEXITCODE } finally { if($held){$mutex.ReleaseMutex()}; $mutex.Dispose() }; exit $code`;
-    try { execFileSync('pwsh.exe', ['-NoProfile', '-NonInteractive', '-Command', command], { stdio: 'inherit', windowsHide: true }); }
+    const command = psPrefix + `$mutex=[System.Threading.Mutex]::new($false,'Global\\FactoryExpand-${ctx.key}'); $held=$false; try { try { $held=$mutex.WaitOne(0) } catch [System.Threading.AbandonedMutexException] { $held=$true }; if(-not $held){throw 'Another writer owns the target mutex'}; $env:FACTORY_EXPAND_MUTEX='${ctx.key}:'+$PID; & ${quote(process.execPath)} ${process.argv.slice(1).map(quote).join(' ')}; $code=$LASTEXITCODE } finally { if($held){$mutex.ReleaseMutex()}; $mutex.Dispose() }; exit $code`;
+    try { execFileSync(windowsPowerShell, ['-NoProfile', '-NonInteractive', '-Command', command], { stdio: 'inherit', windowsHide: true }); }
     catch (error) { if (Number.isInteger(error.status)) process.exitCode = error.status; else throw error; }
     return;
   }
@@ -171,6 +173,10 @@ export function replaceFile(source, target, expectedCurrent) {
   const temporary = `${target}.${randomUUID()}.tmp`;
   try {
     copyFileSync(source, temporary);
+    // A read-only backup is a storage property, not an installed-file property.
+    // Keep an existing target's attributes intact so locked/read-only targets
+    // still fail safely; only normalize the new temporary file before rename.
+    chmodSync(temporary, 0o666);
     if (fileHash(target) !== expectedCurrent) throw new Error(`Target changed before rename: ${target}`);
     renameSync(temporary, target);
   }

@@ -5,4 +5,8 @@ state/
 node_modules/
 *.exe
 *.asar
+*.msi
+*.msix
+*.nupkg
+*.zip
 *.dmp

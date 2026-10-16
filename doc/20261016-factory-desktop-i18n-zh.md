@@ -2,7 +2,7 @@
 
 - 日期：2026-10-16（v6：补齐失败恢复的状态一致性、演练隔离及 GPT‑6.1 Sol 执行交接）
 - 目标版本：Factory Desktop 0.200.0（`C:\Users\11013\AppData\Local\Factory\app-0.200.0`）
-- 状态：**执行中：第 1 项资源提取门禁**（用户于 2026-10-16 授权执行及本地提交，禁止推送远程；逐项 checkpoint）
+- 状态：**第 1–4 项完成；产物已验证，待正式 apply 确认与 UI 验收**（用户于 2026-10-16 授权执行及本地提交，禁止推送远程；真实安装 exe/asar 保持原始哈希，尚未正式 apply）
 
 ## 1. 背景与调查结论
 
@@ -116,7 +116,7 @@ tools/
 
 ## 3. 实施顺序
 
-执行跟踪：1–3 完成；4 进行中；5 待执行。当前会话无 TodoWrite 工具，以本清单及逐项记录跟踪。
+执行跟踪：1–4 完成；5 待代价确认及真实 UI 验收。当前会话无 TodoWrite 工具，以本清单及逐项记录跟踪。实际方案小幅调整共1次（打包后签名的keytar验证方式），其余为实施审查修复和本期components范围具体化。
 
 Dedupe Ticket（第 1 项）：意图＝正确读取原始 asar 并提取限定版本英文资源。查询＝现有 extract/parser/resource 文件、work 中解析工具、资源声明起止与引用。命中＝zcode-expand/scripts/{extract.mjs,lib/asar.mjs,lib/patch.mjs,lib/syntaxcheck.mjs}。决策＝reuse asar，new 受限数据解析/提取工具；现有 extract 不解析资源。解析器内词法、字面量、引用解析和入口函数共同服务此单一目的。package.json/.gitignore/LICENSE 为执行及复用所必需。
 
@@ -132,6 +132,12 @@ Dedupe Ticket（第 3 项）：意图＝首批中文源库及可验证 ESM。查
 
 第 3 项分工与审查记录：单个实施子代理负责 common/settings/components 的正式 JSON；主代理负责 sessions/softwareFactory/inbox/onboarding/errors 及 components 尾部 475 条译文暂存，按文件或固定索引分工，最终 components 由同一代理汇总。复用英文原句字典减少重复，未使用外部翻译服务。构建器及 components 3002 键清单已独立审查通过；common/sessions/三个小 namespace/softwareFactory 和 components 尾部已做中英对照审查，修正两处 Git stash（明确储藏而非 git add 暂存）及一处每个 PR 必须批准的译法。所有这些修复均已核对英文并再次复核。
 
+Dedupe Ticket（第 4 项）：意图＝在一个最小自检脚本内执行隔离安装的状态失败路径。查询＝现有selfcheck、env事务/状态导出、计划三种中断窗口。命中＝tools/selfcheck.mjs 和 scripts/lib/env.mjs 已有导出。决策＝extend selfcheck（快照/CLI子进程/受控状态构造/并发验证回调），不新增框架或正式故障注入入口；临时记录仅在work/backups/state。运行时核查另确认 Windows 自带powershell.exe在重置子进程PSModulePath后签名/CIM均可用，env改为直接使用系统路径并固定UTF-8输出，不要求安装PowerShell7。
+
+第 4 项首次演练：dry-run只读、真实第二文件替换失败恢复、正常apply/重复apply、半完成pair的restore均通过。损坏基线测试错误指向共享pristine；reviewer确认后已改为work内独立工具fixture（复用同一scripts/tools/patches/translations，独立REPO_ROOT/pristine/state）。首次写入由原文件只读属性拒绝，未成功破坏共享基线；原始哈希需在重跑前复核。该修复纠正自检隔离，不变更正式安装语义。
+
+第 4 项第二次演练：前五场景及fixture损坏拒绝通过，进入pending构造时发现copyFile继承readonly属性。根因经主代理及reviewer复核：restore从只读pristine复制会使新安装文件也只读。修复仅把新临时文件chmod为可写，绝不清除现有目标readonly，保持真实第二文件故障有效；自检手工构造状态时只清除work副本目标的readonly。共享pristine及真实安装完整pair哈希均已复核原始正确，未修改共享基线。
+
 以下命令为待实现接口，并非仓库已具备功能。安装操作命令显式传入上述 `--home`；提取工具传入 asar 路径，构建工具从仓库 JSON 读取。使用 Node.js >=18（与复用库要求一致），先检查本机运行时可用。仅在用户批准实施后执行：
 
 1. [x] 先完成正确 asar 读取、基线核验及英文提取可行性验证（2.3），失败即停。→ 验证：19 个 namespace、叶子统计、实际英文抽样和不支持语法拒绝样例。
@@ -146,8 +152,15 @@ Dedupe Ticket（第 3 项）：意图＝首批中文源库及可验证 ESM。查
    - 中文源库：common 380/380、settings 3635/3635、sessions 774/774、softwareFactory 1909/1909、inbox 55/55、onboarding 151/151、errors 11/11；components 本期 3002/3002（全库5718），合计9917叶。目标键及bundle引用证据见 `translations/components-scope.json`，不承诺其它2716个components键已译。
    - 命令：`node tools/build_resource.mjs`、`node tools/selfcheck.mjs`、直接 ESM import 生成模块。全部通过；`translations/build/coverage.json` 保存覆盖率，输出自包含 `resources` 模块。12个资源拒绝样例通过，包括重复插值次数、格式、标签嵌套、自闭合、未知键、null、空串、URL及代码改变。
    - Checkpoint：独立审查后修复两处stash、一处每PR必须批准、设置变更卡Before/After应为“更改前/更改后”（不改日期筛选）。保留原文条目均逐项核对为品牌/代码/URL/纯插值等合理项，没有普通英文整句占位。结构及高风险语义符合目标；未译namespace/键依既有英文fallback，实际UI待第5项。后续接口路径无变化，无新增计划调整。
-4. [ ] 在独立安装副本演练 dry-run、apply 两次、restore、损坏基线拒绝、替换第二个文件失败及 pending 恢复（第二个文件失败用外部条件制造，如对副本内第二个目标设只读或独占占用；中断后 pending 由自检脚本构造状态记录模拟；不向正式脚本加故障注入参数）。→ 验证：成对哈希一致；dry-run 不写安装目录；新翻译包按 restore → build → apply 更新；生成 JS 全部通过语法门禁。
+4. [x] 在独立安装副本演练 dry-run、apply 两次、restore、损坏基线拒绝、替换第二个文件失败及 pending 恢复（第二个文件失败用外部条件制造，如对副本内第二个目标设只读或独占占用；中断后 pending 由自检脚本构造状态记录模拟；不向正式脚本加故障注入参数）。→ 验证：成对哈希一致；dry-run 不写安装目录；新翻译包按 restore → build → apply 更新；生成 JS 全部通过语法门禁。
+   - 最终命令：`node tools/selfcheck.mjs --exercise` 退出0，14场景全部通过；独立完整版本副本（含keytar）为 `work/exercise-5iAg0e/app-0.200.0`，结果 `work/exercise-5iAg0e/results.json`。副本未启动；没有复用用户数据。
+   - 通过：无pristine的首次dry-run（第一次演练）及已有pristine的dry-run均不改安装/基线/state；实际readonly第二文件在exe已替换后失败并成功回原pair及applied缺省状态；正常apply/verify及重复apply字节、mtime、记录不变；只改exe拒绝并可restore；损坏fixture基线/未知构建拒绝；apply与restore双向各3个pending中断窗口均恢复前pair和applied记录，3个只读命令不自动恢复；资源字节变化拒绝原地更新，restore→build→apply成功；live锁拒绝及并发stale接管串行化；真实路径与副本state隔离。
+   - 额外通过：三个cmd入口在同一副本执行apply→verify→restore，均退出0，verify明确报告已应用，restore还原完整原始pair/fuse enabled/Valid签名；cmd未应用时正确转发退出1。每次重建自检537个未修改条目、3个修改/新增条目及3份JS语法，unpacked元数据/外部keytar不变。
+   - 最终构建：`npm run build`、11个scripts/tools源码 `node --check`、`git diff --check` 全通过。最终整体独立review未发现Critical/Important；报告位于忽略的 `.superpowers/sdd/20261016-factory-desktop-i18n-zh/final-review.md`。
+   - Checkpoint：审查修复损坏测试必须使用独立工具fixture、readonly pristine不能把属性传播到新目标；实际故障和六个pending窗口均通过后才勾选本项。共享pristine及真实安装pair保持原始完整哈希；正式apply及认证/语言切换/持久化等UI结论仍未验证。后续仅剩第5项，不能以这些静态和文件验证替代UI验收。
 5. [ ] 准备可审阅产物及演练结果后，正式 apply 前请用户确认关闭完整性校验的代价；执行实际 UI 验收与一次 restore/reapply。→ 验证：下面所有本期项目通过；失败保留诊断并恢复。
+   - 待确认：是否接受正式patch exe后签名失效、关闭asar完整性校验及Factory更新后需重新适配；确认后才可对真实版本目录apply。当前未启动/修改真实应用或用户偏好。
+   - 后续需在真实UI检查：语言列表与中文核心页面、未译回退、English往返、重启与另一窗口读取、IPC保存、系统locale条件、主进程英文回退、keytar实际认证，以及一次restore/reapply。无桌面观察能力时保留未勾选并交人工验收，不以marker替代。
 
 涉及文件限定为 `scripts/lib/{asar,patch,syntaxcheck,env,fuses}.mjs`、`scripts/{apply,restore,verify}.mjs`、三个 `.cmd`、`tools/{extract_en,build_resource}.mjs`、本版本补丁 JSON、翻译 JSON/生成资源，以及必要 `package.json`、`.gitignore`、复用代码许可证和一个最小自检脚本（覆盖状态失败路径与资源拒绝样例，不加测试框架）。保留 MIT 版权声明。`.gitignore` 排除 work/pristine/backups/state/安装包及 dry-run 产物，避免当前未跟踪的 work 进入提交。不修改复用来源目录，不添加 GUI、自动更新适配、通用解析器、课程翻译或主进程 desktop 译文。
 
@@ -170,7 +183,7 @@ Dedupe Ticket（第 3 项）：意图＝首批中文源库及可验证 ESM。查
 - [ ] 切回 English 正常；重启后偏好保持
 - [ ] 中文选择经 IPC 保存成功；重启及另一窗口读取中文，不出现 Unsupported app locale 或写入校验失败
 - [ ] 中文系统 locale 首次启动可加载；主进程菜单与对话框回退英文，现有其他语言可切换
-- [ ] `verify.cmd` 明确报告已应用；修改资源/只改一个文件须失败；重复 apply 无额外修改
+- [x] `verify.cmd` 明确报告已应用；修改资源/只改一个文件须失败；重复 apply 无额外修改（安装副本通过，真实安装仍待第5项）
 - [ ] `restore.cmd` 成对还原完整原始哈希与 fuse enabled；签名恢复；应用可启动。restore 不删除用户偏好，原版 UI 遇到中文偏好应按原有支持列表回退
 - [ ] 失败恢复与 pending 恢复在副本通过；keytar 外部文件及 unpacked 元数据不变，实际认证功能正常
 
@@ -227,4 +240,4 @@ Dedupe Ticket（第 3 项）：意图＝首批中文源库及可验证 ESM。查
 
 ---
 
-**请确认方案后开始实施。** 待确认要点：① 接受 patch exe 关闭 asar 完整性校验（适配 1，代价：exe 签名失效、Factory 更新后需重跑管线）——待确认；② 仓库 `F:\GitHubs\Factory-Expand`（git remote 已指向 git@github.com:CJ5035/Factory-Expand.git）——用户已确认。
+**实施及本地提交已获授权，禁止推送远程。** 第1–4项已执行并记录；按第5项，真实安装正式apply前仍需确认关闭asar完整性校验的代价（exe签名失效、Factory更新后需重新适配）。仓库 `F:\GitHubs\Factory-Expand` 已确认；本次未执行push，也未正式apply。
