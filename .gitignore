@@ -1,0 +1,8 @@
+work/
+pristine/
+backups/
+state/
+node_modules/
+*.exe
+*.asar
+*.dmp

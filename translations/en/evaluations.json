@@ -1,0 +1,66 @@
+{
+  "evaluationDatasetChatShell": {
+    "datasetChat": "Dataset chat",
+    "chooseAComputerAndRetry": "Choose a computer and retry",
+    "createTitle": "Create a dataset",
+    "createDescription": "Describe the work you want to measure. Droid drafts the tasks, validates each one, and checks with you before publishing.",
+    "createPlaceholder": "What do we want to measure?",
+    "updateTitle": "Update this dataset",
+    "updateDescription": "Describe what should change. Droid starts from version {{version}}, validates every task again, and checks with you before publishing.",
+    "updatePlaceholder": "What should change in this version?",
+    "selectSkillsTitle": "Select skills to benchmark",
+    "selectSkillsEmpty": "No skills found. Publish skills to an organization plugin marketplace, or add them to the .factory/skills folder in this working directory.",
+    "loadingComputerSkills": "Loading skills from this computer…"
+  },
+  "evaluationPresets": {
+    "cancel": "Cancel",
+    "deletePreset": "Delete preset",
+    "deletePresetTitle": "Delete preset?",
+    "deleteDescription": "Delete {{name}} for everyone in your organization? Existing runs are not affected.",
+    "duplicateName": "{{name}} copy"
+  },
+  "filePreview": {
+    "binary": "Binary file. A text preview is not available.",
+    "tooLarge": "This file exceeds the preview size limit.",
+    "symlink": "Symbolic links are not followed in file previews."
+  },
+  "evaluationSkillFiles": {
+    "loading": "Loading skill files…",
+    "unavailable": "Skill files are unavailable."
+  },
+  "evaluationTaskFiles": {
+    "loading": "Loading files…",
+    "filesUnavailable": "Files unavailable",
+    "noFiles": "No files",
+    "listingTooLarge": "The file listing exceeds the preview size limit.",
+    "truncatedNotice": "Some files are omitted because the preview limit was reached."
+  },
+  "evaluationCreateDataset": {
+    "datasets": "Datasets",
+    "newDataset": "New dataset",
+    "draft": "Draft",
+    "newVersionOf": "New version of {{name}}"
+  },
+  "evaluations": {
+    "listViews": {
+      "datasets": "Datasets",
+      "allDatasets": "All datasets",
+      "runs": "Runs",
+      "allRuns": "All runs"
+    },
+    "tabs": {
+      "library": "Library",
+      "presets": "Presets"
+    },
+    "createDataset": "Create dataset",
+    "runNotFound": "Run not found",
+    "runNotReported": "This evaluation has not reported results yet.",
+    "datasetNotFound": "Dataset not found",
+    "datasetNotInLibrary": "\"{{name}}\" is not in this dataset library.",
+    "versionNotFound": "Version not found",
+    "versionNotFoundDescription": "Version \"{{version}}\" was not found in {{dataset}}.",
+    "latestVersion": "Latest version",
+    "tasksUnavailable": "Tasks unavailable",
+    "couldNotLoadVersion": "Could not load this version."
+  }
+}

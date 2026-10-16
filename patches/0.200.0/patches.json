@@ -1,0 +1,34 @@
+{
+  "appVersion": "0.200.0",
+  "addFiles": [{ "from": "translations/build/resources-zh-CN.js", "to": ".vite/renderer/main_window/assets/resources-zh-CN.js" }],
+  "targets": [
+    {
+      "file": ".vite/renderer/main_window/assets/index-CCcgJ39D.js",
+      "edits": [
+        {
+          "find": "[qu.English,qu.Japanese,qu.Korean,qu.German,qu.Spanish,qu.Italian,qu.Polish,qu.French]",
+          "replace": "[qu.English,qu.Japanese,qu.Korean,qu.German,qu.Spanish,qu.Italian,qu.Polish,qu.French,qu.ChineseSimplified]",
+          "expect": 1,
+          "marker": "[qu.English,qu.Japanese,qu.Korean,qu.German,qu.Spanish,qu.Italian,qu.Polish,qu.French,qu.ChineseSimplified]"
+        },
+        {
+          "find": "[qu.French]:async()=>await Bt(()=>import(\"./resources-9trfPLHd.js\"),[],import.meta.url)",
+          "replace": "[qu.French]:async()=>await Bt(()=>import(\"./resources-9trfPLHd.js\"),[],import.meta.url),[qu.ChineseSimplified]:async()=>await Bt(()=>import(\"./resources-zh-CN.js\"),[],import.meta.url)",
+          "expect": 1,
+          "marker": "[qu.French]:async()=>await Bt(()=>import(\"./resources-9trfPLHd.js\"),[],import.meta.url),[qu.ChineseSimplified]:async()=>await Bt(()=>import(\"./resources-zh-CN.js\"),[],import.meta.url)"
+        }
+      ]
+    },
+    {
+      "file": ".vite/build/initLifecycle-C1amcziW.js",
+      "edits": [
+        {
+          "find": "[Se.English,Se.Japanese,Se.Korean,Se.German,Se.Spanish,Se.Italian,Se.Polish,Se.French]",
+          "replace": "[Se.English,Se.Japanese,Se.Korean,Se.German,Se.Spanish,Se.Italian,Se.Polish,Se.French,Se.ChineseSimplified]",
+          "expect": 1,
+          "marker": "[Se.English,Se.Japanese,Se.Korean,Se.German,Se.Spanish,Se.Italian,Se.Polish,Se.French,Se.ChineseSimplified]"
+        }
+      ]
+    }
+  ]
+}

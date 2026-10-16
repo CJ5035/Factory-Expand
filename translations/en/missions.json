@@ -1,0 +1,276 @@
+{
+  "missionEntryBlockModal": {
+    "cancel": "Cancel",
+    "setOveragePreference": "Set overage preference",
+    "missionAccessBlocked": "Mission access blocked",
+    "overageRequiredTitle": "Usage overage configuration required",
+    "restrictedTitle": "Missions restricted",
+    "overageRequiredDescription": "Missions are designed for complex, multi-step work and run autonomously for multiple hours or days. To run Missions, select what happens when your Standard Usage runs out by configuring an overage preference in Usage settings.",
+    "restrictedDescription": "Missions have been restricted by your organization admin. Contact your admin to request access."
+  },
+  "missionFeatureDetail": {
+    "backToChat": "Back to chat",
+    "description": "Description",
+    "preconditions": "Preconditions",
+    "expectedBehavior": "Expected Behavior",
+    "fulfills": "Fulfills",
+    "milestone": "Milestone: {{milestone}}",
+    "unassignedMilestone": "Unassigned milestone",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In progress",
+      "notStarted": "Not started",
+      "cancelled": "Cancelled"
+    }
+  },
+  "missionFeaturesSection": {
+    "features": "Features",
+    "noFeaturesDefinedYet": "No features defined yet",
+    "milestoneHeading": "Milestone {{number}}: {{title}}"
+  },
+  "missionHeader": {
+    "openSidebar": "Open sidebar",
+    "mission": "⛬ MISSION",
+    "time": "Time",
+    "usage": "Usage",
+    "factoryStandardCredits": "Factory Standard Credits",
+    "fiveHourUsage": "5-hour usage: {{percent}}",
+    "resetsIn": "Resets in {{time}}",
+    "activeTime": "Active time: {{time}}",
+    "avgPerMilestone": "Avg per milestone: {{time}}",
+    "avgPerFeature": "Avg per feature: {{time}}",
+    "pause": "Pause",
+    "resuming": "Resuming",
+    "resume": "Resume",
+    "disconnected": "Disconnected",
+    "untitledMission": "Mission",
+    "progress": "Progress"
+  },
+  "missionOnboardingModal": {
+    "cancel": "Cancel",
+    "runAgentReadinessReport": "Run agent readiness report",
+    "fixAgentReadinessReport": "Fix agent readiness report",
+    "missionsAutonomousMultiAgentExecution": "Missions - Autonomous Multi-Agent Execution",
+    "howItWorks": "How it works:",
+    "text1DescribeYourGoal": "1. Describe your goal",
+    "text2ReviewAndApproveTheMission": "2. Review and approve the mission plan",
+    "text3DroidExecutesFeaturesAutonomously": "3. Droid executes features autonomously",
+    "text4ValidationOccursAtMilestones": "4. Validation occurs at milestones",
+    "keyConcepts": "Key concepts:",
+    "orchestratorPlansAndManagesTheMission": "• Orchestrator — Plans and manages the mission",
+    "workersExecuteIndividualFeatures": "• Workers — Execute individual features",
+    "milestonesGroupsOfFeaturesWithValidation": "• Milestones — Groups of features with validation",
+    "warnings": "Warnings:",
+    "notForSimpleTasksDesignedFor": "• Not for simple tasks — designed for complex, multi-step work",
+    "runsForMultipleHoursOrDays": "• Runs for multiple hours or days autonomously",
+    "significantlyHigherTokenUsageComparedTo": "• Significantly higher token usage compared to regular sessions",
+    "repositoryNotAgentReady": "Repository not agent-ready",
+    "proceedAnyway": "Proceed anyway",
+    "continue": "Continue"
+  },
+  "missionProgressLogSection": {
+    "progressLog": "Progress Log",
+    "noProgressEntriesYet": "No progress entries yet"
+  },
+  "missionSessionSidebar": {
+    "model": "Model",
+    "orchestrator": "Orchestrator",
+    "worker": "Worker",
+    "validator": "Validator"
+  },
+  "missionSessionsSidebar": {
+    "backToApp": "Back to App",
+    "filterMissionSessionsByType": "Filter mission sessions by type",
+    "noSessionsMatchThisFilter": "No sessions match this filter.",
+    "filter": {
+      "all": "All",
+      "workers": "Workers",
+      "validators": "Validators"
+    },
+    "fallbackSessionName": "Session {{id}}",
+    "workerNumber": "Worker #{{number}}",
+    "validatorNumber": "Validator #{{number}}",
+    "sessions": "Sessions",
+    "awaitingYourInput": "Awaiting your input",
+    "orchestrator": "Orchestrator",
+    "milestoneHeading": "Milestone {{number}}: {{title}}"
+  },
+  "newMissionButtonV2": {
+    "newMission": "New Mission"
+  },
+  "newMissionDialog": {
+    "remoteAccessWillBeTurnedOn": "Remote Control will be turned on for this computer so agents on other machines can reach it.",
+    "orchestratorMachine": "Orchestrator machine",
+    "workingDirectory": "Working directory",
+    "workingDirectoryValue": "Working directory: {{path}}",
+    "workingDirectoryHelper": "The orchestrator starts in {{path}}. Agents on this machine start there too.",
+    "branch": "Branch",
+    "branchValue": "Branch: {{branch}}",
+    "branchValueWorktree": "Branch: {{branch}}, in a new worktree",
+    "locationBranchHelper": "The orchestrator starts in {{path}} on {{branch}}. Agents on this machine share that checkout.",
+    "locationDetachedHelper": "The orchestrator starts in {{path}} on its current checkout. Agents on this machine share it.",
+    "locationWorktreeHelper": "The orchestrator starts in a new worktree of {{path}} on {{branch}}, cut from {{base}}. Agents on this machine share it.",
+    "locationWorktreeFromTitleHelper": "The orchestrator starts in a new worktree of {{path}}, cut from {{base}} on a branch named after the mission. Agents on this machine share it.",
+    "locationWorktreeExistingHelper": "The orchestrator starts in a new worktree of {{path}} on {{branch}}. Agents on this machine share it.",
+    "branchSwitchInProgress": "The folder is still switching branches. Try again once it has finished.",
+    "checkingWorkingDirectory": "Checking the folder…",
+    "connectingToListFolders": "Connecting to {{computer}} to list its folders…",
+    "lostConnectionToComputer": "Lost the connection to {{computer}}. Pick the folder again once it reconnects.",
+    "couldNotOpenFolderPicker": "The folder picker could not be opened.",
+    "folderPathOn": "Folder path on {{computer}}",
+    "useFolder": "Use folder",
+    "tryAgain": "Try again",
+    "aTemplateCreatesAFreshComputer": "An environment creates a fresh computer at mission start.",
+    "loadingMachines": "Loading machines…",
+    "localRequiresDesktopApp": "Local machines require the Factory desktop app.",
+    "loadingOrganizationSettings": "Loading organization settings…",
+    "localComputersDisabled": "Your organization has disabled local computers.",
+    "syncSettingsCouldNotLoad": "Your organization’s sync settings could not load. Agents run on the orchestrator machine.",
+    "complianceDisablesCloudSync": "Your organization’s compliance policy disables cloud sync. Agents run on the orchestrator machine.",
+    "cannotVerifyMultiMachine": "Factory cannot verify whether your organization permits multi-machine missions. Agents run on the orchestrator machine. Ask an administrator to check Compliance Settings.",
+    "remoteAccessNotAllowed": "Your organization doesn’t allow Remote Control of this computer. Agents run on the orchestrator machine.",
+    "computerNotRegistered": "This computer isn’t registered for Remote Control. Agents run on the orchestrator machine. Open Settings › This Computer to register it.",
+    "settingsChangedDuringStartup": "Mission settings changed during startup. Review the required fields before continuing.",
+    "chooseAvailableOrchestrator": "Choose an available orchestrator machine.",
+    "missionDefaultsCouldNotLoad": "Your Mission Defaults could not load. Agents run on the orchestrator machine.",
+    "startWithoutRemoteAgents": "Start without remote agents",
+    "cancel": "Cancel",
+    "start": "Start",
+    "selectOrchestratorMachine": "Select an orchestrator machine",
+    "team": "Team",
+    "teamHelper": "The team this mission is attributed to.",
+    "noTeam": "No team",
+    "launch": {
+      "turnOnRemoteControl": "Turn on Remote Control",
+      "createComputer": "Create a computer from {{environment}}",
+      "setUpComputer": "Set up the orchestrator computer",
+      "connectToThisComputer": "Connect to this computer",
+      "connectToMachine": "Connect to {{machine}}",
+      "connectToComputer": "Connect to the orchestrator computer",
+      "startOrchestrator": "Start the orchestrator",
+      "openMission": "Open the mission",
+      "agentMachines": "Agent machines"
+    },
+    "machineSummary": {
+      "defaultAndYours_one": "Agents can use {{defaultMachine}} and one of your machines.",
+      "defaultAndYours_other": "Agents can use {{defaultMachine}} and {{count}} of your machines.",
+      "defaultOnly": "Agents can use {{defaultMachine}}.",
+      "yoursOnly_one": "Agents can use one of your machines.",
+      "yoursOnly_other": "Agents can use {{count}} of your machines."
+    }
+  },
+  "missionControl": {
+    "title": "Title",
+    "repository": "Repository",
+    "computer": "Computer",
+    "progress": "Progress",
+    "created": "Created",
+    "missionControl": "Mission Control",
+    "newMission": "New Mission",
+    "createANewMissionToStart": "Create a new mission to start planning and dispatching workers.",
+    "description": "Plan and ship long-horizon projects with a team of Droids working in parallel. Reach for a Mission when the work spans hours or days, multiple features, or more than one session can handle.",
+    "filter": {
+      "all": "All",
+      "running": "Running",
+      "paused": "Paused",
+      "completed": "Completed"
+    },
+    "empty": {
+      "all": "No missions yet",
+      "running": "No running missions",
+      "paused": "No paused missions",
+      "completed": "No completed missions"
+    },
+    "localComputer": "Local",
+    "unregisteredComputer": "Unregistered computer",
+    "failedToLoadMissions": "Failed to load missions"
+  },
+  "missionStatus": {
+    "planning": "Planning",
+    "awaitingInput": "Awaiting input",
+    "initializing": "Initializing",
+    "running": "Running",
+    "paused": "Paused",
+    "orchestratorTurn": "Orchestrator turn",
+    "completed": "Completed"
+  },
+  "newMissionComputerStartup": {
+    "startTimedOut": "The orchestrator computer is taking too long to start. Retry to check its progress.",
+    "provisionFailed": "The orchestrator computer failed to provision. Choose another environment or retry.",
+    "preparing": "Preparing the orchestrator computer…"
+  },
+  "progressLog": {
+    "missionAccepted": "Mission accepted",
+    "missionPaused": "Mission paused",
+    "missionResumed": "Mission resumed",
+    "runStarted": "Run started",
+    "runStartedWithMessage": "Run started: {{message}}",
+    "handoffItemsDismissed": "Handoff items dismissed",
+    "role": {
+      "orchestrator": "Orchestrator",
+      "worker": "Worker",
+      "validator": "Validator"
+    },
+    "roleWithNumber": "{{role}} #{{number}}",
+    "started": "<role/> started <target/>",
+    "startedSubstituted": "<role/> started <target/> (<fromModel/> blocked by org policy, using <toModel/>)",
+    "startedSubstitutedWithLabel": "<role/> started (<fromModel/> blocked by org policy, using <toModel/>) <target/>",
+    "fallbackModel": "fallback model",
+    "selected": "<role/> selected <target/>",
+    "completed": "<role/> completed <target/>",
+    "failed": "<role/> failed",
+    "failedWithReason": "<role/> failed: <reason/>",
+    "failedWithLabel": "<role/> failed <target/>",
+    "failedWithReasonAndLabel": "<role/> failed: <reason/> <target/>",
+    "paused": "<role/> paused <target/>"
+  },
+  "missionV2Agents": {
+    "needsApprovalToRun": "Needs approval to run {{tool}}",
+    "needsApprovalToRunAndMore_one": "Needs approval to run {{tool}} and {{count}} more tool",
+    "needsApprovalToRunAndMore_other": "Needs approval to run {{tool}} and {{count}} more tools",
+    "needsYourApproval": "Needs your approval",
+    "hasQuestions_one": "Has {{count}} question for you",
+    "hasQuestions_other": "Has {{count}} questions for you",
+    "fallbackAgentName": "Agent {{id}}",
+    "group": {
+      "waitingOnYou": "Waiting on you",
+      "working": "Working",
+      "idle": "Idle"
+    },
+    "newAgent": "New agent",
+    "activity": {
+      "computerGone": "Computer is gone",
+      "computerStatus": "Computer {{status}}",
+      "computerStatusUnavailable": "Computer status unavailable",
+      "settingUpComputer": "Setting up a computer",
+      "starting": "Starting",
+      "working": "Working"
+    }
+  },
+  "missionChatComposer": {
+    "missionRunning": "Mission is running. Pause to send messages.",
+    "workerCompleted": "Worker has completed. Return to the orchestrator to continue.",
+    "validatorCompleted": "Validator has completed. Return to the orchestrator to continue."
+  },
+  "workerSessionTitle": {
+    "fallback": "Worker {{id}}"
+  },
+  "changeMissionTeamDialog": {
+    "title": "Change team",
+    "team": "Team",
+    "loadingTeams": "Loading teams…",
+    "teamsUnavailable": "Teams are unavailable right now.",
+    "saveFailed": "Could not change the team. Try again.",
+    "teamHelper": "The team this mission is attributed to.",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving…"
+  },
+  "missionSettings": {
+    "defaultOption": "Default ({{name}})",
+    "defaultOptionUnknown": "Default",
+    "modelsNeedConnection": "Models can change only while a connected computer runs this mission's orchestrator.",
+    "modelsNeedOpenMission": "Open the mission once to change its models from here.",
+    "modelSaveFailed": "Couldn't change the model. Try again."
+  }
+}

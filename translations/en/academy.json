@@ -1,0 +1,260 @@
+{
+  "academyCallout": {
+    "info": "Info",
+    "tip": "Tip",
+    "warning": "Warning",
+    "danger": "Danger",
+    "tryIt": "Try It"
+  },
+  "difficultyBadge": {
+    "beginner": "Basic",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "academyLessonNav": {
+    "previous": "Previous: {{title}}",
+    "next": "Next: {{title}}",
+    "takeQuiz": "Take Quiz"
+  },
+  "academyModuleCard": {
+    "completed": "Completed",
+    "locked": "Locked",
+    "lockedUnlocksAfter": "Locked. Unlocks after passing {{title}}.",
+    "unlocksAfter": "Unlocks after passing {{title}}.",
+    "lessonsAndDuration": "{{lessonCount}} lessons · {{duration}}"
+  },
+  "academyQuizRunner": {
+    "thisQuizDoesntHaveAnyQuestions": "This quiz doesn't have any questions yet. Please check back later.",
+    "noQuestionsAvailable": "No questions available",
+    "ifYouLeaveBeforeFinishingYour": "If you leave before finishing, your answers will not be saved and you will need to retake the quiz from scratch.",
+    "beforeYouStart": "Before you start",
+    "passRequirement": "You'll need {{passScore}}/{{total}} correct ({{percent}}%) to pass.",
+    "startQuiz": "Start quiz",
+    "scoreSummary": "You scored {{score}} out of {{total}} ({{percent}}%)",
+    "congratulations": "Congratulations!",
+    "notQuiteThereYet": "Not quite there yet",
+    "youPassed": "You passed the quiz!",
+    "needToPass": "You need {{passScore}} correct answers ({{percent}}%) to pass.",
+    "retakeQuiz": "Retake Quiz",
+    "certificationEarned": "🎓 {{name}} Certification Earned!",
+    "runningScore": "Score: {{score}}/{{answered}}",
+    "questionProgress": "Question {{current}} of {{total}}",
+    "questionPrefix": "Q: {{question}}",
+    "submitAnswer": "Submit Answer",
+    "submitting": "Submitting…",
+    "seeResults": "See Results",
+    "nextQuestion": "Next Question"
+  },
+  "academyLanding": {
+    "factoryAcademy": "Factory Academy",
+    "description": "Master Factory Droid through hands-on courses — from fundamentals to advanced workflows, at your own pace. Work through three tiers of courses — Droid Essentials, Droid Specialist, and Droid Master — earning a certification as you complete each tier. Each module's quiz unlocks once you pass the prerequisites in earlier modules.",
+    "yourCertifications": "Your Certifications"
+  },
+  "certificationsSection": {
+    "earned": "Earned {{date}}",
+    "modulesPassed": "{{passed}} / {{total}} modules passed"
+  },
+  "academyLesson": {
+    "academy": "Academy",
+    "lessonNotFound": "Lesson not found.",
+    "failedToLoadLessonContent": "Failed to load lesson content."
+  },
+  "academyModule": {
+    "moduleNotFound": "Module not found.",
+    "takeQuiz": "Take the {{title}} Quiz",
+    "retakeQuiz": "Retake the {{title}} Quiz"
+  },
+  "academyQuiz": {
+    "moduleNotFound": "Module not found.",
+    "academy": "Academy",
+    "quiz": "Quiz",
+    "title": "{{title}} Quiz",
+    "failedToLoadQuiz": "Failed to load quiz."
+  },
+  "modules": {
+    "fundamentals": {
+      "title": "Droid 101: Fundamentals",
+      "description": "Learn the fundamentals of using Droid from installation to advanced autonomy settings."
+    },
+    "useCases": {
+      "title": "Droid 102: Use-cases",
+      "description": "Explore common engineering use-cases with Droid: writing production code, debugging, refactoring, exploring codebases, and writing tests."
+    },
+    "customizations": {
+      "title": "Droid 201: Droid Customizations",
+      "description": "Master Factory customization features: AGENTS.md, Skills, Custom Droids, Hooks, Plugins, Marketplace, and power-user techniques."
+    },
+    "automations": {
+      "title": "Droid 202: Automations",
+      "description": "Run Droid on a schedule or in response to events to automate recurring engineering and operational work."
+    },
+    "missions": {
+      "title": "Droid 203: Missions",
+      "description": "Master multi-agent orchestration for large-scale development projects with structured planning and execution."
+    },
+    "exec": {
+      "title": "Droid 301: Droid Exec",
+      "description": "Master headless automation with Droid Exec for CI/CD pipelines, GitHub Actions, and interactive applications."
+    },
+    "agentReadiness": {
+      "title": "Droid 302: Agent Readiness",
+      "description": "Understand your codebase maturity and prepare for autonomous AI-assisted development."
+    }
+  },
+  "lessons": {
+    "fundamentals": {
+      "installation": {
+        "title": "Installation & Setup",
+        "description": "Install Factory CLI, authenticate your account, and launch your first Droid session."
+      },
+      "firstSession": {
+        "title": "Your First Droid Session",
+        "description": "Learn how to start Droid, ask questions, make code changes, and manage your session context."
+      },
+      "droidSettings": {
+        "title": "Understanding Droid Settings",
+        "description": "Understand the various settings and configurations available in Droid to customize your experience."
+      },
+      "specMode": {
+        "title": "Spec Mode",
+        "description": "Learn how to use Spec Mode to improve planning and generate better results."
+      },
+      "toolsMcp": {
+        "title": "Connecting To Tools With MCP And CLI Utilities",
+        "description": "Learn what MCP is, how to add servers, and how to use CLI utilities."
+      },
+      "bestPractices": {
+        "title": "General Best Practices For Using Droid",
+        "description": "Learn the best practices for writing prompts, implementing large features, and using auto-run effectively."
+      }
+    },
+    "useCases": {
+      "writingProductionCode": {
+        "title": "Writing Production Code",
+        "description": "Collaborate with Droid to ship production-grade code with clear specs, iterative implementation, and reviewable changes."
+      },
+      "debugging": {
+        "title": "Debugging with Droid",
+        "description": "Use Droid as a debugging partner to isolate faults, reason about stack traces, and narrow down root causes."
+      },
+      "refactoring": {
+        "title": "Refactoring Safely",
+        "description": "Refactor large or unfamiliar code with Droid while preserving behavior through tests, incremental edits, and explicit contracts."
+      },
+      "exploringCodebases": {
+        "title": "Exploring Unfamiliar Codebases",
+        "description": "Onboard faster into a new repository by using Droid to map architecture, trace call paths, and summarize key modules."
+      },
+      "writingTests": {
+        "title": "Writing Tests",
+        "description": "Generate and maintain unit, integration, and end-to-end tests with Droid while keeping suites fast and reliable."
+      }
+    },
+    "customizations": {
+      "agentsMd": {
+        "title": "AGENTS.md & /init",
+        "description": "Learn how to write effective AGENTS.md files and use the /init command to bootstrap your project context."
+      },
+      "skills": {
+        "title": "Skills",
+        "description": "Learn to create and manage Skills — reusable capabilities that extend what Droid can do."
+      },
+      "customDroids": {
+        "title": "Custom Droids",
+        "description": "Create specialized subagents with constrained toolsets for focused tasks like code review, security scanning, and documentation."
+      },
+      "hooks": {
+        "title": "Hooks",
+        "description": "Configure deterministic lifecycle actions with Hooks for formatting, logging, notifications, and custom permissions."
+      },
+      "plugins": {
+        "title": "Plugins",
+        "description": "Install and manage Plugins — distributable bundles of skills, commands, agents, hooks, and MCP servers."
+      },
+      "marketplace": {
+        "title": "Marketplace",
+        "description": "Subscribe to external marketplaces, or create internal ones to share and discover plugins across your organization."
+      }
+    },
+    "automations": {
+      "whatAreAutomations": {
+        "title": "What Are Automations",
+        "description": "Understand how Droid Automations run on your behalf on a schedule or in response to events to handle recurring work."
+      },
+      "scheduledAutomations": {
+        "title": "Scheduled Automations",
+        "description": "Run Droid on a cadence to keep dashboards fresh, triage issues, rotate credentials, and produce recurring reports."
+      },
+      "eventTriggers": {
+        "title": "Event-Triggered Automations",
+        "description": "Hook Droid into your systems so inbound events — pull requests, alerts, webhooks, or ticket updates — trigger the right automation."
+      },
+      "writingAutomationPrompts": {
+        "title": "Writing Effective Automation Prompts",
+        "description": "Write durable prompts for Automations with scoped inputs, explicit success criteria, and clear failure modes."
+      }
+    },
+    "missions": {
+      "whatAreMissions": {
+        "title": "What are Missions",
+        "description": "Understand Missions — a structured approach to large-scale work with collaborative planning and orchestrated execution."
+      },
+      "planningPhase": {
+        "title": "The Planning Phase",
+        "description": "Learn why the planning phase is critical to Mission success and how to build effective plans with milestones and validation contracts."
+      },
+      "execution": {
+        "title": "Mission Execution & Workers",
+        "description": "Understand how Missions execute work through worker sessions, feature assignment, and skill-aware orchestration."
+      },
+      "validation": {
+        "title": "Validation & Quality",
+        "description": "Learn how Missions ensure quality through automated validators, milestone checkpoints, and the scrutiny and user testing workflows."
+      },
+      "missionControl": {
+        "title": "Working with Mission Control",
+        "description": "Learn how to monitor, intervene, and redirect Missions through Mission Control, and how configuration inheritance works."
+      }
+    },
+    "exec": {
+      "whatIsDroidExec": {
+        "title": "What is Droid Exec",
+        "description": "Understand Droid Exec headless mode, its execution model, and get started with basic commands."
+      },
+      "autonomyAndOutput": {
+        "title": "Autonomy & Output Formats",
+        "description": "Configure autonomy levels for secure automation and choose the right output format for your workflow."
+      },
+      "githubActions": {
+        "title": "GitHub Actions Integration",
+        "description": "Integrate Droid Exec with GitHub Actions for automated PR reviews, documentation updates, and security scanning."
+      },
+      "codeReview": {
+        "title": "Automated Code Review",
+        "description": "Set up the Factory GitHub App for automated code review with custom instructions and severity levels."
+      },
+      "interactiveApps": {
+        "title": "Building Interactive Apps",
+        "description": "Learn the core pattern for building interactive applications that stream Droid responses in real-time."
+      },
+      "codeReviewPowerUser": {
+        "title": "Code Review with Droid",
+        "description": "Use the /review command for AI-powered code analysis with multiple review types, custom instructions, and severity levels."
+      }
+    },
+    "agentReadiness": {
+      "whatIsAgentReadiness": {
+        "title": "What is Agent Readiness",
+        "description": "Understand the Agent Readiness Model and its vision for autonomous software development."
+      },
+      "readinessLevels": {
+        "title": "How to Improve Your Agent Readiness Level",
+        "description": "Use Droid and the readiness reports to identify gaps and take actionable steps to advance your codebase maturity."
+      }
+    }
+  },
+  "duration": {
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min"
+  }
+}

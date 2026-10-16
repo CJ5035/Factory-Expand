@@ -1,0 +1,18 @@
+{
+  "repositoryArtifactAccessNudge": {
+    "privateShareLinksRequireRepoAccess": "Private share links require repo access. If you can't open this Wiki or Readiness Report, connect your source control account in Factory so we can verify your repository access.",
+    "organizationSharingUsesYourFactoryOrg": "Organization sharing uses your Factory org access. Anyone in this Factory organization can open organization links when the repo is covered by an organization source control integration.",
+    "privateWikisAndReadinessReportsAre": "Private Wikis and Readiness Reports are shown based on repository access. Connect your source control account so Factory can verify access and surface artifacts for repos you can access.",
+    "manageSourceControl": "Manage source control"
+  },
+  "shareRepositoryArtifactModal": {
+    "visibility": "Visibility",
+    "usersWithAccessToThisRepository": "Users with access to this repository",
+    "private": "Private",
+    "anyoneInYourOrganizationWithThe": "Anyone in your organization with the link",
+    "organization": "Organization",
+    "shareLink": "Share Link",
+    "shareWiki": "Share Wiki",
+    "shareReadinessReport": "Share Readiness Report"
+  }
+}

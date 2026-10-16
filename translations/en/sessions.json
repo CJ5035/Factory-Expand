@@ -1,0 +1,1008 @@
+{
+  "createPrform": {
+    "createPullRequest": "Create Pull Request",
+    "comparing": "Comparing",
+    "title": "Title",
+    "prTitle": "PR title",
+    "description": "Description",
+    "optionalDescription": "Optional description...",
+    "createAsDraft": "Create as draft"
+  },
+  "diffViewerPanel": {
+    "reviewers": "Reviewers",
+    "checks": "Checks",
+    "allChecksPassed": "All checks passed",
+    "failing": "Failing",
+    "fixInSession": "Fix in session",
+    "semanticDiff": "Semantic Diff",
+    "changes": "Changes",
+    "readyToMerge": "ready to merge",
+    "files": "Files",
+    "unstagedChanges": "Unstaged Changes",
+    "commitMessage": "Commit message...",
+    "commit": "Commit",
+    "generatingSemanticDiff": "Generating semantic diff...",
+    "retry": "Retry",
+    "gitDiffUnavailable": "Git diff unavailable",
+    "description": "Description",
+    "regenerateSemanticDiff": "Regenerate semantic diff",
+    "thisWillDiscardTheCurrentSemantic": "This will discard the current semantic diff result.",
+    "cancel": "Cancel",
+    "regenerate": "Regenerate",
+    "unavailable": {
+      "missingSessionCwd": "Session is not ready or does not have a working directory.",
+      "notGitRepository": "This session working directory is not a Git repository.",
+      "gitNotAvailable": "Git is not available in this session environment.",
+      "unknown": "Git diff is unavailable for this session."
+    },
+    "copied": "Copied!",
+    "copyBranchName": "Copy branch name",
+    "ciStatus": {
+      "inProgress": "In progress",
+      "passed": "Passed",
+      "failed": "Failed",
+      "cancelled": "Cancelled",
+      "timedOut": "Timed out",
+      "skipped": "Skipped",
+      "completed": "Completed"
+    },
+    "reviewerStatus": {
+      "approved": "Approved",
+      "changesRequested": "Changes requested",
+      "pending": "Pending",
+      "commented": "Commented",
+      "dismissed": "Dismissed"
+    },
+    "prStatus": {
+      "merged": "merged",
+      "closed": "closed",
+      "draft": "draft",
+      "open": "open"
+    },
+    "ciSummary": {
+      "failing": "{{count}} failing",
+      "successful": "{{count}} successful",
+      "skipped": "{{count}} skipped",
+      "pending": "{{count}} pending"
+    },
+    "refresh": "Refresh",
+    "close": "Close",
+    "failedToCommitChanges": "Failed to commit changes",
+    "gitDiff": "Git Diff",
+    "fileCount_one": "{{count}} file",
+    "fileCount_other": "{{count}} files",
+    "copyAsMarkdown": "Copy as Markdown",
+    "failedToUpdatePr": "Failed to update PR",
+    "addToPrDescription": "Add to PR description",
+    "noChangesComparedTo": "No changes compared to {{branch}}"
+  },
+  "reviewBar": {
+    "sendToDroid": "Send to Droid",
+    "yourComments": "Your Comments",
+    "reviewerComments": "Reviewer Comments",
+    "you": "You",
+    "semanticDiffSection": "Semantic diff (section {{section}})",
+    "pullGitHubComments_one": "Pull {{count}} GitHub comment",
+    "pullGitHubComments_other": "Pull {{count}} GitHub comments",
+    "noGitHubComments": "No GitHub comments",
+    "commentCount_one": "{{count}} comment",
+    "commentCount_other": "{{count}} comments",
+    "removeAllStagedComments": "Remove all staged comments",
+    "stageComments_one": "Stage {{count}} Comment",
+    "stageComments_other": "Stage {{count}} Comments",
+    "removeAllYourComments": "Remove all your comments",
+    "removeAllReviewerComments": "Remove all reviewer comments"
+  },
+  "semanticDiff": {
+    "theDiffWasTruncatedDueTo": "The diff was truncated due to size. This semantic summary covers the most significant changes.",
+    "failedToGenerate": "Failed to generate semantic diff"
+  },
+  "tokenLimitsModal": {
+    "creditLimits": "Credit Limits",
+    "failedToLoadCreditLimits": "Failed to load credit limits",
+    "standardPool": "Standard Pool",
+    "yourIncludedCreditAllowanceResetsAutomatically": "Your included credit allowance. Resets automatically based on rolling windows.",
+    "text5Hour": "5-Hour",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "standardPoolExhausted": "Standard pool exhausted",
+    "youveUsedYourStandardTokenAllowance": "You've used your standard token allowance. Choose how to continue.",
+    "droidCore": "Droid Core",
+    "aSmallerFasterModelOptimizedFor": "A smaller, faster model optimized for common tasks.",
+    "or": "or",
+    "extraUsage": "Extra Usage",
+    "activateInSettings": "Activate in settings",
+    "askAnOrganizationManagerToEnable": "Ask an organization manager to enable Extra Usage if you want to keep using the current model.",
+    "noLimitDataAvailable": "No limit data available",
+    "viewMoreInfo": "View more info",
+    "availableBalance": "<amount>${{amount}}</amount> available",
+    "extraUsageNotAvailableDuringTrials": "Extra Usage is not available during free trials.",
+    "loadingLimits": "Loading limits...",
+    "exhausted": "Exhausted",
+    "useDroidCore": "Use Droid Core",
+    "continueWithPrepaidCredits": "Continue with your current model using prepaid credits.",
+    "enableExtraUsage": "Enable Extra Usage",
+    "unusedExtraUsageCredits": "You have prepaid credits that aren't being used. Enable Extra Usage to keep going with your current model."
+  },
+  "useComputerSessionActions": {
+    "openInVsCode": "Open in VS Code",
+    "sshInstructions": "SSH Instructions",
+    "manageComputer": "Manage computer…"
+  },
+  "activeSession": {
+    "thisIsAReadOnlyLegacy": "This is a read-only legacy session.",
+    "remoteSessionLimitReached": "Remote session limit reached.",
+    "tryAgain": "Try again",
+    "manageBilling": "Manage billing",
+    "compressingSessionHistoryTheSessionWill": "Compressing session history. The session will continue automatically when done.",
+    "accessOptions": "Access options",
+    "accessOptions2": "Access Options",
+    "sessionUnavailable": "Session unavailable",
+    "retryConnection": "Retry connection",
+    "thisSessionIsAContinuationFrom": "This session is a continuation from a compressed session:",
+    "theCurrentTurnWillEndChanges": "The current turn will end. Changes already made will be kept.",
+    "stopAgent": "Stop agent?",
+    "forkSession": "Fork Session",
+    "sessionTitle": "Session title",
+    "enterSessionTitle": "Enter session title",
+    "cancel": "Cancel",
+    "errors": {
+      "failedToUpdateLoop": "Failed to update loop",
+      "uploadFailed": "Upload failed",
+      "cannotRenameReadOnly": "Cannot rename a read-only session",
+      "failedToRenameSession": "Failed to rename session",
+      "unknownError": "Unknown error",
+      "failedToOpenDirectoryPicker": "Failed to open directory picker",
+      "failedToCompressSession": "Failed to compress session",
+      "failedToHandOffSession": "Failed to hand off session",
+      "failedToStartSpecHandoff": "Failed to continue the spec in a new chat",
+      "failedToReconnect": "Failed to reconnect",
+      "failedToStopAgent": "Failed to stop agent",
+      "previousQuestionChanged": "The previous question changed. Check the chat before starting the new goal.",
+      "computerDisconnected": "Computer disconnected. Please try again.",
+      "failedToStartChatFlow": "Failed to start the requested chat flow"
+    },
+    "missionSettingsLocked": "Mission settings are locked after proposal approval.",
+    "rewindOnlyWhenIdle": "Rewind is only available while Droid is idle.",
+    "cwd": {
+      "required": "Working directory is required.",
+      "notConnected": "Session is not connected.",
+      "invalid": "Invalid working directory.",
+      "changed": "Changed working directory to {{path}}",
+      "failedToChange": "Failed to change directory.",
+      "daemonNeedsUpdate": "The Droid daemon for this session needs to be updated or restarted before Desktop can change cwd.",
+      "pickerDesktopOnly": "Directory picker is only available in Factory Desktop.",
+      "unavailableForSession": "Changing cwd is not available for this session."
+    },
+    "fastMode": "Fast mode",
+    "copy": {
+      "noContent": "No assistant message content to copy yet.",
+      "failed": "Copy failed",
+      "copiedLines_one": "Copied {{count}} line to clipboard.",
+      "copiedLines_other": "Copied {{count}} lines to clipboard.",
+      "clipboardFailed": "Failed to copy to clipboard. Your browser may not support this feature."
+    },
+    "conversationStarterWaiting": "Wait for the current response to finish before starting a new workstream.",
+    "queue": {
+      "failedToSend": "Failed to send queued message",
+      "cannotEdit": "Queued message cannot be edited",
+      "failedToEdit": "Failed to edit queued message",
+      "failedToRemove": "Failed to remove queued message",
+      "failedToClear": "Failed to clear queued messages"
+    },
+    "mcp": {
+      "orgManagedCannotModify": "Organization-managed MCP servers cannot be modified from here. Contact your admin to change this setting.",
+      "failedToUpdateConfig": "Failed to update MCP config",
+      "sessionNotConnected": "Session not connected. Please wait for connection.",
+      "cloudOnlyRemoteServers": "Cloud sessions only support remote HTTP/SSE MCP servers",
+      "notYetAvailableForCloud": "MCP server management is not yet available for cloud sessions. This feature will be available soon.",
+      "orgCannotRemove": "Org MCP servers cannot be removed",
+      "managedCannotRemove": "Managed MCP servers cannot be removed"
+    },
+    "files": {
+      "couldNotResolveHtml": "Could not resolve this HTML file for the browser.",
+      "generatedNotReadyToOpen": "The generated file is not ready to open yet.",
+      "generatedNotReadyToReveal": "The generated file is not ready to reveal yet.",
+      "cannotOpenInSession": "This file cannot be opened in this session.",
+      "failedToFind": "Failed to find the file.",
+      "failedToPrepareGenerated": "Failed to prepare generated file.",
+      "cannotOpenFolder": "Folders cannot be opened from the chat."
+    },
+    "templateFallbackName": "Template",
+    "usage": {
+      "userOverQuota": "You have reached the usage quota set by your organization administrator.",
+      "orgOverLimit": "Your organization has hit its usage limit."
+    },
+    "subscription": {
+      "remoteRequiresPro": "Remote sessions require a Pro subscription. Use your own API keys locally or upgrade to Pro.",
+      "byokNoActiveSubscription": "Your subscription has ended for Factory-managed models. You can continue using your own custom models.",
+      "byokOverLimit": "Your organization has hit its usage limit for Factory-managed models. You can continue using your own custom models.",
+      "byokUserOverQuota": "You have reached your usage quota for Factory-managed models. You can continue using your own custom models.",
+      "byokDefault": "Usage limits reached for Factory-managed models. You can continue using your own custom models.",
+      "noActiveSubscriptionUseKeys": "You don't have an active subscription. Use your own API keys or upgrade your plan.",
+      "remoteRequiresProUpgrade": "Remote sessions require a Pro subscription. <upgradeLink>Upgrade to Pro</upgradeLink> for managed models and cloud features.",
+      "noActiveSubscription": "You don't have an active subscription."
+    },
+    "missionFallbackTitle": "Mission",
+    "toggleTerminal": "Toggle Terminal ({{shortcut}})",
+    "missionDetails": "Mission details",
+    "hidePanel": "Hide Panel ({{shortcut}})",
+    "showPanel": "Show Panel ({{shortcut}})",
+    "environment": {
+      "local": "Local",
+      "droidComputer": "Droid Computer",
+      "cloudWorkspace": "Cloud workspace"
+    },
+    "couldNotConnect": "Factory could not connect to this session. Retry, or contact support with the session ID if the issue continues.",
+    "sessionId": "Session ID: {{sessionId}}",
+    "needsYourAttention": "Needs your attention",
+    "wakeDelayed": "Droid is taking a little longer to wake up...",
+    "untitledSession": "Untitled Session",
+    "continue": "Continue",
+    "stopAgentConfirm": "Stop agent",
+    "forking": "Forking...",
+    "fork": "Fork",
+    "skillCreationUserMessage": "Create a reusable skill: {{description}}"
+  },
+  "allSessions": {
+    "newSession": "New session",
+    "loadMoreSessions": "Load more sessions",
+    "clearFilters": "Clear filters",
+    "allSessions": "All sessions",
+    "retry": "Retry",
+    "addFilter": "Add filter",
+    "empty": {
+      "noSessionsYet": "No sessions yet",
+      "startASession": "Start a session and it will show up here.",
+      "noLoadedSessionsMatchFilters": "No loaded sessions match these filters",
+      "sessionsLoadedSoFar": "{{loadedCount}} sessions loaded so far; more may match.",
+      "clearFiltersToSeeAll": "Clear the filters to see all of your sessions.",
+      "noSessionsMatchSearch": "No sessions match this search",
+      "searchingSessions": "Searching sessions…",
+      "checkingSessionsForMatches": "Checking your sessions for matches.",
+      "clearSearchToSeeAll": "Clear the search to see all of your sessions.",
+      "noSessionsMatchFilters": "No sessions match these filters",
+      "unableToLoad": "Unable to load sessions",
+      "couldNotBeFetched": "Your sessions could not be fetched."
+    },
+    "removeFilter": "Remove {{filterLabel}} filter",
+    "filterSessionsApplied": "Filter sessions, {{appliedCount}} applied",
+    "filterSessions": "Filter sessions",
+    "failedToRenameSession": "Failed to rename session",
+    "archiveNeedsLoadedSession": "Open this session to archive it. Its details have not loaded here yet.",
+    "filters": {
+      "facet": {
+        "type": "Type",
+        "project": "Project",
+        "mission": "Mission",
+        "machine": "Machine",
+        "activity": "Activity",
+        "status": "Status",
+        "artifacts": "Artifacts"
+      },
+      "type": {
+        "interactive": "Interactive",
+        "missionOrchestrators": "Mission Orchestrators",
+        "missionAgents": "Mission Agents",
+        "workstream": "Workstream",
+        "evaluations": "Evaluations",
+        "exec": "Exec",
+        "automations": "Automations",
+        "subagents": "Subagents"
+      },
+      "status": {
+        "working": "Working",
+        "waitingForYou": "Waiting for you",
+        "unread": "Unread",
+        "idle": "Idle"
+      },
+      "activity": {
+        "day": "Last 24 hours",
+        "threeDays": "1–3 days ago",
+        "week": "3–7 days ago",
+        "month": "7–30 days ago",
+        "older": "Over 30 days ago"
+      },
+      "artifact": {
+        "pullRequest": "Pull request",
+        "issue": "Issue",
+        "document": "Document"
+      },
+      "none": {
+        "project": "No project",
+        "mission": "No mission",
+        "machine": "No machine",
+        "artifacts": "No artifacts"
+      }
+    },
+    "untitledSession": "Untitled session"
+  },
+  "computerMcpSetup": {
+    "mcpServers": "MCP servers",
+    "mcpSetupError": "MCP setup error",
+    "defaultDescription": "Add and authenticate MCP servers on this computer so they are ready when the automation runs. MCP servers are per computer.",
+    "errorWithSelectDifferentComputer": "{{message}} You can also select a different computer.",
+    "connectTimeout": "Computer took too long to connect. Try again in a moment.",
+    "preparing": "Preparing MCP setup...",
+    "connecting": "Connecting to computer...",
+    "connectingWithRetry": "Connecting to computer... Retry {{attempt}}/{{max}}",
+    "couldNotPrepare": "Could not prepare MCP setup on this computer. Try again.",
+    "configure": "Configure",
+    "configureMcpServers": "Configure MCP Servers"
+  },
+  "filesPanel": {
+    "couldNotLoadWorkspaceFiles": "Could not load workspace files.",
+    "selectAFileFromTheWorkspace": "Select a file from the workspace tree",
+    "openFile": "Open file",
+    "viewInBrowser": "View in browser",
+    "downloadFile": "Download file",
+    "tooLargeToPreview": "This file is too large to preview",
+    "couldNotPreview": "We couldn’t preview this file",
+    "saveConflict": "Save failed: the file changed in the workspace.",
+    "saveAs": "Save as…",
+    "download": "Download",
+    "copyPath": "Copy path",
+    "binaryFile": "This is a binary file and cannot be edited here.",
+    "failedToPrepareMarkdown": "Failed to prepare Markdown file.",
+    "downloading": "Downloading…",
+    "downloadToOpen": "Download the file to open it on your computer.",
+    "openInEditorInstead": "Open the file in your editor instead.",
+    "openOrDownload": "Open or download the file to view it.",
+    "viewSource": "View source",
+    "viewPreview": "View preview",
+    "writeUnsupported": "Saving files requires a newer droid version on this machine.",
+    "outsideWorkspaceWriteUnsupported": "Saving files outside the workspace requires a newer droid version on this machine.",
+    "migrationRoot": "Migration",
+    "workspaceRoot": "Workspace",
+    "copiedItemPath": "path"
+  },
+  "missionV2AgentsPanel": {
+    "searchAgents": "Search agents…",
+    "filterAgents": "Filter agents",
+    "showWorkstreamSessions": "Show workstream sessions",
+    "noMatchingAgents": "No agents match your search",
+    "workstreamSessionsHidden": "Workstream sessions are hidden",
+    "workstreamStage": "{{stage}} · {{workstream}}",
+    "workstreamActivity": "{{activity}} · {{workstream}}",
+    "backToAgents": "Back to agents",
+    "agents": "Agents",
+    "thisAgentsChatIsUnavailableHere": "This agent's chat is unavailable here.",
+    "loadingAgents": "Loading agents…",
+    "couldNotLoadAgents": "Could not load agents",
+    "agentsShowUpHereAsThe": "Agents show up here as the orchestrator delegates work.",
+    "noAgentsYet": "No agents yet"
+  },
+  "missionV2PullRequestList": {
+    "loadingPullRequests": "Loading pull requests…",
+    "statusUnknown": "Status unknown",
+    "emptyTitle": "No pull requests yet.",
+    "emptyDescription": "PRs opened by agents in this mission appear here.",
+    "noWorkstreamPullRequests": "No pull requests from this workstream"
+  },
+  "networkDiagnosticsModal": {
+    "checkNetwork": "Check Network",
+    "runsASeriesOfChecksAgainst": "Runs a series of checks against the network and Factory's services. If something below shows as FAIL or WARN, share the result with your IT support so they can adjust firewall, proxy, or endpoint-protection rules.",
+    "runningDiagnostics": "Running diagnostics…",
+    "reportBug": "Report bug",
+    "reRun": "Re-run",
+    "close": "Close",
+    "groups": {
+      "connectivity": "Connectivity",
+      "factoryEndpoints": "Factory endpoints",
+      "daemon": "Daemon",
+      "environment": "Environment",
+      "diagnostics": "Diagnostics",
+      "itActions": "IT Actions"
+    },
+    "durationMs": "{{durationMs}} ms",
+    "failedToRunDiagnostics": "Failed to run diagnostics",
+    "couldNotAccessClipboard": "Could not access the clipboard.",
+    "summary": "{{ok}} ok · {{warning}} warning · {{fail}} fail · {{unknown}} unknown",
+    "copied": "Copied!",
+    "copyAsText": "Copy as text",
+    "desktopIntegration": "Desktop integration",
+    "desktopOnlyDetail": "Network diagnostics are only available in the Factory desktop app."
+  },
+  "newSession": {
+    "createADroidComputer": "Create a Droid Computer",
+    "organizationDefault": "Organization default",
+    "connectYourOrganizationToASource": "Connect your organization to a source control provider to create repository-backed environments.",
+    "manageSourceControl": "Manage source control",
+    "manageTemplates": "Manage environments",
+    "returnToInterview": "Return to interview",
+    "savedDefaultsCouldNotBeLoaded": "Saved defaults could not be loaded. Check your selections or retry.",
+    "retryDefaults": "Retry defaults",
+    "remoteSessionLimitReached": "Remote session limit reached.",
+    "sessionLimitReached": "Session Limit Reached",
+    "tryAgain": "Try Again",
+    "noTargets": {
+      "templatesLocal": "Create an Environment in <templatesLink>Environments</templatesLink> to start a session, or open <desktopLink>Factory Desktop</desktopLink> to work locally.",
+      "templatesNoLocal": "Create an Environment in <templatesLink>Environments</templatesLink> to start a session. Your organization has disabled Local computers.",
+      "createComputerLocal": "No Droid Computers are available. You can also open , or open <desktopLink>Factory Desktop</desktopLink> to work locally.",
+      "createComputerNoLocal": "No Droid Computers are available. You can also open . Your organization has disabled Local computers.",
+      "droidComputersLocal": "Go to <droidComputersLink>Droid Computers</droidComputersLink> to add a computer, or open <desktopLink>Factory Desktop</desktopLink> to work locally.",
+      "droidComputersNoLocal": "Go to <droidComputersLink>Droid Computers</droidComputersLink> to add a computer. Your organization has disabled Local computers."
+    },
+    "defaultTag": "Default",
+    "templateLabel": "Environment",
+    "generalPurposeEnvironment": "{{templateName}} is a general-purpose environment without repositories.",
+    "cloudDeprecationTooltip": "Cloud Machines have been superseded by Droid Computers. Cloud is still supported, but we highly recommend switching to <droidComputersLink>Droid Computers</droidComputersLink> for stability.",
+    "templateBeingPreparedCustomize": "Your environment is being prepared. You can customize it in <settingsLink>settings</settingsLink>.",
+    "templateBeingPrepared": "Your environment is being prepared.",
+    "approvedBlock": {
+      "executionSettingsMismatch": "The execution settings must match the approved proposal. Return to the creation chat to revise it.",
+      "serviceAccountUnavailable": "The approved service account or owning team is unavailable. Return to the creation chat to revise the proposal.",
+      "templateUnavailable": "The approved environment is unavailable. Return to the creation chat to revise the proposal.",
+      "computerUnavailable": "The approved computer is unavailable. Return to the creation chat to revise the proposal."
+    },
+    "runAs": {
+      "yourself": "Yourself",
+      "fixedByProposal": "Execution settings are fixed by the approved proposal. Revise the proposal in the creation chat to change them.",
+      "description": "Run this workstream as yourself, or as a service account that owns the workstream and its billing.",
+      "noServiceAccounts": "No active service accounts exist in this organization. An admin needs to create one before you can run a workstream as one."
+    },
+    "loadingSavedDefaults": "Loading saved defaults...",
+    "errors": {
+      "pleaseSelectAComputerPeriod": "Please select a computer.",
+      "pleaseSelectAComputer": "Please select a computer",
+      "pleaseSelectATemplate": "Please select a template",
+      "failedToOpenDirectoryPicker": "Failed to open directory picker",
+      "selectTemplateToUploadFiles": "Select an environment to upload these files, or remove and reattach them for the selected computer.",
+      "localFilesNotAllowedWithTemplate": "Files attached from the local filesystem cannot be used with an environment. Remove and reattach them after selecting the environment.",
+      "waitForSavedDefaults": "Wait for saved defaults to finish loading.",
+      "noAvailableModelSelected": "No available model is selected. Configure an available model before starting a session.",
+      "serviceAccountComputersOnly": "Workstreams running as a service account must run on one of the account's computers.",
+      "durableMachineRequired": "Software Factory workstreams need a durable machine: pick your local machine or a computer.",
+      "setLocalWorkingDirectory": "Please set a working directory for your Local Machine.",
+      "couldNotStartOnComputer": "Could not start the session on this computer",
+      "failedToCreateSession": "Failed to create session"
+    },
+    "local": {
+      "notConnected": "Not connected to Local Machine. Please start the Desktop app.",
+      "connecting": "Connecting to your local machine…",
+      "connected": "Connected to your local machine."
+    },
+    "computer": {
+      "connecting": "Connecting to {{computerName}}…",
+      "connected": "Connected to {{computerName}}."
+    },
+    "machineName": {
+      "loading": "Loading",
+      "local": "Local",
+      "preparingTemplate": "Preparing environment",
+      "selectTemplateOrComputer": "Select environment or computer",
+      "noTemplatesOrComputers": "No environments or computers available",
+      "noComputers": "No computers available",
+      "selectComputer": "Select computer",
+      "cloud": "Cloud"
+    },
+    "noModels": {
+      "airgap": "No custom models are configured. Add a custom model in Settings before starting an air-gapped session.",
+      "default": "No models are available for this session. Your organization may have blocked all configured models -- please contact your admin."
+    },
+    "placeholder": {
+      "workstreamGoal": "Describe the goal this workstream should own",
+      "default": "What would you like to work on?"
+    },
+    "initializingSession": "Initializing Session",
+    "submit": {
+      "lookingUpComputer": "Looking up computer connection...",
+      "startingComputer": "Starting computer...",
+      "connectingToComputer": "Connecting to computer...",
+      "loadingSessionSettings": "Loading session settings...",
+      "connectSelectedComputer": "Connect to the selected computer",
+      "creatingSession": "Creating session...",
+      "selectAvailableModel": "Select an available model",
+      "loadingOrganizationDefault": "Loading organization default...",
+      "selectServiceAccountComputer": "Select one of the service account's computers",
+      "durableMachineRequired": "Software Factory workstreams need your local machine or a computer",
+      "checkingMissionReadiness": "Checking mission readiness...",
+      "chooseFolderTrust": "Choose whether to trust this folder",
+      "connectLocalMachine": "Connect your local machine",
+      "selectWorkingDirectory": "Select a working directory",
+      "enterValidWorkingDirectory": "Enter a valid working directory",
+      "selectCloudTemplate": "Select a cloud template",
+      "selectComputer": "Select a computer",
+      "couldNotConnect": "Could not connect to the computer — try again",
+      "loadingComputerDefaults": "Loading computer defaults..."
+    },
+    "droidComputers": "Droid Computers"
+  },
+  "reportBugModal": {
+    "reportABug": "Report a Bug",
+    "uploadingBugReportsToFactoryIs": "Uploading bug reports to Factory is disabled for this deployment. You can describe the issue below and save a diagnostics archive (logs and your description) to a file, then share it with your IT or support team.",
+    "describeTheIssue": "Describe the issue",
+    "whatWentWrongPleaseDescribeThe": "What went wrong? Please describe the issue you encountered...",
+    "showInFolder": "Show in folder",
+    "close": "Close",
+    "saveReportToFile": "Save report to file",
+    "bugReportSubmitted": "Bug Report Submitted",
+    "yourBugReportHasBeenSubmitted": "Your bug report has been submitted successfully.",
+    "bugReportId": "Bug Report ID",
+    "pleaseShareThisIdWithThe": "Please share this ID with the Factory team for investigation.",
+    "done": "Done",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "failedToExport": "Failed to export bug report",
+    "savedArchiveToPath": "Saved the diagnostics archive to {{savedPath}}. No data was sent to Factory.",
+    "savedArchiveToDownloads": "Saved the diagnostics archive to your downloads. No data was sent to Factory.",
+    "failedToSubmit": "Failed to submit bug report",
+    "copied": "Copied",
+    "copyBugReportId": "Copy bug report ID"
+  },
+  "reportBugModalV2": {
+    "close": "Close",
+    "saveReportToFile": "Save report to file",
+    "reportABug": "Report a Bug",
+    "uploadingBugReportsToFactoryIs": "Uploading bug reports to Factory is disabled for this deployment. You can describe the issue below and save a diagnostics archive (logs and your description) to a file, then share it with your IT or support team.",
+    "describeTheIssue": "Describe the issue",
+    "whatWentWrongPleaseDescribeThe": "What went wrong? Please describe the issue you encountered...",
+    "showInFolder": "Show in folder",
+    "done": "Done",
+    "bugReportSubmitted": "Bug Report Submitted",
+    "yourBugReportHasBeenSubmitted": "Your bug report has been submitted successfully.",
+    "bugReportId": "Bug Report ID",
+    "pleaseShareThisIdWithThe": "Please share this ID with the Factory team for investigation.",
+    "sendingYourBugReport": "Sending your bug report…",
+    "thisMayTakeAMomentNo": "This may take a moment. No need to submit again.",
+    "cancel": "Cancel",
+    "submit": "Submit"
+  },
+  "rewindConversationModal": {
+    "pickAMessageToRewindTo": "Pick a message to rewind to. The conversation is restored to just before it.",
+    "noMessagesToRewindToYet": "No messages to rewind to yet.",
+    "cancel": "Cancel",
+    "areYouSureYouWantTo": "Are you sure you want to rewind to this message? Changed files will not be reverted.",
+    "back": "Back",
+    "rewindConversation": "Rewind Conversation",
+    "failedToRewind": "Failed to rewind conversation"
+  },
+  "sessionDetailLayout": {
+    "specificationReview": "Specification review",
+    "toggleTerminal": "Toggle Terminal",
+    "missionLeadFileTabName": "Lead"
+  },
+  "sessionManager": {
+    "sessionArchived": "Session archived",
+    "sessionRestored": "Session restored",
+    "failedToAddProject": "Failed to add project",
+    "sessionMustBeAvailableToFork": "The session must be available before it can be forked",
+    "failedToForkSession": "Failed to fork session",
+    "failedToRenameSession": "Failed to rename session",
+    "missionMustBeAvailableToChangeSymbol": "This mission's computer isn't available, so its symbol can't be changed",
+    "signInToChangeMissionSymbol": "Sign in again to change the mission's symbol",
+    "failedToChangeMissionSymbol": "Failed to change mission symbol",
+    "workstreamMustBeAvailableToChangeSymbol": "This workstream's computer isn't available, so its icon can't be changed",
+    "signInToChangeWorkstreamSymbol": "Sign in again to change the workstream's icon",
+    "failedToChangeWorkstreamSymbol": "Failed to change workstream icon",
+    "unregisteredComputer": "Unregistered Computer",
+    "untitledWorkstream": "Untitled workstream",
+    "unregisteredComputerNumbered": "Unregistered Computer {{index}}"
+  },
+  "sessionMarkdownImage": {
+    "previewFile": "Preview {{fileName}}"
+  },
+  "shareSessionModal": {
+    "shareSession": "Share Session",
+    "sessionVisibility": "Session visibility",
+    "private": "Private",
+    "onlyYouCanViewThisSession": "Only you can view this session.",
+    "organization": "Organization",
+    "anyoneInYourOrganizationWithThis": "Anyone in your organization with this link can view the session.",
+    "shareLink": "Share link",
+    "updateSessionDetails": "Update Session Details",
+    "sessionTitle": "Session title",
+    "save": "Save",
+    "failedToRenameTryAgain": "Failed to rename session. Please try again."
+  },
+  "useProjectArchiveAction": {
+    "cancel": "Cancel",
+    "archiveAllSessionsInThisProject": "Archive all sessions in this project?",
+    "archivingHidesTheseSessionsButDoes": "Archiving hides these sessions but does not stop them. Any session that is still working keeps running; stop it manually first if that is what you want.",
+    "failedToArchiveProject": "Failed to archive project"
+  },
+  "fileActions": {
+    "noDaemonConnection": "No daemon connection available",
+    "downloadFailed": "Download failed",
+    "downloadComplete": "Download complete",
+    "saveFailed": "Save failed"
+  },
+  "missionComposer": {
+    "agentPlaceholder": "Message this agent…",
+    "leadPlaceholder": "Message the mission lead…"
+  },
+  "sessionDetail": {
+    "cloudSyncOfflineComputer": {
+      "header": "Session Unavailable: Computer Offline",
+      "body": "Your organization has turned off cloud sync, so this session is stored only on the computer that ran it, and that computer is offline. Wake the computer by starting a new session on it, then reload this page."
+    },
+    "sharedSession": {
+      "computerName": "Shared computer",
+      "accessDenied": {
+        "header": "No Access to Shared Session",
+        "body": "You are not a member of this shared session, or it is no longer shared with you."
+      },
+      "computeLimit": {
+        "header": "Usage Limit Reached",
+        "body": "Your organization has reached its usage limit, so the computer that runs this shared session cannot start."
+      },
+      "unavailable": {
+        "header": "Shared Session Unavailable",
+        "body": "The computer that runs this shared session is not available. Try again later."
+      },
+      "startFailed": {
+        "header": "Could Not Open Shared Session",
+        "body": "The computer that runs this shared session could not be started. Reload to try again."
+      }
+    },
+    "serviceAccountSession": {
+      "header": "Service Account Session",
+      "body": "This session belongs to a service account, so it cannot be opened here. Automation runs can be reviewed from the Automations page."
+    },
+    "notFound": {
+      "header": "Session Not Found",
+      "bodyV2": "Session may have been deleted, or you may not have access to it.",
+      "body": "Session \"{{sessionId}}\" does not exist. It may have been deleted or you may not have access to it."
+    },
+    "unavailable": "Session Unavailable",
+    "catalogSyncFailed": "The connected machine did not return its session list. Reconnect the machine and try again.",
+    "missingMachineId": "This session cannot be connected because the required machine identifier is missing. The workspace sandbox or computer may no longer be available.",
+    "backToMission": "Back to mission: {{name}}",
+    "parentSession": "Parent session",
+    "automations": "Automations",
+    "backToAutomations": "Back to automations",
+    "backToNamedAutomation": "Back to automation: {{name}}",
+    "backToAutomation": "Back to automation"
+  },
+  "sandboxEnvironmentLaunch": {
+    "provisioningFailed": "Environment provisioning failed",
+    "startingSession": "Starting your session",
+    "uploadingAttachments": "Uploading attachments",
+    "draftReceiptUnavailable": "The saved draft setup receipt is unavailable. Reopen the draft before starting setup.",
+    "attachmentUploadFailed": "Attachment upload failed. Try again or remove and reattach the files.",
+    "creationLaunchTimedOut": "Creation launch timed out. Retry to reconnect to the approved environment.",
+    "attachmentsNoLongerAvailable": "Attached files are no longer available in this app window. Try again and reattach the files.",
+    "creatingComputerFrom": "Creating a computer from {{templateName}}",
+    "settingUpComputer": "Setting up your computer",
+    "cloningRepositories": "Cloning repositories",
+    "installingDependencies": "Installing dependencies"
+  },
+  "sideChatPanel": {
+    "closeChatPanel": "Close chat panel",
+    "openChatPanel": "Open chat panel"
+  },
+  "filePreviewPanel": {
+    "unableToLoad": "Unable to load",
+    "refreshingPowerPoint": "Refreshing PowerPoint…",
+    "cannotSendCommentsNotConnected": "Cannot send comments because Droid is not connected.",
+    "failedToSendComment": "Failed to send comment",
+    "couldNotExportPowerPoint": "Could not export PowerPoint",
+    "pptxSlidesBlank_one": "Exported {{name}} with {{failed}} of {{count}} slide left blank — it couldn’t be rendered.",
+    "pptxSlidesBlank_other": "Exported {{name}} with {{failed}} of {{count}} slides left blank — they couldn’t be rendered.",
+    "sourceReadOnly": "Files opened from a chat are read-only here.",
+    "binaryFile": "This is a binary file",
+    "binaryFileDownload": "Download the file to open it on your computer.",
+    "binaryFileOpenElsewhere": "Open the file outside the app to view it.",
+    "tooLargeToShow": "This file is too large to show here",
+    "tooLargeToShowDescription": "Files over {{limitMb}} MB can't be shown in a tab.",
+    "folder": "Folders can't be opened here",
+    "folderDescription": "Open a file inside it instead."
+  },
+  "pluginSettingsModal": {
+    "invalidMarketplaceSource": "Invalid marketplace source",
+    "addedMarketplaceNamed": "Added marketplace \"{{name}}\"",
+    "addedMarketplace": "Added marketplace",
+    "addMarketplaceFailedNoMessage": "Add marketplace failed (no error message)",
+    "addMarketplaceFailed": "Add marketplace failed",
+    "installedPlugin": "Installed plugin \"{{name}}\"",
+    "installPluginFailed": "Install plugin failed",
+    "removedMarketplace": "Removed marketplace \"{{name}}\"",
+    "removeMarketplaceFailed": "Remove marketplace failed",
+    "enabledPlugin": "Enabled plugin \"{{name}}\"",
+    "disabledPlugin": "Disabled plugin \"{{name}}\"",
+    "setPluginEnabledFailed": "Set plugin enabled failed",
+    "uninstalledPlugin": "Uninstalled plugin \"{{name}}\"",
+    "uninstallPluginFailed": "Uninstall plugin failed",
+    "updatedMarketplace": "Updated marketplace \"{{name}}\"",
+    "updatedAllMarketplaces": "Updated all marketplaces",
+    "updateMarketplaceFailed": "Update marketplace failed",
+    "updatedPlugin": "Updated plugin \"{{name}}\"",
+    "updatePluginFailed": "Update plugin failed"
+  },
+  "sessionDetailChrome": {
+    "loadingSession": "Loading session"
+  },
+  "rightPaneInteractions": {
+    "screenshotCopied": "Screenshot Copied to Clipboard"
+  },
+  "worktreeDelete": {
+    "keptUncommittedChanges": "Worktree was kept: it holds uncommitted changes. Commit or stash them, or remove it with git worktree remove --force.",
+    "couldNotBeRemoved": "Worktree could not be removed. Remove it manually with git worktree remove.",
+    "deletedWithWarnings": "Worktree deleted with warnings: {{warnings}}",
+    "failedToDelete": "Failed to delete worktree"
+  },
+  "terminal": {
+    "failedToCreateTerminal": "Failed to create terminal. Please try again.",
+    "tabLabel": "Terminal {{number}}"
+  },
+  "activeSessionSettings": {
+    "failedToUpdateInteractionSettings": "Failed to update interaction settings",
+    "failedToUpdateSettings": "Failed to update settings",
+    "failedToUpdateMissionSettings": "Failed to update mission settings"
+  },
+  "workspaceFiles": {
+    "uploadComplete": "Upload complete",
+    "uploadConflict": "Upload conflict",
+    "uploadFailed": "Upload failed"
+  },
+  "sessionLoad": {
+    "failedToLoadSession": "Failed to load session",
+    "failedToLoadPreviousMessages": "Failed to load previous messages"
+  },
+  "worktreeSessionSetup": {
+    "failedToLoadProfiles": "Failed to load worktree setup profiles",
+    "failedToLoadManagedWorktrees": "Failed to load managed worktrees",
+    "useExistingBranchUnavailable": "Use existing branch is not available for a new worktree branch. Select an already existing branch instead",
+    "cannotOccupyRootBranch": "Worktrees cannot occupy the root branch."
+  },
+  "pinSession": {
+    "failedToPin": "Failed to pin session",
+    "failedToUnpin": "Failed to unpin session"
+  },
+  "archiveSession": {
+    "couldNotArchiveOnMachine": "The session could not be archived on its machine. Reconnect the machine and try again.",
+    "failedToArchive": "Failed to archive session"
+  },
+  "preInitCapabilities": {
+    "updateComputerDaemonForMcp": "Update this computer's daemon to manage MCP before sending a message. You can still start the session now and use MCP once the session loads.",
+    "updateDesktopForMcp": "Update your Desktop app to manage MCP before sending a message. You can still start the session now and use MCP once the session loads.",
+    "configError": "Config error. Open to see details",
+    "loadingConnectors": "Loading connectors information…",
+    "loadingSkills": "Loading skills…",
+    "failedToUpdateMcpSettings": "Failed to update MCP settings",
+    "failedToAddMcpServer": "Failed to add MCP server",
+    "failedToRemoveMcpServer": "Failed to remove MCP server"
+  },
+  "gitBranches": {
+    "failures": {
+      "workingTreeBlocksSwitch": "Files in the working tree still block this switch. Commit, stash, or move them, then try again.",
+      "unresolvedMergeConflicts": "This repository has unresolved merge conflicts. Resolve them before switching branches.",
+      "branchAlreadyExists": "That branch already exists. Switch to it instead of creating it.",
+      "branchNoLongerExists": "That branch no longer exists in this repository.",
+      "invalidBranchName": "Git does not accept that branch name.",
+      "anotherGitProcess": "Another git process is running in this repository. Wait for it to finish and try again.",
+      "notAGitRepository": "This working directory is not a git repository."
+    },
+    "failedToSwitchBranches": "Failed to switch branches"
+  },
+  "rightPaneTools": {
+    "agents": "Agents",
+    "artifacts": "Artifacts",
+    "browser": "Browser",
+    "changes": "Changes",
+    "computer": "Computer",
+    "filePreview": "File preview",
+    "files": "Files",
+    "plan": "Plan",
+    "pullRequest": "Pull request",
+    "sideChat": "Side chat",
+    "terminal": "Terminal"
+  },
+  "rightPaneToolDescriptions": {
+    "agents": "Agents working on this mission",
+    "artifacts": "Links and outputs from this session",
+    "browser": "Preview local and web pages",
+    "changes": "Review the session's code changes",
+    "computer": "Watch and control the computer's desktop",
+    "files": "Browse the session's workspace",
+    "sideChat": "Ask a question without interrupting",
+    "terminal": "A shell on the session computer"
+  },
+  "rightPaneV2Launcher": {
+    "agents": {
+      "description": "Agents the orchestrator delegated",
+      "label": "Agents"
+    },
+    "files": {
+      "description": "Mission files and outputs",
+      "label": "Files"
+    },
+    "terminal": {
+      "description": "A shell on the mission computer",
+      "label": "Terminal"
+    },
+    "prs": {
+      "description": "Every PR opened by the mission",
+      "label": "PRs"
+    },
+    "workstreams": {
+      "description": "Loops that watch, fix and ship",
+      "label": "Workstreams"
+    },
+    "browser": {
+      "description": "Mission Sites and previews",
+      "label": "Browser"
+    },
+    "analytics": {
+      "description": "FSC spend by workstream and agent",
+      "label": "Analytics"
+    },
+    "newWorkstream": {
+      "description": "Temporary shortcut to workstream creation",
+      "label": "New workstream"
+    }
+  },
+  "remoteLocalhost": {
+    "unreachableOnComputer": "Couldn’t reach port {{port}} on {{computer}}.",
+    "unreachable": "Couldn’t reach port {{port}} on the remote machine.",
+    "retry": "Retry"
+  },
+  "localSessions": {
+    "checkingOrganizationSettings": "Checking organization settings...",
+    "disabledByOrganization": "Your organization has disabled Local computers. Start a new session on a remote computer.",
+    "disabledByOrganizationPrivate": "Your organization has disabled Local computers. Contact your administrator."
+  },
+  "cwdValidation": {
+    "unableToVerifyFolderTrust": "Unable to verify folder trust. Please try again.",
+    "enterWorkingDirectory": "Please enter a working directory.",
+    "daemonNotConnected": "Not connected to Daemon. Please start the Desktop app.",
+    "failedToSaveTrust": "Failed to save trust decision."
+  },
+  "launchBlocked": {
+    "preferenceConflict": "Resolve this computer’s preference conflict, then retry.",
+    "preferencesUnauthenticated": "This computer is not authenticated for preference sync. Check its authentication, then retry.",
+    "preferencesInvalid": "This computer’s preferences are invalid. Correct its settings, then retry.",
+    "preferencesRefreshFailed": "Could not refresh this computer’s preferences. Check the connection and try again.",
+    "selectionChanged": "The selected computer or account changed. Review your selection and retry.",
+    "couldNotConnect": "Could not connect to the computer. It may still be starting — try again in a moment."
+  },
+  "remoteAccess": {
+    "desktopOnly": "Remote Control can only be changed from the Factory desktop app.",
+    "connectTimedOut": "Remote Control did not connect in time. Check Settings › This Computer and try again.",
+    "didNotConnect": "Remote Control did not connect. Check Settings › This Computer and try again."
+  },
+  "toolFiles": {
+    "localSessionsOnly": "Opening tool files is only available for local sessions.",
+    "relativePathWithoutCwd": "Unable to open relative file without a working directory.",
+    "openInDefaultAppFailed": "Failed to open file in the default app.",
+    "cannotOpenInEditor": "Cannot open this file in the selected editor.",
+    "defaultAppRequiresDesktop": "Opening files in the default app requires the desktop app.",
+    "revealRequiresDesktop": "Revealing files requires the desktop app.",
+    "revealFailed": "Failed to reveal file."
+  },
+  "notifications": {
+    "untitledSession": "Session",
+    "needsInputTitle": "Droid needs input",
+    "needsInputBody": "{{title}} — waiting for your approval",
+    "finishedTitle": "Droid finished"
+  },
+  "slashCommands": {
+    "descriptions": {
+      "billing": "Navigate to billing settings",
+      "btw": "Ask in Side Chat without polluting the main transcript",
+      "bug": "Report a bug",
+      "cd": "Alias for /cwd",
+      "clear": "Alias for /new",
+      "compress": "Compress the current session in place. Add instructions to customize the summary (alias: compact)",
+      "account": "Navigate to account settings",
+      "handoff": "Start a new session with a summary of this conversation",
+      "connectors": "Open connectors and MCP settings",
+      "context": "Show context window usage breakdown",
+      "copy": "Copy the last assistant message to clipboard",
+      "cost": "Show token usage and cost details",
+      "createSkill": "Create a reusable skill from this session",
+      "cwd": "Change the current session working directory",
+      "fast": "Enable fast mode for the current model (/fast off to disable)",
+      "favorite": "Alias for /pin",
+      "fork": "Fork this session into a new independent session",
+      "help": "Open help modal with keyboard shortcuts and tips",
+      "limits": "Show credit rate limits and usage",
+      "mcp": "Open MCP settings",
+      "model": "Open model selector",
+      "new": "Start a new session",
+      "pin": "Toggle pin on the current session (alias: favorite)",
+      "plugins": "Open plugins settings",
+      "readinessFix": "Fix failing agent readiness signals from the latest report",
+      "readinessReport": "Evaluate the current repository for agent readiness and generate a report",
+      "rename": "Rename the current session (e.g. /rename My Title)",
+      "rewindConversation": "Rewind the conversation to a previous message",
+      "settings": "Navigate to settings page",
+      "share": "Open share session modal",
+      "skills": "Open skills settings",
+      "stats": "View your local Droid stats"
+    },
+    "compactAlias": "Alias for /compress",
+    "skillFallback": "Skill"
+  },
+  "composerDraftRequests": {
+    "title": "Send over your draft?",
+    "description": "Sending this request replaces the message you were writing, and any attached files are sent with it.",
+    "keepDraft": "Keep draft",
+    "send": "Send"
+  },
+  "walkthroughItems": {
+    "exploreCodebase": "Explore the codebase",
+    "connectYourTools": "Connect your tools",
+    "craftDeliverable": "Craft a deliverable",
+    "craftDesignDoc": "Craft a design doc",
+    "mapProductSurface": "Map the product surface",
+    "draftSpec": "Draft a spec",
+    "auditUi": "Audit the UI",
+    "prototypeChange": "Prototype a change",
+    "analyzeData": "Analyze some data",
+    "buildReport": "Build a report",
+    "researchTopic": "Research a topic",
+    "draftContent": "Draft content",
+    "researchProspect": "Research a prospect",
+    "buildCustomerMaterial": "Build customer material",
+    "automateWorkflow": "Automate a workflow",
+    "documentProcess": "Document a process"
+  },
+  "occupiedWorktree": {
+    "message": "This branch is already occupied by an existing worktree. Continue there?",
+    "goThere": "Go there"
+  },
+  "mcpAuth": {
+    "cancelledFor": "Authentication cancelled for {{serverName}}.",
+    "failedFor": "Authentication failed for {{serverName}}."
+  },
+  "sessionCapabilities": {
+    "failedToUpdateSkill": "Failed to update skill"
+  },
+  "composerDefaults": {
+    "reasoning": "Reasoning",
+    "autonomy": "Autonomy",
+    "failedToLoadOrSave": "Failed to load or save defaults.",
+    "noModelsAvailable": "No models available",
+    "managedByOrganization": "Managed by organization settings",
+    "managedByProject": "Managed by project settings",
+    "managedByFolder": "Managed by folder settings",
+    "managedByUser": "Managed by user settings",
+    "managedBySettings": "Managed by settings",
+    "modeMission": "Mission",
+    "modeSpec": "Spec",
+    "modeNormal": "Normal"
+  },
+  "fastModeCommand": {
+    "invalidArgument": "Invalid argument \"{{args}}\". Usage: /fast, /fast on, or /fast off",
+    "noModel": "No model is currently set for this session",
+    "alreadyFast": "Already in fast mode ({{model}})",
+    "alreadyBase": "Already using base model ({{model}})",
+    "noFastVariant": "No fast mode available for {{model}}",
+    "fastUnavailable": "Fast mode is not available for {{model}}",
+    "baseUnavailable": "Cannot switch back to base model ({{model}})",
+    "disabledByPolicy": "Fast mode is disabled by your organization's model policy",
+    "failedToSwitch": "Failed to switch model",
+    "switched": "Switched to {{model}}"
+  },
+  "activeSessionBtw": {
+    "failedToAsk": "Failed to ask question"
+  },
+  "diffViewerData": {
+    "failedToFetchDiff": "Failed to fetch git diff"
+  },
+  "gitActions": {
+    "failureTitle": "Could not start the Git action",
+    "machineNotConnected": "The session machine is not connected.",
+    "noPullRequestUrl": "This branch has no supported pull request URL.",
+    "noWorkingDirectory": "The session has no Git working directory yet.",
+    "noPrompt": "No prompt is defined for the {{action}} action."
+  },
+  "workspaceAttachments": {
+    "failedToPrepare": "Failed to prepare attachment",
+    "failedToQueue": "Failed to queue attachment"
+  },
+  "panelDirectory": {
+    "unavailable": "Directory is unavailable.",
+    "couldNotChange": "Could not change the panel directory.",
+    "updateDroid": "Update Droid to select a Changes directory.",
+    "connectToSelect": "Connect to the computer to select a directory.",
+    "changing": "Changing directory…"
+  },
+  "projectArchive": {
+    "archived_one": "Archived {{count}} session",
+    "archived_other": "Archived {{count}} sessions",
+    "archivedWithFailures_one": "Archived {{count}} session, {{failedCount}} failed",
+    "archivedWithFailures_other": "Archived {{count}} sessions, {{failedCount}} failed"
+  }
+}

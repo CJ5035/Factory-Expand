@@ -1,0 +1,11 @@
+{
+  "appVersion": "0.200.0",
+  "original": {
+    "asar": "07ac482d497a280c1af6d8f153a8fc1ea4bb9a08c3377a5ce65f6888423c7ace",
+    "exe": "fd6f8791784a987f445043c2e36936280e704e1f9060aea4749c44086840758d"
+  },
+  "fuse": { "offset": 188907648, "index": 4, "wireVersion": 1, "length": 9 },
+  "unpacked": {
+    "node_modules/keytar/build/Release/keytar.node": "e6ac229a5ffe2959e10f3d8f8b210bcc6abecf511060db2fa0362d79f4e25e1b"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "inbox": {
+    "inboxRefreshFailedShowingTheLatest": "Inbox refresh failed. Showing the latest saved data.",
+    "loadingInbox": "Loading inbox",
+    "loadingInboxEllipsis": "Loading inbox…",
+    "retryInbox": "Retry inbox",
+    "unableToLoadYourInbox": "Unable to load your inbox",
+    "emptyState": {
+      "needsAction": {
+        "primary": "Nothing needs you",
+        "secondary": "Questions and permission requests will land here."
+      },
+      "unread": {
+        "primary": "Nothing unread",
+        "secondary": "New activity from sessions and Missions will land here."
+      },
+      "all": {
+        "primary": "Your inbox is empty",
+        "secondary": "Attention from sessions and Missions will land here."
+      }
+    }
+  },
+  "entity": {
+    "specification": "Specification",
+    "signals": "Signals",
+    "meta": "{{change}} · Updated {{timeAgo}}",
+    "status": {
+      "approved": "Approved",
+      "declined": "Declined",
+      "changesRequested": "Changes requested"
+    },
+    "note": {
+      "reviewGone": "The review this item pointed at is no longer on this change.",
+      "revised": "The specification has been revised since this notification."
+    },
+    "unavailable": {
+      "missing": {
+        "title": "This change is no longer available",
+        "description": "It may have been deleted since this item arrived. The message above is what the inbox recorded at the time."
+      },
+      "denied": {
+        "title": "You don't have access to this change",
+        "description": "This change is restricted to its owning team. Ask a team member or manager to grant you access."
+      }
+    }
+  },
+  "snooze": {
+    "oneHour": "1 hour",
+    "tomorrowMorning": "Tomorrow, 9am",
+    "nextWeek": "Next week"
+  },
+  "cta": {
+    "requestChanges": "Request changes",
+    "reviewDecisionFailed": "Unable to record the review decision",
+    "specificationReview": {
+      "title": "Ready to approve this specification?",
+      "description": "Approve to have Droid build it and open a pull request.",
+      "approve": "Approve & create PR",
+      "discard": "Discard"
+    },
+    "pullRequestReview": {
+      "title": "Ready to merge this pull request?",
+      "description": "Merge this pull request as you. You confirm before it runs.",
+      "descriptionNamed": "Merge to squash {{pullRequest}} as you. You confirm before it runs.",
+      "merge": "Merge",
+      "mergeUnavailable": "Merging from the inbox is not available yet; open the pull request to merge it.",
+      "close": "Close",
+      "closeUnavailable": "Closing from the inbox is not available yet; open the pull request to close it."
+    },
+    "askUser": {
+      "title": "Droid is waiting on your answer",
+      "description": "Answer here and Droid picks the session back up where it stopped.",
+      "answer": "Answer",
+      "connecting": "Connecting…"
+    }
+  },
+  "sessionEntity": {
+    "question": "Question",
+    "unavailable": {
+      "unreachable": {
+        "title": "This question can no longer be answered here",
+        "description": "The machine that asked it is not reachable from this device. Open the session to pick it up there."
+      },
+      "answered": {
+        "title": "This question has already been answered",
+        "description": "Droid is no longer waiting on it, so there is nothing to answer here."
+      },
+      "sent": {
+        "title": "Answer sent",
+        "description": "Droid picked the session back up with your answer."
+      }
+    },
+    "answerFailed": "Unable to send your answer",
+    "failures": {
+      "noAccessToken": "Your sign-in has expired. Sign in again and retry.",
+      "loadFailed": "The session could not be loaded on its machine.",
+      "connectionFailed": "The connection to the session's machine failed.",
+      "readFailed": "The session could not be read."
+    }
+  }
+}

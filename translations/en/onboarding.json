@@ -1,0 +1,237 @@
+{
+  "constants": {
+    "starterIdeas": {
+      "exploreCodebase": {
+        "title": "Explore your codebase",
+        "description": "Get a guided tour of the repo and how it fits together."
+      },
+      "ticketToPr": {
+        "title": "Turn a ticket into a PR",
+        "description": "Pick up an issue and drive it to an open pull request."
+      },
+      "fixProductionError": {
+        "title": "Fix a production error",
+        "description": "Triage a live error and land the fix."
+      },
+      "mapProductSurface": {
+        "title": "Map the product surface",
+        "description": "Tour the user-facing features and flows in your repo."
+      },
+      "draftSpec": {
+        "title": "Draft a spec from your backlog",
+        "description": "Ground a PRD in how the product actually works."
+      },
+      "feedbackToPlan": {
+        "title": "Turn feedback into a plan",
+        "description": "Mine customer feedback for themes and next steps."
+      },
+      "figmaToLife": {
+        "title": "Bring a Figma frame to life",
+        "description": "Build a faithful, clickable version in your repo."
+      },
+      "auditUi": {
+        "title": "Audit the UI",
+        "description": "Find inconsistent styling, states, and interactions."
+      },
+      "polishInterface": {
+        "title": "Make an interface feel finished",
+        "description": "Polish the weakest screen, states, and interactions."
+      },
+      "analyzeSpreadsheet": {
+        "title": "Analyze a spreadsheet",
+        "description": "Turn raw numbers into trends and takeaways."
+      },
+      "reviewRevenue": {
+        "title": "Review revenue data",
+        "description": "Cross-check billing numbers and flag anomalies."
+      },
+      "boardReadyReport": {
+        "title": "Build a board-ready report",
+        "description": "Create a polished Excel or PDF report with charts."
+      },
+      "researchMarket": {
+        "title": "Research a market",
+        "description": "Investigate a competitor or topic, with sources."
+      },
+      "draftLaunchContent": {
+        "title": "Draft launch content",
+        "description": "Write a blog post or one-pager you could publish."
+      },
+      "customerVoice": {
+        "title": "Capture the customer voice",
+        "description": "Pull what customers keep saying, in their own words."
+      },
+      "accountBrief": {
+        "title": "Prep an account brief",
+        "description": "Research a prospect and build talking points."
+      },
+      "mineCalls": {
+        "title": "Mine your calls",
+        "description": "Turn call recordings into objections and next steps."
+      },
+      "draftOutreach": {
+        "title": "Draft outreach that lands",
+        "description": "Write a short, specific email sequence."
+      },
+      "automateUpdate": {
+        "title": "Automate a recurring update",
+        "description": "Draft the update and make it repeatable."
+      },
+      "untangleProcess": {
+        "title": "Untangle a process",
+        "description": "Map the steps, owners, and bottlenecks."
+      },
+      "dataToDecisions": {
+        "title": "Turn data into decisions",
+        "description": "Build a clear operational readout from a spreadsheet."
+      },
+      "layOfTheLand": {
+        "title": "Get the lay of the land",
+        "description": "Tour your codebase and product like a new hire."
+      },
+      "investorUpdate": {
+        "title": "Draft an investor update",
+        "description": "Shape your highlights into a crisp, confident update."
+      },
+      "competitorScan": {
+        "title": "Size up a competitor",
+        "description": "Research a rival and where you can win."
+      },
+      "tourDroid": {
+        "title": "See what Droid can do",
+        "description": "Get a live demo picked from your environment."
+      },
+      "workWithFiles": {
+        "title": "Work with your files",
+        "description": "Summarize, transform, or build on a document."
+      },
+      "craftDeliverable": {
+        "title": "Craft a deliverable",
+        "description": "Produce a polished doc, PDF, or spreadsheet."
+      }
+    }
+  },
+  "onboardingNewPlan": {
+    "welcomeToFactory": "Welcome to Factory",
+    "adminSettingUp": "Your administrator is currently setting up your organization.",
+    "defaultOrgName": "{{firstName}}'s Org",
+    "defaultOrgNameFallback": "My Org",
+    "autoStart": {
+      "retry": "Retry starting subscription",
+      "paymentConfirmed": "Your payment method was confirmed. Try starting your subscription again.",
+      "starting": "Starting your subscription"
+    },
+    "domainMembership": {
+      "signedInAs": "Signed in as {{email}}",
+      "title": "Ask your administrator for access",
+      "subtitle": "Your email domain is managed by an existing Factory organization. Contact your organization administrator for an invitation.",
+      "useDifferentAccount": "Use a different account"
+    },
+    "name": {
+      "reviewSubtitle": "Review your organization name to continue.",
+      "title": "Name your organization",
+      "settingUpSubtitle": "Setting up your organization…",
+      "createFailed": "We couldn’t create your organization. Check your connection and try again.",
+      "openFailed": "Your organization was created, but we couldn’t open it. Try again to continue.",
+      "createFailedServer": "We couldn’t create your organization because of a problem on our side. Try again in a moment.",
+      "createRejected": "We couldn’t create your organization. Try again, or contact support if it keeps happening."
+    },
+    "payment": {
+      "title": "Choose your plan",
+      "subtitle": "Start building with Droids today. Change or cancel your plan any time from billing settings.",
+      "removePromoAndUseApiKeys": "Remove promo and use your API keys",
+      "useApiKeysInstead": "Use your API keys instead"
+    },
+    "final": {
+      "subtitle": "Your Droids are ready."
+    }
+  },
+  "onboardingPaymentForm": {
+    "paymentMethodConfirmed": "Payment method confirmed",
+    "retryStartingYourSubscriptionOrChoose": "Retry starting your subscription, or choose a different payment method.",
+    "changePaymentMethod": "Change payment method",
+    "factoryCurrentlyDoesNotSupportPayments": "Factory currently does not support payments that require 3D Secure (3DS) authentication. Please use a payment method that does not require 3D Secure.",
+    "voucherCode": "Voucher code",
+    "enterYourVoucherCode": "Enter your voucher code",
+    "validVoucher": "Valid voucher",
+    "validatingVoucher": "Validating voucher…",
+    "invalidVoucher": "Invalid voucher · {{message}}",
+    "paymentDetails": "Payment method",
+    "billingAddress": "Billing address",
+    "clearVoucher": "Clear voucher",
+    "useVoucherCode": "Use voucher code",
+    "stripeNotConfirmed": "Stripe did not confirm your payment method. Please try again.",
+    "continue": {
+      "validatingVoucher": "Validating voucher",
+      "startSubscription": "Start subscription",
+      "continueToBilling": "Continue to billing",
+      "applyVoucher": "Apply voucher",
+      "retryPaymentSetup": "Retry payment setup",
+      "retryStartSubscription": "Retry starting subscription"
+    },
+    "errors": {
+      "voucherNotValidated": "Voucher could not be validated",
+      "paymentNotConfirmed": "Payment could not be confirmed",
+      "reasonTryAnotherMethod": "{{reason}} Try another card or pay by US bank account.",
+      "paymentMethodNeedsReplacement": "This payment method can’t be used. Try another card or pay by US bank account.",
+      "requestFailed": "We couldn’t complete this step. Try again, or contact support if it keeps happening.",
+      "serverUnavailable": "Something went wrong on our side. Try again in a moment.",
+      "connectionFailed": "We couldn’t reach Factory. Check your connection and try again."
+    },
+    "chargeConsent": {
+      "summary": "By clicking Start subscription, you start a new Factory {{planName}} subscription at {{price}}. {{paymentTerms}}",
+      "priceMonthly": "${{amount}}/month",
+      "priceAnnual": "${{amount}}/year",
+      "pricePerSeat": "${{basePrice}}/month plus ${{seatPrice}}/member/month",
+      "firstPaymentMonthly": "You pay ${{amount}} today, then monthly until you cancel.",
+      "firstPaymentAnnually": "You pay ${{amount}} today, then annually until you cancel.",
+      "firstPaymentPerSeatMonthly": "You pay ${{amount}} today for the platform and your first member, then monthly until you cancel.",
+      "firstPaymentPerSeatAnnually": "You pay ${{amount}} today for the platform and your first member, then annually until you cancel.",
+      "voucherTerms": "{{coverage}} {{billing}}",
+      "billingMonthly": "Billing continues monthly until you cancel.",
+      "billingAnnually": "Billing continues annually until you cancel.",
+      "voucherPartialMonth": "Your voucher partially covers your first month on this plan.",
+      "voucherPartialMonthTeam": "Your voucher partially covers your first month on this plan for your current team size.",
+      "voucherPartialYear": "Your voucher partially covers your first year on this plan.",
+      "voucherPartialYearTeam": "Your voucher partially covers your first year on this plan for your current team size.",
+      "voucherMonths_one": "Your voucher provides approximately {{count}} month of credit on this plan.",
+      "voucherMonths_other": "Your voucher provides approximately {{count}} months of credit on this plan.",
+      "voucherMonthsTeam_one": "Your voucher provides approximately {{count}} month of credit on this plan for your current team size.",
+      "voucherMonthsTeam_other": "Your voucher provides approximately {{count}} months of credit on this plan for your current team size.",
+      "voucherYears_one": "Your voucher provides approximately {{count}} year of credit on this plan.",
+      "voucherYears_other": "Your voucher provides approximately {{count}} years of credit on this plan.",
+      "voucherYearsTeam_one": "Your voucher provides approximately {{count}} year of credit on this plan for your current team size.",
+      "voucherYearsTeam_other": "Your voucher provides approximately {{count}} years of credit on this plan for your current team size."
+    },
+    "startingYourSubscription": "Starting your subscription…",
+    "finishingSetup": "Finishing setup…"
+  },
+  "desktopAuthCallback": {
+    "youreAllSetReturnToYour": "You're all set. Return to your sessions to keep working.",
+    "youreAlreadyInTheDesktopApp": "You're already in the desktop app",
+    "goToSessions": "Go to sessions",
+    "returnToDesktopApp": "Return to the desktop app to pick up where you left off.",
+    "missingSignInDetails": "This page is missing sign-in details. Restart Factory Desktop and sign in again.",
+    "openDesktopApp": "Open desktop app",
+    "manageAccount": "Manage account",
+    "continueToWebApp": "Continue to web app",
+    "signedInToFactory": "Signed in to Factory",
+    "authenticationFailed": "Authentication failed",
+    "backToFactory": "Back to Factory"
+  },
+  "onboarding": {
+    "finishSettingUpInYourBrowser": "Finish setting up in your browser",
+    "wellOpenYourBrowserToComplete": "We'll open your browser to complete setup, then bring you back to the desktop app when you're done.",
+    "openBrowser": "Open browser",
+    "checkingYourAccount": "Checking your account"
+  },
+  "onboardingFinish": {
+    "byokComputersNotice": "BYOK users cannot run managed Droid Computers from the web, but you can <registerLink>register your own machine</registerLink>.",
+    "allSet": "You’re all set",
+    "getStartedWithApiKeys": "Get started with your API keys",
+    "pickWhereToWork": "Pick where you want to work with Droid. You can use all of them.",
+    "accountOnlySubtitle": "Your account uses Droid in the terminal and the desktop app. Install one to get started.",
+    "desktopReturnSubtitle": "Head back to the desktop app to start working with Droid.",
+    "finishingSetup": "Finishing setup"
+  }
+}

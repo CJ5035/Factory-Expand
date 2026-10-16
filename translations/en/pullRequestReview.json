@@ -1,0 +1,464 @@
+{
+  "pullRequestCommentChatButton": {
+    "addToChat": "Add to chat"
+  },
+  "pullRequestConnectGithub": {
+    "connectGithubToReviewCodeHere": "Connect GitHub to review code here",
+    "changesLoadWithYourOwnGithub": "Changes load with your own GitHub access so reviews stay fast for everyone in the organization.",
+    "connectGithub": "Connect GitHub"
+  },
+  "pullRequestInbox": {
+    "recentlyViewed": {
+      "title": "Recently viewed"
+    },
+    "reviewRequested": {
+      "title": "Needs your review",
+      "emptyMessage": "No pull requests are waiting on your review."
+    },
+    "teamReviewRequested": {
+      "title": "Needs your team's review",
+      "emptyMessage": "No pull requests are waiting on your teams."
+    },
+    "authoredGroups": {
+      "draft": "Your drafts",
+      "waiting": "Waiting for reviews or checks",
+      "needsAction": "Needs action",
+      "readyToMerge": "Waiting to merge",
+      "statusPending": "Checking status",
+      "statusUnavailable": "Status unavailable"
+    },
+    "loadingSection": "Loading {{title}}",
+    "sectionLoadFailed": "Pull requests could not be loaded.",
+    "loadingYourPullRequests": "Loading your pull requests",
+    "yourPullRequestsLoadFailed": "Your pull requests could not be loaded.",
+    "yourPullRequestsLoadFailedWithReason": "Your pull requests could not be loaded. {{message}}",
+    "noOpenPullRequests": "You have no open pull requests.",
+    "onlyMostRecentListed": "Only your most recently updated pull requests are listed.",
+    "connectGithubTitle": "Connect GitHub to see your pull requests",
+    "connectGithubDescription": "Your review requests and pull requests are read with your own GitHub access.",
+    "connectHostAccount": "Connect your account on {{host}} to see your pull requests.",
+    "loadingCodeHosts": "Loading code hosts"
+  },
+  "pullRequestSlicedDiff": {
+    "noChangedLinesInTheCurrent": "No changed lines in the current diff match this layer.",
+    "viewedProgress": "{{viewed}}/{{total}} viewed",
+    "fileCount_one": "{{count}} file",
+    "fileCount_other": "{{count}} files"
+  },
+  "pullRequestLayerManifestGeneration": {
+    "walkthroughCompleted": "Walkthrough completed",
+    "walkthroughOutcomeUnavailable": "Walkthrough outcome unavailable",
+    "walkthroughPreparationInterrupted": "Walkthrough preparation interrupted",
+    "activity": {
+      "waitingForAgent": "Waiting for the agent",
+      "thinking": "Thinking",
+      "streaming": "Streaming",
+      "executing": "Executing",
+      "waitingForApproval": "Waiting for approval",
+      "compactingHistory": "Compacting history"
+    },
+    "updatingWalkthrough": "Updating walkthrough",
+    "generatingWalkthrough": "Generating walkthrough",
+    "sessionLoadFailedCheckingOutcome": "The walkthrough session could not be loaded. Checking its outcome.",
+    "progressLoadFailed": "The walkthrough progress could not be loaded.",
+    "reconnecting": "Reconnecting",
+    "preparingSession": "Preparing session…",
+    "connectionUnavailable": "Connection unavailable",
+    "checkingResult": "Checking result",
+    "loadingWalkthrough": "Loading the walkthrough",
+    "walkthroughSaved": "The walkthrough was saved.",
+    "resultNotConfirmed": "The result could not be confirmed.",
+    "canStartNewAttempt": "You can start a new attempt. The previous walkthrough is kept.",
+    "anotherGenerationActive": "Another generation is active.",
+    "sessionNotStarted": "The generation session was not started.",
+    "preparing": "Preparing",
+    "preparingFreshSession": "Preparing a fresh generation session",
+    "generationTimedOut": "Walkthrough generation timed out",
+    "generationReachedTimeLimit": "Generation reached its time limit.",
+    "generationFailed": "Walkthrough generation failed",
+    "runDidNotComplete": "The run did not complete successfully.",
+    "generationCancelled": "Walkthrough generation cancelled",
+    "generationSessionCancelled": "The generation session was cancelled.",
+    "generationMayStillBeActive": "Generation may still be active. Checking for a saved result.",
+    "newAttemptNotAvailableYet": "A new attempt is not available yet. Checking again automatically.",
+    "statusTemporarilyUnavailable": "Status is temporarily unavailable. Checking again automatically."
+  },
+  "pullRequestLayeredDiff": {
+    "diagram": "Diagram",
+    "viewedSection": "Viewed {{title}}",
+    "viewedProgress": "{{viewed}}/{{total}} viewed",
+    "noChangedLinesInTheCurrent": "No changed lines in the current diff match this layer.",
+    "overview": "Overview",
+    "howItAllFitsTogether": "How it all fits together",
+    "collapseSection": "Collapse {{title}}",
+    "expandSection": "Expand {{title}}",
+    "unassignedChangesSummary": "Changes not assigned to a walkthrough section.",
+    "unassignedChanges": "Unassigned changes",
+    "fileCount_one": "{{count}} file",
+    "fileCount_other": "{{count}} files"
+  },
+  "pullRequestMoreActions": {
+    "morePullRequestActions": "More pull request actions",
+    "stateAction": {
+      "readyForReview": {
+        "failure": "The pull request was not opened for review.",
+        "label": "Open for review",
+        "success": "Pull request opened for review."
+      },
+      "convertToDraft": {
+        "failure": "The pull request was not converted to a draft.",
+        "label": "Convert to draft",
+        "success": "Pull request converted to a draft."
+      },
+      "close": {
+        "failure": "The pull request was not closed.",
+        "label": "Close pull request",
+        "success": "Pull request closed."
+      },
+      "reopen": {
+        "failure": "The pull request was not reopened.",
+        "label": "Reopen pull request",
+        "success": "Pull request reopened."
+      }
+    },
+    "stateChangesGithubOnly": "This Git provider does not support pull request state changes.",
+    "connectGithubToChangeState": "Connect your Git provider account in settings to change the pull request state.",
+    "copyLink": "Copy link",
+    "copyProviderLink": "Copy {{provider}} link",
+    "failedToCopyToClipboard": "Failed to copy to clipboard. Check browser permissions.",
+    "linkCopied": "Link copied to clipboard",
+    "providerLinkCopied": "{{provider}} link copied to clipboard"
+  },
+  "pullRequestOmittedFiles": {
+    "previewUnavailable": "Preview unavailable",
+    "imageAlt": "{{side}} version of {{path}}",
+    "side": {
+      "before": "Before",
+      "after": "After"
+    },
+    "changeKind": {
+      "added": "added",
+      "deleted": "deleted",
+      "modified": "modified",
+      "renamed": "renamed"
+    }
+  },
+  "pullRequestParticipants": {
+    "mergeStatus": "Merge status",
+    "reviews": "Reviews",
+    "noReviewsYet": "No reviews yet",
+    "requestedReviewers": "Requested reviewers",
+    "requestReview": "Request review",
+    "noReviewsRequested": "No reviews are requested.",
+    "reviewCounts": {
+      "bugs_one": "{{count}} bug",
+      "bugs_other": "{{count}} bugs",
+      "security_one": "{{count}} security issue",
+      "security_other": "{{count}} security issues",
+      "comments_one": "{{count}} comment",
+      "comments_other": "{{count}} comments"
+    },
+    "commentsFrom": "Comments from {{login}}",
+    "reviewFrom": "Review from {{login}}",
+    "openComments": "Open comments",
+    "openCommentsSummary": "Open comments: {{counts}}",
+    "noOpenComments": "No open comments",
+    "commentGroups": {
+      "bugs": "Bugs",
+      "security": "Security",
+      "vulnerabilities": "Vulnerabilities",
+      "comments": "Comments",
+      "resolved": "Resolved",
+      "outdated": "Outdated",
+      "mainConversation": "Main conversation"
+    },
+    "noCommentText": "No text",
+    "collapseSection": "Collapse {{section}}",
+    "expandSection": "Expand {{section}}",
+    "labels": "Labels",
+    "noLabels": "No labels",
+    "reviewerState": {
+      "approved": "Approved",
+      "changesRequested": "Changes requested",
+      "requested": "Review requested",
+      "commented": "Commented",
+      "dismissed": "Review dismissed"
+    },
+    "picker": {
+      "reviewer": {
+        "notAdded": "The reviewer was not added.",
+        "add": "Add reviewer",
+        "matchingSearch": "reviewers matching the search"
+      },
+      "assignee": {
+        "notAdded": "The assignee was not added.",
+        "add": "Add assignee",
+        "matchingSearch": "assignees matching the search"
+      },
+      "label": {
+        "notAdded": "The label was not added.",
+        "add": "Add label",
+        "matchingSearch": "labels matching the search"
+      }
+    },
+    "checkingGithubAccess": "Checking your Git provider access…",
+    "addGithubOnly": "This Git provider does not support requesting reviews or adding labels.",
+    "connectGithubToAdd": "Connect your Git provider account in settings to request reviews and add labels.",
+    "shownGithubOnly": "This Git provider does not support review or label details.",
+    "participantsLoadFailed": "Reviews and labels could not be loaded. Refresh to try again."
+  },
+  "pullRequestParticipantSelect": {
+    "reviewers": {
+      "loading": "Loading reviewers…",
+      "searching": "Searching reviewers…",
+      "noMatching": "No matching reviewers",
+      "loadingMore": "Loading more reviewers",
+      "loadingMoreRow": "Loading more reviewers…",
+      "searchPlaceholder": "Search reviewers…",
+      "loadFailed": "The reviewers could not be loaded.",
+      "loadMoreFailed": "More reviewers could not be loaded.",
+      "searchMoreFailed": "More reviewers could not be searched."
+    },
+    "assignees": {
+      "loading": "Loading assignees…",
+      "searching": "Searching assignees…",
+      "noMatching": "No matching assignees",
+      "loadingMore": "Loading more assignees",
+      "loadingMoreRow": "Loading more assignees…",
+      "searchPlaceholder": "Search assignees…",
+      "loadFailed": "The assignees could not be loaded.",
+      "loadMoreFailed": "More assignees could not be loaded.",
+      "searchMoreFailed": "More assignees could not be searched."
+    },
+    "labels": {
+      "loading": "Loading labels…",
+      "searching": "Searching labels…",
+      "noMatching": "No matching labels",
+      "loadingMore": "Loading more labels",
+      "loadingMoreRow": "Loading more labels…",
+      "searchPlaceholder": "Search labels…",
+      "loadFailed": "The labels could not be loaded.",
+      "loadMoreFailed": "More labels could not be loaded.",
+      "searchMoreFailed": "More labels could not be searched."
+    },
+    "people": {
+      "loading": "Loading people…",
+      "searching": "Searching people…",
+      "noMatching": "No matching people",
+      "loadingMore": "Loading more people",
+      "loadingMoreRow": "Loading more people…",
+      "searchPlaceholder": "Search people…",
+      "loadFailed": "The people could not be loaded.",
+      "loadMoreFailed": "More people could not be loaded.",
+      "searchMoreFailed": "More people could not be searched."
+    }
+  },
+  "pullRequestRepositoryFilter": {
+    "allRepositories": "All repositories",
+    "repository": "Repository",
+    "noMatching": "No matching repositories",
+    "searchPlaceholder": "Search repositories…"
+  },
+  "pullRequestReviewChatSession": {
+    "tryAgain": "Try again",
+    "preparingChat": "Preparing pull request chat…",
+    "loadingChat": "Loading pull request chat…"
+  },
+  "pullRequestReviewFloatingComposer": {
+    "minimize": "Minimize chat composer"
+  },
+  "pullRequestReviewWorkspace": {
+    "thePullRequestDiffCouldNot": "The pull request diff could not be loaded",
+    "theProvidersChangedFileListMay": "The provider's changed-file list may be incomplete. Open the pull request to see all files.",
+    "loadingWalkthrough": "Loading walkthrough...",
+    "diffLayers": "Diff layers",
+    "noPullRequestYet": "No pull request yet",
+    "pullRequestView": "Pull request view",
+    "thisPullRequestChangedOnThe": "This pull request changed on the provider since you last refreshed it.",
+    "changesDetected": "Changes detected",
+    "refreshPullRequestData": "Refresh pull request data",
+    "noCommentsOnThisPullRequest": "No comments on this pull request yet.",
+    "view": {
+      "summary": "Conversation",
+      "changes": "Changes",
+      "validation": "Validation"
+    },
+    "unknown": "Unknown",
+    "branchName": "branch name",
+    "summaryLoadFailed": "The pull request summary could not be loaded. Refresh to try again.",
+    "noAiSummary": "No AI summary was provided.",
+    "reactionNotSaved": "The reaction was not saved.",
+    "commentNotPosted": "The comment was not posted.",
+    "allChanges": "All changes",
+    "walkthroughNotUpdated": "The walkthrough could not be updated.",
+    "walkthroughNotGenerated": "The walkthrough could not be generated.",
+    "walkthroughResultNotConfirmed": "The walkthrough result could not be confirmed.",
+    "refreshToRetry": "Refresh the pull request to retry.",
+    "validationSection": "Validation section",
+    "validationView": {
+      "summary": "Summary",
+      "details": "Details"
+    },
+    "sidebarView": "Sidebar view",
+    "resizeLayerSidebar": "Resize sidebar",
+    "sidebarMode": {
+      "walkthrough": "Walkthrough",
+      "files": "Files"
+    },
+    "generateWalkthrough": "Generate Walkthrough",
+    "updateWalkthrough": "Update Walkthrough",
+    "updateWalkthroughTooltip": "Some changes were made since the last walkthrough was generated.",
+    "codeFromEarlierRevision": "Code from an earlier revision.",
+    "codePreviewUnavailable": "Code preview unavailable.",
+    "commentOnEarlierRevision": "This comment is on an earlier revision.",
+    "lineNotInCurrentDiff": "This line is not in the current diff.",
+    "goToLocationInDiff": "Go to {{location}} in the diff",
+    "goToLocation": "Go to {{location}}",
+    "collapseThreadAt": "Collapse thread at {{location}}",
+    "collapseCommentAt": "Collapse comment at {{location}}",
+    "expandThreadAt": "Expand thread at {{location}}",
+    "expandCommentAt": "Expand comment at {{location}}",
+    "resolveThread": "Resolve",
+    "unresolveThread": "Unresolve",
+    "threadResolutionNotSaved": "Could not update this review thread. Refresh and try again.",
+    "replyToThreadAt": "Reply to thread at {{location}}",
+    "threadReplyNotSaved": "Your reply was not posted. Refresh and try again.",
+    "reviewSuccess": {
+      "approve": "Approval submitted.",
+      "comment": "Review comment submitted.",
+      "requestChanges": "Changes requested.",
+      "requestChangesDiscussion": "Review comment posted."
+    },
+    "mergeReviewUnsupportedProvider": "Merge and review are unavailable for this provider.",
+    "connectProviderToMergeOrReview": "Connect your provider account in settings to merge or review as yourself.",
+    "pullRequestMerged": "Pull request merged.",
+    "pullRequestNotMerged": "The pull request was not merged.",
+    "reviewNotSubmitted": "The review was not submitted.",
+    "pullRequestNotRefreshed": "The pull request could not be refreshed.",
+    "linkedPullRequestRequired": "A linked pull request is required to view files.",
+    "inlineCommentsLoadFailed": "Inline comments could not be loaded. Refresh to try again.",
+    "commentsLoadFailed": "Comments could not be loaded. Refresh to try again.",
+    "commentKinds": {
+      "bug": "Bug",
+      "securityIssue": "Security issue",
+      "comment": "Comment"
+    },
+    "commentNotDeleted": "The comment was not deleted.",
+    "commentNotSaved": "The comment was not saved.",
+    "pendingReviewDiscarded": "Pending review discarded.",
+    "pendingReviewNotDiscarded": "The pending review was not discarded."
+  },
+  "pullRequestRowMenu": {
+    "openInNewTab": "Open in new tab",
+    "openOnProvider": "Open on {{provider}}",
+    "openInCodeReview": "Open in Code Review",
+    "copyLink": "Copy link",
+    "copyProviderLink": "Copy {{provider}} link",
+    "copiedLink": "link",
+    "copiedProviderLink": "{{provider}} link",
+    "openInSidebar": "Open in sidebar",
+    "on": "On",
+    "off": "Off"
+  },
+  "pullRequestSearch": {
+    "searchFailed": "Pull requests could not be searched.",
+    "noOtherLoadedMatches": "None of the other results loaded so far match this search.",
+    "noLoadedMatches": "None of the results loaded so far match this search.",
+    "noOtherMatches": "No other pull requests match this search.",
+    "noMatches": "No pull requests match this search.",
+    "inboxMatchesTitle": "In your inbox",
+    "searchResultsTitle": "All pull requests",
+    "searching": "Searching pull requests",
+    "connectGithubTitle": "Connect GitHub to search pull requests",
+    "connectGithubDescription": "Connect GitHub to search pull requests."
+  },
+  "pullRequestSearchFilters": {
+    "filters": "Filters",
+    "repository": "Repository",
+    "status": "Status",
+    "statuses": {
+      "open": "Open",
+      "draft": "Draft",
+      "closed": "Closed",
+      "merged": "Merged",
+      "all": "All"
+    },
+    "author": "Author",
+    "reviewer": "Reviewer",
+    "assignee": "Assignee",
+    "label": "Label",
+    "anyone": "Anyone",
+    "anyLabel": "Any label",
+    "chooseRepositoryHints": {
+      "author": "Choose a repository to filter by author",
+      "reviewer": "Choose a repository to filter by reviewer",
+      "assignee": "Choose a repository to filter by assignee",
+      "label": "Choose a repository to filter by label"
+    },
+    "clearFilters": "Clear filters"
+  },
+  "pullRequestValidation": {
+    "noQaDetailsWereReportedFor": "No QA details were reported for this section.",
+    "qaReportSections": "QA report sections",
+    "noAutomatedQaCommentsYet": "No automated QA comments yet.",
+    "noQaDetailsReported": "No QA details were reported.",
+    "noQaSummaryReported": "No QA summary was reported.",
+    "collapseCommentBy": "Collapse comment by {{author}}",
+    "expandCommentBy": "Expand comment by {{author}}",
+    "reply": "Reply",
+    "replyWithQuoteTo": "Replying to @{{author}} with a quoted comment",
+    "replyToCommentBy": "Reply to comment by {{author}}",
+    "comment": "Comment",
+    "newCommentOnPullRequest": "New comment on this pull request",
+    "writeComment": "Write a comment…",
+    "sendComment": "Send comment",
+    "qaCommentsLoadFailed": "QA comments could not be loaded. Refresh to try again.",
+    "checksLoadFailed": "Checks could not be loaded. Refresh to try again.",
+    "emptyCommentBody": "No comment body was provided."
+  },
+  "review": {
+    "codeReview": "Code Review",
+    "searchOrPasteALink": "Search or paste a pull request link",
+    "search": "Search",
+    "pullRequestChat": "Pull request chat",
+    "codeHostsLoadFailed": "Code hosts could not be loaded.",
+    "noCodeHostConnected": "No code host is connected to list pull requests from. Paste a pull request link to open it."
+  },
+  "pullRequestDiffExpansion": {
+    "contextExpansionFailed": "Context could not be expanded. File contents must be available and match this diff. Try again."
+  },
+  "pullRequestReviewComputer": {
+    "couldNotBePrepared": "The chat computer could not be prepared.",
+    "tookTooLongToConnect": "The chat computer took too long to connect.",
+    "loading": "Loading the chat computer…",
+    "enterSupportedUrl": "Enter a supported GitHub or GitLab pull request URL.",
+    "couldNotBeResolved": "The chat computer could not be resolved.",
+    "noComputerCouldConnect": "No available review computer could connect. Try again to refresh the environments.",
+    "noTemplateIncludesRepository": "No built environment includes this pull request repository.",
+    "noTemplateAvailable": "No built environment is available for pull request review.",
+    "connectingToAnother": "Connecting to another chat computer…",
+    "preparingStep": "Preparing chat computer · {{step}}",
+    "preparing": "Preparing chat computer…",
+    "computerMissingRepository": "{{name}} does not include this pull request repository.",
+    "ready": "Chat computer ready.",
+    "connecting": "Connecting to the chat computer…"
+  },
+  "walkthroughReadError": {
+    "loadFailed": "Could not load the walkthrough. Refresh to try again.",
+    "noPullRequest": "The pull request could not be found.",
+    "notConnected": "Connect GitHub to load the walkthrough.",
+    "providerNotConfigured": "Connect your Git provider to load the walkthrough.",
+    "unsupportedProvider": "Walkthroughs are not available for this Git provider.",
+    "providerError": "The walkthrough is unavailable because the pull request diff could not be loaded. Refresh to try again."
+  },
+  "commentChip": {
+    "conversation": "Conversation",
+    "tooltip": {
+      "byAuthorOnLocation": "Comment by {{author}} on {{location}}",
+      "onLocation": "Comment on {{location}}",
+      "byAuthorInConversation": "Comment by {{author}} in the conversation",
+      "inConversation": "Comment in the conversation",
+      "outdated": "{{tooltip}} (outdated)"
+    }
+  }
+}

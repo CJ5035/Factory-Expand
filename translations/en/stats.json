@@ -1,0 +1,59 @@
+{
+  "activityHeatmap": {
+    "activity": "Activity",
+    "less": "Less",
+    "more": "More",
+    "cellLabel_one": "{{month}} {{day}} — {{count}} session",
+    "cellLabel_other": "{{month}} {{day}} — {{count}} sessions",
+    "days": {
+      "mon": "Mon",
+      "wed": "Wed",
+      "fri": "Fri"
+    }
+  },
+  "badgeGrid": {
+    "badges": "Badges"
+  },
+  "statsHero": {
+    "sessions": "Sessions",
+    "totalTime": "Total time",
+    "longestStreak": "Longest streak",
+    "longestSession": "Longest session",
+    "member": "Member"
+  },
+  "topLanguagesFrameworks": {
+    "noDataYet": "No data yet.",
+    "stack": "Stack",
+    "languages": "Languages",
+    "frameworks": "Frameworks"
+  },
+  "topModelLine": {
+    "topModel": "Top model",
+    "mostActiveTime": "Most active time"
+  },
+  "chronotype": {
+    "nightOwl": "Night Owl",
+    "earlyBird": "Early Bird",
+    "afternoonCoder": "Afternoon Coder",
+    "nightHacker": "Night Hacker"
+  },
+  "topProjects": {
+    "title": "Top Projects",
+    "project": "Project",
+    "sessions": "Sessions",
+    "time": "Time",
+    "languagesFrameworks": "Languages / Frameworks"
+  },
+  "stats": {
+    "couldNotLoadStats": "Could not load stats",
+    "noDataAvailable": "No data available.",
+    "noSessionsYet": "No sessions yet",
+    "noSessionsDescription": "Run a few sessions in Droid CLI and come back to see your stats.",
+    "yourDroidStats": "Your Droid Stats",
+    "subtitle": "A snapshot of your personal Droid usage.",
+    "loading": "Loading your usage"
+  },
+  "errors": {
+    "desktopOnly": "Stats are only available in the desktop app"
+  }
+}
