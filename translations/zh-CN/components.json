@@ -1652,7 +1652,7 @@
         "file": "文件",
         "edit": "编辑",
         "view": "查看",
-        "window": "时间范围",
+        "window": "窗口",
         "help": "帮助"
       },
       "collapseSidebar": "折叠侧边栏"
@@ -3787,6 +3787,290 @@
       "logOut": "退出登录",
       "openUserMenu": "打开用户菜单",
       "openSettings": "打开设置"
+    }
+  },
+  "layout": {
+    "sessionListV2": {
+      "addProject": "添加项目",
+      "newMission": "新建任务",
+      "noMissionsYet": "暂无任务",
+      "releaseToUnpin": "松开以取消固定",
+      "updatedAt": {
+        "today": "今天",
+        "last3Days": "过去 3 天",
+        "last7Days": "过去 7 天",
+        "last30Days": "过去 30 天",
+        "older": "更早"
+      },
+      "sectionTitles": {
+        "projects": "项目",
+        "computers": "计算机",
+        "recent": "最近",
+        "personalSessions": "个人 Session",
+        "sharedSessions": "共享 Session",
+        "pinned": "已固定",
+        "yourMissions": "任务"
+      },
+      "emptyState": {
+        "noSessions": "没有 Session",
+        "noMatchingSessions": "没有符合筛选条件的 Session",
+        "noRegularSessions": "没有普通 Session",
+        "noExecSessions": "没有执行 Session",
+        "noAutomationSessions": "没有自动化 Session"
+      },
+      "groupActions": {
+        "renameProject": "重命名项目",
+        "deleteWorktree": "删除工作树",
+        "archiveProject": "归档项目"
+      },
+      "machineLabels": {
+        "droidComputer": "Droid 计算机",
+        "cloud": "云端",
+        "local": "本地"
+      },
+      "cleaningUpWorktree": "正在清理工作树…"
+    },
+    "sessionListV2FilterMenu": {
+      "configureRecentSessions": "配置最近的 Session",
+      "lastActivity": "最近活动",
+      "type": "类型",
+      "project": "项目",
+      "computer": "计算机",
+      "groupBy": "分组依据",
+      "sortBy": "排序方式",
+      "options": {
+        "none": "无",
+        "project": "项目",
+        "computer": "计算机",
+        "updatedAt": "更新时间",
+        "recent": "最近",
+        "createdTime": "创建时间",
+        "status": "状态",
+        "manual": "手动"
+      },
+      "types": {
+        "sessions": "Session",
+        "exec": "执行",
+        "automations": "自动化",
+        "softwareFactory": "Software Factory",
+        "evaluations": "评估"
+      },
+      "lastActivityOptions": {
+        "all": "全部",
+        "thirtyDays": "30 天",
+        "sevenDays": "7 天",
+        "threeDays": "3 天",
+        "oneDay": "1 天"
+      },
+      "all": "全部",
+      "selectedCount": "已选择 {{count}} 项",
+      "customizeSidebar": "自定义侧边栏",
+      "sectionSessions": "Session",
+      "sectionGroups": "组",
+      "show": "显示",
+      "fields": {
+        "branch": "分支",
+        "project": "项目",
+        "environment": "环境",
+        "machine": "计算机",
+        "pullRequest": "拉取请求",
+        "updatedAt": "更新时间"
+      },
+      "filters": "筛选条件",
+      "status": "状态",
+      "pullRequest": "PR",
+      "statusOptions": {
+        "needsInput": "需要输入",
+        "unread": "未读",
+        "working": "工作中",
+        "done": "完成",
+        "draft": "草稿"
+      },
+      "pullRequestOptions": {
+        "draft": "草稿",
+        "open": "未关闭",
+        "merged": "已合并",
+        "closed": "已关闭",
+        "none": "无 PR"
+      }
+    },
+    "sessionListV2Group": {
+      "showLess": "收起",
+      "showMore": "展开",
+      "projectActionsFor": "{{label}} 的项目操作",
+      "newSessionIn": "在 {{label}} 中新建 Session"
+    },
+    "sessionListV2Section": {
+      "sectionActionsFor": "{{title}} 的操作"
+    },
+    "sessionListV2SessionRow": {
+      "folder": "文件夹",
+      "computer": "计算机",
+      "worktree": "工作树",
+      "ephemeralWorktree": "临时工作树",
+      "draft": "草稿",
+      "unpinSession": "取消固定 Session",
+      "pinSession": "固定 Session",
+      "actions": {
+        "unpin": "取消固定",
+        "pin": "固定",
+        "markAsUnread": "标记为未读",
+        "tileSession": "平铺 Session",
+        "openInNewWindow": "在新窗口中打开",
+        "fork": "派生",
+        "rename": "重命名",
+        "missionSettings": "设置",
+        "archive": "归档",
+        "copySessionId": "复制 Session ID"
+      },
+      "hideWorkers": "隐藏工作代理",
+      "showWorkers": "显示工作代理",
+      "hideWorkstreams": "隐藏工作流",
+      "showWorkstreams": "显示工作流",
+      "unpinTitle": "取消固定 {{title}}",
+      "pinTitle": "固定 {{title}}",
+      "archiveSession": "归档 Session",
+      "archiveTitle": "归档 {{title}}",
+      "compactTime": {
+        "now": "现在",
+        "minute_one": "{{count}} 分钟",
+        "minute_other": "{{count}} 分钟",
+        "hour_one": "{{count}} 小时",
+        "hour_other": "{{count}} 小时",
+        "day_one": "{{count}} 天",
+        "day_other": "{{count}} 天",
+        "week_one": "{{count}} 周",
+        "week_other": "{{count}} 周",
+        "month_one": "{{count}} 个月",
+        "month_other": "{{count}} 个月",
+        "year_one": "{{count}} 年",
+        "year_other": "{{count}} 年"
+      },
+      "hideWorkersFor": "隐藏 {{title}} 的工作代理",
+      "showWorkersFor": "显示 {{title}} 的工作代理",
+      "hideWorkstreamsFor": "隐藏 {{title}} 的工作流",
+      "showWorkstreamsFor": "显示 {{title}} 的工作流",
+      "environments": {
+        "template": "模板",
+        "droidComputer": "Droid 计算机"
+      },
+      "pullRequestLabel": "拉取请求 {{state}}",
+      "pullRequestLabelLastKnown": "拉取请求 {{state}}（上次已知状态）",
+      "pullRequestStates": {
+        "open": "未关闭",
+        "draft": "草稿",
+        "merged": "已合并",
+        "closed": "已关闭"
+      },
+      "branch": "分支",
+      "repoCount_one": "{{count}} 个仓库",
+      "repoCount_other": "{{count}} 个仓库"
+    },
+    "sessionListV2ViewDialog": {
+      "addDescription": "将当前侧边栏保存为视图",
+      "delete": "删除",
+      "cancel": "取消",
+      "save": "保存",
+      "addView": "添加视图",
+      "editView": "编辑视图",
+      "iconLabel": "图标：{{label}}",
+      "viewIcons": "视图图标",
+      "viewName": "视图名称",
+      "icons": {
+        "layers": "图层",
+        "bell": "铃铛",
+        "inbox": "收件箱",
+        "flag": "旗帜",
+        "target": "目标",
+        "pin": "固定",
+        "tag": "标签",
+        "clock": "时钟",
+        "calendar": "日历",
+        "activity": "活动",
+        "trendingUp": "上升趋势",
+        "sparkles": "闪光",
+        "pullRequest": "拉取请求",
+        "branch": "分支",
+        "code": "代码",
+        "terminal": "终端",
+        "bot": "机器人",
+        "folder": "文件夹",
+        "users": "用户",
+        "user": "用户",
+        "eye": "眼睛",
+        "globe": "地球",
+        "wrench": "扳手",
+        "flask": "烧瓶"
+      }
+    },
+    "sessionListV2ViewMenu": {
+      "view": "视图",
+      "none": "无",
+      "activity": "活动",
+      "editView": "编辑 {{name}}",
+      "resetToDefault": "恢复默认",
+      "addViewTooltip": "将当前侧边栏配置保存为视图",
+      "addView": "添加视图"
+    },
+    "sessionManager": {
+      "factory": "Factory",
+      "home": "首页",
+      "sessions": "Session",
+      "inbox": "收件箱",
+      "newSession": "新建 Session",
+      "allSessions": "所有 Session",
+      "allWorkstreams": "所有工作流",
+      "missionControl": "任务控制台",
+      "softwareFactory": "Software Factory",
+      "beta": "测试版",
+      "automations": "自动化",
+      "customize": "自定义",
+      "codeReview": "代码审查",
+      "search": "搜索",
+      "paymentOverdue": "付款已逾期",
+      "goToBilling": "前往账单",
+      "usageWillBeHaltedOn": "你将于 {{date}} 起无法继续使用。",
+      "inboxNeedsAction": "收件箱，{{badge}} 项需要你处理"
+    },
+    "sessionsTable": {
+      "sessionControls": "Session 控件",
+      "searchSessions": "搜索 Session",
+      "appliedFilters": "已应用的筛选条件",
+      "loadingSessions": "正在加载 Session",
+      "allSessions": "所有 Session",
+      "session": "Session",
+      "mission": "任务",
+      "machine": "计算机",
+      "artifacts": "产物",
+      "activity": "活动",
+      "actions": "操作",
+      "loadingMoreSessions": "正在加载更多 Session",
+      "artifactGroups": {
+        "pullRequests": "拉取请求",
+        "issues": "问题",
+        "documents": "文档"
+      },
+      "rowActions": {
+        "rename": "重命名",
+        "copyLink": "复制链接",
+        "archive": "归档"
+      },
+      "openSession": "打开 Session {{title}}",
+      "actionsFor": "{{title}} 的操作",
+      "sessionsCount_one": "{{count}} 个 Session",
+      "sessionsCount_other": "{{count}} 个 Session",
+      "sessionsLoadedCount_one": "已加载 {{count}} 个 Session",
+      "sessionsLoadedCount_other": "已加载 {{count}} 个 Session"
+    },
+    "windowSidebar": {
+      "collapseSidebar": "折叠侧边栏",
+      "openSidebar": "打开侧边栏"
+    },
+    "sessionListV2WorkstreamRow": {
+      "symbolPicker": {
+        "label": "工作流图标",
+        "triggerLabel": "{{name}} 的图标：{{symbol}}"
+      }
     }
   }
 }

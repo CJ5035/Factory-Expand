@@ -1,12 +1,12 @@
 # Factory 桌面版中文汉化实施文档
 
-- 日期：2026-10-16（v6：补齐失败恢复的状态一致性、演练隔离及 GPT‑6.1 Sol 执行交接）
+- 日期：2026-10-16（v7：实施完成核心产物及真实应用，记录副本演练、UI补漏与锁屏下的剩余验收）
 - 目标版本：Factory Desktop 0.200.0（`C:\Users\11013\AppData\Local\Factory\app-0.200.0`）
-- 状态：**第 1–4 项完成；产物已验证，待正式 apply 确认与 UI 验收**（用户于 2026-10-16 授权执行及本地提交，禁止推送远程；真实安装 exe/asar 保持原始哈希，尚未正式 apply）
+- 状态：**第 1–4 项完成；正式中文应用及核心 UI 验收通过，原生菜单/对话框视觉验收待解锁**（用户已明确接受签名失效及关闭asar完整性校验；禁止推送远程。当前最终语言为简体中文）
 
 ## 1. 背景与调查结论
 
-用户截图确认：Settings → Appearance → Language 下拉仅 8 种语言，无中文。
+原调查记录语言下拉仅8种语言、无中文；实施实测0.200.0的实际入口为 Settings → General → Preferences → Language（“设置→通用→偏好设置→语言”），并非最初记录的Appearance路径。
 
 对 app.asar（60MB）静态分析的关键事实：
 
@@ -116,7 +116,7 @@ tools/
 
 ## 3. 实施顺序
 
-执行跟踪：1–4 完成；5 待代价确认及真实 UI 验收。当前会话无 TodoWrite 工具，以本清单及逐项记录跟踪。实际方案小幅调整共1次（打包后签名的keytar验证方式），其余为实施审查修复和本期components范围具体化。
+执行跟踪：1–4 完成；5 正式应用、核心UI、restore/reapply成功，仅原生菜单/对话框视觉检查待Windows解锁。当前会话无 TodoWrite 工具，以本清单及逐项记录跟踪。实际方案小幅调整共3次：keytar打包后签名核验；语言入口路径校正；共享会话导航补222键。其余为实施审查修复。
 
 Dedupe Ticket（第 1 项）：意图＝正确读取原始 asar 并提取限定版本英文资源。查询＝现有 extract/parser/resource 文件、work 中解析工具、资源声明起止与引用。命中＝zcode-expand/scripts/{extract.mjs,lib/asar.mjs,lib/patch.mjs,lib/syntaxcheck.mjs}。决策＝reuse asar，new 受限数据解析/提取工具；现有 extract 不解析资源。解析器内词法、字面量、引用解析和入口函数共同服务此单一目的。package.json/.gitignore/LICENSE 为执行及复用所必需。
 
@@ -133,6 +133,12 @@ Dedupe Ticket（第 3 项）：意图＝首批中文源库及可验证 ESM。查
 第 3 项分工与审查记录：单个实施子代理负责 common/settings/components 的正式 JSON；主代理负责 sessions/softwareFactory/inbox/onboarding/errors 及 components 尾部 475 条译文暂存，按文件或固定索引分工，最终 components 由同一代理汇总。复用英文原句字典减少重复，未使用外部翻译服务。构建器及 components 3002 键清单已独立审查通过；common/sessions/三个小 namespace/softwareFactory 和 components 尾部已做中英对照审查，修正两处 Git stash（明确储藏而非 git add 暂存）及一处每个 PR 必须批准的译法。所有这些修复均已核对英文并再次复核。
 
 Dedupe Ticket（第 4 项）：意图＝在一个最小自检脚本内执行隔离安装的状态失败路径。查询＝现有selfcheck、env事务/状态导出、计划三种中断窗口。命中＝tools/selfcheck.mjs 和 scripts/lib/env.mjs 已有导出。决策＝extend selfcheck（快照/CLI子进程/受控状态构造/并发验证回调），不新增框架或正式故障注入入口；临时记录仅在work/backups/state。运行时核查另确认 Windows 自带powershell.exe在重置子进程PSModulePath后签名/CIM均可用，env改为直接使用系统路径并固定UTF-8输出，不要求安装PowerShell7。
+
+Dedupe Ticket（第 5 项验收辅助）：意图＝用真实应用的UIAutomation树操作设置并保存窗口截图证据。查询＝可用glance/ground/detect命令、UIAutomation程序集、Factory主窗口句柄/进程。命中＝vision-tools技能及系统UIAutomation；仓库无桌面辅助脚本。决策＝new 临时 `work/factory-ui.ps1`（仅验收，不进入产品代码/提交），使用系统窗口截图与Invoke/Selection/Expand等标准UI模式，优先精确树定位，不读认证密钥或修改用户数据文件。
+
+第5项实测修订：真实语言入口为“设置→通用→偏好设置→语言”（非原文Appearance路径），9个选项含简体中文，English↔中文切换已成功且无Unsupported提示。发现共用导航的layout Session列表键未列入原3002目标，导致核心会话页左栏仍为英文；将 `components.layout` 内sessionListV2系列/sessionManager/sessionsTable/windowSidebar共222键纳入本期实际页面范围（小幅范围校正，不翻译其余layout）。另修正 `chat.pageHeader.applicationMenu.window` 的上下文译法为“窗口”，不能复用统计里的“时间范围”。新增目标键/译文前已查询en.components.layout、截图及bundle引用；决策extend现有components源及scope，不新建产品模块。后续必须restore→build→apply更新，不原地覆盖旧资源。
+
+验收诊断Dedupe Ticket：意图＝读取当前原版Electron页面的DOM就绪/错误状态以区分空白UI原因；查询＝现有UIA脚本、browser-act core会话能力及现有连接、原版日志。命中＝work/factory-ui.ps1可抓图但DOM不可见；browser-act现有会话均非Factory，不操作其它浏览器。决策＝new 仅验收用work/factory-cdp.mjs，连接当前Factory临时127.0.0.1:9225端口（结束后正常重启移除此端口）；仅读取页面及指定i18n状态，不读认证令牌或导出cookie。原版zh偏好回退源码经独立review确认正确，空白UI原因未定，不先修改恢复语义。
 
 第 4 项首次演练：dry-run只读、真实第二文件替换失败恢复、正常apply/重复apply、半完成pair的restore均通过。损坏基线测试错误指向共享pristine；reviewer确认后已改为work内独立工具fixture（复用同一scripts/tools/patches/translations，独立REPO_ROOT/pristine/state）。首次写入由原文件只读属性拒绝，未成功破坏共享基线；原始哈希需在重跑前复核。该修复纠正自检隔离，不变更正式安装语义。
 
@@ -159,8 +165,13 @@ Dedupe Ticket（第 4 项）：意图＝在一个最小自检脚本内执行隔�
    - 最终构建：`npm run build`、11个scripts/tools源码 `node --check`、`git diff --check` 全通过。最终整体独立review未发现Critical/Important；报告位于忽略的 `.superpowers/sdd/20261016-factory-desktop-i18n-zh/final-review.md`。
    - Checkpoint：审查修复损坏测试必须使用独立工具fixture、readonly pristine不能把属性传播到新目标；实际故障和六个pending窗口均通过后才勾选本项。共享pristine及真实安装pair保持原始完整哈希；正式apply及认证/语言切换/持久化等UI结论仍未验证。后续仅剩第5项，不能以这些静态和文件验证替代UI验收。
 5. [ ] 准备可审阅产物及演练结果后，正式 apply 前请用户确认关闭完整性校验的代价；执行实际 UI 验收与一次 restore/reapply。→ 验证：下面所有本期项目通过；失败保留诊断并恢复。
-   - 待确认：是否接受正式patch exe后签名失效、关闭asar完整性校验及Factory更新后需重新适配；确认后才可对真实版本目录apply。当前未启动/修改真实应用或用户偏好。
-   - 后续需在真实UI检查：语言列表与中文核心页面、未译回退、English往返、重启与另一窗口读取、IPC保存、系统locale条件、主进程英文回退、keytar实际认证，以及一次restore/reapply。无桌面观察能力时保留未勾选并交人工验收，不以marker替代。
+   - 用户已明确确认“同意，继续正式 apply 和验收”，接受签名失效、关闭asar校验和更新后重新适配。真实目录 `apply.cmd --home=C:/Users/11013/AppData/Local/Factory/app-0.200.0` 已成功，`verify.cmd` 明确报告已应用；开始真实应用启动验收，不制造首次启动条件。
+   - 已验证：9项语言列表含简体中文；English→中文真实下拉切换，无Unsupported或保存错误；原有日语实际加载后再切回中文；真实重启后 `document.lang=zh-CN`、IPC `savedLocale=zh-CN/systemLanguages=[zh-Hans-CN]`；第二个独立Session窗口也读到中文。未清空/伪造用户profile，不额外宣称全新profile测试。
+   - 已验证：General/Appearance/Session侧栏及工具栏、MCP面板中文；日期、数量、配额插值正常；未翻译Automations正文自然回退英文，无裸key。首次UI漏译补222个共享导航键及Window上下文后，最终components3224/3224目标键、总计10139叶。新增部分及措辞修复均review通过，最终build与正式verify通过。
+   - 已验证：现有登录保持，认证后的用量数据成功加载；未读出认证令牌或直接编辑用户配置文件。MCP共5个：4个可查看工具，Itsm Manager返回“Failed to connect to MCP server”；未改其配置或尝试重新认证，该外部连接状态不伪报通过。用量页少数后端/硬编码英文（如days/Standard Usage提示）保留，不扩展三条补丁范围。
+   - 已验证：真实restore还原两个完整原始hash、fuse enabled及Valid签名，原版正常加载为英文；保留的中文偏好未被删除，再apply后自然读取中文。先前OS截图空白/黑屏经确认受当前会话LogonUI锁屏影响，原版CDP `ready=complete/lang=en/root=2`及截图证明回退正常；没有据此错误修改恢复语义。真实重复apply报告Already applied无修改。
+   - 截图证据（均work忽略）：`language-options.png`、`switched-english.png`、`switched-chinese.png`、`restored-original-renderer.png`、`chinese-final-sidebar.png`、`second-window-chinese.png`、`mcp-panel-chinese.png`、`automations-fallback-loaded.png`、`authenticated-usage-chinese.png`、`appearance-chinese.png`。
+   - 未完成：Windows当前会话锁屏（LogonUI同会话，OS抓图黑屏），原生菜单和目录对话框的英文回退尚未获得可靠视觉证据；已有源码fallback核验不替代此项UI验收。已向用户请求解锁或选择保留当前状态、余项人工验收，因此本顶层项保持未勾选。临时调试端口在结束前关闭，以普通方式重启保留中文。
 
 涉及文件限定为 `scripts/lib/{asar,patch,syntaxcheck,env,fuses}.mjs`、`scripts/{apply,restore,verify}.mjs`、三个 `.cmd`、`tools/{extract_en,build_resource}.mjs`、本版本补丁 JSON、翻译 JSON/生成资源，以及必要 `package.json`、`.gitignore`、复用代码许可证和一个最小自检脚本（覆盖状态失败路径与资源拒绝样例，不加测试框架）。保留 MIT 版权声明。`.gitignore` 排除 work/pristine/backups/state/安装包及 dry-run 产物，避免当前未跟踪的 work 进入提交。不修改复用来源目录，不添加 GUI、自动更新适配、通用解析器、课程翻译或主进程 desktop 译文。
 
@@ -176,16 +187,16 @@ Dedupe Ticket（第 4 项）：意图＝在一个最小自检脚本内执行隔�
 
 ## 4. 验证清单
 
-- [ ] 应用启动无报错（fuse 关闭 + asar 重建均生效）
-- [ ] Settings → Appearance → Language 出现"简体中文"
-- [ ] 切换后核心页面（会话、设置、MCP 面板）显示中文；`{{插值}}` 正常
-- [ ] 未翻译 namespace（第二批范围）回退英文正常显示，不出现裸 key
-- [ ] 切回 English 正常；重启后偏好保持
-- [ ] 中文选择经 IPC 保存成功；重启及另一窗口读取中文，不出现 Unsupported app locale 或写入校验失败
-- [ ] 中文系统 locale 首次启动可加载；主进程菜单与对话框回退英文，现有其他语言可切换
-- [x] `verify.cmd` 明确报告已应用；修改资源/只改一个文件须失败；重复 apply 无额外修改（安装副本通过，真实安装仍待第5项）
-- [ ] `restore.cmd` 成对还原完整原始哈希与 fuse enabled；签名恢复；应用可启动。restore 不删除用户偏好，原版 UI 遇到中文偏好应按原有支持列表回退
-- [ ] 失败恢复与 pending 恢复在副本通过；keytar 外部文件及 unpacked 元数据不变，实际认证功能正常
+- [x] 应用启动无报错（fuse 关闭 + asar 重建均生效）
+- [x] Settings → General → Preferences → Language 出现"简体中文"（实测校正入口）
+- [x] 切换后核心页面（会话、设置、MCP 面板）显示中文；`{{插值}}` 正常
+- [x] 未翻译 namespace（第二批范围）回退英文正常显示，不出现裸 key
+- [x] 切回 English 正常；重启后偏好保持
+- [x] 中文选择经 IPC 保存成功；重启及另一窗口读取中文，不出现 Unsupported app locale 或写入校验失败
+- [ ] 中文系统 locale 首次启动可加载；主进程菜单与对话框回退英文，现有其他语言可切换（现有profile的中文启动和日语往返已通过；原生菜单/对话框待解锁视觉验收，全新profile未制造）
+- [x] `verify.cmd` 明确报告已应用；修改资源/只改一个文件须失败；重复 apply 无额外修改（副本失败路径及真实verify/重复apply通过）
+- [x] `restore.cmd` 成对还原完整原始哈希与 fuse enabled；签名恢复；应用可启动。restore 不删除用户偏好，原版 UI 遇到中文偏好按原有支持列表回退（真实验证通过）
+- [x] 失败恢复与 pending 恢复在副本通过；keytar 外部文件及 unpacked 元数据不变，实际现有登录/认证用量功能正常（MCP外部连接状态见第5项，不扩大为所有第三方服务都可用的承诺）
 
 ## 5. 风险与对策
 
@@ -240,4 +251,4 @@ Dedupe Ticket（第 4 项）：意图＝在一个最小自检脚本内执行隔�
 
 ---
 
-**实施及本地提交已获授权，禁止推送远程。** 第1–4项已执行并记录；按第5项，真实安装正式apply前仍需确认关闭asar完整性校验的代价（exe签名失效、Factory更新后需重新适配）。仓库 `F:\GitHubs\Factory-Expand` 已确认；本次未执行push，也未正式apply。
+**实施、代价及本地提交已获明确授权，禁止推送远程。** 当前正式应用为简体中文，核心验收、真实restore/reapply及verify均成功；第5项仅原生菜单/目录对话框视觉检查因Windows锁屏保留待办。仓库 `F:\GitHubs\Factory-Expand` 已确认，本次未执行push。
