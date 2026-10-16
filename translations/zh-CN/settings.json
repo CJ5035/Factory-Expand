@@ -1,0 +1,4743 @@
+{
+  "openComputeBaseImages": {
+    "loading": "正在加载基础镜像…",
+    "title": "基础镜像",
+    "description": "新环境的构建会从每个驱动上的这些镜像开始。",
+    "driverLabel": "驱动：{{name}}",
+    "managedDroid": "使用 Factory 托管镜像",
+    "managedDroidDescription": "为新构建提供 Factory 的 Droid 镜像。",
+    "managementFor": "为 {{name}} 使用 Factory 托管镜像",
+    "keepUpdated": "保持 Factory 镜像更新",
+    "keepUpdatedFor": "为 {{name}} 保持 Factory 镜像更新",
+    "keepUpdatedDescription": "新构建使用最新镜像。关闭后可固定摘要。",
+    "pinnedDigest": "固定的摘要",
+    "changeDigest": "更改摘要",
+    "pinDigestTitle": "固定镜像摘要",
+    "pinnedReference": "固定的摘要引用",
+    "reference": "引用",
+    "name": "名称",
+    "actions": "操作",
+    "customImages": "自定义镜像",
+    "customImagesFor": "{{name}} 的自定义镜像",
+    "noCustomImages": "尚未注册自定义镜像。",
+    "noBuildDrivers": "没有支持构建的可用驱动。",
+    "digestPinned": "已固定摘要",
+    "tagged": "标签",
+    "addCustomImage": "添加自定义镜像",
+    "delete": "删除",
+    "editTitle": "编辑 {{name}} 的引用",
+    "deleteTitle": "删除 {{name}}？",
+    "deleteDescription": "从驱动中移除此自定义镜像。新构建将无法再使用它。",
+    "save": "保存",
+    "cancel": "取消",
+    "droidReferenceHint": "请使用 {{repository}}@sha256: 后接 64 位字符摘要。",
+    "customReferenceHint": "请使用明确的镜像标签或 sha256 摘要。名称长度须为 1–100 个字符。",
+    "unsupportedArchitecture": "托管 Droid 镜像不支持此驱动的架构。仍可使用自定义镜像。",
+    "latestUnavailable": "升级此部署中的 OpenCompute，以管理此驱动上的基础镜像。",
+    "unknownStatus": "托管 Droid 镜像的状态未知。",
+    "failedToLoad": "加载基础镜像失败。请重试。",
+    "retry": "重试",
+    "droidUpdated": "Droid 镜像设置已保存。",
+    "customAdded": "自定义镜像已添加。",
+    "customUpdated": "自定义镜像引用已保存。",
+    "customDeleted": "自定义镜像已删除。"
+  },
+  "groupsSettings": {
+    "title": "用户组",
+    "titleWithCount": "用户组 · {{count}}",
+    "description": "从身份提供商同步的组。配置组后，即可将设置应用于所选组织中该组的所有成员。",
+    "loading": "正在加载组…",
+    "emptyTitle": "尚未从身份提供商同步任何组",
+    "emptyDescription": "用户组来自目录同步。请在“安全与身份”中设置目录同步，在身份提供商中将组分配给 Factory，首次同步完成后它们会显示在这里。",
+    "setUpDirectorySync": "设置目录同步",
+    "notInDirectory": "{{id}}（不在目录中）",
+    "notConfigured": "未配置",
+    "usageLimitDetail": "每位成员每月 {{limit}} 积分",
+    "usageLimitRange": "因组织而异：每位成员每月 {{min}} 至 {{max}} 积分"
+  },
+  "directoryGroupConfiguration": {
+    "title": "配置 {{name}}",
+    "settingsStep": "配置设置",
+    "organizationsStep": "选择组织",
+    "step": "第 {{step}} 步，共 {{total}} 步",
+    "limitTitle": "每月用量上限",
+    "limitDescription": "此组成员使用该上限，除非为其单独设置了覆盖值。该上限优先于全局用户上限。",
+    "limitLabel": "每位成员的上限（百万积分）",
+    "limitPlaceholder": "例如，50（即 5000 万积分）",
+    "limitDetail": "每位成员每月 {{limit}} 积分。",
+    "appliesTo": "应用范围",
+    "organizations": "组织",
+    "organizationsDescription": "组设置应用于所选组织中的组成员。取消选择组织会移除该组在该组织中的所有设置。",
+    "overwriteWarning": "这将覆盖现有配置",
+    "removedChange": "{{organization}} 中的 {{group}}：配置已移除",
+    "limitChange": "{{organization}} 中的 {{group}}：积分由 {{previous}} 变为 {{next}}",
+    "saved": "已保存 {{name}} 的组配置",
+    "removed": "已移除 {{name}} 的组配置",
+    "remove": "移除配置",
+    "cancel": "取消",
+    "back": "返回",
+    "saving": "正在保存…",
+    "save": "保存",
+    "next": "下一步"
+  },
+  "fleet": {
+    "label": "设备群",
+    "guardDescription": "仅组织管理员和所有者可查看设备群清单。",
+    "inventory": "设备群清单",
+    "search": {
+      "droidComputers": "Droid 计算机",
+      "remoteControl": "远程控制",
+      "byom": "BYOM",
+      "environmentInstances": "环境实例",
+      "source": "来源",
+      "owner": "所有者主体",
+      "lastSeen": "最后在线时间"
+    }
+  },
+  "accountSection": {
+    "yourAccount": "你的账号"
+  },
+  "configItems": {
+    "overview": "将标准用户文件夹中受支持的技能、指令、钩子、插件、Droid 和命令发布到个人云目录。已知凭据文件、MCP 和输出样式除外。发布前请检查提示词和脚本中是否含有机密信息。",
+    "checking": "正在检查配置…",
+    "publishingConfigurations": "正在发布配置…",
+    "publicationStatus": "已发布 {{published}} 项。",
+    "readyStatus": "{{ready}} 项可发布{{unchanged}}{{skipped}}。",
+    "unchangedCount": "，{{unchanged}} 项未更改",
+    "skippedCount": "，{{skipped}} 项已跳过",
+    "empty": "标准用户文件夹中未找到配置。",
+    "emptyFiltered": "没有符合此状态的配置。",
+    "groupHeading": "{{category}}（{{count}}）",
+    "categories": {
+      "instructions": "指令",
+      "skills": "技能",
+      "plugins": "插件",
+      "hooks": "钩子",
+      "droids": "Droid",
+      "commands": "命令"
+    },
+    "stateFilter": {
+      "label": "按状态筛选配置",
+      "all": "全部",
+      "ready": "就绪",
+      "skipped": "已跳过",
+      "unchanged": "无更改"
+    },
+    "hideChanges": "隐藏更改",
+    "viewChanges": "查看更改",
+    "skipped": "已跳过：{{message}}",
+    "ready": "可发布",
+    "approval": "“全部发布”将上传所有就绪配置，包括被状态筛选隐藏的配置。发布前请使用“查看更改”检查各项。",
+    "refresh": "刷新",
+    "publishing": "正在发布…",
+    "publishAll": "全部发布（{{ready}}）",
+    "publishTitle": "发布配置",
+    "publishDescription": "发布标准用户文件夹中所有受支持的配置。",
+    "pullTitle": "拉取配置",
+    "pullDescription": "默认关闭。拉取会更新本地配置文件，效果与本地编辑相同。此操作不会发布配置。",
+    "messages": {
+      "reconnect": "请重新连接本地守护进程并选择组织，以发布配置。",
+      "missingDirectory": "本地守护进程未提供默认目录。请重新连接后重试。",
+      "connectionChanged": "配置连接已更改。",
+      "unexpectedAvailability": "配置可用性响应异常。",
+      "unavailable": "此账号或组织无法使用配置同步。",
+      "reopen": "配置连接已更改。请重新打开此面板后再发布。",
+      "unexpectedReview": "配置审查响应异常。",
+      "reviewLimit": "配置审查超过桌面版上限（1000 项或 32 MiB）。请使用 CLI 审查并发布单个项目。",
+      "missingApproval": "配置审查缺少批准记录。",
+      "updateDaemon": "请更新守护进程并刷新此审查，然后再发布配置。",
+      "freshReview": "此配置需要重新审查。",
+      "pagination": "配置审查分页未前进。",
+      "unexpectedPublication": "配置发布响应异常。",
+      "unconfirmed": "无法确认发布结果。请刷新后再重试。",
+      "unconfirmedError": "无法确认发布结果。请刷新后再试。",
+      "notAttempted": "连接或审查已更改，因此未发布。请刷新后再发布。",
+      "availabilityError": "无法检查配置可用性。请刷新后重试。"
+    },
+    "publicationStatusWithAttention_one": "已发布 {{published}} 项，{{count}} 项需要处理。",
+    "publicationStatusWithAttention_other": "已发布 {{published}} 项，{{count}} 项需要处理。"
+  },
+  "advancedAnalyticsSection": {
+    "statusesAreUnavailableSavedSelectionsAre": "状态不可用。已保存的选择将予以保留。",
+    "cycleTime": "周期时长",
+    "chooseWhichStatusesStartAndStop": "选择各团队用来开始和停止计时的状态。",
+    "team": "团队",
+    "configureAdvancedAnalyticsForYourOrganization": "为组织配置高级分析。",
+    "advancedAnalytics": "高级分析",
+    "enablesOrgWideEngineeringAnalyticsIncluding": "启用组织范围的工程分析，包括 GitHub 和 Linear 历史数据回填、实时本地信号分类，以及自动回填自账号创建以来所有已同步 Session 的本地信号。实时本地信号评估费用由组织承担。历史 Session 回填由 Factory 付费，不消耗组织积分，也不产生计费 FSC。",
+    "statusCatalogUnavailableSavedSelectionsAre": "状态目录不可用。已保存的选择将予以保留。",
+    "statusRole": {
+      "start": "开始",
+      "none": "无",
+      "end": "结束"
+    },
+    "cycleTimeRoleAriaLabel": "{{status}} 的周期计时角色",
+    "clockStartsAtAndStopsAt": "计时从 {{start}} 开始，到 {{end}} 结束。"
+  },
+  "agentBehaviorSection": {
+    "controlHowDroidAgentsBehaveDuring": "控制 Droid 代理在 Session 中的行为。",
+    "agentBehavior": "代理行为",
+    "automaticallyConnectToIdeExtensionsWhen": "可用时自动连接 IDE 扩展。",
+    "ideAutoConnect": "自动连接 IDE",
+    "preventTheCliFromAutomaticallyUpdating": "禁止 CLI 在用户启动 Droid 时自动更新，并禁止用户在桌面应用内更新。用户仍可通过 npm 手动更新 CLI。",
+    "disableAutoUpdate": "禁用自动更新"
+  },
+  "apiKeyOperation": {
+    "unnamedKey": "未命名密钥",
+    "createSummary": "创建“{{name}}”",
+    "createSummaryWithExpiry": "创建“{{name}}” · {{expiry}}",
+    "keyNameLabel": "密钥名称",
+    "keyNamePlaceholder": "输入描述性名称",
+    "expiresAtLabel": "到期时间（{{timeZone}}）— 可选",
+    "expiresAtDescription": "留空则密钥永不过期。",
+    "expiresAtError": "到期日期和时间必须在未来。",
+    "actionPrimary": "创建密钥",
+    "actionInProgress": "正在创建…",
+    "actionSucceeded": "已创建",
+    "headerTitle": "创建 API 密钥",
+    "headerDescription": "API 密钥以你的身份验证请求。创建后请复制新密钥，因为它只会显示一次。",
+    "displaySection": "账号",
+    "invalidArguments": "暂存的 API 密钥详情无效。",
+    "notCreated": "未创建",
+    "incompleteDetails": "创建前请填写必需的密钥详情",
+    "created": "API 密钥已创建。请立即复制并妥善保存。",
+    "creationUnconfirmed": "无法确认创建结果。重试前请检查 API 密钥列表。"
+  },
+  "apiKeyRow": {
+    "neverExpires": "永不过期",
+    "revoke": "撤销",
+    "revoking": "正在撤销…",
+    "revoked": "已撤销",
+    "revokedAt": "已于 {{date}} 撤销",
+    "expiresAt": "于 {{date}} 到期",
+    "expiredAt": "已于 {{date}} 过期"
+  },
+  "apiKeyTabbedList": {
+    "active": "活跃",
+    "inactive": "未启用",
+    "noActiveApiKeys": "没有活跃的 API 密钥。",
+    "noInactiveApiKeys": "没有已撤销或已过期的 API 密钥。"
+  },
+  "apiKeysSettings": {
+    "createKey": "创建密钥",
+    "apiKeysAuthenticateRequestsAsYou": "API 密钥以你的身份验证请求。它们拥有与你相同的权限，所有用量都计入你的账号。",
+    "noApiKeysYet": "暂无 API 密钥。",
+    "createApiKey": "创建 API 密钥",
+    "apiKeyRevoked": "API 密钥已撤销",
+    "apiKeyCreated": "API 密钥已创建",
+    "onlyOwnersAndManagersCanCreate": "只有所有者和管理员可以为此组织创建 API 密钥。",
+    "requiresPaidSubscription": "API 密钥需要有效的付费订阅",
+    "apiKeysWithCount": "API 密钥 · {{total}}",
+    "creationRestrictedByAdmin": "你的组织管理员已将 Factory API 密钥创建权限限制为所有者和管理员。",
+    "requiresPaidSubscriptionUpgrade": "API 密钥需要有效的付费订阅。请升级套餐以创建和使用 API 密钥。",
+    "creating": "正在创建…"
+  },
+  "appearanceSection": {
+    "appearance": "外观",
+    "text": "文本",
+    "uiFont": "界面字体",
+    "uiFontOptions": {
+      "default": "Geist",
+      "system": "系统默认",
+      "rounded": "圆体",
+      "serif": "衬线体"
+    },
+    "contentFont": "内容字体",
+    "usedForChatMessagesAndRendered": "用于聊天消息和渲染的 Markdown。",
+    "contentFontOptions": {
+      "sameAsUi": "与界面字体相同",
+      "default": "Geist",
+      "system": "系统默认",
+      "rounded": "圆体",
+      "serif": "衬线体"
+    },
+    "codeFont": "代码字体",
+    "codeFontOptions": {
+      "default": "Geist Mono",
+      "system": "系统等宽字体"
+    },
+    "uiFontSize": "界面字号",
+    "scalesInterfaceTextInPixels": "调整界面文本大小，单位为像素。",
+    "codeFontSize": "代码字号",
+    "codeBlocksToolOutputAndDiffs": "代码块、工具输出和差异的字号，单位为像素。",
+    "useNativeMacosFontAntiAliasing": "使用 macOS 原生字体抗锯齿",
+    "codeDiffs": "代码差异",
+    "diffMarkers": "差异标记",
+    "optionallyMarkChangedLinesInChat": "可选：在聊天差异中使用 +/- 符号标记变更行。",
+    "interaction": "交互",
+    "reduceMotion": "减少动态效果",
+    "minimizeAnimationsSystemFollowsYourOs": "尽量减少动画。选择“系统”会遵循操作系统设置。",
+    "fontSmoothingDescription": {
+      "light": "适用于浅色模式。关闭可让文字更细、更淡。",
+      "dark": "适用于深色模式。关闭可让文字更细、更淡。"
+    },
+    "diffMarkerOptions": {
+      "color": "颜色",
+      "symbols": "颜色和 +/-"
+    },
+    "reduceMotionOptions": {
+      "system": "跟随系统",
+      "on": "开启",
+      "off": "关闭"
+    }
+  },
+  "appearanceThemeEditor": {
+    "cancel": "取消",
+    "import": "导入",
+    "pasteAThemeCopiedFromFactory": "粘贴从 Factory 外观设置中复制的主题。",
+    "themeJson": "主题 JSON",
+    "factorytheme1": "{ \"factoryTheme\": 1, … }",
+    "thisDoesntLookLikeAFactory": "这似乎不是 Factory 主题。",
+    "copyTheme": "复制主题",
+    "preset": "预设",
+    "accent": "强调色",
+    "background": "背景色",
+    "foreground": "前景色",
+    "fillBehindYourMessagesInChat": "聊天中你的消息的背景填充。",
+    "userMessageBubble": "用户消息气泡",
+    "howStronglyBordersPanelsAndSecondary": "边框、面板及次要文本与背景的区分程度。",
+    "contrast": "对比度",
+    "modes": {
+      "light": "浅色",
+      "dark": "深色"
+    },
+    "importTitle": {
+      "light": "导入浅色主题",
+      "dark": "导入深色主题"
+    },
+    "title": "{{mode}}主题",
+    "presetAriaLabel": "{{mode}}主题预设",
+    "accentAriaLabel": "{{mode}}强调色",
+    "accentColorAriaLabel": "{{mode}}强调颜色",
+    "backgroundAriaLabel": "{{mode}}背景色",
+    "foregroundAriaLabel": "{{mode}}前景色",
+    "userMessageBubbleAriaLabel": "{{mode}}用户消息气泡颜色",
+    "contrastAriaLabel": "{{mode}}对比度",
+    "themeCopied": "已复制{{mode}}主题",
+    "themeImported": "已导入{{mode}}主题",
+    "copyThemeFailed": "复制主题失败",
+    "accentOptions": {
+      "default": "默认",
+      "orange": "橙色",
+      "blue": "蓝色",
+      "teal": "青色",
+      "green": "绿色",
+      "purple": "紫色",
+      "pink": "粉色",
+      "red": "红色",
+      "yellow": "黄色",
+      "graphite": "石墨色",
+      "white": "白色",
+      "custom": "自定义"
+    }
+  },
+  "auditLogSettings": {
+    "aRecordOfAdministrativeChangesMade": "组织中管理操作的变更记录。仅所有者可查看此日志。",
+    "filterByDateRange": "按日期范围筛选",
+    "filterByActor": "按操作者筛选",
+    "filterByEventType": "按事件类型筛选",
+    "filterByScope": "按范围筛选",
+    "filterByOrganization": "按组织筛选",
+    "noAuditEventsMatchTheseFilters": "没有符合这些筛选条件的审计事件。",
+    "organizationsInOtherRegions": "{{names}} 的审计事件存储在其他数据区域，未在此显示。",
+    "time": "时间",
+    "event": "事件",
+    "actor": "操作者",
+    "details": "详情",
+    "organization": "组织",
+    "dateRangeAllTime": "全部时间",
+    "dateRangeLast24Hours": "过去 24 小时",
+    "dateRangeLast7Days": "过去 7 天",
+    "dateRangeLast30Days": "过去 30 天",
+    "dateRangeLast90Days": "过去 90 天",
+    "system": "跟随系统",
+    "allActors": "所有操作者",
+    "allEvents": "所有事件",
+    "allScopes": "所有范围",
+    "thisOrganizationOnly": "仅此组织",
+    "allSubOrganizations": "所有子组织",
+    "titleWithCount": "审计日志 · {{total}}",
+    "loading": "正在加载…",
+    "loadMore": "加载更多"
+  },
+  "autoModelCandidatesDraft": {
+    "turnedOnWithoutGuidelines": "{{name}} 已在自动模型中启用，但尚无指南。请在自动模型候选中添加指南，或将其关闭。",
+    "migrateLegacyKeyBeforeServedBy": "请先在共享模型中迁移自定义模型旧版存储的 API 密钥，再更改服务提供方。",
+    "bedrockCheckedAtRuntime": "Bedrock 区域和允许的基础 URL 会在自动模型运行的位置接受检查。",
+    "notInUseOutsideAllowedBaseUrls": "未使用：此自定义模型不在允许的基础 URL 范围内。",
+    "notInUseByokOff": "未使用：自动模型已关闭 BYOK。",
+    "noneByokRequired": "无（需要 BYOK）",
+    "factoryManaged": "Factory 托管",
+    "customModelOption": "自定义：{{provider}}（{{name}}）",
+    "customServedByLabel": "自定义：{{provider}}"
+  },
+  "autoModelCandidatesSection": {
+    "autoModelCandidates": "自动模型候选",
+    "guidelinesAreAddedToTheModel": "指南会加入自动模型用于评分的模型描述中。请客观描述模型的优势、劣势以及组织的自定义指南。",
+    "titleTooltip": "选择自动模型可选用的模型及各自运行位置。Factory 默认模型池默认启用，除非你关闭某个模型；其他模型需先提供描述指南才能加入。被模型访问策略阻止的模型仍可通过你的自定义模型运行。",
+    "allowByokTitle": "允许自动模型使用 BYOK",
+    "allowByokDescription": "允许自动模型通过候选模型的服务提供方或独立候选使用自定义模型。在服务提供方下选择自定义模型会启用此选项。",
+    "allowByokAriaLabel": "允许自动模型候选使用 BYOK",
+    "requireByokTitle": "要求自动模型使用 BYOK",
+    "requireByokDescription": "未在服务提供方下配置自定义模型的候选将被排除，自动模型不会使用 Factory 托管推理。",
+    "requireByokAriaLabel": "要求自动模型候选使用 BYOK",
+    "addAModelToSharedModels": "将模型添加到共享模型，即可在你自己的自定义模型上运行候选。"
+  },
+  "autoModelSection": {
+    "showWhichModelAutoModelPicked": "显示自动模型为当前 Session 选择的模型。",
+    "autoModel": "自动模型",
+    "showAutoModelPick": "显示自动模型选择"
+  },
+  "azureDevOpsServerSetupSection": {
+    "enterTheCollectionUrlAndAn": "输入集合 URL 和归组织所有的个人访问令牌，令牌须具有 Code（读写）和 Service Hooks（读取和管理）范围。用户还需拥有各项目的查看订阅和编辑订阅权限。令牌保存时会接受验证，且不会再次显示。",
+    "collectionUrl": "集合 URL",
+    "httpsAzureExampleComTfsDefaultcollection": "https://azure.example.com/tfs/DefaultCollection",
+    "personalAccessToken": "个人访问令牌",
+    "enterAnAzureDevopsServerPat": "输入 Azure DevOps Server PAT",
+    "configurationSaved": "Azure DevOps Server 配置已保存",
+    "saving": "正在保存…",
+    "saveConfiguration": "保存配置"
+  },
+  "billingSettings": {
+    "billing": "账单",
+    "billingIsCentrallyManaged": "账单统一管理",
+    "billingSettingsAreNotAvailableFor": "此组织无法使用账单设置。",
+    "redeemVoucher": "兑换代金券",
+    "applyAVoucherToAddCredit": "使用代金券为账号增加余额。套餐不会改变。",
+    "haveAVoucher": "有代金券？",
+    "billingSettingsAreOnlyAvailableTo": "仅根组织所有者可使用账单设置。",
+    "loadingBilling": "正在加载账单…"
+  },
+  "bitbucketDataCenterSetupSection": {
+    "domain": "域名",
+    "httpsBitbucketExampleCom": "https://bitbucket.example.com",
+    "clientId": "客户端 ID",
+    "enterYourBitbucketOauthClientId": "输入 Bitbucket OAuth 客户端 ID",
+    "secret": "密钥",
+    "enterYourBitbucketOauthClientSecret": "输入 Bitbucket OAuth 客户端密钥",
+    "followTheDocumentation": "按照 <anchor>Bitbucket Data Center 文档</anchor>创建 OAuth 应用并获取所需凭据。",
+    "configurationSaved": "Bitbucket Data Center 配置已保存",
+    "saving": "正在保存…",
+    "saveConfiguration": "保存配置"
+  },
+  "buildConnectionStatusSection": {
+    "connectionStatus": "连接状态"
+  },
+  "builtInToolAutonomySection": {
+    "chooseWhichBuiltInNetworkTools": "选择 Droid 可使用的内置网络工具，以及无需批准即可运行这些工具所需的 Session 自主级别。",
+    "builtInNetworkTools": "内置网络工具",
+    "disableWebSearch": "禁用网页搜索",
+    "removeTheWebSearchToolSo": "移除网页搜索工具，使 Droid 无法搜索公共网络。网页获取工具单独管理。",
+    "toolDescription": {
+      "webSearch": "搜索公共网络。",
+      "fetchUrl": "从外部 URL 获取内容。"
+    },
+    "autonomyAriaLabel": "{{level}} {{tool}} 自主级别"
+  },
+  "bulkActionConfirmModal": {
+    "cancel": "取消",
+    "noSessionsMatchTheCurrentSelection": "没有符合当前选择的 Session。",
+    "archivingHidesASessionButDoes": "归档会隐藏 Session，但不会停止它。仍在工作的 Session 将继续运行。",
+    "archiveSessions": "归档 Session",
+    "unarchiveSessions": "取消归档 Session",
+    "archiving": "正在归档…",
+    "unarchiving": "正在取消归档…",
+    "archiveCount_one": "归档 {{count}} 个 Session",
+    "archiveCount_other": "归档 {{count}} 个 Session",
+    "unarchiveCount_one": "取消归档 {{count}} 个 Session",
+    "unarchiveCount_other": "取消归档 {{count}} 个 Session",
+    "countingMatchingSessions": "正在统计匹配的 Session…",
+    "filterMatchesTooMany": "此筛选条件匹配超过 {{max}} 个 Session。请缩小范围（例如选择更近的“更新时间”截止点）后重试。",
+    "archiveDescription_one": "你将归档 {{count}} 个 Session。可在“已归档”标签页中撤销。",
+    "archiveDescription_other": "你将归档 {{count}} 个 Session。可在“已归档”标签页中撤销。",
+    "unarchiveDescription_one": "你将取消归档 {{count}} 个 Session。可在“活跃”标签页中撤销。",
+    "unarchiveDescription_other": "你将取消归档 {{count}} 个 Session。可在“活跃”标签页中撤销。"
+  },
+  "byokAutoModelSection": {
+    "autoModel": "自动模型",
+    "allowByokInAutoModel": "允许自动模型使用 BYOK",
+    "allowAutoModelToUseEligible": "允许自动模型使用符合条件的组织托管自定义模型，替代对应的 Factory 托管模型。",
+    "requireByokInAutoModel": "要求自动模型使用 BYOK",
+    "excludeModelsWithoutAnEligibleByok": "排除没有符合条件的 BYOK 对应模型的模型。自动模型将不会使用 Factory 托管推理。",
+    "currentCoverage": "当前覆盖情况",
+    "autoModelByokEligibility": "自动模型 BYOK 资格",
+    "mapEachCustomModelToThe": "将每个自定义模型映射到自动模型路由时应替代的对应 Factory 模型。",
+    "multipleActiveCustomModelsMapTo": "多个活跃自定义模型映射到同一 Factory 模型。自动模型按配置顺序使用第一个符合条件的映射。",
+    "duplicateAutoModelMappings": "重复的自动模型映射",
+    "coverageCopy": {
+      "unavailable": "自动模型不可用：目前没有符合条件的模型。请启用更多 Factory 模型或映射 BYOK 对应模型。",
+      "factoryManaged": "自动模型使用 Factory 托管推理。",
+      "mixed": "存在符合条件的对应映射时，自动模型使用你的端点，否则使用 Factory 托管推理。",
+      "fullyByok": "自动模型的所有流量都使用已配置的端点，不使用 Factory 托管推理。",
+      "enforced": "自动模型的所有流量都使用已配置的端点。强制要求：自动模型绝不使用 Factory 托管推理，即使新增模型也不例外。"
+    },
+    "coverageLabel": {
+      "unavailable": "不可用",
+      "factoryManaged": "Factory 托管",
+      "mixed": "混合",
+      "fullyByok": "全部 BYOK"
+    },
+    "migrateLegacyStoredApiKey": "更改自动模型资格前，请在共享模型中迁移其旧版存储的 API 密钥。",
+    "equivalentFactoryModelFor": "{{name}} 对应的 Factory 模型",
+    "none": "无",
+    "useInAutoModel": "在自动模型中使用 {{name}}"
+  },
+  "byokConfigurationSection": {
+    "fixRawConfigurationValidationErrorsBefore": "配置 BYOK 前请先修复原始配置的验证错误。",
+    "allowCustomModelsByok": "允许自定义模型（BYOK）",
+    "allowPersonalCustomModelsAndOrganization": "允许个人自定义模型以及组织托管的 HTTP 或 Bedrock 模型。关闭此策略后仍会保留已配置的模型。"
+  },
+  "byokEndpointsSection": {
+    "noSharedModels": "没有共享模型",
+    "membersMayStillConfigurePersonalCustom": "启用 BYOK 后，成员仍可配置个人自定义模型。",
+    "byokDisabled": "BYOK 已禁用",
+    "blockedByUrlRestrictions": "被 URL 限制阻止",
+    "viewJson": "查看 JSON",
+    "changesStayInYourDraftUntil": "保存企业控制设置前，更改会保留在草稿中。",
+    "noHttpEndpoint": "没有 HTTP 端点",
+    "sharedModels": "共享模型",
+    "addModel": "添加模型",
+    "sharedModelsDescription": "配置与组织共享的 HTTP 和 AWS Bedrock 模型。可使用表单或粘贴 JSON 配置；保存企业控制设置前，更改会保留在草稿中。",
+    "enableByokToAddModels": "启用 BYOK 后可添加模型。现有配置会保留。",
+    "unsupportedConfiguration": "不支持的配置",
+    "editModel": "编辑 {{name}}",
+    "deleteModel": "删除 {{name}}"
+  },
+  "byokUrlRestrictionsSection": {
+    "baseUrlRestrictions": "基础 URL 限制",
+    "controlWhichGatewayOriginsAndPaths": "控制成员可为自定义模型使用的网关来源和路径。",
+    "allowAnyEndpointUrl": "允许任何端点 URL",
+    "onlyAllowApprovedUrlPrefixes": "仅允许已批准的 URL 前缀",
+    "approvedUrlPrefix": "已批准的 URL 前缀",
+    "httpsGatewayExampleComV1": "https://gateway.example.com/v1",
+    "addPrefix": "添加前缀",
+    "aPrefixPermitsTheExactPath": "前缀允许同一来源上的精确路径及其下级路径。例如，https://gateway.example.com/v1 允许 /v1 和 /v1/...，但不允许 /v2。",
+    "membersMayConnectCustomModelsTo": "成员可将自定义模型连接到任何有效的端点 URL。",
+    "theseRestrictionsApplyToOrganizationManaged": "这些限制适用于组织托管端点和成员在个人设置中配置的自定义模型。",
+    "organizationWidePolicy": "组织范围的策略",
+    "enterAUrl": "请输入 URL。",
+    "enterAValidHttpUrl": "请输入有效的 HTTP(S) URL。",
+    "urlPrefixAlreadyAllowed": "此 URL 前缀已被允许。",
+    "cannotRemoveFinalPrefix": "移除最后一个前缀前，请添加其他前缀或选择“允许任何端点 URL”。",
+    "removeUrl": "移除 {{url}}"
+  },
+  "byokUtils": {
+    "enterJsonObject": "请输入 JSON 对象。",
+    "enterValidJson": "请输入有效的 JSON。",
+    "enterValidBedrockEndpoint": "请输入有效的 Bedrock 端点 URL 或环境引用。",
+    "modelType": {
+      "awsBedrock": "AWS Bedrock",
+      "credentialHelper": "凭据辅助程序",
+      "localEnvironmentKey": "本地环境密钥",
+      "legacyStoredKey": "旧版存储密钥",
+      "keyless": "无密钥"
+    },
+    "addBedrockSettings": "bedrock：添加 AWS Bedrock 设置，或选择 HTTP 提供商。",
+    "unsupportedBedrockProvider": "provider：AWS Bedrock 支持 Anthropic Messages、OpenAI Responses 或 Bedrock Converse。",
+    "removeHttpEndpointForBedrock": "baseUrl：移除 HTTP 端点，改用 bedrock.bedrockBaseUrl。",
+    "configuration": "配置",
+    "enterModelId": "model：请输入模型 ID。",
+    "useJsonEditorForNonHttpModels": "非 HTTP 模型请使用 JSON 编辑器。",
+    "useEnvReferenceNotLiteralKey": "apiKey：请使用 ${VARIABLE_NAME} 引用，而非 API 密钥明文。",
+    "replaceLegacyStoredKey": "请使用本地环境引用或凭据辅助程序替换旧版存储的 API 密钥。",
+    "credentialHeader": "extraHeaders：{{headers}} 似乎是凭据。请使用 ${VARIABLE_NAME} 引用。",
+    "duplicateHeaderNames": "extraHeaders：标头名称必须唯一，不区分大小写。",
+    "mustBePositiveWholeNumber": "{{field}}：必须是正整数。",
+    "enterEnvironmentVariable": "请输入环境变量。",
+    "enterCredentialHelperCommand": "请输入凭据辅助程序命令。"
+  },
+  "cancelSubscriptionModal": {
+    "goBack": "后退",
+    "cancelSubscription": "取消订阅",
+    "cancelling": "正在取消…",
+    "subscriptionCancelledSuccessfully": "订阅已成功取消",
+    "areYouSureYouWantTo": "确定要取消订阅吗？",
+    "onceCanceledRemainsActiveUntil": "取消后，订阅仍然有效，直至 {{date}}。此日期后，你将降级至免费版，无法使用所有付费功能。",
+    "theEndOfBillingPeriod": "账单周期结束",
+    "factoryWillNotStoreYourPayment": "Factory 不会存储你的付款信息。",
+    "anyRemainingExtraUsageBalanceWill": "订阅结束时，任何剩余的额外用量余额都会转入你的账号余额。"
+  },
+  "catalog": {
+    "jiraDataCenterAndServerDescription": "连接自托管的 Jira Data Center 或 Server 实例，让 Droid 搜索和管理问题、冲刺和项目。"
+  },
+  "chatSettingsTool": {
+    "settingUnavailable": "设置不可用",
+    "settingChanged": "此提案暂存后，设置发生了变化。",
+    "noChangeNeeded": "无需更改。",
+    "couldNotApply": "无法应用"
+  },
+  "closeOrganizationModal": {
+    "goBack": "后退",
+    "closeOrganization": "关闭组织",
+    "closingImmediatelyRevokesAccessForEvery": "关闭会立即撤销所有组织成员的访问权限。所有人都会退出登录，且无法再次登录。",
+    "youWillBeLoggedOutAnd": "你将退出登录，此操作无法撤销。",
+    "closing": "正在关闭…",
+    "confirmCloseNamed": "确定要关闭 {{name}} 吗？",
+    "confirmCloseUnnamed": "确定要关闭你的组织吗？",
+    "typeToConfirm": "输入 {{name}} 以确认。"
+  },
+  "cloudSyncSection": {
+    "controlWhichDataThisDeviceSynchronizes": "控制此设备与云端同步的数据。",
+    "cloudSync": "云同步",
+    "cloudSessionSync": "云端 Session 同步",
+    "cloudConfigSync": "云端配置同步",
+    "syncSupportedConfigsEGModel": "将受支持的配置（如模型、推理、自主级别和压缩级别选择）与 Session 数据分开同步。每台设备都可以独立选择是否启用。"
+  },
+  "cloudTemplateSettings": {
+    "manage": "管理",
+    "buildFailed": "构建失败",
+    "templateNeedsRebuild": "模板需要重新构建",
+    "created": "已创建",
+    "lastBuild": "上次构建",
+    "create": "创建",
+    "createAndManageCloudMachinesFor": "为仓库创建和管理云计算机。",
+    "cloudMachineTemplates": "云计算机模板",
+    "search": "搜索",
+    "scmIntegrationRequired": "需要 SCM 集成",
+    "configureIntegrations": "配置集成",
+    "noWorkspacesMatchYourSearch": "没有符合搜索条件的工作区",
+    "name": "名称",
+    "actions": "操作",
+    "rebuildingWorkspace": "正在重新构建工作区…",
+    "menu": {
+      "useDroidToSetUp": "使用 Droid 设置",
+      "rebuild": "重新构建",
+      "edit": "编辑",
+      "viewLogs": "查看日志",
+      "delete": "删除"
+    },
+    "manageTemplateAriaLabel": "管理 {{name}}",
+    "buildFailedTooltip": "构建失败。点击查看日志。",
+    "needsRebuildTooltip": "此模板已过时，需要重新构建。请在“管理”中重新构建。",
+    "scmNames": {
+      "withBitbucketAndAzureDevOps": "GitHub、GitLab、Bitbucket 或 Azure DevOps",
+      "withBitbucket": "GitHub、GitLab 或 Bitbucket",
+      "withAzureDevOps": "GitHub、GitLab 或 Azure DevOps",
+      "githubAndGitlab": "GitHub 或 GitLab"
+    },
+    "requirements": {
+      "missingOrganizationIntegration": "缺少组织级 {{scmNames}} 集成。请让管理员在集成页面中配置。",
+      "missingPersonalAccessToken": "缺少云端 {{scmNames}} 个人访问令牌。请在集成页面中添加个人访问令牌。"
+    },
+    "supersededNotice": "云计算机已被 Droid 计算机取代。云计算机仍受支持，但我们强烈建议切换到 Droid 计算机以提高稳定性。<anchor>前往 Droid 计算机</anchor>"
+  },
+  "commandPolicySection": {
+    "custom": "自定义",
+    "add": "添加",
+    "configureWhichCommandsAreAllowedOr": "配置允许执行或需要在执行前批准的命令。",
+    "commandPolicy": "命令策略",
+    "allowlist": "允许列表",
+    "denylist": "审批列表",
+    "blocklist": "阻止列表",
+    "removeCommand": "移除 {{command}}",
+    "customCommandCount_one": "{{count}} 个自定义命令",
+    "customCommandCount_other": "{{count}} 个自定义命令",
+    "defaultCommandCount_one": "{{count}} 个默认命令",
+    "defaultCommandCount_other": "{{count}} 个默认命令",
+    "addCommandToAllowlist": "添加命令到允许列表…",
+    "allowlistTooltip": "这些命令被视为安全，无需手动批准即可执行。",
+    "addCommandToDenylist": "添加命令到审批列表…",
+    "denylistTooltip": "这些命令被视为危险，始终需要手动批准。",
+    "addCommandToBlocklist": "添加命令到阻止列表…",
+    "blocklistTooltip": "这些命令被完全阻止。代理永远无法运行它们，也无法批准。尝试运行时会返回错误，告知代理不要运行或绕过该命令。"
+  },
+  "complianceRestrictionsSection": {
+    "none": "无",
+    "setOrganizationWideComplianceGuidanceAnd": "设置组织范围的合规指南，并查看 Factory 禁用的功能。请联系 Factory 更改功能限制。",
+    "complianceSettings": "合规设置",
+    "chatWarningBanner": "聊天警告横幅",
+    "exampleDoNotShareSensitiveCustomer": "示例：请勿分享敏感客户数据。",
+    "permanentlyDisabled": "永久禁用",
+    "notComplianceRestricted": "不受合规限制",
+    "capability": {
+      "cloudSync": {
+        "label": "云同步",
+        "description": "将 Session 和 Wiki 内容同步到 Factory 云端。"
+      },
+      "managedInference": {
+        "label": "托管推理",
+        "description": "Factory 托管的模型推理（禁用后强制使用 BYOK）。"
+      },
+      "managedComputers": {
+        "label": "托管计算机",
+        "description": "由 Factory 配置的 Droid 计算机。"
+      },
+      "byomComputers": {
+        "label": "远程控制",
+        "description": "成员注册自己的计算机并使用远程控制。"
+      }
+    },
+    "chatWarningHelp": "显示在组织所有人的聊天输入框上方。留空可隐藏。{{length}} / {{max}}",
+    "saving": "正在保存…",
+    "saveWarning": "保存警告"
+  },
+  "computeModelPolicyIssues": {
+    "autoModelHasNoEligibleModels": "自动模型已启用，但目前没有符合条件的模型，请启用更多 Factory 模型或映射自动模型的 BYOK 对应模型。",
+    "requireByokNeedsAllowByok": "“要求自动模型使用 BYOK”需要先启用“允许自动模型使用 BYOK”。",
+    "requireByokNeedsCustomModels": "“要求自动模型使用 BYOK”需要启用自定义模型。",
+    "defaultModelDisabled": "默认新建 Session 模型已被模型访问策略禁用。请启用它或选择其他默认模型。",
+    "noFactoryModelsCustomOnly": "没有启用任何 Factory 模型，用户将只能使用自定义模型。",
+    "noFactoryModelsNoAccess": "没有启用任何 Factory 模型，用户将无法访问任何模型。"
+  },
+  "computeNetworkPolicyWarnings": {
+    "addingIpAllowlist": "你正在添加 IP 允许列表。保存后，只有来自所列 IP 地址的请求才能访问你的组织。",
+    "removingIpEntries": "以下 IP 条目将被移除：{{ips}}。从这些地址连接的用户将失去访问权限。"
+  },
+  "computeUsage": {
+    "managedComputersExecutionTimeForYour": "组织的托管计算机执行时长。",
+    "managedComputersUsage": "托管计算机用量",
+    "upgradeYourPlan": "升级套餐",
+    "managedComputersExecutionTimeForYour2": "当前账单周期内组织的托管计算机执行时长。",
+    "descriptionWithLearnMore": "当前账单周期内组织的托管计算机执行时长。<anchor>了解更多</anchor>",
+    "includedComputePerBillingCycle": "你的组织每个账单周期包含 {{hours}} 的计算时长。",
+    "loadingUsage": "正在加载用量…",
+    "organization": "组织",
+    "unlimited": "无限制",
+    "reachedMonthlyComputeLimit": "你的组织已达到每月计算用量上限（{{limit}}）。",
+    "additionalUsageBilledAsOverage": "额外用量将按超额用量计费。",
+    "computerUsageBlockedUntilNextPeriod": "下一账单周期开始前，计算机使用将被阻止。",
+    "usedPercentOfMonthlyComputeLimit": "你的组织已使用每月计算用量上限的 {{percentage}}%。",
+    "allowComputeOverage": "允许超额计算用量",
+    "computeOverageEnabled": "已启用超额计算用量",
+    "computeOverageDisabled": "已禁用超额计算用量",
+    "failedToUpdateComputeOverage": "更新超额计算用量设置失败",
+    "overageDescription": "启用后，超出包含额度的计算用量将消耗额外用量积分。",
+    "overageBalanceTooLow": "已启用超额用量，但额外用量余额不足以支付更多计算用量。请添加积分以恢复超额计费。"
+  },
+  "computerActionsDropdown": {
+    "goToDashboard": "前往控制台",
+    "sshInstructions": "SSH 说明",
+    "publishAsTemplate": "发布为模板",
+    "rename": "重命名",
+    "forceReboot": "强制重启",
+    "delete": "删除",
+    "actionsFor": "{{name}} 的操作"
+  },
+  "computerCard": {
+    "thisComputer": "此计算机",
+    "reportABug": "报告缺陷",
+    "youCanStartWorkingOnThis": "你现在可以在此计算机上开始工作，但部分依赖可能尚未就绪。",
+    "provisioningFailed": "配置失败",
+    "somethingWentWrongWhileSettingUp": "设置此计算机时出现问题。你可以删除并新建一台，否则它将在 14 天后自动清理。",
+    "copied": "已复制！",
+    "copyName": "复制名称",
+    "copyComputerName": "复制计算机名称：{{name}}",
+    "metrics": {
+      "cpu": "CPU {{value}}",
+      "memory": "内存 {{used}} / {{total}}",
+      "disk": "磁盘 {{used}} / {{total}}"
+    },
+    "stepFailed": "{{name}} 失败",
+    "optionalStepDidNotComplete": "此可选步骤未完成。计算机的其他功能已可使用。",
+    "retrying": "正在重试…",
+    "retryInstall": "重试安装",
+    "openSession": "{{name}} — 打开 Session →",
+    "provisioning": "正在配置…"
+  },
+  "computerConfirmationModal": {
+    "cancel": "取消"
+  },
+  "computerDetail": {
+    "droidComputers": "Droid 计算机",
+    "computerNotFound": "未找到计算机",
+    "backToDroidComputers": "返回 Droid 计算机",
+    "failedToLoadMetrics": "加载指标失败",
+    "noMetricsAvailableYet": "暂无指标"
+  },
+  "computerNameInput": {
+    "duplicateError": "名为“{{name}}”的计算机已存在"
+  },
+  "computerRecoveryModal": {
+    "allRunningProcessesWillStop": "所有正在运行的进程都会停止。",
+    "allActiveSessionsWillDisconnect": "所有活跃 Session 都会断开连接。",
+    "inMemoryWorkAndUnflushedWrites": "内存中的工作和未刷新的写入可能丢失。",
+    "persistedFilesWillBeKept": "已持久化的文件将予以保留。",
+    "forceRebootComputer": "强制重启计算机",
+    "recoveredToast": "计算机已恢复，守护进程已重新连接",
+    "preparingRecovery": "正在准备恢复…",
+    "rebooting": "正在重启…",
+    "forceReboot": "强制重启",
+    "forceRebootName": "强制重启 {{name}}？"
+  },
+  "computerSecretsSection": {
+    "unableToLoadOrganizationSecrets": "无法加载组织机密。",
+    "unableToLoadPersonalSecrets": "无法加载个人机密。"
+  },
+  "computerUsageMeters": {
+    "cpu": "CPU",
+    "memory": "内存",
+    "disk": "磁盘",
+    "usageAriaLabel": "{{metric}} 用量",
+    "unavailable": "不可用"
+  },
+  "connectInstructionsModal": {
+    "connectToComputer": "连接到计算机",
+    "terminal": "终端",
+    "useTheDroidCliToSsh": "使用 Droid CLI 通过 SSH 连接到计算机：",
+    "makeSureYouHaveTheDroid": "请确保已安装 Droid CLI："
+  },
+  "connectorDetail": {
+    "connectorsAreNotEnabled": "连接器未启用。",
+    "editConfiguration": "编辑配置",
+    "reviewChanges": "审查更改",
+    "clickReviewChangesToConfirm": "点击“审查更改”以确认。",
+    "youHaveUnsavedChanges": "你有未保存的更改。",
+    "unableToSaveToolAccess": "无法保存工具访问权限。",
+    "connect": "连接",
+    "disconnect": "断开连接",
+    "connecting": "正在连接…",
+    "disconnecting": "正在断开连接…",
+    "configure": "配置",
+    "configureConnector": "配置 {{name}}",
+    "connectRequiresAdministrator": "连接 {{name}}（需要管理员配置）",
+    "askAdministratorToConfigure": "请让管理员配置 {{name}}。",
+    "defaultHeroSubtitle": "连接 {{name}}，让 Factory 直接使用它。",
+    "atLeastOneToolMustStayEnabled": "至少必须保留一个启用的工具。若要关闭所有工具，请在企业控制设置中禁用此连接器。"
+  },
+  "connectorOauthConfigurationModal": {
+    "cancel": "取消",
+    "connectionsWillBeReset": "连接将被重置",
+    "redirectUri": "重定向 URI",
+    "scopes": "权限范围",
+    "clientId": "客户端 ID",
+    "theSecretIsSentToThe": "密钥会发送至连接器服务，绝不会存储在组织设置中或返回给客户端。",
+    "close": "关闭",
+    "copyRedirectUri": "复制重定向 URI",
+    "copyScopes": "复制权限范围",
+    "copied": "已复制",
+    "copy": "复制",
+    "enterClientSecret": "输入 {{name}} OAuth 客户端密钥",
+    "leaveBlankToKeepSecret": "留空以保留当前密钥",
+    "leaveBlankForPublicClient": "公共 OAuth 客户端请留空",
+    "saving": "正在保存…",
+    "saveConfiguration": "保存配置",
+    "editConfigurationTitle": "编辑 {{name}} 配置",
+    "configureTitle": "配置 {{name}}",
+    "description": "配置此组织所有人使用的 {{name}} OAuth 应用。设置后，用户将授权自己的 {{name}} 账号。",
+    "changingClientIdRequiresReconnect": "更改客户端 ID 后，所有 {{name}} 用户和服务账号都需要重新连接。",
+    "redirectUriHelp": "请在 {{name}} OAuth 应用中将此精确 URL 注册为重定向 URI。",
+    "scopesHelp": "请向 {{name}} OAuth 应用授予这些权限范围。",
+    "enterClientId": "输入 {{name}} OAuth 客户端 ID",
+    "clientSecret": "客户端密钥",
+    "clientSecretOptional": "客户端密钥（可选）",
+    "configurationCouldNotBeLoaded": "无法加载 {{name}} 配置。"
+  },
+  "connectorToolChangesModal": {
+    "discardChanges": "放弃更改",
+    "cancel": "取消",
+    "reviewChanges": "审查更改",
+    "resolveThisErrorBeforeSaving": "保存前请先解决此错误",
+    "pendingChanges": "待保存的更改",
+    "saveFailed": "保存失败",
+    "saving": "正在保存…",
+    "saveChanges": "保存更改"
+  },
+  "connectorsConstants": {
+    "categories": {
+      "sourceControl": "源代码管理",
+      "projectManagement": "项目管理",
+      "communication": "沟通",
+      "docsAndDesign": "文档与设计",
+      "meetingsAndNotes": "会议与笔记",
+      "observability": "可观测性与事件",
+      "dataAndAnalytics": "数据与分析",
+      "cloudAndDeployment": "云与部署",
+      "businessAndSupport": "业务与支持",
+      "peopleAndHr": "人员与人力资源",
+      "other": "其他"
+    },
+    "automationTemplates": {
+      "codeReview": {
+        "title": "代码审查",
+        "description": "审查仓库中的拉取请求。"
+      },
+      "incidentResponse": {
+        "title": "事件响应",
+        "description": "对 Slack 中的事件进行分类处理和根因分析。"
+      },
+      "securityAudit": {
+        "title": "安全审计",
+        "description": "定期对整个仓库执行深入安全审查。"
+      },
+      "qa": {
+        "title": "质量保证",
+        "description": "针对更改生成并运行质量检查。"
+      }
+    },
+    "details": {
+      "github": {
+        "capabilities": {
+          "openUpdatePrs": {
+            "title": "创建和更新 PR",
+            "description": "让 Factory 在仓库中创建和更新拉取请求。"
+          },
+          "reviewChanges": {
+            "title": "审查更改",
+            "description": "自动审查差异并提供行内问题反馈。"
+          },
+          "runSecurityAudits": {
+            "title": "运行安全审计",
+            "description": "合并前扫描变更中的漏洞。"
+          },
+          "mergeWithConfidence": {
+            "title": "放心合并",
+            "description": "展示检查结果和状态，帮助你安全交付。"
+          }
+        },
+        "category": "源代码管理",
+        "heroTitle": "经过审查，安心交付代码。",
+        "heroSubtitle": "连接 GitHub，让 Factory 创建拉取请求、审查变更，持续推进仓库工作。"
+      },
+      "linear": {
+        "capabilities": {
+          "createUpdateIssues": {
+            "title": "创建和更新问题",
+            "description": "自动将工作转为可跟踪的 Linear 问题。"
+          },
+          "keepStatusInSync": {
+            "title": "保持状态同步",
+            "description": "随工作进展更新问题状态。"
+          },
+          "searchYourBacklog": {
+            "title": "搜索待办列表",
+            "description": "通过聊天查找问题、项目和周期。"
+          },
+          "assignTheRightOwner": {
+            "title": "分配合适的负责人",
+            "description": "将问题分配给正确的负责人和团队。"
+          }
+        },
+        "category": "项目管理",
+        "heroTitle": "从问题到完成。",
+        "heroSubtitle": "连接 Linear，让 Factory 在项目和周期中创建、更新并跟踪问题。"
+      },
+      "jira": {
+        "capabilities": {
+          "createUpdateIssues": {
+            "title": "创建和更新问题",
+            "description": "使用正确的项目、类型和字段创建 Jira 问题。"
+          },
+          "moveTicketsForward": {
+            "title": "推进工单",
+            "description": "随工作的接手和完成更新问题状态。"
+          },
+          "searchWithJql": {
+            "title": "使用 JQL 搜索",
+            "description": "从项目和冲刺中找出所需工单。"
+          },
+          "commentWithContext": {
+            "title": "添加带有上下文的评论",
+            "description": "将发现和链接发回工单。"
+          }
+        },
+        "category": "项目管理",
+        "heroTitle": "让每张工单持续推进。",
+        "heroSubtitle": "连接 Jira，让 Factory 接手工单、推进工作流，并向看板报告进度。"
+      },
+      "slack": {
+        "capabilities": {
+          "createIssuesFromMessages": {
+            "title": "从消息创建问题",
+            "description": "将任意 Slack 消息转为可跟踪的工作。"
+          },
+          "syncThreadsWithIssues": {
+            "title": "同步讨论串和问题",
+            "description": "保持 Slack 讨论串与 Factory 问题同步。"
+          },
+          "postUpdatesToChannels": {
+            "title": "向频道发布更新",
+            "description": "将部署和里程碑分享回 Slack。"
+          },
+          "routeIncidentsToTriage": {
+            "title": "将事件分派以进行分类处理",
+            "description": "将事件快速发送给合适的响应人员。"
+          }
+        },
+        "category": "沟通",
+        "heroTitle": "将对话转为工作。",
+        "heroSubtitle": "连接 Slack，让 Factory 从频道中收集信号，并将其转为可跟踪的工作。"
+      },
+      "datadog": {
+        "capabilities": {
+          "triageAlerts": {
+            "title": "分类处理告警",
+            "description": "将 Datadog 告警转为可执行的 Session。"
+          },
+          "inspectMetrics": {
+            "title": "检查指标",
+            "description": "在调查中引入控制台和指标。"
+          },
+          "findRootCause": {
+            "title": "查找根因",
+            "description": "关联信号，更快找到根本原因。"
+          },
+          "closeTheLoop": {
+            "title": "完成闭环",
+            "description": "跟踪修复直至解决。"
+          }
+        },
+        "category": "可观测性",
+        "heroTitle": "从告警到根因。",
+        "heroSubtitle": "连接 Datadog，让 Factory 分类处理告警、检查指标并执行根因分析。"
+      }
+    }
+  },
+  "connectorsSection": {
+    "chooseWhichConnectorsAreAvailableTo": "选择组织所有人可使用的连接器。禁用的连接器无法被任何成员连接或使用。保存后更改生效。",
+    "connectors": "连接器",
+    "unableToLoadOrganizationConnectors": "无法加载组织连接器。",
+    "searchConnectors": "搜索连接器",
+    "retrying": "正在重试…",
+    "retry": "重试"
+  },
+  "connectorsSettings": {
+    "edit": "编辑",
+    "allIntegrations": "所有集成",
+    "noConnectorsAreAvailable": "没有可用的连接器。",
+    "noConnectorsMatchYourSearchAnd": "没有符合搜索和筛选条件的连接器。",
+    "clearAllFilters": "清除所有筛选条件",
+    "viewAll": "查看全部",
+    "featuredIntegrations": "精选集成",
+    "searchConnectors": "搜索连接器",
+    "docs": "文档",
+    "suggestAConnector": "推荐连接器",
+    "connectors": "连接器",
+    "sortOptions": {
+      "connectedFirst": "已连接优先",
+      "nameAsc": "名称 A-Z",
+      "nameDesc": "名称 Z-A"
+    },
+    "connectionStatus": {
+      "connected": "已连接",
+      "notConnected": "未连接"
+    },
+    "configureConnector": "配置 {{name}}",
+    "connectRequiresAdministrator": "连接 {{name}}（需要管理员配置）",
+    "askAdministratorToConfigure": "请让管理员配置 {{name}}。",
+    "configure": "配置",
+    "connect": "连接",
+    "disconnect": "断开连接",
+    "disconnecting": "正在断开连接…",
+    "connecting": "正在连接…",
+    "editConnectorConfiguration": "编辑 {{name}} 配置",
+    "recommendedForYou": "为你推荐",
+    "searchResultsTotal": "搜索结果 · {{total}}",
+    "allIntegrationsTotal": "所有集成 · {{total}}",
+    "connectedTotal": "已连接 · {{total}}"
+  },
+  "constants": {
+    "pages": {
+      "general": {
+        "label": "通用",
+        "guardDescription": "所有组织成员都可使用通用设置。"
+      },
+      "inbox": {
+        "label": "收件箱",
+        "guardDescription": "此账号未启用收件箱。"
+      },
+      "appearance": {
+        "label": "外观",
+        "guardDescription": "此账号未启用外观设置。"
+      },
+      "apiKeys": {
+        "label": "API 密钥",
+        "guardDescription": "隔离网络模式下无法使用 API 密钥设置。"
+      },
+      "secrets": {
+        "label": "机密",
+        "guardDescription": "隔离网络模式下无法使用计算机机密。"
+      },
+      "connectors": {
+        "label": "连接器",
+        "guardDescription": "此组织未启用连接器。"
+      },
+      "sessionManagement": {
+        "label": "Session 管理",
+        "guardDescription": "所有组织成员都可使用 Session 管理。"
+      },
+      "cloudTemplates": {
+        "label": "云模板",
+        "guardDescription": "此组织未启用云模板。"
+      },
+      "droidComputers": {
+        "label": "Droid 计算机",
+        "guardDescription": "隔离网络模式下无法使用 Droid 计算机。"
+      },
+      "templates": {
+        "label": "环境",
+        "guardDescription": "此组织未启用环境。"
+      },
+      "sessionDefaults": {
+        "label": "Session 默认设置",
+        "guardDescription": "Session 默认设置可在桌面应用中使用；组织启用委派后也可在网页版中使用。"
+      },
+      "missionDefaults": {
+        "label": "任务",
+        "guardDescription": "任务设置可在桌面应用中使用；组织启用 Missions 2.0 后也可在网页版中使用。"
+      },
+      "customModels": {
+        "label": "自定义模型",
+        "guardDescription": "自定义模型仅在组织启用后的桌面应用中可用。"
+      },
+      "worktrees": {
+        "label": "工作树",
+        "guardDescription": "工作树设置仅在桌面应用中可用。"
+      },
+      "usage": {
+        "label": "用量",
+        "guardDescription": "隔离网络模式下无法使用用量数据。"
+      },
+      "commitmentUsage": {
+        "label": "承诺用量",
+        "guardDescription": "仅已启用的企业组织管理员可查看承诺用量。"
+      },
+      "support": {
+        "label": "支持",
+        "guardDescription": "所有组织成员都可使用支持服务。"
+      },
+      "organization": {
+        "label": "组织",
+        "guardDescription": "仅管理员和所有者可使用组织设置。"
+      },
+      "members": {
+        "label": "成员",
+        "guardDescription": "仅管理员和所有者可使用成员设置。"
+      },
+      "enterpriseControls": {
+        "label": "企业控制",
+        "guardDescription": "仅企业组织管理员可使用企业控制设置。"
+      },
+      "remoteDelegations": {
+        "label": "委派",
+        "guardDescription": "仅管理员和所有者可使用委派设置。",
+        "notEnabledGuardDescription": "此组织未启用委派。"
+      },
+      "openCompute": {
+        "label": "OpenCompute",
+        "guardDescription": "功能可用时，仅企业根组织管理员和所有者可使用 OpenCompute。"
+      },
+      "auditLog": {
+        "label": "审计日志",
+        "guardDescription": "仅企业组织所有者可使用审计日志。"
+      },
+      "directory": {
+        "label": "目录",
+        "guardDescription": "仅企业组织所有者可使用目录。"
+      },
+      "subOrganizations": {
+        "label": "组织",
+        "guardDescription": "仅企业根组织所有者可使用组织功能。"
+      },
+      "groups": {
+        "label": "用户组",
+        "guardDescription": "仅企业根组织所有者可使用用户组。"
+      },
+      "billing": {
+        "label": "账单",
+        "guardDescription": "仅根组织所有者可使用账单设置。"
+      },
+      "credits": {
+        "label": "积分",
+        "guardDescription": "仅按多个席位计费的组织管理员可查看积分用量。"
+      },
+      "securityIdentity": {
+        "label": "安全与身份",
+        "guardDescription": "仅企业组织所有者可使用安全与身份设置。"
+      }
+    },
+    "settingsSections": {
+      "account": "账号",
+      "orgSettings": "组织设置",
+      "adminConsole": "管理控制台"
+    },
+    "enterpriseControlsSections": {
+      "sessionDefaults": "Session 默认设置",
+      "subagents": "子代理",
+      "missions": "任务",
+      "sessionFeatures": "Session 功能",
+      "modelAccess": "模型访问",
+      "commandPolicy": "命令策略",
+      "mcpPolicy": "MCP 服务器策略",
+      "missionPolicy": "任务访问",
+      "security": "安全",
+      "networkPolicy": "网络策略",
+      "sandboxPolicy": "沙箱",
+      "hooksPolicy": "钩子策略",
+      "plugins": "插件",
+      "connectors": "连接器",
+      "wiki": "Wiki",
+      "evaluations": "评估",
+      "droidComputers": "Droid 计算机",
+      "agentBehavior": "代理行为",
+      "gitCommits": "Git 与提交",
+      "retentionPolicy": "Session 保留",
+      "personas": "角色设定",
+      "rawConfig": "原始配置"
+    },
+    "connectorsSections": {
+      "allConnectors": "所有集成"
+    },
+    "generalSections": {
+      "codeProviders": "代码托管服务"
+    },
+    "organizationSections": {
+      "appPermissions": "应用权限",
+      "organization": "代码托管服务"
+    },
+    "remoteDelegationsSections": {
+      "delegationApps": "委派应用"
+    },
+    "usageSections": {
+      "usageAlerts": "用量提醒"
+    },
+    "userPreferencesConflictMessage": "此设备与云端的偏好设置存在冲突。你要保留哪一份？",
+    "creditsDataSources": {
+      "managed": {
+        "label": "托管",
+        "description": "监控随时间变化的积分消耗。数据每日更新，以 UTC 显示。"
+      },
+      "onPrem": {
+        "label": "高级",
+        "description": "监控随时间变化的积分消耗。数据记录在本地，以 UTC 显示。"
+      }
+    },
+    "computerStatus": {
+      "active": "活跃",
+      "provisioning": "正在配置",
+      "error": "错误"
+    },
+    "missionDefaultsV1WebNotice": "Missions 1.0 的默认设置存储在 Factory 桌面应用的本地设置中。请打开桌面应用进行更改。",
+    "missionMachineKind": {
+      "template": "环境",
+      "droidComputer": "Droid 计算机",
+      "byom": "你的计算机"
+    },
+    "delegationAppSetup": {
+      "slack": {
+        "integrationDescription": "为整个组织在 Slack 中安装 Factory 代理",
+        "showcaseDescription": "了解如何从 Slack 向 Factory 委派工作",
+        "showcaseTitle": "Slack 中的 Factory",
+        "tagline": "将 Slack 讨论串转为已交付的工作",
+        "mentionImageAlt": "一条提及 Factory 并附有待调查 Linear 工单的 Slack 消息，以及代理在讨论串中的回复"
+      },
+      "linear": {
+        "integrationDescription": "为整个组织在 Linear 中安装 Factory 代理",
+        "showcaseDescription": "了解如何从 Linear 向 Factory 委派工作",
+        "showcaseTitle": "Linear 中的 Factory",
+        "tagline": "将 Linear 问题委派给 Factory",
+        "assignImageAlt": "Linear 问题负责人选择器中已选中 Factory 代理",
+        "mentionImageAlt": "一条提及 @Factory 的 Linear 问题评论，代理正在报告该问题的处理进度"
+      },
+      "microsoftTeams": {
+        "integrationDescription": "为整个组织在 Teams 中安装 Factory 代理",
+        "showcaseDescription": "了解如何从 Teams 向 Factory 委派工作",
+        "showcaseTitle": "Teams 中的 Factory",
+        "tagline": "将 Teams 讨论串转为已交付的工作",
+        "mentionImageAlt": "一段提及 Factory 的 Teams 对话，代理正在确认委派的工作"
+      },
+      "googleChat": {
+        "integrationDescription": "使用 Workspace 管理员账号连接 Google Workspace",
+        "showcaseDescription": "了解如何从 Google Chat 向 Factory 委派工作",
+        "showcaseTitle": "Google Chat 中的 Factory",
+        "tagline": "将 Google Chat 讨论串转为已交付的工作"
+      },
+      "jira": {
+        "integrationDescription": "为整个组织在 Jira 中安装 Factory 代理",
+        "showcaseDescription": "了解如何从 Jira 向 Factory 委派工作",
+        "showcaseTitle": "Jira 中的 Factory",
+        "tagline": "将 Jira 问题委派给 Factory",
+        "assignImageAlt": "Jira 工作项代理选择器中已选中 Factory 代理",
+        "mentionImageAlt": "一条提及 @Factory 的 Jira 工作项评论，要求代理再次进行根因分析"
+      },
+      "tabs": {
+        "mentionInChannelOrDm": "在频道或私信中提及",
+        "assign": "分配",
+        "mention": "提及",
+        "mentionInSpaceOrDm": "在空间或私信中提及"
+      }
+    },
+    "auditEventType": {
+      "userLimitChange": "用量上限",
+      "membershipChange": "成员资格",
+      "apiKeyLifecycleChange": "API 密钥",
+      "serviceAccountChange": "服务账号",
+      "integrationChange": "集成",
+      "organizationLifecycleChange": "组织",
+      "managedSettingsChange": "托管设置",
+      "complianceSettingsChange": "合规设置",
+      "organizationSecuritySettingsChange": "安全设置",
+      "analyticsSettingsChange": "分析设置",
+      "connectorAvailabilityChange": "连接器",
+      "computeDeploymentChange": "计算部署",
+      "computerSecretsChange": "计算机机密",
+      "organizationMonthlyUsageSettingsChange": "组织用量设置",
+      "delegationActivity": "委派",
+      "remoteDelegationConfigChange": "委派配置"
+    },
+    "auditScope": {
+      "organization": "组织",
+      "user": "个人"
+    },
+    "auditSource": {
+      "webSettingsUsage": "用量设置",
+      "webSettingsMembers": "成员设置",
+      "webSettingsApiKeys": "API 密钥设置",
+      "webSettingsServiceAccounts": "服务账号设置",
+      "webSettingsIntegrations": "集成设置",
+      "webSettingsOrg": "组织设置",
+      "webSettingsBilling": "账单设置",
+      "webSettingsAdminConsole": "管理控制台",
+      "publicApiV0": "公共 API",
+      "openComputeEnrollment": "OpenCompute 注册",
+      "workosEvent": "目录同步",
+      "admin": "Factory 管理员",
+      "llmProxy": "LLM 代理",
+      "delegation": "委派"
+    },
+    "teamsInstallFallbackCopy": "如果 Teams 未打开，Teams 管理员可能需要在 Teams 管理中心允许 Droid。",
+    "jiraForgeAppInstallDescription": "Factory 的 Jira 应用可让你在 Jira 中向 Factory 委派问题。请打开 Atlassian，将其安装到你的 Jira 站点。",
+    "autoModelCandidateBlockedByPolicyReason": "被模型策略阻止",
+    "autoModelCandidateBlockedUseEndpointReason": "被模型策略阻止。在服务提供方下选择自定义模型仍可使用它。",
+    "autoModelCandidateByokOnlyReason": "自动模型需要 BYOK。请在服务提供方下选择自定义模型。",
+    "interactionMode": {
+      "auto": "自动",
+      "spec": "Spec"
+    },
+    "subagentInheritOption": "继承（父 Session）",
+    "subagentTier": {
+      "light": "轻量任务模型",
+      "medium": "中等任务模型",
+      "heavy": "复杂任务模型"
+    },
+    "subagentTierTab": {
+      "light": "轻量任务",
+      "medium": "中等任务",
+      "heavy": "复杂任务"
+    },
+    "subagentInheritedReasoning": {
+      "light": "继承（低）",
+      "medium": "继承（中）",
+      "heavy": "继承（高）"
+    },
+    "remoteDelegationConfigs": {
+      "apps": {
+        "title": "应用",
+        "description": "为 Slack、Teams、Linear 和 Jira 中的 Factory 提供支持。"
+      },
+      "softwareFactory": {
+        "title": "Software Factory",
+        "description": "为 Software Factory 中的聊天 Session 和工作流创建提供支持。"
+      }
+    },
+    "autoModelCustomCandidateBlockedReason": "被模型访问策略阻止：自定义模型已关闭，或此端点不在允许的基础 URL 范围内。",
+    "autoModelCustomCandidateMissingReason": "此自定义模型已不在共享模型中。请在这里也将其移除。"
+  },
+  "createApiKeyFormFields": {
+    "keyName": "密钥名称",
+    "enterADescriptiveName": "输入描述性名称",
+    "expirationMustBeAFutureDate": "到期日期和时间必须在未来。",
+    "leaveBlankForAKeyThat": "留空则密钥永不过期。",
+    "expiresAtLabel": "到期时间（{{timeZoneName}}）— 可选"
+  },
+  "createComputerWizardModal": {
+    "close": "关闭",
+    "template": "环境",
+    "opencomputeRequiresAReadyOpencomputeTemplate": "OpenCompute 需要已就绪的 OpenCompute 环境。请为组织启用环境功能以继续。",
+    "loadingTemplates": "正在加载环境…",
+    "templatesCouldNotBeLoaded": "无法加载环境。请重试。",
+    "noReadyOpencomputeTemplates": "没有可用的已就绪 OpenCompute 环境。请先在环境页面创建。",
+    "selectReadyOpencomputeTemplate": "选择一个已就绪的 OpenCompute 环境以继续。",
+    "startFromCleanComputer": "从全新计算机开始",
+    "noRepositoriesIncluded": "不包含任何仓库。",
+    "repositoriesIncluded_one": "已包含 {{count}} 个仓库。你可以在下一步添加更多仓库。",
+    "repositoriesIncluded_other": "已包含 {{count}} 个仓库。你可以在下一步添加更多仓库。",
+    "bulkCreateFailedNone": "创建计算机失败：{{reason}}。未配置任何计算机。",
+    "bulkCreateFailedPartial": "已创建请求的 {{requested}} 台计算机中的 {{created}} 台，随后失败：{{reason}}。请再次创建以补充其余计算机。",
+    "bulkCreateUnconfirmed": "请求失败，未能确认结果。部分计算机可能已创建，请在重试前检查计算机池列表。",
+    "newManagedComputers": "新建托管计算机",
+    "newDroidComputer": "新建 Droid 计算机",
+    "quantity": "数量",
+    "managedComputersUnavailableForPool": "你的组织无法使用托管计算机，因此此工作池无法创建计算机。",
+    "cleanComputer": "全新计算机",
+    "selectOpencomputeTemplate": "选择 OpenCompute 环境",
+    "firstSessionPrompt": "这是我在此计算机上的第一个 Session。请引导我完成。"
+  },
+  "createSubOrganizationModal": {
+    "createAChildOrganizationUnderThe": "在所选父组织下创建子组织。账单和订阅仍统一管理。",
+    "cancel": "取消",
+    "newOrganization": "新建组织",
+    "name": "名称",
+    "engineering": "工程",
+    "parentOrganization": "父组织",
+    "initialSettings": "初始设置",
+    "copyEnterpriseControls": "复制企业控制设置",
+    "copyGlobalUsageLimit": "复制全局用量上限",
+    "region": "区域",
+    "regionGlobalRecommended": "全球（推荐）",
+    "regionEu": "欧盟",
+    "globalUsageLimitDescriptionNone": "{{organizationName}} 当前没有全局用量上限。勾选此项可为此组织复制该全局上限。不会复制个人用户上限和当前用量。",
+    "globalUsageLimitDescriptionCurrent": "{{organizationName}} 当前的全局用量上限为每位用户每月 {{limit}} 积分。勾选此项可为此组织复制该全局上限。不会复制个人用户上限和当前用量。",
+    "theRootOrganization": "根组织",
+    "creating": "正在创建…",
+    "create": "创建",
+    "parentOrganizationHelp": "所选父组织仅决定此子组织在组织结构中的显示位置。这些可选的一次性复制以 {{organizationName}} 为来源；策略不会继承，因此未来对父组织或 {{organizationName}} 的更改不会自动更新子组织。",
+    "copyEnterpriseControlsDescription": "勾选此项可从 {{organizationName}} 复制企业控制策略。不勾选则使用默认控制设置，之后可再配置。",
+    "regionEuHelp": "欧盟选项将 Session 数据存储在欧盟区域。成员切换到此组织时可能会被转到欧盟应用。",
+    "regionGlobalHelp": "全球选项将 Session 数据存储在 Factory 默认区域。除非此子组织需要欧盟数据驻留，否则建议使用此选项。"
+  },
+  "createWorkspaceModal": {
+    "cancel": "取消",
+    "createRemoteWorkspace": "创建远程工作区",
+    "repository": "仓库",
+    "workspaceName": "工作区名称",
+    "myWorkspace": "my-workspace",
+    "organizationConfiguration": "组织配置",
+    "sharedEnvironmentVariablesAreAvailableTo": "共享环境变量对所有用户可用。变量值已加密。",
+    "environmentVariables": "环境变量",
+    "workspaceCreationStarted": "工作区创建已开始",
+    "creating": "正在创建…",
+    "createWorkspace": "创建工作区"
+  },
+  "createdApiKeyRevealModal": {
+    "done": "完成",
+    "apiKeyCreated": "API 密钥已创建",
+    "copyAndStoreThisKeyNow": "请立即复制并妥善保存此密钥。之后将无法再次查看。",
+    "apiKeyCopiedToClipboard": "API 密钥已复制到剪贴板",
+    "failedToCopyToClipboard": "复制到剪贴板失败",
+    "copied": "已复制！",
+    "copyToClipboard": "复制到剪贴板"
+  },
+  "creditsSettings": {
+    "loadingCreditUsage": "正在加载积分用量…"
+  },
+  "customModelDeleteModal": {
+    "cancel": "取消",
+    "removeCustomModel": "移除自定义模型",
+    "removing": "正在移除…",
+    "removeModel": "移除模型",
+    "confirmDescription": "从此计算机移除 {{name}}？这将从 ~/.factory/settings.json 删除其条目（包括存储的 API 密钥）。"
+  },
+  "customModelRow": {
+    "edit": "编辑",
+    "invalid": "无效",
+    "remove": "移除",
+    "editAriaLabel": "编辑 {{name}}",
+    "removeAriaLabel": "移除 {{name}}",
+    "invalidTooltip": "此条目不完整或无效，不会显示在模型选择器中。"
+  },
+  "customModelsSettings": {
+    "addModel": "添加模型",
+    "configureProviderAndModel": "在此计算机上配置提供商和模型。",
+    "yourOrganizationAdministratorHasDisabledCustom": "你的组织管理员已禁用自定义模型（BYOK）。",
+    "updateAndRestartDroidToEdit": "请更新并重启 Droid，以编辑完整的自定义模型配置。",
+    "noCustomModelsYetAddOne": "暂无自定义模型。添加模型即可使用自己的 API 密钥。",
+    "failedToSaveCustomModel": "保存自定义模型失败",
+    "staleRevisionError": "{{message}}。请关闭并重新打开编辑器以加载最新配置。",
+    "failedToRemoveCustomModel": "移除自定义模型失败",
+    "description": "使用自己的 API 密钥来调用模型（BYOK）。密钥保留在此计算机上，绝不会发送给 Factory。<anchor>了解更多</anchor>。",
+    "customModelsWithCount": "自定义模型 · {{total}}",
+    "failedToLoadCustomModels": "从本地 Droid 服务加载自定义模型失败。"
+  },
+  "daemonVersionCard": {
+    "checkingVersion": "正在检查版本…",
+    "retry": "重试",
+    "version": "版本：",
+    "notConnected": "未连接",
+    "droid": "Droid",
+    "updateFailed": "更新失败",
+    "failedToTriggerUpdate": "触发守护进程更新失败",
+    "updateAvailable": "有可用更新（{{version}}）",
+    "updating": "正在更新…",
+    "update": "更新"
+  },
+  "dataRetentionPolicyModal": {
+    "cancel": "取消",
+    "optOut": "退出参与",
+    "optIn": "选择参与",
+    "byDefaultFactoryRoutesAllModels": "默认情况下，Factory 通过零数据保留推理提供商路由所有模型，这些提供商不会存储你的提示词或补全内容。",
+    "readAnthropicsDataRetentionDeletionPolicy": "阅读 Anthropic 数据保留与删除政策",
+    "intendedUse": "预期用途",
+    "optedInStatus": "你的组织已选择使用 {{modelFamily}} 模型。",
+    "notOptedInStatus": "你的组织尚未选择使用 {{modelFamily}} 模型。",
+    "title": "{{modelFamily}} 数据保留政策",
+    "exceptionExplanation": "使用 {{modelFamily}} 需要例外授权。出于安全和防止滥用的考虑，Anthropic 会将 {{modelFamily}} 模型的请求和响应数据保留 30 天后删除。除非管理员选择加入，否则你的组织无法使用 {{modelFamily}} 模型。",
+    "optInScope": "选择加入适用于所有 {{modelFamily}} 模型。你可以随时退出，以阻止之后使用 {{modelFamily}} 模型。",
+    "describeIntendedUse": "请描述组织计划如何使用 {{modelFamily}} 模型。",
+    "intendedUsePlaceholder": "你将如何使用 {{modelFamily}} 模型？"
+  },
+  "explicitModelOptInModal": {
+    "dataRetentionStep": "数据保留",
+    "highCostStep": "费用更高",
+    "stepLabel": "{{number}}. {{label}}",
+    "title": "模型明确授权：{{modelName}}",
+    "highCostTitle": "高费用模型授权：{{modelName}}",
+    "continue": "继续",
+    "back": "返回",
+    "enableModel": "启用模型",
+    "revokeApproval": "撤销授权",
+    "approvedStatus": "你的组织已启用 {{modelName}}。",
+    "requiredStatus": "{{modelName}} 需要组织明确授权。",
+    "costHeading": "用量费用显著更高",
+    "higherCost": "{{modelName}} 的用量费用显著高于标准模型。",
+    "multiplierWarning": "{{modelName}} 的 token 用量倍率为 {{multiplier}} 倍，可能显著增加组织的使用费用。",
+    "adminApproval": "组织管理员明确批准前，此模型将保持阻止状态。授权可随时撤销。",
+    "acknowledgment": "我了解费用更高，并希望为组织启用此模型。"
+  },
+  "delegationAppManagementModal": {
+    "failedToConnect": "连接 {{integration}} 失败。请重试。",
+    "disconnectedSuccessfully": "已成功断开连接",
+    "channels": "频道",
+    "installJiraApp": "安装 Jira 应用"
+  },
+  "delegationAppSetup": {
+    "documentation": "文档",
+    "previewComingSoon": "预览即将推出",
+    "connectionFailed": "连接失败",
+    "connected": "已连接",
+    "manage": "管理",
+    "connect": "连接",
+    "integration": "集成",
+    "support": "支持",
+    "failedToConnect": "连接 {{integration}} 失败。请重试。",
+    "thisOrganization": "此组织"
+  },
+  "delegationDefaultsSection": {
+    "defaultsForWorkYouDelegateFrom": "从 Slack、Teams 或其他入口委派工作的默认设置。",
+    "delegations": "委派",
+    "privateDelegationTemplate": "私人委派环境",
+    "sharedDelegationTemplate": "共享委派环境",
+    "defaultDelegationModel": "默认委派模型",
+    "defaultDelegationReasoningLevel": "默认委派推理级别",
+    "yourCustomDelegationInstructions": "你的自定义委派指令",
+    "yourCustomInstructions": "你的自定义指令",
+    "clear": "清除",
+    "saveInstructions": "保存指令",
+    "orgDefault": "组织默认",
+    "modelDefault": "模型默认",
+    "privateDelegationTemplateTooltip": "用于以你的身份运行的私人委派，目前为 Slack 私信。",
+    "sharedDelegationTemplateTooltip": "用于以组织服务账号身份运行的 Slack 频道、Teams、Linear 和 Jira 委派。你和该账号都必须拥有访问权限。",
+    "unavailableTemplate": "不可用的环境",
+    "instructionsAppendedForEmail": "此消息会附加到 {{email}} 发起的所有委派任务中",
+    "instructionsAppendedForYou": "此消息会附加到你发起的所有委派任务中"
+  },
+  "delegationIntegrationsSection": {
+    "setUpForOrg": "为组织设置",
+    "connectTheToolsYourTeamDelegates": "连接团队用来委派工作的工具。",
+    "delegationApps": "委派应用",
+    "slackDescription": "在 Slack 中提及 @Factory，让 Droid 为你工作。",
+    "microsoftTeamsDescription": "在 Microsoft Teams 中提及 @Factory，让 Droid 为你工作。",
+    "googleChatDescription": "在 Google Chat 中提及 Droid，让它为你工作。",
+    "linearDescription": "将 Linear 问题分配给 Factory，让 Droid 为你完成任务。",
+    "jiraDescription": "将 Jira 问题分配给 Factory，让 Droid 为你完成任务。",
+    "configure": "配置",
+    "comingSoon": "即将推出",
+    "requiresAPaidPlan": "需要付费套餐"
+  },
+  "remoteDelegationPlanAlert": {
+    "upgradePlan": "升级套餐",
+    "pausedTitle": "委派已暂停",
+    "pausedDescription": "你的套餐不包含委派，因此已连接的应用不会启动新的委派。请升级到付费套餐以恢复。你仍可断开应用连接和管理服务账号。",
+    "requiresPaidPlanTitle": "委派需要付费套餐",
+    "requiresPaidPlanDescription": "升级到付费套餐，即可连接应用并向 Droid 委派工作。"
+  },
+  "deleteComputerModal": {
+    "cancel": "取消",
+    "deleteComputer": "删除计算机",
+    "allSessionsAssociatedWithThisComputer": "与此计算机关联的所有 Session 都将归档",
+    "allAutomationsAssociatedWithThisComputer": "与此计算机关联的所有自动化都将无限期暂停",
+    "thisActionCannotBeUndone": "此操作无法撤销。",
+    "confirmDelete": "确定要删除 <name/> 吗？",
+    "deletedToast": "计算机已成功删除",
+    "deleting": "正在删除…",
+    "delete": "删除",
+    "byomRemoved": "此计算机将从 Factory 中移除",
+    "machineDestroyed": "此计算机将被永久销毁"
+  },
+  "deleteSandboxEnvironmentModal": {
+    "cancel": "取消",
+    "deleteTemplate": "删除环境",
+    "itsProviderEnvironmentWillBePermanently": "其提供商环境将被永久删除",
+    "existingComputersCreatedFromItAre": "基于该环境创建的现有计算机不受影响",
+    "deleting": "正在删除…",
+    "delete": "删除",
+    "deleteName": "删除 {{name}}？"
+  },
+  "deleteWorkspaceModal": {
+    "cancel": "取消",
+    "deleteWorkspace": "删除工作区",
+    "thisActionIsPermanentAndCannot": "此操作是永久性的，无法撤销。",
+    "areYouSureYouWantTo": "确定要删除此工作区吗？",
+    "name": "名称：",
+    "repository": "仓库：",
+    "branch": "分支：",
+    "workspaceDeletedSuccessfully": "工作区已成功删除",
+    "deleting": "正在删除…",
+    "delete": "删除"
+  },
+  "diffViewSection": {
+    "defaultView": "默认视图",
+    "wrapLongLines": "长行自动换行",
+    "viewModes": {
+      "unified": "统一",
+      "split": "并排"
+    }
+  },
+  "directorySettings": {
+    "filterByOrganization": "按组织筛选",
+    "searchDirectory": "搜索目录…",
+    "invite": "邀请",
+    "loadingDirectory": "正在加载目录…",
+    "allOrganizations": "所有组织",
+    "memberDeactivated": "成员已停用",
+    "organizationMemberCount_one": "{{name}} · {{count}} 位成员",
+    "organizationMemberCount_other": "{{name}} · {{count}} 位成员",
+    "description": "查看根组织及子组织中的成员。",
+    "title": "目录",
+    "titleWithCount": "目录 · {{total}}",
+    "noMatchingDirectoryMembers": "没有匹配的目录成员。",
+    "noDirectoryMembersYet": "暂无目录成员。"
+  },
+  "disabledSkillsSection": {
+    "disableBuiltInOrCustomSkills": "为此组织的所有人禁用内置或自定义技能。此处禁用的技能无法在用户或项目设置中重新启用。",
+    "skillPolicy": "技能策略",
+    "disabledSkills": "已禁用技能",
+    "noSkillsAreDisabled": "没有禁用任何技能。",
+    "eGAgentBrowser": "例如 agent-browser",
+    "disable": "禁用",
+    "thisRemovesTheSkillFromDroids": "这会从 Droid 的可用技能中移除该技能，但不会阻止同名可执行文件。如还需在可执行文件层面阻止，请使用命令策略。",
+    "disabledSkillsTooltip": "输入技能 frontmatter 中的名称。添加时会规范化名称，例如 Agent Browser 会变为 agent-browser。",
+    "removeSkill": "移除 {{skill}}"
+  },
+  "droidComputerCreationProposal": {
+    "errors": {
+      "providersLoad": "无法加载计算提供商。",
+      "repositoriesLoad": "无法加载仓库。请重试。",
+      "computersLoad": "无法加载现有 Droid 计算机，暂时无法检查名称。请重试。",
+      "templatesLoad": "无法加载模板。请重试。",
+      "creationUnavailable": "无法创建 Droid 计算机。请重试。",
+      "creationStatusLoad": "无法加载创建状态。重试前请检查 Droid 计算机列表。",
+      "createFailed": "无法创建 Droid 计算机。"
+    },
+    "checkDroidComputersForDetails": "请查看 Droid 计算机列表了解详情。"
+  },
+  "droidComputerOperation": {
+    "providerDefault": "默认",
+    "unnamedComputer": "未命名计算机",
+    "createSummary": "创建“{{name}}” {{repositories}}",
+    "createSummaryFromTemplate": "从环境创建“{{name}}” {{repositories}}",
+    "repositorySummaryNone": "不含仓库",
+    "repositorySummaryPending": "仓库选择待定",
+    "repositorySummaryCount_one": "包含 {{count}} 个仓库",
+    "repositorySummaryCount_other": "包含 {{count}} 个仓库",
+    "creationFailed": "Droid 计算机创建失败。",
+    "ready": "Droid 计算机“{{name}}”已就绪，可在新 Session 中使用。",
+    "creating": "正在创建 Droid 计算机…",
+    "templateNone": "无",
+    "templateNoneDescription": "从全新计算机开始",
+    "templateNoRepositories": "不包含任何仓库。",
+    "templateRepositoriesIncluded_one": "已包含 {{count}} 个仓库。",
+    "templateRepositoriesIncluded_other": "已包含 {{count}} 个仓库。",
+    "templateRepositoriesIncludedAddMore_one": "已包含 {{count}} 个仓库。你可以在下方添加更多仓库。",
+    "templateRepositoriesIncludedAddMore_other": "已包含 {{count}} 个仓库。你可以在下方添加更多仓库。",
+    "nameLabel": "计算机名称",
+    "nameDescription": "为此 Droid 计算机选择唯一名称。",
+    "templateLabel": "环境",
+    "includedInEnvironment": "{{name}} 中已包含",
+    "providerLabel": "计算提供商",
+    "providerDescription": "选择可用的托管计算提供商。",
+    "retry": "重试",
+    "repositoryModeLabel": "克隆仓库",
+    "repositoryModeDescription": "选择是否在配置过程中克隆仓库。",
+    "repositoryModeSelect": "选择仓库",
+    "repositoryModeNone": "无仓库",
+    "repositoryModeNoneWithEnvironment": "无额外仓库",
+    "repositoryModeDescriptionWithEnvironment": "已包含环境仓库。请选择是否克隆额外仓库。",
+    "repositoriesDescriptionWithEnvironment": "环境仓库已选中。你可以添加账号可访问的更多仓库。",
+    "autoInstallDepsLabel": "自动设置仓库",
+    "autoInstallDepsDescription": "Droid 会先检查已安装的内容，然后设置仓库，使其可用于开发。",
+    "repositoriesLabel": "仓库",
+    "repositoriesDescription": "选择账号可访问的一个或多个仓库。",
+    "repositoriesPlaceholder": "搜索仓库",
+    "actionPrimary": "创建",
+    "actionInProgress": "正在创建…",
+    "actionSucceeded": "已创建",
+    "docs": "文档",
+    "headerTitle": "创建 Droid 计算机",
+    "headerDescription": "Droid 计算机是持久化云环境，Droid 可以在其中处理你的仓库并运行任务。",
+    "displaySection": "Droid 计算机",
+    "invalidArguments": "暂存的计算机详情无效。",
+    "notCreated": "未创建",
+    "incompleteSteps": "创建前请完成必需步骤",
+    "selectTemplateOrNone": "选择一个可用环境或选择无环境",
+    "selectRepositoryOrNone": "选择至少一个仓库或选择无仓库",
+    "creationUnconfirmed": "无法确认创建结果。重试前请检查 Droid 计算机列表。"
+  },
+  "droidComputerSettings": {
+    "noComputersMatchYourSearch": "没有符合搜索条件的计算机",
+    "manageThisMachineAsADroid": "将此设备作为 Droid 计算机管理，用于本地和远程 Session。",
+    "thisComputer": "此计算机",
+    "search": "搜索",
+    "failedToLoadComputers": "加载计算机失败。",
+    "retry": "重试",
+    "create": "创建",
+    "yourComputers": "你的计算机",
+    "managedComputers": "托管计算机",
+    "managedComputersHaveBeenDisabledBy": "你的组织管理员已禁用托管计算机。",
+    "managedDroidComputersAreNotAvailable": "此区域无法使用托管 Droid 计算机。",
+    "upgradeToAccessManagedComputers": "升级以使用托管计算机",
+    "loading": "正在加载…",
+    "byomDescription": "你通过远程控制注册的、供 Droid 使用的计算机。请参阅<anchor>远程控制指南</anchor>以注册其他计算机。",
+    "byomEmptyDescription": "注册一台计算机用于远程控制，即可开始使用。",
+    "byomEmptyTitle": "暂无计算机",
+    "managedLockedDescription": "为 Droid 创建并管理持久化云计算机环境。<anchor>了解更多</anchor>",
+    "upgradePlanDescription": "当前套餐无法使用托管计算机。请<anchor>升级到 Pro 或更高套餐</anchor>以使用此功能。",
+    "managedDescription": "供 Droid 使用的持久化云计算机。请参阅<anchor>托管计算机指南</anchor>了解更多。",
+    "serviceAccountComputersNotice": "服务账号拥有的计算机位于<anchor>服务账号页面</anchor>。",
+    "managedEmptyDescription": "创建第一台托管计算机以开始使用。",
+    "managedEmptyTitle": "暂无托管计算机"
+  },
+  "droidComputersSection": {
+    "userExampleCom": "user@example.com",
+    "add": "添加",
+    "droidComputers": "Droid 计算机",
+    "localComputers": "本地计算机",
+    "allowMembersToRunSessionsLocally": "允许成员在桌面应用中运行本地 Session。",
+    "allowMembersToCreateAndUse": "允许成员创建并使用 Factory 托管计算机。",
+    "managedComputers": "托管计算机",
+    "theseUsersCanStillCreateAnd": "即使组织范围的设置已关闭，这些用户仍可创建并使用托管计算机。",
+    "allowedUsersByEmail": "允许的用户（按邮箱）",
+    "allowMembersToRegisterTheirOwn": "允许成员注册自己的计算机，并在桌面应用中使用远程控制。",
+    "byomComputers": "远程控制",
+    "theseUsersCanStillRegisterTheir": "即使组织范围的设置已关闭，这些用户仍可注册自己的计算机并使用远程控制。",
+    "enableOpencompute": "启用 OpenCompute",
+    "allowThisOrganizationToProvisionComputers": "允许此组织通过 OpenCompute 部署配置计算机。",
+    "opencompute": "OpenCompute",
+    "removeEmail": "移除 {{email}}",
+    "droidComputersTooltip": "控制组织可使用的计算机类型。即使关闭组织范围的设置，仍可允许特定用户使用托管计算机和通过远程控制连接的计算机。"
+  },
+  "editWorkspaceModal": {
+    "yourConfiguration": "你的配置",
+    "yourPersonalEnvironmentVariablesArePrivate": "个人环境变量属于私密信息，仅适用于你自己的 Session。变量值已加密。",
+    "environmentVariables": "环境变量",
+    "organizationConfiguration": "组织配置",
+    "sharedEnvironmentVariablesAreAvailableTo": "共享环境变量对所有用户可用，在模板级别定义。变量值已加密。",
+    "cancel": "取消",
+    "saveChanges": "保存更改",
+    "error": "错误",
+    "editWorkspaceTitle": "编辑工作区：{{name}}",
+    "loadingWorkspace": "正在加载工作区…",
+    "failedToLoadWorkspace": "加载工作区失败",
+    "templateUpdatedRebuilding": "模板已成功更新。正在重新构建…",
+    "templateUpdated": "模板已成功更新。"
+  },
+  "emailNotificationsSection": {
+    "emailNotifications": "邮件通知",
+    "automationAlertEmails": "自动化告警邮件",
+    "emailMeWhenAnAutomationI": "我拥有的自动化失败、错过计划运行或暂停时，通过邮件通知我。",
+    "automationAlertEmailsEnabled": "自动化告警邮件已启用",
+    "automationAlertEmailsDisabled": "自动化告警邮件已禁用"
+  },
+  "inboxSection": {
+    "title": "收件箱",
+    "description": "选择哪些事件会在收件箱中创建条目。",
+    "preferencesSaved": "收件箱偏好设置已保存",
+    "groupSessions": "Session",
+    "groupMissions": "任务",
+    "groupWorkstreams": "工作流",
+    "questionsAndApprovalsTitle": "问题与审批",
+    "questionsAndApprovalsDescription": "Droid 向你提问，或需要运行工具的权限。",
+    "agentTurnCompleteTitle": "代理回合完成",
+    "agentTurnCompleteDescription": "Droid 已在你发起的 Session 中完成本回合。",
+    "missionNeedsInputTitle": "任务需要输入",
+    "missionNeedsInputDescription": "运行中的任务正在等待你，或因你可以解决的原因而暂停。",
+    "missionCompleteTitle": "任务完成",
+    "missionCompleteDescription": "一个任务已完成。",
+    "workstreamReviewsTitle": "审查",
+    "workstreamReviewsDescription": "有变更、Spec 或拉取请求等待你决策。",
+    "workstreamChangeFailedTitle": "失败的变更",
+    "workstreamChangeFailedDescription": "某项变更失败，需要修复或忽略。",
+    "workstreamErrorsTitle": "工作流错误",
+    "workstreamErrorsDescription": "与变更无关的错误，例如来源连接丢失。",
+    "inboxEmailsTitle": "收件箱邮件",
+    "inboxEmailsDescription": "收件箱中仍有事项需要我处理时，通过邮件通知我。你可以为各类事项选择等待时间。所有事项仍会显示在收件箱中。",
+    "inboxEmailsUnavailableDescription": "此部署未配置邮件发送。",
+    "inboxSwitchLabel": "收件箱",
+    "emailSwitchLabel": "邮箱",
+    "emailSwitchAriaLabel": "{{title}}邮件",
+    "emailDelayAriaLabel": "{{title}}邮件延迟",
+    "emailDelayImmediately": "立即",
+    "emailDelayAfterMinutes": "{{minutes}} 分钟后",
+    "emailDelayAfterHour": "1 小时后"
+  },
+  "enterpriseBilling": {
+    "paymentMethodRemoved": "付款方式已移除",
+    "noPaymentMethodSelected": "未选择付款方式",
+    "defaultPaymentMethodUpdated": "默认付款方式已更新",
+    "perContract": "按合同",
+    "usageBased": "按用量",
+    "custom": "自定义",
+    "cancel": "取消",
+    "saving": "正在保存…",
+    "save": "保存",
+    "editPaymentInformation": "编辑付款信息"
+  },
+  "enterpriseCommitmentUsage": {
+    "commitPeriod": "承诺周期",
+    "billingPeriod": "账单周期",
+    "totalUsageValue": "总用量：{{credits}}",
+    "commitPaceValue": "承诺进度：{{credits}}",
+    "annualizedCommit": "年化承诺",
+    "commit": "承诺用量",
+    "commitmentUsageTimeframe": "承诺用量时间范围",
+    "cumulativeCreditUsageAndScheduledCommitment": "所选期间的累计积分用量和计划承诺用量，而非剩余积分余额。",
+    "commitmentUsage": "承诺用量",
+    "loadingCommitmentUsage": "正在加载承诺用量…",
+    "totalUsage": "总用量",
+    "bonusGranted": "已发放赠额",
+    "bonusValid": "赠额有效期为 {{start}} - {{end}}。",
+    "bonusAmountValid": "{{credits}} 赠额有效期为 {{start}} - {{end}}。",
+    "dashedLineCommitPace": "虚线：承诺进度。",
+    "noUsageDataIsAvailableFor": "此期间没有可用的用量数据。"
+  },
+  "enterpriseControls": {
+    "noEnterpriseControlsSettingsFound": "未找到企业控制设置。",
+    "chatWarningUpdated": "聊天警告已更新",
+    "loading": "正在加载…"
+  },
+  "enterpriseControlsConstants": {
+    "providerGroup": {
+      "anthropic": "Anthropic",
+      "openai": "OpenAI",
+      "google": "Google",
+      "xai": "xAI",
+      "factory": "Factory",
+      "other": "其他"
+    },
+    "autonomyLevel": {
+      "off": "关闭",
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    },
+    "sourceType": {
+      "github": "GitHub",
+      "url": "URL",
+      "local": "本地",
+      "gitSubdir": "Git 子目录"
+    },
+    "reasoningEffort": {
+      "none": "无",
+      "dynamic": "动态",
+      "off": "关闭",
+      "minimal": "最低",
+      "low": "低",
+      "medium": "中",
+      "high": "高",
+      "extraHigh": "极高",
+      "max": "最高"
+    },
+    "providerCredentialSource": {
+      "database": "加密存储",
+      "external": "外部机密管理器",
+      "workloadIdentity": "工作负载身份"
+    },
+    "providerConnectionStatus": {
+      "missing": "未配置",
+      "available": "可用",
+      "configured": "已配置身份",
+      "invalid": "格式无效",
+      "unavailable": "无法读取"
+    }
+  },
+  "enterpriseControlsForm": {
+    "reviewChanges": "审查更改",
+    "clickReviewChangesToConfirm": "点击“审查更改”以确认。",
+    "youHaveUnsavedChanges": "你有未保存的更改。",
+    "searchEnterpriseControls": "搜索企业控制设置",
+    "viewHistory": "查看历史记录",
+    "discardChanges": "放弃更改",
+    "networkPolicy": "网络策略",
+    "retry": "重试",
+    "defaultDescription": "为团队配置组织范围的设置和安全策略。",
+    "defaultSuccessMessage": "企业控制设置已保存",
+    "defaultTitle": "企业控制",
+    "fixValidationErrorsBeforeSaving": "保存前请修复验证错误",
+    "permissionRulesUnfinishedJsonEdits": "权限规则包含尚未完成的 JSON 编辑。",
+    "dataRetentionOptInRecorded": "{{modelFamily}} 模型：保存时将记录数据保留选择。",
+    "dataRetentionOptInRevoked": "{{modelFamily}} 模型：保存时将撤销数据保留选择。",
+    "couldNotBeSaved": "无法保存企业控制设置。请重试。",
+    "failedToLoad": "加载企业控制设置失败。",
+    "highCostOptInRecorded": "{{modelName}}：保存时将记录高费用模型选择。",
+    "highCostOptInRevoked": "{{modelName}}：保存时将撤销高费用模型选择。"
+  },
+  "enterpriseControlsFormUtils": {
+    "item": "第 {{number}} 项",
+    "rawConfiguration": "原始配置",
+    "customModel": "自定义模型 {{number}}",
+    "chooseFromBaseModelSelector": "请从基础模型选择器中选择一个。",
+    "missingRequiredFields_one": "缺少必填字段：{{fields}}。",
+    "missingRequiredFields_other": "缺少必填字段：{{fields}}。",
+    "ruleFailedSelfTests": "规则“{{id}}”的内嵌自检失败：{{failures}}。",
+    "jsonCannotBeEmpty": "JSON 不能为空。",
+    "invalidJsonSyntax": "JSON 语法无效。",
+    "permissionRules": "权限规则",
+    "received": "收到 {{value}}。"
+  },
+  "enterpriseUsage": {
+    "edit": "编辑",
+    "setLimit": "设置上限",
+    "mCreditsPerUser": "每位用户 {{credits}} 百万积分",
+    "noGlobalUserLimitSet": "未设置全局用户上限",
+    "globalUserLimitMCredits": "全局用户上限（百万积分）",
+    "settingAGlobalUserCreditLimit": "设置全局用户积分上限会立即生效。已超过新上限的用户将在本账单周期剩余时间内无法使用 Droid。选择上限前请查看团队当前用量。",
+    "eG5050mCredits": "例如，50（即 5000 万积分）",
+    "removeLimit": "移除上限",
+    "cancel": "取消",
+    "save": "保存",
+    "manage": "管理",
+    "overrideGlobalLimitForSpecificUsers": "为特定用户覆盖全局上限。",
+    "usersHaveIndividualLimits_one": "{{count}} 位用户设有个人上限。",
+    "usersHaveIndividualLimits_other": "{{count}} 位用户设有个人上限。",
+    "noIndividualLimitsConfigured": "未配置个人上限。",
+    "individualUserLimitsMCredits": "个人用户上限（百万积分）",
+    "usageLimitAlertEmailsEnabled": "用量上限告警邮件已启用",
+    "usageLimitAlertEmailsDisabled": "用量上限告警邮件已禁用",
+    "usageLimitAlertEmails": "用量上限告警邮件",
+    "emailMeWhenIReach80": "达到每月积分上限的 80% 和 100% 时，通过邮件通知我。",
+    "weeklyUsageSummaryEmailsEnabled": "此组织已启用每周用量摘要邮件",
+    "weeklyUsageSummaryEmailsDisabled": "此组织已禁用每周用量摘要邮件",
+    "weeklyUsageSummaryEmails": "每周用量摘要邮件",
+    "weeklyUsageSummaryDescription": "每周向管理员发送用户用量达到每月积分上限 80% 或以上的摘要。",
+    "fixInvalidEnterpriseControlsConfiguration": "更改此邮件设置前，请先修复无效的企业控制配置。",
+    "yourCreditUsageWithReset": "当前自然月的积分用量。用量将于 {{date}} {{time}} {{timeZone}} 重置。",
+    "yourCreditUsage": "当前自然月的积分用量。",
+    "yourMonthlyUsage": "你的每月用量",
+    "loadingUsage": "正在加载用量…",
+    "setACreditLimitThatApplies": "设置适用于组织中每位用户每个自然月的积分上限。",
+    "organizationMonthlyUsageLimits": "组织每月用量上限",
+    "globalUserLimitUpdated": "全局用户上限已更新",
+    "globalUserLimitRemoved": "全局用户上限已移除",
+    "individualUserLimitUpdated": "个人用户上限已更新",
+    "individualUserLimitRemoved": "个人用户上限已移除",
+    "setCreditLimitsForIndividualUsers": "为个别用户设置积分上限。这些上限将覆盖全局用户上限。",
+    "bulkUpdate": "批量更新",
+    "selectUser": "选择用户",
+    "filterAll": "全部",
+    "filterGlobal": "全局",
+    "filterCustom": "自定义",
+    "noUsersMatchThisLimitType": "没有符合此上限类型的用户。",
+    "serviceAccountTag": "[服务账号]",
+    "customLimitMCredits": "自定义 · {{credits}} 百万积分",
+    "globalLimitMCredits": "全局 · {{credits}} 百万积分",
+    "globalUnlimited": "全局 · 无限制",
+    "groupLimitMCredits": "{{groupName}} · {{credits}} 百万积分",
+    "filterGroup": "组",
+    "globalUserLimit": "全局用户上限",
+    "bulkUserLimitsUpdateComplete": "批量更新用户上限已完成"
+  },
+  "environmentVariablesSection": {
+    "errors": {
+      "keyEmpty": "键不能为空。",
+      "keyUppercase": "键必须为大写。",
+      "keyNoSpaces": "键不能包含空格。",
+      "keyFormat": "键必须以字母或下划线开头，且只能包含字母、数字或下划线。",
+      "keyInvalid": "键格式无效或属于敏感键。",
+      "keyUnique": "键必须唯一。"
+    }
+  },
+  "evaluationsSection": {
+    "evaluations": "评估",
+    "allowMembersToUseEvaluations": "允许成员和服务账号使用评估、数据集和实验 API。",
+    "allowlistDescription": "即使组织范围的设置已关闭，这些用户仍可运行评估、管理数据集和记录实验。服务账号将被阻止。",
+    "allowedUsersByEmail": "允许的用户（按邮箱）"
+  },
+  "executionTemplateEditorFields": {
+    "failedToLoadSources": "加载来源失败。"
+  },
+  "sandboxEnvironmentEditorModal": {
+    "cancel": "取消",
+    "continue": "继续",
+    "back": "返回",
+    "text1TemplateDetails": "1. 环境详情",
+    "text2BuildSteps": "2. 构建步骤",
+    "creating": "正在创建…",
+    "create": "创建",
+    "createTemplate": "创建环境"
+  },
+  "sandboxEnvironmentEditorPage": {
+    "editDescription": "更改环境、仓库或设置脚本会重新构建环境。",
+    "createDescription": "仓库克隆和设置在构建时完成，让 Session 启动即可工作。",
+    "templates": "环境",
+    "saving": "正在保存…",
+    "creating": "正在创建…",
+    "save": "保存",
+    "create": "创建",
+    "editName": "编辑 {{name}}",
+    "newTemplate": "新建环境",
+    "basics": "基本信息",
+    "environment": "环境来源",
+    "buildSteps": "构建步骤",
+    "buildStepsDescription": "每次构建都会按顺序运行这些步骤，使 Session 启动时仓库已克隆、设置已完成。",
+    "unsupportedCustomizationHelp": "此环境不再支持部分已保存的自定义设置。清除这些设置即可在不更换环境的情况下保存。",
+    "clearUnsupportedCustomization": "清除不支持的自定义设置"
+  },
+  "sandboxEnvironmentForm": {
+    "setupScriptTooLong": "设置脚本不能超过 10000 个字符。",
+    "invalidTemplateDefinition": "环境定义无效。",
+    "repositoryUrlMissingName": "每个仓库 URL 都必须包含仓库名称。",
+    "repositoryNamesNotUnique": "各仓库的名称必须唯一。",
+    "organizationRepositories_one": "组织 · {{count}} 个仓库",
+    "organizationRepositories_other": "组织 · {{count}} 个仓库",
+    "personalRepositories_one": "个人 · {{count}} 个仓库",
+    "personalRepositories_other": "个人 · {{count}} 个仓库"
+  },
+  "sandboxEnvironmentPickerModal": {
+    "cancel": "取消",
+    "selectTemplate": "选择环境",
+    "searchTemplates": "搜索环境",
+    "failedToLoadTemplatesCloseAnd": "加载环境失败。请关闭后重试。",
+    "noEligibleTemplatesAreAvailable": "没有可用的符合条件的环境。",
+    "noTemplatesMatchYourSearch": "没有符合搜索条件的环境。",
+    "loadingTemplates": "正在加载环境…",
+    "selected": "已选择",
+    "select": "选择"
+  },
+  "sandboxEnvironmentsSection": {
+    "rebuilding": "正在重新构建…",
+    "edit": "编辑",
+    "newTemplate": "新建环境",
+    "templates": "环境",
+    "failedToLoadTemplates": "加载环境失败。",
+    "retry": "重试",
+    "connectGithubOrGitlab": "连接 GitHub 或 GitLab",
+    "templatesAreUnavailableBecauseYouHavent": "尚未连接个人代码托管服务，因此环境不可用。请连接 GitHub 或 GitLab 以验证仓库访问权限，并在此查看环境。你仍可创建不含仓库的环境。",
+    "connectAPersonalCodeProviderTo": "连接个人代码托管服务以管理环境",
+    "setAsDefault": "设为默认",
+    "rebuild": "重新构建",
+    "cancelBuild": "取消构建",
+    "delete": "删除",
+    "actionsFor": "{{name}} 的操作",
+    "viewDetails": "查看详情",
+    "prebuiltDevEnvironmentsForDroid": "供 Droid 使用的预构建开发环境。仓库克隆和设置在构建时完成，让 Session 启动即可工作。"
+  },
+  "sandboxEnvironmentDetailsPage": {
+    "failedToLoadThisTemplate": "加载此环境失败。",
+    "retry": "重试"
+  },
+  "factoryRouterGuidanceSection": {
+    "remove": "移除",
+    "whenThisApplies": "适用条件",
+    "always": "始终",
+    "guidance": "指导说明",
+    "autoModelRules": "自动模型规则",
+    "noOrganizationAutoModelRulesConfigured": "未配置组织自动模型规则。",
+    "newRuleCondition": "新规则条件",
+    "newRuleGuidance": "新规则指导说明",
+    "addRule": "添加规则",
+    "additionalOrganizationContext": "额外的组织上下文",
+    "additionalOrganizationContextGuidance": "额外的组织上下文指导说明",
+    "routerAdditionalContext": "路由器额外上下文",
+    "rulesAndContextAreAdvisoryThey": "规则和上下文仅供参考，帮助 Droid 判断代码库中的任务难度，但不会强制选择特定模型。",
+    "clearContext": "清除上下文",
+    "contextPlaceholder": "数据库迁移和身份验证层的更改通常需要格外谨慎。文档微调、依赖升级和单行缺陷修复属于常规工作。我们的 Rust 服务中有大量 unsafe 块，请将其中任何更改视为高风险。",
+    "ruleGuidancePlaceholder": "将身份验证、迁移、基础设施和安全变更视为高风险。",
+    "usefulThingsToMention": "值得说明的内容",
+    "usefulTips": {
+      "costlySubsystems": "出错代价高、需要仔细推理的子系统（迁移、身份验证、基础设施、安全）。",
+      "routineWork": "你认为属于常规的工作类别。",
+      "fragileToolchains": "细小疏漏可能引发严重问题的工具链或构建系统。"
+    },
+    "dontInclude": "请勿包含",
+    "avoidTips": {
+      "secrets": "机密、凭据或客户数据。",
+      "fileContents": "文件内容或较长的代码片段（请使用 AGENTS.md 提供项目上下文）。"
+    },
+    "ruleNumber": "规则 {{number}}",
+    "ruleConditionAriaLabel": "规则 {{number}} 条件",
+    "ruleGuidanceAriaLabel": "规则 {{number}} 指导说明",
+    "autoModelRulesTooltip": "添加参考规则，帮助 Droid 在自动模型选用模型时判断任务风险和难度。规则会与评分标准、模型指南和任务上下文一起考虑。",
+    "ruleCount": "{{current}} / {{max}} 条规则"
+  },
+  "generalSettings": {
+    "airgapMode": "隔离网络模式",
+    "enabled": "已启用",
+    "chooseTheExperienceThatBestMatches": "选择最符合你使用 Factory 方式的体验。",
+    "personalize": "个性化",
+    "productExperience": "产品体验",
+    "dangerZone": "危险操作区",
+    "closeOrganization": "关闭组织",
+    "revokesAccessForAllMembersAnd": "撤销所有成员的访问权限，且无法撤销。",
+    "productExperienceOptions": {
+      "code": "代码",
+      "work": "工作"
+    }
+  },
+  "generalSettingsSection": {
+    "reset": "重置"
+  },
+  "getPaymentMethodDisplay": {
+    "cardEndingIn": "{{brand}} 尾号 {{last4}}",
+    "cardOnFile": "已保存的卡"
+  },
+  "getPlanDisplayName": {
+    "free": "免费",
+    "trialEnds": "试用（{{date}} 结束）"
+  },
+  "gitCommitsSection": {
+    "configureGitRelatedBehaviorsAndCommit": "配置 Git 相关行为和提交设置。",
+    "gitCommits": "Git 与提交",
+    "addCoAuthoredByDroidTo": "Droid 协助编写代码时，在提交信息中添加“Co-authored-by: Droid”。",
+    "includeCoAuthoredByDroid": "添加 Co-authored-by Droid"
+  },
+  "githubEnterpriseSetupSection": {
+    "createAnOauthAppOnYour": "在 GitHub Enterprise Server 实例上创建 OAuth 应用，然后在下方输入应用详情。该实例必须具有公共 DNS 记录，并可通过公共互联网以 HTTPS 访问。",
+    "domain": "域名",
+    "httpsGithubExampleCom": "https://github.example.com",
+    "clientId": "客户端 ID",
+    "enterYourGithubOauthClientId": "输入 GitHub OAuth 客户端 ID",
+    "clientSecret": "客户端密钥",
+    "enterYourGithubOauthClientSecret": "输入 GitHub OAuth 客户端密钥",
+    "allFieldsAreRequired": "所有字段均为必填",
+    "failedToSaveConfiguration": "保存 GitHub Enterprise Server 配置失败。请重试。",
+    "configurationSaved": "GitHub Enterprise Server 配置已保存",
+    "saving": "正在保存…",
+    "saveConfiguration": "保存配置"
+  },
+  "gitlabSelfHostedSetupSection": {
+    "domain": "域名",
+    "httpsGitlabExampleCom": "https://gitlab.example.com",
+    "applicationId": "应用 ID",
+    "enterYourGitlabApplicationId": "输入 GitLab 应用 ID",
+    "secret": "密钥",
+    "enterYourGitlabApplicationSecret": "输入 GitLab 应用密钥",
+    "followTheDocumentation": "按照 <anchor>GitLab 自托管文档</anchor>创建应用并获取所需凭据。",
+    "allFieldsAreRequired": "所有字段均为必填",
+    "configurationSaved": "GitLab 自托管配置已保存",
+    "saving": "正在保存…",
+    "saveConfiguration": "保存配置"
+  },
+  "growthBilling": {
+    "teamsScheduledForNextRenewal": "已安排在下次续订时切换到 Teams",
+    "planUpdatedSuccessfully": "套餐已成功更新",
+    "freeTrialCancelled": "免费试用已取消",
+    "subscriptionStarted": "订阅已开始",
+    "paidPlanActivated": "付费套餐已激活",
+    "subscriptionResumed": "订阅已恢复",
+    "cancel": "取消",
+    "savingBillingChanges": "正在保存账单更改",
+    "saving": "正在保存…",
+    "confirm": "确认",
+    "changePlan": "更改套餐",
+    "activatePaidPlan": "激活付费套餐",
+    "resumePaidPlan": "恢复付费套餐",
+    "startPaidPlan": "开始付费套餐",
+    "cancelFreeTrial": "取消免费试用",
+    "toDowngradeFromTeams": "如需从 Teams 降级，请取消订阅，并在当前账单周期结束后订阅新套餐。",
+    "switchBetweenPlans": "切换套餐。多数升级立即生效，降级在账单周期结束时生效。",
+    "teamsHasLowerPerUserUsage": "Teams 的每用户用量上限较低。当前累计用量会保留，切换不会重置用量窗口。",
+    "yourIndividualUsageLimitsWillChange": "你的个人用量上限将更改",
+    "activationTiming": "激活时间",
+    "switchNow": "立即切换",
+    "getTeamsSeatsImmediatelyYourCarried": "立即获得 Teams 席位。保留的用量可能已经超过较低的每用户上限。",
+    "switchOnDate": "于 {{date}} 切换",
+    "switchAtNextRenewal": "在下次续订时切换",
+    "keepYourCurrentPlanAndLimits": "续订前保留当前套餐和上限。Teams 席位将在该日期可用。",
+    "allManagedComputersForAllMembers": "所有成员的全部托管计算机都将永久销毁。使用这些计算机的所有 Session 都将归档。",
+    "thisActionCannotBeUndone": "此操作无法撤销。",
+    "downgradeDeletesManagedComputers_one": "降级到 {{plan}} 将永久删除整个组织中的全部 {{count}} 台托管计算机。",
+    "downgradeDeletesManagedComputers_other": "降级到 {{plan}} 将永久删除整个组织中的全部 {{count}} 台托管计算机。",
+    "thisPlan": "此套餐",
+    "upgradingToAPaidPlanWill": "升级到付费套餐将立即结束试用，并向所选付款方式扣费。",
+    "subscriptionWillResumeWithCurrentPlan": "订阅将立即按当前套餐（{{plan}}）恢复。",
+    "startANewPaidSubscriptionTo": "开始新的付费订阅，以使用 Factory 的全部功能。",
+    "areYouSureYouWantTo": "确定要取消免费试用吗？",
+    "onceCanceledYourFreeTrialWill": "取消后，免费试用将立即结束。如需恢复付费功能，可以开始按月订阅。",
+    "factoryWillNotStoreYourPayment": "Factory 不会存储你的付款信息。"
+  },
+  "growthUsage": {
+    "usage": "用量",
+    "usageDataIsNotAvailableYet": "暂无可用的用量数据。"
+  },
+  "handoffStep": {
+    "ready": "就绪",
+    "provisioningProgress": "配置进度",
+    "repositorySetupFailed": "仓库设置失败",
+    "continue": "继续",
+    "reportABug": "报告缺陷",
+    "thisComputerIsOwnedByThe": "此计算机由服务账号拥有。请通过服务账号的 API 密钥在自动化中使用它。",
+    "finish": "完成",
+    "takingYouToYourNewComputer": "正在前往你的新计算机…",
+    "retrying": "正在重试…",
+    "retrySetup": "重试设置"
+  },
+  "hooksPolicySection": {
+    "hookEvent": "钩子事件",
+    "addHook": "添加钩子",
+    "matcher": "匹配器",
+    "commandToRun": "要运行的命令",
+    "add": "添加",
+    "configureHooksThatRunCommandsIn": "配置在代理生命周期事件发生时运行命令的钩子。",
+    "hooksPolicy": "钩子策略",
+    "onlyLoadHooksFromTheseManaged": "仅从这些托管设置和组织启用的插件中加载钩子。不允许用户或项目设置中的钩子。",
+    "allowManagedHooksOnly": "仅允许托管钩子",
+    "managedHooks": "托管钩子",
+    "hookCommandsAreVisibleToAll": "钩子命令对所有组织成员可见，并在其计算机上运行。请勿在命令中嵌入机密，改为引用脚本路径或机密管理器。",
+    "thisPolicyProvidesOrganizationalGuidanceRather": "此策略提供组织指导，而非严格的安全强制执行。拥有本地计算机访问权限的用户可能通过修改后的二进制程序绕过限制。",
+    "noManagedHooksAreConfigured": "未配置托管钩子。",
+    "commandContainsSecret": "此命令似乎包含机密（例如 API 密钥或令牌）。钩子命令对所有成员可见，请改为引用脚本或机密管理器。",
+    "matcherLabel": "匹配器：{{matcher}}",
+    "timeoutSuffix": "（超时 {{seconds}} 秒）",
+    "removeHook": "移除 {{event}} 钩子"
+  },
+  "initializingStep": {
+    "howToFix": "修复方法",
+    "provisioningProgress": "配置进度",
+    "reportABug": "报告缺陷",
+    "genericProvisioningError": "设置此计算机时出现问题。请报告缺陷，以便我们进一步调查。",
+    "setupFailed": "设置失败",
+    "stepFailed": "{{name}} 失败",
+    "settingUpRepositories": "正在设置仓库",
+    "openSession": "{{name}} — 打开 Session →",
+    "provisioning": "正在配置…",
+    "installDepsSubtitle": "复杂配置可能需要一段时间。你可以关闭此标签页，并在设置完成后回来查看。",
+    "provisioningFailed": "配置失败",
+    "initializing": "正在初始化…",
+    "ready": "就绪"
+  },
+  "installDepsStep": {
+    "setUpRepositories": "设置仓库",
+    "repositorySetup": "仓库设置",
+    "setUpAutomaticallyRecommended": "自动设置（推荐）",
+    "skipAutomaticSetupOnceTheComputer": "跳过自动设置。你可以稍后在 Droid Session 或终端中完成设置。",
+    "skipForNow": "暂时跳过",
+    "back": "返回",
+    "chooseHowToPrepare": "选择计算机的设置方式。",
+    "noReposDescription": "此计算机没有要设置的仓库。就绪后，你可以启动 Droid Session 或使用终端。",
+    "autoInstallDescription": "Droid 会先检查已安装的内容，然后设置仓库，使其可用于开发。",
+    "autoInstallUnavailableDescription": "请在上一步添加仓库以启用自动设置。",
+    "creating": "正在创建…",
+    "createComputer": "创建计算机"
+  },
+  "integrationCallback": {
+    "failedToCompleteIntegration": "完成集成失败。请重试。",
+    "loading": "正在完成连接"
+  },
+  "integrationError": {
+    "returnToSettings": "返回设置",
+    "connectionFailed": "连接失败",
+    "unexpectedError": "集成过程中发生意外错误。",
+    "couldNotFinishConnecting": "无法完成集成连接。"
+  },
+  "integrationModalManager": {
+    "usernameSetSuccessfully": "用户名已成功设置",
+    "emailSetSuccessfully": "邮箱已成功设置",
+    "disconnectedSuccessfully": "已成功断开连接",
+    "failedToReconnect": "重新连接 {{integration}} 失败。请重试。",
+    "setup": "设置",
+    "setUsername": "设置用户名"
+  },
+  "integrationStart": {
+    "failedToStartIntegration": "启动集成失败。请重试。",
+    "loading": "正在启动连接"
+  },
+  "jiraDelegationSetupSection": {
+    "jiraAppStatus": "Jira 应用状态",
+    "connectJiraToThisFactoryOrganization": "将 Jira 连接到此 Factory 组织以检查应用健康状态。",
+    "installJiraApp": "安装 Jira 应用",
+    "manageJiraApps": "管理 Jira 应用",
+    "status": {
+      "linked": "已连接。Factory 可以访问此 Jira 站点。",
+      "linkedUnavailable": "已在 Factory 中关联，但 Jira 应用尚未提供可用凭据。",
+      "stale": "Jira 应用凭据已失效。请在 Jira 中打开应用以刷新凭据。",
+      "ambiguous": "此站点关联了多个 Factory 组织。委派需要唯一匹配的执行者。",
+      "notLinked": "此 Jira 站点已不再关联此 Factory 组织。"
+    }
+  },
+  "jiraForgeLinkConfirm": {
+    "checkingTheConnectLinkFromJira": "正在检查来自 Jira 的连接链接。",
+    "connectJira": "连接 Jira",
+    "dismiss": "忽略",
+    "connectLinkUnavailable": "连接链接不可用",
+    "cancel": "取消",
+    "ticketRejected": "此连接链接已过期或已使用。请返回 Jira，再次点击“连接 Factory”。",
+    "siteConnected": "{{siteName}} 现已连接到 {{organizationName}}。",
+    "couldNotCompleteTheLink": "Factory 无法完成关联。",
+    "connecting": "正在连接…",
+    "connect": "连接",
+    "linkSiteToOrganization": "将 {{siteName}} 关联到 {{organizationName}}？",
+    "connectionFailed": "连接失败"
+  },
+  "jiraForgeLinkGuard": {
+    "loading": "正在加载…",
+    "connectJira": "连接 Jira",
+    "onlyManagersAndOwnersCanConnect": "仅管理员和所有者可以将 Jira 站点连接到此组织。"
+  },
+  "machineUtils": {
+    "local": "本地",
+    "droidComputer": "Droid 计算机",
+    "workspace": "工作区"
+  },
+  "manageComputerModal": {
+    "manageComputer": "管理计算机",
+    "viewDetails": "查看详情",
+    "resourceUsage": "资源用量",
+    "connection": "连接",
+    "reopenTheConnectionWithoutRestartingThe": "重新打开连接，不重启计算机或其进程。",
+    "recovery": "恢复",
+    "stopsAllProcessesAndDisconnectsAll": "停止所有进程并断开所有 Session。已持久化文件会保留；内存中的工作和未刷新的写入可能丢失。",
+    "forceReboot": "强制重启…",
+    "computerReconnected": "计算机已重新连接",
+    "status": {
+      "rebooting": "正在重启…",
+      "connecting": "正在连接…",
+      "connected": "已连接",
+      "disconnected": "已断开连接"
+    },
+    "loadingUsage": "正在加载用量…",
+    "lastReportedUsage": "上次报告的用量",
+    "noUsageDataYet": "暂无用量数据",
+    "usageUnavailableDuringReboot": "重启期间无法获取用量",
+    "usageUnavailable": "用量不可用",
+    "reconnecting": "正在重新连接…",
+    "forceReconnect": "强制重新连接"
+  },
+  "managedWorktrees": {
+    "noActiveSessions": "没有活跃的 Session",
+    "retry": "重试",
+    "thisDroidComputerDoesNotYet": "此 Droid 计算机尚不支持工作树。",
+    "noFactoryManagedWorktrees": "没有 Factory 托管的工作树。",
+    "factoryManagedWorktreesOnTheSelected": "所选计算机上的 Factory 托管工作树。",
+    "managedWorktrees": "托管工作树",
+    "deleting": "正在删除…",
+    "delete": "删除",
+    "connectToViewWorktrees": "请先连接此计算机，再查看其托管工作树。",
+    "failedToLoadManagedWorktrees": "加载托管工作树失败。",
+    "ephemeralCount": "临时 · {{total}}",
+    "persistentCount": "持久化 · {{total}}"
+  },
+  "mcpPolicySection": {
+    "eGMcpLinearAppModelcontextprotocol": "例如 mcp.linear.app、@modelcontextprotocol/server-filesystem",
+    "add": "添加",
+    "allowOnlyApprovedMcpServersBy": "通过匹配 HTTP 服务器的 URL 主机名，或 stdio 服务器的命令名和参数，仅允许已批准的 MCP 服务器。启用后，只有匹配允许列表的服务器才能启动。",
+    "mcpServerPolicy": "MCP 服务器策略",
+    "mcpServerAllowlist": "MCP 服务器允许列表",
+    "theAllowlistIsEnabledButEmpty": "允许列表已启用但为空。添加至少一个条目前，此组织用户的所有 MCP 服务器都将被阻止。",
+    "thisPolicyProvidesOrganizationalGuidanceRather": "此策略提供组织指导，而非严格的安全强制执行。拥有本地计算机访问权限的用户可能通过代理或修改后的二进制程序绕过限制。",
+    "removeEntry": "移除 {{pattern}}",
+    "mcpServerAllowlistTooltip": "启用后，只有匹配下方条目的 MCP 服务器才能连接。HTTP 服务器请输入主机名或完整 URL；匹配仅使用主机名。stdio 服务器按命令和参数匹配。"
+  },
+  "memberSearchInput": {
+    "searchByNameOrEmail": "按姓名或邮箱搜索…",
+    "noUsersFoundMatchingYourSearch": "未找到符合搜索条件的用户。",
+    "showingRange": "显示 {{total}} 位成员中的第 {{start}}–{{end}} 位。"
+  },
+  "membersSettings": {
+    "members": "成员",
+    "memberVisibilityIsRestricted": "成员可见性受限",
+    "yourAdministratorHasTurnedOffOther": "管理员已关闭其他成员的可见性。",
+    "inviteMember": "邀请成员",
+    "addingAndRemovingUsersIsHandled": "添加和移除用户由企业管理员负责。",
+    "memberRemovedSuccessfully": "成员已成功移除",
+    "membersWithCount": "成员 · {{total}}"
+  },
+  "metricPanel": {
+    "cpu": "CPU",
+    "memory": "内存",
+    "disk": "磁盘"
+  },
+  "metricPanelEmpty": {
+    "metricsWillAppearHereWhenThe": "计算机运行时，指标将显示在这里"
+  },
+  "metricPanelError": {
+    "metricsMayBeTemporarilyUnavailableTry": "指标可能暂时不可用。请稍后重试。"
+  },
+  "missionDefaultsSettings": {
+    "loadingMissionDefaults": "正在加载任务默认设置…",
+    "failedToLoadOrSaveMission": "加载或保存任务默认设置失败。",
+    "missionDefaults": "任务默认设置",
+    "skipTheScrutinyValidationPhaseAt": "跳过里程碑节点的深入审查验证阶段。",
+    "skipScrutiny": "跳过深入审查",
+    "skipTheUserTestingValidationPhase": "跳过里程碑节点的用户测试验证阶段。",
+    "skipUserTesting": "跳过用户测试",
+    "missionsVersion": "任务版本",
+    "v1SectionDescription": "配置任务编排器、工作代理和验证器使用的模型。这些选择适用于多代理任务。",
+    "orchestratorModel": "编排器模型",
+    "orchestratorReasoningLevel": "编排器推理级别",
+    "workerModel": "工作代理模型",
+    "workerReasoningLevel": "工作代理推理级别",
+    "validatorModel": "验证器模型",
+    "validatorReasoningLevel": "验证器推理级别"
+  },
+  "missionDefaultsV2Section": {
+    "remove": "移除",
+    "description": "描述",
+    "theOrchestratorReadsThisToDecide": "编排器会阅读此描述，以决定将哪些工作发送到这里。",
+    "loadingMissionDefaults": "正在加载任务默认设置…",
+    "runMissionAgentsOnYourDefault": "在默认环境和下列计算机上运行任务代理。关闭后，所有代理都在编排器所在的计算机上运行。",
+    "remoteDelegation": "远程委派",
+    "appliesToEveryMissionOrchestratorIncluding": "适用于所有任务编排器，包括正在运行的编排器，无论其使用何种模型。上限为模型的上下文窗口。",
+    "orchestratorCompactionBudget": "编排器压缩预算",
+    "turnRemoteDelegationOnToUse": "启用远程委派以使用这些计算机。",
+    "defaultTemplate": "默认环境",
+    "agentsRunHereWhenTheOrchestrator": "编排器未指定计算机时，代理在这里运行。每个代理会获得一台全新计算机。",
+    "additionalMachines": "其他计算机",
+    "templatesDroidComputersAndYourOwn": "你发起的所有任务还可在这些环境、Droid 计算机以及通过远程控制连接的自有计算机上运行代理。",
+    "discard": "放弃",
+    "missionDefaults": "任务默认设置",
+    "sectionDescription": "选择任务中的代理运行位置。这些选择适用于你发起的所有 Missions 2.0 任务。",
+    "chooseDefaultTemplate": "选择默认环境",
+    "addMachine": "添加计算机",
+    "templateTag": "每个代理使用全新计算机",
+    "unavailableMachine": "计算机不可用",
+    "machineNoLongerAvailable": "你已无法使用此计算机。任务将跳过它。",
+    "descriptionRequired": "描述此计算机的用途。",
+    "descriptionTooLong": "最多使用 {{max}} 个字符。",
+    "removeAriaLabel": "移除 {{name}}",
+    "repos": "仓库：{{repos}}",
+    "templateDescriptionPlaceholder": "此环境的用途及拥有的工具。仓库会自动添加。",
+    "machineDescriptionPlaceholder": "仓库、工具及此计算机适合处理的工作类型。",
+    "alreadyDefaultTemplate": "已是你的默认环境。",
+    "alreadyOnList": "已在你的列表中。",
+    "saving": "正在保存…",
+    "save": "保存"
+  },
+  "missionPolicySection": {
+    "allowed": "允许",
+    "controlWhichUsersCanUseMissions": "控制哪些用户可以使用任务（多步骤自主任务）。默认所有用户均可访问。",
+    "missionAccess": "任务访问",
+    "unableToUpdateHere": "无法在此更新",
+    "missionAccessDependsOnTheOrganization": "任务访问权限依赖组织成员列表。请切换到此组织以更新任务访问权限。",
+    "whenEnabledOnlyUsersInThe": "启用后，只有下方允许列表中的用户可以启动任务。",
+    "restrictToSpecificUsers": "限制为特定用户",
+    "restrictedAccessIsEnabledButNo": "受限访问已启用，但未允许任何用户。所有成员都将无法启动任务。",
+    "usersAllowed": "已允许 {{allowedCount}} 位用户",
+    "noUsersAllowed": "未允许任何用户，所有成员都将无法使用任务。"
+  },
+  "modelAccessSection": {
+    "controlWhichAiModelsYourTeam": "控制团队在 Session 中可以使用的 AI 模型。",
+    "modelAccessControl": "模型访问控制",
+    "controlCustomModelAccessOrganizationManaged": "控制自定义模型访问、组织托管的 HTTP 和 Bedrock 模型、URL 限制及自动模型路由。",
+    "bringYourOwnKeyByok": "自带密钥（BYOK）",
+    "controlAccessToModelsProvidedAnd": "控制对 Factory 提供并计费的模型的访问。",
+    "factoryManagedModels": "Factory 托管模型",
+    "allowAllFactoryModels": "允许所有 Factory 模型",
+    "allowAllAvailableFactoryModelsNow": "允许所有当前及未来可用的 Factory 模型。取消勾选下方单个模型可将其阻止。",
+    "automaticallyAllowNewModelsWithoutRe": "自动允许新模型，但不会重新启用已被你阻止的模型。",
+    "autoAllowNewModels": "自动允许新模型",
+    "hideDisabledModelsFromUsers": "向用户隐藏已禁用模型",
+    "hideDisabledModelsDescription": "在模型选择器中隐藏组织禁用的模型。关闭时，已禁用模型仍会显示，但不可使用。",
+    "enableFastModels": "启用快速模型",
+    "imageGenerationModels": "图像生成模型",
+    "imageGenerationModelsDescription": "仅供 generate_image 工具使用，不会显示为聊天模型。取消勾选所有图像模型会关闭此工具。",
+    "searchModels": "搜索模型",
+    "individualUserModelOverrides": "个人用户模型覆盖设置",
+    "manage": "管理",
+    "fastModelsUnavailableForUnpaidPilots": "未付费试点无法使用快速模型。",
+    "allowFastModeModelVariants": "允许快速模式模型变体。",
+    "unavailableReason": {
+      "dataRetentionOptIn": "请打开此模型的数据保留政策并选择加入，然后才能使用。",
+      "enableFastModels": "请先在上方启用快速模型，以允许此模型。",
+      "unpaidPilot": "未付费试点无法使用此模型。",
+      "explicitOptIn": "此模型需要组织明确选择加入。"
+    },
+    "dataRetentionPolicyLabel": "{{modelFamily}} 数据保留政策",
+    "individualUserModelOverridesTooltip": "为特定用户覆盖模型访问权限。这些覆盖设置可以相对于组织策略授予或撤销模型访问权限。",
+    "highCostApprovalLabel": "高费用模型授权"
+  },
+  "mySessionsUsage": {
+    "recentSessions": "最近的 Session",
+    "topFsc7Days": "FSC 最高 · 7 天",
+    "topFsc30Days": "FSC 最高 · 30 天",
+    "topFsc90Days": "FSC 最高 · 90 天",
+    "recentCaption": "最新的云同步 Session 及其累计 FSC。",
+    "topCaption": "所选时间范围内所有 Session 中 FSC 最高的 Session。",
+    "failedToLoadSessions": "加载 Session 失败。",
+    "failedToLoadTopFscSessions": "加载 FSC 最高的 Session 失败。",
+    "failedToLoadNextPage": "加载下一页失败。",
+    "sessionNamesUnavailable": "Session 名称暂时不可用。",
+    "failedToRefreshSessions": "刷新 Session 失败。",
+    "usageTemporarilyUnavailable": "用量暂时不可用。仍会显示你的 Session。",
+    "reviewYourCloudSyncSessionsBy": "按最近时间或全局 FSC 用量排名查看云同步 Session。",
+    "mySessions": "我的 Session",
+    "sessionView": "Session 视图",
+    "loadingSessions": "正在加载 Session…",
+    "tryAgain": "重试",
+    "noSessionsMatchedCursorPage": "此游标页没有匹配的 Session。",
+    "noCloudSyncSessionsYet": "暂无云同步 Session。",
+    "noSessionsUsedFscInRange": "此时间范围内没有 Session 使用 FSC。",
+    "session": "Session",
+    "fsc": "FSC",
+    "untitledSession": "未命名 Session",
+    "loading": "正在加载",
+    "unavailable": "不可用",
+    "showingRange": "显示 {{start}}–{{end}}",
+    "showingRangeOfTotal": "显示 {{total}} 项中的 {{start}}–{{end}}",
+    "previous": "上一项",
+    "loadingEllipsis": "正在加载…",
+    "next": "下一步"
+  },
+  "nameStep": {
+    "yourNewDroidComputer": "你的新 Droid 计算机",
+    "name": "名称",
+    "usingGitlabCloudAddAToken": "使用 GitLab Cloud？请添加令牌，让此服务账号可以克隆 gitlab.com 仓库。",
+    "configureGitlabAccess": "配置 GitLab 访问权限",
+    "next": "下一步"
+  },
+  "notificationsSection": {
+    "nativeNotificationsAreShownWhenThe": "应用未获得焦点时显示原生通知。",
+    "notifications": "通知",
+    "notifyWhenDroidFinishesWork": "Droid 完成工作时通知",
+    "notifyWhenDroidNeedsInput": "Droid 需要输入时通知"
+  },
+  "openComputeDeploymentCard": {
+    "rename": "重命名",
+    "regenerateEnrollment": "重新生成注册信息",
+    "decommission": "停用并移除",
+    "cancel": "取消",
+    "renameDeployment": "重命名部署",
+    "name": "名称",
+    "changesTheNameInFactoryOnly": "仅更改 Factory 中的名称，无需重新注册。",
+    "thisInvalidatesThePreviousPendingPackage": "这会使之前待使用的注册包失效，并创建一个 24 小时后过期的替代包。",
+    "thisPermanentlyRemovesTheDeploymentIdentity": "这将永久移除部署身份，无法撤销。",
+    "statusLabels": {
+      "disabled": "已禁用",
+      "connected": "已连接",
+      "awaitingEnrollment": "等待注册",
+      "notConnected": "未连接",
+      "decommissioned": "已停用并移除"
+    },
+    "toasts": {
+      "enrollmentRegenerated": "注册包已重新生成",
+      "deploymentDisabled": "部署已禁用",
+      "deploymentEnabled": "部署已启用",
+      "deploymentDecommissioned": "部署已停用并移除",
+      "deploymentRenamed": "部署已重命名"
+    },
+    "disable": "禁用",
+    "enable": "启用",
+    "saving": "正在保存…",
+    "save": "保存",
+    "regenerating": "正在重新生成…",
+    "regenerate": "重新生成",
+    "regenerateEnrollmentTitle": "重新生成 {{name}} 的注册信息？",
+    "decommissioning": "正在停用并移除…",
+    "decommissionTitle": "停用并移除 {{name}}？"
+  },
+  "openComputeDeploymentsTable": {
+    "name": "名称",
+    "status": "状态",
+    "version": "版本",
+    "drivers": "驱动",
+    "created": "已创建",
+    "actions": "操作",
+    "actionsFor": "{{name}} 的操作"
+  },
+  "openComputeDeployment": {
+    "openCompute": "OpenCompute",
+    "deploymentNotFound": "未找到部署",
+    "backToOpenCompute": "返回 OpenCompute",
+    "failedToLoad": "加载此部署失败。请重试。",
+    "dangerZone": "危险操作区",
+    "decommissionDeployment": "停用并移除部署",
+    "decommissionDescription": "永久移除此部署的身份。此操作无法撤销。",
+    "disableBeforeDecommissioning": "请先禁用此部署，再将其停用并移除。"
+  },
+  "openComputeDeploymentInformation": {
+    "deploymentId": "部署 ID",
+    "details": "详情",
+    "computers": "按状态统计计算机",
+    "computersReady": "就绪",
+    "computersSuspended": "已挂起",
+    "computersStarting": "正在启动",
+    "computersSnapshotting": "正在创建快照",
+    "computersStopping": "正在停止",
+    "computersFailed": "失败",
+    "computersTotal": "总计",
+    "computersTotalTooltip": "除已终止计算机外的所有计算机。计算机上限适用于此数量。",
+    "computersTotalHelp": "关于总数",
+    "computersTotalOfLimit": "{{total}} / {{limit}}",
+    "computersLimitHelp": "总数达到上限后，新计算机请求将被拒绝。此上限由部署的 config.maxLiveComputers Helm 值设置。",
+    "computersUnavailable": "计算机数量不可用。部署启用、已连接且能响应时会显示数量。",
+    "version": "版本",
+    "configurationRevision": "配置修订版",
+    "enrollmentPackageExpires": "注册包到期时间",
+    "drivers": "驱动",
+    "driverFallbackName": "驱动 {{number}}",
+    "instanceId": "实例 ID",
+    "apiVersionAlpha": "早期测试版",
+    "apiVersionBeta": "测试版",
+    "created": "已创建",
+    "enrolled": "已注册",
+    "firstConnected": "首次连接",
+    "identityKeyFingerprint": "身份密钥指纹",
+    "noDriversRegistered": "尚未注册驱动。",
+    "driver": "驱动",
+    "location": "位置",
+    "architecture": "架构",
+    "versionWithRelease": "{{apiVersion}} {{version}}",
+    "versionWithBuild": "{{apiVersion}}（{{build}}）"
+  },
+  "openComputeEnrollmentRevealModal": {
+    "iDownloadedAndSecurelySavedThisBundle": "我已下载并安全保存此注册包",
+    "continue": "继续",
+    "deploymentId": "部署 ID",
+    "downloadEnrollmentBundleJson": "下载注册包 JSON",
+    "installWithHelm": "使用 Helm 安装（推荐）",
+    "installWithHelmDescription": "将 NAMESPACE 设置为 Terraform 的 deployment_metadata 输出中的命名空间，并在基础设施值之前传入覆盖值。OpenCompute 会在首次启动时注册。",
+    "installWithHelmMinimumVersion": "需要 OpenCompute {{version}} 或更高版本。此命令会安装最新稳定版 chart。",
+    "downloadHelmValuesOverlay": "下载 Helm 覆盖值",
+    "uploadInPanel": "或在 OpenCompute 面板中上传",
+    "uploadInPanelDescription": "如果 OpenCompute 已在未注册的情况下运行，请下载注册包 JSON，并在 OpenCompute 面板中上传。",
+    "title": "{{name}} 的注册包",
+    "regeneratedWarning": "之前的注册包现已失效。请立即保存此替代包；它包含新的引导机密，之后无法再次获取。",
+    "warning": "此注册包包含引导机密，之后无法再次获取。请勿提交到代码库，也不要将其放入日志或支持输出中。",
+    "enrollmentPackageExpires": "注册包将于 {{date}} 到期。",
+    "checkTheBoxToContinue": "勾选复选框以继续。",
+    "discardDeployment": "放弃部署",
+    "keepDeployment": "保留部署",
+    "discardConfirmTitle": "放弃 {{name}}？",
+    "discardConfirmDescription": "这会删除部署记录。任何已使用此注册包注册的计算机都将停止工作。如需保留部署，请选择“保留部署”。",
+    "backToSettings": "返回设置"
+  },
+  "openComputeSettings": {
+    "manageYourOrganizationsOpencomputeDeployments": "管理组织的 OpenCompute 部署。",
+    "opencompute": "OpenCompute",
+    "failedToLoadOpencomputeSettingsTry": "加载 OpenCompute 设置失败。请重试。",
+    "create": "创建",
+    "noOpencomputeDeploymentYet": "暂无 OpenCompute 部署。",
+    "cancel": "取消",
+    "createOpencomputeDeployment": "创建 OpenCompute 部署",
+    "name": "名称",
+    "eGProduction": "例如：生产环境",
+    "deploymentCreated": "OpenCompute 部署已创建",
+    "enableInEnterpriseControls": "请在<anchor>企业控制</anchor>中启用 OpenCompute。",
+    "creating": "正在创建…",
+    "deploymentDiscarded": "OpenCompute 部署已放弃"
+  },
+  "organizationMonthlyUsageAlertThreshold": {
+    "usageOfUnlimited": "{{usage}} / 无限制",
+    "usageOfThreshold": "{{usage}} / {{threshold}}（{{percentage}}%）",
+    "monthlyAlertThresholdSet": "每月告警阈值已设置",
+    "monthlyAlertThresholdUpdated": "每月告警阈值已更新",
+    "monthlyAlertThresholdRemoved": "每月告警阈值已移除",
+    "alertEmailsEnabled": "组织用量告警邮件已启用",
+    "alertEmailsDisabled": "组织用量告警邮件已禁用",
+    "factoryStandardCreditUsageForYour": "当前活跃组织在本自然月的 Factory 标准积分用量。这是提示性告警阈值，不是实时用量限制，绝不会阻止使用或更改计费。",
+    "organizationUsage": "组织用量",
+    "loadingFactoryStandardCreditUsage": "正在加载 Factory 标准积分用量…",
+    "factoryStandardCreditUsageIsUnavailable": "Factory 标准积分用量不可用。",
+    "organization": "组织",
+    "currentMonthUsageIsTemporarilyUnavailable": "本月用量暂时不可用。你的告警阈值仍已保存。",
+    "setThreshold": "设置阈值",
+    "noMonthlyAlertThresholdSet": "未设置每月告警阈值",
+    "monthlyAlertThresholdMCredits": "每月告警阈值（百万积分）",
+    "editThreshold": "编辑阈值",
+    "thresholdDescription": "每个自然月 {{credits}}，仅用于提示性告警，并非实时用量限制。",
+    "organizationUsageAlertEmails": "组织用量告警邮件",
+    "setThresholdBeforeEnablingEmails": "启用告警邮件前，请先设置每月告警阈值。",
+    "alertEmailsDescription": "为组织所有者和管理员配置 80% 和 100% 的提示性邮件告警。告警绝不会限制用量。",
+    "enterPositiveAmount": "请输入以百万积分为单位的正数金额。",
+    "thresholdInputHelperText": "仅用于 80% 和 100% 的提示性告警，绝不会阻止使用或更改计费。",
+    "eG5050mCredits": "例如，50（即 5000 万积分）",
+    "removeThreshold": "移除阈值",
+    "cancel": "取消",
+    "save": "保存"
+  },
+  "organizationSection": {
+    "activeOrganization": "活跃组织",
+    "chooseTheOrganizationOrSubOrganization": "为新工作和组织范围的管理页面选择组织或子组织。切换会重新加载 Factory，并进入该组织上下文。",
+    "subOrganizationsLetEnterpriseTeamsWork": "子组织让企业团队在同一根组织下使用独立上下文。各组织的设置、控制、用量上限、成员和角色可以不同。",
+    "cloudSessionsAreScopedToThe": "云端 Session 属于活跃组织，切换后不会保留。",
+    "aboutActiveOrganization": "关于活跃组织",
+    "yourOrganization": "你的组织",
+    "edit": "编辑",
+    "editOrganization": "编辑组织",
+    "organizationName": "组织名称",
+    "organizationName2": "组织名称",
+    "streetAddress": "街道地址",
+    "text123MainStreet": "主街 123 号",
+    "city": "城市",
+    "stateProvince": "州 / 省",
+    "state": "州",
+    "postalCode": "邮政编码",
+    "country": "国家或地区",
+    "selectCountry": "选择国家或地区",
+    "taxIdType": "税号类型",
+    "taxIdOrVatNumber": "税号或增值税号",
+    "cancel": "取消",
+    "organizationInformationUpdated": "组织信息已更新",
+    "taxIdLabelOptional": "{{label}}（可选）",
+    "taxId": "税号",
+    "saving": "正在保存…",
+    "save": "保存"
+  },
+  "organizationSettings": {
+    "appPermissionsDescription": "选择成员可为个人任务连接的应用。代码托管服务中的 GitLab 自托管、GitHub Enterprise 和 Bitbucket Data Center 连接会自动向所有成员开放。",
+    "appPermissions": "应用权限",
+    "updatedAppPermission": "应用权限已更新",
+    "allowMembersToConnect": "允许成员为个人任务连接 {{integration}}。",
+    "allowForOrganization": "为组织允许 {{integration}}"
+  },
+  "organizationUsage": {
+    "usageAndLimitsForEachActive": "每位活跃用户和服务账号的用量及上限适用于当前自然月。个人上限覆盖全局上限。用量数据最多可能延迟 15 分钟更新。",
+    "usageLimitProgress": "用量上限进度",
+    "loadingUsageLimitProgress": "正在加载用量上限进度…",
+    "noActiveUsersOrServiceAccounts": "未找到活跃用户或服务账号。",
+    "email": "邮箱",
+    "monthlyFscLimit": "每月 FSC / 上限",
+    "utilization": "利用率",
+    "monthlyUsageAriaLabel": "{{email}} 的每月用量",
+    "unlimited": "无限制",
+    "paginationSummary": "{{total}} 项中的 {{start}}–{{end}}"
+  },
+  "ownerSelector": {
+    "owner": "所有者",
+    "serviceAccountOwnedComputersPersistBeyond": "服务账号拥有的计算机在你的访问权限结束后仍会保留。任何可以服务账号身份运行的用户均可使用此计算机。",
+    "yourself": "你自己",
+    "serviceAccounts": "服务账号"
+  },
+  "pasteCloneUrlInput": {
+    "orPasteAPublicOrAccessible": "或粘贴公共或可访问的克隆 URL",
+    "privateUrlsOnlyWorkWhenYour": "只有已连接的个人集成具有该仓库访问权限时，私有 URL 才能使用。",
+    "httpsGithubComAcmeProjectGit": "https://github.com/acme/project.git",
+    "add": "添加",
+    "errors": {
+      "invalidUrl": "输入有效的克隆 URL",
+      "unsupportedProtocol": "不支持的协议",
+      "removeCredentials": "请移除 URL 中的凭据"
+    }
+  },
+  "paymentMethodModal": {
+    "settingDefaultPaymentMethod": "正在设置默认付款方式",
+    "settingDefaultPaymentMethod2": "正在设置默认付款方式…",
+    "cancel": "取消",
+    "save": "保存",
+    "setDefaultPaymentMethod": "设置默认付款方式",
+    "editPaymentInformation": "编辑付款信息",
+    "selectDefaultForSubscription": "请为订阅选择默认付款方式。",
+    "selectCardAsDefault": "选择一张卡作为默认付款方式。默认卡将用于所有订阅费用及额外用量购买。"
+  },
+  "pendingConnectorChanges": {
+    "connectorWillBeEnabled": "{{name}}：将为组织启用连接器。",
+    "connectorWillBeDisabled": "{{name}}：将为组织禁用连接器。",
+    "toolWillBeEnabled": "{{connectorName}} {{toolName}}：将为组织启用工具。",
+    "toolWillBeDisabled": "{{connectorName}} {{toolName}}：将为组织禁用工具。"
+  },
+  "permissionRulesSection": {
+    "organizationRulesTakePrecedenceOverLower": "组织规则优先于更小范围的规则。",
+    "permissionRules": "权限规则",
+    "editsStayInThePendingEnterprise": "编辑保留在待保存的企业控制草稿中。请使用“审查更改”保存。",
+    "removeConfiguration": "移除配置",
+    "noChangesArePublishedUntilSaved": "保存前不会发布任何更改。",
+    "done": "完成",
+    "permissionRules2": "权限规则",
+    "invalidPermissionRules": "权限规则无效",
+    "needAttention": "权限规则需要处理。",
+    "rulesConfigured": "已配置 {{ruleCount}} 条规则。",
+    "manageRules": "管理规则",
+    "viewRules": "查看规则"
+  },
+  "personaDefaultsModal": {
+    "searchConnectors": "搜索连接器",
+    "enableAll": "全部启用",
+    "disableAll": "全部禁用",
+    "loadingConnectors": "正在加载连接器…",
+    "noConnectorsAreEnabledForYour": "组织未启用任何连接器。请先在连接器设置中启用。",
+    "noConnectorsMatchYourSearch": "没有符合搜索条件的连接器。",
+    "noPluginsCurrentlyApplicableToThis": "当前没有适用于此角色设定的插件。",
+    "blockedOrgWide": "组织范围内已阻止",
+    "allPersonas": "所有角色设定",
+    "cancel": "取消",
+    "save": "保存",
+    "done": "完成",
+    "maxConnectorsReached": "已达到每个角色设定最多 {{max}} 个连接器的上限。",
+    "connectorsTab": "连接器",
+    "pluginsDescription": "此处列出的插件会为使用 {{roleLabel}} 角色设定的用户自动安装并启用。请在企业控制的<anchor>插件分区</anchor>管理。",
+    "blockedPluginsNotice": "以下插件在整个组织中已关闭，此设置覆盖角色默认值，因此不会安装：{{pluginIds}}。",
+    "unregisteredPluginsNotice": "以下插件需要先在插件分区注册其市场才能安装：{{pluginIds}}。",
+    "pluginsTab": "插件",
+    "description": "配置 {{roleLabel}} 角色设定用户获得的默认设置。"
+  },
+  "personasSection": {
+    "chooseWhichRolesAreAvailableTo": "选择向用户提供的角色。点击角色设定以配置默认设置。",
+    "personas": "角色设定",
+    "selectionSummary": "至少需要一种角色设定。已选择 {{selected}} / {{total}} 项。"
+  },
+  "pluginsSection": {
+    "marketplaceSourceType": "市场来源类型",
+    "marketplaceName": "市场名称",
+    "add": "添加",
+    "personas": "角色设定",
+    "blockedOrgWide": "组织范围内已阻止",
+    "configurePluginMarketplacesAndManageEnabled": "为组织配置插件市场并管理已启用插件。",
+    "plugins": "插件",
+    "extraKnownMarketplaces": "额外的已知市场",
+    "noExtraMarketplacesConfigured": "未配置额外市场。",
+    "strictPluginMarketplaces": "严格限制插件市场",
+    "whenEnabledOnlyPluginsFromThe": "启用后，仅允许来自所列市场来源的插件。禁用后，允许所有市场。",
+    "strictPluginMarketplaces2": "严格限制插件市场",
+    "noStrictMarketplacesConfigured": "未配置严格限制的市场。",
+    "enabledPlugins": "已启用插件",
+    "noPluginsConfiguredAddAPlugin": "未配置插件。在下方添加插件 ID 以为组织启用。",
+    "strictPluginEnforcement": "严格执行插件限制",
+    "whenEnabledOnlyThePluginsEnabled": "启用后，仅允许上方启用的插件；其他插件均无法运行，包括 Factory 默认插件。禁用后，会加载 Factory 默认插件，成员也可自行启用其他插件。",
+    "strictPluginEnforcement2": "严格执行插件限制",
+    "noPluginsAreEnabledSoEvery": "未启用任何插件，因此组织成员的所有插件都被禁用。",
+    "addPlugin": "添加插件",
+    "pluginId": "插件 ID",
+    "enterPluginIdEGMy": "输入插件 ID（例如 my-plugin@factory-plugins）",
+    "personaPluginsMustIncludeAMarketplace": "角色设定插件必须包含市场（plugin-name@marketplace）。",
+    "removeItem": "移除 {{label}}",
+    "addMarketplace": "添加市场",
+    "addStrictMarketplace": "添加严格限制市场",
+    "removePlugin": "移除 {{pluginId}}",
+    "allPersonas": "所有角色设定",
+    "selectedPersonaCount": "{{selectedCount}} 种角色设定",
+    "removePluginFromPersona": "从 {{persona}} 移除 {{pluginId}}",
+    "removePluginFromAllPersonas": "从所有角色设定移除 {{pluginId}}",
+    "extraKnownMarketplacesTooltip": "CLI 启动时会为所有组织成员自动克隆并注册的额外插件市场。",
+    "enabledPluginsTooltip": "控制为组织启用的插件。插件通过额外工具和集成扩展 Droid 的能力。对应市场可用后，已启用插件会在 CLI 启动时自动安装。",
+    "unregisteredPersonaPluginsNotice": "以下角色设定插件需要先在上方注册其市场才能安装：{{pluginIds}}。",
+    "maxPluginsPerPersonaReached": "以下角色设定已达到每个角色最多 {{max}} 个插件的上限：{{personas}}。"
+  },
+  "preferences": {
+    "language": {
+      "title": "语言",
+      "saveFailed": "保存语言偏好失败"
+    },
+    "reviewViewModeOptions": {
+      "focus": "专注",
+      "list": "列表"
+    }
+  },
+  "openLinksInDesktopPreferenceRow": {
+    "title": "在桌面应用中打开链接",
+    "description": "在浏览器中打开的拉取请求审查链接会转至 Factory 桌面版。",
+    "sharedLinksDescription": "在浏览器中打开的 Session、自动化及其他 Factory 页面链接会转至 Factory 桌面版。",
+    "enabledMessage": "链接现在将在 Factory 桌面版中打开",
+    "disabledMessage": "链接现在将在浏览器中打开"
+  },
+  "preferencesSection": {
+    "preferences": "偏好设置",
+    "textSize": "文本大小",
+    "hideTodoList": "隐藏待办列表",
+    "disableDynamicLoadingStatuses": "禁用动态加载状态",
+    "autoOpenFilePreviews": "自动打开文件预览",
+    "keepDroidRunningWhenScreenIs": "屏幕关闭时保持 Droid 运行",
+    "preventsYourComputerFromSleepingWhile": "Droid 正在工作时防止计算机休眠。合上盖子或手动休眠时不适用。",
+    "keyboardShortcuts": "键盘快捷键",
+    "toggleSpecModeShiftTab": "切换 Spec 模式（Shift+Tab）",
+    "toggleSpecMode": "切换 Spec 模式",
+    "cycleReasoningLevelTab": "切换推理级别（Tab）",
+    "cycleReasoningLevel": "切换推理级别",
+    "openModelSelectorCtrlN": "打开模型选择器（Ctrl+N）",
+    "openModelSelector": "打开模型选择器",
+    "cycleAutonomyLevelCtrlL": "切换自主级别（Ctrl+L）",
+    "cycleAutonomyLevel": "切换自主级别",
+    "voiceDictationShortcut": "语音听写快捷键",
+    "pressTheKeyOnceToStart": "按一次开始听写，再按一次停止。点击麦克风始终可用。",
+    "voiceDictation": "语音听写",
+    "textSizeOptions": {
+      "small": "小（90%）",
+      "default": "默认（100%）",
+      "medium": "中（110%）",
+      "large": "大（120%）",
+      "extraLarge": "特大（130%）"
+    },
+    "keepAwakeSaveFailed": "保存保持唤醒偏好失败"
+  },
+  "providerSelector": {
+    "computeProvider": "计算提供商",
+    "providers": {
+      "default": "默认",
+      "opencompute": "OpenCompute"
+    }
+  },
+  "quantityStep": {
+    "newManagedComputers": "新建托管计算机",
+    "quantity": "数量",
+    "next": "下一步",
+    "description": "最多创建 {{max}} 台相同的计算机，使用最小可用编号自动命名为 {{first}}、{{second}} 等。"
+  },
+  "rawConfigSection": {
+    "viewAndEditSettingsAsJson": "以 JSON 格式查看和编辑设置。此处的更改会更新上方控件。",
+    "rawConfiguration": "原始配置",
+    "validationErrors": "验证错误"
+  },
+  "remoteDelegationConfigSection": {
+    "plugins": "插件",
+    "installedForEveryDelegatedSessionThat": "除企业控制 › 插件中组织范围启用的插件外，还会为使用此配置运行的每个委派 Session 安装。",
+    "enabledOrgWide": "组织范围内已启用",
+    "addedByThisConfig": "由此配置添加",
+    "noPluginsAddedByThisConfig": "此配置未添加任何插件。",
+    "pluginName": "插件名称",
+    "pluginName2": "plugin-name",
+    "marketplace": "市场",
+    "marketplace2": "@marketplace",
+    "add": "添加",
+    "registerAMarketplaceUnderEnterpriseControls": "添加插件前，请先在企业控制 › 插件中注册市场。",
+    "enterJustThePluginNameAnd": "仅输入插件名称，并从列表中选择其市场。",
+    "thatPluginIsAlreadyListed": "该插件已在列表中。",
+    "thatPluginIsAlreadyEnabledOrg": "该插件已在组织范围内启用，因此每个 Session 都会使用。",
+    "thatPluginIsTurnedOffFor": "该插件已在整个组织中关闭，此配置无法启用它。",
+    "failedToLoadServiceAccountsRefresh": "加载服务账号失败。请刷新页面后重试。",
+    "loadingServiceAccounts": "正在加载服务账号…",
+    "identity": "身份",
+    "delegatedSessionsRunAsThisService": "委派 Session 以此服务账号运行，配置池中的所有计算机均归其所有。",
+    "useExistingServiceAccount": "使用现有服务账号",
+    "newServiceAccount": "新建服务账号",
+    "theRemoteDelegationsServiceAccountIs": "委派服务账号尚未设置。请刷新页面后重试。",
+    "noActiveServiceAccountsYetCreate": "暂无活跃服务账号。请创建一个以运行委派 Session。",
+    "serviceAccount": "服务账号",
+    "name": "名称",
+    "eGDelegationWorker": "例如 delegation-worker",
+    "namesArePermanentIdentifiersAndCannot": "名称是永久标识符，一旦使用便无法重复使用。",
+    "descriptionOptional": "描述（可选）",
+    "couldNotCreateTheServiceAccount": "无法创建服务账号。名称可能已被占用，或已达到套餐上限。",
+    "addManagedComputer": "添加托管计算机",
+    "type": "类型",
+    "status": "状态",
+    "loadingComputers": "正在加载计算机…",
+    "failedToLoadComputersRefreshThe": "加载计算机失败。请刷新页面后重试。",
+    "noComputersYetAddAManaged": "暂无计算机。添加托管计算机，或通过远程控制连接自己的计算机，以支持委派。",
+    "failedToSaveTryAgain": "保存失败。请重试。",
+    "back": "返回",
+    "next": "下一步",
+    "access": "访问权限",
+    "everyone": "所有人",
+    "defaultModel": "默认模型",
+    "defaultReasoningLevel": "默认推理级别",
+    "customInstructionsOptional": "自定义指令（可选）",
+    "eGAlwaysReplyInThe": "例如：始终在讨论串中回复摘要和 Session 链接。",
+    "compute": "计算资源",
+    "machineType": "计算机类型",
+    "useExistingTemplate": "使用现有环境",
+    "newTemplate": "新建环境",
+    "removeSelectedTemplate": "移除所选环境",
+    "templateUnavailable": "环境已删除或不可用。请移除后选择其他环境。",
+    "templateInaccessible": "你无法访问此环境中的所有仓库，因此它未显示在环境列表中。",
+    "perMachineParallelWorkerLimit": "每台计算机的并行工作代理上限",
+    "perMachineParallelWorkerLimitHelp": "每台计算机的并行工作代理上限说明",
+    "remoteDelegationConfigs": "委派配置",
+    "computerTypes": {
+      "bringYourOwnMachine": "远程控制",
+      "managedByFactory": "由 Factory 管理"
+    },
+    "computerStatuses": {
+      "provisioning": "正在配置…",
+      "active": "活跃",
+      "error": "错误",
+      "unknown": "未知"
+    },
+    "sectionDescription": "定义代理如何运行委派工作。",
+    "machineTypes": {
+      "dynamic": "动态",
+      "persistent": "持久化"
+    },
+    "wizardSteps": {
+      "general": "通用",
+      "plugins": "插件",
+      "identity": "身份",
+      "compute": "计算资源"
+    },
+    "untitledConfig": "未命名配置",
+    "edit": "编辑",
+    "setUp": "设置",
+    "editConfig": "编辑 {{title}}",
+    "setUpConfig": "设置 {{title}}",
+    "removePlugin": "移除 {{pluginId}}",
+    "unregisteredPluginsWillNotInstall": "以下插件需要先在企业控制中注册其市场才能安装：{{pluginIds}}。",
+    "blockedPluginsWillNotInstall": "以下插件在整个组织中已关闭，此设置覆盖本配置，因此不会安装：{{pluginIds}}。",
+    "maximumPluginsPerConfigReached": "已达到每个配置最多 {{max}} 个插件的上限。",
+    "creating": "正在创建…",
+    "createServiceAccount": "创建服务账号",
+    "seeByomGuide": "<anchor>查看远程控制指南</anchor>以注册自己的计算机",
+    "finishBlocked": {
+      "identityInactive": "所选身份已不再活跃。请在身份步骤选择一个活跃的服务账号以完成设置。",
+      "chooseTemplate": "请在计算资源步骤选择环境以完成设置。",
+      "templateUnavailable": "所选环境已删除或不可用。请在计算资源步骤选择其他环境以完成设置。",
+      "failedToLoadMachines": "加载此身份的计算机失败。请刷新页面后重试。",
+      "loadingMachines": "正在加载此身份的计算机…",
+      "addMachine": "请在计算资源步骤添加至少一台计算机以完成设置。"
+    },
+    "chooseAnIdentityToContinue": "请选择身份以继续。",
+    "saving": "正在保存…",
+    "finish": "完成",
+    "editModalTitle": "编辑委派配置 - {{name}}",
+    "setUpModalTitle": "设置委派配置 - {{name}}",
+    "oneTemplatePerConfig": "一个配置在一个环境中运行。移除所选环境后可选择其他环境。",
+    "parallelWorkerLimitTooltip": "建议设为 3–5。限制每台计算机同时活跃的 Session 数量。Session 在运行期间及空闲后 30 分钟内均计入，以便为后续交互预留容量。"
+  },
+  "remoteDelegationConfigTag": {
+    "delegationApps": "委派应用",
+    "softwareFactory": "Software Factory"
+  },
+  "remoteDelegationsSettings": {
+    "loadingRemoteDelegationSettings": "正在加载委派设置…",
+    "failedToLoadRemoteDelegationSettings": "加载委派设置失败。请刷新页面后重试。"
+  },
+  "renameComputerModal": {
+    "cancel": "取消",
+    "renameComputer": "重命名计算机",
+    "name": "名称",
+    "renaming": "正在重命名…",
+    "rename": "重命名"
+  },
+  "reposEmptyVariant": {
+    "connectAPersonalIntegration": "连接个人集成",
+    "pickFromYourRepositoriesDirectlyInstead": "直接从你的仓库中选择，无需粘贴 URL。",
+    "connectGithub": "连接 GitHub",
+    "connectGitlab": "连接 GitLab",
+    "connectBitbucket": "连接 Bitbucket",
+    "connectAzureDevops": "连接 Azure DevOps"
+  },
+  "reposListVariant": {
+    "searchRepositories": "搜索仓库",
+    "defaultDescription": "显示组织已连接且个人 SCM 集成可访问的仓库。",
+    "defaultEmptyMessage": "暂无可用仓库。你仍可在下方粘贴克隆 URL。",
+    "noRepositoriesMatchYourSearch": "没有符合搜索条件的仓库。",
+    "emptyRepositoryNote": "空仓库。请推送一次提交后再克隆。"
+  },
+  "reposStep": {
+    "chooseAnScmAccountAService": "选择 SCM 账号。服务账号计算机一次只能从一个账号克隆。",
+    "account": "账号",
+    "addedViaCloneUrl": "通过克隆 URL 添加",
+    "back": "返回",
+    "continue": "继续",
+    "additionalRepositories": "额外仓库",
+    "cloneRepositories": "克隆仓库",
+    "additionalRepositoriesDescription": "选择要克隆的额外仓库。下方模板仓库已配置，无需再次选择。",
+    "cloneRepositoriesDescription": "Droid 会在计算机上线后将所选仓库克隆到计算机上。此步骤可选，也可以不选任何仓库直接继续。",
+    "includedIn": "{{name}} 中已包含",
+    "templateHasNoRepositories": "此模板不包含任何仓库。",
+    "includedRepositories_one": "已配置 {{count}} 个仓库，计算机启动后即可使用。",
+    "includedRepositories_other": "已配置 {{count}} 个仓库，计算机启动后即可使用。",
+    "removeUrl": "移除 {{url}}",
+    "repositoryLimitReached": "已达到 {{limit}} 个仓库的上限。",
+    "repositoriesSelected": "已选择 {{count}} / {{max}} 个仓库"
+  },
+  "restrictedAccessNotice": {
+    "accessIsRestricted": "访问受限"
+  },
+  "retentionPolicySection": {
+    "sessionRetention": "Session 保留",
+    "automaticallyAndPermanentlyDeleteSessionsThat": "自动永久删除非活跃时间超过保留窗口的 Session。现有 Session 也适用。",
+    "enableSessionRetention": "启用 Session 保留策略",
+    "days": "天",
+    "retentionWindow": "保留窗口",
+    "retentionWindowDescription": "超过此天数未更新的 Session 将被永久删除。有效范围：{{min}}-{{max}} 天。"
+  },
+  "reviewChangesModal": {
+    "discardChanges": "放弃更改",
+    "cancel": "取消",
+    "reviewChanges": "审查更改",
+    "comparingCurrentLiveVersionPendingChanges": "正在比较当前生效版本 → 待保存更改",
+    "permanentSessionDeletion": "永久删除 Session",
+    "pendingChanges": "待保存的更改",
+    "saveFailed": "保存失败",
+    "networkPolicyWarning": "网络策略警告",
+    "sessionRetentionWarning": "保存这些更改后，下次保留清理将永久删除过去 {{days}} 天未更新的现有 Session。此操作无法撤销。",
+    "fixErrors_one": "修复错误",
+    "fixErrors_other": "修复错误",
+    "fixValidationErrorsBeforeSaving_one": "保存前请修复验证错误。",
+    "fixValidationErrorsBeforeSaving_other": "保存前请修复所有验证错误。",
+    "saving": "正在保存…",
+    "saveChanges": "保存更改",
+    "resolveErrorsBeforeSaving_one": "保存前请解决 {{count}} 个错误",
+    "resolveErrorsBeforeSaving_other": "保存前请解决 {{count}} 个错误",
+    "warnings_one": "警告",
+    "warnings_other": "警告"
+  },
+  "sandboxPolicySection": {
+    "add": "添加",
+    "eG8080": "例如 8080",
+    "mode": "模式",
+    "sandboxMode": "沙箱模式",
+    "filesystem": "文件系统",
+    "controlWhichPathsDroidCanRead": "控制 Droid 在沙箱中可读写的路径。",
+    "factoryKeepsItsOwnPathsWritable": "Factory 默认保持其自身路径（如 missions 和 specs）可写，并始终保护凭据和配置文件，不受下方设置影响。",
+    "additionalWritablePathsBeyondTheWorking": "工作目录和 Factory 默认运行路径之外的额外可写路径。",
+    "eGTmpOrNpm": "例如 /tmp 或 ~/.npm",
+    "allowedWritePaths": "允许写入路径",
+    "blockWritesToSpecificPathsEven": "阻止对特定路径的写入，即使其父目录在允许写入路径中。",
+    "eGSsh": "例如 ~/.ssh/",
+    "deniedWritePaths": "拒绝写入路径",
+    "blockReadsToSpecificPathsEverything": "阻止读取特定路径。其他所有路径均可读取。",
+    "eGAwsCredentials": "例如 ~/.aws/credentials",
+    "deniedReadPaths": "拒绝读取路径",
+    "reAllowReadsToSpecificPaths": "重新允许读取位于拒绝读取路径之下的特定路径。",
+    "eGAwsConfig": "例如 ~/.aws/config",
+    "allowedReadPaths": "允许读取路径",
+    "network": "网络",
+    "controlWhichNetworkDestinationsAreReachable": "控制沙箱 Session 可访问的网络目标。Factory 服务域名和 WorkOS 身份验证域名始终允许访问，除非明确拒绝。",
+    "defaultNetworkAccess": "默认网络访问",
+    "defaultNetworkAccess2": "默认网络访问",
+    "allNetworkDestinationsAreAllowedUnless": "除非明确拒绝，否则允许所有网络目标。阻止列表无法防止数据被发送到其他目标。",
+    "domainsReachableFromSandboxedSessionsIn": "除 Factory 和 WorkOS 域名外，沙箱 Session 可访问的域名。使用 *.example.com 表示子域名。",
+    "eGGithubComOrNpmjs": "例如 github.com 或 *.npmjs.org",
+    "allowedDomains": "允许的域名",
+    "alwaysBlockedInEitherModeInclude": "在任一模式下始终阻止。同时添加 example.com 和 *.example.com 可阻止域名及其子域名。成员无法覆盖这些限制。",
+    "eGExampleComOrExample": "例如 example.com 或 *.example.com",
+    "deniedDomains": "拒绝的域名",
+    "permitConnectionsToAnyUnixDomain": "允许连接任意 Unix 域套接字，覆盖允许套接字列表。",
+    "allowAllUnixSockets": "允许所有 Unix 套接字",
+    "unixDomainSocketPathsThatSandboxed": "沙箱 Session 可连接的 Unix 域套接字路径。",
+    "eGVarRunDockerSock": "例如 /var/run/docker.sock",
+    "allowedUnixSockets": "允许的 Unix 套接字",
+    "permitSandboxedProcessesToBindAnd": "允许沙箱进程绑定并监听本地网络端口。",
+    "allowLocalBinding": "允许本地绑定",
+    "localPortForTheSandboxHttp": "沙箱 HTTP/HTTPS 代理的本地端口。",
+    "httpProxyPort": "HTTP 代理端口",
+    "localPortForTheSandboxSocks": "沙箱 SOCKS 代理的本地端口。",
+    "socksProxyPort": "SOCKS 代理端口",
+    "osLevelSandboxingIsolatesDroidFrom": "操作系统级沙箱通过内核强制策略，将 Droid 与文件系统和网络隔离。",
+    "sandbox": "沙箱",
+    "whenEnabledSandboxingIsMandatoryFor": "启用后，所有成员都必须使用沙箱，无法通过用户或项目设置禁用。",
+    "requireSandboxing": "强制使用沙箱",
+    "modeLabel": {
+      "perCommand": "按命令",
+      "wholeProcess": "整个进程"
+    },
+    "modeDescription": {
+      "perCommand": "Droid 运行的每个命令单独进入沙箱。开销较低，适合大多数工作流。",
+      "wholeProcess": "整个 Droid 进程在沙箱中运行，为整个 Session 隔离文件系统和网络。"
+    },
+    "denyByDefault": "默认拒绝",
+    "allowByDefault": "默认允许",
+    "removeEntry": "移除 {{value}}",
+    "allowByDefaultDescription": "除拒绝的域名外，所有目标均可访问。",
+    "denyByDefaultDescription": "仅允许的域名可访问。拒绝的域名即使匹配允许的模式，也会被阻止。",
+    "blockEveryDomainHint": "要阻止所有域名，请将默认网络访问设为“默认拒绝”。"
+  },
+  "scmSetupSection": {
+    "codeProviders": "代码托管服务",
+    "manage": "管理",
+    "connect": "连接",
+    "manageTarget": "管理 {{target}}",
+    "connectTarget": "连接 {{target}}",
+    "connected": "已连接",
+    "targets": {
+      "personalGithubAccount": "个人 GitHub 账号",
+      "personalGitlabAccount": "个人 GitLab 账号",
+      "personalBitbucketAccount": "个人 Bitbucket 账号",
+      "personalAzureDevopsAccount": "个人 Azure DevOps 账号",
+      "githubOrganization": "GitHub 组织",
+      "selfHostedGithub": "自托管 GitHub",
+      "gitlabOrganization": "GitLab 组织",
+      "selfHostedGitlab": "自托管 GitLab",
+      "bitbucketOrganization": "Bitbucket 组织",
+      "azureDevopsOrganization": "Azure DevOps 组织"
+    },
+    "descriptions": {
+      "githubPersonal": "访问个人 GitHub 账号中的仓库、问题和拉取请求。",
+      "gitlabPersonal": "访问个人 GitLab 账号中的项目、问题和合并请求。",
+      "bitbucketPersonal": "访问个人 Bitbucket 账号中的仓库和拉取请求。",
+      "azureDevopsPersonal": "访问个人 Azure DevOps 账号中的仓库和拉取请求。",
+      "githubOrg": "允许 Factory 访问 GitHub 组织中的仓库。",
+      "githubSelfHosted": "允许 Factory 访问 GitHub Enterprise Server 中的仓库。",
+      "gitlabOrg": "允许 Factory 访问 GitLab 组织中的仓库。",
+      "gitlabSelfHosted": "允许 Factory 访问自托管 GitLab 实例中的仓库。",
+      "bitbucketOrg": "允许 Factory 访问 Bitbucket 工作区中的仓库。",
+      "bitbucketDataCenter": "允许 Factory 访问 Bitbucket Data Center 中的仓库。",
+      "azureDevopsOrg": "允许 Factory 访问 Azure DevOps 组织中的仓库。",
+      "azureDevopsServer": "允许 Factory 访问 Azure DevOps Server 中的仓库。"
+    },
+    "kindLabels": {
+      "organization": "组织",
+      "personal": "个人",
+      "selfHosted": "自托管",
+      "dataCenter": "数据中心",
+      "servicesOrganization": "Services 组织",
+      "servicesPersonal": "Services 个人",
+      "server": "服务器"
+    },
+    "providerNames": {
+      "githubSelfHosted": "GitHub 自托管",
+      "gitlabSelfHosted": "GitLab 自托管"
+    }
+  },
+  "scmSetupSectionCard": {
+    "codeProviders": "代码托管服务",
+    "organizationDescription": "连接组织代码托管服务，即可创建 Droid 计算机和云计算机模板、自动生成 Wiki 等。",
+    "combinedDescription": "连接代码所在的平台。",
+    "personalDescription": "连接个人代码托管服务账号，以获得用户级访问权限。"
+  },
+  "securityIdentitySettings": {
+    "securityIdentitySettingsAreOnlyAvailable": "仅企业组织所有者可使用安全与身份设置。",
+    "securityIdentity": "安全与身份"
+  },
+  "securitySection": {
+    "securityFeaturesToProtectYourCodebase": "保护代码库并防止意外数据泄露的安全功能。",
+    "security": "安全",
+    "scansGitCommitPushAndRelated": "扫描 Git 提交、推送及相关命令中的 API 密钥和其他敏感数据，发现潜在机密时阻止执行。",
+    "droidShield": "Droid Shield",
+    "learnedClassifierAugmentation": "学习型分类器增强",
+    "whenEnabledUsersWithTheUser": "启用后，“用户”角色的用户无法查看其他组织成员。仅管理员和所有者可访问成员列表。",
+    "restrictMemberVisibility": "限制成员可见性",
+    "whenEnabledOnlyOwnersAndManagers": "启用后，只有所有者和管理员可在 API 密钥设置页面创建 Factory API 密钥。",
+    "restrictApiKeyCreation": "限制 API 密钥创建",
+    "shield20Description": "在确定性机密扫描之上增加 AI 层：两个 Factory 内部模型审查标记行，以发现遗漏的机密或排除明显误报。这些模型是经微调的开放权重模型，通过 Fireworks 提供美国境内推理，不属于模型访问列表，也不能用于通用聊天。Factory 不会保留发送到这些模型的信息用于训练。",
+    "shield20RegionUnavailable": "你所在区域不可用：分类器模型仅提供美国境内推理，因此不会有数据离开你的区域。确定性 Droid Shield 扫描不受影响。",
+    "shield20UsOnlyUnavailable": "仅限美国推理时不可用：分类器模型未通过固定在美国的路由提供服务。确定性 Droid Shield 扫描不受影响。"
+  },
+  "serviceAccountApiKeysModal": {
+    "cancel": "取消",
+    "close": "关闭",
+    "createKey": "创建密钥",
+    "noApiKeysYet": "暂无 API 密钥。",
+    "apiKeyRevoked": "API 密钥已撤销",
+    "apiKeyCreated": "API 密钥已创建",
+    "creating": "正在创建…",
+    "title": "API 密钥 · {{name}}",
+    "description": "这些密钥以 {{name}} 身份验证 API 请求。可用于 CI 流水线、脚本或任何需要稳定非人类身份运行的自动化。密钥值仅在创建时显示一次，请立即复制并妥善保存。",
+    "atKeyCap": "已达到每个服务账号 {{max}} 个密钥的上限。请撤销现有密钥后再创建。"
+  },
+  "serviceAccountComputersModal": {
+    "delete": "删除",
+    "close": "关闭",
+    "createComputer": "创建计算机",
+    "failedToLoadServiceAccountComputers": "加载服务账号计算机失败。请刷新后重试。",
+    "noComputersYet": "暂无计算机。",
+    "providerByom": "远程控制",
+    "providerManaged": "托管",
+    "unknown": "未知",
+    "providerCreated": "{{provider}} · 创建于 {{createdAt}}",
+    "computerId": "ID：{{id}}",
+    "loadingServiceAccountComputers": "正在加载服务账号计算机…",
+    "title": "计算机 · {{name}}",
+    "description": "这些 Droid 计算机归 {{name}} 所有。需要清理时，管理员可在这里删除。"
+  },
+  "serviceAccountConnectorsModal": {
+    "configure": "配置",
+    "close": "关闭",
+    "connectionsConfiguredHereBelongOnlyTo": "此处配置的连接仅属于此服务账号。",
+    "searchConnectors": "搜索连接器",
+    "failedToLoadConnectorsCloseAnd": "加载连接器失败。请关闭后重试。",
+    "noConnectorsAreAvailable": "没有可用的连接器。",
+    "noConnectorsMatchYourSearch": "没有符合搜索条件的连接器。",
+    "back": "返回",
+    "sharedServiceAccountAccess": "共享服务账号访问权限",
+    "disconnecting": "正在断开连接…",
+    "disconnect": "断开连接",
+    "connectorsForServiceAccount": "{{name}} 的连接器",
+    "loadingConnectors": "正在加载连接器…",
+    "continueTo": "继续前往 {{connector}}",
+    "connectConnector": "连接 {{connector}}",
+    "sharedAccessWarning": "任何能访问 {{serviceAccount}} 的人都可以使用其 {{connector}} 连接，并以你授予的权限操作。请使用专用账号，且仅授予此服务账号所需的权限。"
+  },
+  "serviceAccountGitCredentialsModal": {
+    "remove": "移除",
+    "cancel": "取消",
+    "close": "关闭",
+    "gitlabTokenPlaceholder": "glpat-...",
+    "gitlabSelfHostedTokenLabel": "GitLab 自托管组访问令牌",
+    "configuredHost": "已配置主机：{{host}}",
+    "gitlabTokenLabel": "GitLab 组访问令牌",
+    "bitbucketTokenLabel": "Bitbucket 访问令牌",
+    "bitbucketDataCenterTokenLabel": "Bitbucket Data Center 用户令牌",
+    "azureDevOpsServicesTokenLabel": "组织范围的 Azure DevOps Services PAT",
+    "azureDevOpsServerTokenLabel": "集合范围的 Azure DevOps Server PAT",
+    "tokenRemoved": "{{provider}} 令牌已移除",
+    "authenticatesAs": "以 @{{username}} 身份验证",
+    "updatedAt": "更新于 {{date}}",
+    "removeWarning": "移除后，新 Session 和计算机将无法使用此令牌，但不会撤销令牌或从现有计算机中移除。若要确保撤销，请在 {{provider}} 中撤销令牌。",
+    "removing": "正在移除…",
+    "removeToken": "移除令牌",
+    "tokenReplaced": "{{provider}} 令牌已替换",
+    "tokenSaved": "{{provider}} 令牌已保存",
+    "saving": "正在保存…",
+    "saveToken": "保存令牌",
+    "replaceToken": "替换 {{provider}} 令牌",
+    "addToken": "添加 {{provider}} 令牌",
+    "noTokenConfigured": "尚未配置 {{provider}} 令牌。",
+    "title": "Git 凭据 · {{name}}",
+    "description": "为下方每个使用中的 SCM 提供商存储一个归 {{name}} 所有的访问令牌，以便它使用自己的身份克隆和推送。GitHub 云端及自托管凭据会自动处理。令牌保存时会接受验证，且不会再次显示。",
+    "couldNotLoadGitCredentials": "无法加载 Git 凭据。请刷新后重试。"
+  },
+  "serviceAccountRow": {
+    "editServiceAccount": "编辑服务账号",
+    "name": "名称",
+    "namesAreImmutableIdentifiersCreateA": "名称是不可变标识符。如需不同名称，请创建新服务账号。",
+    "descriptionOptional": "描述（可选）",
+    "status": "状态",
+    "active": "活跃",
+    "inactive": "未启用",
+    "cancel": "取消",
+    "thisWillDeactivateTheServiceAccount": "这会停用服务账号并撤销其访问权限。使用其 API 密钥的活跃 Session 或工作负载将开始返回 401 错误。",
+    "computers": "计算机",
+    "apiKeys": "API 密钥",
+    "gitCredentials": "Git 凭据",
+    "connectors": "连接器",
+    "edit": "编辑",
+    "delete": "删除",
+    "serviceAccountUpdated": "服务账号已更新",
+    "saving": "正在保存…",
+    "save": "保存",
+    "serviceAccountDeleted": "服务账号已删除",
+    "deleting": "正在删除…",
+    "deleteTitle": "删除 {{name}}？",
+    "serviceAccountIdCopied": "服务账号 ID 已复制",
+    "failedToCopyToClipboard": "复制到剪贴板失败",
+    "copyId": "复制 ID",
+    "moreActionsFor": "{{name}} 的更多操作",
+    "checkingWhetherRemoteDelegationsUseThisAccount": "正在检查委派是否使用此账号。",
+    "usedByRemoteDelegationsChooseADifferentIdentity": "委派正在使用此账号。请先在那里选择其他身份。"
+  },
+  "serviceAccountsSection": {
+    "createServiceAccount": "创建服务账号",
+    "failedToLoadServiceAccountsRefresh": "加载服务账号失败。请刷新后重试。",
+    "name": "名称",
+    "eGReleaseBot": "例如 release-bot",
+    "descriptionOptional": "描述（可选）",
+    "whatDoesThisServiceAccountRun": "此服务账号运行什么工作？",
+    "serviceAccountCreated": "服务账号已创建",
+    "atServiceAccountCap": "已达到每个组织 {{max}} 个服务账号的上限。请删除现有服务账号后再创建。",
+    "titleWithCount": "服务账号 · {{total}}",
+    "creating": "正在创建…",
+    "create": "创建",
+    "nonHumanIdentitiesForCiAutomationsAndBots": "用于 CI、自动化和机器人的非人类身份。",
+    "noServiceAccountsYet": "暂无服务账号",
+    "allAccounts": "所有账号",
+    "active": "活跃",
+    "inactive": "未启用",
+    "mine": "我的",
+    "newestFirst": "最新优先",
+    "oldestFirst": "最早优先",
+    "nameAZ": "名称 A–Z",
+    "createdBy": "创建者",
+    "status": "状态",
+    "searchServiceAccounts": "搜索服务账号",
+    "search": "按名称、ID 或创建者搜索",
+    "filterServiceAccounts": "筛选服务账号",
+    "sortServiceAccounts": "排序服务账号",
+    "clearFilters": "清除筛选条件",
+    "noMatchingServiceAccounts": "没有匹配的服务账号",
+    "paginationSummary": "{{total}} 项中的 {{start}}–{{end}}"
+  },
+  "sessionDefaultsSection": {
+    "model": "模型",
+    "reasoningLevel": "推理级别",
+    "setDefaultModelAndAutonomySettings": "为整个组织的新 Session 设置默认模型和自主设置。",
+    "sessionSettings": "Session 设置",
+    "defaultNewSessionModel": "新建 Session 的默认模型",
+    "newSessionModel": "新建 Session 模型",
+    "selectDefaultModel": "选择默认模型…",
+    "defaultReasoningEffort": "默认推理强度",
+    "specModeModel": "Spec 模式模型",
+    "specModeReasoningEffort": "Spec 模式推理强度",
+    "controlsHowMuchFreedomDroidHas": "控制 Droid 无需批准即可执行操作的自由程度。",
+    "defaultAutonomy": "默认自主级别",
+    "preventUsersFromIncreasingAutonomyAbove": "防止用户将自主级别提高到此级别以上。",
+    "maximumAutonomyLevel": "最高自主级别",
+    "setAutonomyAndTaskModelDefaults": "为整个组织的子代理设置自主级别和 Task 模型默认值。",
+    "subagents": "子代理",
+    "subagentAutonomy": "子代理自主级别",
+    "subagentTaskModels": "子代理 Task 模型",
+    "setModelDefaultsForEachMission": "为整个组织的各任务角色设置默认模型。",
+    "missions": "任务",
+    "coordinatesTheMissionAndDelegatesWork": "协调任务并向任务工作代理委派工作。",
+    "missionOrchestratorModel": "任务编排器模型",
+    "implementsMissionMilestones": "实现任务里程碑。",
+    "missionWorkerModel": "任务工作代理模型",
+    "reviewsMissionWorkAtMilestoneBoundaries": "在里程碑节点审查任务工作。",
+    "missionValidationWorkerModel": "任务验证工作代理模型",
+    "controlOptionalFeaturesAvailableInSessions": "控制组织内 Session 可使用的可选功能。",
+    "sessionFeatures": "Session 功能",
+    "syncSessionDataToTheCloud": "将 Session 数据同步到云端，以便跨设备访问。",
+    "cloudSessionSync": "云端 Session 同步",
+    "allowUsersToDictateChatMessages": "允许用户通过麦克风听写聊天消息。",
+    "voiceDictation": "语音听写",
+    "showWhichModelAutoModelPicked": "在 Session 模型标签上显示自动模型选择的模型。",
+    "showAutoModelPick": "显示自动模型选择",
+    "allowDroidToGenerateImagesWith": "允许 Droid 使用图像生成模型生成图像。",
+    "imageGeneration": "图像生成",
+    "defaultImageModel": "默认图像模型",
+    "subagentAutonomyLevel": {
+      "inherit": "继承（父 Session）",
+      "off": "关闭",
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    },
+    "noOverrideUsersChoose": "不覆盖（由用户选择）",
+    "inheritParentSession": "继承（父 Session）",
+    "onForEveryone": "对所有人开启",
+    "offForEveryone": "对所有人关闭",
+    "subagentTier": {
+      "light": "轻量任务",
+      "medium": "中等任务",
+      "heavy": "复杂任务"
+    },
+    "subagentTaskModelsTooltip": "Task 工具在创建轻量、中等或复杂子代理时使用的模型。“不覆盖”允许用户选择；“继承”将该级别锁定为发起 Session 的模型。",
+    "autonomyLevelDescription": {
+      "off": "所有操作都需要批准",
+      "low": "允许文件编辑和只读命令",
+      "medium": "允许可撤销命令",
+      "high": "允许所有命令"
+    },
+    "autonomyLevelOption": "{{label}} - {{description}}",
+    "noDefaultUsersChoose": "无默认值（由用户选择）",
+    "noDefaultUserChooses": "无默认值（由用户选择）",
+    "imageModelDefaultDescription": "generate_image 工具默认使用的模型。用户可以覆盖。",
+    "imageModelDefaultDescriptionWithFallback": "generate_image 工具默认使用的模型。用户可以覆盖。未设置默认值时，用户从 {{model}} 开始。",
+    "tierModelAriaLabel": "{{tier}}模型",
+    "tierReasoningLevelAriaLabel": "{{tier}}推理级别",
+    "noDefaultSet": "未设置默认值",
+    "noDefault": "无默认值",
+    "sameAsMainModel": "与主模型相同",
+    "latestModelsGroup": "最新",
+    "latestModelTier": "{{provider}} {{tier}}",
+    "latestModelOption": "{{tier}}（{{model}}）",
+    "latestModelProviders": {
+      "anthropic": "Anthropic",
+      "openai": "OpenAI",
+      "oss": "开源"
+    },
+    "latestModelTiers": {
+      "premium": "高级",
+      "balanced": "均衡",
+      "medium": "中等",
+      "fast": "快速"
+    },
+    "specificModelsGroup": "特定版本",
+    "sameAsMain": "与主模型相同",
+    "noMaximum": "无最高限制",
+    "subagentAutonomyTooltip": "Task 工具创建的子代理的自主级别。“继承”使用父 Session 的自主级别。不适用于任务工作代理。",
+    "missionOrchestratorReasoningLevel": "任务编排器推理级别",
+    "missionWorkerReasoningLevel": "任务工作代理推理级别",
+    "missionValidationWorkerReasoningLevel": "任务验证工作代理推理级别"
+  },
+  "sessionDefaultsSettings": {
+    "remove": "移除",
+    "addOverride": "添加覆盖设置",
+    "modelCompactionOverrideModel": "模型压缩覆盖设置的模型",
+    "model": "模型",
+    "modelCompactionOverrideTokenLimit": "模型压缩覆盖设置的 token 上限",
+    "addModelCompactionOverride": "添加模型压缩覆盖设置",
+    "add": "添加",
+    "reasoningLevel": "推理级别",
+    "specSaveDirectory": "Spec 保存目录",
+    "browseForSpecSaveDirectory": "浏览 Spec 保存目录",
+    "browse": "浏览…",
+    "loadingSessionDefaults": "正在加载 Session 默认设置…",
+    "failedToLoadOrSaveSession": "加载或保存 Session 默认设置失败。",
+    "modelAndBehaviorDefaultsForNew": "新 Session 的模型和行为默认设置。",
+    "general": "通用",
+    "defaultModel": "默认模型",
+    "defaultReasoningLevel": "默认推理级别",
+    "defaultInteractionMode": "默认交互模式",
+    "defaultAutonomyLevel": "默认自主级别",
+    "defaultImageModel": "默认图像模型",
+    "promoteEligibleAnthropicConversationCachesTo": "将符合条件的 Anthropic 对话缓存提升为一小时有效期。系统提示词缓存始终使用一小时有效期。",
+    "promoteAnthropicConversationCachesTo1hr": "将 Anthropic 对话缓存提升至 1 小时",
+    "defaultsUsedWhenPlanningSessionsIn": "以 Spec 模式规划 Session 时使用的默认设置。",
+    "specMode": "Spec 模式",
+    "defaultSpecModeModel": "默认 Spec 模式模型",
+    "defaultSpecModeReasoningLevel": "默认 Spec 模式推理级别",
+    "controlWhenConversationHistoryIsCompacted": "控制何时压缩对话历史，并为特定模型覆盖 token 上限。",
+    "compaction": "压缩",
+    "defaultCompactionTokenLimit": "默认压缩 token 上限",
+    "compactionModel": "压缩模型",
+    "whenEnabledNewSessionsAutomaticallyCompact": "启用后，新 Session 会在超过配置的 token 阈值时自动压缩。",
+    "enableThresholdCompaction": "启用阈值压缩",
+    "modelsUsedByTheTaskTool": "Task 工具在创建轻量、中等或复杂子代理时使用的模型。",
+    "subagentTaskModels": "子代理 Task 模型",
+    "subagentAutonomyLevel": "子代理自主级别",
+    "factoryDefault": "Factory 默认",
+    "factoryDefaultWithName": "Factory 默认（{{name}}）",
+    "orgDefaultWithName": "组织默认（{{name}}）",
+    "managedDefaultWithName": "托管默认（{{name}}）",
+    "compactionTokenLimitAriaLabel": "{{label}} 压缩 token 上限",
+    "removeCompactionOverrideAriaLabel": "移除 {{label}} 压缩覆盖设置",
+    "inheritParentSession": "继承（父 Session）",
+    "reasoningLevelAriaLabel": "{{label}} 推理级别",
+    "failedToSaveSpecSaveDirectory": "保存 Spec 保存目录失败",
+    "failedToOpenDirectoryPicker": "打开目录选择器失败",
+    "specSaveUserHome": "用户主目录",
+    "specSaveProject": "项目",
+    "specSaveCustom": "自定义",
+    "specSaveCustomEllipsis": "自定义…",
+    "specSaveDirectoryTooltip": "“用户主目录”保存到 {{userPresetValue}}。“项目”在 Session 启动时保存到项目的 {{factoryDirName}}/docs，项目之外则回退到用户主目录。“自定义”为每个 Session 使用固定目录。",
+    "sameAsMain": "与主模型相同",
+    "currentModel": "当前模型",
+    "defaultImageModelTooltip": "generate_image 工具使用的模型。组织可以设置默认值，你可以覆盖。"
+  },
+  "sessionFilterBar": {
+    "searchSessions": "搜索 Session",
+    "search": "搜索",
+    "filtersWithCount": "筛选条件（{{total}}）",
+    "filters": "筛选条件"
+  },
+  "sessionFilterControls": {
+    "project": "项目",
+    "eGAcmeApp": "例如 acme-app",
+    "lastUpdated": "最后更新",
+    "before": "早于",
+    "workspace": "工作区",
+    "allWorkspaces": "所有工作区",
+    "computer": "计算机",
+    "sessionType": "Session 类型",
+    "resetFilters": "重置筛选条件",
+    "allComputers": "所有计算机",
+    "updatedOptions": {
+      "anyTime": "任何时间",
+      "olderThan7Days": "超过 7 天",
+      "olderThan30Days": "超过 30 天",
+      "olderThan90Days": "超过 90 天",
+      "beforeDate": "早于日期…"
+    },
+    "sessionTypeOptions": {
+      "sessions": "Session",
+      "automations": "自动化",
+      "evaluations": "评估",
+      "exec": "执行",
+      "subagent": "子代理",
+      "all": "全部"
+    }
+  },
+  "sessionLogsModal": {
+    "download": "下载",
+    "workspaceLogs": "工作区日志",
+    "status": "状态：",
+    "builtAt": "构建时间：",
+    "noBuildLogs": "此工作区没有可用的构建日志。",
+    "statusSuccess": "✓ 成功",
+    "statusFailed": "✗ 失败",
+    "statusBuilding": "⏱ 构建中"
+  },
+  "sessionManagementSettings": {
+    "manageYourActiveAndArchivedSessions": "管理活跃和已归档的 Session。",
+    "sessionManagement": "Session 管理",
+    "unarchiveAllMatching": "取消归档所有匹配项",
+    "unarchiveSelected": "取消归档（{{total}}）",
+    "archiveAllMatching": "归档所有匹配项",
+    "archiveSelected": "归档（{{total}}）",
+    "sessionRenamed": "Session 已重命名",
+    "activeTab": "活跃",
+    "archivedTab": "已归档",
+    "untitledSession": "未命名 Session"
+  },
+  "sessionTable": {
+    "allSessionsMatchingTheCurrentFilter": "已选择符合当前筛选条件的所有 Session。使用行复选框可排除特定 Session。",
+    "clearSelection": "清除选择",
+    "noSessionsMatchTheCurrentFilters": "没有符合当前筛选条件的 Session。",
+    "selectAllSessions": "选择所有 Session",
+    "title": "标题",
+    "messages": "消息",
+    "updated": "更新时间",
+    "untitledSession": "未命名 Session",
+    "selectSessionAriaLabel": "选择 {{title}}",
+    "rename": "重命名",
+    "unarchive": "取消归档",
+    "archive": "归档",
+    "actionsAriaLabel": "{{title}} 的操作",
+    "loading": "正在加载…",
+    "loadMore": "加载更多"
+  },
+  "settingRow": {
+    "labelHelp": "{{label}} 帮助",
+    "help": "帮助",
+    "unavailableModel": "{{name}}（不可用）"
+  },
+  "settingsErrorAlert": {
+    "requestId": "请求 ID：{{vercelId}}"
+  },
+  "settingsPageGuard": {
+    "loading": "正在加载…"
+  },
+  "deploymentSection": {
+    "title": "部署",
+    "factoryPrivate": "Factory Private",
+    "signOut": "退出登录",
+    "signedInAs": "当前登录身份：{{identity}}"
+  },
+  "settingsSearch": {
+    "searchTerms": {
+      "git": "git",
+      "personalSecrets": "个人机密",
+      "organizationSecrets": "组织机密",
+      "addSecret": "添加机密",
+      "deleteSecret": "删除机密",
+      "replaceValue": "替换值",
+      "removeSecret": "移除机密",
+      "runtimeCredentials": "运行时凭据",
+      "environmentVariables": "环境变量"
+    },
+    "enterpriseControls": {
+      "complianceRestrictions": {
+        "title": "合规设置",
+        "chatWarning": "聊天警告横幅"
+      },
+      "sessionDefaults": {
+        "title": "Session 设置",
+        "defaultSessionModel": "新建 Session 的默认模型",
+        "defaultReasoningEffort": "默认推理强度",
+        "specModeModel": "Spec 模式模型",
+        "specModeReasoning": "Spec 模式推理强度",
+        "defaultAutonomy": "默认自主级别",
+        "maximumAutonomy": "最高自主级别"
+      },
+      "subagents": {
+        "title": "子代理",
+        "subagentAutonomy": "子代理自主级别"
+      },
+      "missions": {
+        "title": "任务",
+        "missionOrchestratorModel": "任务编排器模型",
+        "missionWorkerModel": "任务工作代理模型",
+        "missionValidatorModel": "任务验证工作代理模型"
+      },
+      "sessionFeatures": {
+        "title": "Session 功能",
+        "cloudSessionSync": "云端 Session 同步",
+        "voiceDictation": "语音听写",
+        "routedModelVisibility": "显示自动模型选择",
+        "imageGeneration": "图像生成",
+        "defaultImageGenerationModel": "默认图像模型",
+        "allowedImageGenerationModels": "允许的图像模型"
+      },
+      "builtInToolAutonomy": {
+        "title": "内置网络工具",
+        "disableWebSearch": "禁用网页搜索"
+      },
+      "modelAccess": {
+        "title": "模型访问控制",
+        "bringYourOwnKey": "自带密钥（BYOK）",
+        "allowCustomModels": "允许自定义模型（BYOK）",
+        "sharedModels": "共享模型",
+        "addModel": "添加模型",
+        "allowByokAutoModel": "允许自动模型使用 BYOK",
+        "requireByokAutoModel": "要求自动模型使用 BYOK",
+        "factoryModels": "Factory 托管模型",
+        "allowAllModels": "允许所有 Factory 模型",
+        "autoAllowModels": "自动允许新模型",
+        "hideDisabledModels": "向用户隐藏已禁用模型",
+        "userModelOverrides": "个人用户模型覆盖设置"
+      },
+      "commandPolicy": {
+        "title": "命令策略",
+        "allowlist": "允许列表",
+        "denylist": "审批列表",
+        "blocklist": "阻止列表"
+      },
+      "skillPolicy": {
+        "title": "技能策略",
+        "disabledSkills": "已禁用技能"
+      },
+      "mcpPolicy": {
+        "title": "MCP 服务器策略",
+        "mcpAllowlist": "MCP 服务器允许列表"
+      },
+      "missionPolicy": {
+        "title": "任务访问",
+        "restrictMissions": "限制为特定用户"
+      },
+      "security": {
+        "title": "安全",
+        "learnedClassifier": "学习型分类器增强",
+        "memberVisibility": "限制成员可见性",
+        "apiKeyCreation": "限制 API 密钥创建"
+      },
+      "networkPolicy": {
+        "title": "网络策略",
+        "networkAllowlist": "允许的域名",
+        "networkDenylist": "阻止的域名"
+      },
+      "sandboxPolicy": {
+        "title": "沙箱",
+        "requireSandboxing": "强制使用沙箱",
+        "allowedWritePaths": "允许写入路径",
+        "deniedWritePaths": "拒绝写入路径",
+        "deniedReadPaths": "拒绝读取路径",
+        "allowedReadPaths": "允许读取路径",
+        "defaultNetworkAccess": "默认网络访问",
+        "allowedDomains": "允许的域名",
+        "deniedDomains": "拒绝的域名",
+        "allowUnixSockets": "允许所有 Unix 套接字",
+        "allowedUnixSockets": "允许的 Unix 套接字",
+        "allowLocalBinding": "允许本地绑定",
+        "httpProxyPort": "HTTP 代理端口",
+        "socksProxyPort": "SOCKS 代理端口"
+      },
+      "hooksPolicy": {
+        "title": "钩子策略",
+        "managedHooksOnly": "仅允许托管钩子"
+      },
+      "plugins": {
+        "title": "插件",
+        "strictMarketplaces": "严格限制插件市场",
+        "strictEnforcement": "严格执行插件限制"
+      },
+      "connectors": {
+        "title": "连接器"
+      },
+      "wiki": {
+        "title": "Wiki",
+        "wikiCloudSync": "Wiki 云同步"
+      },
+      "evaluations": {
+        "title": "评估",
+        "evaluationsEnabled": "评估"
+      },
+      "droidComputers": {
+        "title": "Droid 计算机",
+        "localComputers": "本地计算机",
+        "managedComputers": "托管计算机",
+        "byomComputers": "远程控制",
+        "openCompute": "OpenCompute"
+      },
+      "agentBehavior": {
+        "title": "代理行为",
+        "ideAutoConnect": "自动连接 IDE",
+        "disableAutoUpdate": "禁用自动更新"
+      },
+      "gitCommits": {
+        "title": "Git 与提交",
+        "coAuthoredByDroid": "添加 Co-authored-by Droid"
+      },
+      "retentionPolicy": {
+        "title": "Session 保留",
+        "enableRetention": "启用 Session 保留策略",
+        "retentionWindow": "保留窗口"
+      },
+      "personas": {
+        "title": "角色设定"
+      },
+      "factoryRouterGuidance": {
+        "title": "自动模型规则"
+      },
+      "factoryRouterCandidates": {
+        "title": "自动模型候选",
+        "allowByok": "允许自动模型使用 BYOK",
+        "requireByok": "要求自动模型使用 BYOK"
+      },
+      "rawConfig": {
+        "title": "原始配置"
+      }
+    },
+    "general": {
+      "deployment": {
+        "title": "部署",
+        "currentDeployment": "当前部署",
+        "signedInIdentity": "登录身份",
+        "factoryPrivate": "Factory Private",
+        "prem": "高级",
+        "signOut": "退出登录"
+      },
+      "yourAccount": {
+        "title": "你的账号",
+        "accountName": "名称",
+        "accountEmail": "邮箱"
+      },
+      "yourOrganization": {
+        "title": "你的组织",
+        "organizationName": "组织名称",
+        "organizationCompanyType": "公司类型"
+      },
+      "airgapMode": {
+        "title": "隔离网络模式"
+      },
+      "codeProviders": {
+        "title": "代码托管服务"
+      },
+      "yourApps": {
+        "title": "你的应用"
+      },
+      "preferences": {
+        "title": "偏好设置",
+        "language": "语言",
+        "workRole": "角色",
+        "textSize": "文本大小",
+        "hideTodoList": "隐藏待办列表",
+        "loadingStatuses": "禁用动态加载状态",
+        "filePreviews": "自动打开文件预览",
+        "openLinksInDesktop": "在桌面应用中打开链接",
+        "keepAwake": "屏幕关闭时保持 Droid 运行"
+      },
+      "keyboardShortcuts": {
+        "title": "键盘快捷键",
+        "specModeShortcut": "切换 Spec 模式",
+        "reasoningShortcut": "切换推理级别",
+        "modelShortcut": "打开模型选择器",
+        "autonomyShortcut": "切换自主级别",
+        "voiceDictationShortcut": "语音听写"
+      },
+      "cloudSync": {
+        "title": "云同步",
+        "cloudSessionSync": "云端 Session 同步",
+        "cloudPreferenceSync": "云端配置同步",
+        "cloudItemPull": "拉取配置",
+        "configItems": "发布配置"
+      },
+      "autoModel": {
+        "title": "自动模型",
+        "showAutoModelPick": "显示自动模型选择"
+      },
+      "notifications": {
+        "title": "通知",
+        "notifyComplete": "Droid 完成工作时通知",
+        "notifyInput": "Droid 需要输入时通知"
+      },
+      "emailNotifications": {
+        "title": "邮件通知",
+        "automationAlertEmails": "自动化告警邮件"
+      },
+      "sounds": {
+        "title": "声音",
+        "soundVolume": "通知音量",
+        "completionSound": "完成提示音",
+        "awaitingInputSound": "等待输入提示音",
+        "focusMode": "专注模式",
+        "subagentSounds": "子代理提示音"
+      },
+      "personalize": {
+        "title": "个性化",
+        "productExperience": "产品体验"
+      },
+      "dangerZone": {
+        "title": "危险操作区",
+        "closeOrganization": "关闭组织"
+      }
+    },
+    "inbox": {
+      "categories": {
+        "title": "收件箱",
+        "inboxEmails": "收件箱邮件",
+        "questionsAndApprovals": "问题与审批",
+        "agentTurnComplete": "代理回合完成",
+        "missionNeedsInput": "任务需要输入",
+        "missionComplete": "任务完成",
+        "workstreamReviews": "审查",
+        "workstreamChangeFailed": "失败的变更",
+        "workstreamErrors": "工作流错误"
+      }
+    },
+    "appearance": {
+      "appearanceMode": {
+        "title": "外观"
+      },
+      "appearanceTheme": {
+        "title": "主题",
+        "appearancePreset": "预设",
+        "appearanceAccent": "强调色",
+        "appearanceBackground": "背景色",
+        "appearanceForeground": "前景色",
+        "appearanceUserMessageBubble": "用户消息气泡",
+        "appearanceContrast": "对比度"
+      },
+      "appearanceText": {
+        "appearanceUiFont": "界面字体",
+        "appearanceContentFont": "内容字体",
+        "appearanceCodeFont": "代码字体",
+        "title": "文本",
+        "appearanceUiFontSize": "界面字号",
+        "appearanceCodeFontSize": "代码字号",
+        "appearanceFontSmoothing": "使用 macOS 原生字体抗锯齿"
+      },
+      "appearanceDiffs": {
+        "title": "代码差异",
+        "diffViewMode": "默认视图",
+        "wordWrap": "长行自动换行",
+        "appearanceDiffMarkers": "差异标记"
+      },
+      "appearanceInteraction": {
+        "title": "交互",
+        "appearanceReduceMotion": "减少动态效果"
+      }
+    },
+    "apiKeys": {
+      "apiKeys": {
+        "title": "API 密钥",
+        "createApiKey": "创建 API 密钥",
+        "revokeApiKey": "撤销 API 密钥"
+      },
+      "serviceAccounts": {
+        "title": "服务账号"
+      }
+    },
+    "connectors": {
+      "allConnectors": {
+        "title": "所有集成"
+      }
+    },
+    "sessionManagement": {
+      "sessionManagement": {
+        "title": "Session 管理",
+        "sessionRetention": "Session 保留",
+        "deleteSessions": "删除 Session"
+      }
+    },
+    "cloudTemplates": {
+      "cloudTemplates": {
+        "title": "云计算机模板"
+      }
+    },
+    "droidComputers": {
+      "thisComputer": {
+        "title": "此计算机"
+      },
+      "managedComputers": {
+        "title": "托管计算机"
+      }
+    },
+    "secrets": {
+      "secrets": {
+        "title": "机密"
+      }
+    },
+    "templates": {
+      "templates": {
+        "title": "环境"
+      }
+    },
+    "sessionDefaults": {
+      "preferenceSync": {
+        "title": "偏好设置同步"
+      },
+      "general": {
+        "title": "通用",
+        "defaultModel": "默认模型",
+        "defaultReasoning": "默认推理级别",
+        "defaultInteraction": "默认交互模式",
+        "defaultAutonomy": "默认自主级别",
+        "defaultImageModel": "默认图像模型",
+        "anthropicCaching": "启用 Anthropic 1 小时缓存"
+      },
+      "specMode": {
+        "title": "Spec 模式",
+        "specModel": "默认 Spec 模式模型",
+        "specReasoning": "默认 Spec 模式推理级别",
+        "specDirectory": "Spec 保存目录"
+      },
+      "compaction": {
+        "title": "压缩",
+        "compactionLimit": "默认压缩 token 上限",
+        "compactionModel": "压缩模型",
+        "thresholdCompaction": "启用阈值压缩"
+      },
+      "subagentModels": {
+        "title": "子代理 Task 模型",
+        "subagentAutonomy": "子代理自主级别"
+      },
+      "delegations": {
+        "title": "委派",
+        "delegationModel": "默认委派模型",
+        "delegationReasoning": "默认委派推理级别",
+        "privateDelegationTemplate": "私人委派环境",
+        "sharedDelegationTemplate": "共享委派环境",
+        "delegationInstructions": "你的自定义委派指令"
+      }
+    },
+    "missionDefaults": {
+      "preferenceSync": {
+        "title": "偏好设置同步"
+      },
+      "missionDefaults": {
+        "title": "任务默认设置",
+        "orchestratorModel": "编排器模型",
+        "workerModel": "工作代理模型",
+        "validatorModel": "验证器模型",
+        "skipScrutiny": "跳过深入审查",
+        "skipUserTesting": "跳过用户测试",
+        "remoteDelegation": "远程委派",
+        "orchestratorCompactionBudget": "编排器压缩预算"
+      }
+    },
+    "customModels": {
+      "customModels": {
+        "title": "自定义模型"
+      }
+    },
+    "worktrees": {
+      "worktreeSettings": {
+        "title": "工作树设置",
+        "worktreeDirectory": "工作树目录",
+        "ephemeralLimit": "临时工作树上限"
+      },
+      "setupProfiles": {
+        "title": "设置配置档"
+      },
+      "managedWorktrees": {
+        "title": "托管工作树"
+      }
+    },
+    "usage": {
+      "usage": {
+        "title": "用量"
+      },
+      "usageAlerts": {
+        "title": "用量提醒"
+      },
+      "extraUsage": {
+        "title": "额外用量"
+      },
+      "computeUsage": {
+        "title": "计算用量"
+      },
+      "organizationUsage": {
+        "title": "组织用量",
+        "monthlyAlertThreshold": "每月告警阈值（百万积分）",
+        "organizationUsageAlertEmails": "组织用量告警邮件"
+      }
+    },
+    "commitmentUsage": {
+      "commitmentUsage": {
+        "title": "承诺用量"
+      }
+    },
+    "support": {
+      "documentation": {
+        "title": "文档"
+      },
+      "support": {
+        "title": "支持"
+      },
+      "diagnostics": {
+        "title": "诊断"
+      }
+    },
+    "organization": {
+      "appPermissions": {
+        "title": "应用权限"
+      },
+      "organization": {
+        "title": "代码托管服务"
+      }
+    },
+    "members": {
+      "members": {
+        "title": "待处理邀请"
+      }
+    },
+    "credits": {
+      "creditUsage": {
+        "title": "积分用量"
+      }
+    },
+    "remoteDelegations": {
+      "delegationApps": {
+        "title": "委派应用"
+      },
+      "remoteDelegationConfig": {
+        "title": "委派配置"
+      }
+    },
+    "openCompute": {
+      "openCompute": {
+        "title": "OpenCompute"
+      },
+      "networking": {
+        "title": "网络"
+      },
+      "cloudProviders": {
+        "title": "云提供商"
+      }
+    },
+    "auditLog": {
+      "auditLog": {
+        "title": "审计日志"
+      }
+    },
+    "directory": {
+      "directory": {
+        "title": "目录"
+      }
+    },
+    "subOrganizations": {
+      "organizations": {
+        "title": "组织"
+      }
+    },
+    "billing": {
+      "billing": {
+        "title": "账单"
+      },
+      "paymentMethod": {
+        "title": "付款方式"
+      },
+      "invoices": {
+        "title": "发票"
+      },
+      "voucher": {
+        "title": "有代金券？"
+      }
+    },
+    "securityIdentity": {
+      "singleSignOn": {
+        "title": "安全与身份"
+      },
+      "verifiedDomains": {
+        "title": "已验证域名"
+      }
+    }
+  },
+  "settingsSearchResults": {
+    "noSettingsFound": "未找到设置",
+    "tryAnotherPageSectionOrSetting": "请尝试其他页面、分区或设置名称。",
+    "truncatedResults": "显示 {{totalCount}} 个匹配设置页面中的 {{displayedCount}} 个。从侧边栏打开页面可查看其余内容。"
+  },
+  "setupScriptSection": {
+    "scriptExceedsMaximumLength": "脚本超过 {{maxLength}} 个字符的最大长度"
+  },
+  "slackChannelsSection": {
+    "clearedServiceAccountFromChannel": "已清除 #{{channelName}} 的服务账号",
+    "clearedServiceAccount": "已清除服务账号",
+    "attributedChannelToServiceAccount": "已将 #{{channelName}} 归属到 {{serviceAccountName}}",
+    "attributedChannel": "已将频道归属到服务账号"
+  },
+  "soundsSection": {
+    "notificationVolume": "通知音量",
+    "test": "测试",
+    "clear": "清除",
+    "playAShortCueWhenDroid": "Droid 完成工作或需要你输入时播放简短提示音。",
+    "sounds": "声音",
+    "completionSound": "完成提示音",
+    "awaitingInputSound": "等待输入提示音",
+    "focusMode": "专注模式",
+    "subagentSounds": "子代理提示音",
+    "soundOptions": {
+      "off": "关闭",
+      "bell": "铃声",
+      "softChime": "轻柔铃音（默认）",
+      "acknowledgeTone": "确认音",
+      "custom": "自定义…"
+    },
+    "focusModeOptions": {
+      "always": "始终播放",
+      "focused": "仅窗口获得焦点时",
+      "unfocused": "仅窗口未获得焦点时"
+    },
+    "subagentSoundOptions": {
+      "off": "子代理静音",
+      "quiet": "子代理使用轻柔铃音",
+      "inherit": "与父 Session 相同"
+    },
+    "muted": "静音（0%）",
+    "relativeToSystemVolume": "相对于系统音量",
+    "customFile": "自定义文件：{{name}}",
+    "clearCompletionSound": "清除完成提示音",
+    "clearAwaitingInputSound": "清除等待输入提示音",
+    "customCompletionSoundFile": "自定义完成提示音文件",
+    "customAwaitingInputSoundFile": "自定义等待输入提示音文件",
+    "testCompletionSound": "测试完成提示音",
+    "testAwaitingInputSound": "测试等待输入提示音"
+  },
+  "ssoSetup": {
+    "securityIdentity": "安全与身份",
+    "singleSignOn": "单点登录（SSO）",
+    "singleSignOnDescription": "为组织配置基于 SAML 或 OIDC 的单点登录。",
+    "directorySync": "目录同步",
+    "directorySyncDescription": "设置基于 SCIM 的目录同步，以自动配置用户。",
+    "description": "为组织配置 SSO 和目录同步。<anchor>了解更多</anchor>",
+    "opening": "正在打开…",
+    "configure": "配置"
+  },
+  "stepIndicator": {
+    "cloneRepos": "克隆仓库",
+    "setUp": "设置",
+    "finishSetup": "完成设置",
+    "name": "名称"
+  },
+  "subOrganizationEnterpriseControlsModal": {
+    "loadingEnterpriseControls": "正在加载企业控制设置…",
+    "failedToLoadEnterpriseControls": "加载企业控制设置失败。",
+    "enterpriseControls": "企业控制",
+    "manageTitle": "管理企业控制：{{name}}",
+    "description": "管理 {{name}} 的组织范围设置和安全策略。",
+    "enterpriseControlsSaved": "已保存 {{name}} 的企业控制设置"
+  },
+  "subOrganizationGlobalUsageLimitModal": {
+    "removeLimit": "移除上限",
+    "cancel": "取消",
+    "loadingUsageLimit": "正在加载用量上限…",
+    "setTheGlobalMonthlyCreditLimit": "为此组织设置每位用户的全局每月积分上限。此管理控制台页面不管理个人用户上限。",
+    "currentLimit": "当前上限",
+    "newLimitMillionsOfCredits": "新上限（百万积分）",
+    "thisGlobalUsageLimitWillBe": "点击保存后，将移除此全局用量上限。",
+    "globalUsageLimitRemoved": "已移除 {{name}} 的全局用量上限",
+    "globalUsageLimitUpdated": "已更新 {{name}} 的全局用量上限",
+    "saving": "正在保存…",
+    "save": "保存",
+    "manageTitle": "管理用量上限：{{name}}",
+    "noGlobalUsageLimitSet": "未设置全局用量上限",
+    "creditsPerUserEachMonth": "每位用户每月 {{limit}} 积分"
+  },
+  "subOrganizationRenameModal": {
+    "cancel": "取消",
+    "currentPath": "当前路径",
+    "newName": "新名称",
+    "organizationName": "组织名称",
+    "usageAlreadyReportedForThisOrganization": "已上报的组织用量将保留旧名称，因此发票和用量报告中的重命名记录会分为两个名称显示。",
+    "savedLinksDashboardsAndReportsThat": "引用旧组织路径的已保存链接、控制台和报告将需要更新。",
+    "renamingHasDownstreamEffects": "重命名会影响下游内容",
+    "iUnderstandTheseEffectsAndWant": "我了解这些影响，并希望重命名此组织。",
+    "organizationRenamed": "组织已重命名为 {{name}}",
+    "renaming": "正在重命名…",
+    "rename": "重命名",
+    "renameTitle": "重命名组织：{{name}}",
+    "nameTooLong": "名称不能超过 {{maxLength}} 个字符。",
+    "nestedOrganizationsRepathed_one": "{{count}} 个嵌套组织的路径将随新名称更新。",
+    "nestedOrganizationsRepathed_other": "{{count}} 个嵌套组织的路径将随新名称更新。"
+  },
+  "subOrganizationsSettings": {
+    "viewUsage": "查看用量",
+    "new": "新建",
+    "searchOrganizations": "搜索组织…",
+    "loadingOrganizations": "正在加载组织…",
+    "organizationLimitReached": "最多可创建 {{maxCount}} 个子组织。请联系 Factory 对接人员提高上限。",
+    "noMatchingOrganizations": "没有匹配的组织",
+    "noOrganizationsFound": "未找到组织",
+    "tryADifferentSearchTerm": "请尝试其他搜索词。",
+    "organizationsAppearOnceLoaded": "层级数据加载后，组织将显示在这里。",
+    "organizationCreated": "组织已创建",
+    "title": "组织",
+    "titleWithCount": "组织 · {{total}}"
+  },
+  "suggestConnectorModal": {
+    "cancel": "取消",
+    "suggestAConnector": "推荐连接器",
+    "tellUsWhichConnectorYouNeed": "告诉我们你需要哪个连接器，我们会考虑将其加入目录。",
+    "connector": "连接器",
+    "whichAppDoYouWantTo": "你想连接哪个应用？",
+    "website": "网站",
+    "httpsExampleCom": "https://example.com",
+    "useCaseOptional": "使用场景（可选）",
+    "whatWouldYouUseThisConnector": "你会使用此连接器做什么？",
+    "submitting": "正在提交…",
+    "submit": "提交"
+  },
+  "supportSettings": {
+    "documentation": "文档",
+    "browseTheDocs": "浏览文档",
+    "support": "支持",
+    "contactSupport": "联系支持",
+    "whenReachingOutForSupportPlease": "联系支持时，请附上下方信息，以便我们更快提供帮助。",
+    "diagnostics": "诊断",
+    "userId": "用户 ID",
+    "email": "邮箱",
+    "organizationId": "组织 ID",
+    "factoryDesktop": "Factory 桌面版",
+    "factoryWeb": "Factory",
+    "overviewCaption": "此应用的版本和连接详情",
+    "version": "版本",
+    "build": "构建",
+    "webPlatform": "网页",
+    "buildCaption": "构建 {{build}}",
+    "webClient": "网页客户端",
+    "browser": "浏览器",
+    "cloudDeployment": "Factory 云端",
+    "premDeployment": "自托管",
+    "statusChecking": "正在检查",
+    "statusConnected": "已连接",
+    "statusUnreachable": "无法访问",
+    "docsCardDescription": "docs.factory.ai 上的指南、教程和常见问题",
+    "supportCardDescription": "通过 {{email}} 联系团队",
+    "copyValue": "复制 {{label}}",
+    "platform": "平台",
+    "groupApp": "应用",
+    "groupAccount": "账号",
+    "groupConnection": "连接",
+    "healthData": "健康检查",
+    "desktopAppVersion": "桌面应用版本",
+    "clientVersion": "客户端版本",
+    "userAgent": "用户代理",
+    "backendHostname": "后端主机名",
+    "premHost": "私有部署主机",
+    "healthRequestId": "健康检查请求 ID",
+    "copied": "已复制！",
+    "copyDiagnostics": "复制诊断信息",
+    "diagnosticsCopied": "诊断信息已复制到剪贴板",
+    "copyFailed": "复制到剪贴板失败"
+  },
+  "teamsConnectInterstitial": {
+    "yourMicrosoftTeamsTenantIsLinked": "你的 Microsoft Teams 租户已关联到 Factory。",
+    "done": "完成",
+    "installApp": "安装应用",
+    "connected": "已连接 ✓",
+    "openingMicrosoftTeams": "正在打开 Microsoft Teams…",
+    "openingMicrosoftTeamsToFinish": "正在打开 Microsoft Teams 以完成安装…"
+  },
+  "teamsRateLimitUsage": {
+    "poolStandard": "标准",
+    "poolDroidCore": "Droid Core",
+    "poolExtraUsage": "额外用量",
+    "bucketFiveHour": "5 小时",
+    "bucketWeekly": "每周",
+    "bucketMonthly": "每月",
+    "bucketUsageAriaLabel": "{{email}} {{bucket}} 用量",
+    "user": "用户",
+    "noExtraUsageHasBeenRecorded": "尚无额外用量记录。",
+    "lifetimeExtraUsageSpend": "累计额外用量支出",
+    "unknownUser": "未知用户",
+    "perUserUsageForThisOrganization": "此组织中每位用户的用量。额外用量显示累计消耗。",
+    "usageByUser": "按用户统计用量",
+    "loadingUsageByUser": "正在按用户加载用量…",
+    "usageByUserCouldNotBe": "无法加载按用户统计的用量。",
+    "noActiveMembersWereFound": "未找到活跃成员。"
+  },
+  "sandboxEnvironmentNameInput": {
+    "nameRequired": "名称为必填项",
+    "nameTooLong": "名称不能超过 {{max}} 个字符"
+  },
+  "thisComputerCard": {
+    "computerName": "计算机名称",
+    "cancel": "取消",
+    "renameComputer": "重命名计算机",
+    "local": "本地",
+    "remoteAccess": "远程控制",
+    "errors": {
+      "saveRemoteAccessPreference": "保存远程控制偏好失败",
+      "enableRemoteAccess": "启用远程控制失败",
+      "disableRemoteAccess": "禁用远程控制失败"
+    },
+    "remoteAccessStatus": {
+      "disabledByAdmin": "你的组织管理员已禁用远程控制",
+      "connected": "已连接",
+      "enabledButNotConnected": "远程控制已启用，但此守护进程目前未连接"
+    },
+    "saving": "正在保存…",
+    "save": "保存",
+    "rename": "重命名",
+    "disabledByOrganizationAdministrator": "已被组织管理员禁用",
+    "remoteAccessHelp": "允许 Droid 从网页版或其他设备使用此计算机"
+  },
+  "toggleRow": {
+    "labelHelp": "{{label}} 帮助"
+  },
+  "tokenRateLimitsBilling": {
+    "unknownPlan": "未知套餐",
+    "extraUsageNotAvailableDuringTrials": "免费试用期间无法使用额外用量。",
+    "notNow": "暂时不用",
+    "enableExtraUsage": "启用额外用量",
+    "enableExtraUsagePromptTitle": "开启额外用量以使用积分",
+    "enableExtraUsagePromptDescription": "购买已完成。组织的额外用量设置处于关闭状态，因此这些积分暂时不会被使用。",
+    "enableExtraUsagePromptInfo": "启用后，达到标准积分上限时将自动从额外用量余额扣除。你可以随时在用量设置中更改。",
+    "failedToEnableExtraUsage": "无法启用额外用量。请重试，或在用量设置中开启。"
+  },
+  "tokenRateLimitsUsage": {
+    "resetsAt": "于 {{date}} 重置",
+    "useDroidToStart": "使用 Droid 开始",
+    "standardUsageTooltip": "套餐中的标准用量可访问所有模型，并优先消耗。达到标准用量上限后，可继续使用标有 Droid Core 的模型，或启用额外用量以继续使用任何模型。",
+    "upgradeYourPlan": "升级套餐",
+    "managedComputersUsage": "托管计算机用量",
+    "includedComputeWithLearnMore": "组织每个账单周期包含 {{hours}} 的计算时长。<anchor>了解更多</anchor>",
+    "reachedMonthlyComputeLimit": "你的组织已达到每月计算用量上限（{{limit}}）。",
+    "additionalUsageBilledAsOverage": "额外用量将按超额用量计费。",
+    "computerUsageBlockedUntilNextPeriod": "下一账单周期开始前，计算机使用将被阻止。",
+    "droidCore": "Droid Core",
+    "automaticallySwitchSessionsToADroid": "标准用量耗尽时，自动将 Session 切换到 Droid Core 模型。",
+    "extraUsage": "额外用量",
+    "extraUsageOptionDescription": "标准用量耗尽时，使用预付积分继续使用任何模型；Core 模型会优先消耗 Droid Core 用量。",
+    "extraUsageNotAvailableDuringTrials": "免费试用期间无法使用额外用量。",
+    "computeOverageEnabled": "已启用超额计算用量",
+    "computeOverageDisabled": "已禁用超额计算用量",
+    "failedToUpdateComputeOverage": "更新超额计算用量设置失败",
+    "buyMore": "购买更多",
+    "remaining": "剩余",
+    "poolStandard": "标准",
+    "usageLimits": "用量上限",
+    "text5HourUsage": "5 小时用量",
+    "weeklyUsage": "每周用量",
+    "monthlyUsage": "每月用量",
+    "managedComputers": "托管计算机",
+    "chooseWhatHappensAcrossYourOrganization": "选择组织标准用量耗尽后的处理方式。管理员可以启用额外用量，而不是切换到 Droid Core。",
+    "models": "模型",
+    "computers": "计算机",
+    "allowComputeOverage": "允许超额计算用量",
+    "continueUsingManagedComputeWithExtraUsage": "通过额外用量继续使用托管计算资源。",
+    "overageBalanceTooLow": "已启用超额用量，但额外用量余额不足以支付更多计算用量。请添加积分以恢复超额计费。",
+    "yourOrganizationDoesNotHaveAn": "你的组织没有有效订阅。请激活付费套餐以查看和管理用量。",
+    "usage": "用量",
+    "manageBilling": "管理账单",
+    "cancel": "取消",
+    "enable": "启用",
+    "enableExtraUsage": "启用额外用量",
+    "pleaseConfirmYouWantToUse": "请确认你希望使用额外用量。",
+    "whenEnabledWeWillAutomaticallyDraw": "启用后，达到标准积分上限时将自动从额外用量余额扣除。",
+    "enableComputeOverage": "启用超额计算用量",
+    "pleaseConfirmYouWantToAllow": "请确认你希望允许超额计算用量。",
+    "whenEnabledExtraUsageCreditsWill": "启用后，超出包含额度的计算用量将消耗额外用量积分。"
+  },
+  "updateComputerModal": {
+    "updatingTheDaemonWillStopAll": "更新守护进程会停止此计算机上所有正在运行的 Droid Session。确定要继续吗？",
+    "updateDaemon": "更新守护进程",
+    "updating": "正在更新…",
+    "update": "更新"
+  },
+  "usageAlertsSection": {
+    "severityWarning": "警告",
+    "severityCritical": "严重",
+    "severityExtreme": "极端",
+    "severityNormal": "正常",
+    "window1Day": "1 天",
+    "window7Day": "7 天",
+    "window30Day": "30 天",
+    "windowThresholds": "{{window}}阈值：",
+    "severityAtLeast": "{{severity}} ≥ {{value}}",
+    "belowWarningThreshold": "{{label}}：低于警告阈值",
+    "amountBelowWarningThreshold": "{{label}}：低于警告阈值 {{amount}}",
+    "amountAboveThreshold": "{{label}}：超出阈值 {{amount}}",
+    "reviewUsersWhoseFscUsageIs": "查看 FSC 用量异常偏高、可能需要跟进的用户。",
+    "usageAlerts": "用量提醒",
+    "usageAlertsAreAvailableOnceThis": "组织至少有两名成员后，才可使用用量告警。",
+    "loadingUsageAlerts": "正在加载用量告警…",
+    "failedToLoadUsageAlerts": "加载用量告警失败。",
+    "retry": "重试",
+    "truncatedResults": "显示超过警告阈值的前 {{limit}} 位用户。可能还有其他被标记用户未显示。",
+    "noUsersCrossedAbnormalUsageThresholds": "过去 30 天内没有用户超过异常用量阈值。",
+    "user": "用户",
+    "itemsPerPage": "每页项目数",
+    "rowsPerPage": "每页行数",
+    "paginationSummary": "{{total}} 位用户中的 {{start}}–{{end}} 位"
+  },
+  "usageSettings": {
+    "loadingUsage": "正在加载用量…",
+    "failedToLoadUsage": "无法加载用量。更改上限前请先重试。",
+    "retry": "重试"
+  },
+  "useConnectorActions": {
+    "connectorConnected": "连接器已连接",
+    "connectorDisconnected": "连接器已断开连接"
+  },
+  "useSandboxEnvironmentEditor": {
+    "unsupportedCustomization": "所选环境不支持当前仓库或设置脚本配置。",
+    "rebuilding": "正在重新构建 {{name}}…",
+    "buildCancelled": "已取消 {{name}} 的构建",
+    "updated": "已更新 {{name}}",
+    "buildingAsDefault": "正在构建 {{name}}…就绪后将设为组织默认环境。",
+    "building": "正在构建 {{name}}…",
+    "deleted": "已删除 {{name}}",
+    "nowOrganizationDefault": "{{name}} 现已设为组织默认环境"
+  },
+  "useLegacyModelSelection": {
+    "saveFailed": "无法保存你的选择。请重试。"
+  },
+  "useManagedWorktreeInventory": {
+    "localNotConnected": "未连接到本地计算机。请启动桌面应用。",
+    "local": "本地",
+    "selectComputer": "选择计算机",
+    "connectingTo": "正在连接到 {{machineName}}…",
+    "connectedTo": "已连接到 {{machineName}}。"
+  },
+  "useMissionMachineCandidates": {
+    "computerNotReady": "此计算机尚未就绪。",
+    "byomComputerNotAllowed": "组织不允许通过远程控制使用此计算机。",
+    "managedComputerNotAllowed": "组织不允许使用此托管计算机。",
+    "managedComputersNotAllowed": "组织不允许使用托管计算机。",
+    "templateBuilding": "此环境仍在构建中。",
+    "templateBuildFailed": "环境构建失败。请重新构建或选择其他环境。"
+  },
+  "useMutationRedeemVoucher": {
+    "voucherRedeemed": "代金券已兑换"
+  },
+  "useMutationUpdateDirectoryMemberMemberships": {
+    "directoryMembershipUpdated": "目录成员资格已更新"
+  },
+  "useMutationUpdateRole": {
+    "roleUpdated": "角色已更新"
+  },
+  "usePaymentMethodModal": {
+    "paymentMethodRemoved": "付款方式已移除",
+    "noPaymentMethodSelected": "未选择付款方式",
+    "defaultPaymentMethodUpdated": "默认付款方式已更新"
+  },
+  "useSessionManagementBulkAction": {
+    "archived_one": "已归档 {{count}} 个 Session",
+    "archived_other": "已归档 {{count}} 个 Session",
+    "unarchived_one": "已取消归档 {{count}} 个 Session",
+    "unarchived_other": "已取消归档 {{count}} 个 Session",
+    "archivedWithFailures_one": "已归档 {{count}} 个 Session，{{failedCount}} 个失败",
+    "archivedWithFailures_other": "已归档 {{count}} 个 Session，{{failedCount}} 个失败",
+    "unarchivedWithFailures_one": "已取消归档 {{count}} 个 Session，{{failedCount}} 个失败",
+    "unarchivedWithFailures_other": "已取消归档 {{count}} 个 Session，{{failedCount}} 个失败"
+  },
+  "useSettingsNavigation": {
+    "orgSettingsWithName": "组织设置（{{name}}）"
+  },
+  "useSuggestConnectorForm": {
+    "websiteUrlError": "输入包含 https:// 的完整 URL",
+    "suggestionSubmitted": "连接器建议已提交"
+  },
+  "userModelPolicyModal": {
+    "alwaysAllowed": "始终允许",
+    "allow": "允许",
+    "block": "阻止",
+    "overrideModelAccessForIndividualUsers": "为个别用户覆盖模型访问权限。这些覆盖设置可以相对于组织策略授予或撤销访问权限。",
+    "done": "完成",
+    "individualUserModelOverrides": "个人用户模型覆盖设置",
+    "removeAllOverrides": "移除所有覆盖设置",
+    "orgAllowed": "组织：允许",
+    "orgAllowedRequired": "组织：允许（强制）",
+    "orgBlocked": "组织：阻止",
+    "orgBlockedRequired": "组织：阻止（强制）",
+    "serviceAccountSuffix": " [服务账号]",
+    "overrideCount_one": "{{count}} 项覆盖设置",
+    "overrideCount_other": "{{count}} 项覆盖设置",
+    "usesOrgPolicy": "使用组织策略"
+  },
+  "userModelPolicyUtils": {
+    "noIndividualOverrides": "未配置个人覆盖设置。",
+    "usersHaveOverrides": "{{total}} 位用户有自定义模型覆盖设置：{{users}}。",
+    "usersHaveOverridesAndMore": "{{total}} 位用户有自定义模型覆盖设置：{{users}}，以及其他 {{remaining}} 位。"
+  },
+  "userPreferencesSync": {
+    "supportedPreferencesSyncAutomaticallyByDefault": "受支持的偏好设置默认自动同步。凭据、路径和工作区设置保留在本地。",
+    "preferenceSync": "偏好设置同步",
+    "resolvePreferenceConflict": "解决偏好设置冲突",
+    "publishLocalPreference": "发布本地偏好设置",
+    "syncCloudPreference": "同步云端偏好设置",
+    "localValue": "本地：{{value}}",
+    "cloudValue": "云端：{{value}}",
+    "notSet": "未设置",
+    "missionModelSettings": "任务模型设置",
+    "perModelCompactionLimits": "各模型压缩上限",
+    "automaticContextCompaction": "自动上下文压缩",
+    "modelRequestTimeout": "模型请求超时",
+    "subagentInactivityTimeout": "子代理非活跃超时",
+    "modelFallbacks": "模型后备方案",
+    "staleResolution": "选择期间偏好设置发生变化。请查看当前选项后重试。",
+    "unconfirmedResolution": "无法确认偏好设置选择。请查看当前偏好设置后重试。",
+    "syncMessages": {
+      "disabled": "在通用设置中启用云端配置同步，以同步此设备。",
+      "pending": "本地更改已保存。等待同步…",
+      "syncing": "正在同步偏好设置…",
+      "synced": "偏好设置已同步到云端。",
+      "conflict": "本地和云端偏好设置均有变化。请选择要保留哪份设置。",
+      "unavailable": "云同步暂时不可用。本地更改已保存，将自动重试。",
+      "unauthenticated": "使用用户账号登录以同步偏好设置。",
+      "invalidSettings": "本地偏好设置无效。请修复用户设置文件以恢复同步。",
+      "tooLarge": "偏好设置请求超过 1 KB。请移除部分覆盖设置以恢复同步。"
+    }
+  },
+  "verifiedDomains": {
+    "membersCanOnlyBeInvitedWith": "只能邀请使用已在 WorkOS 中验证的邮箱域名的成员。",
+    "peopleWhoSignUpWithOne": "使用你已验证邮箱域名注册的用户必须受邀加入此组织，无法创建新的 Factory 组织。",
+    "requireInvitationsForVerifiedDomains": "已验证域名需要邀请",
+    "loadingVerifiedDomains": "正在加载已验证域名…",
+    "failedToLoadVerifiedDomains": "加载已验证域名失败。",
+    "noVerifiedDomainsAreConfiguredIn": "WorkOS 中未配置已验证域名。",
+    "searchVerifiedDomains": "搜索已验证域名",
+    "noDomainsMatchYourSearch": "没有符合搜索条件的域名。",
+    "loadMoreDomains": "加载更多域名",
+    "opening": "正在打开…",
+    "verifyYourDomain": "验证你的域名",
+    "title": "已验证域名",
+    "titleWithCount": "已验证域名 · {{total}}"
+  },
+  "viewHistoryModal": {
+    "close": "关闭",
+    "versionHistory": "版本历史",
+    "versions": "版本",
+    "currentLive": "当前生效版本",
+    "view": "查看",
+    "restore": "还原",
+    "revision": "修订版 {{revision}}",
+    "empty": "（空）",
+    "comparing": "正在比较 {{from}} → {{to}}",
+    "loadingVersionHistory": "正在加载版本历史…",
+    "noVersionHistoryAvailable": "没有可用的版本历史。",
+    "updatedByAt": "由 {{user}} 于 {{timestamp}} 修改",
+    "preVersioningConfiguration": "版本管理前的配置",
+    "loading": "正在加载…",
+    "loadMore": "加载更多"
+  },
+  "voucherRedemption": {
+    "billing": "账单",
+    "voucherCode": "代金券码",
+    "enterYourVoucherCode": "输入代金券码",
+    "validatingVoucher": "正在验证代金券…",
+    "retry": "重试",
+    "voucherCouldNotBeApplied": "无法应用代金券",
+    "paymentMethodConfirmedTryAgain": "付款方式已确认。请重试应用代金券，或选择其他付款方式。",
+    "changePaymentMethod": "更改付款方式",
+    "applyingYourVoucher": "正在应用代金券…",
+    "startYourFactorySubscription": "开始 Factory 订阅",
+    "redeemAVoucher": "兑换代金券",
+    "selectAPlanDescription": "选择套餐。代金券额度会用于首张账单。",
+    "onlyOrganizationOwnersAndManagersCan": "只有组织所有者和管理员可兑换代金券。请让管理员打开此链接。",
+    "youDoNotHavePermissionTo": "你无权兑换代金券"
+  },
+  "vscodeRemoteSshinstructions": {
+    "vsCodeRemoteSsh": "VS Code Remote SSH",
+    "addToSshConfig": "将以下内容添加到 <code>~/.ssh/config</code>，以通过 VS Code Remote SSH 连接：",
+    "connectToHost": "然后使用 <anchor>Remote SSH 扩展</anchor>连接到 <host/>。"
+  },
+  "wikiSection": {
+    "configureWikiSettingsForYourOrganization": "为组织配置 Wiki 设置。",
+    "wiki": "Wiki",
+    "allowWikiContentToBeGenerated": "允许在云端生成和存储 Wiki 内容。禁用后，组织的所有 Wiki API 端点均被阻止。",
+    "wikiCloudSync": "Wiki 云同步"
+  },
+  "workRolePreferenceRow": {
+    "role": "角色",
+    "selectARole": "选择角色"
+  },
+  "worktreeDirRow": {
+    "worktreeDirectory": "工作树目录",
+    "browseForWorktreeDirectory": "浏览工作树目录",
+    "browse": "浏览…",
+    "failedToSaveWorktreeDirectory": "保存工作树目录失败",
+    "failedToOpenDirectoryPicker": "打开目录选择器失败",
+    "defaultOption": "默认（{{path}}）",
+    "customOptionWithPath": "自定义：{{path}}",
+    "customOption": "自定义…"
+  },
+  "worktreesSettings": {
+    "copy": "复制",
+    "delete": "删除",
+    "worktreeSettings": "工作树设置",
+    "ephemeralWorktreesLimit": "临时工作树上限",
+    "addProfile": "添加配置档",
+    "configureHowNewWorktreesAreSet": "配置项目中新工作树的设置方式。",
+    "setupProfiles": "设置配置档",
+    "connectingToThisMachine": "正在连接此计算机…",
+    "connectToThisMachineBeforeManaging": "连接此计算机后，才能管理其工作树配置档。",
+    "restartTheDroidServiceOnThis": "请重启此计算机上的 Droid 服务，以管理工作树设置配置档。",
+    "chooseAProjectDirectoryToView": "选择项目目录以查看其设置配置档。",
+    "local": "本地",
+    "shared": "共享",
+    "cancel": "取消",
+    "deleteWorktreeSetupProfile": "删除工作树设置配置档？",
+    "autoDeleteBlockers": {
+      "persistent": "它们是持久化工作树",
+      "pinnedSession": "它们有已固定的 Session",
+      "activeSession": "它们有活跃或最近使用的 Session",
+      "uncommittedChanges": "它们有未提交的更改或未跟踪文件",
+      "openPullRequest": "它们有未关闭的拉取请求",
+      "unpublishedCommits": "它们有未发布的提交，除非相关拉取请求已合并"
+    },
+    "autoDeleteLimitTooltipIntro": "Factory 会删除旧的临时工作树，以保持在此上限内。满足以下条件的工作树不会被移除：",
+    "autoDeleteLimitTooltipBranchNote": "自动清理仅移除工作树，绝不会移除其本地分支。",
+    "failedToLoadRecentProjectDirectories": "加载最近项目目录失败",
+    "failedToSaveWorktreeDefaults": "保存工作树默认设置失败",
+    "failedToSaveProfile": "保存配置档失败",
+    "copiedProfileToClipboard": "配置档已复制到剪贴板",
+    "failedToCopyProfile": "复制配置档失败",
+    "failedToDeleteProfile": "删除配置档失败",
+    "view": "查看",
+    "edit": "编辑",
+    "worktreesSuffix": "工作树",
+    "failedToLoadWorktreeSetupProfiles": "加载工作树设置配置档失败。",
+    "noLocalProfiles": "此项目暂无本地配置档。",
+    "noSharedProfiles": "此项目在 {{directory}} 中暂无共享配置档。",
+    "save": "保存",
+    "sharedWorktreeSetupProfile": "共享工作树设置配置档",
+    "editWorktreeSetupProfile": "编辑工作树设置配置档",
+    "addWorktreeSetupProfile": "添加工作树设置配置档",
+    "deleting": "正在删除…",
+    "deleteProfile": "删除配置档",
+    "deleteProfileConfirmation": "删除“{{name}}”？新工作树将无法再使用此设置脚本。"
+  },
+  "usageSources": {
+    "managedService": "托管服务",
+    "byok": "BYOK",
+    "compute": "计算资源",
+    "advancedAnalytics": "高级分析",
+    "prem": "高级"
+  },
+  "providerConnectionsSection": {
+    "title": "提供商连接",
+    "helpTooltip": "状态仅确认每项凭据可读取且格式正确，不会通过提供商测试凭据。上方共享模型则由成员客户端调用。",
+    "description": "Factory Private 部署用于调用模型提供商的凭据。",
+    "lastChecked": "上次检查于 {{time}}",
+    "checkStatusAgain": "再次检查状态",
+    "refreshStatus": "刷新状态",
+    "addProvider": "添加提供商",
+    "applyConfiguration": "应用配置",
+    "premUnreachable": "私有部署暂时无法访问。状态检查将自动恢复。",
+    "applyError": "无法确认应用请求。请刷新并检查状态后再试。",
+    "fallbackProviderLabel": "提供商",
+    "pending": {
+      "validating": {
+        "title": "正在验证 {{label}}",
+        "description": "正在检查私有部署能否从 {{source}} 读取凭据。"
+      },
+      "ready": {
+        "title": "{{label}} 已就绪，可应用",
+        "description": "已针对 {{source}} 验证。应用时，私有部署会短暂停止接收新请求，等待活跃请求完成。"
+      },
+      "applying": {
+        "title": "正在应用 {{label}}",
+        "description": "维护进行中。私有部署恢复后，此页面会重新连接。"
+      },
+      "invalid": {
+        "title": "无法验证 {{label}}",
+        "description": "私有部署无法从 {{source}} 读取有效凭据。请更新配置并重新验证。"
+      },
+      "applyFailed": {
+        "title": "无法应用 {{label}}",
+        "description": "此次切换需要平台恢复，不会自动回退凭据或回滚。"
+      }
+    },
+    "confirmMaintenance": {
+      "title": "确认提供商维护",
+      "description": "操作员切换此提供商来源时，私有部署会短暂停止处理新请求。必须等待活跃请求完成。继续前，请确保已暂停带外凭据写入程序。",
+      "cancel": "取消",
+      "submit": "确认维护并应用",
+      "reference": "待应用配置",
+      "copyReference": "复制待应用配置",
+      "recoveryNote": "切换失败时，平台管理员必须明确执行恢复。旧凭据来源不会作为后备使用。",
+      "stale": "此更改已不是当前就绪待应用的更改。请取消并查看当前状态。"
+    }
+  },
+  "providerConnectionEditor": {
+    "tag": {
+      "configured": "已配置",
+      "notAvailable": "不可用"
+    },
+    "errors": {
+      "configurationChanged": "此配置已更改。请关闭编辑器并重新审查。",
+      "storeRequired": "选择已批准的存储并输入机密引用。",
+      "managedByPlatform": "来源配置由平台管理员管理。",
+      "notSaved": "更改未保存。请刷新配置后重试，并重新输入隐藏的凭据值。"
+    },
+    "sourceHelp": {
+      "database": "已保存的值保持隐藏。选择其他来源以替换此凭据。",
+      "external": "引用机密，而非其值。结构化机密必须包含完整的提供商 JSON。",
+      "workloadIdentity": "使用此部署已批准的 Bedrock 工作负载身份。此处无需输入角色、密钥或令牌。"
+    },
+    "editDescription": "用于部署向此提供商发送的每个模型请求。",
+    "addDescription": "选择提供商及部署应使用的凭据。",
+    "addTitle": "添加提供商连接",
+    "cancel": "取消",
+    "validateConfiguration": "验证配置",
+    "provider": "提供商",
+    "selectProvider": "选择提供商",
+    "credentialSource": "凭据来源",
+    "gitOpsManaged": "来源由平台管理员通过 GitOps 管理。",
+    "secretStore": "机密存储",
+    "approvedSecretStore": "已批准的机密存储",
+    "selectSecretStore": "选择机密存储",
+    "secretKey": "机密名称或路径",
+    "jsonProperty": "JSON 属性（可选）",
+    "version": "版本（可选）",
+    "referenceConfiguration": "引用配置",
+    "copyReferenceConfiguration": "复制引用配置",
+    "referenceNoValues": "仅包含来源和引用设置，绝不包含凭据值。",
+    "referenceUnavailable": "引用详情保存在部署配置中，此进程无法获取。"
+  },
+  "commitmentDashboard": {
+    "promotionalCadence": "每月 300 亿，持续 10 个月",
+    "loading": "正在加载…"
+  },
+  "subOrganizationBindings": {
+    "title": "{{name}} 的 IdP 组映射",
+    "description": "将精确的 IdP 组值映射到此组织的角色。用户的 Factory Session 刷新时，更改会应用于现有用户。根组织访问仍由操作员管理。",
+    "membershipClaim": "成员资格声明",
+    "empty": "没有组映射到此组织。",
+    "group": "IdP 组",
+    "exactMatch": "使用已配置 IdP 声明中的精确组值。匹配时保留大小写和空格。",
+    "role": "组织角色",
+    "user": "成员",
+    "manager": "管理员",
+    "owner": "所有者",
+    "edit": "编辑角色",
+    "remove": "移除",
+    "editNamed": "编辑 {{group}} 的角色",
+    "removeNamed": "移除 {{group}} 的映射",
+    "cancel": "取消",
+    "save": "保存映射",
+    "jsonFormat": "输入带引号的 JSON 字符串，例如 {{example}}。换行和其他控制字符请使用 JSON 转义。",
+    "invalidGroupJson": "请输入包含受支持字符且不超过绑定大小限制的有效非空 JSON 字符串。"
+  }
+}

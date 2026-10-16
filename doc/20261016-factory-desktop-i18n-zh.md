@@ -116,7 +116,7 @@ tools/
 
 ## 3. 实施顺序
 
-执行跟踪：1–2 完成；3 进行中；4–5 待执行。当前会话无 TodoWrite 工具，以本清单及逐项记录跟踪。
+执行跟踪：1–3 完成；4 进行中；5 待执行。当前会话无 TodoWrite 工具，以本清单及逐项记录跟踪。
 
 Dedupe Ticket（第 1 项）：意图＝正确读取原始 asar 并提取限定版本英文资源。查询＝现有 extract/parser/resource 文件、work 中解析工具、资源声明起止与引用。命中＝zcode-expand/scripts/{extract.mjs,lib/asar.mjs,lib/patch.mjs,lib/syntaxcheck.mjs}。决策＝reuse asar，new 受限数据解析/提取工具；现有 extract 不解析资源。解析器内词法、字面量、引用解析和入口函数共同服务此单一目的。package.json/.gitignore/LICENSE 为执行及复用所必需。
 
@@ -128,6 +128,10 @@ Dedupe Ticket（第 2 项）：意图＝受限构建汉化补丁并提供成对�
 
 第 2 项审查修复：独立 reviewer 两次确认陈旧锁无条件删除的竞争，以及第二个目标被更新器修改后仍可能覆盖。改用每目标 Windows 命名 mutex 串行化整个写操作与陈旧锁接管（PowerShell 父进程持有，Node 子进程执行；内核负责崩溃释放），文件锁释放核对拥有权；每个目标替换及恢复前重新核验该目标哈希。该补充服务原有互斥/更新竞态要求，不新增 CLI 动作。
 
+Dedupe Ticket（第 3 项）：意图＝首批中文源库及可验证 ESM。查询＝translations 下中文/构建产物、源资源校验导出、主 bundle 对 settings/chat/connectors/coreUi/common/app/user 的文本引用。命中＝translations/en、extract_en.mjs 的统计/解析器、syntaxcheck.mjs，无现有中文源或 build 工具。决策＝new 指定中文 JSON、目标 components 键清单和 build_resource.mjs；reuse 语法门禁。构建器中的递归叶子/插值多重集/富文本树校验函数仅覆盖本任务。独立翻译委派按 subagent-driven-development 执行，过程 brief/report/ledger 放 git 忽略的 .superpowers/sdd；原计划编号格式不被 skill 的 Task 标题提取器支持，已运行失败并手写等价 brief，不改变范围。
+
+第 3 项分工与审查记录：单个实施子代理负责 common/settings/components 的正式 JSON；主代理负责 sessions/softwareFactory/inbox/onboarding/errors 及 components 尾部 475 条译文暂存，按文件或固定索引分工，最终 components 由同一代理汇总。复用英文原句字典减少重复，未使用外部翻译服务。构建器及 components 3002 键清单已独立审查通过；common/sessions/三个小 namespace/softwareFactory 和 components 尾部已做中英对照审查，修正两处 Git stash（明确储藏而非 git add 暂存）及一处每个 PR 必须批准的译法。所有这些修复均已核对英文并再次复核。
+
 以下命令为待实现接口，并非仓库已具备功能。安装操作命令显式传入上述 `--home`；提取工具传入 asar 路径，构建工具从仓库 JSON 读取。使用 Node.js >=18（与复用库要求一致），先检查本机运行时可用。仅在用户批准实施后执行：
 
 1. [x] 先完成正确 asar 读取、基线核验及英文提取可行性验证（2.3），失败即停。→ 验证：19 个 namespace、叶子统计、实际英文抽样和不支持语法拒绝样例。
@@ -138,7 +142,10 @@ Dedupe Ticket（第 2 项）：意图＝受限构建汉化补丁并提供成对�
    - 已复用三库、MIT 许可证；新建受限 env/fuses、三个 CLI/cmd、完整 manifest 与三条唯一编辑。pristine/pending/applied 成对恢复、原子状态、目标隔离和互斥均有实现；完整故障演练依第 4 项进行。
    - 命令：`node tools/selfcheck.mjs`（三锚点各 1、独立 marker、重复编辑无操作、两份 JS 语法通过、exe 恰好单字节变化）；所有 scripts/tools 的 `node --check` 通过；缺省/相对/重复 home 拒绝；`restore --check` 返回“干净、可采集”；`verify` 未应用返回 1。
    - Checkpoint：独立 reviewer 确认两项竞争缺陷后修复，再两轮限定复核通过。使用 Global mutex；复制临时文件完成后、真正 rename 前核验目标哈希；pending 恢复同时恢复 applied。没有安装文件变化，真实目标仅执行过原始状态 restore 空操作及只读检查（空操作只临时创建/释放目标锁）。后续仍需中文资源与副本演练，无范围变更。
-3. [ ] 首批翻译并 build。→ 验证：资源结构、插值名称/次数、标签结构、未知键拒绝；common 和目标页面实际 components 键覆盖。
+3. [x] 首批翻译并 build。→ 验证：资源结构、插值名称/次数、标签结构、未知键拒绝；common 和目标页面实际 components 键覆盖。
+   - 中文源库：common 380/380、settings 3635/3635、sessions 774/774、softwareFactory 1909/1909、inbox 55/55、onboarding 151/151、errors 11/11；components 本期 3002/3002（全库5718），合计9917叶。目标键及bundle引用证据见 `translations/components-scope.json`，不承诺其它2716个components键已译。
+   - 命令：`node tools/build_resource.mjs`、`node tools/selfcheck.mjs`、直接 ESM import 生成模块。全部通过；`translations/build/coverage.json` 保存覆盖率，输出自包含 `resources` 模块。12个资源拒绝样例通过，包括重复插值次数、格式、标签嵌套、自闭合、未知键、null、空串、URL及代码改变。
+   - Checkpoint：独立审查后修复两处stash、一处每PR必须批准、设置变更卡Before/After应为“更改前/更改后”（不改日期筛选）。保留原文条目均逐项核对为品牌/代码/URL/纯插值等合理项，没有普通英文整句占位。结构及高风险语义符合目标；未译namespace/键依既有英文fallback，实际UI待第5项。后续接口路径无变化，无新增计划调整。
 4. [ ] 在独立安装副本演练 dry-run、apply 两次、restore、损坏基线拒绝、替换第二个文件失败及 pending 恢复（第二个文件失败用外部条件制造，如对副本内第二个目标设只读或独占占用；中断后 pending 由自检脚本构造状态记录模拟；不向正式脚本加故障注入参数）。→ 验证：成对哈希一致；dry-run 不写安装目录；新翻译包按 restore → build → apply 更新；生成 JS 全部通过语法门禁。
 5. [ ] 准备可审阅产物及演练结果后，正式 apply 前请用户确认关闭完整性校验的代价；执行实际 UI 验收与一次 restore/reapply。→ 验证：下面所有本期项目通过；失败保留诊断并恢复。
 

@@ -1,0 +1,3792 @@
+{
+  "settings": {
+    "directoryUserLimits": {
+      "title": "管理用户上限",
+      "member": "{{name}} · {{email}}",
+      "pushHelp": "分别向每个所选组织应用一个个人覆盖值。上限不共享。未选择的组织保持原样。",
+      "noCap": "未配置上限",
+      "credits": "{{credits}} 百万积分",
+      "back": "返回",
+      "saving": "正在保存…",
+      "confirm": "应用于所选组织",
+      "retry": "审查未成功的组织",
+      "done": "完成",
+      "reviewSet": "审查设置覆盖值",
+      "reviewRemove": "审查移除覆盖值",
+      "loadError": "无法加载当前用户上限。",
+      "refresh": "刷新",
+      "membershipChanged": "组织成员资格已更改。继续前请查看可用组织。",
+      "projectionLag": "已保存的更改尚未出现在最新上报的上限中。请稍后刷新；已保存结果仍然有效。",
+      "loading": "正在加载组织上限…",
+      "removeReview": "从这些组织中移除个人覆盖值。",
+      "setReview": "在这些组织中分别设置 {{limit}} 的个人覆盖值。",
+      "removeWarning": "移除覆盖值后，将回退到各组织的组上限或全局上限。这可能提高实际生效上限。",
+      "effectiveAfter": "保存后生效：{{limit}}",
+      "unconfirmedHelp": "更新可能已经应用。重试前请刷新当前上限。不会重试已确认保存的项目。",
+      "saved": "已保存：{{limit}}",
+      "removed": "个人覆盖值已移除",
+      "failed": "未保存",
+      "rejected": "未保存 · 请求被拒绝",
+      "unconfirmed": "保存未确认",
+      "currentIndividual": "最新读取的个人覆盖值：{{limit}}",
+      "currentEffective": "最新读取的生效上限：{{limit}}",
+      "mixed": "所选组织的个人覆盖值不同。请明确输入新值，或移除覆盖值。",
+      "chooseOrganizations": "已选择 {{count}} 个。本次保存最多可选择 {{max}} 个组织。",
+      "selectOrganization": "选择 {{name}}",
+      "individual": "个人覆盖值",
+      "effective": "生效上限",
+      "notSet": "未设置",
+      "breakdown": "{{name}} 的上限明细",
+      "verificationFailed": "未保存 · 验证失败",
+      "failedHelp": "重试前请审查未成功的组织，重新检查可用性。",
+      "rejectedTitle": "本次尝试未保存",
+      "invalidRequestHelp": "请关闭此对话框，修正上限或组织选择后重试。",
+      "signInHelp": "请重新登录，然后重新打开用户上限。",
+      "accessHelp": "请先满足上方访问要求，再重新打开用户上限。",
+      "unavailableHelp": "重试前请审查未成功的组织，重新检查可用组织。",
+      "rateLimitHelp": "请稍等片刻，再审查未成功的组织以重试。",
+      "rejectedHelp": "重试前请解决上方问题。如需更改上限或组织，请重新打开此对话框。",
+      "noRetryTargets": "没有剩余可用组织",
+      "noRetryTargetsHelp": "请选择完成，检查成员资格和组织访问权限后再试。"
+    },
+    "userLimitBreakdown": {
+      "tierApplies": "适用",
+      "tierNotSet": "未设置",
+      "tierSuperseded": "已被取代",
+      "removeOverride": "移除覆盖值",
+      "individualLimitHelp": "每月上限以百万积分为单位，因此 50 表示 50000000 积分。个人覆盖值优先于此用户的组上限和全局上限。",
+      "aboutIndividualLimits": "关于个人上限",
+      "editIndividualOverride": "编辑个人覆盖值",
+      "setIndividualOverride": "设置个人覆盖值",
+      "individualLimitMCredits": "个人上限（百万积分）",
+      "eG5050mCredits": "例如，50（即 5000 万积分）",
+      "save": "保存",
+      "cancel": "取消",
+      "unlimited": "无限制",
+      "mCredits": "{{credits}} 百万积分",
+      "viaIndividualOverride": "来自个人覆盖值",
+      "viaGroup": "来自 {{groupName}} 组",
+      "viaGlobalUserLimit": "来自全局用户上限",
+      "noLimitsSet": "未设置上限",
+      "effectiveLimit": "生效上限",
+      "resolutionOrder": "优先顺序",
+      "individualOverride": "个人覆盖值",
+      "groupTier": "组 · {{groupName}}",
+      "filterGroup": "组",
+      "globalUserLimit": "全局用户上限"
+    },
+    "directoryGroupList": {
+      "usageLimit": "用量上限",
+      "configurationLabel": "{{label}}：{{detail}}",
+      "none": "无",
+      "editConfiguration": "编辑组配置",
+      "editGroup": "编辑 {{name}}",
+      "group": "组",
+      "organizations": "组织",
+      "appliedConfigurations": "已应用配置"
+    },
+    "addProjectModal": {
+      "cancel": "取消",
+      "confirm": "确认"
+    },
+    "appearancePreview": {
+      "codeDiffPreview": "代码差异预览"
+    },
+    "appearanceThemeSwatch": {
+      "aa": "Aa"
+    },
+    "configItemReview": {
+      "changedFile": "{{path}}（已更改）",
+      "physicalFile": "文件：{{path}}",
+      "noFiles": "没有要审查的文件。",
+      "explanation": {
+        "binary": "二进制文件。无法显示文本差异。",
+        "unchanged": "内容未更改。",
+        "limit": "文件差异超过显示上限。"
+      },
+      "fileAdded": "文件已添加。",
+      "fileDeleted": "文件已删除。",
+      "executableAdded": "已添加可执行权限。",
+      "executableRemoved": "已移除可执行权限。"
+    },
+    "directoryMembershipManagerModal": {
+      "theOwnerRoleInThisOrganization": "此组织的所有者角色授予企业管理控制台访问权限。",
+      "adminConsoleChangesAreAllowedBut": "允许在管理控制台中更改，但身份提供商之后的目录同步事件可能覆盖角色更改、重新添加已移除成员资格，或移除你在此添加的成员资格。",
+      "makeTheSameUpdateInYour": "请在身份提供商中进行相同更新，确保更改持久生效。此流程仅用于紧急或临时修正，并请在下次同步前验证 IdP 状态。",
+      "addOrganization": "添加组织",
+      "back": "返回",
+      "deactivate": "停用",
+      "cancel": "取消",
+      "confirm": "确认",
+      "noOrganizationsAreAvailable": "没有可用组织。",
+      "thisWillRemoveThemFromThe": "这会将其从企业组织中移除。他们将失去所有组织资源的访问权限，需要重新受邀才能加入。",
+      "thisActionCannotBeUndone": "此操作无法撤销",
+      "deactivatingAUserIsPermanentUntil": "停用用户后，除非再次邀请，否则将一直保持停用。",
+      "changesToApply": "待应用更改",
+      "reviewTheseUpdatesBeforeApplyingThem": "请审查这些更新，然后再应用到此成员。",
+      "noMembershipChangesToApply": "没有要应用的成员资格更改。",
+      "role": {
+        "user": "用户",
+        "manager": "管理员",
+        "owner": "所有者"
+      },
+      "action": {
+        "add": "添加",
+        "remove": "移除",
+        "change": "更改"
+      },
+      "addedAsRole": "<label>设为</label> <pill>{{role}}</pill>",
+      "removedWasRole": "<label>原为</label> <pill>{{role}}</pill>",
+      "changedRole": "<fromPill>{{from}}</fromPill> <label>改为</label> <toPill>{{to}}</toPill>",
+      "directorySyncSourceOfTruth": "目录同步仍是 {{name}} 的权威来源",
+      "removeOrganization": "移除 {{organization}}",
+      "membershipRoleFor": "{{organization}} 的成员角色",
+      "deactivating": "正在停用…",
+      "saving": "正在保存…",
+      "iUnderstandApplyChanges": "我已了解，应用更改",
+      "confirmChanges": "确认更改",
+      "manageMemberTitle": "管理 {{name}} · {{email}}",
+      "deactivateMember": "停用 {{name}}？"
+    },
+    "directoryTable": {
+      "manageMemberships": "管理成员资格",
+      "manageLimits": "管理用户上限",
+      "manageLimitsFor": "管理 {{name}} 的用户上限",
+      "limitsLoading": "正在加载当前上限…",
+      "limitsUnavailable": "无法加载当前上限。",
+      "limitsMixed": "生效上限因组织而异。",
+      "limitsUniform": "生效上限：每个组织每月 {{credits}} 百万积分。",
+      "limitsNone": "所有组织均未配置生效上限。",
+      "limitsHelp": "查看或编辑此用户各组织的上限。",
+      "enterpriseAdmin": "企业管理员",
+      "previous": "上一项",
+      "next": "下一步",
+      "name": "名称",
+      "email": "邮箱",
+      "organizations": "组织",
+      "status": "状态",
+      "statusLabel": {
+        "active": "活跃",
+        "inactive": "未启用",
+        "pending": "待处理"
+      },
+      "enterpriseAdminDescription": "此用户在 {{organization}} 组织中的所有者角色授予管理控制台访问权限。",
+      "isEnterpriseAdmin": "{{name}} 是企业管理员",
+      "directorySyncManaged": "由目录同步管理",
+      "uiManaged": "由界面管理",
+      "directorySyncManagedDescription": "身份提供商仍是权威来源。管理控制台编辑可能被下次同步覆盖。",
+      "uiManagedDescription": "可以在此目录页面管理成员资格。",
+      "moreCount_one": "另有 {{count}} 项",
+      "moreCount_other": "另有 {{count}} 项",
+      "manageMember": "管理 {{name}}",
+      "showingRange": "显示 {{total}} 项中的 {{start}}-{{end}}",
+      "pageOf": "第 {{current}} 页，共 {{total}} 页"
+    },
+    "environmentVariablesSection": {
+      "editVariable": "编辑变量",
+      "removeVariable": "移除变量",
+      "newVariableKey": "新变量键",
+      "variableKey": "VARIABLE_KEY",
+      "newVariableValue": "新变量值",
+      "value": "值",
+      "cancelEdit": "取消编辑",
+      "hideValue": "隐藏值",
+      "showValue": "显示值",
+      "updateVariable": "更新变量",
+      "addVariable": "添加变量"
+    },
+    "memberRow": {
+      "revokeInvite": "撤销邀请",
+      "removeMember": "移除成员",
+      "invited": "已邀请",
+      "active": "活跃",
+      "role": {
+        "owner": "所有者",
+        "manager": "管理员",
+        "user": "用户"
+      },
+      "directorySyncManagedTooltip": "通过目录同步配置的用户必须在 IDP 中管理。",
+      "manageMember": "管理 {{name}}"
+    },
+    "paymentMethodCard": {
+      "default": "默认",
+      "cardHolder": "持卡人",
+      "exp": "到期"
+    },
+    "paymentMethodSelection": {
+      "addPaymentMethod": "添加付款方式",
+      "factoryCurrentlyDoesNotSupportPayments": "Factory 目前不支持需要 3D Secure（3DS）认证的付款。请使用无需 3D Secure 的付款方式。",
+      "factoryDoesntStoreYourCreditCard": "Factory 不会存储你的信用卡信息。所有信息均由 Stripe 管理。"
+    },
+    "personaAccessTable": {
+      "role": "角色",
+      "enabled": "已启用",
+      "workRole": {
+        "engineering": "工程",
+        "product": "产品",
+        "design": "设计",
+        "finance": "财务",
+        "marketing": "市场营销",
+        "sales": "销售",
+        "operations": "运营",
+        "founder": "创始人",
+        "somethingElse": "其他"
+      },
+      "configureDefaults": "配置 {{role}} 默认设置",
+      "roleEnabled": "{{role}} 已启用"
+    },
+    "activeSessionsWarningModal": {
+      "cancel": "取消",
+      "continue": "继续",
+      "activeSessionsInThisProject": "此项目中的活跃 Session",
+      "wouldYouLikeToContinue": "是否继续？",
+      "sessionsAffectedWarning_one": "警告：当前有 {{count}} 个正在运行的 Session 会受到分支切换影响。切换到 <chip>{{branchName}}</chip> 将更改这些 Session 工作目录的分支。",
+      "sessionsAffectedWarning_other": "警告：当前有 {{count}} 个正在运行的 Session 会受到分支切换影响。切换到 <chip>{{branchName}}</chip> 将更改这些 Session 工作目录的分支。"
+    },
+    "branchOriginSyncButton": {
+      "originSyncSettings": "Origin 同步设置",
+      "onSessionStart": "Session 启动时",
+      "pullFromOrigin": "从 Origin 拉取",
+      "stayOnLocal": "保留本地状态",
+      "branchList": "分支列表",
+      "includeOriginBranches": "包含 Origin 分支",
+      "localBranchesOnly": "仅本地分支"
+    },
+    "branchSelector": {
+      "copyBranchName": "复制分支名称",
+      "search": "搜索",
+      "noBranchesMatchYourSearch": "没有符合搜索条件的分支",
+      "createBranch": "创建分支",
+      "cancel": "取消",
+      "create": "创建",
+      "theBranchIsCreatedInThe": "Session 启动时会在新工作树中创建分支。当前检出仍保留原分支。",
+      "newBranchName": "new-branch-name",
+      "branch": "分支",
+      "copy": "复制",
+      "baseBranch": "基础分支：<chip>{{branch}}</chip>",
+      "baseBranchDetachedHead": "基础分支：<muted>当前提交（分离的 HEAD）</muted>"
+    },
+    "branchSwitchResolutionModal": {
+      "cancel": "取消",
+      "stashChanges": "使用 git stash 储藏更改",
+      "commitAsWip": "提交为 WIP",
+      "uncommittedChangesOnCurrentBranch": "当前分支有未提交的更改",
+      "chooseHowToHandleBeforeSwitching": "切换到 <chip>{{branchName}}</chip> 前，请选择处理方式。",
+      "filesChanged_one": "{{count}} 个文件已更改",
+      "filesChanged_other": "{{count}} 个文件已更改",
+      "untrackedFiles_one": "{{count}} 个未跟踪文件",
+      "untrackedFiles_other": "{{count}} 个未跟踪文件"
+    },
+    "cloudSessionDeprecationWarning": {
+      "cloudMachinesHaveBeenSupersededBy": "云计算机已被 Droid 计算机取代",
+      "cloudIsStillSupportedButWe": "云计算机仍受支持，但我们强烈建议切换到 Droid 计算机以提高稳定性。",
+      "switchToDroidComputers": "切换到 Droid 计算机"
+    },
+    "computerConnectionFailedWarning": {
+      "tryAgain": "重试",
+      "couldNotConnectTo": "无法连接到 {{name}}",
+      "couldNotConnectToComputer": "无法连接到计算机"
+    },
+    "daemonNotRunningWarning": {
+      "couldNotConnectToLocalComputer": "无法连接到本地计算机",
+      "pleaseRestartTheAppAndTry": "请重启应用后重试",
+      "learnMore": "了解更多",
+      "openDesktopOrRunDaemon": "打开 Factory 桌面应用，或在终端运行 <code>droid daemon</code>"
+    },
+    "machineSelector": {
+      "deprecationWarning": "弃用警告",
+      "newTemplate": "新建环境",
+      "newComputer": "新建计算机",
+      "loading": "正在加载",
+      "templatesFailedToLoad": "环境加载失败",
+      "status": {
+        "connecting": "正在连接",
+        "connected": "已连接",
+        "connectionFailed": "连接失败",
+        "selected": "已选择"
+      },
+      "unableToLoadTemplates": "无法加载环境"
+    },
+    "projectSelector": {
+      "search": "搜索",
+      "addNewProject": "添加新项目",
+      "selectProject": "选择项目"
+    },
+    "worktreeControls": {
+      "default": "默认",
+      "on": "开启",
+      "off": "关闭",
+      "defaultEnabledTooltip": "新 Session 是否默认启用工作树。",
+      "lifecycle": "生命周期",
+      "setupProfile": "设置配置档",
+      "startWithoutSetupProfile": "不使用设置配置档启动",
+      "sharedByRepository": "按仓库共享",
+      "worktreeSetupSettings": "工作树设置",
+      "worktree": "工作树",
+      "lifecycleOption": {
+        "ephemeral": "临时",
+        "ephemeralTooltip": "仅供单个 Session 使用、会自动清理的工作树。",
+        "persistent": "持久化",
+        "persistentTooltip": "供多个 Session 使用、只能手动删除的工作树。"
+      },
+      "loadingProfiles": "正在加载配置档…",
+      "noProfilesYet": "暂无配置档"
+    },
+    "worktreeDeleteModal": {
+      "cancel": "取消",
+      "deleteWorktree": "删除工作树",
+      "warningThisWorktreeHas": "警告：此工作树包含",
+      "uncommittedChanges": "未提交的更改",
+      "couldNotCheckThisWorktreeFor": "无法检查此工作树是否有未保存工作。其中所有内容都将随工作树删除。",
+      "checkingCurrentGitStatus": "正在检查当前 Git 状态…",
+      "originCouldNotBeReachedSo": "无法访问 Origin，分支详情可能已过时。",
+      "path": "路径：",
+      "branch": "分支：",
+      "deleteLocalBranch": "删除本地分支",
+      "deleteOriginBranch": "删除 Origin 分支",
+      "deletingTheOriginBranchClosesThe": "删除 Origin 分支会关闭未关闭的拉取请求。",
+      "prOpen": "PR 未关闭",
+      "prMerged": "PR 已合并",
+      "prClosed": "PR 已关闭",
+      "alsoArchiveAllSessions": "删除此工作树也会归档所有关联 Session。",
+      "alsoArchiveSessions_one": "删除此工作树也会归档 {{count}} 个关联 Session。",
+      "alsoArchiveSessions_other": "删除此工作树也会归档 {{count}} 个关联 Session。",
+      "archivingDeletesWorktree": "归档此 Session 将删除其工作树。",
+      "changedFiles_one": "{{count}} 个已更改文件",
+      "changedFiles_other": "{{count}} 个已更改文件",
+      "untrackedFiles_one": "{{count}} 个未跟踪文件",
+      "untrackedFiles_other": "{{count}} 个未跟踪文件"
+    },
+    "worktreeSetupProfileModal": {
+      "profileName": "配置档名称",
+      "required": "（必填）",
+      "eGNodeJsInstall": "例如 Node.js 安装",
+      "runsAtTheRootOfThe": "创建时在新工作树根目录运行。$REPO_ROOT_PATH 指向主检出目录。",
+      "setupScript": "设置脚本",
+      "setEuoPipefailNpmCiNpm": "set -euo pipefail\nnpm ci\nnpm run build",
+      "thisPromptRunsFirstTheTask": "此提示词首先运行。启动 Session 的任务会排队等待其完成。",
+      "initialPromptToDroid": "给 Droid 的初始提示词",
+      "reviewTheProjectConventionsBeforeStarting": "开始前请查看项目约定。",
+      "runsAtTheRootOfThe2": "移除前在工作树根目录运行。",
+      "cleanupScript": "清理脚本",
+      "setEuoPipefailDockerComposeDown": "set -euo pipefail\ndocker compose down",
+      "close": "关闭",
+      "cancel": "取消",
+      "title": "工作树设置配置档",
+      "saving": "正在保存…",
+      "saveAndRun": "保存并运行",
+      "profileNameRequired": "配置档名称为必填项",
+      "contentRequired": "设置脚本、初始提示词和清理脚本中至少需要填写一项"
+    },
+    "setupScriptSection": {
+      "setupScript": "设置脚本",
+      "defineAShellScriptToRun": "定义工作区初始化时运行的 shell 脚本。基础镜像使用 Ubuntu。",
+      "setupScript2": "设置脚本",
+      "binBashInstallDependenciesNpmInstall": "#!/bin/bash\n# Install dependencies\nnpm install\n\n# Run build\nnpm run build",
+      "characterCount": "{{count}} / {{max}} 个字符"
+    },
+    "subOrganizationList": {
+      "organization": "组织",
+      "euRegion": "欧盟区域",
+      "globalRegion": "全球区域",
+      "eu": "欧盟",
+      "global": "全局",
+      "viewDirectoryMembers": "查看目录成员",
+      "viewDirectoryMembersFor": "查看 {{name}} 的目录成员",
+      "manageEnterpriseControls": "管理企业控制",
+      "manageEnterpriseControlsFor": "管理 {{name}} 的企业控制",
+      "manageGlobalUsageLimit": "管理全局用量上限",
+      "manageGlobalUsageLimitFor": "管理 {{name}} 的全局用量上限",
+      "renameOrganization": "重命名组织",
+      "renameNamed": "重命名 {{name}}",
+      "manageBindings": "管理 IdP 组映射",
+      "manageBindingsFor": "管理 {{name}} 的 IdP 组映射"
+    },
+    "templateSelectionCard": {
+      "searchForATemplate": "搜索模板",
+      "new": "新建",
+      "noTemplatesMatch": "没有符合搜索条件的模板",
+      "noTemplatesAvailable": "没有可用模板。请在设置中创建。",
+      "templateOutdated": "此模板已过时，需要重新构建。请前往设置 > 云计算机模板重新构建。",
+      "integrationRequired": "需要 GitHub 或 GitLab 集成。请在设置中连接集成，以使用此模板。"
+    },
+    "trustFolderDialog": {
+      "dontTrust": "不信任",
+      "trustThisFolder": "信任此文件夹？",
+      "droidMayReadWriteOrExecute": "Droid 可能读取、写入或执行此文件夹中的文件，并加载此处定义的项目配置，包括钩子和 MCP 服务器。仅在信任此文件夹时继续。",
+      "saving": "正在保存…",
+      "trustFolder": "信任文件夹"
+    },
+    "workingDirectoryInput": {
+      "browse": "浏览…"
+    },
+    "workingDirectorySection": {
+      "setWorkingProjectDirectory": "设置工作项目目录",
+      "recentDirectories": "最近的目录"
+    },
+    "autoModelCandidatesTable": {
+      "addGuidelinesDescribingThisModel": "启用此模型前，请添加描述其特性的指南。Factory 默认模型池之外的模型没有自带指南。",
+      "model": "模型",
+      "enabled": "已启用",
+      "guidelines": "指南",
+      "actions": "操作",
+      "added": "已添加",
+      "off": "关闭",
+      "noAutoModelCandidates": "没有自动模型候选。",
+      "addModel": "添加模型",
+      "guidelinesFor": "{{name}} 指南",
+      "guidelinesOverLimit": "{{length}} / {{max}}。请缩短后保存。",
+      "hideGuidelines": "隐藏指南",
+      "viewGuidelines": "查看指南",
+      "editGuidelines": "编辑指南",
+      "addGuidelines": "添加指南",
+      "enableModel": "启用 {{name}}",
+      "guidelinesRequired": "需要指南",
+      "removeModel": "移除 {{name}}",
+      "servedBy": "服务提供方",
+      "servedByFor": "{{name}} 的服务提供方"
+    },
+    "inviteTable": {
+      "user": "用户",
+      "manager": "管理员",
+      "owner": "所有者",
+      "alreadyMemberNotInOrg": "已是成员（不在 {{organization}} 组织中）",
+      "alreadyMemberNotInRootOrg": "已是成员（不在根组织中）",
+      "upgradingRole": "升级角色（{{from}} → {{to}}）",
+      "downgradingRole": "降级角色（{{from}} → {{to}}）",
+      "email": "邮箱",
+      "role": "角色",
+      "status": "状态",
+      "issue": "问题",
+      "removeEmail": "移除 {{email}}"
+    },
+    "bulkUserLimitsModal": {
+      "downloadReportCsv": "下载 CSV 报告",
+      "done": "完成",
+      "cancel": "取消",
+      "howLimitsWork": "上限如何生效",
+      "addUsersBelowThenEnterEach": "在下方添加用户，然后在表格中以百万积分为单位输入每个上限。例如，输入 5 表示 500 万积分。可使用行操作下拉菜单移除个人覆盖值。",
+      "enterUserEmailAddresses": "输入用户邮箱地址",
+      "nameCompanyCom": "name@company.com",
+      "separateMultipleEmailAddressesWithCommas": "多个邮箱地址可用逗号、空格分隔，或按 Enter 输入",
+      "or": "或",
+      "importFromCsv": "从 CSV 导入",
+      "downloadTemplate": "下载模板",
+      "dropACsvFileHereOr": "将 CSV 文件拖到这里，或点击浏览",
+      "columnsEmailActionLimitMCredits": "列：email、action、limit_m_credits（值以百万为单位）",
+      "keepEditing": "继续编辑",
+      "discard": "放弃",
+      "duplicatesSkipped_one": "已跳过 {{count}} 个重复项",
+      "duplicatesSkipped_other": "已跳过 {{count}} 个重复项",
+      "rowsSkippedListFull_one": "列表已满，已跳过 {{count}} 行",
+      "rowsSkippedListFull_other": "列表已满，已跳过 {{count}} 行",
+      "rowsNeedAttention_one": "{{count}} 行需要处理",
+      "rowsNeedAttention_other": "{{count}} 行需要处理",
+      "detailsSeparator": "，",
+      "addedRowsWithDetails_one": "已添加 {{count}} 行用户上限（{{details}}）。",
+      "addedRowsWithDetails_other": "已添加 {{count}} 行用户上限（{{details}}）。",
+      "addedRows_one": "已添加 {{count}} 行用户上限。",
+      "addedRows_other": "已添加 {{count}} 行用户上限。",
+      "usersAlreadyInList_one": "用户已在列表中。",
+      "usersAlreadyInList_other": "用户已在列表中。",
+      "onlyRowsCanBeEdited": "一次只能编辑 {{max}} 行。",
+      "fileExceedsLimit": "文件超过 5 MB 上限。请使用较小文件。",
+      "csvMissingRequiredColumns": "CSV 必须包含必需列：email、action、limit_m_credits。请下载模板后重试。",
+      "noUserLimitRowsFound": "上传文件中未找到用户上限行。",
+      "csvTruncated": "CSV 包含 {{total}} 行，仅导入前 {{max}} 行。",
+      "noResultReturned": "未返回结果",
+      "requestFailed": "请求失败",
+      "fixOrRemoveInvalidRows": "应用更新前，请修复或移除无效行。",
+      "noPendingUpdates": "没有待应用的更新。",
+      "applyingValidRows_one": "正在应用 {{count}} 个有效行；{{skipped}}。",
+      "applyingValidRows_other": "正在应用 {{count}} 个有效行；{{skipped}}。",
+      "invalidRowsSkipped_one": "已跳过 {{count}} 个无效行",
+      "invalidRowsSkipped_other": "已跳过 {{count}} 个无效行",
+      "uploadCsvOrTxt": "请上传 CSV 或 TXT 文件。",
+      "updatingUserLimits": "正在更新用户上限…",
+      "userLimitResults": "用户上限结果",
+      "bulkUpdateUserLimits": "批量更新用户上限",
+      "applyUpdates": "应用更新（{{pendingCount}}）",
+      "complete": "完成",
+      "updatingProgress": "正在更新… {{sent}}/{{total}}",
+      "stopUpdating": "停止更新？",
+      "discardUserLimitUpdates": "放弃用户上限更新？",
+      "updatesAlreadySent": "已发送 {{sent}} / {{total}} 项更新。现在关闭将停止剩余更新，已应用的更新无法撤销。",
+      "rowsEntered_one": "已输入 {{count}} 行用户上限。关闭将放弃所有进度。",
+      "rowsEntered_other": "已输入 {{count}} 行用户上限。关闭将放弃所有进度。"
+    },
+    "userLimitsTable": {
+      "eG55m": "例如 5（即 500 万）",
+      "setLimit": "设置上限",
+      "remove": "移除",
+      "email": "邮箱",
+      "name": "名称",
+      "action": "操作",
+      "limitMCredits": "上限（百万积分）",
+      "status": "状态",
+      "issue": "问题",
+      "actionFor": "{{email}} 的操作",
+      "limitInMCreditsFor": "{{email}} 的上限（百万积分）",
+      "removeEmail": "移除 {{email}}"
+    },
+    "computerSecrets": {
+      "secrets": "机密",
+      "runtimeCredentialsForManagedDroidComputers": "托管 Droid 计算机的运行时凭据。",
+      "addSecret": "添加机密",
+      "readOnly": "只读",
+      "secretScope": "机密范围",
+      "retry": "重试",
+      "findASecret": "查找机密",
+      "findASecret2": "查找机密…",
+      "noMatchingSecrets": "没有匹配的机密。",
+      "clearSearch": "清除搜索",
+      "valuesCannotBeViewedAfterSaving": "保存后无法查看值。",
+      "cancel": "取消",
+      "scope": "范围",
+      "secretName": "机密名称",
+      "apiToken": "API_TOKEN",
+      "enterSecretValue": "输入机密值",
+      "scopeText": {
+        "personal": {
+          "deleteConfirm": "从个人机密中删除 {{key}}？",
+          "empty": "暂无个人机密",
+          "label": "个人",
+          "list": "个人机密"
+        },
+        "organization": {
+          "deleteConfirm": "从组织机密中删除 {{key}}？",
+          "empty": "暂无组织机密",
+          "label": "组织",
+          "list": "组织机密"
+        }
+      },
+      "keyTooLong": "机密名称不能超过 {{max}} 个字符。",
+      "keyInvalidFormat": "使用大写字母、数字和下划线，并以字母或下划线开头。",
+      "nameAlreadyExists": "此名称已存在。请从菜单中选择编辑。",
+      "secretAdded": "机密已添加。",
+      "secretEdited": "机密已编辑。",
+      "secretDeleted": "机密已删除。",
+      "loadingSecrets": "正在加载机密",
+      "emptyPersonalDescription": "组织默认值仍然适用。为自己的计算机添加机密。",
+      "emptyOrganizationDescription": "添加一次共享凭据，供所有人的托管计算机使用。",
+      "emptyOrganizationReadOnlyDescription": "管理员或所有者可在此添加共享凭据。",
+      "edit": "编辑",
+      "delete": "删除",
+      "actionsFor": "{{key}} 的操作",
+      "deleteDescription": "无法恢复已保存的值。",
+      "saveDescription": "保存后，值保持私密。编辑机密以轮换其值。",
+      "deleteSecretTitle": "删除机密？",
+      "editSecret": "编辑机密",
+      "deletePersonalOverrideDescription": "刷新并重启后，你的计算机会回退到组织值。",
+      "deleteExistingComputersDescription": "现有计算机在刷新并重启前保留当前环境。",
+      "personalScopeDescription": "仅限你在此组织中的托管计算机。",
+      "organizationScopeDescriptionNamed": "{{organization}} 中的每位成员和服务账号。",
+      "organizationScopeDescription": "每位成员和服务账号。",
+      "overridesOrganizationValue": "这会为你的计算机覆盖组织值。",
+      "nameFormatHint": "大写字母、数字和下划线。",
+      "newSecretValue": "新机密值",
+      "secretValue": "机密值",
+      "hideDraftValue": "隐藏草稿值",
+      "showDraftValue": "显示草稿值",
+      "hide": "隐藏",
+      "show": "显示"
+    },
+    "customModelEditorModal": {
+      "optionTrue": "{\"option\": true}",
+      "remove": "移除",
+      "addEntry": "添加条目",
+      "cancel": "取消",
+      "theStoredApiKeyIsHidden": "存储的 API 密钥已隐藏。更新此模型前，请设置环境变量或凭据辅助程序。",
+      "credentialMigrationRequired": "需要迁移凭据",
+      "customModelDocumentation": "自定义模型文档",
+      "configurationEditorMode": "配置编辑器模式",
+      "modelConfiguration": "模型配置",
+      "format": "格式化",
+      "editOneModelObjectOmitOverrides": "编辑单个模型对象。省略覆盖设置则使用 Droid 默认值。",
+      "useModelFromSettingsJson": "使用设置 JSON 中的模型",
+      "refreshesEvery5MinutesByDefault": "默认每 5 分钟刷新一次，出现 401 后也会刷新一次。JSON 中同时配置时，其优先级高于 apiKey。",
+      "theStoredCredentialIsHiddenAnd": "存储的凭据已隐藏，将予以保留。选择其他身份验证方式以替换或移除。",
+      "forLocalServersOrGatewaysThat": "适用于不需要 API 凭据的本地服务器或网关。",
+      "authenticationOptions": "身份验证选项",
+      "advancedOptions": "高级选项",
+      "changeProviderTo": "将提供商更改为 {{provider}}？",
+      "endpoint": "端点：",
+      "awsRegion": "AWS 区域：",
+      "notSet": "未设置",
+      "apiFormat": "API 格式：",
+      "compatibleSettingsRetained": "将保留模型 ID 和兼容设置。传输协议特有的凭据和连接字段可能被移除。使用前请审查新提供商。",
+      "anthropicBearerRemoved": "将移除 Anthropic Bearer 模式。新的 API 格式使用其默认身份验证传输方式。",
+      "keepCurrentProvider": "保留当前提供商",
+      "changeProvider": "更改提供商",
+      "environmentResolvedInDaemon": "在守护进程环境中解析，而非浏览器环境。此编辑器不会检查变量是否存在。",
+      "model": "模型",
+      "searchModelsOrEnterModelId": "搜索模型或输入模型 ID",
+      "suggestionsNotVerified": "可使用任意模型 ID。建议项未针对你的账号验证。",
+      "storedCredential": {
+        "key": "密钥",
+        "credentialHelper": "凭据辅助程序",
+        "bedrockAuthRefreshCommand": "Bedrock 身份验证刷新命令",
+        "bedrockCredentialsCommand": "Bedrock 凭据命令",
+        "headers": "标头",
+        "header": "标头 {{name}}"
+      },
+      "literalApiKeyNotAllowed": "API 密钥明文（不允许）",
+      "entryName": "{{label}} 名称 {{index}}",
+      "entryValue": "{{label}} 值 {{index}}",
+      "removeEntry": "移除 {{label}} 条目 {{index}}",
+      "addEntryFor": "添加 {{label}} 条目",
+      "credentialHeadersNeedReference": "凭据标头（如 Authorization 或 API 密钥）必须使用 ${VARIABLE_NAME} 引用。",
+      "useEnvironmentVariableInstead": "请改用环境变量。共享模型中不能存储 API 密钥明文。",
+      "saving": "正在保存…",
+      "saveChanges": "保存更改",
+      "addModel": "添加模型",
+      "editCustomModel": "编辑自定义模型",
+      "addCustomModel": "添加自定义模型",
+      "formMode": "表单",
+      "configurationEditedInJson": "此配置通过 JSON 编辑。",
+      "fixJsonSyntax": "修复 JSON 语法后可返回表单。",
+      "bedrockAuth": {
+        "default": "现有配置：AWS_BEARER_TOKEN_BEDROCK 优先。否则 Droid 会先尝试 AWS 凭据，再尝试凭据命令（先于刷新命令）。请选择方式以明确优先级。",
+        "environmentApiKey": "在执行环境中设置 AWS_BEARER_TOKEN_BEDROCK。模型不会存储令牌，也不会使用 AWS 凭据。",
+        "credentialsCommand": "首先尝试现有可用 AWS 凭据。否则，命令输出 AWS STS Credentials JSON 用于签名，不会导出变量。Bedrock Bearer 令牌会被忽略。",
+        "credentialChain": "使用 AWS 凭据链。配置了刷新命令时，仅在凭据不可用时运行。此模型会忽略 Bedrock Bearer 令牌。"
+      },
+      "additionalConfigurationPreserved": "额外配置会保留。<editJson>编辑 JSON</editJson>",
+      "organizationBedrockCredentials": "Bedrock 凭据在各执行环境中解析。请在那里配置 AWS 配置档、可信凭据命令或 AWS_BEARER_TOKEN_BEDROCK。请勿将凭据粘贴到共享设置中。",
+      "organizationCredentials": "凭据在各成员计算机上解析。请使用 ${MODEL_API_KEY} 等环境引用或凭据辅助程序。请勿将 API 密钥明文粘贴到配置中。",
+      "storedCredentialHidden": "{{label}} 已隐藏，将予以保留。",
+      "removeStoredCredential": "移除已存储的 {{label}}"
+    },
+    "disconnectConfirmModal": {
+      "cancel": "取消",
+      "note": "注意：",
+      "appUninstall": {
+        "slack": "在此断开连接不会从 Slack 工作区卸载 Factory 应用。若要完全撤销访问，请从工作区的<anchor>管理应用</anchor>中移除 Factory。这样 Factory 会自动断开连接，所有依赖此安装的组织成员都将失去访问权限。",
+        "jira": "在此断开连接会释放此站点，让其他 Factory 组织可以关联，但不会从 Jira 卸载 Factory 应用。若要完全撤销访问，请从 Atlassian 站点的<anchor>管理应用</anchor>中卸载 Factory。所有依赖此安装的组织成员都将失去访问权限。",
+        "linear": "在此断开连接不会撤销 Factory 对 Linear 工作区的访问。若要完全撤销访问，请从工作区的<anchor>已授权应用</anchor>中移除 Factory。所有依赖此安装的组织成员都将失去访问权限。",
+        "microsoftTeams": "在此断开连接不会从 Teams 租户卸载 Factory 应用。若要完全撤销访问，请在 Teams 管理中心的管理应用中移除 Factory，或从每个已添加的团队中移除。所有依赖此安装的组织成员都将失去访问权限。",
+        "googleChat": "在此断开连接会释放此 Google Workspace，让其他 Factory 组织可以连接，但不会从 Google Chat 移除 Droid 应用。若要完全撤销访问，请在 Google 管理控制台的 Chat 应用中移除 Droid。所有依赖此安装的组织成员都将失去访问权限。"
+      },
+      "revokeAccessWithLink": "若要完全撤销访问，你需要<anchor>在此</anchor>从 {{integration}} 账号中移除应用。",
+      "revokeAccessWithoutLink": "若要完全撤销访问，你需要访问 {{integration}} 账号的应用页面，并移除此应用。",
+      "affectsOrganizationMembers": "此操作会影响所有依赖此安装的 Factory 组织成员。",
+      "affectsConnectedOrganizations": "此操作会影响你已连接此账号的所有 Factory 组织。",
+      "disconnecting": "正在断开连接…",
+      "disconnect": "断开连接",
+      "title": "断开 {{integration}} 连接？",
+      "removesOrganizationConnection": "这会移除组织与 {{integration}} 的连接。",
+      "removesPersonalConnection": "这会移除你个人与 {{integration}} 的连接。",
+      "effects": {
+        "removeStoredCredentialsAndConfiguration": "移除存储的凭据和配置",
+        "disableForAllMembers": "为所有组织成员禁用此集成",
+        "requireReconnection": "再次使用此集成时需要重新连接",
+        "removeYourStoredCredentials": "移除你存储的凭据"
+      },
+      "effectsTitleOrganization": "此操作会影响整个组织：",
+      "effectsTitlePersonal": "此操作将："
+    },
+    "integrationStatusSection": {
+      "refreshConnectionStatus": "刷新连接状态",
+      "disconnect": "断开连接",
+      "onlyOrganizationManagersAndOwnersCan": "仅组织管理员和所有者可以断开或重新连接此集成。",
+      "restrictedAccess": "访问受限",
+      "checkingConnection": "正在检查连接…",
+      "verifyingYourIntegrationStatus": "正在验证集成状态",
+      "installations": "安装：",
+      "groups": "组：",
+      "statusChecking": "正在检查连接",
+      "statusActive": "连接正常",
+      "statusFailing": "连接异常",
+      "onlyManagersCanDisconnect": "只有管理员和所有者可以断开组织集成",
+      "onlyManagersCanReconnect": "只有管理员和所有者可以重新连接组织集成",
+      "addInstallation": "添加安装",
+      "reconnect": "重新连接",
+      "workspaceValue": "工作区：{{workspace}}",
+      "teamValue": "团队：{{teamName}}",
+      "userValue": "用户：{{username}}",
+      "emailValue": "邮箱：{{email}}",
+      "connectionCheckSuccessful": "连接检查成功",
+      "connectionCheckFailed": "连接检查失败"
+    },
+    "legacyModelWarningModal": {
+      "keepUsingLegacy": "继续使用旧版",
+      "thisModelIsNoLongerThe": "此模型已不是最新版本",
+      "switchToLatest": "切换到最新版（{{replacementModelName}}）",
+      "supersededDescription": "{{legacyModelName}} 已被新版本取代。你可以继续使用，或立即切换以获得最新改进。"
+    },
+    "membersTable": {
+      "search": "搜索…",
+      "filterByRole": "按角色筛选",
+      "clearRoleFilter": "清除角色筛选",
+      "member": "成员",
+      "email": "邮箱",
+      "role": "角色",
+      "status": "状态",
+      "roleFilter": {
+        "all": "所有角色",
+        "owner": "所有者",
+        "manager": "管理员",
+        "user": "用户",
+        "invited": "已邀请"
+      },
+      "filters": "筛选条件",
+      "filtersWithCount": "筛选条件 {{activeFilterCount}}",
+      "noMatchingMembers": "没有匹配的成员。",
+      "noMembersYet": "暂无成员。",
+      "memberRoleFallback": "成员",
+      "loading": "正在加载…",
+      "loadMore": "加载更多"
+    },
+    "modelAccessTable": {
+      "required": "必填",
+      "noFactoryModelsAvailable": "没有可用的 Factory 模型。",
+      "dynamic": "动态",
+      "columns": {
+        "model": "模型",
+        "fast": "快速",
+        "multiplier": "倍率",
+        "enabled": "已启用"
+      },
+      "ungroupedLabel": "其他",
+      "yes": "是",
+      "toggleModel": "切换 {{modelName}}"
+    },
+    "networkPolicySection": {
+      "whenEnabledAllApiAndApplication": "启用后，所有 API 和应用请求都必须来自允许的 IP 地址。适用于 CLI、网页应用和 API 密钥用量。",
+      "supportsIndividualIpv4AddressesAndCidr": "支持单个 IPv4 地址和 CIDR 范围。可粘贴以逗号、空格或换行分隔的多个条目。保存后更改立即生效。",
+      "networkPolicy": "网络策略",
+      "restrictOrganizationAccessToTrustedIpv4": "将组织访问限制为受信任的 IPv4 地址和 CIDR 范围。",
+      "enableIpRestrictions": "启用 IP 限制",
+      "addAtLeastOneIpAddress": "至少添加一个 IP 地址才能保存。",
+      "typeOrPasteIpAddressesE": "输入或粘贴 IP 地址（例如 10.0.0.0/8、192.168.1.1）",
+      "yourIp": "你的 IP：{{clientIp}}",
+      "matchesAllowlist": "匹配允许列表",
+      "notInAllowlist": "不在允许列表中，你将失去访问权限",
+      "ipEntryCount_one": "{{count}} 个 IP 条目",
+      "ipEntryCount_other": "{{count}} 个 IP 条目",
+      "duplicateIpEntry": "重复的 IP 条目",
+      "invalidIpEntry": "无效的 IPv4 地址或 CIDR 范围"
+    },
+    "permissionRulesEditor": {
+      "examples": "示例",
+      "atLeastOnePerGroupAll": "每组至少一个。全部通过后规则才会生效。",
+      "addExample": "添加示例",
+      "passMeansTheExpectationIsMet": "通过表示符合预期，并非获准运行。命令绝不会执行。",
+      "permissionRules": "权限规则",
+      "rules": "规则",
+      "addRule": "添加规则",
+      "fixTheJsonToBrowseOr": "修复 JSON 后可浏览或添加规则。",
+      "ruleEditorView": "规则编辑器视图",
+      "pasteRulesJsonARulesArray": "粘贴规则 JSON、规则数组或 settings.json。这将替换规则草稿，忽略其他设置并保留 ID。保存前请审查组织范围。",
+      "permissionRulesJson": "权限规则 JSON",
+      "enabled": "已启用",
+      "deleteRule": "删除规则",
+      "thisRuleIsDisabledExamplesAre": "此规则已禁用，将跳过示例。较小范围中具有此 ID 的规则仍被抑制；删除此规则可解除抑制。",
+      "ruleId": "规则 ID",
+      "explanationOptional": "说明（可选）",
+      "whenThisRuleMatches": "此规则的匹配条件",
+      "commandStartsWith": "命令以此开头",
+      "exactCaseSensitiveTokensExtraArguments": "精确且区分大小写的 token。后面可以有额外参数。",
+      "alternative": "备选项",
+      "addAlternative": "添加备选项",
+      "addToken": "添加 token",
+      "oneBoxPerAlternativeAddToken": "每个备选项一个输入框。“添加 token”设置下一个参数。路径、版本和星号均按字面匹配。",
+      "noRulesConfiguredAddARule": "未配置规则。添加规则以开始。",
+      "decision": {
+        "allow": "允许",
+        "ask": "请求批准",
+        "block": "阻止"
+      },
+      "shouldMatch": "应该匹配",
+      "shouldNotMatch": "不应匹配",
+      "addShouldMatchExample": "添加应该匹配的示例",
+      "addShouldNotMatchExample": "添加不应匹配的示例",
+      "shouldMatchExample": "应该匹配的示例 {{index}}",
+      "shouldNotMatchExample": "不应匹配的示例 {{index}}",
+      "removeShouldMatchExample": "移除应该匹配的示例 {{index}}",
+      "removeShouldNotMatchExample": "移除不应匹配的示例 {{index}}",
+      "status": {
+        "skipped": "已跳过",
+        "notChecked": "未检查",
+        "pass": "通过",
+        "fail": "失败"
+      },
+      "untitledRule": "未命名规则",
+      "disabled": "已禁用",
+      "structured": "结构化",
+      "reusingAnIdCanOverride": "重复使用 ID 可以覆盖较小范围的规则。",
+      "tokenMatchType": "Token {{index}} 匹配类型",
+      "equals": "等于",
+      "anyOf": "任意一个",
+      "token": "Token {{index}}",
+      "tokenAlternative": "Token {{index}} 备选项 {{alternative}}",
+      "removeAlternativeFromToken": "从 token {{index}} 移除备选项 {{alternative}}",
+      "addAlternativeToToken": "为 token {{index}} 添加备选项",
+      "moveTokenEarlier": "将 token {{index}} 前移",
+      "removeToken": "移除 token {{index}}"
+    },
+    "removeMemberConfirmModal": {
+      "cancel": "取消",
+      "removeMember": "移除成员",
+      "theyWillLoseAccessToAll": "他们将失去所有组织资源的访问权限，需要重新受邀才能加入。",
+      "removing": "正在移除…",
+      "remove": "移除",
+      "areYouSureRemove": "确定要从组织中移除 {{memberName}} 吗？"
+    },
+    "richUsageMeter": {
+      "limitReached": "已达到上限",
+      "beginPaidPlan": "开始付费套餐",
+      "limitReachedForThisMonth": "已达到本月上限",
+      "yourUsageLimit": "你的用量上限（{{userLimit}} 积分）",
+      "yourUsage": "你的用量",
+      "teamsUsage": "团队用量",
+      "freeTrialCredits": "免费试用积分（{{freeTrialLimit}}）",
+      "allocation": "分配额度（{{allocationLimit}}）",
+      "overage": "超额用量（{{overageLimit}}）",
+      "notSet": "未设置",
+      "unlimited": "无限制",
+      "setAnOverageLimit": "设置超额用量上限",
+      "getMoreCredits": "获取更多积分"
+    },
+    "runAsSelector": {
+      "selectableAccounts": "可选账号",
+      "unselectableAccounts": "不可选账号"
+    },
+    "slackChannelsTable": {
+      "createComputer": "创建计算机",
+      "noResultsFound": "未找到结果",
+      "loading": "正在加载…",
+      "runAs": "运行身份",
+      "incidentResponse": "事件响应",
+      "sessionOwner": "Session 所有者",
+      "searchUsers": "搜索用户…",
+      "machineType": "计算机类型",
+      "computer": "计算机",
+      "searchComputers": "搜索计算机…",
+      "workspace": "工作区",
+      "searchWorkspaces": "搜索工作区…",
+      "bringYourOwnMachineComputerSelected": "已选择通过远程控制连接的计算机。Session 输出（可能包含计算机信息）将发布到此频道。",
+      "sessionVisibility": "Session 可见性",
+      "model": "模型",
+      "customPrompt": "自定义提示词",
+      "enterACustomPromptToInject": "输入要注入此频道所创建 Session 的自定义提示词…",
+      "loadingChannels": "正在加载频道…",
+      "channelSettings": "频道设置",
+      "searchChannels": "搜索频道…",
+      "includeArchivedChannels": "包含已归档频道",
+      "channelName": "频道名称",
+      "listenToChannel": "监听频道",
+      "createComputerToEnableIncidentResponse": "创建计算机以启用事件响应。",
+      "createWorkspaceToEnableIncidentResponse": "创建云工作区以启用事件响应。",
+      "selectComputerToEnableIncidentResponse": "选择计算机以启用事件响应。",
+      "selectWorkspaceToEnableIncidentResponse": "选择工作区以启用事件响应。",
+      "machineTypeCloud": "云端",
+      "factoryUser": "Factory 用户",
+      "noSpecificOwner": "无特定所有者",
+      "serviceAccountHasNoComputers": "服务账号没有计算机",
+      "noComputers": "没有计算机。",
+      "noComputer": "无计算机",
+      "managed": "托管",
+      "noWorkspace": "无工作区",
+      "privacyPrivate": "私密（仅 Session 所有者）",
+      "privacyOrganization": "组织（所有成员）",
+      "modelDefault": "默认",
+      "settingsDescriptionWithIncidentResponse": "这些设置仅用于在 Slack 中设置事件响应和服务账号。从 Slack 启动 Droid Session 应当无需在此配置频道。",
+      "settingsDescription": "这些设置仅用于在 Slack 中设置服务账号。从 Slack 启动 Droid Session 应当无需在此配置频道。",
+      "onlyInvitedChannelsAppear": "下方仅显示已邀请 Factory 应用的频道。要邀请 Factory 加入频道，请在该频道发送 <command>/invite @Factory</command>。",
+      "noChannelsMatchingSearch": "没有符合搜索条件的频道",
+      "noChannelsAvailable": "没有可用频道。请确保使用 /invite @Factory 邀请 Factory 加入频道",
+      "listenToChannelName": "监听 {{channelName}}",
+      "errorLoadingChannels": "加载频道出错：{{error}}",
+      "remoteControl": "远程控制"
+    },
+    "usernameSetupForm": {
+      "username": "用户名",
+      "errorFetchingUsernamesYouCanManually": "获取用户名出错。你可以在上方手动输入用户名。",
+      "loadingUsernames": "正在加载用户名",
+      "email": "邮箱",
+      "setEmail": "设置邮箱",
+      "usernameNotFound": "未找到 {{integration}} 用户名。请检查后重试。",
+      "setYourUsernameAndEmail": "设置用户名和邮箱",
+      "setYourUsername": "设置用户名",
+      "settingUsernameAndEmailDescription": "设置用户名和邮箱后，Factory 可获取与你相关的任务和问题，更准确地了解个人工作流。",
+      "settingUsernameDescription": "设置用户名后，Factory 可获取与你相关的任务和问题，更准确地了解个人工作流。",
+      "searchUsernames": "搜索用户名…",
+      "validating": "正在验证…",
+      "setUsername": "设置用户名",
+      "usernameIsSet": "用户名已设置。<reset>重置？</reset>",
+      "authenticationError": "身份验证出错。请重试；如问题持续，请重新连接 {{integration}} 集成。",
+      "emailIsSet": "邮箱已设置。<reset>重置？</reset>"
+    },
+    "appearanceColorInput": {
+      "pick": "选择 {{label}}"
+    },
+    "appearanceColorPicker": {
+      "saturationAndBrightness": "{{label}} 饱和度和亮度",
+      "saturationValue": "饱和度 {{saturation}}%，亮度 {{brightness}}%",
+      "hue": "{{label}} 色相"
+    },
+    "appearanceModePicker": {
+      "system": "跟随系统",
+      "light": "浅色",
+      "dark": "深色",
+      "theme": "主题"
+    },
+    "bulkInviteConstants": {
+      "role": {
+        "user": "用户",
+        "manager": "管理员",
+        "owner": "所有者"
+      },
+      "status": {
+        "pending": "待处理",
+        "invited": "已邀请",
+        "added": "已添加",
+        "skipped": "已跳过",
+        "failed": "失败"
+      },
+      "issue": {
+        "alreadyMember": "已是成员",
+        "alreadyInvited": "已邀请",
+        "invalidEmailAddress": "邮箱地址无效",
+        "duplicateEntry": "重复条目",
+        "failedToSendInvite": "发送邀请失败"
+      }
+    },
+    "bulkUserLimitsConstants": {
+      "action": {
+        "set": "设置上限",
+        "removeOverride": "移除覆盖值"
+      },
+      "status": {
+        "pending": "待处理",
+        "updated": "更新时间",
+        "removed": "已移除",
+        "skipped": "已跳过",
+        "needsInput": "需要输入",
+        "failed": "失败"
+      }
+    },
+    "bulkUserLimitsUtils": {
+      "addALimitOrChooseRemove": "请添加上限，或选择移除。",
+      "limitMustBeANumber": "上限必须是以百万积分为单位的数字。",
+      "useAtMost6DecimalPlaces": "百万积分最多可保留 6 位小数。",
+      "limitIsTooLarge": "上限过大。",
+      "zeroIsNotAValidLimit": "0 不是有效上限。请选择移除覆盖值以清除上限。",
+      "limitMustBeAtLeast": "批量端点要求上限至少为 {{limit}}。",
+      "invalidEmailAddress": "邮箱地址无效",
+      "noIndividualOverrideLoaded": "未加载个人覆盖值；仍将发送移除请求。"
+    },
+    "bulkInviteModal": {
+      "addedOneEmail": "已添加 1 个邮箱地址",
+      "addedOneEmailWithSkipped": "已添加 1 个邮箱地址（跳过 {{skipped}} 个重复项）",
+      "addedEmails": "已添加 {{added}} 个邮箱地址",
+      "addedEmailsWithSkipped_one": "已添加 {{added}} 个邮箱地址（跳过 {{count}} 个重复项）",
+      "addedEmailsWithSkipped_other": "已添加 {{added}} 个邮箱地址（跳过 {{count}} 个重复项）",
+      "emailsAlreadyInList_one": "邮箱已在列表中",
+      "emailsAlreadyInList_other": "所有邮箱均已在列表中",
+      "fileExceedsLimit": "文件超过 5 MB 上限。请使用较小文件。",
+      "noEmailAddressesFound": "上传文件中未找到邮箱地址。",
+      "csvTruncated": "CSV 包含 {{total}} 个邮箱地址，仅导入前 1000 个。",
+      "loadedEmails_one": "已从 CSV 加载 {{count}} 个邮箱地址。",
+      "loadedEmails_other": "已从 CSV 加载 {{count}} 个邮箱地址。",
+      "requestFailed": "请求失败",
+      "sendingInvites": "正在发送邀请…",
+      "inviteResults": "邀请结果",
+      "inviteMembersTo": "邀请成员加入 {{organization}}",
+      "inviteMembers": "邀请成员",
+      "individualPlansAreForOnePerson": "个人套餐仅供一人使用",
+      "toAddTeammatesContactUs": "如需添加队友并在 Factory 中协作，请联系我们了解 Teams 或 Enterprise 套餐。",
+      "contactUs": "联系我们",
+      "downloadReport": "下载报告",
+      "resume": "恢复",
+      "pause": "暂停",
+      "downloadReportCsv": "下载 CSV 报告",
+      "done": "完成",
+      "cancel": "取消",
+      "checking": "正在检查…",
+      "sendInvites": "发送邀请（{{emailCount}}）",
+      "subOrganizationNotice": "此对话框用于向 {{organization}} 添加成员。成员接受邀请后，可使用目录管理其所属子组织。",
+      "enterEmailAddresses": "输入邮箱地址",
+      "emailPlaceholder": "name@company.com",
+      "separateMultipleEmailAddresses": "多个邮箱地址可用逗号、空格分隔，或按 Enter 输入",
+      "or": "或",
+      "importFromCsv": "从 CSV 导入",
+      "downloadTemplate": "下载模板",
+      "dropACsvFileHere": "将 CSV 文件拖到这里，或点击浏览",
+      "oneEmailPerRow": "每行一个邮箱，或使用名为“email”的列",
+      "complete": "完成",
+      "paused": "已暂停",
+      "sendingProgress": "正在发送… {{sent}}/{{total}}",
+      "keepEditing": "继续编辑",
+      "discard": "放弃",
+      "stopSending": "停止发送？",
+      "discardInvites": "放弃邀请？",
+      "invitesAlreadySent": "已发送 {{sent}} / {{total}} 份邀请。现在关闭将停止剩余邀请，已发送的邀请无法撤销。",
+      "emailsEntered_one": "已输入 {{count}} 个邮箱地址。关闭将放弃所有进度。",
+      "emailsEntered_other": "已输入 {{count}} 个邮箱地址。关闭将放弃所有进度。"
+    },
+    "emailChipInput": {
+      "emailCount_one": "{{count}} 个邮箱地址",
+      "emailCount_other": "{{count}} 个邮箱地址",
+      "duplicateEmail": "重复邮箱",
+      "invalidEmailAddress": "邮箱地址无效",
+      "maximumReached": "已达到最多 {{max}} 个邮箱地址的上限",
+      "placeholder": "输入或粘贴邮箱地址…"
+    },
+    "repositorySelector": {
+      "loadingRepositories": "正在加载仓库…",
+      "searchRepositories": "搜索仓库…",
+      "noRepositoriesMatch": "没有符合搜索条件的仓库",
+      "noRepositoriesFound": "未找到仓库"
+    },
+    "invalidWorkingDirectoryWarning": {
+      "cannotUse": "无法使用 {{cwd}}",
+      "workingDirectoryInvalid": "工作目录无效",
+      "selectDifferentProject": "{{error}}。请选择其他项目以继续。"
+    },
+    "worktreeBranchModeSelector": {
+      "createBranchCopy": "创建分支副本",
+      "useExistingBranch": "使用现有分支",
+      "ariaLabel": "工作树分支模式：{{mode}}"
+    },
+    "worktreeProfileContentSummary": {
+      "setupScript": "设置脚本",
+      "droidPrompt": "Droid 提示词",
+      "cleanupScript": "清理脚本",
+      "included": "{{label}}：已包含",
+      "notIncluded": "{{label}}：未包含"
+    },
+    "connectorAccessTable": {
+      "paginationEmpty": "0 / 0",
+      "paginationSummary": "{{total}} 项中的 {{start}}-{{end}}",
+      "enabled": "已启用",
+      "noConnectorsAvailable": "没有可用连接器。",
+      "setAvailability": "设置 {{name}} 的可用性"
+    },
+    "integrationManagementModal": {
+      "configureIntegration": "配置 {{integrationTitle}} 集成"
+    },
+    "sandboxEnvironmentsList": {
+      "scope": {
+        "organization": "组织",
+        "personal": "个人"
+      },
+      "editDisabledReason": "当前构建完成后即可编辑",
+      "health": {
+        "failed": "失败",
+        "updateFailed": "更新失败",
+        "queued": "已排队",
+        "building": "构建中",
+        "updating": "更新中",
+        "ready": "就绪",
+        "environmentUnavailable": "不可用"
+      },
+      "healthIndicator": {
+        "failed": "失败",
+        "updateFailed": "更新失败",
+        "buildQueued": "构建已排队",
+        "buildInProgress": "构建进行中",
+        "updateInProgress": "更新进行中",
+        "ready": "就绪"
+      },
+      "healthDetail": {
+        "updateFailed": "最新构建失败。Session 将继续使用上次成功的构建。",
+        "updating": "新构建正在运行。完成前，Session 使用上次成功的构建。",
+        "queued": "正在等待构建名额。",
+        "environmentUnavailable": "此模板使用的 OpenCompute 部署或驱动已不存在。请编辑模板并选择新提供商。"
+      },
+      "onboarding": {
+        "title": "为 Droid 提供开机即可工作的计算机",
+        "description": "环境是一份保存的开发环境。Factory 构建一次后，每个云端 Session 和计算机都从该快照启动，其中代码已克隆、工具已安装。",
+        "repositoriesTitle": "仓库",
+        "repositoriesDescription": "在 Session 启动前克隆并检出。",
+        "setupScriptTitle": "设置脚本",
+        "setupScriptDescription": "安装工具链和依赖，每次构建运行一次。",
+        "environmentTitle": "环境",
+        "environmentDescription": "每个 Session 可用的变量和机密。",
+        "snapshotTitle": "快照",
+        "snapshotDescription": "更改后重新构建，让 Session 在数秒内启动。",
+        "createTemplate": "创建环境",
+        "browseIdeas": "浏览创意",
+        "startFromIdea": "或从创意开始"
+      },
+      "noRepositories": "无仓库",
+      "emptyValue": "—",
+      "never": "从不",
+      "facet": {
+        "scope": "范围",
+        "environment": "来源",
+        "repository": "仓库"
+      },
+      "searchTemplates": "搜索环境",
+      "searchPlaceholder": "搜索名称、仓库、来源",
+      "filterTemplates": "筛选环境",
+      "filterTemplatesApplied_one": "筛选环境，已应用 {{count}} 项",
+      "filterTemplatesApplied_other": "筛选环境，已应用 {{count}} 项",
+      "default": "默认",
+      "defaultTooltip": "就绪后自动选为组织内新 Session 的默认环境。",
+      "scopeTooltipOrganization": "与组织中具有仓库访问权限的成员共享。",
+      "scopeTooltipPersonal": "仅你可用。",
+      "column": {
+        "name": "名称",
+        "status": "状态",
+        "repositories": "仓库",
+        "environment": "来源",
+        "lastBuilt": "上次构建",
+        "actions": "操作"
+      },
+      "noMatches": "没有符合这些筛选条件的环境。",
+      "showAllTemplates": "显示所有环境",
+      "paginationSummary": "{{shown}} / {{total}}",
+      "loadingTemplates": "正在加载环境",
+      "guidance": {
+        "description": "Factory 在构建时克隆仓库并运行一次设置，使每个 Session 启动即可工作。",
+        "repositories": "选择仓库",
+        "setup": "添加设置",
+        "build": "构建一次",
+        "ideas": "从创意开始",
+        "browseAll": "浏览所有创意"
+      },
+      "card": {
+        "sourceUnavailable": "请在环境设置中选择可用来源。",
+        "failureGuidance": "查看构建详情、修复原因后重试。",
+        "queuedAt": "排队于 {{time}}",
+        "startedAt": "开始于 {{time}}",
+        "builtAgo": "构建于 {{time}}",
+        "notBuilt": "尚未构建"
+      },
+      "view": {
+        "label": "环境视图",
+        "gallery": "图库",
+        "list": "列表"
+      },
+      "sortBy": "排序方式",
+      "sortRecentlyBuilt": "最近构建"
+    },
+    "sandboxEnvironmentBuildSteps": {
+      "title": "构建步骤",
+      "cloneRepositories": "克隆仓库",
+      "noRepositories": "没有仓库。Session 从基础环境启动。",
+      "repositoriesUnsupported": "此环境不支持仓库。",
+      "globalSetup": "全局设置",
+      "globalSetupScript": "全局设置脚本",
+      "globalSetupDescription": "在所有仓库脚本之前，从主目录（~）运行一次。在此安装系统范围的工具和依赖，例如语言运行时、包管理器和 CLI。",
+      "noGlobalSetup": "没有全局设置脚本。",
+      "setupScriptsUnsupported": "此环境不支持设置脚本。",
+      "repositorySetupScripts": "仓库设置脚本",
+      "repositorySetupScriptsDescription": "全局设置后，各脚本从其仓库根目录运行。在此安装仓库依赖和项目工具，例如 npm install、uv sync 或 Git 钩子。",
+      "addScript": "添加脚本",
+      "editScript": "编辑",
+      "saveScript": "保存",
+      "showScript": "显示脚本",
+      "hideScript": "隐藏脚本",
+      "addScriptFor": "为 {{name}} 添加设置脚本",
+      "editScriptFor": "编辑 {{name}} 的设置脚本",
+      "saveScriptFor": "保存 {{name}} 的设置脚本",
+      "showScriptFor": "显示 {{name}} 的设置脚本",
+      "hideScriptFor": "隐藏 {{name}} 的设置脚本",
+      "stepHelp": "关于 {{title}}"
+    },
+    "sandboxEnvironmentDetailView": {
+      "environmentUnavailable": {
+        "title": "此模板的提供商已不可用",
+        "description": "此模板使用的 OpenCompute 部署或驱动已不存在，因此无法基于它启动新 Session。请编辑模板并选择新提供商。"
+      },
+      "healthStatus": {
+        "queued": {
+          "title": "等待构建",
+          "description": "首次构建已排队，构建器空闲后立即启动。完成后 Session 即可使用此环境。"
+        },
+        "building": {
+          "title": "正在构建首个版本",
+          "description": "正在克隆仓库并运行设置。构建完成后，Session 即可使用此环境。"
+        },
+        "updating": {
+          "title": "正在构建更新",
+          "description": "本次构建完成前，Session 会继续从上次成功构建启动。"
+        },
+        "updateFailed": {
+          "title": "最新更新失败",
+          "description": "新的构建成功前，Session 会继续从上次成功构建启动。"
+        },
+        "failed": {
+          "title": "构建失败",
+          "description": "此环境尚无成功构建，因此 Session 暂时无法使用。请修复下方原因后重试构建。"
+        }
+      },
+      "buildStatus": {
+        "queued": "已排队",
+        "building": "构建中",
+        "validating": "正在验证",
+        "ready": "就绪",
+        "failed": "失败",
+        "superseded": "已被取代"
+      },
+      "buildTrigger": {
+        "create": "已创建",
+        "edit": "已编辑",
+        "manual": "手动重新构建",
+        "scheduled": "定时刷新",
+        "baseUpdate": "基础更新"
+      },
+      "failureCategory": {
+        "sourceResolution": "来源解析",
+        "provider": "提供商",
+        "timeout": "已超时",
+        "validation": "验证",
+        "promotion": "发布",
+        "cleanup": "清理",
+        "unknown": "未知"
+      },
+      "fact": {
+        "liveBuildFrom": "生效构建来源",
+        "lastBuilt": "上次构建",
+        "buildDuration": "构建耗时",
+        "requested": "请求时间",
+        "started": "已开始",
+        "elapsed": "已用时间",
+        "failed": "失败",
+        "failureCategory": "失败类别",
+        "trigger": "触发器"
+      },
+      "duration": {
+        "hoursMinutes": "{{hours}} 小时 {{minutes}} 分钟",
+        "minutesSeconds": "{{minutes}} 分钟 {{seconds}} 秒",
+        "seconds": "{{seconds}} 秒"
+      },
+      "buildProgress": "构建进度",
+      "templateStatus": "环境状态",
+      "editTemplate": "编辑环境",
+      "retrying": "正在重试…",
+      "retryBuild": "重试构建",
+      "cancelBuild": "取消构建",
+      "cancellingBuild": "正在取消…",
+      "reason": "原因",
+      "buildOutput": {
+        "withheld": "构建输出无法安全存储，因此已隐藏。",
+        "notYetAvailable": "暂无可用的构建输出。",
+        "notRecorded": "此构建未记录任何输出。"
+      },
+      "latestBuild": "最新构建",
+      "output": "输出",
+      "copyBuildOutput": "复制构建输出",
+      "outputTruncated": "仅显示已清理构建输出的最新部分。",
+      "commitLabel": "{{name}} 提交 {{sha}}",
+      "repositoryCount_one": "{{count}} 个仓库",
+      "repositoryCount_other": "{{count}} 个仓库",
+      "detail": {
+        "scope": "范围",
+        "provider": "提供商",
+        "environment": "来源",
+        "pendingChanges": "待保存的更改",
+        "applyOnNextBuild": "在下次成功构建时应用",
+        "created": "已创建",
+        "updated": "更新时间",
+        "templateId": "环境 ID",
+        "copyTemplateId": "复制环境 ID",
+        "templateIdCopied": "环境 ID 已复制",
+        "configuration": "配置",
+        "metadata": "元数据"
+      },
+      "details": "详情",
+      "default": "默认",
+      "defaultTooltip": "就绪后自动选为组织内新 Session 的默认环境。",
+      "scopeTooltipPersonal": "仅你可用。",
+      "rebuilding": "正在重新构建…",
+      "rebuild": "重新构建",
+      "edit": "编辑",
+      "moreActionsFor": "{{name}} 的更多操作",
+      "setAsDefault": "设为默认",
+      "delete": "删除",
+      "replacementNote": {
+        "updating": "此构建运行期间，之前成功的构建仍保持生效。",
+        "updateFailed": "之前成功的构建仍保持活跃。"
+      },
+      "jumpToLatest": "跳转到最新",
+      "timeline": {
+        "requested": "请求于 {{time}}",
+        "started": "开始于 {{time}}",
+        "finished": "完成于 {{time}}"
+      },
+      "showLog": "显示日志",
+      "hideLog": "隐藏日志",
+      "setupSummary_one": "bash · {{count}} 行",
+      "setupSummary_other": "bash · {{count}} 行",
+      "launchSummary": {
+        "ready": "新 Session 从最新成功构建启动。"
+      },
+      "vital": {
+        "repositories": "仓库",
+        "setupLines": "设置行数",
+        "none": "无"
+      },
+      "copyCommitFor": "复制 {{name}} 的提交 SHA",
+      "commitCopied": "提交 SHA 已复制",
+      "showAllLines_one": "显示全部 {{count}} 行",
+      "showAllLines_other": "显示全部 {{count}} 行",
+      "showFewerLines": "收起行",
+      "repositoriesWithoutScript_one": "{{count}} 个仓库没有设置脚本。",
+      "repositoriesWithoutScript_other": "{{count}} 个仓库没有设置脚本。"
+    },
+    "sandboxEnvironmentEditorFields": {
+      "searchRepositories": "搜索仓库",
+      "loadingRepositories": "正在加载仓库…",
+      "noRepositoriesAvailable": "没有可用仓库。请连接或更新个人源代码管理集成。",
+      "noRepositoriesMatch": "没有符合搜索条件的仓库。",
+      "repositorySetupScriptLabel": "{{url}} 的设置脚本",
+      "name": "名称",
+      "templateName": "环境名称",
+      "provider": "提供商",
+      "environment": "来源",
+      "unsupportedCustomization": "此环境的部分自定义选项不可用。",
+      "preparesInBuiltEnvironment": "Factory 在构建环境中准备仓库和设置脚本。",
+      "providerUnavailable": "此提供商的 OpenCompute 部署或驱动已不存在。请为此模板选择新的提供商和环境。",
+      "providerUnavailableOption": "{{name}}（不可用）",
+      "providersPartiallyUnavailable": "部分提供商无法加载。其他环境仍可使用。",
+      "retrying": "正在重试…",
+      "retry": "重试",
+      "authorization": "授权",
+      "onlyMe": "仅我自己",
+      "everyoneInOrganization": "组织中的所有人",
+      "scopeLocked": "此处只能使用组织范围的环境，因此授权选项已锁定。",
+      "makeOrganizationDefault": "设为组织范围的默认环境",
+      "organizationDefaultHelp": "就绪后，会自动为新 Session 选择此环境，取代各成员已保存的计算机偏好。",
+      "organizationDefaultHelpWithRepositories": "就绪后，会自动为新 Session 选择此环境，取代各成员已保存的计算机偏好。成员必须拥有其仓库访问权限。",
+      "managerAccessRequired": "创建组织环境需要管理员权限。",
+      "cancel": "取消",
+      "removeAndSwitch": "移除并切换",
+      "removeUnsupportedTitle": "移除不支持的自定义设置？",
+      "removeUnsupportedDescription": "{{environmentName}} 不支持当前仓库或设置脚本配置。切换会从此环境中移除不支持的配置。",
+      "addRepository": "添加仓库",
+      "availableRepositories": "可用仓库",
+      "selectedRepositories": "已选仓库",
+      "selectedCount": "{{count}} / {{limit}}",
+      "done": "完成",
+      "emptyRepositoryShort": "空",
+      "limitReachedShort": "已达到上限",
+      "removeRepository": "移除 {{name}}",
+      "unavailableRepository": "不可用",
+      "unavailableRepositoryHelp": "已无法通过你的集成访问。"
+    },
+    "sandboxEnvironmentEditorPage": {
+      "edit": "编辑",
+      "cancel": "取消"
+    },
+    "sandboxEnvironmentSkeleton": {
+      "loadingEditor": "正在加载环境编辑器",
+      "loadingTemplate": "正在加载环境"
+    },
+    "sandboxEnvironmentStarterGallery": {
+      "starterLabel": "{{title}}：{{description}}",
+      "createOwnLabel": "自定义创建：选择仓库、环境和设置脚本",
+      "createOwn": "自定义创建",
+      "createOwnDescription": "从空白开始。自行选择仓库、环境变量和设置脚本。",
+      "title": "创建环境",
+      "description": "从创意开始，然后在下一步选择仓库并微调设置。",
+      "starters": {
+        "webApp": {
+          "title": "交付网页应用",
+          "description": "预备好 Node、pnpm 和 Turborepo，让 Droid 首次尝试即可安装、构建并运行应用。"
+        },
+        "browserQa": {
+          "title": "在真实浏览器中测试",
+          "description": "预装 Chromium 和 Playwright，让 Droid 点击操作流程并验证用户看到的内容。"
+        },
+        "pythonData": {
+          "title": "分析数据",
+          "description": "通过 uv 提供 Python 3.12，并配备 Jupyter 和 pandas，用于笔记本、流水线和模型实验。"
+        },
+        "backendServices": {
+          "title": "运行后端服务",
+          "description": "本地运行 Postgres 和 Redis，让 Droid 应用迁移并运行集成测试。"
+        },
+        "systemsTooling": {
+          "title": "构建系统与 CLI",
+          "description": "Go 和 Rust 工具链及其代码检查器，用于服务、命令行工具和快速构建。"
+        },
+        "mobileApp": {
+          "title": "构建移动应用",
+          "description": "配备 Expo 和 EAS CLI 的 Node 环境，让 Droid 开发 React Native 应用并启动构建。"
+        }
+      }
+    },
+    "providerConnectionsTable": {
+      "emptyTitle": "没有提供商连接",
+      "emptyDescription": "添加提供商，让部署使用你的凭据调用其模型。",
+      "tableLabel": "提供商连接",
+      "provider": "提供商",
+      "source": "来源",
+      "status": "状态",
+      "actions": "操作",
+      "editRow": "编辑 {{label}}"
+    }
+  },
+  "chat": {
+    "executeTool": {
+      "runningCommand": "正在运行命令…",
+      "executingUpdates_one": "正在执行（{{count}} 项更新）…",
+      "executingUpdates_other": "正在执行（{{count}} 项更新）…",
+      "waitingForApproval": "等待批准",
+      "commandCompleted": "命令已完成",
+      "moreLines_one": "…还有 {{count}} 行",
+      "moreLines_other": "…还有 {{count}} 行"
+    },
+    "automationTool": {
+      "automations": "自动化",
+      "chooseSlackChannels": "选择 Slack 频道",
+      "createAutomation": "创建自动化",
+      "deleteAutomation": "删除自动化",
+      "editAutomation": "编辑自动化",
+      "runAutomation": "运行自动化"
+    },
+    "generateImagePreview": {
+      "timeElapsed": "已用时间",
+      "generatedImage": "生成的图像",
+      "imagePreviewUnavailable": "图像预览不可用",
+      "previewGeneratedImage": "预览生成的图像",
+      "secondsElapsed_one": "已用 {{count}} 秒",
+      "secondsElapsed_other": "已用 {{count}} 秒",
+      "elapsedShort": "{{seconds}} 秒",
+      "generatingImage": "正在生成图像",
+      "loadingImage": "正在加载图像"
+    },
+    "generateImageTool": {
+      "generateImage": "生成图像",
+      "generatedImage": "生成的图像",
+      "generationFailed": "图像生成失败",
+      "noImageGenerated": "未生成图像",
+      "approvalRequired": "需要批准"
+    },
+    "settingsChangesProposal": {
+      "inProgress": "进行中",
+      "noMatchingOptions": "没有匹配的选项",
+      "loadingOptions": "正在加载选项…",
+      "before": "更改前",
+      "after": "更改后",
+      "cancelAll": "全部取消",
+      "status": {
+        "applying": "正在应用…",
+        "cancelled": "已取消",
+        "needsReview": "需要审查",
+        "failed": "失败",
+        "actionRequired": "需要操作",
+        "pending": "待处理",
+        "applied": "已应用"
+      },
+      "applying": "正在应用…",
+      "applyCount_one": "应用 {{count}} 项",
+      "applyCount_other": "应用 {{count}} 项",
+      "completeSteps_one": "完成 {{count}} 个步骤 {{suffix}}",
+      "completeSteps_other": "完成 {{count}} 个步骤 {{suffix}}",
+      "beforeApplying": "然后再应用。",
+      "yes": "是",
+      "no": "否",
+      "none": "无",
+      "openDestination": "打开 {{label}}",
+      "settingsFallback": "设置",
+      "proposedChanges": "提议的设置更改",
+      "searchStep": "搜索 {{label}}",
+      "searchOptions": "搜索选项"
+    },
+    "softwareFactoryObjectCard": {
+      "retryLoadingSpecification": "重试加载 Spec",
+      "loadingSavedSpecification": "正在加载已保存的 Spec…",
+      "fullSpecification": "完整 Spec",
+      "viewChange": "查看变更",
+      "openWorkerSession": "打开工作代理 Session",
+      "savedWorkstreamEvidenceApprovalIsA": "已保存的工作流证据。是否批准需在聊天中另行决定。",
+      "openSource": "打开来源",
+      "savedRunResultOpeningThisPreview": "已保存的运行结果。打开此预览不会批准或合并拉取请求。",
+      "viewDetails": "查看详情 →",
+      "liveChecksAndReviewStatusAre": "实时检查和审查状态可在拉取请求中查看。此引用不验证该运行是否创建或更改了它。",
+      "openPullRequest": "打开拉取请求",
+      "spec": "Spec",
+      "writtenDuringTheTestRun": "在测试运行期间编写",
+      "savedTestRunSpecificationApprovalIs": "已保存的测试运行 Spec。是否批准需在聊天中另行决定。",
+      "viewSpecification": "查看 Spec",
+      "viewSpecification2": "查看 Spec →",
+      "retryLoadingCards": "重试加载卡片",
+      "loadingSavedReviewCards": "正在加载已保存的审查卡片…",
+      "artifact": {
+        "proposal": "提案",
+        "specification": "Spec",
+        "implementation": "实施",
+        "steward": "维护代理"
+      },
+      "artifactRevision": "{{artifact}} 修订版",
+      "artifactRun": "{{artifact}} 运行",
+      "worker": "Software Factory 工作代理",
+      "waitingForWorker": "等待 Software Factory 工作代理",
+      "changeUnavailable": "变更不可用",
+      "reviewStatus": "审查 {{status}}",
+      "viewWorkstream": "查看工作流",
+      "viewRun": "查看运行",
+      "viewActivity": "查看活动",
+      "viewSignal": "查看信号",
+      "untitledSpec": "未命名 Spec",
+      "kindRun": "{{kind}} 运行",
+      "viewDetailsLabel": "查看详情",
+      "sourceAttachments_one": "{{count}} 个来源附件。打开来源以查看。",
+      "sourceAttachments_other": "{{count}} 个来源附件。打开来源以查看。",
+      "pullRequestReferenced": "已保存的 {{kind}} 结果中引用的 PR",
+      "signalsFound": "发现的信号",
+      "proposedChanges": "提议的变更",
+      "testPlanAndChanges": "测试计划和变更",
+      "noSignalsProduced": "本次测试运行未产生信号。",
+      "noChangesProduced": "本次测试运行未产生变更。",
+      "showMore_one": "再显示 {{count}} 项",
+      "showMore_other": "再显示 {{count}} 项",
+      "signalMeta": "SIG-{{number}} · {{source}} · {{status}}"
+    },
+    "subagentFocusPanel": {
+      "stopping": "正在停止…",
+      "openSubagentSession": "打开子代理 Session",
+      "closeSubagentTranscript": "关闭子代理对话记录",
+      "subagentTranscript": "{{title}} 子代理对话记录",
+      "stopThisTask": "停止此任务",
+      "stoppingSubagent": "正在停止子代理",
+      "stopSubagent": "停止子代理",
+      "openSession": "打开 Session",
+      "close": "关闭"
+    },
+    "v2ExecuteToolResult": {
+      "waitingForCommandOutput": "等待命令输出…",
+      "expandCommandOutput": "展开命令输出"
+    },
+    "v2ToolContainer": {
+      "error": "错误"
+    },
+    "archiveWorkingSessionModal": {
+      "cancel": "取消",
+      "stopAndArchive": "停止并归档",
+      "sessionIsStillRunning": "Session 仍在运行",
+      "archivingItWillStopTheAgent": "归档会立即停止代理。已完成的更改会保留在磁盘上，但本回合不会完成。"
+    },
+    "askUserActions": {
+      "cancel": "取消"
+    },
+    "chatComposerModelSelectorDefaults": {
+      "loadingDefaults": "正在加载默认设置…",
+      "back": "返回",
+      "confirm": "确认",
+      "setDefaultsForMode": "设置 {{mode}} 模式的默认值"
+    },
+    "chatStopButton": {
+      "cancel": "取消",
+      "stopAgent": "停止代理"
+    },
+    "fileDownloadConfirmDialog": {
+      "cancel": "取消",
+      "download": "下载",
+      "downloadFile": "下载文件？",
+      "onlyDownloadFilesYouTrust": "仅下载你信任的文件。",
+      "preparingDownload": "正在准备下载",
+      "downloadFileName": "下载 {{fileName}}"
+    },
+    "keyboardShortcutsModal": {
+      "disabledInPreferences": "（已在偏好设置中禁用）",
+      "shortcutsModes": "快捷键与模式",
+      "input": "输入",
+      "commandPalette": "命令面板",
+      "clearInput": "清空输入",
+      "stopGenerating": "停止生成",
+      "modes": "模式",
+      "researchAndPlanOnly": "仅研究和规划",
+      "spec": "Spec",
+      "longRunningMultiAgentTask": "长时间运行的多代理任务",
+      "mission": "任务",
+      "autonomy": "自主性",
+      "fileEditsAndReadOnlyCommands": "文件编辑和只读命令",
+      "low": "低",
+      "addsReversibleCommands": "增加可撤销命令",
+      "medium": "中",
+      "runsAllCommands": "运行所有命令",
+      "high": "高",
+      "shortcuts": "快捷键",
+      "toggleSpecMode": "切换 Spec 模式",
+      "cycleReasoningLevel": "切换推理级别",
+      "openModelSelector": "打开模型选择器",
+      "cycleAutonomyLevel": "切换自主级别",
+      "close": "关闭",
+      "configurableInPreferences": "可在<prefs>偏好设置</prefs>中配置快捷键。",
+      "configurableInPreferencesPlain": "可在偏好设置中配置快捷键。"
+    },
+    "markdownTableViewer": {
+      "table": "表格"
+    },
+    "mermaidLightbox": {
+      "mermaidDiagramViewer": "Mermaid 图表查看器",
+      "closeDiagram": "关闭图表",
+      "renderedMermaidDiagram": "已渲染的 Mermaid 图表",
+      "zoomOut": "缩小",
+      "zoomIn": "放大",
+      "resetDiagramView": "重置图表视图"
+    },
+    "missionWelcomeBlock": {
+      "greeting": "你好，{{firstName}} 👋",
+      "greetingAnonymous": "你好 👋",
+      "welcomeToYourMission": "欢迎进入你的<mission/>",
+      "intro": "在此任务中，你会与作为编排器的我对话。我的职责是与你自然交流，并根据对话决定如何管理一组代理，共同实现你为此任务设定的目标。",
+      "agents": "<term>你的代理：</term>我启动的每个代理都会显示在<agents>代理</agents>中。在那里打开代理，即可跟踪其工作、直接发送消息，或回答问题和审批请求。",
+      "whereTheWorkRuns": "<term>工作运行位置：</term>默认情况下，我会在 <where></where> 上运行所有代理。你可以在<settings>任务默认设置</settings>中为未来任务更改此设置。",
+      "whereTheWorkRunsWithOthers": "<term>工作运行位置：</term>默认情况下，我会在 <where></where> 上运行所有代理。我也可以使用 <others></others>。你可以在<settings>任务默认设置</settings>中为未来任务更改此设置。",
+      "orchestratorMachine": "与我运行在同一台计算机",
+      "yourMachines_one": "你的计算机：{{machines}}",
+      "yourMachines_other": "你的计算机：{{machines}}",
+      "freshComputerFrom_one": "从 {{templates}} 模板创建的全新计算机",
+      "freshComputerFrom_other": "从 {{templates}} 模板创建的全新计算机",
+      "freshComputerOrYourMachines": "{{freshComputer}}，或 {{yourMachines}}",
+      "templateName": "“{{name}}”",
+      "sharedNotes": "我和代理编写的<term>共享笔记和计划</term>会放在任务共享文件夹中。可在<files>文件</files>中浏览。",
+      "pullRequests": "代理创建的<term>拉取请求</term>会显示在<prs>PR</prs>中，并附带 CI 状态。",
+      "steer": "<term>你随时可以调整方向：</term>更改优先级、询问进度，或让我停止代理或调整其工作方向。"
+    },
+    "pageHeader": {
+      "back": "返回",
+      "forward": "前进",
+      "openSidebar": "打开侧边栏",
+      "newSession": "新建 Session",
+      "applicationMenus": "应用菜单",
+      "applicationMenu": {
+        "file": "文件",
+        "edit": "编辑",
+        "view": "查看",
+        "window": "时间范围",
+        "help": "帮助"
+      },
+      "collapseSidebar": "折叠侧边栏"
+    },
+    "quoteReplyAction": {
+      "addToChat": "添加到聊天",
+      "askSideChat": "询问侧边聊天"
+    },
+    "renameSessionDialog": {
+      "cancel": "取消",
+      "titleCannotBeEmpty": "标题不能为空",
+      "nameCannotBeEmpty": "名称不能为空",
+      "titleTooLong": "标题不能超过 {{max}} 个字符",
+      "nameTooLong": "名称不能超过 {{max}} 个字符",
+      "failedToForkSession": "分叉 Session 失败。请重试。",
+      "failedToForkProject": "分叉项目失败。请重试。",
+      "failedToRenameSession": "重命名 Session 失败，请重试。",
+      "failedToRenameProject": "重命名项目失败。请重试。",
+      "forkSession": "派生 Session",
+      "forkProject": "分叉项目",
+      "renameSession": "重命名 Session",
+      "renameProject": "重命名项目",
+      "titleMustBeDifferent": "标题必须与当前标题不同",
+      "nameMustBeDifferent": "名称必须与当前名称不同",
+      "forking": "正在派生…",
+      "renaming": "正在重命名…",
+      "fork": "派生",
+      "rename": "重命名",
+      "previousTitle": "原名称：{{title}}",
+      "enterNewSessionTitle": "输入新的 Session 标题",
+      "enterNewProjectName": "输入新的项目名称",
+      "title": {
+        "renameSession": "重命名 Session",
+        "renameProject": "重命名项目",
+        "forkSession": "派生 Session",
+        "forkProject": "分叉项目"
+      },
+      "placeholder": {
+        "session": "输入新的 Session 标题",
+        "project": "输入新的项目名称"
+      },
+      "previous": "原名称：{{title}}",
+      "errors": {
+        "titleEmpty": "标题不能为空",
+        "nameEmpty": "名称不能为空",
+        "titleTooLong": "标题不能超过 {{max}} 个字符",
+        "nameTooLong": "名称不能超过 {{max}} 个字符",
+        "titleUnchanged": "标题必须与当前标题不同",
+        "nameUnchanged": "名称必须与当前名称不同",
+        "renameSessionFailed": "重命名 Session 失败，请重试。",
+        "renameProjectFailed": "重命名项目失败。请重试。",
+        "forkSessionFailed": "分叉 Session 失败。请重试。",
+        "forkProjectFailed": "分叉项目失败。请重试。"
+      }
+    },
+    "mcpAddServer": {
+      "registry": "注册表",
+      "addNewMcpServer": "添加 MCP 服务器",
+      "serverName": "服务器名称",
+      "eGMyMcpServer": "例如 my-mcp-server",
+      "httpStreamable": "HTTP（流式）",
+      "sseRemote": "SSE（远程）",
+      "stdioLocal": "STDIO（本地）",
+      "command": "命令",
+      "eGNpxOrPathTo": "例如 npx 或 /path/to/binary",
+      "argumentsSpaceSeparated": "参数（以空格分隔）",
+      "eGYModelcontextprotocolServerFilesystem": "例如 -y @modelcontextprotocol/server-filesystem",
+      "url": "URL",
+      "cancel": "取消",
+      "adding": "正在添加…",
+      "add": "添加"
+    },
+    "mcpMain": {
+      "cancel": "取消",
+      "authenticate": "身份验证",
+      "viewTools": "查看工具",
+      "remove": "移除",
+      "org": "组织",
+      "project": "项目",
+      "personal": "个人",
+      "connected": "已连接",
+      "disconnect": "断开连接",
+      "connect": "连接",
+      "browseConnectors": "浏览连接器",
+      "refreshConnectors": "刷新连接器",
+      "refresh": "刷新",
+      "addMcpServer": "添加 MCP 服务器",
+      "manageMcpServers": "管理 MCP 服务器",
+      "mcpServerManagementIsNotYet": "云沙箱暂不支持 MCP 服务器管理",
+      "configError": "配置错误",
+      "mcpAuthenticationIsNotYetSupported": "云沙箱暂不支持 MCP 身份验证。",
+      "noMcpServersConfigured": "未配置 MCP 服务器",
+      "yourConnectors": "你的连接器",
+      "connectors": "连接器",
+      "connectTheAppsDroidCanAct": "连接 Droid 可操作的应用，并管理你自行运行的 MCP 服务器。",
+      "mcpServers": "MCP 服务器",
+      "disabledByOrganizationPolicy": "已被组织策略禁用",
+      "disabled": "已禁用",
+      "disconnectName": "断开 {{name}} 连接",
+      "connectName": "连接 {{name}}",
+      "yourConnectorsCount": "你的连接器（{{total}}）",
+      "updating": "正在更新…",
+      "lastUpdated": "最后更新：{{time}}",
+      "noConnectorsMatch": "没有匹配“{{query}}”的连接器",
+      "noConnectorsConnectedYet": "尚未连接任何连接器，请浏览连接器并添加",
+      "editMcpJsonToConfigure": "编辑 ~/{{factoryDirName}}/mcp.json 以配置服务器",
+      "searchConnectorsAndMcpServers": "搜索连接器和 MCP 服务器",
+      "searchMcpServers": "搜索 MCP 服务器",
+      "searchConnectorsAndMcpServersPlaceholder": "搜索连接器和 MCP 服务器…",
+      "searchMcpServersPlaceholder": "搜索 MCP 服务器…",
+      "authenticationRequiredFor": "{{serverName}} 需要身份验证",
+      "mcpServersCount": "MCP 服务器（{{total}}）",
+      "noMcpServersConfiguredYetAddOne": "尚未配置 MCP 服务器，添加服务器以使用自己的工具扩展 Droid",
+      "noMcpServersConfiguredYetAddToFile": "尚未配置 MCP 服务器，请将其添加到 ~/{{factoryDirName}}/mcp.json",
+      "noMcpServersMatch": "没有匹配“{{query}}”的 MCP 服务器",
+      "clickAddServerToConfigure": "点击“添加服务器”以配置第一台 MCP 服务器",
+      "addMcpServersToFile": "将 MCP 服务器添加到 ~/{{factoryDirName}}/mcp.json",
+      "disconnectConnector": "断开 {{name}} 连接",
+      "connectConnector": "连接 {{name}}",
+      "noServersConfiguredYetAddOne": "尚未配置 MCP 服务器，添加服务器以使用自己的工具扩展 Droid",
+      "noServersConfiguredYetAddToFile": "尚未配置 MCP 服务器，请将其添加到 ~/{{factoryDirName}}/mcp.json",
+      "noServersMatch": "没有匹配“{{query}}”的 MCP 服务器",
+      "addServersToFile": "将 MCP 服务器添加到 ~/{{factoryDirName}}/mcp.json",
+      "searchConnectorsAndServersUppercase": "搜索连接器和服务器"
+    },
+    "mcpRegistry": {
+      "disabledByOrganizationPolicy": "已被组织策略禁用",
+      "cancel": "取消",
+      "add": "添加",
+      "viewTools": "查看工具",
+      "remove": "移除",
+      "manage": "管理",
+      "addNewMcpServer": "添加 MCP 服务器",
+      "searchMcpRegistry": "搜索 MCP 注册表",
+      "searchMcpRegistry2": "搜索 MCP 注册表…",
+      "loadingRegistry": "正在加载注册表…",
+      "addMcpServerManually": "手动添加 MCP 服务器",
+      "search": "搜索",
+      "noHttpServersFound": "没有符合搜索条件的 HTTP 服务器",
+      "noServersFound": "没有符合搜索条件的服务器"
+    },
+    "mcpTools": {
+      "noParameters": "无参数",
+      "required": "必填",
+      "readOnly": "只读",
+      "parameters": "参数",
+      "loadingTools": "正在加载工具…",
+      "noToolsAvailable": "没有可用工具",
+      "collapseDetailsFor": "折叠 {{name}} 的详情",
+      "expandDetailsFor": "展开 {{name}} 的详情",
+      "noDescriptionAvailable": "暂无描述"
+    },
+    "pluginSettingsModal": {
+      "noPluginsInstalled": "未安装插件",
+      "noMatchingPluginsFound": "未找到匹配的插件",
+      "managed": "托管",
+      "project": "项目",
+      "organization": "组织",
+      "update": "更新",
+      "uninstall": "卸载",
+      "noMarketplacesConfigured": "未配置市场",
+      "remove": "移除",
+      "plugins": "插件",
+      "searchAvailablePlugins": "搜索可用插件…",
+      "searchAvailablePlugins2": "搜索可用插件…",
+      "searchInstalledPlugins": "搜索已安装插件…",
+      "searchInstalledPlugins2": "搜索已安装插件…",
+      "ownerRepoOrHttpsGithubCom": "owner/repo 或 https://github.com/owner/repo",
+      "add": "添加",
+      "cancel": "取消",
+      "noAvailablePlugins": "没有可用插件",
+      "installNameFromMarketplace": "从 {{marketplace}} 安装 {{name}}",
+      "installing": "正在安装…",
+      "install": "安装",
+      "updateTarget": "更新 {{target}}",
+      "uninstallTarget": "卸载 {{target}}",
+      "pluginCount_one": "{{count}} 个插件",
+      "pluginCount_other": "{{count}} 个插件",
+      "autoUpdateOn": "自动更新已开启",
+      "autoUpdateOff": "自动更新已关闭",
+      "definedInScopeSettings": "定义于 {{scope}} 设置",
+      "updateMarketplaceName": "更新市场 {{name}}",
+      "removeMarketplaceName": "移除市场 {{name}}",
+      "uninstallPluginTitle": "卸载 {{name}}？",
+      "uninstallPluginBody": "这将卸载 {{pluginId}}。你可以从“可用”标签页重新安装。",
+      "removeMarketplaceTitle": "移除 {{name}}？",
+      "removeMarketplaceBody": "这会从“可用”标签页移除市场“{{name}}”及其插件。",
+      "availableTab": "可用",
+      "installedTab": "已安装",
+      "marketplacesTab": "市场",
+      "updateMarketplace": "更新市场 {{name}}",
+      "removeMarketplace": "移除市场 {{name}}"
+    },
+    "createSkillModal": {
+      "cancel": "取消",
+      "use": "使用",
+      "useExample": "使用示例：{{example}}",
+      "title": "创建技能",
+      "description": "将重复执行的工作流转为可复用技能，供 Droid 稍后调用。",
+      "howItWorks": {
+        "fork": "将此对话分叉为技能创建 Session。当前 Session 会完整保留。",
+        "review": "Droid 会查看相关上下文，例如本地 Session 历史和仓库，以涵盖不同情况和边界场景。",
+        "save": "你将审查提议的技能（名称、描述、指令），并选择保存位置：项目或个人。"
+      },
+      "fieldLabel": "要记录的工作流",
+      "fieldHelper": "用 1–2 句话说明用途和使用时机（用户可能说的关键词）。步骤和检查清单应写在技能内部。",
+      "fieldPlaceholder": "例如：根据日志和堆栈跟踪调查生产错误。用户报告事件或异常时使用。",
+      "examplesLabel": "示例",
+      "emptyError": "描述要记录的工作流（一句话即可）。",
+      "start": "开始创建技能",
+      "starting": "正在启动…",
+      "genericError": "启动技能创建失败。请重试。",
+      "examples": {
+        "commitMessages": "根据 Git 差异生成描述性的提交信息。用户请求帮助撰写提交信息或审查暂存更改时使用。",
+        "failingCi": "排查并修复失败的 CI 工作流。CI 失败且用户希望恢复测试和构建通过时使用。",
+        "npmUpgrade": "安全升级 TypeScript 项目中的 npm 依赖。升级软件包或解决升级后的类型错误时使用。",
+        "productionError": "根据日志和堆栈跟踪调查生产错误。用户报告事件、异常或错误率升高时使用。"
+      }
+    },
+    "skillBrowserModal": {
+      "searchSkills": "搜索技能",
+      "noSkillsMatchYourFilters": "没有符合筛选条件的技能",
+      "done": "完成",
+      "selectNameWithBadge": "选择 {{name}}，{{badge}}",
+      "selectASkillToViewDetails": "选择技能以查看详情"
+    },
+    "skillsBrowser": {
+      "modelOnly": "仅模型可调用",
+      "noDetailedDocumentationAvailableForThis": "此技能暂无详细文档。",
+      "references": "参考资料",
+      "assets": "资源",
+      "selectASkillToViewDetails": "选择技能以查看详情",
+      "skills": "技能",
+      "browseAndExploreAvailableSkills": "浏览和探索可用技能",
+      "searchSkills": "搜索技能…",
+      "locationProject": "项目",
+      "locationPersonal": "个人",
+      "locationBuiltin": "内置",
+      "locationAutomation": "自动化",
+      "locationUnknown": "未知",
+      "locationOrg": "组织",
+      "pluginSource": "{{scope}} · {{plugin}}",
+      "pluginTag": "插件：{{id}}",
+      "disableForProject": "为项目禁用",
+      "enableForProject": "为项目启用",
+      "disableAcrossAllProjects": "在所有项目中禁用",
+      "enableAcrossAllProjects": "在所有项目中启用",
+      "disable": "禁用",
+      "enable": "启用",
+      "disabledByOrg": "已被组织禁用",
+      "disabled": "已禁用",
+      "enabled": "已启用",
+      "manageName": "管理 {{name}}",
+      "selectedCount": "已选择 {{total}} 项",
+      "skillsNotSupportedForCloudTemplates": "使用云模板的沙箱暂不支持技能。",
+      "noSkillsFound": "未找到技能。请将技能添加到 ~/.factory/skills 或 .factory/skills 文件夹。",
+      "filter": {
+        "all": "全部（{{total}}）",
+        "org": "组织（{{total}}）",
+        "project": "项目（{{total}}）",
+        "personal": "个人（{{total}}）",
+        "automation": "自动化（{{total}}）",
+        "builtin": "内置（{{total}}）",
+        "disabled": "已禁用（{{total}}）"
+      },
+      "noSkillsMatchFilters": "没有符合筛选条件的技能",
+      "noSkillsAvailable": "没有可用技能"
+    },
+    "connectorAuthCard": {
+      "connected": "已连接",
+      "waiting": "等待中",
+      "connect": "连接",
+      "connectName": "连接 {{name}}",
+      "connectAccount": "连接账号",
+      "account": "账号",
+      "connectNameInYourBrowser": "在浏览器中连接 {{name}}",
+      "connectAccountInYourBrowser": "在浏览器中连接账号",
+      "connectNamed": "连接 {{name}}",
+      "connectNamedInBrowser": "在浏览器中连接 {{name}}",
+      "connectAccountInBrowser": "在浏览器中连接账号"
+    },
+    "droidMessageV3": {
+      "copyMessage": "复制消息",
+      "rewindConversationToThisMessage": "将对话回退到此消息",
+      "specNotApproved": "Spec 未获批准",
+      "userBashCommand": "用户 Bash 命令",
+      "error": "错误",
+      "modelGeneratedImage": "模型生成的图像",
+      "userProvidedContent": "用户提供的内容",
+      "toolSummary": {
+        "exploring": "正在探索",
+        "explored": "已探索",
+        "files_one": "{{count}} 个文件",
+        "files_other": "{{count}} 个文件",
+        "searches_one": "{{count}} 次搜索",
+        "searches_other": "{{count}} 次搜索",
+        "loading": "正在加载",
+        "loaded": "已加载",
+        "skills_one": "{{count}} 个技能",
+        "skills_other": "{{count}} 个技能",
+        "performing": "正在执行",
+        "performed": "已执行",
+        "actions_one": "{{count}} 项操作",
+        "actions_other": "{{count}} 项操作",
+        "performingActionsIn_one": "正在以下应用中执行 {{count}} 项操作",
+        "performingActionsIn_other": "正在以下应用中执行 {{count}} 项操作",
+        "performedActionsIn_one": "已在以下应用中执行 {{count}} 项操作",
+        "performedActionsIn_other": "已在以下应用中执行 {{count}} 项操作",
+        "apps_one": "{{count}} 个应用",
+        "apps_other": "{{count}} 个应用",
+        "extra": {
+          "loadingSkills_one": "正在加载 {{count}} 个技能",
+          "loadingSkills_other": "正在加载 {{count}} 个技能",
+          "loadedSkills_one": "已加载 {{count}} 个技能",
+          "loadedSkills_other": "已加载 {{count}} 个技能",
+          "thinking": "正在思考",
+          "thought_one": "思考了 {{count}} 次",
+          "thought_other": "思考了 {{count}} 次"
+        }
+      }
+    },
+    "systemActionMessageCardV3": {
+      "copyContents": "复制内容",
+      "copied": "已复制"
+    },
+    "thinkingBlockDisplayV3": {
+      "thinking": "正在思考",
+      "thinkingContentRedactedByProvider": "思考内容已被提供商隐藏",
+      "collapseLabel": "折叠 {{label}}",
+      "expandLabel": "展开 {{label}}",
+      "thinkingForDuration": "已思考 {{duration}}",
+      "forDuration": "持续 {{duration}}",
+      "thoughtForDuration": "思考了 {{duration}}",
+      "thought": "思考",
+      "thoughtForDurationRich": "思考<duration>了 {{duration}}</duration>"
+    },
+    "toolCallDisplayV3": {
+      "failed": "（失败）"
+    },
+    "v3DeliverableCard": {
+      "openIn": "打开方式",
+      "sidebar": "侧边栏",
+      "download": "下载",
+      "defaultApp": "默认应用",
+      "openTitleIn": "打开 {{title}} 的方式",
+      "previewTitle": "预览 {{title}}",
+      "hideFileChanges": "隐藏文件更改",
+      "showFileChanges": "显示文件更改",
+      "hideChangesFor": "隐藏 {{title}} 的更改",
+      "showChangesFor": "显示 {{title}} 的更改"
+    },
+    "v3ExecuteToolResult": {
+      "clickToSeeProgress": "点击查看进度",
+      "waitingForCommandOutput": "等待命令输出…",
+      "expandCommandOutput": "展开命令输出"
+    },
+    "v3ExitSpecModeToolResult": {
+      "proposeSpecification": "提出 Spec"
+    },
+    "v3FileChangeToolResult": {
+      "noDiffAvailable": "没有可用差异",
+      "writeLines_one": "写入 {{count}} 行",
+      "writeLines_other": "写入 {{count}} 行",
+      "writeFile": "写入文件",
+      "deleteLines_one": "删除 {{count}} 行",
+      "deleteLines_other": "删除 {{count}} 行",
+      "deleteFile": "删除文件",
+      "editLines_one": "编辑 {{count}} 行",
+      "editLines_other": "编辑 {{count}} 行",
+      "editFile": "编辑文件",
+      "changeLines_one": "更改 {{count}} 行",
+      "changeLines_other": "更改 {{count}} 行",
+      "changeFile": "更改文件",
+      "errorWritingFile": "写入文件出错",
+      "errorDeletingFile": "删除文件出错",
+      "errorEditingFile": "编辑文件出错",
+      "errorChangingFile": "更改文件出错",
+      "hiddenLines_one": "{{count}} 个隐藏行",
+      "hiddenLines_other": "{{count}} 个隐藏行",
+      "openTitleInFiles": "在文件面板中打开 {{title}}",
+      "openFileInFiles": "在文件面板中打开文件",
+      "openTitle": "打开 {{title}}",
+      "openFile": "打开文件",
+      "downloadTitle": "下载 {{title}}",
+      "downloadFile": "下载文件",
+      "previewTitle": "预览 {{title}}"
+    },
+    "v3ProposeMissionToolResult": {
+      "open": "打开",
+      "proposeMission": "提出任务",
+      "noProposalProvided": "未提供提案"
+    },
+    "activeSessionBanner": {
+      "environment": "环境",
+      "newSession": "新建 Session",
+      "openSidebar": "打开侧边栏",
+      "sessionMenu": "Session 菜单",
+      "share": "共享",
+      "rename": "重命名",
+      "changeTeam": "更改团队",
+      "missionSettings": "设置",
+      "archive": "归档",
+      "forceReboot": "强制重启",
+      "copyWorkingDirectory": "复制工作目录",
+      "copySessionId": "复制 Session ID",
+      "copySessionLink": "复制 Session 链接",
+      "copyAsMarkdown": "复制为 Markdown",
+      "sessionDetails": "Session 详情",
+      "changes": "变更",
+      "openChanges": "打开变更",
+      "generatingTitle": "正在生成标题…",
+      "readOnly": "只读",
+      "thisIsALegacySessionSending": "这是旧版 Session，无法发送新消息。",
+      "thisSessionIsArchivedYouAre": "此 Session 已归档，当前为只读模式。",
+      "unarchive": "取消归档",
+      "hideEnvironment": "隐藏环境",
+      "showEnvironment": "显示环境",
+      "hidePanel": "隐藏面板",
+      "showPanel": "显示面板",
+      "pin": "固定",
+      "unpin": "取消固定",
+      "back": "返回",
+      "sessionPausedReconnecting": "Session 已暂停。下次交互时将重新连接…",
+      "localConnectionFailed": "无法连接到本地计算机。请重启应用后重试。",
+      "readOnlyTooltip": "此 Session 已同步到云端，但本地计算机上不可用。你可以查看消息，但无法交互。",
+      "settingUpDownload": "正在设置下载…",
+      "downloadRemoteFiles": "下载远程文件",
+      "sessionLimitReached": "已达到 Session 上限，无法发送新消息。",
+      "subscriptionRequired": "需要订阅，无法发送新消息。"
+    },
+    "askUserCard": {
+      "selectAllThatApply": "选择所有适用项",
+      "orTypeYourOwnAnswer": "或输入自己的答案…",
+      "selectAtLeastOneOption": "至少选择一项",
+      "cancel": "取消",
+      "submit": "提交",
+      "whatWouldYouLikeToDo": "你想做什么？",
+      "exitAskuser": "退出 AskUser？",
+      "nextQuestion": "下一个问题",
+      "cancelStay": "取消（留在此处）",
+      "abortMessage": "中止消息",
+      "restartAskUser": "重新启动 AskUser"
+    },
+    "offlineAskUserCard": {
+      "youWillBeAbleToRespond": "Session 重新连接后，你即可回复。",
+      "connect": "连接",
+      "connecting": "正在连接…",
+      "offlineConnectToAnswer": "离线 — 连接后作答"
+    },
+    "browserLoadError": {
+      "sendToDroid": "发送给 Droid",
+      "refresh": "刷新",
+      "fileCouldNotBeOpened": "无法打开此文件",
+      "siteCannotBeReached": "无法访问此网站",
+      "fileMayHaveMoved": "它可能已被移动或删除。",
+      "localServerNotResponding": "本地服务器未响应。"
+    },
+    "browserOptionsMenu": {
+      "browserOptions": "浏览器选项",
+      "takeScreenshot": "截图",
+      "forceReload": "强制重新加载",
+      "openDevtools": "打开开发者工具",
+      "zoom": "缩放",
+      "zoomOut": "缩小",
+      "zoomIn": "放大",
+      "clearCookies": "清除 Cookie",
+      "clearCache": "清除缓存",
+      "hideDeviceToolbar": "隐藏设备工具栏",
+      "showDeviceToolbar": "显示设备工具栏"
+    },
+    "browserPanel": {
+      "back": "返回",
+      "forward": "前进",
+      "refresh": "刷新",
+      "enterAUrl": "输入 URL",
+      "grabElement": "选取元素",
+      "cancelDesignMode": "取消设计模式",
+      "designMode": "设计模式",
+      "editComment": "编辑评论 {{number}}",
+      "defaultComment": "分析此元素"
+    },
+    "deviceToolbar": {
+      "dimensions": "尺寸：",
+      "devicePreset": "设备预设",
+      "viewportWidth": "视口宽度",
+      "viewportHeight": "视口高度",
+      "rotateDimensions": "旋转尺寸",
+      "viewportZoom": "视口缩放",
+      "hideDeviceToolbar": "隐藏设备工具栏",
+      "presets": {
+        "custom": "自定义",
+        "laptop": "笔记本电脑"
+      }
+    },
+    "localhostSuggestions": {
+      "noLocalServersOrHtmlFiles": "目前没有可用的本地服务器或 HTML 文件。",
+      "localhostSuggestionOptions": "Localhost 建议选项",
+      "clearHistory": "清除历史记录",
+      "show": "显示",
+      "all": "全部",
+      "online": "在线",
+      "local": "本地"
+    },
+    "chatComposer": {
+      "recentPrompts": "最近的提示词",
+      "migration": "迁移",
+      "typeYourMessage": "输入消息…",
+      "uploadingFile": "正在上传 {{name}}…",
+      "uploadingAttachmentCount_one": "正在上传 {{count}} 个附件…",
+      "uploadingAttachmentCount_other": "正在上传 {{count}} 个附件…",
+      "uploadingAttachments": "正在上传附件…",
+      "migrationActiveClickToOpen": "迁移正在进行。点击打开其文件。",
+      "migrationActiveForSession": "此 Session 的迁移正在进行。",
+      "selectAnOption": "选择一个选项…",
+      "respondToPendingPermissionFirst": "请先响应待处理的权限请求",
+      "sendingMessage": "正在发送消息…",
+      "chatDisabled": "聊天已禁用",
+      "attachmentErrors": {
+        "unsupportedFileType": "不支持的文件类型：“{{name}}”。仅接受图像和文档。",
+        "fileTooLarge": "文件过大：“{{name}}”超过 {{limitMb}}MB 上限。",
+        "failedToReadFile": "读取文件失败",
+        "unknownError": "发生未知错误",
+        "failedToUploadFile": "上传文件失败",
+        "failedToAttachAfterUpload": "上传后无法附加“{{name}}”。"
+      },
+      "voiceDictationErrors": {
+        "microphoneAccessDenied": "麦克风访问被拒绝。请启用麦克风权限后重试。",
+        "noMicrophoneFound": "未找到麦克风。",
+        "recordingFailed": "语音录制失败。",
+        "dictationFailed": "语音听写失败。",
+        "notSupported": "此浏览器不支持语音听写。"
+      }
+    },
+    "chatComposerExpandButton": {
+      "expand": "展开聊天输入框"
+    },
+    "chatComposerAutonomySelector": {
+      "loadingSessionSettings": "正在加载 Session 设置",
+      "autonomy": "自主性",
+      "modes": {
+        "normal": {
+          "label": "普通模式",
+          "description": "使用 Droid 的默认工作方式。"
+        },
+        "spec": {
+          "label": "Spec 模式",
+          "description": "更改前先研究并制定计划。"
+        },
+        "mission": {
+          "label": "任务模式",
+          "description": "通过并行工作的 Droid 规划并交付长期项目。"
+        }
+      },
+      "levels": {
+        "off": {
+          "ariaLabel": "自主级别：关闭",
+          "tooltip": "自主级别：关闭（所有操作均需批准）"
+        },
+        "low": {
+          "ariaLabel": "自主级别：低",
+          "tooltip": "自主级别：低（编辑和只读命令）"
+        },
+        "medium": {
+          "ariaLabel": "自主级别：中",
+          "tooltip": "自主级别：中（允许可撤销命令）"
+        },
+        "high": {
+          "ariaLabel": "自主级别：高",
+          "tooltip": "自主级别：高（允许所有命令）"
+        }
+      },
+      "missionRequiresHighAutonomy": "任务需要高自主级别。",
+      "modeWithShortcut": "{{mode}}（{{shortcut}}）"
+    },
+    "chatComposerModelSelector": {
+      "new": "新增",
+      "loadingDefaults": "正在加载默认设置…",
+      "back": "返回",
+      "confirm": "确认",
+      "customModels": "自定义模型",
+      "legacy": "旧版",
+      "loadingModel": "正在加载模型",
+      "filterModels": "筛选模型",
+      "searchModels": "搜索模型",
+      "setModelDefaults": "设置模型默认值",
+      "setDefaults": "设置默认值",
+      "failedToUpdateModelSettings": "更新模型设置失败",
+      "failedToSaveLegacyModelChoice": "保存旧版模型选择失败",
+      "failedToUpdateModelDefaults": "更新模型默认值失败",
+      "dynamicMultiplier": "动态",
+      "setDefaultsForMode": "设置 {{mode}} 模式的默认值",
+      "hideLegacyModels": "隐藏旧版模型",
+      "showLegacyModels": "显示旧版模型（{{modelCount}}）",
+      "noModelsMatch": "没有匹配“{{query}}”的模型",
+      "modelTitle": "模型：{{name}}",
+      "modelTitleWithShortcut": "模型：{{name}}（{{shortcut}}）",
+      "reasoningLevel": "推理级别：{{level}}",
+      "efforts": {
+        "none": "无",
+        "off": "关闭",
+        "dynamic": "动态",
+        "minimal": "最低",
+        "low": "低",
+        "medium": "中",
+        "high": "高",
+        "extraHigh": "极高",
+        "max": "最高"
+      }
+    },
+    "chatComposerSkillsButton": {
+      "skills": "技能",
+      "skillsWithCount": "技能（{{skillCount}}）"
+    },
+    "chatComposerVoiceDictationFeed": {
+      "voiceDictationAudioFeed": "语音听写音频流"
+    },
+    "chatSubmitButton": {
+      "sendMessage": "发送消息",
+      "sendingDisabled": "发送已禁用",
+      "send": "发送"
+    },
+    "helpButton": {
+      "showKeyboardShortcuts": "显示键盘快捷键"
+    },
+    "imageUploadButton": {
+      "attachAFile": "附加文件",
+      "attachAFileTooltip": "附加文件…"
+    },
+    "pendingCommandsPanel": {
+      "droidShieldDetails": "Droid-Shield 详情",
+      "riskReason": "风险原因",
+      "riskLevels": {
+        "low": "低风险",
+        "medium": "中风险",
+        "high": "高风险"
+      },
+      "legacyRisk": {
+        "low": "低风险",
+        "medium": "中风险",
+        "high": "高风险"
+      },
+      "hideDroidShieldDetails": "隐藏 Droid-Shield 详情",
+      "showDroidShieldDetails": "显示 Droid-Shield 详情",
+      "approvalPosition": "第 {{current}} / {{total}} 项审批",
+      "droidShieldApprovalRequired": "需要 Droid-Shield 批准"
+    },
+    "contextWindowModal": {
+      "freeSpace": "可用空间",
+      "contextUsage": "上下文用量",
+      "failedToLoadContextBreakdown": "加载上下文明细失败。",
+      "tokenCountsReflectRawLlmTokens": "Token 数量表示原始 LLM token，不是 Factory 标准积分。",
+      "showLess": "收起",
+      "showMore_one": "再显示 {{count}} 项",
+      "showMore_other": "再显示 {{count}} 项",
+      "tokensWithPercent": "{{tokens}} token（{{percent}}）",
+      "tokens": "{{tokens}} token",
+      "toolsAndTokens": "{{tools}} 个工具，{{tokens}} token",
+      "usageSummary": "{{used}}/{{budget}} token（{{percent}}）· 在 {{budget}} 时压缩",
+      "group": {
+        "user": "用户",
+        "project": "项目",
+        "automation": "自动化"
+      },
+      "tab": {
+        "skills": "技能",
+        "mcpServers": "MCP 服务器",
+        "customAgents": "自定义代理"
+      },
+      "loadingContextBreakdown": "正在加载上下文明细…"
+    },
+    "documentLightbox": {
+      "closePreview": "关闭预览"
+    },
+    "droidChatInput": {
+      "stopAgent": "停止代理",
+      "sendMessage": "发送消息",
+      "showKeyboardShortcuts": "显示键盘快捷键",
+      "attachFile": "附加文件",
+      "defaultPlaceholder": "你想处理什么工作？",
+      "skippedUnsupported_one": "已跳过：{{count}} 个不支持的格式",
+      "skippedUnsupported_other": "已跳过：{{count}} 个不支持的格式",
+      "skippedTooLarge": "已跳过：{{tooLargeCount}} 个过大文件",
+      "skippedUnsupportedAndTooLarge_one": "已跳过：{{count}} 个不支持的格式，{{tooLargeCount}} 个过大文件",
+      "skippedUnsupportedAndTooLarge_other": "已跳过：{{count}} 个不支持的格式，{{tooLargeCount}} 个过大文件",
+      "attachedImage": "已附加图像 {{number}}",
+      "removeImage": "移除图像 {{number}}",
+      "fileFallbackName": "文件",
+      "removeFile": "移除文件 {{name}}"
+    },
+    "droidSessionChat": {
+      "scrollToPinnedMessage": "滚动到固定消息",
+      "searchChatTranscript": "搜索聊天记录",
+      "searchSession": "搜索 Session",
+      "previousChatSearchMatch": "上一个聊天搜索匹配项",
+      "nextChatSearchMatch": "下一个聊天搜索匹配项",
+      "closeChatSearch": "关闭聊天搜索",
+      "noMessagesYetStartAConversation": "暂无消息。开始对话吧！",
+      "scrollToBottom": "滚动到底部",
+      "checkingOnDroid": "正在检查 Droid…",
+      "lookingUpMachineConnection": "正在查找计算机连接…",
+      "wakingUpDroid": "正在唤醒 Droid…",
+      "startingRemoteMachine": "正在启动远程计算机…",
+      "gettingSessionReady": "正在准备 Session…",
+      "connectingToDaemon": "正在连接守护进程…",
+      "loadingSessionSettings": "正在加载 Session 设置…",
+      "preparingSession": "正在准备 Session…",
+      "sendOnceDroidReconnects": "Droid 重新连接后即可发送。",
+      "notConnectedToMachine": "未连接到计算机",
+      "failedToSendMessage": "发送消息失败。请重试。",
+      "failedToInterruptSession": "中断 Session 失败。请重试。",
+      "waitForComputerToConnect": "请等待计算机连接后再更改此设置",
+      "placeholder": {
+        "respondToQuestionnaire": "请回答上方问卷…",
+        "sendFollowUp": "发送后续消息 · Ctrl+Enter 排队稍后发送",
+        "typeYourMessage": "输入消息…",
+        "waitingForSession": "等待 Session…"
+      },
+      "loadingPreviousMessages": "正在加载更早的消息…",
+      "loadPreviousMessages": "加载更早的消息"
+    },
+    "droidSessionLoadingShell": {
+      "loadingSession": "正在加载 Session"
+    },
+    "escapeConfirmationDialog": {
+      "dontAskAgain": "不再询问"
+    },
+    "imageLightbox": {
+      "imagePreview": "图像预览",
+      "pressEscapeOrClickOutsideThe": "按 Escape 或点击图像外部以关闭。",
+      "closePreview": "关闭预览",
+      "imageActions": "图像操作",
+      "zoomOut": "缩小",
+      "resetZoom": "重置缩放",
+      "zoomIn": "放大",
+      "downloadImage": "下载图像",
+      "openInSidebar": "在侧边栏中打开",
+      "fullSizePreview": "原始大小预览"
+    },
+    "loopIndicator": {
+      "resumeLoop": "恢复循环",
+      "pauseLoop": "暂停循环",
+      "stopLoop": "停止循环",
+      "scheduledLoops": "定时循环",
+      "status": {
+        "runningNow": "{{cadence}} · 正在运行",
+        "held": "{{cadence}} · 已暂缓",
+        "heldWithReason": "{{cadence}} · {{reason}}",
+        "paused": "{{cadence}} · 已暂停",
+        "error": "{{cadence}} · 错误",
+        "errorWithMessage": "{{cadence}} · 错误：{{error}}",
+        "nextRun": "{{cadence}} · 下次 {{nextRun}}"
+      },
+      "descriptionWithFireCount": "{{description}} · 已运行 {{fireCount}} 次",
+      "loopsRunning_one": "{{count}} 个循环 · 运行中",
+      "loopsRunning_other": "{{count}} 个循环 · 运行中",
+      "scheduledLoopsLabel": "定时循环：{{label}}",
+      "couldNotRefresh": "无法刷新"
+    },
+    "mermaidDiagram": {
+      "renderingDiagram": "正在渲染图表",
+      "renderedMermaidDiagramPreview": "已渲染的 Mermaid 图表预览"
+    },
+    "messageMarkdownDisplay": {
+      "expandMarkdownTable": "展开 Markdown 表格",
+      "markdownTableCopied": "Markdown 表格已复制",
+      "copyMarkdownTable": "复制 Markdown 表格"
+    },
+    "queuedMessagesPanel": {
+      "attachmentPreview": "附件预览",
+      "sendNow": "立即发送",
+      "removeFromQueue": "从队列中移除",
+      "editMessage": "编辑消息",
+      "clearAll": "全部清除",
+      "steeringMessages": "引导消息",
+      "queuedMessages": "排队消息",
+      "imageCount_one": "{{count}} 张图像",
+      "imageCount_other": "{{count}} 张图像",
+      "fileCount_one": "{{count}} 个文件",
+      "fileCount_other": "{{count}} 个文件",
+      "imagesAndFilesQueued": "{{images}} 和 {{files}} 已排队",
+      "imagesQueued_one": "{{count}} 张图像已排队",
+      "imagesQueued_other": "{{count}} 张图像已排队",
+      "filesQueued_one": "{{count}} 个文件已排队",
+      "filesQueued_other": "{{count}} 个文件已排队",
+      "queuedMessage": "排队消息",
+      "attachmentCount_one": "{{count}} 个附件",
+      "attachmentCount_other": "{{count}} 个附件",
+      "clearAllPendingMessages": "清除所有待发送消息"
+    },
+    "sessionArtifactsPanel": {
+      "sections": "产物分区",
+      "emptyMentioned": "尚未提及拉取请求、问题、页面或链接",
+      "emptyOutputs": "尚未创建拉取请求、问题或页面",
+      "activity": "{{action}} {{time}}",
+      "action": {
+        "closed": "已关闭",
+        "created": "已创建",
+        "deleted": "已删除",
+        "linked": "已关联",
+        "merged": "已合并",
+        "updated": "更新时间",
+        "viewed": "已查看"
+      }
+    },
+    "sessionDetailsModal": {
+      "sessionDetails": "Session 详情",
+      "sessionInfo": "Session 信息",
+      "sessionId": "Session ID",
+      "previousSession": "上一个 Session",
+      "repository": "仓库",
+      "workspace": "工作区",
+      "directory": "目录",
+      "machine": "计算机",
+      "session": "Session",
+      "cloudSync": "云同步",
+      "computer": "计算机",
+      "name": "名称",
+      "daemonVersion": "守护进程版本",
+      "updateAvailable": "有可用更新",
+      "monitoring": "监控",
+      "open": "打开",
+      "usage": "用量",
+      "factoryStandardCredits": "Factory 标准积分",
+      "status": "状态",
+      "loading": "正在加载…",
+      "close": "关闭"
+    },
+    "sessionEnvironmentPanel": {
+      "selectGitAction": "选择 Git 操作",
+      "environment": "环境",
+      "noRepository": "无仓库",
+      "changes": "变更",
+      "mentioned": "已提及",
+      "outputs": "输出",
+      "viewAll": "查看全部",
+      "viewAllSection": "查看全部{{section}}",
+      "collapseSection": "折叠 {{section}}",
+      "expandSection": "展开 {{section}}",
+      "issue": "问题",
+      "issueWithReference": "问题 {{reference}}",
+      "notionPage": "Notion 页面"
+    },
+    "sessionInfoTooltip": {
+      "sessionDetails": "Session 详情",
+      "copyAllSessionDetails": "复制所有 Session 详情",
+      "sessionId": "Session ID",
+      "previousSession": "上一个 Session",
+      "repository": "仓库",
+      "workspace": "工作区",
+      "directory": "目录",
+      "machine": "计算机",
+      "session": "Session",
+      "cloudSync": "云同步",
+      "computer": "计算机",
+      "name": "名称",
+      "daemonVersion": "守护进程版本",
+      "updateAvailable": "（有可用更新）",
+      "monitoring": "监控",
+      "open": "打开",
+      "usage": "用量",
+      "factoryStandardCredits": "Factory 标准积分",
+      "status": "状态",
+      "loading": "正在加载…"
+    },
+    "sessionTitleHoverCard": {
+      "computer": "计算机",
+      "daemonVersion": "守护进程版本",
+      "updateAvailable": "（有可用更新）",
+      "monitoring": "监控",
+      "open": "打开",
+      "sandboxEnabled": "沙箱已启用",
+      "machineLabel": {
+        "local": "本地",
+        "droidComputer": "Droid 计算机",
+        "cloudWithWorkspace": "云端 · {{workspaceName}}",
+        "cloud": "云端",
+        "machine": "计算机"
+      }
+    },
+    "systemActionMessageCard": {
+      "copyContents": "复制内容"
+    },
+    "btwPanel": {
+      "newSideChat": "新建侧边聊天",
+      "sideChat": "侧边聊天",
+      "sideChatQuestion": "侧边聊天问题",
+      "askAQuestion": "提出问题…",
+      "sendQuestion": "发送问题",
+      "aboutSideChat": "关于侧边聊天",
+      "continueInNewSession": "在新 Session 中继续",
+      "sessionTitle": "Session 标题",
+      "enterSessionTitle": "输入 Session 标题",
+      "cancel": "取消",
+      "sideChatInfo": "每个问题都会从主 Session 的全新副本开始，并包含你之前的问题。<br/>主 Session 看不到此聊天。",
+      "clearAndStartNew": "清空并开始新的侧边聊天"
+    },
+    "btwPanelEntryItem": {
+      "stop": "停止",
+      "stopThisAnswer": "停止此回答",
+      "stopped": "已停止",
+      "continueInNewSession": "在新 Session 中继续",
+      "using": "正在使用",
+      "used": "已使用",
+      "toolCount_one": "{{count}} 个工具",
+      "toolCount_other": "{{count}} 个工具",
+      "failedToGetAnswer": "获取回答失败",
+      "streaming": "流式输出中"
+    },
+    "diffCommentForm": {
+      "leaveAComment": "留下评论…",
+      "cancel": "取消",
+      "startReview": "开始审查",
+      "addComment": "添加评论"
+    },
+    "diffViewer": {
+      "copyFilePath": "复制文件路径",
+      "diff": "差异",
+      "commentCount_one": "{{count}} 条评论",
+      "commentCount_other": "{{count}} 条评论",
+      "copied": "已复制！",
+      "collapseFile": "折叠文件",
+      "showFullFile": "显示完整文件",
+      "you": "你",
+      "showMoreChanges": "显示[另外 {{lines}} 处]更改"
+    },
+    "diffCommentDisplayV2": {
+      "outdated": "已过时",
+      "resolved": "已解决",
+      "deleteComment": "删除评论",
+      "pending": "待处理"
+    },
+    "diffCommentFormV2": {
+      "leaveAComment": "留下评论…",
+      "cancel": "取消",
+      "addComment": "添加评论",
+      "addReviewComment": "添加审查评论",
+      "comment": "评论",
+      "startAReview": "开始审查"
+    },
+    "diffReviewBarV2": {
+      "cancel": "取消",
+      "sendToDroid": "发送给 Droid"
+    },
+    "diffSearchBar": {
+      "searchDiff": "搜索差异",
+      "searchDiffContent": "搜索差异内容",
+      "previousDiffSearchMatch": "上一个差异搜索匹配项",
+      "nextDiffSearchMatch": "下一个差异搜索匹配项",
+      "closeDiffSearch": "关闭差异搜索"
+    },
+    "diffSelectionActionV2": {
+      "addToChat": "添加到聊天"
+    },
+    "diffViewerPanelV2Header": {
+      "selectGitAction": "选择 Git 操作",
+      "selectDiffSource": "选择差异来源",
+      "uncommitted": "未提交",
+      "committed": "已提交",
+      "local": "本地",
+      "branch": "分支",
+      "diffActions": "差异操作",
+      "refresh": "刷新",
+      "collapseAllDiffs": "折叠所有差异",
+      "expandAllDiffs": "展开所有差异",
+      "wrapLines": "自动换行",
+      "layout": "布局",
+      "unified": "统一",
+      "split": "并排",
+      "unifiedLayout": "统一布局",
+      "splitLayout": "并排布局",
+      "fileCount": {
+        "branch_one": "{{count}} 项分支更改",
+        "branch_other": "{{count}} 项分支更改",
+        "committed_one": "{{count}} 项已提交更改",
+        "committed_other": "{{count}} 项已提交更改",
+        "local_one": "{{count}} 项本地更改",
+        "local_other": "{{count}} 项本地更改",
+        "uncommitted_one": "{{count}} 项未提交更改",
+        "uncommitted_other": "{{count}} 项未提交更改"
+      },
+      "unavailable": {
+        "missingSessionCwd": "Session 尚未就绪或没有工作目录。",
+        "notGitRepository": "此 Session 的工作目录不是 Git 仓库。",
+        "gitNotAvailable": "此 Session 环境中没有可用的 Git。",
+        "unknown": "此 Session 的 Git 差异不可用。"
+      }
+    },
+    "diffViewerV2": {
+      "fileHasReviewComments": "文件有审查评论",
+      "viewed": "已查看",
+      "viewedFile": "已查看 {{path}}",
+      "jumpToFile": "跳转到文件",
+      "noFilesFound": "未找到文件",
+      "expansionUnavailable": {
+        "default": "无法展开差异",
+        "binary": "无法展开差异，文件为二进制文件",
+        "missing": "无法展开差异，文件不可用",
+        "stale": "文件已更改。请刷新差异后展开上下文。",
+        "tooLarge": "无法展开差异，文件过大"
+      },
+      "expandSection": "展开差异分区",
+      "collapseSection": "折叠差异分区",
+      "you": "你",
+      "unrenderableDiff": "无法显示此差异",
+      "unrenderableFiles_one": "{{count}} 个文件无法显示",
+      "unrenderableFiles_other": "{{count}} 个文件无法显示",
+      "loadingLineCount_one": "正在加载 {{count}} 行",
+      "loadingLineCount_other": "正在加载 {{count}} 行",
+      "loadingLines": "正在加载行"
+    },
+    "filePreviewGrabOverlay": {
+      "grabFilePreviewRegion": "选取文件预览区域",
+      "whatShouldDroidDoWithThis": "Droid 应如何处理此内容",
+      "cancelDesignMode": "取消设计模式",
+      "designMode": "设计模式",
+      "editComment": "编辑评论 {{number}}",
+      "defaultComment": "分析所选文件预览区域"
+    },
+    "filePreviewPanel": {
+      "zoom": "缩放",
+      "zoomOut": "缩小",
+      "resetZoomTo100": "重置缩放为 100%",
+      "zoomIn": "放大",
+      "previewOptions": "预览选项",
+      "closeFilePreview": "关闭文件预览",
+      "noPreviewAvailableForThisFile": "此文件类型没有可用预览。",
+      "couldNotPreviewFile": "无法预览此文件。文件可能为空或格式错误。",
+      "collapsePreview": "折叠预览",
+      "expandPreview": "展开预览",
+      "fileOptions": "{{fileName}} 选项"
+    },
+    "docxBytes": {
+      "renderingWordDocument": "正在渲染 Word 文档…",
+      "wordDocumentPreview": "Word 文档预览"
+    },
+    "pdfPageRail": {
+      "zoomIn": "放大",
+      "zoomOut": "缩小",
+      "zoom": "缩放",
+      "resetZoomTo100": "重置缩放为 100%"
+    },
+    "pdfPageThumbnails": {
+      "pageThumbnails": "页面缩略图"
+    },
+    "pptxDeckPreviewRenderer": {
+      "powerpointPreview": "PowerPoint 预览"
+    },
+    "xlsxWorkbookGrid": {
+      "rowNumbers": "行号",
+      "thisWorkbookHasNoSheets": "此工作簿没有工作表。",
+      "truncation": {
+        "rows": "预览仅显示 {{totalRows}} 行中的前 {{rows}} 行。下载文件以查看全部内容。",
+        "columns": "预览仅显示 {{totalColumns}} 列中的前 {{columns}} 列。下载文件以查看全部内容。",
+        "rowsAndColumns": "预览仅显示 {{totalRows}} 行中的前 {{rows}} 行，以及 {{totalColumns}} 列中的前 {{columns}} 列。下载文件以查看全部内容。"
+      }
+    },
+    "filesPanel": {
+      "fileTreeRoot": "文件树根目录",
+      "resizeFileTree": "调整文件树大小",
+      "openInFileTree": "在文件树中打开 {{path}}",
+      "showInFileTree": "在文件树中显示 {{fileName}}",
+      "hideFileTree": "隐藏文件树",
+      "showFileTree": "显示文件树"
+    },
+    "workspaceFileEditor": {
+      "cancel": "取消",
+      "discard": "放弃",
+      "saveChangesBeforeSwitchingDirectories": "切换目录前保存更改？",
+      "yourEditsBelongToTheCurrent": "你的编辑属于当前目录。",
+      "thisFileChangedInTheWorkspace": "此文件已在工作区中更改。",
+      "reload": "重新加载",
+      "readOnly": "只读",
+      "undo": "撤销",
+      "redo": "重做",
+      "couldNotLoadEditor": "无法加载编辑器。此文件为只读。",
+      "saving": "正在保存…",
+      "save": "保存",
+      "couldNotSaveEdits": "无法保存编辑。请重试或取消。",
+      "fileCannotBeEdited": "无法编辑此文件。"
+    },
+    "workspaceFileTree": {
+      "fileVisibilityOptions": "文件可见性选项",
+      "showHiddenFiles": "显示隐藏文件",
+      "workspaceFiles": "工作区文件",
+      "noFilesInWorkspace": "此工作区中没有文件。"
+    },
+    "grabCommentPopover": {
+      "send": "发送",
+      "cancelGrab": "取消选取",
+      "defaultPlaceholder": "Droid 应如何处理此内容？",
+      "sendToSession": "发送到 Session",
+      "cancel": "取消",
+      "deleteComment": "删除评论",
+      "addComment": "添加评论",
+      "saveComment": "保存评论"
+    },
+    "openInEditorSplitButton": {
+      "open": "打开",
+      "changeEditor": "更改编辑器",
+      "openInDefaultApp": "在默认应用中打开",
+      "openInFolder": "在文件夹中打开",
+      "saveAs": "另存为…"
+    },
+    "rightPaneV2": {
+      "newTab": "新建标签页",
+      "hidePanel": "隐藏面板"
+    },
+    "rightPaneV2OpenTag": {
+      "open": "打开"
+    },
+    "sessionRightPaneToolbar": {
+      "openSidebar": "打开侧边栏",
+      "closeToolsPanel": "关闭工具面板",
+      "collapsePanel": "折叠面板",
+      "expandPanel": "展开面板"
+    },
+    "specMarkdownReviewer": {
+      "comment": "评论",
+      "leaveAComment": "留下评论…",
+      "cancelComment": "取消评论",
+      "cancelCommentEsc": "取消评论（Esc）",
+      "saveComment": "保存评论",
+      "saveCommentEnter": "保存评论（Enter）",
+      "deleteComment": "删除评论",
+      "editComment": "编辑评论",
+      "bold": "粗体",
+      "italic": "斜体",
+      "inlineCode": "行内代码",
+      "addComment": "添加评论",
+      "noSpecContent": "没有 Spec 内容。",
+      "codeTooltip": "代码",
+      "leaveACommentOnSelectedText": "对选中文本发表评论"
+    },
+    "specReviewApprovalBar": {
+      "deleteComment": "删除评论",
+      "comments": "评论",
+      "noInlineComments": "没有行内评论。",
+      "autonomyLevel": "自主性级别",
+      "cancel": "取消",
+      "confirm": "确认",
+      "autonomyChoice": {
+        "off": "自动（关闭）",
+        "low": "自动（低）",
+        "medium": "自动（中）",
+        "high": "自动（高）"
+      },
+      "approveMission": "批准任务",
+      "approveSpec": "批准 Spec",
+      "requestChanges": "请求修改",
+      "keepIterating": "继续迭代",
+      "proceedWithComments": "带评论继续",
+      "proceedWithSpec": "按 Spec 继续",
+      "addInlineCommentToRequestChanges": "添加行内评论以请求更改",
+      "continueIn": "继续位置",
+      "thisChat": "此聊天",
+      "thisChatDescription": "保留当前对话",
+      "newChat": "新建聊天",
+      "newChatDescription": "仅使用已批准的 Spec 全新开始",
+      "contextSavings": "（节省 {{savings}}% 上下文）",
+      "proceedWithSpecInNewChat": "在新聊天中按 Spec 继续",
+      "startingNewChat": "正在启动新聊天…"
+    },
+    "specReviewPanel": {
+      "downloadMarkdown": "下载 Markdown",
+      "closeSpecReview": "关闭 Spec 审查",
+      "retrySendingFeedback": "重试发送反馈",
+      "yourCommentsAreKeptHereUntil": "发送前，评论会保留在这里。",
+      "specification": "Spec",
+      "willSaveTo": "将保存到 {{filePath}}",
+      "sendingFeedback": "正在发送反馈…",
+      "feedbackCouldNotBeSent": "无法发送反馈"
+    },
+    "pluginSettingsModalV2": {
+      "searchAvailablePlugins": "搜索可用插件",
+      "searchInstalledPlugins": "搜索已安装插件"
+    },
+    "attachmentPreview": {
+      "imageFallbackName": "图像 {{number}}",
+      "fileFallbackName": "文件 {{number}}",
+      "expand": "展开 {{name}}",
+      "remove": "移除 {{name}}",
+      "preview": "预览 {{name}}",
+      "cancelUpload": "取消上传 {{name}}",
+      "uploadingTooltip": "正在上传 {{name}}…",
+      "uploading": "正在上传 {{name}}"
+    },
+    "composerChip": {
+      "kind": {
+        "attachment": "附件",
+        "codeSelection": "代码选区",
+        "pullRequestComment": "拉取请求评论",
+        "quote": "引用"
+      },
+      "remove": {
+        "attachment": "移除附件",
+        "codeSelection": "移除代码选区",
+        "pullRequestComment": "移除拉取请求评论",
+        "quote": "移除引用"
+      }
+    },
+    "chatComposerMcpButton": {
+      "connectors": "连接器",
+      "connectorsWithCount": "连接器（{{itemCount}}）",
+      "mcpWithCount": "MCP（{{itemCount}}）"
+    },
+    "chatComposerVoiceDictationButton": {
+      "starting": "正在启动语音听写…",
+      "stop": "停止语音听写",
+      "transcribing": "正在转写语音听写…",
+      "start": "开始语音听写"
+    },
+    "droidStatusIndicator": {
+      "ponders": {
+        "p01": "正在顺着这条线索查找…",
+        "p02": "这里有个有趣的地方…",
+        "p03": "让我顺着它追踪下去…",
+        "p04": "有件事引起了我的注意…",
+        "p05": "让我再仔细看看…",
+        "p06": "不知道这是否有关联…",
+        "p07": "这让我想到了什么…",
+        "p08": "让我沿着这条线索继续…",
+        "p09": "这里值得进一步探索…",
+        "p10": "让我再研究一下…",
+        "p11": "对这一部分有些好奇…",
+        "p12": "我想把它理解得更清楚…",
+        "p13": "这里比预想的更复杂…",
+        "p14": "正在顺着直觉探索…",
+        "p15": "思路正在逐渐成形…",
+        "p16": "各个部分开始对应上了…",
+        "p17": "开始理清了…",
+        "p18": "整体图景正在形成…",
+        "p19": "事情逐渐清晰起来…",
+        "p20": "迷雾开始散去…",
+        "p21": "现在能看到轮廓了…",
+        "p22": "开始说得通了…",
+        "p23": "关联正在浮现…",
+        "p24": "路径开始显现…",
+        "p25": "我想找到线索了…",
+        "p26": "这里的思路逐渐明确…",
+        "p27": "结构正在显现…",
+        "p28": "各个部分逐渐就位…",
+        "p29": "让我仔细想想…",
+        "p30": "正在从几个角度考虑…",
+        "p31": "正在反复琢磨…",
+        "p32": "正在权衡选项…",
+        "p33": "让我再想一会儿…",
+        "p34": "正在考虑可能的影响…",
+        "p35": "让我逐步推理…",
+        "p36": "花点时间考虑一下…",
+        "p37": "正在思考这件事…",
+        "p38": "让我逐步梳理…",
+        "p39": "正在考虑最佳方法…",
+        "p40": "正在考虑如何着手…",
+        "p41": "正在斟酌…",
+        "p42": "正在追踪其中的逻辑…",
+        "p43": "正在探索各种可能…",
+        "p44": "正在梳理全局…",
+        "p45": "正在逐步探索…",
+        "p46": "正在查看整体情况…",
+        "p47": "正在进一步探究…",
+        "p48": "正在逐层梳理…",
+        "p49": "正在研究细节…",
+        "p50": "正在逐步推进…",
+        "p51": "正在探明边界…",
+        "p52": "正在规划路线…",
+        "p53": "我想看到规律了…",
+        "p54": "这里有些似曾相识…",
+        "p55": "我见过类似情况…",
+        "p56": "这里有一定的节奏…",
+        "p57": "结构开始清晰…",
+        "p58": "正在发现关联…",
+        "p59": "一个共同主题正在浮现…",
+        "p60": "正在留意底层结构…",
+        "p61": "正在寻找隐藏的规律…",
+        "p62": "从哪个角度最好呢…",
+        "p63": "也许有更简单的方法…",
+        "p64": "我遗漏了什么呢…",
+        "p65": "让我换个方法试试…",
+        "p66": "核心问题是什么呢…",
+        "p67": "让我拆开来看…",
+        "p68": "正在寻找关键见解…",
+        "p69": "正在聚焦核心…",
+        "p70": "正在抓住本质…",
+        "p71": "如果这样处理呢…",
+        "p72": "也许事情更简单…",
+        "p73": "嗯，这很有意思…",
+        "p74": "等等，这一点呢…",
+        "p75": "让我重新考虑…",
+        "p76": "不过，还有一点…",
+        "p77": "会不会是这样…",
+        "p78": "如果换一种方式呢…",
+        "p79": "再想想…",
+        "p80": "思路正在酝酿…",
+        "p81": "思维正在运转…",
+        "p82": "脑海中正在推演…",
+        "p83": "这里有个想法在酝酿…",
+        "p84": "正在细想…",
+        "p85": "想法正在成形…",
+        "p86": "正在整理复杂关系…",
+        "p87": "各条线索开始汇合…",
+        "p88": "迷雾正在散去…",
+        "p89": "轮廓从纷杂信息中浮现…",
+        "p90": "信号越来越清晰…",
+        "p91": "边界逐渐清楚…",
+        "p92": "各个层面慢慢展开…"
+      },
+      "responds": {
+        "r01": "正在整理思路…",
+        "r02": "正在寻找合适的措辞…",
+        "r03": "让我逐步说明…",
+        "r04": "我目前的想法是…",
+        "r05": "正在整合内容…",
+        "r06": "正在说明处理方法…",
+        "r07": "让我解释一下思路…",
+        "r08": "正在组织回答…",
+        "r09": "正在将想法化为文字…",
+        "r10": "正在组织说明…"
+      },
+      "waits": {
+        "w01": "等待你的想法…",
+        "w02": "随时等待你的输入…",
+        "w03": "你准备好后即可继续…",
+        "w04": "慢慢来…",
+        "w05": "不用着急，我会在这里…",
+        "w06": "准备好时再继续…",
+        "w07": "已暂停，正在倾听…",
+        "w08": "一如既往地耐心等待…",
+        "w09": "不着急…",
+        "w10": "随时待命…",
+        "w11": "保持等待…",
+        "w12": "随时都在…",
+        "w13": "按你的节奏来…",
+        "w14": "耐心等待…",
+        "w15": "稍作休息…",
+        "w16": "暂时暂停…",
+        "w17": "期待你的决定…",
+        "w18": "想知道你会选择哪条路…",
+        "w19": "期待看到你的选择…",
+        "w20": "等待你的指示…",
+        "w21": "期待听听你的看法…",
+        "w22": "想了解你的思路…",
+        "w23": "想了解你的观点…",
+        "w24": "想知道你在想什么…",
+        "w25": "期待你的判断…",
+        "w26": "期待你的输入…",
+        "w27": "等待你的决定…",
+        "w28": "想知道你会选择哪条路径…",
+        "w29": "这次由你决定…",
+        "w30": "交给你来决定…",
+        "w31": "轮到你了…",
+        "w32": "决定权在你…",
+        "w33": "这里需要你的意见…",
+        "w34": "由你做决定…",
+        "w35": "听从你的判断…",
+        "w36": "这里需要你来处理…",
+        "w37": "这里你才是专家…",
+        "w38": "相信你的直觉…",
+        "w39": "这件事交给你了…",
+        "w40": "需要你的专业意见…",
+        "w41": "希望得到你的指导…",
+        "w42": "交由你掌舵…",
+        "w43": "这次全权交给你…",
+        "w44": "乐意等待…",
+        "w45": "需要更多上下文时，我随时在…",
+        "w46": "需要进一步说明请告诉我…",
+        "w47": "随时吩咐…",
+        "w48": "需要时我可以详细说明…",
+        "w49": "有问题尽管问…",
+        "w50": "遇到困难时，我会提供帮助…",
+        "w51": "可以慢慢考虑…",
+        "w52": "完全不用有压力…",
+        "w53": "请充分考虑…",
+        "w54": "如果有帮助，我可以再解释…",
+        "w55": "随时回答问题…",
+        "w56": "正在倾听…",
+        "w57": "洗耳恭听…",
+        "w58": "专心等待…",
+        "w59": "专注于你…",
+        "w60": "认真倾听中…",
+        "w61": "随时全心投入…",
+        "w62": "给你思考的空间…",
+        "w63": "静静待命…",
+        "w64": "正在无聊地转动虚拟大拇指…",
+        "w65": "耐心地哼着小曲…",
+        "w66": "享受片刻停歇…",
+        "w67": "片刻禅意…",
+        "w68": "短暂休息…",
+        "w69": "自在地静候…",
+        "w70": "球已传出，等你接住…",
+        "w71": "等待传讯…",
+        "w72": "尊重你的思考过程…",
+        "w73": "你的思路正在展开…",
+        "w74": "给你决定的空间…",
+        "w75": "留点时间考虑…",
+        "w76": "留点空间斟酌…",
+        "w77": "有时间权衡选项…"
+      },
+      "compacting": "正在压缩历史记录…",
+      "static": {
+        "pondering": "Droid 正在思考…",
+        "responding": "Droid 正在输出…",
+        "waiting": "等待你的输入…"
+      },
+      "tips": {
+        "useAtToReferenceFiles": "提示：使用 @ 引用文件",
+        "pressEscToInterrupt": "提示：按 Esc 中断",
+        "dragFilesToAttach": "提示：拖动文件以添加附件",
+        "useHelpForCommands": "提示：使用 /help 查看命令",
+        "enableAutoMode": "提示：启用自动模式可减少确认次数"
+      },
+      "tooltip": "Droid 挑选了这些短语，在工作时为你解闷。可在设置中关闭。"
+    },
+    "footerStatus": {
+      "messagesQueued_one": "{{count}} 条消息已加入队列",
+      "messagesQueued_other": "{{count}} 条消息已加入队列"
+    },
+    "todoPlanVisualizer": {
+      "collapsePlanProgress": "收起计划进度",
+      "expandPlanProgress": "展开计划进度"
+    },
+    "applyPatchTool": {
+      "patchApplied": "补丁已应用"
+    },
+    "createTool": {
+      "fileCreated": "文件已成功创建。"
+    },
+    "defaultTool": {
+      "noResult": "无结果"
+    },
+    "editTool": {
+      "editCompleted": "编辑已完成"
+    },
+    "exitSpecModeTool": {
+      "userComment": "用户评论：",
+      "draftingPlan": "正在起草计划…",
+      "noPlanProvided": "未提供计划"
+    },
+    "fetchUrlTool": {
+      "fetchFailed": "获取 URL 失败：{{error}}",
+      "contentRetrieved_one": "✓ 已获取内容（{{count}} 行）",
+      "contentRetrieved_other": "✓ 已获取内容（{{count}} 行）"
+    },
+    "globTool": {
+      "searchFailed": "搜索文件失败",
+      "foundFiles_one": "找到 {{count}} 个文件。",
+      "foundFiles_other": "找到 {{count}} 个文件。"
+    },
+    "grepTool": {
+      "ripgrepMissing": "搜索文件失败：缺少 ripgrep",
+      "searchFailed": "搜索文件失败",
+      "pending": "待处理…",
+      "foundMatches_one": "找到 {{count}} 处匹配。",
+      "foundMatches_other": "找到 {{count}} 处匹配。"
+    },
+    "lsTool": {
+      "listedItems_one": "列出 {{count}} 项。",
+      "listedItems_other": "列出 {{count}} 项。"
+    },
+    "planningTool": {
+      "planUpdated": "计划已更新"
+    },
+    "proposeMissionTool": {
+      "noProposal": "未提供提案"
+    },
+    "readTool": {
+      "imageRead": "已成功读取图像文件。",
+      "linesRead_one": "已读取 {{count}} 行。",
+      "linesRead_other": "已读取 {{count}} 行。"
+    },
+    "webSearchTool": {
+      "searchFailed": "搜索失败：{{error}}",
+      "foundResults_one": "找到 {{count}} 个结果。",
+      "foundResults_other": "找到 {{count}} 个结果。",
+      "searchCompleted": "搜索已完成。"
+    },
+    "toolResult": {
+      "pending": "待处理…",
+      "aborted": "工具执行已中止，请重试。"
+    },
+    "askUserTool": {
+      "askingUser_one": "正在向用户提问",
+      "askingUser_other": "正在向用户提出 {{count}} 个问题",
+      "askedUser_one": "已向用户提问",
+      "askedUser_other": "已向用户提出 {{count}} 个问题",
+      "failed": "AskUser 失败",
+      "waitingForResponse": "等待回复…",
+      "questionNumber": "问题 {{number}}"
+    },
+    "toolContainer": {
+      "error": "错误",
+      "pendingReview": "待审查",
+      "interrupted": "已中断",
+      "collapseTitle": "收起 {{title}}",
+      "expandTitle": "展开 {{title}}"
+    },
+    "toolCallDisplay": {
+      "showLess": "收起",
+      "showMore": "展开"
+    },
+    "toolCallSummaryGroup": {
+      "collapseLabel": "折叠 {{label}}",
+      "expandLabel": "展开 {{label}}"
+    },
+    "taskToolGroup": {
+      "failedCount_one": "{{count}} 项失败",
+      "failedCount_other": "{{count}} 项失败"
+    },
+    "toolReviewStatus": {
+      "accepted": "已接受",
+      "changesRequested": "已请求修改",
+      "awaitingReview": "等待审查",
+      "awaitingApproval": "等待批准",
+      "clickToReview": "点击审查"
+    },
+    "executeToolResult": {
+      "failedToCopyContents": "复制内容失败",
+      "copied": "已复制",
+      "copyContents": "复制内容",
+      "failedToCopyCommandOutput": "复制命令输出失败",
+      "copyCommandOutput": "复制命令输出",
+      "commandFailed": "命令失败"
+    },
+    "fileHeaderActions": {
+      "downloadFile": "下载文件",
+      "downloadingFile": "正在下载文件"
+    },
+    "worktreeCreationMessageCardV3": {
+      "creationFailed": "创建工作树失败",
+      "creationInterrupted": "工作树创建已中断",
+      "settingUpIsolatedCheckout": "正在为此 Session 设置独立检出目录",
+      "creatingWorktree": "正在创建工作树"
+    },
+    "mcpTool": {
+      "outputWillAppearOnceYouApprove": "批准后，输出会显示在这里",
+      "running": "正在运行…",
+      "toolCallFailed": "工具调用失败",
+      "noOutput": "无输出",
+      "approvalRequired": "需要批准"
+    },
+    "sessionStatus": {
+      "connected": "已连接",
+      "connecting": "正在连接",
+      "lookingUpMachine": "正在查找计算机",
+      "loadingSession": "正在加载 Session",
+      "startingMachine": "正在启动计算机",
+      "disconnected": "已断开连接",
+      "authenticationFailed": "认证失败",
+      "loaded": "已加载",
+      "notLoaded": "未加载",
+      "loading": "正在加载",
+      "synced": "已同步",
+      "localOnly": "仅本地",
+      "unknown": "未知",
+      "approx": "{{value}}（约）",
+      "creditsApprox": "约 {{value}} 额度"
+    },
+    "documentGroupRenderer": {
+      "preview": "预览 {{fileName}}"
+    },
+    "missionPeerRowV2": {
+      "open": "打开 {{name}}",
+      "openShort": "打开"
+    },
+    "pdfImageViewer": {
+      "page": "PDF 第 {{page}} 页"
+    },
+    "virtualizedTranscript": {
+      "debugSummary": "对话记录：已挂载 {{mounted}}/{{total}} 组 · 已测量 {{measured}} 组"
+    },
+    "gitActions": {
+      "label": {
+        "commit": "承诺用量",
+        "commitAndPush": "提交并推送",
+        "createDraftPullRequest": "创建草稿 {{request}}",
+        "createPullRequest": "创建 {{request}}",
+        "createStackedDraftPullRequest": "创建堆叠草稿 {{request}}",
+        "createStackedPullRequest": "创建堆叠 {{request}}",
+        "push": "推送",
+        "viewPullRequest": "查看 {{request}}"
+      },
+      "disabled": {
+        "droidRunning": "Droid 正在运行",
+        "readOnlySession": "此 Session 无法更改仓库",
+        "unsupportedRemote": "此远程仓库不支持 {{request}}",
+        "lookupPending": "正在检查现有的 {{request}}",
+        "lookupFailed": "无法检查现有的 {{request}}"
+      },
+      "unavailable": {
+        "noChangesToCommit": "没有可提交的变更",
+        "noChangesToOpenRequest": "没有可用于创建 {{request}} 的变更",
+        "noChangesToPush": "没有可推送的变更",
+        "noOpenRequest": "此分支没有开放的 {{request}}"
+      }
+    },
+    "diffViewerPanelV2": {
+      "noChanges": "未检测到变更。",
+      "noBranchChanges": "未检测到分支变更。",
+      "noCommittedChanges": "未检测到已提交的变更。",
+      "noLocalChanges": "未检测到本地变更。",
+      "noUncommittedChanges": "未检测到未提交的变更。"
+    },
+    "diffCommentDisplay": {
+      "addToStagedComments": "添加到已暂存的评论",
+      "resolveComment": "解决评论"
+    },
+    "diffRepositorySelectors": {
+      "noRepository": "无仓库",
+      "repositoryLabel": "仓库：{{label}}",
+      "comparingBranches": "比较 {{branch}} 与 {{compareBranch}}"
+    },
+    "filePreview": {
+      "status": {
+        "errorWithPrefix": "{{prefix}}：{{error}}",
+        "couldNotLoadFile": "无法加载文件",
+        "binaryFile": "二进制文件，无法预览。",
+        "loading": "正在加载…",
+        "noPreviewAvailable": "无可用预览。",
+        "couldNotGeneratePdf": "无法生成 PDF",
+        "couldNotPreviewPdf": "无法预览 PDF，文件可能为空或格式不正确。",
+        "generatingPdf": "正在生成 PDF…",
+        "couldNotGenerateWordDocument": "无法生成 Word 文档",
+        "couldNotRenderWordDocument": "无法渲染 Word 文档",
+        "generatingWordDocument": "正在生成 Word 文档…",
+        "invalidWordDocument": "Word 文档无效",
+        "couldNotRenderExcelWorkbook": "无法渲染 Excel 工作簿",
+        "couldNotReadExcelWorkbook": "无法读取 Excel 工作簿",
+        "renderingExcelWorkbook": "正在渲染 Excel 工作簿…",
+        "readingExcelWorkbook": "正在读取 Excel 工作簿…",
+        "invalidWorkbook": "工作簿无效",
+        "couldNotRenderPowerPoint": "无法渲染 PowerPoint",
+        "renderingPowerPoint": "正在渲染 PowerPoint…",
+        "couldNotDownloadFile": "无法下载 {{fileName}}",
+        "renderTimedOut": "渲染超时，请重试。"
+      },
+      "actions": {
+        "copy": "复制",
+        "download": "下载",
+        "downloadAsMarkdown": "下载为 MD",
+        "openInNewTab": "在新标签页中打开",
+        "downloadPowerPoint": "下载 PowerPoint",
+        "downloadPdf": "下载 PDF",
+        "downloadWord": "下载 Word",
+        "downloadExcel": "下载 Excel"
+      }
+    },
+    "pdfPages": {
+      "pageOfCount": "第 {{page}} 页，共 {{pageCount}} 页",
+      "pagesOnPage": "页面，当前第 {{page}} 页，共 {{pageCount}} 页",
+      "pages": "页面",
+      "unpinPageSidebar": "取消固定页面侧边栏",
+      "pinPageSidebar": "固定页面侧边栏"
+    },
+    "mcpSettingsModal": {
+      "failedToAddServer": "添加服务器失败",
+      "backLabel": {
+        "addNew": "新增",
+        "manage": "管理"
+      },
+      "serverNameAlreadyExists": "服务器名称已存在",
+      "mcpServersTitle": "MCP 服务器"
+    },
+    "paneTab": {
+      "closeTab": "关闭 {{label}}",
+      "tabMenu": "{{label}} 的菜单"
+    },
+    "missionToolRowV2": {
+      "fromMissionOrchestrator": "来自任务编排代理",
+      "receivedMessageFrom": "收到消息，来自",
+      "listingAgents": "正在列出可用代理",
+      "failedToListAgents": "列出可用代理失败",
+      "listedAgents": "已列出可用代理",
+      "messaging": "正在发送消息",
+      "messaged": "已发送消息",
+      "failedToMessage": "发送消息失败",
+      "sendingMessageBackTo": "正在回复",
+      "sentMessageBackTo": "已回复",
+      "failedToSendMessageBackTo": "回复失败",
+      "interrupting": "正在中断",
+      "interrupted": "已中断",
+      "failedToInterrupt": "中断失败",
+      "newAgent": "新建代理",
+      "startingUp": "正在启动",
+      "working": "工作中",
+      "waitingForConfirmation": "等待确认",
+      "failedToStart": "启动失败",
+      "messagingPeer": "正在向 {{name}} 发送消息",
+      "messagedPeer": "已向 {{name}} 发送消息",
+      "failedToMessagePeer": "向 {{name}} 发送消息失败",
+      "sendingMessageBackToPeer": "正在回复 {{name}}",
+      "sentMessageBackToPeer": "已回复 {{name}}",
+      "failedToSendMessageBackToPeer": "回复 {{name}} 失败",
+      "receivedMessageFromPeer": "收到来自 {{name}} 的消息",
+      "interruptingPeer": "正在中断 {{name}}",
+      "interruptedPeer": "已中断 {{name}}",
+      "failedToInterruptPeer": "中断 {{name}} 失败",
+      "agentFallbackName": "代理 {{id}}",
+      "agentGroup": {
+        "spawn": {
+          "pending_one": "正在启动 {{count}} 个代理",
+          "pending_other": "正在启动 {{count}} 个代理",
+          "done_one": "已启动 {{count}} 个代理",
+          "done_other": "已启动 {{count}} 个代理",
+          "failed_one": "启动 {{count}} 个代理失败",
+          "failed_other": "启动 {{count}} 个代理失败",
+          "partial_one": "已启动 {{count}} 个代理中的 {{succeeded}} 个",
+          "partial_other": "已启动 {{count}} 个代理中的 {{succeeded}} 个"
+        },
+        "sendMessage": {
+          "pending_one": "正在向 {{count}} 个代理发送消息",
+          "pending_other": "正在向 {{count}} 个代理发送消息",
+          "done_one": "已向 {{count}} 个代理发送消息",
+          "done_other": "已向 {{count}} 个代理发送消息",
+          "failed_one": "向 {{count}} 个代理发送消息失败",
+          "failed_other": "向 {{count}} 个代理发送消息失败",
+          "partial_one": "已向 {{count}} 个代理中的 {{succeeded}} 个发送消息",
+          "partial_other": "已向 {{count}} 个代理中的 {{succeeded}} 个发送消息"
+        },
+        "interrupt": {
+          "pending_one": "正在中断 {{count}} 个代理",
+          "pending_other": "正在中断 {{count}} 个代理",
+          "done_one": "已中断 {{count}} 个代理",
+          "done_other": "已中断 {{count}} 个代理",
+          "failed_one": "中断 {{count}} 个代理失败",
+          "failed_other": "中断 {{count}} 个代理失败",
+          "partial_one": "已中断 {{count}} 个代理中的 {{succeeded}} 个",
+          "partial_other": "已中断 {{count}} 个代理中的 {{succeeded}} 个"
+        }
+      }
+    },
+    "mermaidExportActions": {
+      "mermaidCodeCopied": "Mermaid 代码已复制",
+      "mermaidDiagramActions": "Mermaid 图表操作",
+      "copyMermaidCode": "复制 Mermaid 代码",
+      "preparingSvg": "正在准备 SVG…",
+      "downloadAsSvg": "下载为 SVG"
+    },
+    "fileSuggestions": {
+      "yourConnectors": "你的连接器",
+      "featuredConnectors": "精选连接器",
+      "files": "文件",
+      "noFilesOrIntegrationsFound": "未找到文件或集成",
+      "searchingFiles": "正在搜索文件"
+    },
+    "slashCommandSuggestions": {
+      "group": {
+        "navigation": "快速访问",
+        "session": "Session 命令",
+        "builtIn": "内置命令",
+        "custom": "自定义命令",
+        "skill": "技能"
+      },
+      "source": {
+        "automation": "自动化",
+        "builtIn": "内置",
+        "org": "组织",
+        "project": "项目",
+        "user": "用户"
+      },
+      "noCommandsFound": "未找到命令",
+      "loadingCommands": "正在加载命令…"
+    },
+    "codeBlock": {
+      "codeCopied": "代码已复制",
+      "copyCode": "复制代码",
+      "showLess": "收起",
+      "showMore": "展开"
+    },
+    "filePathLink": {
+      "clickToDownload": "点击下载",
+      "clickToOpenInSidebar": "点击在侧边栏中打开",
+      "clickToOpenInBrowser": "点击在浏览器中打开",
+      "clickToOpenExternally": "点击在外部应用中打开",
+      "modifierClickToOpenLink": "{{actionTooltip}}，按住 {{modifier}} 点击以打开链接"
+    },
+    "computerDesktop": {
+      "status": {
+        "waking": "正在唤醒",
+        "connecting": "正在连接",
+        "live": "实时",
+        "reconnecting": "正在重新连接",
+        "notSetUp": "尚未设置",
+        "didNotStart": "未启动",
+        "unavailable": "不可用"
+      },
+      "overlay": {
+        "waking": "正在唤醒计算机…",
+        "connecting": "正在连接桌面…",
+        "reconnecting": "正在重新连接桌面…",
+        "notSetUp": "此计算机尚未设置桌面",
+        "didNotStart": "桌面未启动",
+        "unavailable": "无法连接到桌面"
+      },
+      "reconnect": "重新连接",
+      "retry": "重试",
+      "takeControlOfTheComputer": "接管计算机控制权",
+      "takeControl": "接管控制",
+      "clickAnywhereToDrive": "点击任意位置即可操作计算机"
+    },
+    "missionsWelcomeDialog": {
+      "eyebrow": "任务 · 欢迎 · 第 {{step}} 步，共 {{total}} 步",
+      "progressLabel": "欢迎卡片，第 {{step}} 张，共 {{total}} 张",
+      "skip": "跳过",
+      "next": "下一步",
+      "previous": "上一个",
+      "startAMission": "开始任务",
+      "overviewTitle": "交付整个项目，而非单个任务",
+      "overviewBody": "<term>任务</term>可以承担让一个团队忙碌数周的工作：框架迁移、跨多个服务的功能或积压的问题。Droid 团队会并行工作数小时或数天，并提交可供审查的拉取请求。",
+      "orchestratorAndAgentsTitle": "一个负责的 Droid 及其团队",
+      "orchestratorAndAgentsBody": "<term>编排代理</term>将你的目标划分为多个领域，并为每个领域安排一个<term>代理</term>。代理构建并汇报，编排代理负责协调并汇总结果。",
+      "machinesTitle": "你离开后，它仍在工作",
+      "machinesBody": "启动时选择<term>模板</term>，每个代理便会获得自己的云端计算机。因此，即使你合上笔记本，任务仍会继续。也可以在此计算机或你自己的某台计算机上运行，由代理共享该计算机。你随时可以在设置的<term>任务默认值</term>中更改默认设置。",
+      "steeringTitle": "你负责决策，无需亲自操作",
+      "steeringBody": "只有需要你决策时，任务才会请你介入，并将成果以拉取请求的形式交给你审查。可在<term>代理</term>面板跟踪任意代理。任务比单个 Session 消耗更多 token，因此适合大型工作。"
+    },
+    "missionsWelcomeIllustration": {
+      "yourGoal": "你的目标",
+      "orchestrator": "编排代理",
+      "agentApi": "代理 · API",
+      "agentWeb": "代理 · 网页",
+      "agentTests": "代理 · 测试",
+      "prs": "PR",
+      "overviewAriaLabel": "目标交给编排代理后，它会为每个工作领域安排代理，成果以拉取请求的形式返回",
+      "agent": "代理",
+      "ownsTheApi": "负责 API",
+      "ownsTheWebApp": "负责网页应用",
+      "ownsTheTests": "负责测试",
+      "assignsAndReports": "分派 ↓ · 汇报 ↑",
+      "orchestratorAndAgentsAriaLabel": "编排代理将工作分派给三个代理，各自负责一个领域并向其汇报",
+      "template": "模板",
+      "freshComputer": "全新计算机",
+      "yourMachine": "你的计算机",
+      "allAgents": "所有代理",
+      "ownCloudComputerPerAgent": "每个代理独享云端计算机",
+      "agentsShareOneMachine": "代理共享一台计算机",
+      "machinesAriaLabel": "模板为每个代理提供全新计算机；使用你自己的计算机时，代理共享一台计算机",
+      "you": "你",
+      "chatAndDecide": "聊天并决策",
+      "agentsPane": "代理面板",
+      "answerAndApprove": "回答并批准",
+      "prsTab": "PR 标签页",
+      "reviewAndMerge": "审查并合并",
+      "steeringAriaLabel": "你与编排代理聊天，在代理面板中回答代理，并在 PR 标签页中审查拉取请求"
+    },
+    "gitActionMessage": {
+      "title": {
+        "commit": "正在提交变更",
+        "commitAndPush": "正在提交并推送变更",
+        "createDraftPullRequest": "正在创建草稿拉取请求",
+        "createPullRequest": "正在创建拉取请求",
+        "createStackedDraftPullRequest": "正在创建堆叠草稿拉取请求",
+        "createStackedPullRequest": "正在创建堆叠拉取请求",
+        "push": "正在推送变更"
+      },
+      "description": {
+        "commit": "提交当前本地变更，不推送到远程。",
+        "commitAndPush": "提交当前本地变更并推送到远程分支。",
+        "createDraftPullRequest": "根据当前本地变更创建草稿拉取请求。",
+        "createPullRequest": "根据当前本地变更创建拉取请求。",
+        "createStackedDraftPullRequest": "在此分支现有拉取请求之上创建堆叠草稿拉取请求。",
+        "createStackedPullRequest": "在此分支现有拉取请求之上创建堆叠拉取请求。",
+        "push": "将此分支已有的提交推送到远程分支。"
+      }
+    },
+    "mcpServerLogo": {
+      "defaultLabel": "MCP 服务器标识"
+    },
+    "chatComposerVoiceDictationShortcut": {
+      "controlShiftD": "Control+Shift+D",
+      "leftControl": "左侧 Control",
+      "leftControlHint": "左侧 ⌃",
+      "leftOption": "左侧 Option",
+      "leftOptionHint": "左侧 ⌥",
+      "rightOption": "右侧 Option",
+      "rightOptionHint": "右侧 ⌥",
+      "rightCommand": "右侧 Command",
+      "rightCommandHint": "右侧 ⌘",
+      "off": "关闭",
+      "ctrlShiftD": "Ctrl+Shift+D",
+      "leftCtrl": "左侧 Ctrl",
+      "leftAlt": "左侧 Alt",
+      "rightAlt": "右侧 Alt",
+      "rightCtrl": "右侧 Ctrl"
+    },
+    "worktreeCreationMessageCard": {
+      "created": "已创建工作树",
+      "createdUsingBranch": "已创建工作树，使用分支 {{branch}}",
+      "createdOnBranch": "已在 {{branch}} 上创建工作树",
+      "createdCopiedBranch": "已创建工作树，复制分支 {{branch}}"
+    },
+    "chatContextMessage": {
+      "badge": {
+        "proposal": "提案",
+        "spec": "Spec",
+        "implementation": "实施",
+        "pullRequest": "拉取请求"
+      },
+      "prompt": {
+        "proposal": "你希望对此提案做什么修改？",
+        "spec": "你希望对此 Spec 做什么修改？",
+        "implementation": "你希望对此实现做什么修改？",
+        "pullRequest": "你希望对此拉取请求做什么修改？"
+      },
+      "changeFallbackTitle": "变更 {{changeId}}"
+    },
+    "missionTitle": {
+      "mission": "任务",
+      "leadSession": "负责人 Session",
+      "leadSessionHint": "规划工作、交给代理并向你汇报。"
+    },
+    "originPullMessageCard": {
+      "pulling": "正在从 origin 拉取最新变更",
+      "failed": "从 origin 拉取失败",
+      "interrupted": "从 origin 拉取已中断",
+      "pendingReview": "从 origin 拉取最新变更",
+      "pulled": "已从 origin 拉取最新变更"
+    },
+    "grabCommentReview": {
+      "commentCount_one": "{{count}} 条评论",
+      "commentCount_other": "{{count}} 条评论",
+      "discardAllComments": "丢弃所有评论",
+      "sendToDroid": "发送给 Droid",
+      "commentNumber": "评论 {{number}}",
+      "removeComment": "移除评论 {{number}}",
+      "notSent": "评论未发送，你的草稿仍保留在此处。",
+      "sendUnavailable": "Droid 目前无法接收消息，你的草稿已保存。",
+      "sendFailed": "无法发送评论，请重试。"
+    }
+  },
+  "connectors": {
+    "connectorDetail": {
+      "toolsCouldNotBeLoadedRight": "暂时无法加载工具。",
+      "noToolsAvailableForThisConnector": "此连接器暂无可用工具。",
+      "backToConnectors": "返回连接器",
+      "connected": "已连接",
+      "disconnect": "断开连接",
+      "whatYouCanDo": "你可以做什么",
+      "popularAutomationsThatUseThisConnector": "使用此连接器的热门自动化",
+      "chooseWhichToolsEveryoneInYour": "选择组织内所有人可用的工具，保存后更改生效。",
+      "showLess": "收起",
+      "showMore": "展开",
+      "enableToolForOrganization": "为组织启用 {{name}}",
+      "connecting": "正在连接…",
+      "connect": "连接",
+      "availableTools": "可用工具",
+      "availableToolsWithCount": "可用工具 · {{total}}"
+    },
+    "connectorFilterBar": {
+      "forYou": "为你推荐",
+      "status": "状态",
+      "category": "类别",
+      "clearAll": "全部清除",
+      "filters": "筛选条件",
+      "filtersWithCount": "筛选条件（{{total}}）",
+      "sort": "排序",
+      "sortWithLabel": "排序：{{label}}"
+    },
+    "connectorHero": {
+      "defaultTitle": "连接你每天使用的工具",
+      "defaultSubtitle": "连接一次，即可在每个 Droid Session 中使用工具上下文",
+      "docsAriaLabel": "{{title}} - 阅读连接器文档"
+    },
+    "connectorTable": {
+      "integration": "集成",
+      "description": "描述",
+      "category": "类别",
+      "connected": "已连接",
+      "disconnecting": "正在断开连接…",
+      "disconnect": "断开连接",
+      "connecting": "正在连接…",
+      "connect": "连接",
+      "manage": "管理",
+      "actions": "操作",
+      "openConnector": "打开 {{name}}"
+    },
+    "connectorsEmptyState": {
+      "noConnectorsEnabledYet": "尚未启用连接器",
+      "enableConnectors": "启用连接器",
+      "onlyOrganizationAdminsCanEnableConnectors": "只有组织管理员可以启用连接器。",
+      "askAdminNotEnabled": "你的组织尚未启用任何连接器。",
+      "askAdminTurnOn": "请让管理员启用团队使用的工具，它们会显示在此处供你连接。",
+      "manageNotEnabled": "你的组织尚未启用任何连接器。",
+      "manageTurnOn": "启用团队使用的工具后，每个人都可以连接自己的账号。",
+      "previewLabel": "管理员可以启用的热门连接器"
+    },
+    "integrationCard": {
+      "connected": "已连接",
+      "disconnecting": "正在断开连接…",
+      "disconnect": "断开连接",
+      "connecting": "正在连接…",
+      "connect": "连接"
+    }
+  },
+  "coreUi": {
+    "codeBlock": {
+      "copy": "复制代码"
+    },
+    "modal": {
+      "close": "关闭"
+    },
+    "multiSelectFilter": {
+      "allSelected": "全部",
+      "done": "完成",
+      "noMatches": "无匹配项",
+      "optionsLabel": "{{label}} 选项",
+      "searchLabel": "搜索 {{label}}",
+      "searchPlaceholder": "搜索 {{label}}…",
+      "selectedCount_one": "已选择 {{count}} 项",
+      "selectedCount_other": "已选择 {{count}} 项"
+    },
+    "numberInput": {
+      "decrease": "减少",
+      "increase": "增加"
+    },
+    "pagination": {
+      "label": "分页",
+      "nextPage": "下一页",
+      "previousPage": "上一页"
+    }
+  },
+  "common": {
+    "copyableId": {
+      "copyFullId": "复制完整 ID",
+      "copyIdLabel": "复制 ID {{id}}",
+      "copied": "已复制"
+    },
+    "onboardingChecklist": {
+      "getStarted": "开始使用",
+      "completeTheseQuickStepsToGet": "完成这些简短步骤，设置好 Factory 并开始构建。"
+    },
+    "readOnlyFileBrowser": {
+      "files": "文件"
+    },
+    "historyNavigationButtons": {
+      "back": "返回",
+      "forward": "前进"
+    },
+    "diff": {
+      "noDifferencesBetweenTheSelectedVersions": "所选版本之间没有差异。"
+    },
+    "errorPanel": {
+      "reloadApplication": "重新加载应用",
+      "goHome": "前往首页"
+    },
+    "hostedWebAccessModal": {
+      "continueInTheDesktopAppOr": "在桌面应用或 CLI 中继续",
+      "settings": "设置",
+      "installFor": "安装平台",
+      "operatingSystem": "操作系统",
+      "macosLinux": "macOS/Linux",
+      "windows": "Windows",
+      "droidIsBetterOnDesktop": "在桌面上使用 Droid 体验更佳",
+      "useTheNativeAppToManage": "使用原生应用管理本地 Session 并跟踪 Droid 活动",
+      "desktopApp": "桌面应用",
+      "open": "打开",
+      "download": "下载",
+      "runDroidInYourTerminalWith": "在终端运行 Droid，全面掌控工作流程",
+      "commandLine": "命令行",
+      "copyInstallCommand": "复制安装命令"
+    },
+    "wikiVersionDeleteButton": {
+      "deleteWikiVersion": "删除 Wiki 版本"
+    },
+    "chipInput": {
+      "placeholder": "输入或粘贴值…",
+      "invalidEntry": "条目无效",
+      "duplicateEntry": "重复条目",
+      "removeEntry": "移除 {{value}}",
+      "entryCount_one": "{{count}} 条",
+      "entryCount_other": "{{count}} 条",
+      "maxEntriesReached": "已达到 {{count}} 条的上限"
+    },
+    "certificationBadge": {
+      "tierLabel": "等级 {{tier}}",
+      "earnedLabel": "{{label}} 徽章，已获得",
+      "notEarnedLabel": "{{label}} 徽章，尚未获得"
+    },
+    "stepProgressDots": {
+      "stepsComplete": "已完成 {{total}} 步中的 {{completed}} 步"
+    },
+    "clipboardToast": {
+      "copied": "已复制{{item}}",
+      "failedToCopy": "复制{{item}}失败",
+      "permissionDenied": "剪贴板权限被拒绝。",
+      "unavailable": "剪贴板不可用，请重试。",
+      "items": {
+        "sessionId": "Session ID",
+        "workingDirectory": "工作目录",
+        "sessionLink": "Session 链接",
+        "sessionAsMarkdown": "Session 的 Markdown 内容"
+      }
+    }
+  },
+  "app": {
+    "droidHeader": {
+      "droid": "Droid"
+    },
+    "missionControlOverlay": {
+      "factory": "Factory"
+    },
+    "appLoading": {
+      "loading": "正在加载",
+      "slow": "耗时比平时更长…",
+      "stalled": "仍在等待，请检查连接，或重新加载以重试。",
+      "reload": "重新加载",
+      "stage": {
+        "starting": "正在启动 Factory",
+        "browser": "等待你的浏览器",
+        "signingIn": "正在登录",
+        "connecting": "正在此计算机上启动 Factory",
+        "organization": "正在加载组织",
+        "workspace": "正在打开工作区"
+      }
+    }
+  },
+  "user": {
+    "userProfile": {
+      "settings": "设置",
+      "analytics": "分析",
+      "onboardingTracker": "入门进度",
+      "analyticsLegacy": "分析（旧版）",
+      "showLessons": "显示课程",
+      "evaluations": "评估",
+      "softwareFactory": "Software Factory",
+      "wiki": "Wiki",
+      "academy": "学院",
+      "switchOrganization": "切换组织",
+      "activeOrganization": "活跃组织",
+      "support": "支持",
+      "featureFlags": "功能开关",
+      "replayOnboarding": "重新播放入门引导",
+      "changeTheme": "更改主题",
+      "logOut": "退出登录",
+      "openUserMenu": "打开用户菜单",
+      "openSettings": "打开设置"
+    }
+  }
+}

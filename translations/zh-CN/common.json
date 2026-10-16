@@ -1,0 +1,478 @@
+{
+  "actions": {
+    "contactUs": "联系我们"
+  },
+  "academyNavContentV2": {
+    "backToApp": "返回应用",
+    "academy": "学院",
+    "quiz": "测验",
+    "home": "首页"
+  },
+  "analytics2NavContentV2": {
+    "backToApp": "返回应用",
+    "analytics": "分析",
+    "overview": "概览",
+    "consumption": "消耗",
+    "adoption": "使用推广",
+    "tools": "工具",
+    "agentReadiness": "代理就绪度",
+    "agentEffectiveness": "代理效能",
+    "bugAttribution": "缺陷归因",
+    "usage": "用量",
+    "productivity": "生产力",
+    "company": "公司",
+    "personal": "个人"
+  },
+  "analyticsNavContentV2": {
+    "backToApp": "返回应用",
+    "analytics": "分析"
+  },
+  "desktopSessionTilingHost": {
+    "removeTiledSession": "移除平铺的 Session",
+    "dropToTile": "拖放以平铺"
+  },
+  "evaluationsNavContent": {
+    "backToApp": "返回应用",
+    "evaluations": "评估",
+    "datasets": "数据集",
+    "runs": "运行记录"
+  },
+  "sidebarRouter": {
+    "backToApp": "返回应用",
+    "searchSettings": "搜索设置",
+    "beta": "测试版",
+    "manage": "管理",
+    "softwareFactory": "Software Factory",
+    "automations": "自动化",
+    "review": "审查",
+    "workstreams": "工作流",
+    "allTeams": "所有团队",
+    "access": "访问权限",
+    "allSignals": "所有信号",
+    "allChanges": "所有变更",
+    "allAutomations": "所有自动化",
+    "allGoals": "所有目标",
+    "allWorkstreams": "所有工作流",
+    "yourWorkstreams": "你的工作流"
+  },
+  "softwareFactoryNavContentV2": {
+    "backToApp": "返回应用",
+    "inbox": "收件箱",
+    "workstreams": "工作流",
+    "newChat": "新建聊天",
+    "teams": "团队",
+    "loadingTeams": "正在加载团队…",
+    "unableToLoadTeams": "无法加载团队",
+    "noTeamsYet": "暂无团队",
+    "organizationTeams": "组织团队",
+    "allData": "全部数据",
+    "manageTeams": "团队",
+    "changes": "变更",
+    "signals": "信号",
+    "access": "访问权限",
+    "collapseTeam": "折叠 {{name}}",
+    "expandTeam": "展开 {{name}}"
+  },
+  "wikiNavContentV2": {
+    "backToApp": "返回应用",
+    "wiki": "Wiki",
+    "noWikisYet": "暂无 Wiki",
+    "runWikiInTheCliTo": "在 Session 中运行 /wiki 生成",
+    "noMatchingRepositories": "没有匹配的仓库",
+    "backToWiki": "返回 Wiki"
+  },
+  "authLoading": {
+    "cancelSignIn": "取消登录",
+    "browserHint": "在浏览器中完成登录，然后返回这里。",
+    "browserSetupHint": "在浏览器中完成设置，然后返回这里。",
+    "browserSlowHint": "没有看到浏览器窗口？请取消后重试。",
+    "signingOut": "正在退出登录",
+    "openingSignIn": "正在打开登录页面",
+    "openingSignUp": "正在打开注册页面"
+  },
+  "changeThemeModal": {
+    "theme": "主题",
+    "appearance": "外观",
+    "themePreference": "主题偏好",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "跟随系统"
+  },
+  "callback": {
+    "finishingSignIn": "正在完成登录",
+    "thisSignInStepHasAlready": "此登录步骤已完成、已过期或被直接打开。请重新登录以继续使用 Factory。",
+    "signInLinkExpired": "登录链接已过期",
+    "signInAgain": "重新登录",
+    "completingAuthentication": "正在完成身份验证。"
+  },
+  "error": {
+    "httpRequestId": "HTTP 请求 ID：",
+    "stackTraceShownInDevelopmentOnly": "堆栈跟踪（仅开发环境显示）",
+    "reloadApplication": "重新加载应用",
+    "goHome": "前往首页",
+    "logout": "退出登录",
+    "somethingWentWrong": "出现问题",
+    "unexpectedErrorBody": "发生意外错误。请重试；如问题持续，请联系支持团队。",
+    "currentPath": "当前路径：{{path}}"
+  },
+  "toastContainer": {
+    "reportBug": "报告缺陷",
+    "checkNetwork": "检查网络"
+  },
+  "alertBanner": {
+    "requestId": "请求 ID：{{id}}"
+  },
+  "organizationRouting": {
+    "incorrectRegion": "区域不正确",
+    "goToRegion": "前往 {{region}}",
+    "signInToOrganizationRegion": "你的组织位于 {{region}} 区域。请在那里登录以继续。",
+    "signedInAs": "登录账号：{{email}}",
+    "organizationName": "组织：{{name}}",
+    "organizationId": "组织 ID：{{id}}",
+    "openingRegion": "正在打开你所在组织的区域"
+  },
+  "activeOrganizationSwitcher": {
+    "failedToSwitchOrganization": "切换组织失败",
+    "unknownError": "未知错误"
+  },
+  "commandPalette": {
+    "sessionResults": "Session 结果",
+    "noSessionsOfThisType": "没有此类型的 Session。",
+    "commandPalette": "命令面板",
+    "searchForCommandsAndActions": "搜索命令和操作",
+    "esc": "esc",
+    "filterResults": "筛选结果",
+    "noResultsFound": "未找到结果。",
+    "typeToSearchEverySessionTitle": "输入内容以搜索所有 Session 的标题和对话记录。",
+    "searchAllHistory": "搜索全部历史记录",
+    "lookBeyondTheCurrentTimeWindow": "搜索当前时间范围之外的记录",
+    "lookBack": "回溯",
+    "navigate": "导航",
+    "select": "选择",
+    "filter": "筛选",
+    "close": "关闭",
+    "toggleSidebar": "切换侧边栏",
+    "toggleToolsPanel": "切换工具面板",
+    "toggleTerminal": "切换终端",
+    "goBack": "后退",
+    "goForward": "前进",
+    "newSession": "新建 Session",
+    "general": "通用",
+    "toggleSidebarDescription": "显示或隐藏左侧边栏",
+    "goBackDescription": "历史记录中的上一页",
+    "goForwardDescription": "历史记录中的下一页",
+    "reportABug": "报告缺陷",
+    "reportABugDescription": "向 Factory 团队发送反馈",
+    "help": "帮助",
+    "keyboardShortcuts": "键盘快捷键",
+    "keyboardShortcutsDescription": "在此查看所有快捷键",
+    "scopeLast7Days": "7 天",
+    "scopeLast30Days": "30 天",
+    "scopeLast90Days": "90 天",
+    "scopeAll": "全部",
+    "copied": "已复制！",
+    "toggleTerminalDescription": "在此 Session 旁打开 shell",
+    "openToolsPanel": "打开工具面板",
+    "openToolsPanelDescription": "文件、差异、浏览器等",
+    "sessionActions": "Session 操作",
+    "copySessionLink": "复制 Session 链接",
+    "copySessionLinkDescription": "与队友共享此 Session",
+    "renameSession": "重命名 Session",
+    "renameSessionDescription": "为此 Session 设置更清晰的标题",
+    "openPlugins": "打开插件",
+    "openPluginsDescription": "浏览并安装插件",
+    "sfReviewQueue": "审查队列",
+    "sfReviewQueueDescription": "Software Factory · 等待你处理的变更",
+    "sfWorkstreams": "工作流",
+    "sfWorkstreamsDescription": "Software Factory · 你的 Droid 负责的目标",
+    "sfTeams": "团队",
+    "sfTeamsDescription": "Software Factory · 所有团队",
+    "sfSignals": "信号",
+    "sfSignalsDescription": "Software Factory · 待处理工作和提醒",
+    "sfChanges": "变更",
+    "sfChangesDescription": "Software Factory · 拉取请求和差异",
+    "sfAutomations": "Factory 自动化",
+    "sfAutomationsDescription": "Software Factory · 定时和触发运行",
+    "sfGoals": "目标",
+    "sfGoalsDescription": "Software Factory · 成果和目标",
+    "sfAccess": "访问权限",
+    "sfAccessDescription": "Software Factory · 授权、策略和审计",
+    "softwareFactory": "Software Factory",
+    "softwareFactoryDescription": "阶段、运行和交付",
+    "missionControl": "任务控制台",
+    "missionControlDescription": "跟踪任务及其工作代理",
+    "automations": "自动化",
+    "automationsDescription": "定时和事件驱动的 Droid",
+    "pullRequestReview": "拉取请求审查",
+    "pullRequestReviewDescription": "使用 Droid 审查拉取请求",
+    "evaluations": "评估",
+    "evaluationsDescription": "数据集和评估运行",
+    "wiki": "Wiki",
+    "wikiDescription": "为你的仓库生成的文档",
+    "academy": "学院",
+    "academyDescription": "帮助你充分使用 Droid 的指南和课程",
+    "analytics": "分析",
+    "settings": "设置",
+    "settingsSection": "设置 · {{section}}",
+    "integrations": "集成",
+    "integrationsDescription": "设置 · 代码托管服务和应用",
+    "settingsPageSection": "设置 · {{page}} › {{section}}",
+    "matchingSettings": "匹配的设置",
+    "goTo": "前往",
+    "running": "运行中",
+    "untitledSession": "未命名 Session",
+    "sessions": "Session",
+    "createNewSession": "创建新 Session",
+    "createNewSessionDescription": "启动一个全新的 Droid Session",
+    "createNewMission": "创建新任务",
+    "createNewMissionDescription": "规划并编排多步骤工作",
+    "theme": "主题",
+    "changeTheme": "更改主题…",
+    "changeThemeDescription": "浅色、深色或跟随系统",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "themeSystem": "跟随系统",
+    "workstreams": "工作流",
+    "workstreamState": "工作流 · {{state}}",
+    "workstreamLocal": "工作流 · 本地",
+    "typeSessions": "Session",
+    "typeAutomations": "自动化",
+    "typeEvaluations": "评估",
+    "typeExec": "执行",
+    "typeSubagents": "子代理",
+    "tabAll": "全部",
+    "tabAllPlaceholder": "搜索 Session、页面、设置和操作…",
+    "tabSessions": "Session",
+    "tabSessionsPlaceholder": "搜索 Session 标题和对话记录…",
+    "tabPages": "页面",
+    "tabPagesPlaceholder": "跳转到页面…",
+    "tabSettings": "设置",
+    "tabSettingsPlaceholder": "查找设置…",
+    "tabActions": "操作",
+    "tabActionsPlaceholder": "执行操作…",
+    "sessionsHeadingWithMatches": "Session（{{sessions}} 个中有 {{matches}} 个匹配）",
+    "matchCount_one": "{{count}} 个匹配项",
+    "matchCount_other": "{{count}} 个匹配项",
+    "sessionCount_one": "{{count}} 个 Session",
+    "sessionCount_other": "{{count}} 个 Session",
+    "sessionsHeadingWithTotal": "Session（{{total}}）",
+    "filterSessionTypes": "筛选 Session 类型，已选择 {{selected}} 项",
+    "searchSubPage": "搜索 {{page}}…",
+    "tryADifferentSearch": "请尝试其他搜索内容。",
+    "tryASessionTitlePageOrSetting": "请尝试输入 Session 标题、页面或设置名称。",
+    "pressTabToSearchAnotherCategory": "按 Tab 搜索其他类别。",
+    "recentSessions": "最近的 Session",
+    "recentCommands": "最近的命令",
+    "searchingSessions": "正在搜索 Session"
+  },
+  "archMismatchBanner": {
+    "dismiss": "忽略",
+    "windowsX64OnArm64": "你正在 Windows ARM64 设备上运行 Factory x64 版本。模拟运行可能导致 Droid 守护进程崩溃。",
+    "macIntelOnAppleSilicon": "你正在 Apple Silicon 上运行 Factory Intel 版本。通过 Rosetta 转译会减慢 Session 启动和输入响应速度。",
+    "downloadWindowsArm64Build": "下载 Windows ARM64 版本",
+    "downloadAppleSiliconBuild": "下载 Apple Silicon 版本"
+  },
+  "mcpOauthReconnectionBanner": {
+    "dismissMcpOauthReconnectionBanner": "关闭 MCP OAuth 重新连接横幅",
+    "reauthenticateMessage": "我们重新设计了 MCP OAuth 架构以提高稳定性。请通过 MCP 按钮重新验证 MCP OAuth 服务器。"
+  },
+  "checkForUpdatesModal": {
+    "youreOnTheLatestVersion": "已是最新版本",
+    "checkAgain": "再次检查",
+    "retryUpdate": "重试更新",
+    "updating": "正在更新…",
+    "close": "关闭",
+    "checkForUpdates": "检查更新",
+    "checkingForUpdates": "正在检查更新…",
+    "releasedToday": "{{date}}（今天）",
+    "releasedYesterday": "{{date}}（昨天）",
+    "releasedDaysAgo_one": "{{date}}（{{count}} 天前）",
+    "releasedDaysAgo_other": "{{date}}（{{count}} 天前）",
+    "arm64Emulation": "ARM64 模拟运行",
+    "rosetta": "Rosetta",
+    "newVersionAvailable": "有新版本可用",
+    "newVersionAvailableVersionsBehind": "有新版本可用（落后 {{behind}} 个版本）",
+    "preparingUpdateTo": "正在准备更新至 v{{version}}…",
+    "downloadingVersion": "正在下载 v{{version}}…",
+    "downloadingUpdate": "正在下载更新…",
+    "currentVersion": "当前版本",
+    "latestVersion": "最新版本",
+    "released": "发布时间",
+    "platform": "平台",
+    "updateToVersion": "更新至 v{{version}}"
+  },
+  "health": {
+    "healthCheck": "健康检查",
+    "refetch": "重新获取",
+    "triggerCrash": "触发崩溃",
+    "backendHealthStatusFromApiHealth": "来自 /api/health 的后端健康状态",
+    "noHealthDataAvailable": "暂无健康数据。",
+    "debugEndpointStatusFromApiDebug": "来自 /api/debug 的调试端点状态",
+    "noDebugDataAvailableClickQuery": "暂无调试数据。点击“查询调试信息”获取。",
+    "triggering": "正在触发…",
+    "triggerError": "触发错误",
+    "fetchingDebug": "正在获取调试信息…",
+    "queryDebug": "查询调试信息",
+    "loading": "正在检查系统健康状态"
+  },
+  "close": {
+    "title": "可以关闭此标签页",
+    "factoryConnected": "Factory 已连接。",
+    "integrationConnected": "集成已连接。",
+    "connectorConnected": "连接器已连接。",
+    "connectorFailed": "连接器未能连接。请返回 Factory 重试。",
+    "connectorCanceled": "连接器设置已取消。"
+  },
+  "openVscode": {
+    "notWhereYouWantedToGo": "打开的位置不符合预期？请在下方设置 SSH 访问后重试。",
+    "openInVsCode": "在 VS Code 中打开",
+    "unsupportedComputerName": "此计算机名称不受 VS Code Remote-SSH 支持。",
+    "missingComputerName": "此链接缺少计算机名称。",
+    "manageAccount": "管理账号",
+    "continueOnWeb": "在网页版中继续"
+  },
+  "debug": {
+    "debugInformation": "调试信息",
+    "loading": "正在加载调试信息",
+    "refetch": "重新获取",
+    "debugDataFromApiDebugEndpoint": "来自 /api/debug 端点的调试数据",
+    "echoParameterOptional": "回显参数（可选）：",
+    "enterTextToEchoBack": "输入要回显的文本…",
+    "send": "发送",
+    "noDebugDataAvailable": "暂无调试数据。"
+  },
+  "customize": {
+    "customize": "自定义",
+    "customizeSections": "自定义分区",
+    "skills": "技能",
+    "connectors": "连接器",
+    "plugins": "插件"
+  },
+  "cookieBanner": {
+    "deny": "拒绝",
+    "agree": "同意",
+    "message": "本网站及其子域名（*.factory.ai）使用 Cookie 以确保正常运行。继续浏览即表示你同意按照<privacyLink>隐私政策</privacyLink>中的条件在设备上放置 Cookie。"
+  },
+  "automationCreationBanner": {
+    "sessionMustCompleteNamed": "必须完成此 Session 才能创建“{{name}}”。请留在此 Session 中直到代理完成；离开或中断可能导致自动化无法保存。",
+    "sessionMustComplete": "必须完成此 Session 才能创建自动化。请留在此 Session 中直到代理完成；离开或中断可能导致自动化无法保存。"
+  },
+  "openDesktop": {
+    "title": "正在 Factory 桌面版中打开",
+    "openInBrowser": "改为在浏览器中打开",
+    "manageAccount": "管理你的账号",
+    "noAppYet": "还没有安装应用？",
+    "downloadDesktop": "下载 Factory 桌面版",
+    "subtitle": "浏览器可能会询问是否打开 Factory 桌面版。"
+  },
+  "mcpOauthCallback": {
+    "completingAuthentication": "正在完成身份验证。",
+    "completingAuthorization": "正在完成授权",
+    "youCanSafelyCloseThisWindow": "可以安全关闭此窗口。",
+    "authorizationSuccessful": "授权成功",
+    "authorizationFailed": "授权失败",
+    "missingAuthenticationState": "此回调缺少身份验证状态。请重新启动身份验证后重试。",
+    "missingAuthorizationResult": "此回调缺少授权结果。请重新启动身份验证后重试。",
+    "openingFactoryDesktop": "正在打开 Factory 桌面版以完成身份验证。如果没有反应，请使用下方按钮。",
+    "returningYouToFactory": "正在返回 Factory",
+    "authorizationNotCompleted": "授权未完成。请重新启动身份验证后重试。",
+    "openFactoryDesktop": "打开 Factory 桌面版",
+    "backToFactory": "返回 Factory"
+  },
+  "coreUi": {
+    "breadcrumbs": {
+      "label": "面包屑导航"
+    },
+    "codeBlock": {
+      "copy": "复制代码"
+    },
+    "filterMenu": {
+      "addFilterPlaceholder": "添加筛选条件…",
+      "clearFilters": "清除筛选条件",
+      "findFilter": "查找筛选条件",
+      "noMatches": "无匹配项",
+      "optionSearchLabel": "筛选 {{facet}}",
+      "optionSearchPlaceholder": "筛选…"
+    },
+    "modal": {
+      "close": "关闭"
+    },
+    "multiSelectFilter": {
+      "allSelected": "全部",
+      "done": "完成",
+      "noMatches": "无匹配项",
+      "optionsLabel": "{{label}} 选项",
+      "searchLabel": "搜索 {{label}}",
+      "searchPlaceholder": "搜索 {{label}}…",
+      "selectedCount_one": "已选择 {{count}} 项",
+      "selectedCount_other": "已选择 {{count}} 项"
+    },
+    "numberInput": {
+      "decrease": "减少",
+      "increase": "增加"
+    },
+    "pagination": {
+      "label": "分页",
+      "nextPage": "下一页",
+      "previousPage": "上一页"
+    },
+    "searchableSelect": {
+      "searchPlaceholder": "搜索…"
+    },
+    "toast": {
+      "close": "关闭",
+      "dismiss": "忽略"
+    }
+  },
+  "cloudDeprecationBanner": {
+    "message": "云计算机已被 Droid 计算机取代。云计算机仍受支持，但我们强烈建议切换到 Droid 计算机以提高稳定性。",
+    "goToDroidComputers": "前往 Droid 计算机"
+  },
+  "subscriptionBanner": {
+    "gracePeriod": "付款已逾期。用量将于 {{date}} 停止。请<billingLink>前往账单</billingLink>处理。",
+    "overdueBlocked": "你的账号有逾期账单，当前访问已被阻止。请<billingLink>前往账单</billingLink>恢复访问。",
+    "freeTier": "你尚未订阅付费套餐。请<billingLink>升级套餐</billingLink>以使用托管模型和云功能。",
+    "freeTierWithByok": "你尚未订阅付费套餐。请<billingLink>升级套餐</billingLink>以使用托管模型和云功能，或<byokLink>使用自己的 API 密钥</byokLink>。"
+  },
+  "visualArtifactViewer": {
+    "noVisualOutputAvailable": "没有可用的可视化输出",
+    "theVisualContentAppearsToBe": "可视化内容似乎为空或无效。",
+    "theVisualFileMayContainInvalid": "可视化文件可能包含无效的 HTML。",
+    "unableToDisplayVisualContent": "无法显示可视化内容",
+    "visualOutput": "可视化输出"
+  },
+  "connectionFailure": {
+    "offline": "你已离线。",
+    "transport": "目前无法连接到 Droid。",
+    "wakeFailed": "Droid 无法唤醒。",
+    "computeLimit": "你的组织已达到计算用量上限。",
+    "policyDisabled": "你的组织不允许此计算机运行。",
+    "auth": "你的 Session 已过期。请登录。",
+    "daemonConflict": "另一个守护进程已连接。请重启它以重新连接。",
+    "daemonOffline": "你的计算机上没有运行 Factory。",
+    "protocolMismatch": "此计算机运行的 Factory 版本较旧。请更新客户端。",
+    "secureChannel": "无法验证此计算机的安全连接。",
+    "rateLimited": "连接尝试次数过多。",
+    "sessionLimit": "你已达到活跃云端 Session 数量上限。请关闭所有未使用的云端 Session，并在几分钟后重试。",
+    "sessionLimitWithCount": "你已达到 {{limit}} 个活跃云端 Session 的上限。请关闭所有未使用的云端 Session，并在几分钟后重试。",
+    "sharedSessionAccessDenied": "你已无法访问此共享 Session。",
+    "sharedSessionUnavailable": "此共享 Session 所在的计算机不可用。",
+    "computerStatus": {
+      "transport": "Droid 已进入休眠。开始输入即可重新连接。",
+      "wakeFailed": "Droid 无法唤醒。开始输入以重试。"
+    },
+    "recovery": {
+      "daemonNotRunning": "无法连接。请确保你的计算机上正在运行 Factory 守护进程。",
+      "computerStarting": "无法连接到计算机。它可能仍在启动，请稍后重试。"
+    },
+    "undeliveredMessage": {
+      "inSession": "无法在“{{title}}”中发送你的消息。",
+      "restoredInSession": "无法在“{{title}}”中发送你的消息。消息已放回输入框。",
+      "inThisSession": "无法在此 Session 中发送你的消息。",
+      "restoredInThisSession": "无法在此 Session 中发送你的消息。消息已放回输入框。"
+    }
+  },
+  "userProfileMenu": {
+    "failedToLogOut": "退出登录失败"
+  }
+}

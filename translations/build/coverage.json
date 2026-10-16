@@ -1,0 +1,44 @@
+{
+  "common": {
+    "translated": 380,
+    "total": 380,
+    "unchanged": 6
+  },
+  "components": {
+    "translated": 3002,
+    "total": 5718,
+    "unchanged": 33,
+    "targeted": 3002,
+    "targetedTranslated": 3002
+  },
+  "errors": {
+    "translated": 11,
+    "total": 11,
+    "unchanged": 0
+  },
+  "inbox": {
+    "translated": 55,
+    "total": 55,
+    "unchanged": 0
+  },
+  "onboarding": {
+    "translated": 151,
+    "total": 151,
+    "unchanged": 1
+  },
+  "sessions": {
+    "translated": 774,
+    "total": 774,
+    "unchanged": 7
+  },
+  "settings": {
+    "translated": 3635,
+    "total": 3635,
+    "unchanged": 60
+  },
+  "softwareFactory": {
+    "translated": 1909,
+    "total": 1909,
+    "unchanged": 23
+  }
+}

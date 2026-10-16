@@ -1,0 +1,101 @@
+{
+  "inbox": {
+    "inboxRefreshFailedShowingTheLatest": "收件箱刷新失败，正在显示最近保存的数据。",
+    "loadingInbox": "正在加载收件箱",
+    "loadingInboxEllipsis": "正在加载收件箱…",
+    "retryInbox": "重试加载收件箱",
+    "unableToLoadYourInbox": "无法加载你的收件箱",
+    "emptyState": {
+      "needsAction": {
+        "primary": "暂无待处理事项",
+        "secondary": "问题和权限请求会显示在这里。"
+      },
+      "unread": {
+        "primary": "没有未读内容",
+        "secondary": "Session 和任务中的新动态会显示在这里。"
+      },
+      "all": {
+        "primary": "收件箱为空",
+        "secondary": "Session 和任务中需要关注的事项会显示在这里。"
+      }
+    }
+  },
+  "entity": {
+    "specification": "Spec",
+    "signals": "信号",
+    "meta": "{{change}} · 更新于 {{timeAgo}}",
+    "status": {
+      "approved": "已批准",
+      "declined": "已拒绝",
+      "changesRequested": "请求修改"
+    },
+    "note": {
+      "reviewGone": "此项指向的审查已不再属于该变更。",
+      "revised": "此通知发出后，Spec 已修订。"
+    },
+    "unavailable": {
+      "missing": {
+        "title": "此变更已不可用",
+        "description": "它可能在此项送达后被删除。上方消息是收件箱当时记录的内容。"
+      },
+      "denied": {
+        "title": "你无权访问此变更",
+        "description": "此变更仅限所属团队访问。请让团队成员或管理员授予你访问权限。"
+      }
+    }
+  },
+  "snooze": {
+    "oneHour": "1 小时",
+    "tomorrowMorning": "明天上午 9 点",
+    "nextWeek": "下周"
+  },
+  "cta": {
+    "requestChanges": "请求修改",
+    "reviewDecisionFailed": "无法记录审查决定",
+    "specificationReview": {
+      "title": "准备好批准此 Spec 了吗？",
+      "description": "批准后，Droid 将实现它并创建拉取请求。",
+      "approve": "批准并创建 PR",
+      "discard": "丢弃"
+    },
+    "pullRequestReview": {
+      "title": "准备好合并此拉取请求了吗？",
+      "description": "以你的身份合并此拉取请求，执行前会请你确认。",
+      "descriptionNamed": "以你的身份压缩合并 {{pullRequest}}，执行前会请你确认。",
+      "merge": "合并",
+      "mergeUnavailable": "暂不支持从收件箱合并，请打开拉取请求进行合并。",
+      "close": "关闭",
+      "closeUnavailable": "暂不支持从收件箱关闭，请打开拉取请求进行关闭。"
+    },
+    "askUser": {
+      "title": "Droid 正在等待你的回答",
+      "description": "在此回答后，Droid 会从停止处继续 Session。",
+      "answer": "回答",
+      "connecting": "正在连接…"
+    }
+  },
+  "sessionEntity": {
+    "question": "问题",
+    "unavailable": {
+      "unreachable": {
+        "title": "已无法在此回答该问题",
+        "description": "此设备无法连接到提出问题的计算机，请打开 Session 在那里继续。"
+      },
+      "answered": {
+        "title": "此问题已回答",
+        "description": "Droid 已不再等待该问题，因此无需在此回答。"
+      },
+      "sent": {
+        "title": "回答已发送",
+        "description": "Droid 已根据你的回答继续 Session。"
+      }
+    },
+    "answerFailed": "无法发送你的回答",
+    "failures": {
+      "noAccessToken": "登录已过期，请重新登录后重试。",
+      "loadFailed": "无法在所属计算机上加载此 Session。",
+      "connectionFailed": "无法连接到 Session 所属的计算机。",
+      "readFailed": "无法读取 Session。"
+    }
+  }
+}

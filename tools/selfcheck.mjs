@@ -8,6 +8,7 @@ import { context, assertOriginal, pairHash, samePair } from '../scripts/lib/env.
 import { loadPatchSet, applyEdits, buildReplacements } from '../scripts/lib/patch.mjs';
 import { patchFuse, inspectFuse } from '../scripts/lib/fuses.mjs';
 import { checkJavaScript } from '../scripts/lib/syntaxcheck.mjs';
+import { validateText, validateTree, leafEntries } from './build_resource.mjs';
 
 const home = 'C:/Users/11013/AppData/Local/Factory/app-0.200.0';
 const asar = openAsar(`${home}/resources/app.asar`);
@@ -54,4 +55,17 @@ try {
   let differences = 0; for (let i=0;i<originalExe.length;i++) if (originalExe[i] !== changedExe[i]) differences++;
   assert.equal(differences, 1);
   console.log('Patch PASS: three unique anchors/markers, repeated edits no-op, JS syntax and one-byte fuse patch.');
+  for (const ns of ['common','settings','sessions','softwareFactory','inbox','onboarding','errors','components']) {
+    for (const [key,text] of leafEntries(en[ns])) validateText(text,text,`${ns}.${key}`);
+  }
+  validateText('<a>{{name}}</a><b>Value</b>', '<b>值</b><a>{{name}}</a>');
+  const invalidTexts = [
+    ['{{name}} {{name}}','{{name}}'], ['{{name, number}}','{{name}}'],
+    ['<a><b>text</b></a>','<b><a>文本</a></b>'], ['<a><b>text</b></a>','<a><b>文本</a></b>'],
+    ['<name/>','<name></name>'], ['text',''], ['https://example.com/a','https://example.com/b'],
+    ['Run `npm install`','运行 `npm update`'], ['{{name}}','{{name}} {{oops']
+  ];
+  for (const [source,translation] of invalidTexts) assert.throws(()=>validateText(source,translation));
+  for (const translation of [{unknown:'值'},{text:null},{text:1}]) assert.throws(()=>validateTree({text:'text'},translation));
+  console.log('Resource validator PASS: all source strings accepted; sibling tag reorder accepted; 12 invalid translation cases rejected.');
 } finally { closeAsar(asar); }

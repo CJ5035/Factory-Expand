@@ -1,0 +1,237 @@
+{
+  "constants": {
+    "starterIdeas": {
+      "exploreCodebase": {
+        "title": "探索你的代码库",
+        "description": "在引导下了解仓库及各部分的关联。"
+      },
+      "ticketToPr": {
+        "title": "将工单变成 PR",
+        "description": "领取一个问题，并推进到创建拉取请求。"
+      },
+      "fixProductionError": {
+        "title": "修复生产环境错误",
+        "description": "诊断线上错误并完成修复。"
+      },
+      "mapProductSurface": {
+        "title": "梳理产品功能范围",
+        "description": "了解仓库中面向用户的功能和流程。"
+      },
+      "draftSpec": {
+        "title": "根据待办需求起草 Spec",
+        "description": "根据产品的实际运作方式编写 PRD。"
+      },
+      "feedbackToPlan": {
+        "title": "将反馈转化为计划",
+        "description": "从客户反馈中提炼主题及后续行动。"
+      },
+      "figmaToLife": {
+        "title": "让 Figma 画面成为现实",
+        "description": "在仓库中构建忠实还原、可交互的版本。"
+      },
+      "auditUi": {
+        "title": "审查界面",
+        "description": "找出不一致的样式、状态和交互。"
+      },
+      "polishInterface": {
+        "title": "完善界面",
+        "description": "打磨最薄弱的页面、状态和交互。"
+      },
+      "analyzeSpreadsheet": {
+        "title": "分析电子表格",
+        "description": "将原始数字转化为趋势和结论。"
+      },
+      "reviewRevenue": {
+        "title": "审查收入数据",
+        "description": "交叉核对账单数据并标记异常。"
+      },
+      "boardReadyReport": {
+        "title": "制作董事会报告",
+        "description": "创建带有图表的精美 Excel 或 PDF 报告。"
+      },
+      "researchMarket": {
+        "title": "研究市场",
+        "description": "研究竞争对手或主题，并提供来源。"
+      },
+      "draftLaunchContent": {
+        "title": "起草发布内容",
+        "description": "撰写可直接发布的博客文章或单页简介。"
+      },
+      "customerVoice": {
+        "title": "收集客户声音",
+        "description": "用客户的原话总结他们反复提到的内容。"
+      },
+      "accountBrief": {
+        "title": "准备客户简报",
+        "description": "研究潜在客户并整理沟通要点。"
+      },
+      "mineCalls": {
+        "title": "挖掘通话记录",
+        "description": "从通话录音中提炼异议和后续行动。"
+      },
+      "draftOutreach": {
+        "title": "撰写有效的外联内容",
+        "description": "编写简短且有针对性的系列邮件。"
+      },
+      "automateUpdate": {
+        "title": "自动生成定期更新",
+        "description": "起草更新内容，并使其可重复执行。"
+      },
+      "untangleProcess": {
+        "title": "理清流程",
+        "description": "梳理步骤、负责人和瓶颈。"
+      },
+      "dataToDecisions": {
+        "title": "将数据转化为决策",
+        "description": "根据电子表格生成清晰的运营分析。"
+      },
+      "layOfTheLand": {
+        "title": "了解整体情况",
+        "description": "像新员工一样了解代码库和产品。"
+      },
+      "investorUpdate": {
+        "title": "起草投资者更新",
+        "description": "将重点进展整理成简洁有力的更新。"
+      },
+      "competitorScan": {
+        "title": "分析竞争对手",
+        "description": "研究对手及你的优势机会。"
+      },
+      "tourDroid": {
+        "title": "了解 Droid 的能力",
+        "description": "根据你的环境观看现场演示。"
+      },
+      "workWithFiles": {
+        "title": "处理你的文件",
+        "description": "总结、转换或基于文档继续创作。"
+      },
+      "craftDeliverable": {
+        "title": "制作交付物",
+        "description": "生成精美的文档、PDF 或电子表格。"
+      }
+    }
+  },
+  "onboardingNewPlan": {
+    "welcomeToFactory": "欢迎使用 Factory",
+    "adminSettingUp": "管理员正在设置你的组织。",
+    "defaultOrgName": "{{firstName}} 的组织",
+    "defaultOrgNameFallback": "我的组织",
+    "autoStart": {
+      "retry": "重试启动订阅",
+      "paymentConfirmed": "付款方式已确认，请重试启动订阅。",
+      "starting": "正在启动你的订阅"
+    },
+    "domainMembership": {
+      "signedInAs": "已以 {{email}} 登录",
+      "title": "请向管理员申请访问权限",
+      "subtitle": "你的邮箱域名由现有 Factory 组织管理，请联系组织管理员获取邀请。",
+      "useDifferentAccount": "使用其他账号"
+    },
+    "name": {
+      "reviewSubtitle": "请检查组织名称后继续。",
+      "title": "为组织命名",
+      "settingUpSubtitle": "正在设置组织…",
+      "createFailed": "无法创建组织，请检查连接后重试。",
+      "openFailed": "组织已创建，但无法打开。请重试以继续。",
+      "createFailedServer": "由于服务端出现问题，无法创建组织，请稍后重试。",
+      "createRejected": "无法创建组织，请重试；若问题持续，请联系支持。"
+    },
+    "payment": {
+      "title": "选择你的套餐",
+      "subtitle": "立即开始使用 Droid 构建。你随时可以在账单设置中更改或取消套餐。",
+      "removePromoAndUseApiKeys": "移除优惠并使用你的 API 密钥",
+      "useApiKeysInstead": "改用你的 API 密钥"
+    },
+    "final": {
+      "subtitle": "你的 Droid 已准备就绪。"
+    }
+  },
+  "onboardingPaymentForm": {
+    "paymentMethodConfirmed": "付款方式已确认",
+    "retryStartingYourSubscriptionOrChoose": "请重试启动订阅，或选择其他付款方式。",
+    "changePaymentMethod": "更改付款方式",
+    "factoryCurrentlyDoesNotSupportPayments": "Factory 目前不支持需要 3D Secure（3DS）认证的付款。请使用无需 3D Secure 的付款方式。",
+    "voucherCode": "优惠码",
+    "enterYourVoucherCode": "输入优惠码",
+    "validVoucher": "优惠码有效",
+    "validatingVoucher": "正在验证优惠码…",
+    "invalidVoucher": "优惠码无效 · {{message}}",
+    "paymentDetails": "付款方式",
+    "billingAddress": "账单地址",
+    "clearVoucher": "清除优惠码",
+    "useVoucherCode": "使用优惠码",
+    "stripeNotConfirmed": "Stripe 未确认你的付款方式，请重试。",
+    "continue": {
+      "validatingVoucher": "正在验证优惠码",
+      "startSubscription": "启动订阅",
+      "continueToBilling": "继续前往账单",
+      "applyVoucher": "应用优惠码",
+      "retryPaymentSetup": "重试设置付款方式",
+      "retryStartSubscription": "重试启动订阅"
+    },
+    "errors": {
+      "voucherNotValidated": "无法验证优惠码",
+      "paymentNotConfirmed": "无法确认付款",
+      "reasonTryAnotherMethod": "{{reason}} 请尝试其他银行卡或使用美国银行账户付款。",
+      "paymentMethodNeedsReplacement": "此付款方式无法使用，请尝试其他银行卡或使用美国银行账户付款。",
+      "requestFailed": "无法完成此步骤，请重试；若问题持续，请联系支持。",
+      "serverUnavailable": "服务端出现问题，请稍后重试。",
+      "connectionFailed": "无法连接到 Factory，请检查连接后重试。"
+    },
+    "chargeConsent": {
+      "summary": "点击“启动订阅”即表示你以 {{price}} 的价格开始新的 Factory {{planName}} 订阅。{{paymentTerms}}",
+      "priceMonthly": "${{amount}}/月",
+      "priceAnnual": "${{amount}}/年",
+      "pricePerSeat": "${{basePrice}}/月，另加每位成员每月 ${{seatPrice}}",
+      "firstPaymentMonthly": "你今天支付 ${{amount}}，此后按月付费，直至取消。",
+      "firstPaymentAnnually": "你今天支付 ${{amount}}，此后按年付费，直至取消。",
+      "firstPaymentPerSeatMonthly": "你今天为平台及首位成员支付 ${{amount}}，此后按月付费，直至取消。",
+      "firstPaymentPerSeatAnnually": "你今天为平台及首位成员支付 ${{amount}}，此后按年付费，直至取消。",
+      "voucherTerms": "{{coverage}} {{billing}}",
+      "billingMonthly": "此后按月计费，直至取消。",
+      "billingAnnually": "此后按年计费，直至取消。",
+      "voucherPartialMonth": "优惠码可抵扣此套餐首月的部分费用。",
+      "voucherPartialMonthTeam": "优惠码可抵扣按当前团队人数计算的此套餐首月部分费用。",
+      "voucherPartialYear": "优惠码可抵扣此套餐首年的部分费用。",
+      "voucherPartialYearTeam": "优惠码可抵扣按当前团队人数计算的此套餐首年部分费用。",
+      "voucherMonths_one": "优惠码提供此套餐约 {{count}} 个月的额度。",
+      "voucherMonths_other": "优惠码提供此套餐约 {{count}} 个月的额度。",
+      "voucherMonthsTeam_one": "按当前团队人数计算，优惠码提供此套餐约 {{count}} 个月的额度。",
+      "voucherMonthsTeam_other": "按当前团队人数计算，优惠码提供此套餐约 {{count}} 个月的额度。",
+      "voucherYears_one": "优惠码提供此套餐约 {{count}} 年的额度。",
+      "voucherYears_other": "优惠码提供此套餐约 {{count}} 年的额度。",
+      "voucherYearsTeam_one": "按当前团队人数计算，优惠码提供此套餐约 {{count}} 年的额度。",
+      "voucherYearsTeam_other": "按当前团队人数计算，优惠码提供此套餐约 {{count}} 年的额度。"
+    },
+    "startingYourSubscription": "正在启动你的订阅…",
+    "finishingSetup": "正在完成设置…"
+  },
+  "desktopAuthCallback": {
+    "youreAllSetReturnToYour": "一切就绪，返回 Session 继续工作。",
+    "youreAlreadyInTheDesktopApp": "你已在桌面应用中",
+    "goToSessions": "前往 Session",
+    "returnToDesktopApp": "返回桌面应用以继续之前的工作。",
+    "missingSignInDetails": "此页面缺少登录信息，请重启 Factory Desktop 后重新登录。",
+    "openDesktopApp": "打开桌面应用",
+    "manageAccount": "管理账号",
+    "continueToWebApp": "继续前往网页应用",
+    "signedInToFactory": "已登录 Factory",
+    "authenticationFailed": "认证失败",
+    "backToFactory": "返回 Factory"
+  },
+  "onboarding": {
+    "finishSettingUpInYourBrowser": "在浏览器中完成设置",
+    "wellOpenYourBrowserToComplete": "我们将打开浏览器完成设置，完成后带你返回桌面应用。",
+    "openBrowser": "打开浏览器",
+    "checkingYourAccount": "正在检查账号"
+  },
+  "onboardingFinish": {
+    "byokComputersNotice": "BYOK 用户无法从网页运行托管的 Droid Computers，但你可以<registerLink>注册自己的计算机</registerLink>。",
+    "allSet": "一切就绪",
+    "getStartedWithApiKeys": "使用你的 API 密钥开始",
+    "pickWhereToWork": "选择与 Droid 工作的地点。你可以使用所有方式。",
+    "accountOnlySubtitle": "你的账号可以在终端和桌面应用中使用 Droid。安装其中一个即可开始。",
+    "desktopReturnSubtitle": "返回桌面应用，开始与 Droid 工作。",
+    "finishingSetup": "正在完成设置"
+  }
+}
