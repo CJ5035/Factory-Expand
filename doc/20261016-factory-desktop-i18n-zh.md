@@ -1,10 +1,56 @@
 # Factory 桌面版中文汉化实施文档
 
-- 日期：2026-10-16（v7：实施完成核心产物及真实应用，记录副本演练、UI补漏与锁屏下的剩余验收）
+- 日期：2026-10-16；更新：2026-10-19（v8：按用户要求二次核查译文、完整功能界面覆盖、下拉选项与专用名词，并修复）
 - 目标版本：Factory Desktop 0.200.0（`C:\Users\11013\AppData\Local\Factory\app-0.200.0`）
-- 状态：**第 1–4 项完成；正式中文应用及核心 UI 验收通过，原生菜单/对话框视觉验收待解锁**（用户已明确接受签名失效及关闭asar完整性校验；禁止推送远程。当前最终语言为简体中文）
+- 状态：**v8 翻译修复、文档修订、构建演练、正式应用及核心 UI 验收完成**（功能资源 18206/18206；课程正文 471 条按用户选择保留英文。未声称全新 profile 或全部界面状态均逐一视觉验收。禁止推送远程。）
 
 ## 1. 背景与调查结论
+
+### 1.1 用户追加的二次审查与修复（v8，已交付）
+
+用户已要求再次核实翻译合理性、页面/下拉框是否全覆盖、专用名词是否应保留，并修正文档及代码；这是本轮修复授权，沿用可本地提交、禁止推送、正式应用已确认的约束。用户已明确选择“所有功能页面及下拉框，课程正文保留英文”。2026-10-19恢复时按此选择收束：课程导航、标题、按钮、选择项、状态反馈保留中文，lessons.content中的讲解、示例提示词/代码、解释及学习正文恢复原英文，每个保留键及原文写入coverage-policy；不整树排除课程UI，不降低英文源总数。此前主动翻译全部课程正文的checkpoint保留为历史记录，不代表最终交付范围。不能以既有首批scope的100%冒充全应用100%。
+
+初始真实覆盖为10139/17835叶，缺7696（11个namespace完全缺失5202，components尚缺2494）。现有coverage只遍历已有zh文件，未报告整个缺失namespace；原先首批覆盖说明保留为历史记录，不代表全页面完成。
+
+本轮任务（逐项核对和更新）：
+
+1. [x] 只读交叉复审：全量键覆盖/硬编码/课程界面分类，以及settings与其余现有译库的语义、下拉选项、术语。三个独立审查均已返回，确认后才修改。
+2. [x] 修复确认的上下文误译，制定可执行术语表及关键键规则；产品/模型/协议/标识保留，通用UI词按上下文翻译，禁止只凭英文原句批量复用。
+3. [x] 补齐全部功能资源和所有组件组；课程按钮/标题/选择项必须纳入，讲解正文和示例指令如排除需列出精确键及原因，不整树排除。
+4. [x] 修复完整覆盖报告和已确认绕过翻译的显示点（国家选项、时间范围、相对时间、后退/前进tooltip，以及设置提案/导航、诊断提示、自动化原因、就绪度等级、自定义模型表单/错误、文件树/表格辅助标签、统计成就卡片）；纳入主进程desktop菜单/对话框资源，保持原始哈希/marker/状态恢复契约。
+5. [x] 构建、语法/插值/标签/术语/覆盖验证及独立review，必要时restore→build→apply更新；区分静态覆盖与逐页展开UI验收，锁屏时不伪报视觉通过，更新最终文档和本地提交。
+
+已确认误译（原英文/当前译文/修复方向）：Commit/承诺用量/提交（Git菜单）；Prem/高级/私有部署（Prem）；Required/必填/强制（组织模型策略徽标）；Updated/更新时间/已更新（批量操作结果）；Focus mode/专注模式/声音播放条件；IP策略中的API key usage/密钥用量/使用密钥发起请求；FSC credits/额度/积分（消耗数）；应用菜单View/查看/视图；Session fork错误中的分叉/派生；Pin图标/固定/图钉；Droid Computer(s)完整产品名跨页面统一保留。
+
+Dedupe Ticket（v8）：意图＝复用现有资源管线纠正语义与覆盖口径，并在构建时约束术语/已知歧义。查询＝现有build_resource/validateText/selfcheck、translations全部源与coverage、原始bundle显示调用点。命中＝tools/{build_resource,selfcheck,extract_en}.mjs、translations/{en,zh-CN,components-scope.json}及现有补丁。决策＝extend现有工具与补丁，new最小术语/覆盖政策JSON（仅数据）、临时翻译与审查产物放work或已忽略.sdd目录；不新增GUI、网络翻译服务或测试框架。新增校验/统计函数仅服务本轮术语、覆盖和受限desktop提取。
+
+Checkpoint v8-2：19项上下文修正与52项完整产品名修正经独立只读复核及主代理复验通过；新增19条精确语义规则和品牌规则，未发现重要问题。复核发现产品名后中英文粘连，已分配逐处补空格。构建验证现能计入整个缺失namespace，拒绝未审查英文、过期/重复例外和已声明保留的代码被修改；selfcheck已通过11条补丁唯一性/幂等、85条desktop提取及覆盖/术语正反例。后续新增译文仍需单独语义复核。
+
+Checkpoint v8-4：11条补丁（原3条+7处renderer显示/缓存修复+desktop加载）均唯一命中，幂等与完整bundle语法通过；desktop85条经独立逐项复核与CJS注入隔离执行验证。manifest固定20个源namespace/17920叶及规范JSON哈希，防止中英文同时漏文件而误报完整；coverage对品牌/技术数据英文保留逐键审查。新增Plotly格式插值校验；4条课程角括号提示词占位符仅按精确英文源列外，仍保持token与富文本结构。成对事务、外部keytar及pristine哈希规则不变。正式构建/演练/部署属于第5项，尚待第3项全部译库补齐。
+
+v8复核追加调整：硬编码二次扫描又确认设置变更提案catalog下拉/placeholder、Slack详情Overview/Chain、本地网络诊断明细、自动化状态原因映射仍绕过资源，第4项重新打开继续修复，最终补丁数量将扩充，不能沿用11条已完成的结论。课程四组lessonPromptAnatomy.keywords初判为不可翻译检测数据，经主代理与独立复核反查HOl/N6e/zOl及官方日文包确认：这是可本地化词表，HOl本就自动并入英文。现已改中文并移除英文保留例外，以原函数验证中英文四项均命中、旧英文词表在中文输入下失败。工程triage统一分流/分类处理，Steward维护代理；认证Droid Essentials/Specialist/Master保留完整名并附中文。analytics2环比以等长上一时段比较、用户合计非人数两项已按调用链修复。
+
+Dedupe Ticket（v8硬编码补充）：意图＝仅在显示层本地化绕过资源的本地静态catalog标签/状态/诊断文案，保持工具schema与选项值原样。查询＝FactoryZhText/patchUi/supplement现有实现（无）、Lbo/h0/lMa/zYc/ghc调用链。命中＝原始renderer中的上述函数、现有build_resource与patches。决策＝extend现有补丁与构建；new最小patchUi英中数据（与20个pristine提取namespace分开固定）、bundle内一个唯一显示helper，复用Rin().t及当前语言，不新增网络服务/依赖/入口。原始20源不改，补充源也按版本固定哈希/叶数并纳入完整覆盖统计。
+
+Checkpoint v8-3：19个renderer namespace共17835/17835叶及desktop85/85叶已补齐；lessons934条含全部777个content叶均已认真翻译，无正文排除、普通英文UI复制或空占位。components-scope扩为全部24组5718叶。首个完整npm run build通过：原始17920条+当前补充patchUi6条=17926/17926，missing/excluded均0，272同值中234个含英文的品牌/代码/标识/格式逐键列入policy，余38为纯符号/数值/插值。课程全部主题的独立语义复核仍列在第5项；硬编码其余投影补丁继续第4项，尚未正式部署v8。
+
+v8译文终审：独立审查已逐组核对analytics498+analytics2 697及lessons934（含全部课程UI/选项/答案/示例授权边界），其余7个新namespace942叶已逐组核对，automations2131及新增components各功能组已重点交叉核对。确认的analytics2等长上一时段/用户用量合计、课程导航Secrets两处统一“设置 › 机密”、认证原名、PR开闭状态、Steward/Wiki/工程分流及产品空格均已修正。未把“没发现问题”表述为未来版本翻译永远无误。
+
+Checkpoint v8-4最终复核（2026-10-19）：最终为2个目标、41条精准编辑、2个新增资源。独立重算18662条（原始17920+补充742），缺失/未审核英文/排除均0；用户指定课程正文471条逐键保留原英文，课程content其余306和非content157保持界面汉化。功能资源18191/18191，不能将其表述为逐页逐状态视觉验收完成。原始20源及补充源pin、生成ESM/desktop JSON逐树一致；基础selfcheck通过锚点/语法/幂等/单字节fuse与实际VM回归（国家/日期/标签页、设置提案用户数据/模型快照、模型表单/辅助标签、诊断PID端口、29成就与时间、课程中英词表）。独立终审无确认Important/Critical，允许进入完整副本与真实安装验收。
+
+真实安装验收追加（2026-10-19）：41条版本已实际restore→apply→verify通过，语言切换及偏好持久化通过。原生弹出菜单实际UIA发现默认role生成的Edit及部分子项仍英语；第4项重新打开。Dedupe Ticket：意图＝仅在中文时本地化Electron自动生成的原生role标签，保持ID/role/accelerator/click/enabled/visible及其他语言原样。查询＝主进程i0/KW/buildFromTemplate、ne/Fi、本地FactoryNativeMenu实现（无）。命中＝两个菜单构建点和现有desktop JSON输出、patchUi源。决策＝extend两个已知构建点，new最小递归显示后处理helper；从patchUi已验证字典选择原生词条合入desktop JSON，不改原始85条en源、不加第三资源/依赖、不重建默认role子菜单。追加UI实际验证及对应回归后再结束。
+
+Checkpoint v8最终交付（2026-10-19）：44条精准编辑及18677条资源构建、自检通过，功能资源18206/18206，显式课程正文英文471条，源缺失/未审核英文/排除均0。最终15项全副本事务演练通过，证据 `work/exercise-Rmllue/results.json`；真实安装实际restore恢复原始签名与fuse后，再apply/verify成功，重复apply报告Already applied且无改动。其他537个归档条目与外部keytar保持不变；2个目标与2个新增资源逐字节/完整性校验通过。原生role追加由独立复核确认无Important，实际原生菜单主项及编辑子项已读出中文，快捷键/启用状态保持；关于窗口的版本说明及目录选择窗口标题中文通过UIA检查，目录选择取消返回canceled=true，未选择目录或保存任何模型/组织设置。接口API依官方MenuItem.label可动态更改的契约：[Electron MenuItem](https://www.electronjs.org/docs/latest/api/menu-item#menuitemlabel)。
+
+真实UI抽查：语言菜单保留9种语言自称；通过English→简体中文及保存偏好zh-CN。访问17个设置路由，16个读到中文标题（用量页仅记录路由访问，不作为内容视觉通过）；添加模型空白表单显示中文说明、技术模型ID/API key示例保持原样，随后取消未保存。原生菜单、编辑子项和新增默认role标签通过实际UIA验证；现有账号正常载入。最终关闭临时9225调试监听，以普通交互方式重启Factory，保持中文。证据包括 `work/v8-ui-pages.json`、`work/v8-language-restored.png`、`work/v8-custom-model-form.png`、原生菜单UIA记录。截图/临时脚本均不进入代码提交。
+
+交付边界：功能资源覆盖不等于每个页面、每个下拉展开状态及权限组合均人工遍历。用户内容、模型/提供商/协议名、命令、代码、未知远端状态、技术诊断detail及原始导出保留原值。未清除用户数据来制造全新profile，历史清单的首次全新profile项仍未声称通过；原生系统文件选择器内部全部控件也未逐一视觉检查。以上验证边界不掩盖为翻译缺键或全状态已验收。
+
+普通重启连接验收补充：最后普通重启曾显示本地计算机连接失败；同时主日志267–274行已报告daemon Process ready及Startup completed，295行另有whoami区域识别失败/TLS线索。未改汉化pair，再次普通重启后恢复绿色本地连接、模型选择及输入控件；安装pair仍匹配44条应用记录，9225监听为0。根因尚未确认，不能把TLS警告定为已证实根因，也不将本次波动隐瞒为全程无异常。详见Bug诊断报告/20261019-Factory本地连接排查计划与结果.md。
+
+Dedupe Ticket（连接诊断）：意图＝记录本轮真实启动验收出现的瞬时连接故障与恢复证据。查询＝doc目录已有报告、desktop-droid日志健康/失败事件；命中＝本实施文档及实际日志267/274/295/400/403行；决策＝new独立诊断记录，以仓库日期前缀命名并按doc-organizer的排查计划规则直接归档Bug诊断报告，不移动用户明确指定的本实施文件，不改认证数据、网络配置或业务代码。
+
+术语方向：Factory、Factory Desktop、Droid、Droid Core、Droid Shield、Droid Computer(s)、Software Factory、OpenCompute、模型/厂商名、MCP/API/CLI/协议、AGENTS.md、URL/路径/命令原样保留；Session/Spec沿用已批准产品术语。通用词如提交/视图/图钉/声音播放条件不强行改英文；token计量与认证令牌、credit积分与额度/抵扣需按上下文区分。
 
 原调查记录语言下拉仅8种语言、无中文；实施实测0.200.0的实际入口为 Settings → General → Preferences → Language（“设置→通用→偏好设置→语言”），并非最初记录的Appearance路径。
 
@@ -20,7 +66,7 @@
 | i18next init 静态核验：`fallbackLng:"en"`、`supportedLngs:[...语言列表,伪语言]`、`defaultNS:"common"`；切换时 `(await wSu[lang]()).resources` → `addResourceBundle` | 同上（`Rin()`/`ISu()` 函数）；实际 UI 切换仍待实施验收 |
 | **exe 开启 asar 完整性校验**（fuse `EnableEmbeddedAsarIntegrityValidation=enabled`） | REA `inspect_electron_fuses` |
 | UI 文本规模：约 17,436 条 / 32.5 万字符（2,661 处 `{{插值}}`、406 条长文本） | 日语包结构解析统计 |
-| 主进程 `desktop` 命名空间（菜单、右键菜单、退出确认、更新、认证、文件对话框等）8 语无中文；`Fi` 以 `fallbackLng:"en"` 初始化、未设 supportedLngs，切到 zh-CN 时回退英文，本期不翻译 | `initLifecycle-C1amcziW.js`（`eC`/`Fi.init`） |
+| 主进程 `desktop` 命名空间（菜单、右键菜单、退出确认、更新、认证、文件对话框等）8 语无中文；`Fi` 以 `fallbackLng:"en"` 初始化、未设 supportedLngs，切到 zh-CN 时回退英文，v7历史未翻译；v8新增85条desktop资源 | `initLifecycle-C1amcziW.js`（`eC`/`Fi.init`） |
 
 **输入基线**：本轮直接读取安装目录原始 asar 的 header 与条目，数据起点为 `8 + header[4:8]`（uint32 LE），不能误用 `16 + JSON长度` 忽略 padding。现有 `work/extracted-0.200.0` 中 package.json、renderer 和 initLifecycle 均有头部截断，不得作为提取或补丁输入。后续通过复用的 `openAsar/readEntry` 读取，并逐条核验 header 的 size/hash。统计数字仅为原调查估算，以重新提取结果为准。
 
@@ -28,6 +74,8 @@
 
 - asar：`07ac482d497a280c1af6d8f153a8fc1ea4bb9a08c3377a5ce65f6888423c7ace`
 - exe：`fd6f8791784a987f445043c2e36936280e704e1f9060aea4749c44086840758d`
+
+> 以下第2–3节保留首批实施历史；与v8冲突处以1.1节为准。v8最终为19个原始renderer命名空间17835叶、原始desktop85叶、patchUi补充757叶，共18677叶；其中471条课程正文保留英文，功能资源18206条。desktop输出为原85叶加15个共享原生role词条，不导出为renderer的desktop命名空间。最终2目标/44编辑/2新增资源，仍使用成对事务与restore→build→apply。
 
 ## 2. 方案：复用 zcode-expand 补丁管线
 

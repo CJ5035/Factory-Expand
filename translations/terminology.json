@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "preserveTerms": [
+    {
+      "name": "Factory Desktop",
+      "pattern": "\\bFactory Desktop\\b"
+    },
+    {
+      "name": "Factory",
+      "pattern": "\\bFactory\\b"
+    },
+    {
+      "name": "Droid Computer(s)",
+      "pattern": "\\bDroid Computers?\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "Droid Core",
+      "pattern": "\\bDroid Core\\b"
+    },
+    {
+      "name": "Droid Shield",
+      "pattern": "\\bDroid Shield\\b"
+    },
+    {
+      "name": "Droid",
+      "pattern": "\\bDroids?\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "Software Factory",
+      "pattern": "\\bSoftware Factory\\b"
+    },
+    {
+      "name": "OpenCompute",
+      "pattern": "\\bOpenCompute\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "MCP",
+      "pattern": "\\bMCP\\b"
+    },
+    {
+      "name": "API",
+      "pattern": "\\bAPIs?\\b"
+    },
+    {
+      "name": "CLI",
+      "pattern": "\\bCLIs?\\b"
+    },
+    {
+      "name": "SDK",
+      "pattern": "\\bSDKs?\\b"
+    },
+    {
+      "name": "OAuth",
+      "pattern": "\\bOAuth\\b"
+    },
+    {
+      "name": "SSH",
+      "pattern": "\\bSSH\\b"
+    },
+    {
+      "name": "SSO",
+      "pattern": "\\bSSO\\b"
+    },
+    {
+      "name": "JSON",
+      "pattern": "\\bJSON\\b"
+    },
+    {
+      "name": "YAML",
+      "pattern": "\\bYAML\\b"
+    },
+    {
+      "name": "AGENTS.md",
+      "pattern": "\\bAGENTS\\.md\\b"
+    },
+    {
+      "name": "GitHub",
+      "pattern": "\\bGitHub\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "GitLab",
+      "pattern": "\\bGitLab\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "Bitbucket",
+      "pattern": "\\bBitbucket\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "Azure DevOps",
+      "pattern": "\\bAzure DevOps\\b"
+    },
+    {
+      "name": "VS Code",
+      "pattern": "\\bVS Code\\b"
+    },
+    {
+      "name": "Anthropic",
+      "pattern": "\\bAnthropic\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "OpenAI",
+      "pattern": "\\bOpenAI\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "Figma",
+      "pattern": "\\bFigma\\b"
+    },
+    {
+      "name": "Linear",
+      "pattern": "\\bLinear\\b"
+    },
+    {
+      "name": "Jira",
+      "pattern": "\\bJira\\b"
+    },
+    {
+      "name": "Sentry",
+      "pattern": "\\bSentry\\b"
+    },
+    {
+      "name": "Notion",
+      "pattern": "\\bNotion\\b"
+    },
+    {
+      "name": "Datadog",
+      "pattern": "\\bDatadog\\b"
+    },
+    {
+      "name": "PostHog",
+      "pattern": "\\bPostHog\\b"
+    },
+    {
+      "name": "Stripe",
+      "pattern": "\\bStripe\\b"
+    },
+    {
+      "name": "运行时/系统标识",
+      "pattern": "\\b(?:Node\\.js|Electron|Chromium|WindowsApps|Factory\\.app|PATH)\\b",
+      "exactMatches": true
+    },
+    {
+      "name": "模型名称",
+      "pattern": "\\b(?:Claude|Sonnet|Opus|Haiku|Gemini|GPT[\\w.-]*)\\b",
+      "exactMatches": true
+    },
+    {
+      "name": "工具/平台名称",
+      "pattern": "\\b(?:Slack|Discord|Docker|Kubernetes|Terraform|PostgreSQL|Snowflake|BigQuery|Redis|S3|Git|VSCode)\\b",
+      "exactMatches": true
+    },
+    {
+      "name": "Factory Wiki",
+      "pattern": "\\bFactory Wiki\\b",
+      "ignoreCase": true
+    },
+    {
+      "name": "Droid课程认证",
+      "pattern": "\\bDroid (?:Essentials|Specialist|Master)\\b",
+      "exactMatches": true
+    }
+  ],
+  "glossary": {
+    "Session": "Factory产品会话保留Session；身份认证session按上下文译为登录会话，不盲目替换。",
+    "Spec": "产品Spec保留；普通协议specification可译规范，不能套用产品词。",
+    "Mission / Task": "Mission是多代理长期任务，Task是单项任务；保持明确上下文，不把两者当同一枚举。",
+    "token": "模型计量用token；access token等身份认证内容译为访问令牌。",
+    "credit": "FSC消耗数/预付credit用积分；额度上限、余额、抵扣按语义区分。",
+    "Commit": "Git操作为提交；账单承诺量按账单上下文翻译。",
+    "View": "应用菜单/保存布局为视图；查看内容的动作可译查看。",
+    "Window": "应用窗口为窗口；统计时间窗口为时间范围。",
+    "Required": "模型组织策略为强制；表单字段/工具参数为必填。",
+    "Pin": "图标名为图钉；固定面板/置顶Session按动作分别翻译。",
+    "fork": "同一Session操作统一派生；/fork等命令标识不改。",
+    "Country names": "显示名可按中文区域名本地化；ISO代码、提交值不改。",
+    "Dynamic content": "模型/工具名、仓库/用户内容、URL、路径、命令和代码原文保留，不以英文存在判漏译。",
+    "Triage": "工程事项用分流/分类处理；代理角色统一分流代理，不使用医疗场景的分诊。",
+    "课程提示词关键词": "HOl合并当前locale与英文词表；中文词表需本地化，保留英文交由已有合并逻辑。该配置不得误当不可翻译代码。"
+  },
+  "contextRules": [
+    {
+      "key": "settings.constants.creditsDataSources.onPrem.label",
+      "source": "Prem",
+      "expected": "私有部署（Prem）"
+    },
+    {
+      "key": "settings.settingsSearch.general.deployment.prem",
+      "source": "Prem",
+      "expected": "私有部署（Prem）"
+    },
+    {
+      "key": "settings.usageSources.prem",
+      "source": "Prem",
+      "expected": "私有部署（Prem）"
+    },
+    {
+      "key": "settings.soundsSection.focusMode",
+      "source": "Focus mode",
+      "expected": "声音播放条件"
+    },
+    {
+      "key": "settings.settingsSearch.general.sounds.focusMode",
+      "source": "Focus mode",
+      "expected": "声音播放条件"
+    },
+    {
+      "key": "components.chat.gitActions.label.commit",
+      "source": "Commit",
+      "expected": "提交"
+    },
+    {
+      "key": "components.settings.modelAccessTable.required",
+      "source": "Required",
+      "expected": "强制"
+    },
+    {
+      "key": "components.settings.bulkUserLimitsConstants.status.updated",
+      "source": "Updated",
+      "expected": "已更新"
+    },
+    {
+      "key": "components.settings.networkPolicySection.whenEnabledAllApiAndApplication",
+      "source": "When enabled, all API and application requests must originate from an allowed IP address. This applies to CLI, web app, and API key usage.",
+      "expected": "启用后，所有 API 和应用请求都必须来自允许的 IP 地址。适用于 CLI、网页应用以及使用 API 密钥发起的请求。"
+    },
+    {
+      "key": "components.chat.sessionStatus.creditsApprox",
+      "source": "{{value}} credits (approx)",
+      "expected": "约 {{value}} 积分"
+    },
+    {
+      "key": "components.chat.pageHeader.applicationMenu.view",
+      "source": "View",
+      "expected": "视图"
+    },
+    {
+      "key": "components.chat.renameSessionDialog.failedToForkSession",
+      "source": "Failed to fork session. Please try again.",
+      "expected": "派生 Session 失败。请重试。"
+    },
+    {
+      "key": "components.chat.renameSessionDialog.errors.forkSessionFailed",
+      "source": "Failed to fork session. Please try again.",
+      "expected": "派生 Session 失败。请重试。"
+    },
+    {
+      "key": "components.layout.sessionListV2ViewDialog.icons.pin",
+      "source": "Pin",
+      "expected": "图钉"
+    },
+    {
+      "key": "sessions.tokenLimitsModal.creditLimits",
+      "source": "Credit Limits",
+      "expected": "积分上限"
+    },
+    {
+      "key": "sessions.tokenLimitsModal.failedToLoadCreditLimits",
+      "source": "Failed to load credit limits",
+      "expected": "加载积分上限失败"
+    },
+    {
+      "key": "sessions.tokenLimitsModal.yourIncludedCreditAllowanceResetsAutomatically",
+      "source": "Your included credit allowance. Resets automatically based on rolling windows.",
+      "expected": "套餐内含的积分额度，按滚动时间窗口自动重置。"
+    },
+    {
+      "key": "sessions.tokenLimitsModal.continueWithPrepaidCredits",
+      "source": "Continue with your current model using prepaid credits.",
+      "expected": "使用预付积分继续使用当前模型。"
+    },
+    {
+      "key": "sessions.tokenLimitsModal.unusedExtraUsageCredits",
+      "source": "You have prepaid credits that aren't being used. Enable Extra Usage to keep going with your current model.",
+      "expected": "你有尚未使用的预付积分。启用额外用量即可继续使用当前模型。"
+    },
+    {
+      "key": "automations.automationCirepoStatus.deletePrOpen",
+      "source": "Delete PR open",
+      "expected": "用于删除自动化的 PR 未关闭"
+    },
+    {
+      "key": "automations.automationCirepoStatus.prOpen",
+      "source": "PR open",
+      "expected": "PR 未关闭"
+    },
+    {
+      "key": "components.softwareFactoryLayout.workstreamDataFlow.stages.steward.title",
+      "source": "Steward",
+      "expected": "维护代理"
+    },
+    {
+      "key": "components.softwareFactory.softwareFactoryWelcomeIllustration.automationStages.stewards",
+      "source": "Stewards",
+      "expected": "维护代理"
+    },
+    {
+      "key": "analytics2.adoptionDeltas.noChange",
+      "source": "No change vs {{days}}d",
+      "expected": "较上一 {{days}} 天时段无变化"
+    },
+    {
+      "key": "analytics2.adoptionDeltas.percent",
+      "source": "{{value}}% vs {{days}}d",
+      "expected": "较上一 {{days}} 天时段 {{value}}%"
+    },
+    {
+      "key": "analytics2.adoptionDeltas.points",
+      "source": "{{value}} pts vs {{days}}d",
+      "expected": "较上一 {{days}} 天时段 {{value}} 个百分点"
+    },
+    {
+      "key": "analytics2.toolUsageUsers.description",
+      "source": "All users with recorded {{usage}} usage in the selected range, sorted by invocations. Expand a user to see their own top {{limit}} {{plural}}. User totals include every item.",
+      "expected": "所选范围内记录过 {{usage}} 使用的所有用户，按调用次数排序。展开用户可查看其使用最多的 {{limit}} 个{{plural}}。每位用户的合计涵盖所有条目。"
+    }
+  ]
+}

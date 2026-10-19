@@ -1,0 +1,464 @@
+{
+  "pullRequestCommentChatButton": {
+    "addToChat": "添加到聊天"
+  },
+  "pullRequestConnectGithub": {
+    "connectGithubToReviewCodeHere": "连接 GitHub 以在此审查代码",
+    "changesLoadWithYourOwnGithub": "使用你自己的 GitHub 访问权限加载变更，让组织中的每个人都能快速审查。",
+    "connectGithub": "连接 GitHub"
+  },
+  "pullRequestInbox": {
+    "recentlyViewed": {
+      "title": "最近查看"
+    },
+    "reviewRequested": {
+      "title": "需要你审查",
+      "emptyMessage": "没有等待你审查的拉取请求。"
+    },
+    "teamReviewRequested": {
+      "title": "需要你的团队审查",
+      "emptyMessage": "没有等待你的团队审查的拉取请求。"
+    },
+    "authoredGroups": {
+      "draft": "你的草稿",
+      "waiting": "等待审查或检查",
+      "needsAction": "需要处理",
+      "readyToMerge": "等待合并",
+      "statusPending": "正在检查状态",
+      "statusUnavailable": "状态不可用"
+    },
+    "loadingSection": "正在加载{{title}}",
+    "sectionLoadFailed": "无法加载拉取请求。",
+    "loadingYourPullRequests": "正在加载你的拉取请求",
+    "yourPullRequestsLoadFailed": "无法加载你的拉取请求。",
+    "yourPullRequestsLoadFailedWithReason": "无法加载你的拉取请求。{{message}}",
+    "noOpenPullRequests": "你没有未关闭的拉取请求。",
+    "onlyMostRecentListed": "仅列出你最近更新的拉取请求。",
+    "connectGithubTitle": "连接 GitHub 以查看你的拉取请求",
+    "connectGithubDescription": "使用你自己的 GitHub 访问权限读取审查请求和拉取请求。",
+    "connectHostAccount": "连接 {{host}} 上的账号以查看你的拉取请求。",
+    "loadingCodeHosts": "正在加载代码托管平台"
+  },
+  "pullRequestSlicedDiff": {
+    "noChangedLinesInTheCurrent": "当前差异中没有与此层匹配的变更行。",
+    "viewedProgress": "已查看 {{viewed}}/{{total}} 项",
+    "fileCount_one": "{{count}} 个文件",
+    "fileCount_other": "{{count}} 个文件"
+  },
+  "pullRequestLayerManifestGeneration": {
+    "walkthroughCompleted": "代码导览已完成",
+    "walkthroughOutcomeUnavailable": "代码导览结果不可用",
+    "walkthroughPreparationInterrupted": "代码导览准备已中断",
+    "activity": {
+      "waitingForAgent": "等待代理",
+      "thinking": "思考中",
+      "streaming": "流式输出中",
+      "executing": "执行中",
+      "waitingForApproval": "等待批准",
+      "compactingHistory": "正在压缩历史记录"
+    },
+    "updatingWalkthrough": "正在更新代码导览",
+    "generatingWalkthrough": "正在生成代码导览",
+    "sessionLoadFailedCheckingOutcome": "无法加载代码导览 Session，正在检查其结果。",
+    "progressLoadFailed": "无法加载代码导览进度。",
+    "reconnecting": "正在重新连接",
+    "preparingSession": "正在准备 Session…",
+    "connectionUnavailable": "连接不可用",
+    "checkingResult": "正在检查结果",
+    "loadingWalkthrough": "正在加载代码导览",
+    "walkthroughSaved": "代码导览已保存。",
+    "resultNotConfirmed": "无法确认结果。",
+    "canStartNewAttempt": "可以重新尝试。之前的代码导览会保留。",
+    "anotherGenerationActive": "另一个生成过程正在进行。",
+    "sessionNotStarted": "生成 Session 未启动。",
+    "preparing": "准备中",
+    "preparingFreshSession": "正在准备新的生成 Session",
+    "generationTimedOut": "代码导览生成超时",
+    "generationReachedTimeLimit": "生成已达到时间上限。",
+    "generationFailed": "代码导览生成失败",
+    "runDidNotComplete": "此次运行未成功完成。",
+    "generationCancelled": "代码导览生成已取消",
+    "generationSessionCancelled": "生成 Session 已取消。",
+    "generationMayStillBeActive": "生成可能仍在进行，正在检查是否已有保存的结果。",
+    "newAttemptNotAvailableYet": "暂时无法重新尝试，正在自动再次检查。",
+    "statusTemporarilyUnavailable": "状态暂时不可用，正在自动再次检查。"
+  },
+  "pullRequestLayeredDiff": {
+    "diagram": "图示",
+    "viewedSection": "已查看{{title}}",
+    "viewedProgress": "已查看 {{viewed}}/{{total}} 项",
+    "noChangedLinesInTheCurrent": "当前差异中没有与此层匹配的变更行。",
+    "overview": "概览",
+    "howItAllFitsTogether": "各部分如何协同",
+    "collapseSection": "收起{{title}}",
+    "expandSection": "展开{{title}}",
+    "unassignedChangesSummary": "未分配到代码导览章节的变更。",
+    "unassignedChanges": "未分配的变更",
+    "fileCount_one": "{{count}} 个文件",
+    "fileCount_other": "{{count}} 个文件"
+  },
+  "pullRequestMoreActions": {
+    "morePullRequestActions": "更多拉取请求操作",
+    "stateAction": {
+      "readyForReview": {
+        "failure": "未能将拉取请求设为可审查。",
+        "label": "设为可审查",
+        "success": "拉取请求已设为可审查。"
+      },
+      "convertToDraft": {
+        "failure": "未能将拉取请求转为草稿。",
+        "label": "转为草稿",
+        "success": "拉取请求已转为草稿。"
+      },
+      "close": {
+        "failure": "未能关闭拉取请求。",
+        "label": "关闭拉取请求",
+        "success": "拉取请求已关闭。"
+      },
+      "reopen": {
+        "failure": "未能重新打开拉取请求。",
+        "label": "重新打开拉取请求",
+        "success": "拉取请求已重新打开。"
+      }
+    },
+    "stateChangesGithubOnly": "此 Git 提供商不支持更改拉取请求状态。",
+    "connectGithubToChangeState": "请在设置中连接 Git 提供商账号，以更改拉取请求状态。",
+    "copyLink": "复制链接",
+    "copyProviderLink": "复制 {{provider}} 链接",
+    "failedToCopyToClipboard": "复制到剪贴板失败。请检查浏览器权限。",
+    "linkCopied": "链接已复制到剪贴板",
+    "providerLinkCopied": "{{provider}} 链接已复制到剪贴板"
+  },
+  "pullRequestOmittedFiles": {
+    "previewUnavailable": "预览不可用",
+    "imageAlt": "{{path}}的{{side}}版本",
+    "side": {
+      "before": "变更前",
+      "after": "变更后"
+    },
+    "changeKind": {
+      "added": "已添加",
+      "deleted": "已删除",
+      "modified": "已修改",
+      "renamed": "已重命名"
+    }
+  },
+  "pullRequestParticipants": {
+    "mergeStatus": "合并状态",
+    "reviews": "审查",
+    "noReviewsYet": "暂无审查",
+    "requestedReviewers": "已请求的审查者",
+    "requestReview": "请求审查",
+    "noReviewsRequested": "尚未请求审查。",
+    "reviewCounts": {
+      "bugs_one": "{{count}} 个缺陷",
+      "bugs_other": "{{count}} 个缺陷",
+      "security_one": "{{count}} 个安全问题",
+      "security_other": "{{count}} 个安全问题",
+      "comments_one": "{{count}} 条评论",
+      "comments_other": "{{count}} 条评论"
+    },
+    "commentsFrom": "{{login}}的评论",
+    "reviewFrom": "{{login}}的审查",
+    "openComments": "未解决评论",
+    "openCommentsSummary": "未解决评论：{{counts}}",
+    "noOpenComments": "没有未解决评论",
+    "commentGroups": {
+      "bugs": "缺陷",
+      "security": "安全",
+      "vulnerabilities": "漏洞",
+      "comments": "评论",
+      "resolved": "已解决",
+      "outdated": "已过时",
+      "mainConversation": "主对话"
+    },
+    "noCommentText": "无文本",
+    "collapseSection": "收起{{section}}",
+    "expandSection": "展开{{section}}",
+    "labels": "标签",
+    "noLabels": "无标签",
+    "reviewerState": {
+      "approved": "已批准",
+      "changesRequested": "已要求修改",
+      "requested": "已请求审查",
+      "commented": "已评论",
+      "dismissed": "审查已撤销"
+    },
+    "picker": {
+      "reviewer": {
+        "notAdded": "未能添加审查者。",
+        "add": "添加审查者",
+        "matchingSearch": "符合搜索条件的审查者"
+      },
+      "assignee": {
+        "notAdded": "未能添加负责人。",
+        "add": "添加负责人",
+        "matchingSearch": "符合搜索条件的负责人"
+      },
+      "label": {
+        "notAdded": "未能添加标签。",
+        "add": "添加标签",
+        "matchingSearch": "符合搜索条件的标签"
+      }
+    },
+    "checkingGithubAccess": "正在检查你的 Git 提供商访问权限…",
+    "addGithubOnly": "此 Git 提供商不支持请求审查或添加标签。",
+    "connectGithubToAdd": "请在设置中连接 Git 提供商账号，以请求审查和添加标签。",
+    "shownGithubOnly": "此 Git 提供商不支持显示审查或标签详情。",
+    "participantsLoadFailed": "无法加载审查和标签。请刷新后重试。"
+  },
+  "pullRequestParticipantSelect": {
+    "reviewers": {
+      "loading": "正在加载审查者…",
+      "searching": "正在搜索审查者…",
+      "noMatching": "没有匹配的审查者",
+      "loadingMore": "正在加载更多审查者",
+      "loadingMoreRow": "正在加载更多审查者…",
+      "searchPlaceholder": "搜索审查者…",
+      "loadFailed": "无法加载审查者。",
+      "loadMoreFailed": "无法加载更多审查者。",
+      "searchMoreFailed": "无法搜索更多审查者。"
+    },
+    "assignees": {
+      "loading": "正在加载负责人…",
+      "searching": "正在搜索负责人…",
+      "noMatching": "没有匹配的负责人",
+      "loadingMore": "正在加载更多负责人",
+      "loadingMoreRow": "正在加载更多负责人…",
+      "searchPlaceholder": "搜索负责人…",
+      "loadFailed": "无法加载负责人。",
+      "loadMoreFailed": "无法加载更多负责人。",
+      "searchMoreFailed": "无法搜索更多负责人。"
+    },
+    "labels": {
+      "loading": "正在加载标签…",
+      "searching": "正在搜索标签…",
+      "noMatching": "没有匹配的标签",
+      "loadingMore": "正在加载更多标签",
+      "loadingMoreRow": "正在加载更多标签…",
+      "searchPlaceholder": "搜索标签…",
+      "loadFailed": "无法加载标签。",
+      "loadMoreFailed": "无法加载更多标签。",
+      "searchMoreFailed": "无法搜索更多标签。"
+    },
+    "people": {
+      "loading": "正在加载人员…",
+      "searching": "正在搜索人员…",
+      "noMatching": "没有匹配的人员",
+      "loadingMore": "正在加载更多人员",
+      "loadingMoreRow": "正在加载更多人员…",
+      "searchPlaceholder": "搜索人员…",
+      "loadFailed": "无法加载人员。",
+      "loadMoreFailed": "无法加载更多人员。",
+      "searchMoreFailed": "无法搜索更多人员。"
+    }
+  },
+  "pullRequestRepositoryFilter": {
+    "allRepositories": "所有仓库",
+    "repository": "仓库",
+    "noMatching": "没有匹配的仓库",
+    "searchPlaceholder": "搜索仓库…"
+  },
+  "pullRequestReviewChatSession": {
+    "tryAgain": "重试",
+    "preparingChat": "正在准备拉取请求聊天…",
+    "loadingChat": "正在加载拉取请求聊天…"
+  },
+  "pullRequestReviewFloatingComposer": {
+    "minimize": "最小化聊天输入框"
+  },
+  "pullRequestReviewWorkspace": {
+    "thePullRequestDiffCouldNot": "无法加载拉取请求差异",
+    "theProvidersChangedFileListMay": "提供商的变更文件列表可能不完整。请打开拉取请求以查看所有文件。",
+    "loadingWalkthrough": "正在加载代码导览…",
+    "diffLayers": "差异层",
+    "noPullRequestYet": "尚无拉取请求",
+    "pullRequestView": "拉取请求视图",
+    "thisPullRequestChangedOnThe": "自上次刷新后，此拉取请求在提供商平台上发生了变化。",
+    "changesDetected": "检测到变更",
+    "refreshPullRequestData": "刷新拉取请求数据",
+    "noCommentsOnThisPullRequest": "此拉取请求暂无评论。",
+    "view": {
+      "summary": "对话",
+      "changes": "变更",
+      "validation": "验证"
+    },
+    "unknown": "未知",
+    "branchName": "分支名称",
+    "summaryLoadFailed": "无法加载拉取请求摘要。请刷新后重试。",
+    "noAiSummary": "未提供 AI 摘要。",
+    "reactionNotSaved": "未能保存表情回应。",
+    "commentNotPosted": "未能发布评论。",
+    "allChanges": "所有变更",
+    "walkthroughNotUpdated": "无法更新代码导览。",
+    "walkthroughNotGenerated": "无法生成代码导览。",
+    "walkthroughResultNotConfirmed": "无法确认代码导览结果。",
+    "refreshToRetry": "请刷新拉取请求后重试。",
+    "validationSection": "验证分区",
+    "validationView": {
+      "summary": "摘要",
+      "details": "详情"
+    },
+    "sidebarView": "侧边栏视图",
+    "resizeLayerSidebar": "调整侧边栏大小",
+    "sidebarMode": {
+      "walkthrough": "代码导览",
+      "files": "文件"
+    },
+    "generateWalkthrough": "生成代码导览",
+    "updateWalkthrough": "更新代码导览",
+    "updateWalkthroughTooltip": "自上次生成代码导览后，有部分内容发生变更。",
+    "codeFromEarlierRevision": "来自较早修订版本的代码。",
+    "codePreviewUnavailable": "代码预览不可用。",
+    "commentOnEarlierRevision": "此评论针对较早的修订版本。",
+    "lineNotInCurrentDiff": "此行不在当前差异中。",
+    "goToLocationInDiff": "前往差异中的{{location}}",
+    "goToLocation": "前往{{location}}",
+    "collapseThreadAt": "收起{{location}}处的对话串",
+    "collapseCommentAt": "收起{{location}}处的评论",
+    "expandThreadAt": "展开{{location}}处的对话串",
+    "expandCommentAt": "展开{{location}}处的评论",
+    "resolveThread": "标为已解决",
+    "unresolveThread": "标为未解决",
+    "threadResolutionNotSaved": "无法更新此审查对话串。请刷新后重试。",
+    "replyToThreadAt": "回复{{location}}处的对话串",
+    "threadReplyNotSaved": "未能发布你的回复。请刷新后重试。",
+    "reviewSuccess": {
+      "approve": "已提交批准。",
+      "comment": "已提交审查评论。",
+      "requestChanges": "已要求修改。",
+      "requestChangesDiscussion": "已发布审查评论。"
+    },
+    "mergeReviewUnsupportedProvider": "此提供商不支持合并和审查。",
+    "connectProviderToMergeOrReview": "请在设置中连接提供商账号，以自己的身份合并或审查。",
+    "pullRequestMerged": "拉取请求已合并。",
+    "pullRequestNotMerged": "未能合并拉取请求。",
+    "reviewNotSubmitted": "未能提交审查。",
+    "pullRequestNotRefreshed": "无法刷新拉取请求。",
+    "linkedPullRequestRequired": "需要关联拉取请求才能查看文件。",
+    "inlineCommentsLoadFailed": "无法加载行内评论。请刷新后重试。",
+    "commentsLoadFailed": "无法加载评论。请刷新后重试。",
+    "commentKinds": {
+      "bug": "缺陷",
+      "securityIssue": "安全问题",
+      "comment": "评论"
+    },
+    "commentNotDeleted": "未能删除评论。",
+    "commentNotSaved": "未能保存评论。",
+    "pendingReviewDiscarded": "已放弃待提交审查。",
+    "pendingReviewNotDiscarded": "未能放弃待提交审查。"
+  },
+  "pullRequestRowMenu": {
+    "openInNewTab": "在新标签页中打开",
+    "openOnProvider": "在 {{provider}} 上打开",
+    "openInCodeReview": "在代码审查中打开",
+    "copyLink": "复制链接",
+    "copyProviderLink": "复制 {{provider}} 链接",
+    "copiedLink": "链接",
+    "copiedProviderLink": "{{provider}} 链接",
+    "openInSidebar": "在侧边栏中打开",
+    "on": "开启",
+    "off": "关闭"
+  },
+  "pullRequestSearch": {
+    "searchFailed": "无法搜索拉取请求。",
+    "noOtherLoadedMatches": "目前已加载的其他结果均不符合此搜索条件。",
+    "noLoadedMatches": "目前已加载的结果均不符合此搜索条件。",
+    "noOtherMatches": "没有其他符合此搜索条件的拉取请求。",
+    "noMatches": "没有符合此搜索条件的拉取请求。",
+    "inboxMatchesTitle": "位于你的收件箱",
+    "searchResultsTitle": "所有拉取请求",
+    "searching": "正在搜索拉取请求",
+    "connectGithubTitle": "连接 GitHub 以搜索拉取请求",
+    "connectGithubDescription": "连接 GitHub 以搜索拉取请求。"
+  },
+  "pullRequestSearchFilters": {
+    "filters": "筛选条件",
+    "repository": "仓库",
+    "status": "状态",
+    "statuses": {
+      "open": "未关闭",
+      "draft": "草稿",
+      "closed": "已关闭",
+      "merged": "已合并",
+      "all": "全部"
+    },
+    "author": "作者",
+    "reviewer": "审查者",
+    "assignee": "负责人",
+    "label": "标签",
+    "anyone": "任何人",
+    "anyLabel": "任意标签",
+    "chooseRepositoryHints": {
+      "author": "选择仓库以按作者筛选",
+      "reviewer": "选择仓库以按审查者筛选",
+      "assignee": "选择仓库以按负责人筛选",
+      "label": "选择仓库以按标签筛选"
+    },
+    "clearFilters": "清除筛选条件"
+  },
+  "pullRequestValidation": {
+    "noQaDetailsWereReportedFor": "此分区未报告 QA 详情。",
+    "qaReportSections": "QA 报告章节",
+    "noAutomatedQaCommentsYet": "暂无自动 QA 评论。",
+    "noQaDetailsReported": "未报告 QA 详情。",
+    "noQaSummaryReported": "未报告 QA 摘要。",
+    "collapseCommentBy": "收起 {{author}} 的评论",
+    "expandCommentBy": "展开 {{author}} 的评论",
+    "reply": "回复",
+    "replyWithQuoteTo": "引用评论回复 @{{author}}",
+    "replyToCommentBy": "回复 {{author}} 的评论",
+    "comment": "评论",
+    "newCommentOnPullRequest": "对此拉取请求发表新评论",
+    "writeComment": "撰写评论…",
+    "sendComment": "发送评论",
+    "qaCommentsLoadFailed": "无法加载 QA 评论。请刷新后重试。",
+    "checksLoadFailed": "无法加载检查。请刷新后重试。",
+    "emptyCommentBody": "未提供评论正文。"
+  },
+  "review": {
+    "codeReview": "代码审查",
+    "searchOrPasteALink": "搜索或粘贴拉取请求链接",
+    "search": "搜索",
+    "pullRequestChat": "拉取请求聊天",
+    "codeHostsLoadFailed": "无法加载代码托管平台。",
+    "noCodeHostConnected": "尚未连接可列出拉取请求的代码托管平台。粘贴拉取请求链接即可打开。"
+  },
+  "pullRequestDiffExpansion": {
+    "contextExpansionFailed": "无法展开上下文。文件内容必须可用，且与此差异匹配。请重试。"
+  },
+  "pullRequestReviewComputer": {
+    "couldNotBePrepared": "无法准备聊天计算机。",
+    "tookTooLongToConnect": "聊天计算机连接超时。",
+    "loading": "正在加载聊天计算机…",
+    "enterSupportedUrl": "请输入支持的 GitHub 或 GitLab 拉取请求 URL。",
+    "couldNotBeResolved": "无法解析聊天计算机。",
+    "noComputerCouldConnect": "没有可用的审查计算机能够连接。请重试以刷新环境。",
+    "noTemplateIncludesRepository": "没有已构建的环境包含此拉取请求仓库。",
+    "noTemplateAvailable": "没有可用于拉取请求审查的已构建环境。",
+    "connectingToAnother": "正在连接另一台聊天计算机…",
+    "preparingStep": "正在准备聊天计算机 · {{step}}",
+    "preparing": "正在准备聊天计算机…",
+    "computerMissingRepository": "{{name}} 不包含此拉取请求仓库。",
+    "ready": "聊天计算机已就绪。",
+    "connecting": "正在连接聊天计算机…"
+  },
+  "walkthroughReadError": {
+    "loadFailed": "无法加载代码导览。请刷新后重试。",
+    "noPullRequest": "无法找到拉取请求。",
+    "notConnected": "连接 GitHub 以加载代码导览。",
+    "providerNotConfigured": "连接 Git 提供商以加载代码导览。",
+    "unsupportedProvider": "此 Git 提供商不支持代码导览。",
+    "providerError": "因无法加载拉取请求差异，代码导览不可用。请刷新后重试。"
+  },
+  "commentChip": {
+    "conversation": "对话",
+    "tooltip": {
+      "byAuthorOnLocation": "{{author}}在{{location}}处的评论",
+      "onLocation": "{{location}}处的评论",
+      "byAuthorInConversation": "{{author}}在对话中的评论",
+      "inConversation": "对话中的评论",
+      "outdated": "{{tooltip}}（已过时）"
+    }
+  }
+}

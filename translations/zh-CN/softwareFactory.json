@@ -387,7 +387,7 @@
     "changeCompleted": "变更已完成",
     "allPlannedWorkCompleted": "所有计划工作均已完成。",
     "activity": "活动",
-    "theTriageRecordsForThisChange": "此变更的分诊记录加载失败，因此时间线可能缺少修订、终止或拆分记录。",
+    "theTriageRecordsForThisChange": "此变更的分流记录加载失败，因此时间线可能缺少修订、终止或拆分记录。",
     "overview": "概览",
     "retries": "重试次数",
     "noDescriptionWasProvided": "未提供描述。",
@@ -445,7 +445,7 @@
     "createdFromSignals_one": "根据 {{count}} 个关联信号创建。",
     "createdFromSignals_other": "根据 {{count}} 个关联信号创建。",
     "actionsForChangeOpened": "变更创建操作",
-    "openTriageSession": "打开分诊 Session",
+    "openTriageSession": "打开分流 Session",
     "reviewTitle": {
       "changesRequested": "请求修改",
       "changeDeclined": "变更已拒绝",
@@ -1336,12 +1336,12 @@
     "statusDuplicate": "重复",
     "statusIgnored": "已忽略",
     "statusNew": "新增",
-    "statusTriaged": "已分诊",
+    "statusTriaged": "已分流",
     "statusUnknown": "未知",
     "viewAllSignals": "所有信号",
     "viewByStatus": "按状态",
     "viewNew": "新增",
-    "viewTriaged": "已分诊",
+    "viewTriaged": "已分流",
     "workstream": "工作流"
   },
   "softwareFactoryTeamDetail": {
@@ -1520,7 +1520,7 @@
   },
   "softwareFactoryWorkstreamDetailUtils": {
     "stages": {
-      "triage": "分诊",
+      "triage": "分流",
       "planning": "规划",
       "building": "构建中",
       "reviewing": "审查中",
@@ -1590,14 +1590,14 @@
   },
   "softwareFactoryWorkstreamTaskViewUtils": {
     "agentName": {
-      "triage": "分诊代理",
+      "triage": "分流代理",
       "worker": "工作代理",
       "steward": "维护代理",
       "intake": "接入代理"
     },
     "stage": {
       "steward": "维护代理",
-      "triage": "分诊",
+      "triage": "分流",
       "worker": "工作代理",
       "done": "完成"
     },
@@ -1617,8 +1617,8 @@
     "failedCallout": {
       "retryOrDiscard": "重试，或丢弃。",
       "retryOrDiscardTask": "重试，或丢弃此任务。",
-      "specStopped": "Spec 完成前，分诊已停止",
-      "specTitle": "分诊无法编写 Spec",
+      "specStopped": "Spec 完成前，分流已停止",
+      "specTitle": "分流无法编写 Spec",
       "prStopped": "PR 创建前，工作代理已停止",
       "prTitle": "工作代理无法创建 PR",
       "reviseStopped": "PR 检查通过前，维护代理已停止",
@@ -1652,9 +1652,9 @@
     "callout": {
       "failedBody": "{{reason}}。{{next}}",
       "stewardCiFailed": "维护代理无法让 CI 通过",
-      "approveTaskBodyWithSource": "来自 {{source}} 的{{reports}}。批准任务后，分诊将编写 Spec。批准前不会运行。",
-      "approveTaskBody": "批准任务后，分诊将编写 Spec。批准前不会运行。",
-      "approveTaskTitle": "分诊希望接手此项",
+      "approveTaskBodyWithSource": "来自 {{source}} 的{{reports}}。批准任务后，分流将编写 Spec。批准前不会运行。",
+      "approveTaskBody": "批准任务后，分流将编写 Spec。批准前不会运行。",
+      "approveTaskTitle": "分流希望接手此项",
       "approveSpecBody": "批准后，它会排队等待下一个空闲工作代理创建 PR。合并前仍需要你审查 PR。",
       "approveSpecTitle": "Spec 已准备好等待你批准",
       "approveSpecRevisionTitle": "Spec（修订版 {{revision}}）已准备好等待你批准",
@@ -1690,9 +1690,9 @@
       "pullRequest": "拉取请求"
     },
     "sections": {
-      "whyFlagged": "分诊标记此项的原因",
+      "whyFlagged": "分流标记此项的原因",
       "steps": {
-        "specLead": "分诊编写 Spec",
+        "specLead": "分流编写 Spec",
         "specDetail": "并附复现步骤。",
         "approveSpec": "你批准 Spec。",
         "prLead": "工作代理创建 PR",
@@ -1727,7 +1727,7 @@
     },
     "movedTo": "已移到{{section}}",
     "outcome": {
-      "sentToTriage": "已发送至分诊",
+      "sentToTriage": "已发送至分流",
       "sentToSteward": "已发送给维护代理",
       "merged": "已合并",
       "discarded": "已丢弃",
@@ -1818,7 +1818,7 @@
       },
       "triage": {
         "detail": "对信号去重并分组成可执行的变更，避免把噪声转化为工作。",
-        "label": "分诊"
+        "label": "分流"
       },
       "watchSignals": {
         "detail": "Droid 轮询你连接的来源（GitHub、Slack、CI、日志），将新事件转化为信号。",
@@ -1827,7 +1827,7 @@
     },
     "workstreamConfirm": {
       "activate": {
-        "description": "激活会启用此工作流的接入、分诊自动化及工作代理池。",
+        "description": "激活会启用此工作流的接入、分流自动化及工作代理池。",
         "label": "激活",
         "title": "激活工作流？"
       },
@@ -1852,7 +1852,7 @@
         "description": "在每个门禁暂停，由你批准每个拟议变更、每份 Spec 和每个 PR。"
       },
       "level2": {
-        "description": "分诊自主接受变更。工作代理启动前由你批准每份 Spec，并批准每个 PR。"
+        "description": "分流自主接受变更。工作代理启动前由你批准每份 Spec，并批准每个 PR。"
       },
       "level3": {
         "description": "Spec 直接交给工作代理。每个 PR 合并前由你审查。"
@@ -1863,7 +1863,7 @@
     },
     "stageLabels": {
       "intake": "接入",
-      "triage": "分诊",
+      "triage": "分流",
       "worker": "工作代理",
       "steward": "维护代理",
       "health": "健康状况"
@@ -1871,7 +1871,7 @@
     "openWorkCaps": {
       "changes": {
         "title": "变更",
-        "description": "已接受但尚未合并。达到上限时，分诊将停止创建变更。"
+        "description": "已接受但尚未合并。达到上限时，分流将停止创建变更。"
       },
       "specs": {
         "title": "Spec",
@@ -2030,7 +2030,7 @@
         "building": "正在准备待审查的信号",
         "buildingStarted": "已开始准备待审查的信号",
         "done": "信号已确认",
-        "doneContinue": "信号已确认，请在聊天中继续测试信号分诊。",
+        "doneContinue": "信号已确认，请在聊天中继续测试信号分流。",
         "review": "在聊天中审查信号：确认信号或请求修改。",
         "running": "正在准备待审查的信号",
         "runningStarted": "已开始准备待审查的信号"
@@ -2054,13 +2054,13 @@
         "runningStarted": "已开始配置维护代理"
       },
       "triage": {
-        "building": "正在准备信号分诊",
-        "buildingStarted": "已开始准备信号分诊",
-        "done": "分诊试运行已完成",
-        "doneContinue": "分诊试运行已完成，请在聊天中继续审查生成的变更。",
-        "review": "在聊天中审查分诊试运行：确认结果或请求修改。",
-        "running": "正在测试信号分诊",
-        "runningStarted": "已开始测试信号分诊"
+        "building": "正在准备信号分流",
+        "buildingStarted": "已开始准备信号分流",
+        "done": "分流试运行已完成",
+        "doneContinue": "分流试运行已完成，请在聊天中继续审查生成的变更。",
+        "review": "在聊天中审查分流试运行：确认结果或请求修改。",
+        "running": "正在测试信号分流",
+        "runningStarted": "已开始测试信号分流"
       },
       "worker": {
         "building": "正在准备调查代理",
@@ -2231,7 +2231,7 @@
       "title": "控制",
       "description": "代理等待你处理前可以累积多少工作。",
       "percentOfMonthlyFsc": "每月 FSC 的 {{percent}}%",
-      "openWorkLimitsHelp": "达到上限时，前一阶段会等待：分诊停止创建变更，工作代理停止开始 Spec 或创建 PR。不会丢弃任何内容。将上限逐步调到“无”即可解除限制。",
+      "openWorkLimitsHelp": "达到上限时，前一阶段会等待：分流停止创建变更，工作代理停止开始 Spec 或创建 PR。不会丢弃任何内容。将上限逐步调到“无”即可解除限制。",
       "openWorkLimits": "未完成工作上限",
       "setOnServiceAccount": "在服务账号上设置",
       "setOnDriAccount": "在直接负责人账号上设置",

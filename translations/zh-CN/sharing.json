@@ -1,0 +1,18 @@
+{
+  "repositoryArtifactAccessNudge": {
+    "privateShareLinksRequireRepoAccess": "私有共享链接需要仓库访问权限。如果无法打开此 Wiki 或就绪度报告，请在 Factory 中连接源代码管理账号，以便我们验证你的仓库访问权限。",
+    "organizationSharingUsesYourFactoryOrg": "组织共享使用你的 Factory 组织访问权限。仓库已由组织源代码管理集成覆盖时，此 Factory 组织中的任何人均可打开组织链接。",
+    "privateWikisAndReadinessReportsAre": "私有 Wiki 和就绪度报告根据仓库访问权限显示。请连接源代码管理账号，以便 Factory 验证权限，并显示你有权访问的仓库中的成果。",
+    "manageSourceControl": "管理源代码管理集成"
+  },
+  "shareRepositoryArtifactModal": {
+    "visibility": "可见范围",
+    "usersWithAccessToThisRepository": "有权访问此仓库的用户",
+    "private": "私有",
+    "anyoneInYourOrganizationWithThe": "组织中拥有链接的任何人",
+    "organization": "组织",
+    "shareLink": "共享链接",
+    "shareWiki": "共享 Wiki",
+    "shareReadinessReport": "共享就绪度报告"
+  }
+}

@@ -142,6 +142,17 @@ export function extractEnglish(source) {
   return resources;
 }
 
+export function extractDesktopEnglish(source) {
+  const startMarker = 'Sb={checkForUpdates:"Check for Updates..."';
+  const endMarker = ',Db={checkForUpdates:"Buscar actualizaciones..."';
+  const start = source.indexOf(startMarker), end = source.indexOf(endMarker, start);
+  if (start < 0 || end < 0 || source.indexOf(startMarker, start + 1) >= 0 || source.indexOf(endMarker, end + 1) >= 0) throw new Error('Unsupported desktop resource declaration layout');
+  const desktop = parseDataDeclarations(source.slice(start, end) + ';').get('$b');
+  const count = tree => tree && typeof tree === 'object' ? Object.values(tree).reduce((sum, child) => sum + count(child), 0) : 1;
+  if (!desktop?.menu || !desktop?.fileDialogs || count(desktop) !== 85) throw new Error('Incomplete desktop resources');
+  return desktop;
+}
+
 export function validateArchive(file) {
   const asar = openAsar(file);
   try {
@@ -175,7 +186,10 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     if (validateArchive(file) !== '0.200.0') throw new Error('Unsupported version');
     const asar = openAsar(file);
     let resources;
-    try { resources = extractEnglish(readEntry(asar, '.vite/renderer/main_window/assets/index-CCcgJ39D.js').toString('utf8')); }
+    try {
+      resources = extractEnglish(readEntry(asar, '.vite/renderer/main_window/assets/index-CCcgJ39D.js').toString('utf8'));
+      resources.desktop = extractDesktopEnglish(readEntry(asar, '.vite/build/initLifecycle-C1amcziW.js').toString('utf8'));
+    }
     finally { closeAsar(asar); }
     const out = resolve(dirname(fileURLToPath(import.meta.url)), '../translations/en'); mkdirSync(out, { recursive: true });
     for (const [ns, tree] of Object.entries(resources)) {
@@ -183,6 +197,6 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       const count = (node) => node && typeof node === 'object' ? Object.values(node).reduce((sum, item) => sum + count(item), 0) : 1;
       console.log(`${ns}: ${count(tree)} leaves`);
     }
-    console.log('19 namespaces extracted; all archive entry hashes verified.');
+    console.log('19 renderer namespaces and 1 desktop namespace extracted; all archive entry hashes verified.');
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

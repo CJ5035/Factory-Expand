@@ -85,7 +85,7 @@
     "guardDescription": "仅组织管理员和所有者可查看设备群清单。",
     "inventory": "设备群清单",
     "search": {
-      "droidComputers": "Droid 计算机",
+      "droidComputers": "Droid Computers",
       "remoteControl": "远程控制",
       "byom": "BYOM",
       "environmentInstances": "环境实例",
@@ -619,7 +619,7 @@
       "missingOrganizationIntegration": "缺少组织级 {{scmNames}} 集成。请让管理员在集成页面中配置。",
       "missingPersonalAccessToken": "缺少云端 {{scmNames}} 个人访问令牌。请在集成页面中添加个人访问令牌。"
     },
-    "supersededNotice": "云计算机已被 Droid 计算机取代。云计算机仍受支持，但我们强烈建议切换到 Droid 计算机以提高稳定性。<anchor>前往 Droid 计算机</anchor>"
+    "supersededNotice": "云计算机已被 Droid Computers 取代。云计算机仍受支持，但我们强烈建议切换到 Droid Computers 以提高稳定性。<anchor>前往 Droid Computers</anchor>"
   },
   "commandPolicySection": {
     "custom": "自定义",
@@ -660,7 +660,7 @@
       },
       "managedComputers": {
         "label": "托管计算机",
-        "description": "由 Factory 配置的 Droid 计算机。"
+        "description": "由 Factory 配置的 Droid Computers。"
       },
       "byomComputers": {
         "label": "远程控制",
@@ -738,9 +738,9 @@
     "cancel": "取消"
   },
   "computerDetail": {
-    "droidComputers": "Droid 计算机",
+    "droidComputers": "Droid Computers",
     "computerNotFound": "未找到计算机",
-    "backToDroidComputers": "返回 Droid 计算机",
+    "backToDroidComputers": "返回 Droid Computers",
     "failedToLoadMetrics": "加载指标失败",
     "noMetricsAvailableYet": "暂无指标"
   },
@@ -1060,8 +1060,8 @@
         "guardDescription": "此组织未启用云模板。"
       },
       "droidComputers": {
-        "label": "Droid 计算机",
-        "guardDescription": "隔离网络模式下无法使用 Droid 计算机。"
+        "label": "Droid Computers",
+        "guardDescription": "隔离网络模式下无法使用 Droid Computers。"
       },
       "templates": {
         "label": "环境",
@@ -1167,7 +1167,7 @@
       "connectors": "连接器",
       "wiki": "Wiki",
       "evaluations": "评估",
-      "droidComputers": "Droid 计算机",
+      "droidComputers": "Droid Computers",
       "agentBehavior": "代理行为",
       "gitCommits": "Git 与提交",
       "retentionPolicy": "Session 保留",
@@ -1197,7 +1197,7 @@
         "description": "监控随时间变化的积分消耗。数据每日更新，以 UTC 显示。"
       },
       "onPrem": {
-        "label": "高级",
+        "label": "私有部署（Prem）",
         "description": "监控随时间变化的积分消耗。数据记录在本地，以 UTC 显示。"
       }
     },
@@ -1209,7 +1209,7 @@
     "missionDefaultsV1WebNotice": "Missions 1.0 的默认设置存储在 Factory 桌面应用的本地设置中。请打开桌面应用进行更改。",
     "missionMachineKind": {
       "template": "环境",
-      "droidComputer": "Droid 计算机",
+      "droidComputer": "Droid Computer",
       "byom": "你的计算机"
     },
     "delegationAppSetup": {
@@ -1355,7 +1355,7 @@
     "bulkCreateFailedPartial": "已创建请求的 {{requested}} 台计算机中的 {{created}} 台，随后失败：{{reason}}。请再次创建以补充其余计算机。",
     "bulkCreateUnconfirmed": "请求失败，未能确认结果。部分计算机可能已创建，请在重试前检查计算机池列表。",
     "newManagedComputers": "新建托管计算机",
-    "newDroidComputer": "新建 Droid 计算机",
+    "newDroidComputer": "新建 Droid Computer",
     "quantity": "数量",
     "managedComputersUnavailableForPool": "你的组织无法使用托管计算机，因此此工作池无法创建计算机。",
     "cleanComputer": "全新计算机",
@@ -1612,13 +1612,13 @@
     "errors": {
       "providersLoad": "无法加载计算提供商。",
       "repositoriesLoad": "无法加载仓库。请重试。",
-      "computersLoad": "无法加载现有 Droid 计算机，暂时无法检查名称。请重试。",
+      "computersLoad": "无法加载现有 Droid Computers，暂时无法检查名称。请重试。",
       "templatesLoad": "无法加载模板。请重试。",
-      "creationUnavailable": "无法创建 Droid 计算机。请重试。",
-      "creationStatusLoad": "无法加载创建状态。重试前请检查 Droid 计算机列表。",
-      "createFailed": "无法创建 Droid 计算机。"
+      "creationUnavailable": "无法创建 Droid Computer。请重试。",
+      "creationStatusLoad": "无法加载创建状态。重试前请检查 Droid Computers 列表。",
+      "createFailed": "无法创建 Droid Computer。"
     },
-    "checkDroidComputersForDetails": "请查看 Droid 计算机列表了解详情。"
+    "checkDroidComputersForDetails": "请查看 Droid Computers 列表了解详情。"
   },
   "droidComputerOperation": {
     "providerDefault": "默认",
@@ -1629,9 +1629,9 @@
     "repositorySummaryPending": "仓库选择待定",
     "repositorySummaryCount_one": "包含 {{count}} 个仓库",
     "repositorySummaryCount_other": "包含 {{count}} 个仓库",
-    "creationFailed": "Droid 计算机创建失败。",
-    "ready": "Droid 计算机“{{name}}”已就绪，可在新 Session 中使用。",
-    "creating": "正在创建 Droid 计算机…",
+    "creationFailed": "Droid Computer 创建失败。",
+    "ready": "Droid Computer“{{name}}”已就绪，可在新 Session 中使用。",
+    "creating": "正在创建 Droid Computer…",
     "templateNone": "无",
     "templateNoneDescription": "从全新计算机开始",
     "templateNoRepositories": "不包含任何仓库。",
@@ -1640,7 +1640,7 @@
     "templateRepositoriesIncludedAddMore_one": "已包含 {{count}} 个仓库。你可以在下方添加更多仓库。",
     "templateRepositoriesIncludedAddMore_other": "已包含 {{count}} 个仓库。你可以在下方添加更多仓库。",
     "nameLabel": "计算机名称",
-    "nameDescription": "为此 Droid 计算机选择唯一名称。",
+    "nameDescription": "为此 Droid Computer 选择唯一名称。",
     "templateLabel": "环境",
     "includedInEnvironment": "{{name}} 中已包含",
     "providerLabel": "计算提供商",
@@ -1662,19 +1662,19 @@
     "actionInProgress": "正在创建…",
     "actionSucceeded": "已创建",
     "docs": "文档",
-    "headerTitle": "创建 Droid 计算机",
-    "headerDescription": "Droid 计算机是持久化云环境，Droid 可以在其中处理你的仓库并运行任务。",
-    "displaySection": "Droid 计算机",
+    "headerTitle": "创建 Droid Computer",
+    "headerDescription": "Droid Computers 是持久化云环境，Droid 可以在其中处理你的仓库并运行任务。",
+    "displaySection": "Droid Computers",
     "invalidArguments": "暂存的计算机详情无效。",
     "notCreated": "未创建",
     "incompleteSteps": "创建前请完成必需步骤",
     "selectTemplateOrNone": "选择一个可用环境或选择无环境",
     "selectRepositoryOrNone": "选择至少一个仓库或选择无仓库",
-    "creationUnconfirmed": "无法确认创建结果。重试前请检查 Droid 计算机列表。"
+    "creationUnconfirmed": "无法确认创建结果。重试前请检查 Droid Computers 列表。"
   },
   "droidComputerSettings": {
     "noComputersMatchYourSearch": "没有符合搜索条件的计算机",
-    "manageThisMachineAsADroid": "将此设备作为 Droid 计算机管理，用于本地和远程 Session。",
+    "manageThisMachineAsADroid": "将此设备作为 Droid Computer 管理，用于本地和远程 Session。",
     "thisComputer": "此计算机",
     "search": "搜索",
     "failedToLoadComputers": "加载计算机失败。",
@@ -1683,7 +1683,7 @@
     "yourComputers": "你的计算机",
     "managedComputers": "托管计算机",
     "managedComputersHaveBeenDisabledBy": "你的组织管理员已禁用托管计算机。",
-    "managedDroidComputersAreNotAvailable": "此区域无法使用托管 Droid 计算机。",
+    "managedDroidComputersAreNotAvailable": "此区域无法使用托管 Droid Computers。",
     "upgradeToAccessManagedComputers": "升级以使用托管计算机",
     "loading": "正在加载…",
     "byomDescription": "你通过远程控制注册的、供 Droid 使用的计算机。请参阅<anchor>远程控制指南</anchor>以注册其他计算机。",
@@ -1699,7 +1699,7 @@
   "droidComputersSection": {
     "userExampleCom": "user@example.com",
     "add": "添加",
-    "droidComputers": "Droid 计算机",
+    "droidComputers": "Droid Computers",
     "localComputers": "本地计算机",
     "allowMembersToRunSessionsLocally": "允许成员在桌面应用中运行本地 Session。",
     "allowMembersToCreateAndUse": "允许成员创建并使用 Factory 托管计算机。",
@@ -2274,7 +2274,7 @@
   },
   "machineUtils": {
     "local": "本地",
-    "droidComputer": "Droid 计算机",
+    "droidComputer": "Droid Computer",
     "workspace": "工作区"
   },
   "manageComputerModal": {
@@ -2304,7 +2304,7 @@
   "managedWorktrees": {
     "noActiveSessions": "没有活跃的 Session",
     "retry": "重试",
-    "thisDroidComputerDoesNotYet": "此 Droid 计算机尚不支持工作树。",
+    "thisDroidComputerDoesNotYet": "此 Droid Computer 尚不支持工作树。",
     "noFactoryManagedWorktrees": "没有 Factory 托管的工作树。",
     "factoryManagedWorktreesOnTheSelected": "所选计算机上的 Factory 托管工作树。",
     "managedWorktrees": "托管工作树",
@@ -2381,7 +2381,7 @@
     "defaultTemplate": "默认环境",
     "agentsRunHereWhenTheOrchestrator": "编排器未指定计算机时，代理在这里运行。每个代理会获得一台全新计算机。",
     "additionalMachines": "其他计算机",
-    "templatesDroidComputersAndYourOwn": "你发起的所有任务还可在这些环境、Droid 计算机以及通过远程控制连接的自有计算机上运行代理。",
+    "templatesDroidComputersAndYourOwn": "你发起的所有任务还可在这些环境、Droid Computers 以及通过远程控制连接的自有计算机上运行代理。",
     "discard": "放弃",
     "missionDefaults": "任务默认设置",
     "sectionDescription": "选择任务中的代理运行位置。这些选择适用于你发起的所有 Missions 2.0 任务。",
@@ -2477,7 +2477,7 @@
     "next": "下一步"
   },
   "nameStep": {
-    "yourNewDroidComputer": "你的新 Droid 计算机",
+    "yourNewDroidComputer": "你的新 Droid Computer",
     "name": "名称",
     "usingGitlabCloudAddAToken": "使用 GitLab Cloud？请添加令牌，让此服务账号可以克隆 gitlab.com 仓库。",
     "configureGitlabAccess": "配置 GitLab 访问权限",
@@ -2812,9 +2812,9 @@
   },
   "openLinksInDesktopPreferenceRow": {
     "title": "在桌面应用中打开链接",
-    "description": "在浏览器中打开的拉取请求审查链接会转至 Factory 桌面版。",
-    "sharedLinksDescription": "在浏览器中打开的 Session、自动化及其他 Factory 页面链接会转至 Factory 桌面版。",
-    "enabledMessage": "链接现在将在 Factory 桌面版中打开",
+    "description": "在浏览器中打开的拉取请求审查链接会转至 Factory Desktop。",
+    "sharedLinksDescription": "在浏览器中打开的 Session、自动化及其他 Factory 页面链接会转至 Factory Desktop。",
+    "enabledMessage": "链接现在将在 Factory Desktop 中打开",
     "disabledMessage": "链接现在将在浏览器中打开"
   },
   "preferencesSection": {
@@ -3158,7 +3158,7 @@
   },
   "scmSetupSectionCard": {
     "codeProviders": "代码托管服务",
-    "organizationDescription": "连接组织代码托管服务，即可创建 Droid 计算机和云计算机模板、自动生成 Wiki 等。",
+    "organizationDescription": "连接组织代码托管服务，即可创建 Droid Computers 和云计算机模板、自动生成 Wiki 等。",
     "combinedDescription": "连接代码所在的平台。",
     "personalDescription": "连接个人代码托管服务账号，以获得用户级访问权限。"
   },
@@ -3205,7 +3205,7 @@
     "computerId": "ID：{{id}}",
     "loadingServiceAccountComputers": "正在加载服务账号计算机…",
     "title": "计算机 · {{name}}",
-    "description": "这些 Droid 计算机归 {{name}} 所有。需要清理时，管理员可在这里删除。"
+    "description": "这些 Droid Computers 归 {{name}} 所有。需要清理时，管理员可在这里删除。"
   },
   "serviceAccountConnectorsModal": {
     "configure": "配置",
@@ -3680,7 +3680,7 @@
         "evaluationsEnabled": "评估"
       },
       "droidComputers": {
-        "title": "Droid 计算机",
+        "title": "Droid Computers",
         "localComputers": "本地计算机",
         "managedComputers": "托管计算机",
         "byomComputers": "远程控制",
@@ -3721,7 +3721,7 @@
         "currentDeployment": "当前部署",
         "signedInIdentity": "登录身份",
         "factoryPrivate": "Factory Private",
-        "prem": "高级",
+        "prem": "私有部署（Prem）",
         "signOut": "退出登录"
       },
       "yourAccount": {
@@ -3787,7 +3787,7 @@
         "soundVolume": "通知音量",
         "completionSound": "完成提示音",
         "awaitingInputSound": "等待输入提示音",
-        "focusMode": "专注模式",
+        "focusMode": "声音播放条件",
         "subagentSounds": "子代理提示音"
       },
       "personalize": {
@@ -4093,7 +4093,7 @@
     "sounds": "声音",
     "completionSound": "完成提示音",
     "awaitingInputSound": "等待输入提示音",
-    "focusMode": "专注模式",
+    "focusMode": "声音播放条件",
     "subagentSounds": "子代理提示音",
     "soundOptions": {
       "off": "关闭",
@@ -4216,7 +4216,7 @@
     "userId": "用户 ID",
     "email": "邮箱",
     "organizationId": "组织 ID",
-    "factoryDesktop": "Factory 桌面版",
+    "factoryDesktop": "Factory Desktop",
     "factoryWeb": "Factory",
     "overviewCaption": "此应用的版本和连接详情",
     "version": "版本",
@@ -4633,7 +4633,7 @@
     "byok": "BYOK",
     "compute": "计算资源",
     "advancedAnalytics": "高级分析",
-    "prem": "高级"
+    "prem": "私有部署（Prem）"
   },
   "providerConnectionsSection": {
     "title": "提供商连接",

@@ -358,12 +358,12 @@
     "sessionMustComplete": "必须完成此 Session 才能创建自动化。请留在此 Session 中直到代理完成；离开或中断可能导致自动化无法保存。"
   },
   "openDesktop": {
-    "title": "正在 Factory 桌面版中打开",
+    "title": "正在 Factory Desktop 中打开",
     "openInBrowser": "改为在浏览器中打开",
     "manageAccount": "管理你的账号",
     "noAppYet": "还没有安装应用？",
-    "downloadDesktop": "下载 Factory 桌面版",
-    "subtitle": "浏览器可能会询问是否打开 Factory 桌面版。"
+    "downloadDesktop": "下载 Factory Desktop",
+    "subtitle": "浏览器可能会询问是否打开 Factory Desktop。"
   },
   "mcpOauthCallback": {
     "completingAuthentication": "正在完成身份验证。",
@@ -373,10 +373,10 @@
     "authorizationFailed": "授权失败",
     "missingAuthenticationState": "此回调缺少身份验证状态。请重新启动身份验证后重试。",
     "missingAuthorizationResult": "此回调缺少授权结果。请重新启动身份验证后重试。",
-    "openingFactoryDesktop": "正在打开 Factory 桌面版以完成身份验证。如果没有反应，请使用下方按钮。",
+    "openingFactoryDesktop": "正在打开 Factory Desktop 以完成身份验证。如果没有反应，请使用下方按钮。",
     "returningYouToFactory": "正在返回 Factory",
     "authorizationNotCompleted": "授权未完成。请重新启动身份验证后重试。",
-    "openFactoryDesktop": "打开 Factory 桌面版",
+    "openFactoryDesktop": "打开 Factory Desktop",
     "backToFactory": "返回 Factory"
   },
   "coreUi": {
@@ -425,8 +425,8 @@
     }
   },
   "cloudDeprecationBanner": {
-    "message": "云计算机已被 Droid 计算机取代。云计算机仍受支持，但我们强烈建议切换到 Droid 计算机以提高稳定性。",
-    "goToDroidComputers": "前往 Droid 计算机"
+    "message": "云计算机已被 Droid Computers 取代。云计算机仍受支持，但我们强烈建议切换到 Droid Computers 以提高稳定性。",
+    "goToDroidComputers": "前往 Droid Computers"
   },
   "subscriptionBanner": {
     "gracePeriod": "付款已逾期。用量将于 {{date}} 停止。请<billingLink>前往账单</billingLink>处理。",

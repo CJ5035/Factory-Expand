@@ -29,6 +29,7 @@ try {
     const original = openAsar(input.asar);
     try {
       const { replace, report } = buildReplacements(original, set);
+      for (const [path, bytes] of added) if (path.endsWith('.json')) JSON.parse(bytes.toString('utf8'));
       const syntax = checkJavaScript(new Map([...replace, ...added]));
       if (syntax.failures.length) throw new Error(`JavaScript syntax gate failed: ${JSON.stringify(syntax.failures)}`);
       writeRepacked(original, { replace, add: added }, staged.asar);

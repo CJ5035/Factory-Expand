@@ -1,0 +1,66 @@
+{
+  "evaluationDatasetChatShell": {
+    "datasetChat": "数据集聊天",
+    "chooseAComputerAndRetry": "选择计算机并重试",
+    "createTitle": "创建数据集",
+    "createDescription": "描述要衡量的工作。Droid 会起草任务，逐个验证，并在发布前与你确认。",
+    "createPlaceholder": "我们希望衡量什么？",
+    "updateTitle": "更新此数据集",
+    "updateDescription": "描述需要修改的内容。Droid 会从版本 {{version}} 开始，再次验证每个任务，并在发布前与你确认。",
+    "updatePlaceholder": "此版本需要如何修改？",
+    "selectSkillsTitle": "选择要进行基准测试的技能",
+    "selectSkillsEmpty": "未找到技能。请将技能发布到组织插件市场，或添加到此工作目录的 .factory/skills 文件夹。",
+    "loadingComputerSkills": "正在从此计算机加载技能…"
+  },
+  "evaluationPresets": {
+    "cancel": "取消",
+    "deletePreset": "删除预设",
+    "deletePresetTitle": "删除预设？",
+    "deleteDescription": "为组织中的所有人删除 {{name}}？现有运行记录不受影响。",
+    "duplicateName": "{{name}}的副本"
+  },
+  "filePreview": {
+    "binary": "二进制文件，无法提供文本预览。",
+    "tooLarge": "此文件超出预览大小上限。",
+    "symlink": "文件预览不会跟随符号链接。"
+  },
+  "evaluationSkillFiles": {
+    "loading": "正在加载技能文件…",
+    "unavailable": "技能文件不可用。"
+  },
+  "evaluationTaskFiles": {
+    "loading": "正在加载文件…",
+    "filesUnavailable": "文件不可用",
+    "noFiles": "无文件",
+    "listingTooLarge": "文件列表超出预览大小上限。",
+    "truncatedNotice": "因达到预览上限，部分文件已省略。"
+  },
+  "evaluationCreateDataset": {
+    "datasets": "数据集",
+    "newDataset": "新建数据集",
+    "draft": "草稿",
+    "newVersionOf": "{{name}}的新版本"
+  },
+  "evaluations": {
+    "listViews": {
+      "datasets": "数据集",
+      "allDatasets": "所有数据集",
+      "runs": "运行记录",
+      "allRuns": "所有运行记录"
+    },
+    "tabs": {
+      "library": "资源库",
+      "presets": "预设"
+    },
+    "createDataset": "创建数据集",
+    "runNotFound": "未找到运行记录",
+    "runNotReported": "此评估尚未报告结果。",
+    "datasetNotFound": "未找到数据集",
+    "datasetNotInLibrary": "“{{name}}”不在此数据集资源库中。",
+    "versionNotFound": "未找到版本",
+    "versionNotFoundDescription": "在 {{dataset}} 中未找到版本“{{version}}”。",
+    "latestVersion": "最新版本",
+    "tasksUnavailable": "任务不可用",
+    "couldNotLoadVersion": "无法加载此版本。"
+  }
+}

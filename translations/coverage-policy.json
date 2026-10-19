@@ -1,0 +1,3978 @@
+{
+  "version": 1,
+  "scope": "all-functional-interface",
+  "excludedKeys": [],
+  "preservedEnglish": [
+    {
+      "key": "common.sidebarRouter.softwareFactory",
+      "source": "Software Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "common.wikiNavContentV2.wiki",
+      "source": "Wiki",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "common.commandPalette.esc",
+      "source": "esc",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "common.commandPalette.softwareFactory",
+      "source": "Software Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "common.commandPalette.wiki",
+      "source": "Wiki",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "common.checkForUpdatesModal.rosetta",
+      "source": "Rosetta",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.appearanceThemeSwatch.aa",
+      "source": "Aa",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.environmentVariablesSection.variableKey",
+      "source": "VARIABLE_KEY",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.branchSelector.newBranchName",
+      "source": "new-branch-name",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.worktreeSetupProfileModal.setEuoPipefailNpmCiNpm",
+      "source": "set -euo pipefail\nnpm ci\nnpm run build",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.worktreeSetupProfileModal.setEuoPipefailDockerComposeDown",
+      "source": "set -euo pipefail\ndocker compose down",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.setupScriptSection.binBashInstallDependenciesNpmInstall",
+      "source": "#!/bin/bash\n# Install dependencies\nnpm install\n\n# Run build\nnpm run build",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.bulkUserLimitsModal.nameCompanyCom",
+      "source": "name@company.com",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.computerSecrets.apiToken",
+      "source": "API_TOKEN",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.customModelEditorModal.optionTrue",
+      "source": "{\"option\": true}",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.permissionRulesEditor.token",
+      "source": "Token {{index}}",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.settings.bulkInviteModal.emailPlaceholder",
+      "source": "name@company.com",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.softwareFactoryObjectCard.signalMeta",
+      "source": "SIG-{{number}} · {{source}} · {{status}}",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.keyboardShortcutsModal.spec",
+      "source": "Spec",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.mcpAddServer.url",
+      "source": "URL",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.sessionDetailsModal.sessionId",
+      "source": "Session ID",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.sessionDetailsModal.session",
+      "source": "Session",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.sessionInfoTooltip.sessionId",
+      "source": "Session ID",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.sessionInfoTooltip.session",
+      "source": "Session",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.sessionTitleHoverCard.machineLabel.droidComputer",
+      "source": "Droid Computer",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.chatComposerVoiceDictationShortcut.controlShiftD",
+      "source": "Control+Shift+D",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.chatComposerVoiceDictationShortcut.ctrlShiftD",
+      "source": "Ctrl+Shift+D",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.chat.chatContextMessage.badge.spec",
+      "source": "Spec",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.common.hostedWebAccessModal.macosLinux",
+      "source": "macOS/Linux",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.common.hostedWebAccessModal.windows",
+      "source": "Windows",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.app.droidHeader.droid",
+      "source": "Droid",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.app.missionControlOverlay.factory",
+      "source": "Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.user.userProfile.softwareFactory",
+      "source": "Software Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.user.userProfile.wiki",
+      "source": "Wiki",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.layout.sessionListV2.machineLabels.droidComputer",
+      "source": "Droid Computer",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.layout.sessionListV2FilterMenu.types.softwareFactory",
+      "source": "Software Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.layout.sessionListV2FilterMenu.pullRequest",
+      "source": "PR",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.layout.sessionListV2SessionRow.environments.droidComputer",
+      "source": "Droid Computer",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.layout.sessionManager.factory",
+      "source": "Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.layout.sessionManager.softwareFactory",
+      "source": "Software Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "components.layout.sessionsTable.session",
+      "source": "Session",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "sessions.tokenLimitsModal.droidCore",
+      "source": "Droid Core",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "sessions.activeSession.environment.droidComputer",
+      "source": "Droid Computer",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "sessions.newSession.droidComputers",
+      "source": "Droid Computers",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "sessions.notifications.untitledSession",
+      "source": "Session",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "sessions.composerDefaults.modeSpec",
+      "source": "Spec",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.fleet.search.droidComputers",
+      "source": "Droid Computers",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.fleet.search.byom",
+      "source": "BYOM",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.appearanceSection.uiFontOptions.default",
+      "source": "Geist",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.appearanceSection.contentFontOptions.default",
+      "source": "Geist",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.appearanceSection.codeFontOptions.default",
+      "source": "Geist Mono",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.appearanceThemeEditor.factorytheme1",
+      "source": "{ \"factoryTheme\": 1, … }",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.byokUtils.modelType.awsBedrock",
+      "source": "AWS Bedrock",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.computerCard.metrics.cpu",
+      "source": "CPU {{value}}",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.computerDetail.droidComputers",
+      "source": "Droid Computers",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.computerUsageMeters.cpu",
+      "source": "CPU",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.constants.pages.droidComputers.label",
+      "source": "Droid Computers",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.constants.pages.openCompute.label",
+      "source": "OpenCompute",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.constants.enterpriseControlsSections.wiki",
+      "source": "Wiki",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.constants.enterpriseControlsSections.droidComputers",
+      "source": "Droid Computers",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.constants.missionMachineKind.droidComputer",
+      "source": "Droid Computer",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.constants.interactionMode.spec",
+      "source": "Spec",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.constants.remoteDelegationConfigs.softwareFactory.title",
+      "source": "Software Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.createWorkspaceModal.myWorkspace",
+      "source": "my-workspace",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.daemonVersionCard.droid",
+      "source": "Droid",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.droidComputerOperation.displaySection",
+      "source": "Droid Computers",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.droidComputersSection.userExampleCom",
+      "source": "user@example.com",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.droidComputersSection.droidComputers",
+      "source": "Droid Computers",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.droidComputersSection.opencompute",
+      "source": "OpenCompute",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.enterpriseControlsConstants.providerGroup.anthropic",
+      "source": "Anthropic",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.enterpriseControlsConstants.providerGroup.openai",
+      "source": "OpenAI",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.enterpriseControlsConstants.providerGroup.google",
+      "source": "Google",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.enterpriseControlsConstants.providerGroup.xai",
+      "source": "xAI",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.enterpriseControlsConstants.providerGroup.factory",
+      "source": "Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.enterpriseControlsConstants.sourceType.github",
+      "source": "GitHub",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.enterpriseControlsConstants.sourceType.url",
+      "source": "URL",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.machineUtils.droidComputer",
+      "source": "Droid Computer",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.metricPanel.cpu",
+      "source": "CPU",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.mySessionsUsage.session",
+      "source": "Session",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.mySessionsUsage.fsc",
+      "source": "FSC",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.openComputeDeployment.openCompute",
+      "source": "OpenCompute",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.openComputeSettings.opencompute",
+      "source": "OpenCompute",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.providerSelector.providers.opencompute",
+      "source": "OpenCompute",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.remoteDelegationConfigSection.pluginName2",
+      "source": "plugin-name",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.remoteDelegationConfigSection.marketplace2",
+      "source": "@marketplace",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.remoteDelegationConfigTag.softwareFactory",
+      "source": "Software Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.securitySection.droidShield",
+      "source": "Droid Shield",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.serviceAccountGitCredentialsModal.gitlabTokenPlaceholder",
+      "source": "glpat-...",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.sessionDefaultsSection.latestModelProviders.anthropic",
+      "source": "Anthropic",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.sessionDefaultsSection.latestModelProviders.openai",
+      "source": "OpenAI",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.deploymentSection.factoryPrivate",
+      "source": "Factory Private",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.settingsSearch.searchTerms.git",
+      "source": "git",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.settingsSearch.enterpriseControls.wiki.title",
+      "source": "Wiki",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.settingsSearch.enterpriseControls.droidComputers.title",
+      "source": "Droid Computers",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.settingsSearch.enterpriseControls.droidComputers.openCompute",
+      "source": "OpenCompute",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.settingsSearch.general.deployment.factoryPrivate",
+      "source": "Factory Private",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.settingsSearch.openCompute.openCompute.title",
+      "source": "OpenCompute",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.supportSettings.factoryDesktop",
+      "source": "Factory Desktop",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.supportSettings.factoryWeb",
+      "source": "Factory",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.teamsRateLimitUsage.poolDroidCore",
+      "source": "Droid Core",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.tokenRateLimitsUsage.droidCore",
+      "source": "Droid Core",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.vscodeRemoteSshinstructions.vsCodeRemoteSsh",
+      "source": "VS Code Remote SSH",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.wikiSection.wiki",
+      "source": "Wiki",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "settings.usageSources.byok",
+      "source": "BYOK",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryChangesTable.id",
+      "source": "ID",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactorySignalsTable.id",
+      "source": "ID",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryAutomationDetail.session",
+      "source": "Session",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryAutomationDetail.droid",
+      "source": "Droid",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryChangeDetail.stages.spec",
+      "source": "Spec",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryChangeDetail.stages.pr",
+      "source": "PR",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryChangeIdentifier.chg",
+      "source": "CHG-…",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryChangeView.timeline.kindDroid",
+      "source": "{{kind}} · Droid",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryInboxReader.kinds.spec",
+      "source": "Spec",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryWorkstreamEvals.dateRangeUtc",
+      "source": "{{start}} – {{end}} · UTC",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryAccessPolicy.editorViewer",
+      "source": "editor, viewer",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryAccessPolicy.owner",
+      "source": "owner",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryAccessPolicy.readWriteAdminister",
+      "source": "read, write, administer",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactorySetup.stepConnectSourcesDetail",
+      "source": "GitHub · Slack · Sentry · Linear",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryWorkstreamTaskViewUtils.facts.session",
+      "source": "Session",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryWorkstreamTaskViewUtils.facts.spec",
+      "source": "Spec",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryWorkstreamTaskViewUtils.outcome.namingPullRequest",
+      "source": "{{message}} PR #{{number}}",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryWorkstreamConfiguration.ownership.dri",
+      "source": "DRI",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryWorkstreamConfiguration.capNoun.prs",
+      "source": "PR",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryWorkstreamConfiguration.fscAmount",
+      "source": "{{amount}} FSC",
+      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
+    },
+    {
+      "key": "automations.softwareFactoryStageDetail.codeValidation.qa.title",
+      "source": "QA",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.qaMode.imagemagick",
+      "source": "ImageMagick",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.qaModeV2.imagemagick",
+      "source": "ImageMagick",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.wikiMode.mainDev",
+      "source": "main, dev",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.wikiModeV2.mainDev",
+      "source": "main, dev",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.automationDetailPanelV2.webhook",
+      "source": "Webhook",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.automationEventsTableV2.session",
+      "source": "Session",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.automationWebhookDetailPage.webhookUrl",
+      "source": "Webhook URL",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.automationWebhookEditFormV2.webhook",
+      "source": "Webhook",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.runOnComputerPicker.droidComputers",
+      "source": "Droid Computers",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.triggersField.github",
+      "source": "GitHub",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.webhookAutomationForm.webhook",
+      "source": "Webhook",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.webhookCredentialsRevealModal.webhookUrl",
+      "source": "Webhook URL",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.buildAutomationConfigurationRows.session",
+      "source": "Session",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.constants.ciTemplates.wiki.label",
+      "source": "AutoWiki",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.constants.templates.qa.name",
+      "source": "QA",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.constants.templates.wiki.name",
+      "source": "AutoWiki",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.constants.templates.slack.name",
+      "source": "Slack",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.constants.templates.github.name",
+      "source": "GitHub",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.constants.templates.webhook.name",
+      "source": "Webhook",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.constants.templateFlow.trigger.webhook",
+      "source": "Webhook",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.constants.templateFlow.output.slackOrPr",
+      "source": "Slack / PR",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "automations.humanizeCron.timeInUtc",
+      "source": "{{time}} UTC",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.analytics.sessionAttributionTreemap.hoverFsc",
+      "source": "%{value:,.0f} FSC · ",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.analytics.attributionInventoryTable.pr",
+      "source": "PR",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.analytics.attributionInventoryTable.session",
+      "source": "Session",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.analytics.attributionInventoryTable.headers.session",
+      "source": "Session",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.analytics.sessionAttribution.fscAmount",
+      "source": "{{amount}} FSC",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.automations.automationsTable.triggerSlack",
+      "source": "Slack",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.automations.automationsTable.triggerGithub",
+      "source": "GitHub",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.automations.automationsTable.triggerWebhook",
+      "source": "Webhook",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.automations.workerSessionsTable.session",
+      "source": "Session",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.automations.constants.triggerSlack",
+      "source": "Slack",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.automations.constants.triggerGithub",
+      "source": "GitHub",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.automations.constants.triggerWebhook",
+      "source": "Webhook",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.automations.constants.welcomeTriggerLabels.webhook",
+      "source": "Webhook",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.evaluations.evaluationDatasetHub.gpu",
+      "source": "GPU",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.evaluations.evaluationRunConfigFields.flagValue",
+      "source": "--flag value",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.evaluations.evaluationTaskDetails.mebibytes",
+      "source": "{{value}} MiB",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.evaluations.common.sources.harborHub",
+      "source": "Harbor Hub",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.fleet.tabs.droidComputers",
+      "source": "Droid Computers",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.fleet.openCompute",
+      "source": "OpenCompute",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.inbox.sourceDomain.session",
+      "source": "Session",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.missions.missionFilesExplorer.kinds.markdown",
+      "source": "Markdown",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.missions.missionSymbols.factory",
+      "source": "Factory",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.missions.missionSettings.usage.columns.session",
+      "source": "Session",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.onboarding.nextStepsStage.macosLinux",
+      "source": "macOS / Linux",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.onboarding.nextStepsStage.windows",
+      "source": "Windows",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.onboarding.onboarding.factory",
+      "source": "Factory",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.onboarding.paymentStage.factoryPlanName",
+      "source": "Factory {{planName}}",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.onboarding.welcome.domainPlaceholder",
+      "source": "factory.example.com",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.onboarding.welcome.factoryPrivate",
+      "source": "Factory Private",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.onboarding.welcome.eyebrow",
+      "source": "Factory // Droids",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactoryLayout.softwareFactoryChangeDetailV2.esc",
+      "source": "Esc",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "desktop.menu.aboutMessage",
+      "source": "Factory {{version}}",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamCreateModal.droidComputers",
+      "source": "Droid Computers",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamSessionsTable.session",
+      "source": "Session",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamTaskParts.avatar.factory",
+      "source": "Factory",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamTaskParts.avatar.github",
+      "source": "GitHub",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.softwareFactoryWelcomeIllustration.chips.specToPr",
+      "source": "Spec → PR",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamSessionsTable.fsc",
+      "source": "FSC",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamTaskViewConstants.pipeline.spec",
+      "source": "Spec",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamTaskView.tab.spec",
+      "source": "Spec",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamTaskParts.specRevisionShort",
+      "source": "Spec · R{{revision}}",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "components.softwareFactory.workstreamTaskParts.spec",
+      "source": "Spec",
+      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
+    },
+    {
+      "key": "missions.missionSessionsSidebar.fallbackSessionName",
+      "source": "Session {{id}}",
+      "reason": "保留Session产品术语及动态ID"
+    },
+    {
+      "key": "wiki.wikiBreadcrumbs.wiki",
+      "source": "Wiki",
+      "reason": "Wiki功能名称"
+    },
+    {
+      "key": "wiki.wiki.wiki",
+      "source": "Wiki",
+      "reason": "Wiki功能名称"
+    },
+    {
+      "key": "analytics.bugAttribution.sourceLabels.sentry",
+      "source": "Sentry",
+      "reason": "统计来源品牌、认证协议缩写或积分计量格式原样保留"
+    },
+    {
+      "key": "analytics.bugAttribution.sourceLabels.linear",
+      "source": "Linear",
+      "reason": "统计来源品牌、认证协议缩写或积分计量格式原样保留"
+    },
+    {
+      "key": "analytics.bugAttribution.sourceLabels.githubIssue",
+      "source": "GitHub",
+      "reason": "统计来源品牌、认证协议缩写或积分计量格式原样保留"
+    },
+    {
+      "key": "analytics.usageEventsExplorer.authTypes.api",
+      "source": "API",
+      "reason": "统计来源品牌、认证协议缩写或积分计量格式原样保留"
+    },
+    {
+      "key": "analytics.effectivenessMetrics.labels.fscPerPr",
+      "source": "FSC / PR",
+      "reason": "统计来源品牌、认证协议缩写或积分计量格式原样保留"
+    },
+    {
+      "key": "analytics.effectivenessMetrics.subtexts.fscAmount",
+      "source": "{{amount}} FSC",
+      "reason": "统计来源品牌、认证协议缩写或积分计量格式原样保留"
+    },
+    {
+      "key": "analytics2.adoptionUsersTable.columns.fsc",
+      "source": "FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costAttributionSubpage.pr",
+      "source": "PR",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costAttributionSubpage.id",
+      "source": "ID",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costAttributionSubpage.fsc",
+      "source": "FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costAttributionSubpage.fscValue",
+      "source": "{{value}} FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costVisualization.heatMetrics.fsc",
+      "source": "FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costVisualization.heatFsc",
+      "source": "{{value}} FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.routerUsageMix.measures.fsc",
+      "source": "FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.routerUsageMix.fscValue",
+      "source": "{{value}} FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.spendBreakdown.intents.devops",
+      "source": "DevOps",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.toolUsageLabels.mcp.label",
+      "source": "MCP",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.toolUsageLabels.mcp.usage",
+      "source": "MCP",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.topUsers.columns.fsc",
+      "source": "FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costColumns.fsc",
+      "source": "FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costColumns.pr",
+      "source": "PR",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costColumns.prId",
+      "source": "PR ID",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costColumns.sessionFsc",
+      "source": "Session FSC",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costColumns.sessionId",
+      "source": "Session ID",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "analytics2.costColumns.session",
+      "source": "Session",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "lessons.utils.pageGuide.app.profileMenu.item.wiki",
+      "source": "Wiki",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "lessons.utils.pageGuide.app.profileMenu.item.softwareFactory",
+      "source": "Software Factory",
+      "reason": "v8逐项复审：产品/技术术语、列标识缩写、积分单位及动态值格式原样保留"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.cheapest.options.agentsMd.label",
+      "source": "AGENTS.md",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.runReadinessReport.coachmarks.runReadinessReport.example",
+      "source": "/readiness-report",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.sampleFinding.title.tags.0.label",
+      "source": "P1",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.automatedCode.reviewSetup.install.action.text",
+      "source": "/install-code-review",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerOptions.slack.label",
+      "source": "Slack",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.automations.triggerOptions.github.label",
+      "source": "GitHub",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.automations.triggerOptions.webhook.label",
+      "source": "Webhook",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.generateWiki.coachmarks.generateWiki.example",
+      "source": "/wiki",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereOptions.managed.label",
+      "source": "Droid Computer",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowOptions.sdk.label",
+      "source": "SDK",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.droidSdk.sdkExample",
+      "source": "import asyncio, sys\nfrom typing import Literal\nfrom pydantic import BaseModel\nfrom droid_sdk import run\n\nclass Triage(BaseModel):\n    summary: str\n    severity: Literal[\"low\", \"medium\", \"high\"]\n\nbug_report = open(sys.argv[1]).read()\nresult = asyncio.run(run(f\"Triage this bug report: {bug_report}\", output=Triage))\nif not result.success:\n    raise SystemExit(result.subtype)\nqueue = \"Priority\" if result.output.severity == \"high\" else \"Standard\"\nprint(queue, result.output.summary)",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.sdkBuildChoices.python.title",
+      "source": "Python",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.droidSdk.sdkBuildChoices.typescript.title",
+      "source": "TypeScript",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.securityReview.sampleFinding.title.tags.0.label",
+      "source": "P1",
+      "reason": "课程中的命令、文件名、品牌/语言/SDK名称或问题严重级别代码，原样保留"
+    },
+    {
+      "key": "lessons.content.securityReview.securityAutomations.installCodeReview.action.text",
+      "source": "/install-code-review",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.newSession.body",
+      "source": "Select New Session to open a fresh session for this lesson.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.projectPicker.body",
+      "source": "Choose the folder Droid should work in.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.model.body",
+      "source": "The model sets how fast Droid works and how deeply it reasons. Stronger models suit tricky, multi-file tasks.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.autonomy.body",
+      "source": "Autonomy sets what Droid does without asking. Medium suits most tasks: it edits files and runs tests you can undo.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.specMode.body",
+      "source": "Spec mode makes Droid research your task and write a plan you approve before it changes anything.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.smallTask.body",
+      "source": "Describe a small task: what done looks like, where to look, what not to touch, and how to check it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.specReview.card.body",
+      "source": "Droid researched your task and wrote a spec. Open it to read the plan before any code changes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.specReview.read.body",
+      "source": "Check four things: the goal, the files Droid plans to change, its approach, and how it will verify the result.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.specReview.approve.body",
+      "source": "Comment on any line or choose Keep iterating if something is off. Approve once the plan matches what you want.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.tips.specReview.confirm.body",
+      "source": "Pick how much Droid does without asking while it builds. Medium suits most tasks. Select Confirm to start.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.glossary.specMode.definition",
+      "source": "Droid researches your task and proposes a plan, called a spec, before it changes any code. While planning it only reads and searches: no file edits, commits, or services. Approve the spec to start building, or keep iterating on it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.glossary.autonomy.definition",
+      "source": "Autonomy sets the highest-risk work Droid can run without pausing for approval. Higher levels let Droid do more on its own, and you can cycle levels as you work through a task.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.glossary.autonomy.levels.off.description",
+      "source": "Reads only",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.glossary.autonomy.levels.low.description",
+      "source": "Edits files",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.glossary.autonomy.levels.medium.description",
+      "source": "Reversible write actions",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.glossary.autonomy.levels.high.description",
+      "source": "Pushes, migrations",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.description",
+      "source": "Connect your tools, give Droid a clear task in Spec mode, then read and approve the spec it writes",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.connectTools.summary",
+      "source": "Give Droid context from your apps",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.connectTools.instructions",
+      "source": "Connect the app where your work is tracked, such as Linear or Jira, then select Continue",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.connectTools.tip",
+      "source": "Droid works from the same sources you do. Once Linear or Jira is connected, you can paste a ticket link and Droid reads the ticket before it writes a spec, so you skip explaining the task again. Connect the app where your work is tracked first; you can add Slack, Notion, or Google Drive later in Settings.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.startSession.summary",
+      "source": "Give Droid a clear task in Spec mode",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.startSession.instructions",
+      "source": "Start a new session in a project, pick a model, switch to Spec mode, and send a task, or use the example below",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.startSession.folderInstructions",
+      "source": "Start a new session in an empty folder, pick a model, switch to Spec mode, and send your task, or use the example below",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.startSession.tip",
+      "source": "A clear task gets you a spec you can approve on the first pass. Name the outcome, where Droid should look, what it must not touch, and how you will check the result, or start from the example below. A vague task makes Droid guess, and you spend the review correcting its guesses.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.giveTask.summary",
+      "source": "Read the plan, steer it, and approve it",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.giveTask.instructions",
+      "source": "Droid researches and writes a spec. Read it, comment on anything that is off, then select Approve Spec and Confirm",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.steps.giveTask.tip",
+      "source": "Fixing a plan takes one comment, while fixing code takes another run. Before you approve, check that the spec has the right goal, the files you expect, an approach you agree with, and a way to verify the result. If a part is wrong, comment on that line or choose Keep iterating, and Droid revises the spec.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.example.whyItWorks",
+      "source": "Why it works",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.example.outcome.note",
+      "source": "Names the result, so the spec plans one thing you will recognize when it is done.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.example.context.note",
+      "source": "Says where to look, so Droid reads your sources instead of guessing.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.example.constraints.note",
+      "source": "Says what must not change, so the spec rules out the riskiest edits.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.example.verify.note",
+      "source": "Asks for proof, so you check the result instead of trusting a summary.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.example.caption",
+      "source": "The prompt coach under the composer lights up as your task names each part.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.completion.nextStep",
+      "source": "Droid builds from your spec now. Start your next task the same way.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.engineering.sampleTask.description",
+      "source": "Real code, small, and checked by running the tests.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.engineering.sampleTask.prompt",
+      "source": "Find one small, important function in this repo that has no tests. Follow the existing test style and runner. Don’t change the function’s behavior or add dependencies. Run the tests and show me they pass.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.engineering.parts.outcome",
+      "source": "Tests for one small function that has none.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.engineering.parts.context",
+      "source": "The repo’s existing test style and runner.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.engineering.parts.constraints",
+      "source": "No behavior changes and no new dependencies.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.engineering.parts.verify",
+      "source": "Run the tests and show they pass.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.product.taskTip.body",
+      "source": "Describe a feature idea. Droid reads the code, then plans a one-page spec for you to approve.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.product.sampleTask.description",
+      "source": "Droid writes one Markdown file and changes no code.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.product.sampleTask.prompt",
+      "source": "Write a one-page spec in docs/specs/ for a small feature idea I’ll describe next. Base “how it works today” on the actual code and link the files. Don’t change any code. End with open questions and 3 acceptance criteria I can test.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.product.parts.outcome",
+      "source": "A one-page spec in docs/specs/ for one feature idea.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.product.parts.context",
+      "source": "How it works today, from the actual code, with file links.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.product.parts.constraints",
+      "source": "No code changes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.product.parts.verify",
+      "source": "Open questions and 3 acceptance criteria you can test.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.design.taskTip.body",
+      "source": "Name one screen. Droid checks it against your design system and plans the two worst fixes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.design.sampleTask.description",
+      "source": "A small, visual diff you can judge at a glance.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.design.sampleTask.prompt",
+      "source": "Audit one settings page for inconsistent spacing, colors, type, and empty, loading, and error states. Use our design tokens and components, not hardcoded values. Fix only the top two issues, no layout redesign. Show before and after screenshots.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.design.parts.outcome",
+      "source": "The top two consistency fixes on one settings page.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.design.parts.context",
+      "source": "Your design tokens and components.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.design.parts.constraints",
+      "source": "No hardcoded values and no layout redesign.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.design.parts.verify",
+      "source": "Before and after screenshots.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.sales.taskTip.body",
+      "source": "Name the company and the meeting. Droid plans the brief and its sources for you to approve.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.sales.sampleTask.description",
+      "source": "One page from public sources, with every fact linked.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.sales.sampleTask.prompt",
+      "source": "Create account-brief.md for my next meeting with a company I’ll name. Use public sources, with links. Mark assumptions; no guesses presented as facts. End with 3 discovery questions and one sentence I could open with.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.sales.parts.outcome",
+      "source": "account-brief.md for your next meeting.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.sales.parts.context",
+      "source": "Public sources, each one linked.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.sales.parts.constraints",
+      "source": "Assumptions marked, no guesses presented as facts.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.sales.parts.verify",
+      "source": "Every fact links to the source you can open.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.marketing.taskTip.body",
+      "source": "Name the feature and the audience. Droid plans a one-pager grounded in your docs.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.marketing.sampleTask.description",
+      "source": "Short, sourced copy you can check claim by claim.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.marketing.sampleTask.prompt",
+      "source": "Write launch.md: a one-page announcement for a feature I’ll name, for our customers. Base it on our docs and changelog. No claims we can’t support, under 300 words. List every factual claim with its source at the end.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.marketing.parts.outcome",
+      "source": "launch.md, a one-page announcement for customers.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.marketing.parts.context",
+      "source": "Your docs and changelog.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.marketing.parts.constraints",
+      "source": "Under 300 words, with no claims you cannot support.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.marketing.parts.verify",
+      "source": "Every claim listed with its source.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.finance.taskTip.body",
+      "source": "Point Droid at a spreadsheet. It plans the analysis and one chart for you to approve.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.finance.sampleTask.description",
+      "source": "A short readout and one chart. Your file stays untouched.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.finance.sampleTask.prompt",
+      "source": "Analyze a CSV I’ll point you to and write readout.md with the 3 biggest trends and one chart. If I have no file, first create a clearly labeled fictional 12-month revenue CSV. Don’t modify the source file. Show the formulas behind every number.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.finance.parts.outcome",
+      "source": "readout.md with the 3 biggest trends and one chart.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.finance.parts.context",
+      "source": "The CSV you point to, or a labeled fictional one.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.finance.parts.constraints",
+      "source": "The source file stays untouched.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.finance.parts.verify",
+      "source": "The formula behind every number.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.operations.taskTip.body",
+      "source": "Describe a process you run. Droid plans a map of its steps, owners, and bottlenecks.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.operations.sampleTask.description",
+      "source": "A clear map and a status update you could send.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.operations.sampleTask.prompt",
+      "source": "Map a recurring process I’ll describe as process.md: steps, owners, inputs, and where it stalls. Mark anything you inferred. End with a draft of the weekly status update I could send about it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.operations.parts.outcome",
+      "source": "process.md with steps, owners, inputs, and stalls.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.operations.parts.context",
+      "source": "The process you describe.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.operations.parts.constraints",
+      "source": "Nothing invented beyond what you describe.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.operations.parts.verify",
+      "source": "Anything inferred is marked for you to check.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.founder.taskTip.body",
+      "source": "Paste highlights and metrics. Droid plans an update and flags any missing numbers.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.founder.sampleTask.description",
+      "source": "Plain and short, with every number from you.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.founder.sampleTask.prompt",
+      "source": "Draft investor-update.md from highlights and metrics I’ll paste next. Keep it under 400 words, no hype, and flag anything that needs a number I didn’t give you. End with 3 concrete asks.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.founder.parts.outcome",
+      "source": "investor-update.md from your highlights and metrics.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.founder.parts.context",
+      "source": "The highlights and metrics you paste.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.founder.parts.constraints",
+      "source": "Under 400 words, with no hype.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.founder.parts.verify",
+      "source": "A flag on every number you did not give.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.somethingElse.taskTip.body",
+      "source": "Paste notes or a document. Droid plans a summary of decisions and actions for you.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.somethingElse.sampleTask.description",
+      "source": "Decisions and action items, with nothing invented.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.somethingElse.sampleTask.prompt",
+      "source": "Turn meeting notes I’ll paste next into notes-summary.md: decisions, action items with owners, and open questions. Don’t invent owners or dates; mark anything unclear. End with a short message I could send to the attendees.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.somethingElse.parts.outcome",
+      "source": "notes-summary.md with decisions, actions, and questions.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.somethingElse.parts.context",
+      "source": "The notes you paste.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.somethingElse.parts.constraints",
+      "source": "No invented owners or dates.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.firstSession.personas.somethingElse.parts.verify",
+      "source": "Anything unclear is marked for you to check.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.stumbleReasons.context.description",
+      "source": "Droid doesn’t know your conventions or what a task means, so it guesses. AGENTS.md, a README, and issue templates replace guesses with facts.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.stumbleReasons.access.description",
+      "source": "Droid can’t build or run your code, so it can’t see what it does. Documented builds, env templates, and logs open the door.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.stumbleReasons.checks.description",
+      "source": "Nothing tells Droid it’s wrong until you do. Linters, tests, branch protection, and analytics catch mistakes before review.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.half.prompt",
+      "source": "Your repo passes half of all its checks. Which level is it?",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.half.explanation",
+      "source": "50% clears the 40% bar for Level 3, not the 60% for Level 4.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.half.options.0.explanation",
+      "source": "Level 2 starts at 20%. Half of all checks reaches higher.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.half.options.2.explanation",
+      "source": "Level 4 needs 60% of all checks, and you pass 50%.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.cheapest.prompt",
+      "source": "You have time for one fix: add AGENTS.md (Level 2) or set up tracing (Level 3). Which raises your score more?",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.cheapest.explanation",
+      "source": "Every check counts the same, so do the faster fix first. AGENTS.md takes minutes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.cheapest.options.agentsMd.explanation",
+      "source": "It’s the faster fix, but it doesn’t count for more. Every check weighs the same.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.levelScenarios.cheapest.options.tracing.explanation",
+      "source": "A higher-level check doesn’t count for more. Every check weighs the same.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.readinessPageTour.tourReadinessSummary.body",
+      "source": "Organization Score averages every scored repo’s level. Repositories Tracked shows how much is measured.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.readinessPageTour.tourReadinessRepositories.body",
+      "source": "Select a repo to see each check and why it failed, or refresh it to score it again.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.readinessPageTour.tourReadinessNav.body",
+      "source": "Agent Readiness lives in Analytics. Rescore after a fix and watch your level climb.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.runReadinessReport.summary",
+      "source": "Start scoring your repo",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.runReadinessReport.instructions",
+      "source": "In a new session in a Git project with an origin remote, send /readiness-report. It takes several minutes; the sidebar shows when it’s ready.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.runReadinessReport.tip",
+      "source": "The scorecard shows which checks your repo fails, so you fix real gaps instead of guessing. Droid looks for things like a README, a lint config, and pre-commit hooks, then saves the result to Agent Readiness. Large repos can take up to an hour, so start it now and keep going",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.runReadinessReport.coachmarks.runReadinessReport.body",
+      "source": "Send /readiness-report, then come back to the lesson. Droid scores your repo on its own.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.learnAgentReadiness.summary",
+      "source": "Learn the three reasons agents stumble",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.learnAgentReadiness.instructions",
+      "source": "When Droid struggles in a repo, it’s missing context, access, or checks. Open each to see which pillars your report grades.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.learnAgentReadiness.tip",
+      "source": "Knowing why Droid stumbles tells you which fix pays off. Without an AGENTS.md, Droid guesses your build and test commands and wastes turns; without tests or a linter, it can’t check its own work. Each pillar in your report traces back to one of these three causes",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.climbReadinessLevels.summary",
+      "source": "See how your level is set",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.climbReadinessLevels.instructions",
+      "source": "Your level is the share of all checks you pass: 20%, 40%, 60%, and 80% unlock Levels 2 to 5. Every check counts the same.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.climbReadinessLevels.tip",
+      "source": "Because every check counts the same, the cheapest failing checks are the fastest way up. Adding a lint config moves your score as much as setting up distributed tracing. Count how many checks stand between you and the next 20% band before you start a big project",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.reviewReadinessReport.summary",
+      "source": "Read your level and weakest pillar",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.reviewReadinessReport.instructions",
+      "source": "Find three things on your scorecard: your level, how far you are from the next one, and your weakest pillar.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.reviewReadinessReport.tip",
+      "source": "Your weakest pillar is where Droid wastes the most time in this repo, so it’s the best place to start. Open a failing check to read why it failed, such as no pre-commit hooks. Ask Droid about any check you don’t recognize before you fix it",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.reviewReadinessReport.coachmarks.askAboutReport.body",
+      "source": "Ask Droid to explain your level in plain words and pick what to fix first.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.reviewReadinessReport.coachmarks.askAboutReport.example",
+      "source": "Explain my readiness level simply and tell me what to fix first",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.reviewReadinessReport.skip.note",
+      "source": "Keep going or leave. The sidebar marks this lesson when your scorecard is ready, so come back to read it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.fixReadinessGap.summary",
+      "source": "Have Droid fix one failing check",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.fixReadinessGap.instructions",
+      "source": "Select Fix on a failing check and send the /readiness-fix it drafts. Then read what Droid changes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.fixReadinessGap.tip",
+      "source": "One fix moves your score and shows you what a readiness change looks like. /readiness-fix names the failing check, so Droid changes only what that check needs instead of rewriting your setup. If you have no report yet, ask Droid to write an AGENTS.md, the highest-leverage fix in most repos",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.fixReadinessGap.skip.note",
+      "source": "Run /readiness-fix later from your scorecard.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.tourReadinessPage.summary",
+      "source": "Track readiness across your repos",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.tourReadinessPage.instructions",
+      "source": "Agent Readiness in Analytics tracks every scored repo and your organization’s level. Follow the tour.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.steps.tourReadinessPage.tip",
+      "source": "{{tourPanelTipPrefix}} This page shows every scored repo, so you can spot which ones slow Droid down. After you merge a fix, refresh that repo to confirm the check now passes; your report appears here once Droid saves it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.agentReadiness.completion.nextStep",
+      "source": "Fix a gap, merge it, then run /readiness-report again to watch your score move.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.sampleFinding.title.text",
+      "source": "Apply the discount only once per order",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.sampleFinding.body.text",
+      "source": "A retried payment runs this branch again, so a 10% code takes 20% off and the order is undercharged.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.sampleFinding.fix.text",
+      "source": "Skip the discount when `order.discountApplied` is set, and set it after the first charge.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.droidExecExample.useCase.text",
+      "source": "A CI job reviews each branch and fixes what it finds, with no one at the keyboard.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.droidExecExample.warning.text",
+      "source": "High lets Droid edit, commit, and push without asking. Use it in CI or on a branch you can throw away.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.reviewSetup.install.description",
+      "source": "/install-code-review sets up Droid on your GitHub or GitLab repos.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.reviewSetup.rules.description",
+      "source": "Droid follows them in every review.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.reviewSetup.rules.action.text",
+      "source": "Create .factory/skills/review-guidelines/SKILL.md with our team’s code review rules",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.reviewSetup.template.description",
+      "source": "Turn on reviews from Automations instead.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.startSession.summary",
+      "source": "Ask Droid to review your changes",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.startSession.instructions",
+      "source": "Start a new session in a project with uncommitted changes and send the tip’s example. In the CLI, /review does the same.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.startSession.noComputerInstructions",
+      "source": "Set up a computer, then start a session in a project with uncommitted changes and send: Review my uncommitted changes",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.startSession.tip",
+      "source": "A review before you push catches bugs while the change is fresh and cheap to fix. Droid reads your diff and the code around it, and reports only bugs it can explain. If you have no uncommitted changes, ask Droid to review your last commit instead",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.startSession.coachmarks.askForCodeReview.body",
+      "source": "Ask in plain words. Droid looks for real bugs, not style.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.startSession.coachmarks.askForCodeReview.example",
+      "source": "Review my uncommitted changes",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.readCodeReview.summary",
+      "source": "Learn the parts of a finding",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.readCodeReview.instructions",
+      "source": "While Droid reviews, read this sample finding. Select each part, then find the highest priority in your own review.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.readCodeReview.tip",
+      "source": "Priority tells you what to fix before you merge and what can wait. P0 blocks the merge, P1 is a real bug Droid is confident about, P2 is plausible but unproven, and P3 is minor. A review with no findings is a good result",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.readCodeReview.activity.pins.priority.note",
+      "source": "P0 blocks the merge. P1 is a real bug Droid is confident about.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.readCodeReview.activity.pins.location.note",
+      "source": "The file and line that break, with the code below.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.readCodeReview.activity.pins.impact.note",
+      "source": "What goes wrong for users. Droid skips style nitpicks.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.readCodeReview.activity.pins.fix.note",
+      "source": "A suggested fix you can ask Droid to apply.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.readCodeReview.activity.caption",
+      "source": "Start with the highest priority. Fix P0 and P1 before you merge.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.fixReviewFinding.summary",
+      "source": "Have Droid fix the top finding",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.fixReviewFinding.instructions",
+      "source": "Draft the fix below and send it. When Droid finishes, open Changes and check the fix and its test.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.fixReviewFinding.tip",
+      "source": "A test proves the fix works and fails if someone brings the bug back. In Changes, check that the test covers the exact case the finding describes. If Droid found nothing, ask it to add a test for your change instead",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.fixReviewFinding.activity.choices.fixAndTest.description",
+      "source": "A test shows it’s fixed and keeps it fixed.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.fixReviewFinding.activity.choices.fixAndTest.action.text",
+      "source": "Fix the highest-priority finding and add a test that catches it",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.fixReviewFinding.skip.note",
+      "source": "Check Changes when Droid finishes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.learnDroidExec.summary",
+      "source": "Run a review from a script or CI",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.learnDroidExec.instructions",
+      "source": "droid exec runs one task with no chat, so a script or CI job can run it. Read the command a CI review would use.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.learnDroidExec.tip",
+      "source": "droid exec runs Droid in CI or a script with no one watching, so the --auto level is your safety net. With no flag it only reads; low allows file edits, medium adds installs and commits, and high allows git push. If a task needs more, it stops and keeps what it already changed",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.learnDroidExec.activity.pins.autonomy.note",
+      "source": "With no --auto flag, Droid only reads. high also allows edits, commits, and git push.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.learnDroidExec.activity.pins.where.note",
+      "source": "A CI runner or a throwaway branch keeps a wrong change away from your main work.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.learnPullRequestReview.summary",
+      "source": "Review every pull request automatically",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.learnPullRequestReview.instructions",
+      "source": "Droid can review each pull request and comment on real bugs. Set it up from a session or from Automations, and add your rules.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.steps.learnPullRequestReview.tip",
+      "source": "Automatic review checks every pull request, including the ones nobody asked about. Set review_depth: deep for thorough reviews or shallow for fast ones. Write your team’s rules in .factory/skills/review-guidelines/SKILL.md so Droid flags what your reviewers would",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automatedCode.completion.nextStep",
+      "source": "Ask Droid to review your changes before your next push.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.weekdaySummary.prompt",
+      "source": "Summarize changed tickets every weekday at 9am.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.weekdaySummary.explanation",
+      "source": "A clock starts this run, so it’s Scheduled. Schedules run in UTC unless you name a time zone.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.weekdaySummary.whyNot.slack",
+      "source": "Nobody posts a message to start it. The time of day is the trigger.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.weekdaySummary.whyNot.github",
+      "source": "No repository event happens at 9am. Only the clock changes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.weekdaySummary.whyNot.webhook",
+      "source": "No outside service calls in. The time of day is the trigger.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.channelMessage.prompt",
+      "source": "Answer new questions posted in #ask-platform.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.channelMessage.explanation",
+      "source": "A message in a channel starts each run, and Droid replies in its thread.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.channelMessage.whyNot.scheduled",
+      "source": "A schedule would answer late and in batches. Each message should start its own run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.channelMessage.whyNot.github",
+      "source": "The questions arrive in Slack, not in a repository.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.channelMessage.whyNot.webhook",
+      "source": "Slack is built in. A webhook is for services that have no trigger of their own.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.externalAlert.prompt",
+      "source": "Investigate each alert your monitoring tool sends.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.externalAlert.explanation",
+      "source": "The monitoring tool posts each alert to the automation’s webhook URL, which starts a run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.externalAlert.whyNot.scheduled",
+      "source": "Polling on a schedule finds alerts late. A webhook starts a run as each one fires.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.externalAlert.whyNot.slack",
+      "source": "That works only if alerts land in Slack. Here the tool calls Factory directly.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.triggerScenarios.externalAlert.whyNot.github",
+      "source": "Alerts come from your monitoring tool, not from a repository.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.starterGalleryTour.tourCreateWithDroid.body",
+      "source": "Create with Droid turns a plain description into an automation. You’ll do the same in a session next.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.starterGalleryTour.tourStarters.body",
+      "source": "Each starter fills in a trigger and a prompt. Starter schedules are in UTC, so check the time.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.confirmFirst",
+      "source": "Show me the instructions before you create it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.automationDrafts.myPullRequests.description",
+      "source": "A weekday list of PRs that need you.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.automationDrafts.myPullRequests.action.text",
+      "source": "Create a private scheduled automation. Every weekday at 9am my time, list my open pull requests that need my action, with links. Reply in the run only; don’t post anywhere or change anything. If none need me, reply \"All clear.\" {{confirmFirst}}",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.automationDrafts.weeklyTickets.description",
+      "source": "Monday recap of one project’s tickets.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.automationDrafts.weeklyTickets.action.text",
+      "source": "Create a private scheduled automation. Every Monday at 9am my time, summarize tickets in <project> that changed last week as Blocked, Needs review, and Other. Reply in the run only; don’t edit tickets or post. If nothing changed, reply \"No updates.\" {{confirmFirst}}",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.automationDrafts.myTask.description",
+      "source": "Droid interviews you, then drafts it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.automationDrafts.myTask.action.text",
+      "source": "I want to automate a task I repeat: <describe it>. Ask what should start it, where results go, and what it must never do. Then write private automation instructions with a source, task, output, and limits. {{confirmFirst}}",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.chooseAutomationTrigger.summary",
+      "source": "Match each job to its trigger",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.chooseAutomationTrigger.instructions",
+      "source": "An automation is instructions Droid runs on its own. Its trigger decides when. Pick the trigger for each job.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.chooseAutomationTrigger.tip",
+      "source": "The trigger decides whether a run arrives while the work still matters. Scheduled runs use UTC, so a 9am New York digest needs 13:00 or 14:00 depending on daylight saving. Slack, GitHub and webhook triggers start the moment their event fires, so use them instead of checking for events on a schedule.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.summary",
+      "source": "Read a prompt that runs alone",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.instructions",
+      "source": "No one is around to answer questions mid-run. Tap each pin to see what makes this prompt work alone.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.tip",
+      "source": "An automation runs with no one to answer its questions, so anything the prompt leaves out, Droid has to guess. Naming the source, task, output and limits turns those guesses into rules you can check in every run. Say what Droid must never post, edit or delete, and keep tokens in Settings › Secrets instead of the prompt.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.blocks.prompt.text",
+      "source": "Read tickets in the Launch project that changed since the last successful run. Group them: Blocked, Needs review, Other. For each: title, owner, what changed, link.\nReply with at most 10 tickets. Do not edit tickets or post anywhere. If nothing changed, reply \"No updates.\" If access fails, say so. Never guess.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.blocks.source.text",
+      "source": "Source: Launch tickets changed since the last successful run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.blocks.task.text",
+      "source": "Task: three groups, and four fields for each ticket.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.blocks.output.text",
+      "source": "Output: at most 10 tickets, with no edits or posts.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.blocks.limits.text",
+      "source": "Limits: a fixed reply for a quiet day, and no guessing when access fails.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.pins.source.note",
+      "source": "Names exactly what to read, and only what changed since the last run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.pins.task.note",
+      "source": "Spells out the grouping and the fields, so every run looks the same.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.pins.output.note",
+      "source": "Caps the length and says where the result goes, and where it must not.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.pins.limits.note",
+      "source": "Covers the empty day and the failure, so Droid never invents an answer.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.learnAutomationPrompt.activity.caption",
+      "source": "Source, task, output, limits: check every prompt you write for all four.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.browseAutomationTemplates.summary",
+      "source": "See what teams already automate",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.browseAutomationTemplates.instructions",
+      "source": "New automation opens the starter gallery. Skim a few to borrow ideas for your own.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.browseAutomationTemplates.tip",
+      "source": "{{tourPanelTipPrefix}} A starter shows a working prompt, trigger and output for a common job, so you can copy its shape instead of starting from a blank page. Browsing is safe; nothing runs until you create an automation.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.startSession.summary",
+      "source": "Ask Droid to set one up",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.startSession.instructions",
+      "source": "Start a new session, pick a draft below, fill in the <placeholders>, and send it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.startSession.tip",
+      "source": "You get a working automation without learning its settings first. Droid asks about whatever your draft leaves open, such as the schedule, the channel to post in or what counts as changed, then writes the prompt and trigger for you to review. Describe the result you want to read and let Droid work out the steps.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.startSession.coachmarks.sendAutomationRequest.body",
+      "source": "Pick a draft in the lesson panel, make it yours, and send it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.createAutomation.summary",
+      "source": "Check the prompt, then approve",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.createAutomation.instructions",
+      "source": "Answer Droid’s questions. Check its prompt for a source, task, output, and limits, then approve the creation.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.createAutomation.tip",
+      "source": "Approving is your last chance to change what runs without you. Droid creates it with the CreateAutomation tool, and a scheduled automation on a Droid Computer runs once right away, so read the prompt first. Keep it Private until one good run proves it; Run as sets whose identity and billing it uses.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.createAutomation.coachmarks.tightenAutomation.body",
+      "source": "Missing a limit or an empty-day rule? Ask Droid to add it before it creates anything.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.createAutomation.coachmarks.tightenAutomation.example",
+      "source": "Add a limit: never post or edit anything. If nothing changed, reply \"No updates.\"",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.createAutomation.skip.note",
+      "source": "Droid can still create it in this session.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.tourAutomationsPage.summary",
+      "source": "Find your automation and its runs",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.tourAutomationsPage.instructions",
+      "source": "Your automation now lives on the Automations page. Find it and open its first run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.tourAutomationsPage.tip",
+      "source": "{{tourPanelTipPrefix}} The first run shows whether your instructions hold up on real data. Each run is listed with its outcome and opens to show what Droid did, and Run Now tests an edit without waiting for the schedule.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.tourAutomationsPage.coachmarks.tourAutomationOwnership.body",
+      "source": "Private automations are yours alone. Share one from its row menu once it earns trust.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.tourAutomationsPage.coachmarks.tourAutomationFilters.body",
+      "source": "Search by name, or filter by the triggers you matched at the start.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.steps.tourAutomationsPage.coachmarks.tourAutomationList.body",
+      "source": "Open your automation to see each run in Events. The row menu runs it now or pauses it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.automations.completion.nextStep",
+      "source": "Read each new automation’s first run. If it holds up for a week, share it with your team.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.sampleWikiPage.title.text",
+      "source": "Checkout service",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.sampleWikiPage.purpose.text",
+      "source": "Takes a customer’s cart, charges their card, and emails the receipt.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.sampleWikiPage.flowHeading.text",
+      "source": "How a payment flows",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.sampleWikiPage.flow.items.0",
+      "source": "`api/checkout.ts` takes the cart",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.sampleWikiPage.flow.items.1",
+      "source": "`payments/charge.ts` calls the payment provider",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.sampleWikiPage.flow.items.2",
+      "source": "`jobs/receipt.ts` emails the receipt",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.sampleWikiPage.runHeading.text",
+      "source": "Run it locally",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.sampleWikiPage.sources.text",
+      "source": "Sources: `api/checkout.ts:12`, `payments/charge.ts:40`",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.everyMerge.prompt",
+      "source": "You want the wiki to match main after every merge.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.everyMerge.explanation",
+      "source": "Recurring refreshes run on each push, so no one has to remember.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.everyMerge.options.0.explanation",
+      "source": "One-time refreshes once. The next merge makes it stale again.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.beforeDemo.prompt",
+      "source": "You want one repo’s wiki current before a demo tomorrow.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.beforeDemo.explanation",
+      "source": "One refresh now is all you need.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.beforeDemo.options.1.explanation",
+      "source": "Recurring sets up CI for every push. That’s more than one demo needs.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.laptopClosed.prompt",
+      "source": "Twenty wikis need a refresh, and your laptop is about to close.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.laptopClosed.explanation",
+      "source": "Cloud refreshes run on a Droid Computer, not your laptop.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.refreshScenarios.laptopClosed.options.local.explanation",
+      "source": "Local gives you a command to run on your own machine.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiPageTour.tourWikiRepositories.body",
+      "source": "Select a repository to read its wiki. Yours appears here when /wiki finishes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiPageTour.tourWikiStats.body",
+      "source": "A fresh wiki matches the latest code. A stale one may not. Filter to find wikis to refresh.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiPageTour.tourWikiRefresh.body",
+      "source": "Pick repositories, then refresh once or on every push, from your machine or in the cloud.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiQuestions.authentication.description",
+      "source": "Ask what the wiki says about signing in.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiQuestions.authentication.action.text",
+      "source": "What does this repository’s wiki say about authentication?",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiQuestions.architecture.description",
+      "source": "Use the wiki to see how the parts fit together.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiQuestions.architecture.action.text",
+      "source": "Use this repository’s wiki to explain the architecture.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiQuestions.gettingStarted.description",
+      "source": "Find how to run and test this repository.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.wikiQuestions.gettingStarted.action.text",
+      "source": "Find the getting-started guide in this repository’s wiki.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.generateWiki.summary",
+      "source": "Start a wiki for a repo you know",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.generateWiki.instructions",
+      "source": "Start a new session in a repository you know and send /wiki. It takes 15 to 20 minutes, so keep going while it runs.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.generateWiki.tip",
+      "source": "A wiki gives you and Droid a map of the repo, so questions start from written answers instead of a fresh code search. Pick a repo you know well so you can judge whether the pages are right. The first run takes 15 to 20 minutes; refreshes update only the pages your changes affect",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.generateWiki.coachmarks.generateWiki.body",
+      "source": "Droid reads the code, writes the wiki, and uploads it to Factory.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.learnAutoWiki.summary",
+      "source": "See what a wiki page holds",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.learnAutoWiki.instructions",
+      "source": "While Droid writes, read this sample page. Select each part to see what your wiki will answer.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.learnAutoWiki.tip",
+      "source": "Knowing what a page holds tells you which questions the wiki can answer. Each page links to the files it describes, so you can check a claim against the code. If your organization turns off wiki sync, Droid saves the pages to droid-wiki/ in your repo instead",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.learnAutoWiki.activity.pins.purpose.note",
+      "source": "Each page explains one part of the repo in plain words.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.learnAutoWiki.activity.pins.architecture.note",
+      "source": "How the parts connect, so you know where a change lands.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.learnAutoWiki.activity.pins.gettingStarted.note",
+      "source": "How to run and test it, so you can make a change.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.learnAutoWiki.activity.pins.sources.note",
+      "source": "Links to the code, so you can check what the page says.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.learnAutoWiki.activity.caption",
+      "source": "Written from your code. Check important details against the sources.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.tourWikiPage.summary",
+      "source": "Find your wikis and their freshness",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.tourWikiPage.instructions",
+      "source": "Wikis live on the Wiki page. Follow the tour to find yours, check freshness, and refresh.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.tourWikiPage.tip",
+      "source": "{{tourPanelTipPrefix}} Freshness tells you whether a wiki still matches the code, since a stale page can point you to files that moved. Nothing refreshes until you pick repositories and an option.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.automateWiki.summary",
+      "source": "Pick the right refresh",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.automateWiki.instructions",
+      "source": "A refresh updates the pages your latest code changes affect. Pick the right refresh for each case.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.automateWiki.tip",
+      "source": "An automatic refresh keeps the wiki matching your code without anyone remembering to run it. /install-wiki adds a GitHub Actions or GitLab CI job that refreshes on every push to your default branch. Save FACTORY_API_KEY as a CI secret, never in the workflow file",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.browseWiki.summary",
+      "source": "Ask your wiki a question",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.browseWiki.instructions",
+      "source": "When your wiki is ready, open it on the Wiki page. To ask about it, start a new session in that repo.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.steps.browseWiki.tip",
+      "source": "Asking the wiki first gets you an answer with links to the source, faster than reading the code yourself. Start the session in the same repo so Droid uses its wiki. If it’s still generating, finish now; your wiki appears on the Wiki page when it’s done",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.autoWiki.completion.nextStep",
+      "source": "Read your wiki when it’s ready, then send /install-wiki to keep it fresh on every push.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.laptopClosed.prompt",
+      "source": "Droid should keep working tonight while your laptop is closed.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.laptopClosed.explanation",
+      "source": "A Droid Computer lives in Factory’s cloud, so it keeps going when your laptop sleeps.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.laptopClosed.whyNot.remote-control",
+      "source": "Remote Control uses your machine. If it sleeps or goes offline, Droid stops.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.gpuBox.prompt",
+      "source": "The task needs your team’s GPU server and its private network.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.gpuBox.explanation",
+      "source": "Remote Control connects a machine you already run, with its hardware, tools, and network.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.gpuBox.whyNot.managed",
+      "source": "A Droid Computer is a standard Linux box in Factory’s cloud. It can’t reach your server’s hardware.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.cleanSetup.prompt",
+      "source": "You want a fresh, separate place to set up a repo and leave it ready.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.cleanSetup.explanation",
+      "source": "Factory provisions it for you, and files, packages, and services persist between sessions.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.whereScenarios.cleanSetup.whyNot.remote-control",
+      "source": "That would mix the setup into a machine you already use. A Droid Computer keeps it separate.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.computerSettingsTour.tourManagedComputers.body",
+      "source": "Managed Computers lists your Droid Computers. They keep files and tools between sessions, and idle ones pause until needed.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.computerSettingsTour.tourYourComputers.body",
+      "source": "Your Computers lists machines connected with Remote Control. In the desktop app, turn it on in Settings › This Computer.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.computerSettingsTour.tourNewManagedComputer.body",
+      "source": "Name it and pick repositories. Running time counts toward your plan’s compute; see Settings › Usage.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.apiKey.prompt",
+      "source": "Your tests on the new computer need an API key.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.apiKey.options.paste.explanation",
+      "source": "The key then sits in your session history, and later sessions won’t have it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.apiKey.options.envFile.explanation",
+      "source": "Once committed, everyone with repo access can read it, and git history keeps it after you delete it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.apiKey.explanation",
+      "source": "New sessions on your Droid Computers get saved secrets as environment variables, and no one can view the value again.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.longJob.prompt",
+      "source": "A two-hour data import should finish while you’re in meetings.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.longJob.options.background.explanation",
+      "source": "With no session working and nothing connected, the computer pauses after about 5 minutes and the import stops with it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.longJob.explanation",
+      "source": "A working session keeps the computer awake. A paused computer keeps its memory and files, but nothing runs until it wakes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.delete.prompt",
+      "source": "Droid finished a fix on a Droid Computer you’re about to delete.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.delete.options.delete.explanation",
+      "source": "The session keeps the conversation, not the files. Deleting the computer deletes the fix.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.habitScenarios.delete.explanation",
+      "source": "The computer’s disk is the only copy of its files. Push or copy anything you need before deleting it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.chooseDroidComputer.summary",
+      "source": "Pick a Droid Computer or Remote Control",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.chooseDroidComputer.instructions",
+      "source": "Droid can work on a Droid Computer in Factory’s cloud, or on your own machine with Remote Control. Pick one for each job.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.chooseDroidComputer.tip",
+      "source": "Where Droid works decides which files, tools and networks it can reach. A Droid Computer is a Linux machine in Factory’s cloud that keeps working while your laptop sleeps, while Remote Control lets Droid use a machine you already run, with its hardware and private network. Pick by what the task needs to reach.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.tourComputerSettings.summary",
+      "source": "Create a Droid Computer",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.tourComputerSettings.instructions",
+      "source": "Droid Computers in Settings lists every computer you can use. Follow the tips, then create one.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.tourComputerSettings.tip",
+      "source": "{{tourPanelTipPrefix}} A Droid Computer keeps its files, packages and services between sessions, so you set up a repo once. Idle computers pause on their own and wake when a session needs them, and running time counts toward your plan’s compute in Settings › Usage.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.tourComputerSettings.skip.note",
+      "source": "Create one later in Settings › Droid Computers.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.checkComputerDecisions.summary",
+      "source": "Practice three first-week decisions",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.checkComputerDecisions.instructions",
+      "source": "While your computer sets up, decide what you’d do in each situation.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.startSession.summary",
+      "source": "Ask Droid to check it’s ready",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.startSession.instructions",
+      "source": "Start a new session on your new computer and send the draft to finish the lesson. Droid checks it’s ready for your repo.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.startSession.tip",
+      "source": "A readiness check finds missing tools before they break a real task halfway through. Dependency installation on a new computer is best-effort, so a clone, install and test run shows what failed in a few minutes. Fix those gaps once and every later session on the computer starts clean.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.startSession.coachmarks.1.body",
+      "source": "Choose the computer you just created, then a folder on it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.startSession.coachmarks.readinessCheck.body",
+      "source": "Pick the draft in the lesson panel, name your repository, and send it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.startSession.activity.choices.readinessCheck.description",
+      "source": "Clone, install, run the tests, and report gaps.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.startSession.activity.choices.readinessCheck.action.text",
+      "source": "Check this computer is ready to work on <repository>: clone it if it’s missing, install dependencies, and run the tests. Report what’s missing or failing. Don’t change any code.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.steps.startSession.skip.note",
+      "source": "Run this check on any new computer before real work.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidComputers.completion.nextStep",
+      "source": "Read the readiness report, fix any gaps, then hand the computer a real task.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.weekdaySummary.prompt",
+      "source": "Summarize open tickets every weekday morning.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.weekdaySummary.explanation",
+      "source": "A schedule and saved instructions cover it. Code would only add upkeep.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.weekdaySummary.whyNot.sdk",
+      "source": "Nothing here needs your code in the loop. An automation does it with no upkeep.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.dashboardInvestigation.prompt",
+      "source": "Add an Investigate button to your own dashboard that streams Droid’s progress.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.dashboardInvestigation.explanation",
+      "source": "Your app starts the session and owns the screen. Only the SDK puts Droid inside your product.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.dashboardInvestigation.whyNot.automation",
+      "source": "Automations report in Factory, not in your app. Your dashboard needs to drive Droid itself.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.enforcedRouting.prompt",
+      "source": "Route each finding to a review queue by severity, using rules your team owns.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.enforcedRouting.explanation",
+      "source": "Droid returns structured findings; your code validates them and applies the rule every time.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.workflowScenarios.enforcedRouting.whyNot.automation",
+      "source": "An automation can follow the rule, but only code can guarantee it on every run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.sdkBuildChoices.python.description",
+      "source": "Uses the droid-sdk package.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.sdkBuildChoices.python.action.text",
+      "source": "In a new folder, sdk-practice, build and run a small Python script with the droid-sdk package. Give Droid this fictional bug: \"Search crashes when the query is empty.\" Get a summary and severity (low, medium, high) as structured output; route high to Priority, the rest to Standard. Use my existing login. Run it and show the command, exit status and printed output.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.sdkBuildChoices.typescript.description",
+      "source": "Uses @factory/droid-sdk on Node.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.sdkBuildChoices.typescript.action.text",
+      "source": "In a new folder, sdk-practice, build and run a small Node script with @factory/droid-sdk. Give Droid this fictional bug: \"Search crashes when the query is empty.\" Get a summary and severity (low, medium, high) as structured output; route high to Priority, the rest to Standard. Use my existing login. Run it and show the command, exit status and printed output.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.chooseSdkWorkflow.summary",
+      "source": "Pick the simplest fit for each job",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.chooseSdkWorkflow.instructions",
+      "source": "Automations run saved instructions on a trigger. The SDK runs Droid from your own code. Pick the simplest fit.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.chooseSdkWorkflow.tip",
+      "source": "Picking the right tool keeps you from maintaining code you didn’t need. An automation runs a prompt on a trigger with no code to own, while an SDK script lets your code check Droid’s answer and decide what happens next, such as where a bug is routed. Reach for the SDK when a rule must hold on every run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.summary",
+      "source": "See where Droid ends and code begins",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.instructions",
+      "source": "Read what the script is for, then tap each pin to see what Droid decides and what your code decides.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.tip",
+      "source": "Reading the script shows where Droid’s judgment ends and your rules begin. In Python, run(prompt, output=Triage) returns a result whose output matches your Pydantic model, and result.success and result.subtype tell you whether the run worked. The TypeScript SDK works the same way, with run() and an outputFormat JSON schema.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.activity.blocks.useCase.text",
+      "source": "Bug reports arrive as free text from a form, Slack or your tracker. This script has Droid read one report and return a summary and a severity. Plain code then sends high severity to the Priority queue, the same way every time.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.activity.pins.shape.note",
+      "source": "You define the answer’s shape. Droid must return exactly these fields.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.activity.pins.judgment.note",
+      "source": "The script reads one incoming report from the file you pass it. Droid decides the summary and severity.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.activity.pins.failures.note",
+      "source": "A failed run is a value, not an exception. Check it before using the output.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.activity.pins.rule.note",
+      "source": "Your code applies the routing rule, the same way on every run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.learnDroidSdk.activity.caption",
+      "source": "Droid judges each report. Your code routes every report the same way, and the queue feeds your team’s triage board.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.startSession.summary",
+      "source": "Have Droid build and run it",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.startSession.instructions",
+      "source": "Start a new session in any project. Pick a language below and send the draft. Droid builds it and shows the exit status and output.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.startSession.tip",
+      "source": "The exit status and printed output prove the script ran; a description of what it should do proves nothing. The draft asks Droid to show the command, its exit status and the real output, and a failed run reports result.success as false with result.subtype saying why. Keep your API key in an environment variable, never in chat.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.startSession.coachmarks.buildSdkExample.body",
+      "source": "Pick a language in the lesson panel, then send the draft.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.customizeSdkWorkflow.summary",
+      "source": "Change the rule, keep the prompt",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.customizeSdkWorkflow.instructions",
+      "source": "Once the first run’s output is in, send the draft to change the routing rule. Compare the new output with the first run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.customizeSdkWorkflow.tip",
+      "source": "Keeping rules in code means a change takes one edit and behaves the same on every run. Here, sending medium severity to Priority is one line in the routing code, while the prompt that judges severity stays untouched. Put judgment in the prompt and fixed rules in code; mixing them makes runs hard to compare.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.customizeSdkWorkflow.coachmarks.customizeSdkWorkflow.body",
+      "source": "Pick the draft in the lesson panel and send it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.customizeSdkWorkflow.activity.choices.mediumToPriority.description",
+      "source": "Medium and high go to Priority.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.steps.customizeSdkWorkflow.activity.choices.mediumToPriority.action.text",
+      "source": "Change the routing so medium and high severity go to Priority; low stays Standard. Keep the prompt to Droid unchanged. Rerun the script, test the rule with all three severities, and show the new output next to the first run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.droidSdk.completion.nextStep",
+      "source": "Pick a step your team repeats by hand and ask Droid if an SDK script fits.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.sampleFinding.title.text",
+      "source": "Parameterize the invoice search query",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.sampleFinding.body.text",
+      "source": "The `search` parameter is pasted into the SQL string. Any signed-in user can search for `' OR 1=1 --` and read every customer’s invoices.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.sampleFinding.fix.text",
+      "source": "Pass `q` as a bound parameter, so the database treats it as text, not SQL.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.openAdmin.prompt",
+      "source": "Anyone on the internet can call a new admin endpoint, no login.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.openAdmin.explanation",
+      "source": "Easy to exploit, serious harm, no login: Critical. Block the merge.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.openAdmin.whyNot.p1",
+      "source": "High needs some condition, like a login. This needs none.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.openAdmin.whyNot.p2",
+      "source": "Anyone can do it today, so it’s worse than Medium.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.openAdmin.whyNot.p3",
+      "source": "Open admin access is serious harm, not a small one.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.otherInvoices.prompt",
+      "source": "A signed-in user can read another customer’s invoices by changing an ID.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.otherInvoices.explanation",
+      "source": "Exploitable with a login and leaks real data: High. Fix it before you merge.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.otherInvoices.whyNot.p0",
+      "source": "It needs a login first, so it’s High, not Critical.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.otherInvoices.whyNot.p2",
+      "source": "The attack path is real and the data is sensitive, so it’s High.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.otherInvoices.whyNot.p3",
+      "source": "Leaking customer data is serious harm, not a small one.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.loginRateLimit.prompt",
+      "source": "The login form lets anyone try passwords without a limit.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.loginRateLimit.explanation",
+      "source": "It needs many tries to cause harm: Medium. Plan a fix.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.loginRateLimit.whyNot.p0",
+      "source": "Guessing passwords takes many tries, so it isn’t immediately exploitable.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.loginRateLimit.whyNot.p1",
+      "source": "An attack needs time and luck, so the risk is moderate.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.priorityScenarios.loginRateLimit.whyNot.p3",
+      "source": "Password guessing can take over accounts, so it’s more than Low.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.securityAutomations.installCodeReview.description",
+      "source": "/install-code-review sets up Droid on pull requests. Say yes to security review.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.securityAutomations.securityAudit.description",
+      "source": "The Security Audit template scans a repo on your schedule.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.securityAutomations.guidelines.description",
+      "source": "Droid follows these in every security review.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.securityAutomations.guidelines.action.text",
+      "source": "Create .factory/skills/security-review-guidelines/SKILL.md with our team’s security rules",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.startSession.summary",
+      "source": "Scan your branch’s changes",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.startSession.instructions",
+      "source": "Start a new session in a Git project with changes on your branch. Send the tip’s example so Droid scans only those changes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.startSession.noComputerInstructions",
+      "source": "Set up a computer, then start a session in a Git project with branch changes and send: /security-review the changes on my branch",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.startSession.tip",
+      "source": "Scanning only your changes returns results in minutes, while the code is fresh to fix. /security-review takes plain words, so naming your branch stops Droid from asking what to scan. A full-project scan of a large repo can take much longer",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.startSession.coachmarks.askForSecurityReview.body",
+      "source": "Say what to scan in plain words, so Droid doesn’t have to ask.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.startSession.coachmarks.askForSecurityReview.example",
+      "source": "/security-review the changes on my branch",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.learnSecurityScan.summary",
+      "source": "Learn the parts of a finding",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.learnSecurityScan.instructions",
+      "source": "While Droid scans, read this sample finding. Select each part to see what a real finding tells you.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.learnSecurityScan.tip",
+      "source": "A finding you can read quickly is one you can fix before you merge. Droid checks STRIDE threats, the OWASP Top 10, LLM risks like prompt injection, and new dependencies. It reports only issues with a realistic attack, which is why each finding shows the data flow",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.learnSecurityScan.activity.pins.priority.note",
+      "source": "P0 to P3 says how soon to fix it. P1 means fix it before you merge.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.learnSecurityScan.activity.pins.sourceToSink.note",
+      "source": "Droid follows user input from the request into the database query.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.learnSecurityScan.activity.pins.attack.note",
+      "source": "Every finding names a realistic attack. No attack path, no finding.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.learnSecurityScan.activity.pins.fix.note",
+      "source": "A suggested fix you can ask Droid to apply.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.learnSecurityScan.activity.caption",
+      "source": "Droid reports only what it can trace, so each finding is worth reading.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.reviewSecurityFindings.summary",
+      "source": "Rank findings by how soon to fix",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.reviewSecurityFindings.instructions",
+      "source": "Rank each finding below. Then read your own results and find the highest priority. No findings is a good result.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.reviewSecurityFindings.tip",
+      "source": "Priority turns a list of findings into a plan. Fix P0 and P1 before you merge, because P1 means a confident, exploitable issue under some conditions; plan P2, and fix P3 when convenient. If you can’t picture the attack, ask Droid to walk you through it",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.reviewSecurityFindings.coachmarks.askAboutFinding.body",
+      "source": "Not sure what a finding means? Ask Droid to explain it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.reviewSecurityFindings.coachmarks.askAboutFinding.example",
+      "source": "Explain the most severe finding in plain words",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.fixSecurityFinding.summary",
+      "source": "Have Droid fix the worst finding",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.fixSecurityFinding.instructions",
+      "source": "Draft the fix below and send it. When Droid finishes, open Changes and check the fix and its test.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.fixSecurityFinding.tip",
+      "source": "A test that replays the attack proves the hole is closed and fails if it reopens. For an injection finding, that’s a test that sends the malicious input and expects a rejection. If Droid found nothing, ask it to add input validation to one route instead",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.fixSecurityFinding.activity.choices.fixAndTest.description",
+      "source": "A test shows it’s fixed and keeps it fixed.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.fixSecurityFinding.activity.choices.fixAndTest.action.text",
+      "source": "Fix the most severe finding and add a test that would have caught it",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.fixSecurityFinding.skip.note",
+      "source": "Check Changes when Droid finishes.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.automateSecurityReview.summary",
+      "source": "Run security reviews without asking",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.automateSecurityReview.instructions",
+      "source": "Pick how Droid keeps checking: on every pull request, on a schedule, or with your team’s own rules.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.steps.automateSecurityReview.tip",
+      "source": "Automatic scans check every teammate’s changes, including ones nobody thought to scan. Write your team’s rules in .factory/skills/security-review-guidelines/SKILL.md so Droid flags what your security team cares about. To audit every file, ask for a full-project scan and pick Deep; it can run for hours",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.securityReview.completion.nextStep",
+      "source": "Scan your changes before your next merge, or turn on security review for every pull request.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.newBugs.prompt",
+      "source": "Fix login bugs customers report in #support.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.newBugs.explanation",
+      "source": "New reports keep arriving, so a workstream can keep finding and fixing them.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.newBugs.whyNot.one-off",
+      "source": "There’s no finish line: next week brings new reports. One session can’t watch for them.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.oneBug.prompt",
+      "source": "Fix the login bug in ticket APP-42.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.oneBug.explanation",
+      "source": "One known task with a clear finish line. A regular session is enough.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.oneBug.whyNot.ongoing",
+      "source": "Nothing new will arrive once APP-42 is fixed. A workstream would sit idle.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.flakyTests.prompt",
+      "source": "Keep flaky tests from piling up in CI.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.flakyTests.explanation",
+      "source": "New flaky tests keep appearing, and each needs its own fix. That is ongoing work.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.goalScenarios.flakyTests.whyNot.one-off",
+      "source": "Fixing today’s flaky tests won’t stop tomorrow’s. The goal needs repeated checks.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.confirmProposal.prompt",
+      "source": "During setup you select Confirm proposal. What happens next?",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.confirmProposal.options.live.explanation",
+      "source": "Activation is a separate, later choice. Confirming only approves what Droid builds.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.confirmProposal.explanation",
+      "source": "Droid builds the agreed setup and runs a test. Nothing runs on its own yet.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.testRun.prompt",
+      "source": "The test run found real signals. Does it open pull requests?",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.testRun.options.opens.explanation",
+      "source": "A test run is a dry run. It never edits outside systems or opens PRs.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.testRun.explanation",
+      "source": "You judge the signals, changes, and one plan before anything touches your repos.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.autoMerge.prompt",
+      "source": "You activate the workstream. Will Droid merge its own PRs?",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.autoMerge.options.merges.explanation",
+      "source": "Auto-merge starts off. You must turn it on, and it never skips required reviews.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.approvalScenarios.autoMerge.explanation",
+      "source": "Auto-merge starts off, and review gates start on. Doing work and merging are separate permissions.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.suggestOnly",
+      "source": "Research only; don’t create or change anything.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreams.summary",
+      "source": "Tell ongoing goals from one-off tasks",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreams.instructions",
+      "source": "A workstream is an ongoing goal Droid keeps working on: it finds new work, fixes it, and follows the PRs. Sort each example.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreams.tip",
+      "source": "A workstream pays off when the same kind of work keeps arriving. A one-off ticket finishes faster in a normal session, while recurring bug reports or dependency bumps suit a workstream that picks up each new one. If you can’t name where the next item will come from, start with a session.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.summary",
+      "source": "Trace one bug from report to merge",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.instructions",
+      "source": "Every workstream runs four stages. Tap each pin to follow two bug reports to one merged fix.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.tip",
+      "source": "Knowing the four stages tells you where to look when work stalls. Intake polls your connected sources and records signals, Triage groups them into changes, Workers build each change, and Steward drives its pull request to green through merge or closure. The Software Factory overview maps your whole delivery lifecycle; a workstream is one pipeline inside it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.goal.text",
+      "source": "Goal: fix login bugs customers report.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.intake.items.0",
+      "source": "`#support`: “Login loops on Safari” becomes signal S-12.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.intake.items.1",
+      "source": "`#support`: “Can’t sign in on Safari” becomes signal S-13.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.triage.text",
+      "source": "S-12 and S-13 become one change, C-4: “Fix the Safari redirect loop.”",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.workers.items.0",
+      "source": "Droid writes a spec for C-4.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.workers.items.1",
+      "source": "You approve the spec.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.workers.items.2",
+      "source": "Droid writes the code and opens pull request #481.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.steward.items.0",
+      "source": "CI fails, so Droid pushes a fix.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.steward.items.1",
+      "source": "CI goes green and the pull request merges.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.blocks.steward.items.2",
+      "source": "C-4 is recorded as done.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.pins.intake.note",
+      "source": "Intake checks your sources and records each new item as a signal.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.pins.triage.note",
+      "source": "Triage groups related signals into one change you can approve or decline.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.pins.workers.note",
+      "source": "A worker writes a spec, waits for your approval, then builds and opens a pull request.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.pins.steward.note",
+      "source": "The steward drives the PR to green and records it merged or closed.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.learnWorkstreamStages.activity.caption",
+      "source": "Signals come in, changes go out. You approve at each gate.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.summary",
+      "source": "Ask Droid for goals that fit",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.instructions",
+      "source": "Start a new session in a project you know, or an empty folder. Pick a draft and send it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.tip",
+      "source": "Droid can only suggest a useful goal if it knows where new work shows up. Naming the source, such as a Slack channel, a Linear project or failing CI runs, lets it check what has really arrived there lately. A goal tied to a real source gives the workstream work on day one.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.coachmarks.1.body",
+      "source": "Pick a project you know for code-based goals, or an empty folder to talk about your team.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.coachmarks.suggestWorkstreamGoals.body",
+      "source": "Pick a draft in the lesson panel, add your context, and send it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.activity.choices.projectGoals.description",
+      "source": "Droid looks for work that keeps coming back.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.activity.choices.projectGoals.action.text",
+      "source": "Suggest up to three ongoing goals in this project that would make good workstreams, not one-off fixes. For each, say where new work shows up, one example change, and how we’d measure success. {{suggestOnly}}",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.activity.choices.teamGoals.description",
+      "source": "Start from problems, not code.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.askWorkstreamGoal.activity.choices.teamGoals.action.text",
+      "source": "Help me find an ongoing goal for a workstream. Ask what my team does, which problems keep coming back, and where we track them. Then suggest up to three goals and how we’d measure each. {{suggestOnly}}",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.createWorkstream.summary",
+      "source": "Know what each approval allows",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.createWorkstream.instructions",
+      "source": "While Droid researches, check what you control. Setup asks for your approval at each stage.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.createWorkstream.tip",
+      "source": "Knowing what each approval allows keeps a workstream from doing more than you meant. Confirming the proposal saves a Draft without activating it, the test run saves results to the Draft without opening pull requests, and approval gates stay on with auto-merge off until you change them. Activate only after you read the test run.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.tourWorkstreamsPage.summary",
+      "source": "Find decisions, then start a Draft",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.tourWorkstreamsPage.instructions",
+      "source": "Take one of Droid’s goals to the Workstreams page and select Create workstream.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.tourWorkstreamsPage.tip",
+      "source": "{{tourPanelTipPrefix}} Your Draft runs nothing until you activate it, so you can finish setup at your own pace. Activation turns on scheduled runs and the worker pool, and your approval gates and auto-merge setting stay as you left them.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.tourWorkstreamsPage.coachmarks.tourWorkstreamList.body",
+      "source": "Each row counts its signals and changes. Open one to see its stages at work.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.tourWorkstreamsPage.coachmarks.tourSoftwareFactoryInbox.body",
+      "source": "Changes and specs waiting for your approval collect here.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.steps.tourWorkstreamsPage.coachmarks.tourNewWorkstream.body",
+      "source": "Select Create workstream to save a Draft, then give Droid your goal. You approve every setup stage.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "lessons.content.workstreams.completion.nextStep",
+      "source": "Finish setup in your Draft. Review its test run before you activate it.",
+      "category": "course-prose",
+      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    }
+  ]
+}

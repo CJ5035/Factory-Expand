@@ -9,5 +9,5 @@ try {
   checkedPristine(ctx, set.patches);
   if (!existsSync(ctx.applied)) assertApplied(ctx, set.patches, new Map());
   assertApplied(ctx, set.patches, loadAddedFiles(set));
-  console.log('已应用 / Applied: pair hashes, three markers, resources, fuse and unpacked files verified.');
+  console.log(`已应用 / Applied: pair hashes, ${ctx.manifest.patchShape.edits} markers, resources, fuse and unpacked files verified.`);
 } catch (error) { console.error(error.message); process.exitCode = 1; }

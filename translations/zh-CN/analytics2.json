@@ -1,0 +1,901 @@
+{
+  "companyCostTab": {
+    "factoryStandardCreditConsumptionAcrossThe": "组织内的 Factory 标准积分消耗。",
+    "consumption": "消耗",
+    "yourFactoryStandardCreditConsumption": "你的 Factory 标准积分消耗。",
+    "usage": "用量"
+  },
+  "adoptionCapabilities": {
+    "toolUsage": "工具使用情况",
+    "recordedToolActivityAndMcpUsage": "所选范围内记录的工具活动和 MCP 使用情况。这些数据描述使用情况，不代表产出质量。",
+    "subtitle": "每个 Session 的工具调用次数为已报告每日数值的平均值。",
+    "toolCalls": "工具调用",
+    "toolCallsTooltip": "所选范围内记录的工具调用。",
+    "avgDailyMcpUsers": "平均每日 MCP 用户数",
+    "avgDailyMcpUsersTooltip": "将每天记录到 MCP 工具使用的不重复用户数相加，再除以范围内的日历天数。不是已配置 MCP 服务器数量，也不是整个范围内的不重复用户总数。",
+    "toolCallsPerSession": "工具调用 / Session",
+    "toolCallsPerSessionTooltip": "已报告的每日每 Session 平均工具调用次数的平均值。每天权重相同，不按 Session 数量加权。数值更高不一定代表结果更好。"
+  },
+  "adoptionOverview": {
+    "surfaceAdoption": "客户端使用率",
+    "averagePercentageOfDailyActiveUsers": "日活用户中使用各客户端的平均比例。",
+    "surfaceAdoptionCalculation": "客户端使用率计算方式",
+    "clientAdoptionDataIsNotAvailable": "此时段没有客户端使用率数据。",
+    "failedToLoadAdoptionData": "加载使用率数据失败",
+    "thereIsNoActivityDataIn": "所选日期范围内没有活动数据。",
+    "noAdoptionData": "暂无使用率数据",
+    "periodComparisonIsUnavailableRightNow": "目前无法对比时段，仅显示当前时段。",
+    "avgDau": "平均日活用户",
+    "avgWau": "平均周活用户",
+    "avgMau": "平均月活用户",
+    "totalSessions": "Session 总数",
+    "totalMessages": "消息总数",
+    "stickiness": "用户黏性",
+    "uniqueUsersActiveEachDayIn": "所选范围内每天活跃的不重复用户数。",
+    "activeUsers": "活跃用户",
+    "dailyTotalsWithMessagesOnThe": "每日总数，左轴为消息，右轴为 Session。",
+    "sessionsMessages": "Session 与消息",
+    "rollingWeeklyActiveUsersAsA": "滚动周活用户占所有成员的比例。",
+    "weeklyAdoption": "每周使用率",
+    "sessionsRightAxis": "Session（右轴）",
+    "messagesLeftAxis": "消息（左轴）",
+    "surfaceOverlapTooltip": "同一天用户可能使用多个客户端，因此比例可能重叠，总和不一定为 100%。",
+    "surfaceDefinition": "{{surface}}定义",
+    "loading": "正在加载使用率数据…",
+    "avgDauTooltip": "每天活跃的不重复用户数的平均值。",
+    "avgWauTooltip": "每个滚动七天时间范围内活跃的不重复用户数的平均值。",
+    "avgMauTooltip": "每个滚动 30 天时间范围内活跃的不重复用户数的平均值。",
+    "totalSessionsTooltip": "所选时段内创建的 Droid Session。",
+    "totalMessagesTooltip": "所选时段内发送的用户和助手消息。",
+    "stickinessTooltip": "平均日活用户数除以平均月活用户数。",
+    "noActiveUserData": "暂无活跃用户数据。",
+    "noSessionMessageData": "暂无 Session 或消息数据。",
+    "noMembershipData": "组织成员数据不可用。",
+    "wauPercentOfOrg": "周活用户占组织比例"
+  },
+  "adoptionTab": {
+    "adoption": "使用率",
+    "organizationEngagementAndPerUserActivity": "组织参与度及各用户活动。",
+    "subpages": {
+      "overview": "概览",
+      "users": "用户"
+    }
+  },
+  "adoptionUsers": {
+    "failedToLoadUsers": "加载用户失败",
+    "searchUsers": "搜索用户",
+    "exportFormat": "导出格式",
+    "noUsersFound": "未找到用户",
+    "clearSearch": "清除搜索",
+    "exportFormats": {
+      "aggregated": "汇总（每位用户摘要）",
+      "raw": "原始数据（每日每位用户）"
+    },
+    "loading": "正在加载用户…",
+    "pageSummary": "{{start}}–{{end}}，共 {{total}} 位用户",
+    "tryAnotherSearch": "请尝试其他搜索条件或日期范围。",
+    "noUserActivity": "所选日期范围内未记录用户活动。"
+  },
+  "adoptionUsersTable": {
+    "user": "用户",
+    "autonomy": "自主程度",
+    "lastActive": "最近活动",
+    "columns": {
+      "fsc": "FSC",
+      "sessions": "Session",
+      "messages": "消息",
+      "toolCalls": "工具调用"
+    },
+    "toolCallsTooltip": "所选时段内 Droid 为此用户工作时调用的工具总数。",
+    "autonomyTooltip": "工具调用次数与用户回合数之比，按此用户活跃天数取平均值。越高表示 Droid 在每条消息中完成的工作越多。",
+    "initials": "{{name}}的姓名首字母"
+  },
+  "concentrationBreakdowns": {
+    "topTickets": "高消耗工单",
+    "spendByRepo": "按仓库统计支出",
+    "topTicketsDescription": "FSC 最高的工单。不包括未关联工单的 Session。",
+    "spendByRepoDescription": "FSC 最高的仓库。不包括无法关联到仓库的 Session。"
+  },
+  "costAttributionSubpage": {
+    "rootSessionsOnly": "仅根 Session",
+    "attributionMode": "归因模式",
+    "close": "关闭",
+    "noLinkedPullRequests": "没有关联的拉取请求。",
+    "pr": "PR",
+    "title": "标题",
+    "status": "状态",
+    "author": "作者",
+    "openPullRequest": "打开拉取请求",
+    "noLinkedTickets": "没有关联的工单。",
+    "id": "ID",
+    "ticket": "工单",
+    "openTicket": "打开工单",
+    "noIncludedTickets": "没有计入的工单。",
+    "sessions": "Session",
+    "assignee": "负责人",
+    "fsc": "FSC",
+    "pullRequests": "拉取请求",
+    "tickets": "工单",
+    "linkedPullRequestDataIsUnavailable": "关联拉取请求数据不可用。",
+    "kpi": {
+      "projects": "项目",
+      "attributedTickets": "已归因工单",
+      "prs": "PR",
+      "sessions": "Session"
+    },
+    "moreContributors": "另有 {{overflow}} 位贡献者",
+    "openItem": "打开 {{name}}",
+    "rangeSummary": "{{start}}–{{end}}，共 {{total}} 项",
+    "progressSummary": "{{shown}} / {{total}}",
+    "projectSummary_one": "{{tickets}} 个工单 · {{fsc}} FSC",
+    "projectSummary_other": "{{tickets}} 个工单 · {{fsc}} FSC",
+    "untitledSession": "未命名 Session",
+    "fscValue": "{{value}} FSC",
+    "openSession": "打开 Session {{session}}",
+    "pullRequestLinksUnavailable": "拉取请求链接不可用",
+    "pullRequestCount_one": "{{count}} 个拉取请求",
+    "pullRequestCount_other": "{{count}} 个拉取请求",
+    "consumptionAttribution": "消耗归因",
+    "consumptionBySession": "按 Session 统计消耗"
+  },
+  "costCard": {
+    "noDataForThisRange": "此范围内暂无数据",
+    "failedToLoad": "加载失败：{{message}}",
+    "definition": "{{label}}定义",
+    "loading": "正在加载…"
+  },
+  "costVisualization": {
+    "logScaleEnabledForVisibilityTooltip": "已启用对数刻度以便查看。提示框显示原始 FSC，以及各系列占当日用量的比例。",
+    "noDataAvailable": "暂无数据",
+    "hoverOverADayToSee": "将鼠标悬停在某天上可查看详情",
+    "less": "较少",
+    "more": "较多",
+    "kpi": {
+      "sessions": "Session",
+      "timeSpent": "耗时",
+      "messages": "消息",
+      "totalFsc": "FSC 总计",
+      "rawTokens": "原始 Token",
+      "avgFscPerMessage": "平均 FSC / 消息",
+      "avgFscPerSession": "平均 FSC / Session",
+      "fscPctOfRaw": "FSC 占原始 Token 比例",
+      "cacheRead": "缓存读取",
+      "cacheHitPct": "缓存命中率",
+      "routedSessions": "路由 Session",
+      "routedFsc": "路由 FSC",
+      "byokRoutedMessages": "BYOK 路由消息",
+      "savedFscVsAllFrontier": "对比全部前沿模型节省的 FSC",
+      "savedVsAllFrontier": "对比全部前沿模型的节省",
+      "savedFscVsOrgUsage": "对比组织用量节省的 FSC",
+      "savedVsOrgUsage": "对比组织用量的节省"
+    },
+    "shareOfDay": "{{value}}（占当日 {{pct}}）",
+    "overlayCallout": "{{label}} · 右轴，{{callout}}",
+    "derivedFromBars": "由上方柱形图推导",
+    "heatMetrics": {
+      "sessions": "Session",
+      "timeSpent": "耗时",
+      "fsc": "FSC"
+    },
+    "heatSessions": "{{value}} 个 Session",
+    "heatFsc": "{{value}} FSC",
+    "metricLabels": {
+      "avgDuration": "平均持续时间"
+    }
+  },
+  "cumulativeSpend": {
+    "cumulativeSpendPareto": "累计支出（帕累托图）",
+    "description": "按支出排序，展示 FSC 在 Session 或用户中的集中程度。按 Session 时分为前 1%、随后 9%、中间 40% 和后 50%；按用户时分为十等分组。",
+    "bySession": "按 Session",
+    "byUser": "按用户",
+    "userDetail_one": "{{formattedCount}} 位用户 · {{fsc}} / {{totalFsc}} FSC",
+    "userDetail_other": "{{formattedCount}} 位用户 · {{fsc}} / {{totalFsc}} FSC",
+    "sessionDetail_one": "{{formattedCount}} 个 Session · {{fsc}} / {{totalFsc}} FSC",
+    "sessionDetail_other": "{{formattedCount}} 个 Session · {{fsc}} / {{totalFsc}} FSC",
+    "subtitle": "柱形 = FSC 占比 · 折线 = 累计占比",
+    "shareOfFsc": "FSC 占比",
+    "cumulative": "累计"
+  },
+  "personalUsageOverview": {
+    "shareOfYourFscByModel": "所选日期范围内，各模型占你的 FSC 的比例（计费模型前 20 名），其余归入其他。不包括 Factory 在后台运行的模型（如 Session 标题生成），因此反映你主动使用的模型。",
+    "modelMix": "模型构成",
+    "shareOfYourFscByThe": "按 Session 所归因工单的标签，统计你的 FSC 占比。没有归因到带标签工单的 Session 显示为未分类。",
+    "usageBySessionLabel": "按 Session 标签统计用量",
+    "usageAttribution": "用量归因",
+    "kpi": {
+      "totalFscDays": "FSC 总计 · {{days}} 天",
+      "totalFsc": "FSC 总计",
+      "avgDailyFsc": "平均每日 FSC",
+      "sessions": "Session",
+      "messages": "消息"
+    },
+    "attributionModes": {
+      "sessions": {
+        "label": "Session",
+        "subtitle": "FSC 最高的 50 个根 Session",
+        "description": "FSC 最高的根 Session，显示归因工单和 PR、计费最多的模型，以及从第一条到最后一条计费消息的时间跨度。点击标题可打开 Session；子代理支出汇总到其所属根 Session。"
+      },
+      "tickets": {
+        "label": "工单",
+        "subtitle": "FSC 最高的 20 个工单",
+        "description": "将你的 Session FSC 按 Linear 或 Jira 工单汇总，并显示工单当前状态。未检测到工单的 Session 不计入，因此这些行的合计不等于你的 FSC 总计。"
+      },
+      "prs": {
+        "label": "PR",
+        "subtitle": "FSC 最高的 20 个 PR",
+        "description": "将你的 Session FSC 按 GitHub 拉取请求或 GitLab 合并请求汇总，并显示标题和当前状态。未检测到 PR 的 Session 不计入，因此这些行的合计不等于你的 FSC 总计。"
+      }
+    }
+  },
+  "routerReasons": {
+    "hoverASegmentForItsCount": "悬停在分段上可查看其数量及占该模型的比例",
+    "whyAutoServedEachModelOver": "解释所选范围内 Auto 为何使用各个模型。每条柱形代表一个模型：长度是在上方意图和代理类型筛选条件下，该模型占所有路由用量的比例；各分段代表路由器选择该模型的原因。模型筛选在此不适用，因为每个模型已独占一行。未归因表示这些消息未记录原因，例如产生于记录机制启用前的 Session，或重启后恢复的 Session。",
+    "routingReasonsMeasure": "路由原因计量方式",
+    "routingReasons": "路由原因",
+    "allModels": "所有模型",
+    "shareOfModel": "占 {{model}} 的 {{share}}",
+    "shareOfRoutedMessages": "占路由消息的 {{share}}",
+    "shareOfRoutedFsc": "占路由 FSC 的 {{share}}",
+    "subtitleMessages": "{{population}} · 已归因：占路由消息的 {{share}}",
+    "subtitleFsc": "{{population}} · 已归因：占路由 FSC 的 {{share}}",
+    "segmentAriaLabel": "{{model}}：{{reason}}，{{share}}"
+  },
+  "routerTransparency": {
+    "model": "模型",
+    "intent": "意图",
+    "agentType": "代理类型",
+    "intentBreakdownAndFilteringRequireAdvanced": "意图明细和筛选需要高级分析。"
+  },
+  "routerUsageMix": {
+    "dailyShareOfSuccessfulManagedAuto": "每日成功的托管 Auto 和 Auto Fast 用量占比，按计费消息数或 FSC 计量。上方筛选先限定路由群体，再将每天归一化为 100%。",
+    "routerUsageMeasure": "路由用量计量方式",
+    "routerUsageBreakdown": "路由用量明细",
+    "routerUsageMix": "路由用量构成",
+    "breakdowns": {
+      "model": "模型",
+      "intent": "意图",
+      "agentType": "代理类型"
+    },
+    "measures": {
+      "messages": "消息",
+      "fsc": "FSC"
+    },
+    "subtitleMessages": "每日 · 路由消息占比",
+    "subtitleFsc": "每日 · 路由 FSC 占比",
+    "messagesValue": "{{value}} 条消息",
+    "fscValue": "{{value}} FSC",
+    "mostlyReason": "主要原因：{{reason}} · {{pct}}%"
+  },
+  "spendBreakdown": {
+    "shareOfFscByModelOver": "所选日期范围内各模型的 FSC 占比（计费模型前 20 名）。按支出排序，其余列出的模型归入其他。注意：公司视图包括后台和系统模型用量。",
+    "modelMix": "模型构成",
+    "shareOfFscByEachSessions": "按每个 Session 自动分类的主要意图统计 FSC 占比。不包括未分类的 Session，因此占比仅反映已分类支出。",
+    "spendByIntent": "按意图统计支出",
+    "intents": {
+      "codeGeneration": "代码生成",
+      "debugging": "调试",
+      "codeReview": "代码审查",
+      "knowledgeQa": "知识问答",
+      "devops": "DevOps",
+      "data": "数据",
+      "documentation": "文档",
+      "research": "研究",
+      "planning": "规划",
+      "automation": "自动化",
+      "agentConfig": "代理配置",
+      "noise": "噪声",
+      "other": "其他"
+    }
+  },
+  "overviewTab": {
+    "overview": "概览",
+    "totalCreditSpend": "积分总支出",
+    "routerSavings": "路由节省",
+    "pullRequests": "拉取请求",
+    "completedTickets": "已完成工单",
+    "activeUsers": "活跃用户",
+    "agentReadiness": "代理就绪度",
+    "subtitle": "全组织概览 · {{range}}",
+    "links": {
+      "consumptionOverview": "消耗概览",
+      "adoption": "使用率",
+      "modelRouter": "模型路由器",
+      "agentReadiness": "代理就绪度"
+    },
+    "tooltips": {
+      "totalCreditSpend": "所选范围内向组织收取的 Factory 标准积分。",
+      "routerSavings": "相对全部前沿模型基准避免的路由支出比例。仅为趋势估计，不是账单金额。",
+      "pullRequests": "所选范围内合并的拉取请求，不包括机器人作者。",
+      "completedTickets": "所选范围内完成的 Linear 和 Jira 工单，不包括 Jira 史诗和自动化账号。",
+      "activeUsers": "所选范围内至少有一个 Session 的不重复用户数。",
+      "agentReadiness": "已测量仓库的平均就绪度级别。报告描述各仓库当前状态，因此此指标不受日期范围影响。"
+    },
+    "allFrontierBaselineCaption": "对比全部前沿模型基准",
+    "acrossRepositories_one": "涵盖 {{count}} 个仓库",
+    "acrossRepositories_other": "涵盖 {{count}} 个仓库",
+    "levelValue": "级别 {{level}}",
+    "comparisonCaption": "对比此前 {{days}} 天",
+    "comparisonCaptionFallback": "对比上一时段",
+    "rangeLastDays": "最近 {{days}} 天",
+    "rangeSelected": "所选范围",
+    "rangeSpan": "{{start}} – {{end}}"
+  },
+  "tokenSpendOverTime": {
+    "creditSpendOverTime": "积分支出随时间变化",
+    "description": "所选日期范围内组织每日 Factory 标准积分支出。与消耗概览使用相同的计费汇总，因此总计一致。",
+    "subtitle": "总计 {{total}} FSC · {{range}}",
+    "totalFsc": "FSC 总计"
+  },
+  "personalProductivity": {
+    "productivity": "生产力",
+    "reviewYourCompletedTicketsAndProjects": "查看已完成的工单和项目、每日吞吐量、Factory 标准积分（FSC）用量、活动及 Session 标签。",
+    "yourCompletedTicketsMergedPrsProjects": "所选范围内你已完成的工单、已合并 PR、项目及 FSC 用量。",
+    "atAGlance": "概览",
+    "deliveryThroughput": "交付吞吐量",
+    "deliveryDetail": "交付明细",
+    "throughput": {
+      "projects": "你每天完成工单所涉及的项目，叠加每日 FSC 用量右轴折线。同一项目在每个发生交付的日期均计数一次，因此柱形之和不等于项目总数。",
+      "tickets": "你每天完成的工单，叠加每日 FSC 用量右轴折线。",
+      "prs": "你每天合并的 PR，叠加每日 FSC 用量右轴折线。"
+    },
+    "fscUsage": "FSC 用量",
+    "fscUsageCallout": "来自用量查询的每日 FSC"
+  },
+  "productivityCard": {
+    "loading": "正在加载…",
+    "failedToLoadThisDataPlease": "加载此数据失败。请重试。",
+    "aboutTitle": "关于{{title}}"
+  },
+  "readinessOverview": {
+    "agentReadiness": "代理就绪度",
+    "measureYourOrganizationsProgressTowardAutonomous": "衡量组织迈向自主软件开发的进展。跨仓库跟踪代理就绪度，从基础工具到能够自我维护和改进的可持续系统。",
+    "readTheDocs": "阅读文档",
+    "staleReportsTitle": "部分报告可能已过时",
+    "staleReportsDescription": "{{staleCount}} / {{totalCount}} 个仓库的报告已超过 {{days}} 天，其级别可能无法反映当前代码。请刷新以获得最新结果。",
+    "organizationScore": "组织评分",
+    "repositoriesTracked": "跟踪仓库数",
+    "lastUpdated": "上次更新",
+    "categoryBreakdown": "类别明细",
+    "errorLoadingAgentReadinessReports": "加载代理就绪度报告出错",
+    "hoursAgo_one": "小时前",
+    "hoursAgo_other": "小时前",
+    "daysAgo_one": "天前",
+    "daysAgo_other": "天前",
+    "loading": "正在加载代理就绪度"
+  },
+  "readinessRepositoryDetail": {
+    "passRateByCategory": "各类别通过率",
+    "errorLoadingAgentReadinessReport": "加载代理就绪度报告出错",
+    "backToAgentReadiness": "返回代理就绪度",
+    "repositoryNotFound": "未找到仓库",
+    "agentReadiness": "代理就绪度",
+    "missionReadinessTitle": "Mission 任务就绪度",
+    "missionReadinessDescription": "Mission 任务依赖这些信号来设置工作代理环境、运行程序化验证（测试、类型检查、代码检查），并交互式测试应用。请优先解决这些问题，使仓库达到 Mission 任务就绪要求。",
+    "missingCriterionRationale": "未测量此检查项。报告可能已过时，请刷新报告以测量所有检查项。",
+    "passRateSuffix": "通过率",
+    "notApplicable": "不适用",
+    "pdfTitle": "{{repoName}} - 代理就绪度报告",
+    "allowPopupsToExportPdf": "请允许弹出窗口以导出 PDF",
+    "loading": "正在加载仓库就绪度"
+  },
+  "toolUsageUsers": {
+    "user": "用户",
+    "invocations": "调用次数",
+    "serviceAccount": "服务账号",
+    "pageSummary": "第 {{page}} 页",
+    "usersSummary": "{{total}} 位用户",
+    "rangeSummary": "{{start}}–{{end}}，共 {{total}} 位用户",
+    "description": "所选范围内记录过 {{usage}} 使用的所有用户，按调用次数排序。展开用户可查看其使用最多的 {{limit}} 个{{plural}}。每位用户的合计涵盖所有条目。",
+    "subtitle": "每页 {{perPage}} 位用户 · 每位用户前 {{limit}} 个{{plural}}",
+    "title": "按{{usage}}使用情况统计用户",
+    "tableLabel": "{{singular}}用户",
+    "itemsUsed": "使用过的{{singular}}",
+    "showTop": "显示 {{userName}} 使用最多的{{plural}}",
+    "hideTop": "隐藏 {{userName}} 使用最多的{{plural}}",
+    "topHeading": "前 {{limit}} 个{{plural}}",
+    "topTable": "{{userName}}使用最多的{{plural}}",
+    "remaining": "其他 {{items}} 个{{plural}} · {{invocations}} 次调用",
+    "pagination": "{{singular}}用户分页"
+  },
+  "toolsTab": {
+    "tools": "工具",
+    "observedUsageOfSkillsMcpServers": "观测到的技能、MCP 服务器和斜杠命令使用情况。",
+    "toolsSubpages": "工具子页面",
+    "footnote": "{{scope}}所选日期范围内记录的使用情况，每日更新。这不是完整清单；缺少遥测数据不代表没有使用。用户包括服务账号。类别可能重叠：通过斜杠命令调用的技能可同时出现在技能和斜杠命令中。请勿将各类别总数相加。"
+  },
+  "toolUsageLabels": {
+    "skills": {
+      "label": "技能",
+      "singular": "技能",
+      "plural": "技能",
+      "usage": "技能",
+      "usageTitle": "技能使用情况",
+      "scope": "技能按名称分组。"
+    },
+    "mcp": {
+      "label": "MCP",
+      "singular": "MCP 服务器",
+      "plural": "MCP 服务器",
+      "usage": "MCP",
+      "usageTitle": "MCP 使用情况",
+      "scope": "MCP 调用按服务器分组，而非按单个工具。"
+    },
+    "slashCommands": {
+      "label": "斜杠命令",
+      "singular": "斜杠命令",
+      "plural": "斜杠命令",
+      "usage": "斜杠命令",
+      "usageTitle": "斜杠命令使用情况",
+      "scope": "斜杠命令按命令名称分组，包括内置、自定义命令和技能入口。次数记录调用，不代表成功完成。"
+    }
+  },
+  "toolUsageOverview": {
+    "reviewMode": {
+      "lowUsage": "低使用量",
+      "inactive": "不活跃"
+    },
+    "trendGroup": {
+      "overall": "总体",
+      "byItem": "按{{singular}}",
+      "byUser": "按用户",
+      "byUserType": "按用户类型"
+    },
+    "invocations": "调用次数",
+    "failedToLoad": "加载{{plural}}失败",
+    "kpi": {
+      "recordedInvocations": "已记录调用次数",
+      "avgDailyInvocations": "平均每日调用次数",
+      "avgDailyInvocationsTooltip": "已记录调用次数除以所选范围内的 UTC 日历天数。",
+      "itemsUsed": "使用过的{{singular}}",
+      "itemsUsedTooltip": "记录过使用的不同{{plural}}。",
+      "usersUsing": "使用{{plural}}的用户",
+      "usersUsingTooltip": "记录过{{usage}}使用的不重复用户，包括服务账号。"
+    },
+    "trendRegion": "{{usageTitle}}趋势",
+    "trendDescriptionUserType": "每个 UTC 日记录的{{usage}}调用次数，按当前用户类型分组。无法根据当前身份数据分类的用户标为未知。用户类型不区分手动与自动化使用。",
+    "trendDescription": "每个 UTC 日记录的{{usage}}调用次数。条目和用户明细显示所选范围内前 {{limit}} 名，其余用量合并为其他。",
+    "breakdownGroup": "{{usageTitle}}明细",
+    "dailySubtitle": "每日 · 已记录调用次数",
+    "overTimeTitle": "{{usageTitle}}随时间变化",
+    "mostUsed": "使用最多的{{plural}}",
+    "mostUsedDescription": "{{singular}}按所选日期范围内记录的调用次数排序。",
+    "topSubtitle": "前 {{limit}} 名 · 已记录调用次数",
+    "viewAll": "查看所有{{plural}}",
+    "leastUsed": "使用最少的{{plural}}",
+    "inactiveDescription": "在 {{lookbackStart}} 至 {{endDate}} 的 {{lookbackDays}} 天观察期内出现过，但最近 {{inactiveDays}} 个 UTC 日内未记录调用。最多 {{limit}} 项，闲置最久的优先。数值为截至 {{endDate}} 距上次观测到使用的天数。缺少遥测数据可能表现为不活跃。",
+    "leastUsedDescription": "{{singular}}按已记录调用次数从少到多排序。仅包含所选范围内记录过调用的{{plural}}。",
+    "viewGroup": "{{usageTitle}}视图",
+    "inactiveSubtitle": "{{inactiveDays}} 天无调用 · 截至 {{endDate}}",
+    "bottomSubtitle": "后 {{limit}} 名 · 已记录调用次数",
+    "noInactive": "此回溯范围内未发现不活跃的{{plural}}。",
+    "noRecordedUsage": "所选范围内未记录{{usage}}使用。"
+  },
+  "toolUsageRankingModal": {
+    "pageSummary": "第 {{page}} 页",
+    "rangeSummary": "{{start}}–{{end}}，共 {{total}} 个{{plural}}",
+    "totalSummary": "{{total}} 个{{plural}}",
+    "loading": "正在加载{{plural}}…",
+    "failedToLoadInactive": "加载不活跃的{{plural}}失败",
+    "noneFound": "未找到{{plural}}。",
+    "inactiveTitle": "不活跃的{{plural}}",
+    "rankingTable": "{{usageTitle}}排名",
+    "lastObserved": "上次观测时间（UTC）",
+    "invocations": "调用次数",
+    "daysSinceLastUse": "距上次使用的天数",
+    "shareOfTotal": "占总计比例",
+    "inactiveDescription": "截至 {{endDate}}（UTC）· 观察期 {{lookbackStart}} 至 {{endDate}} · 最近 {{inactiveDays}} 天无调用记录",
+    "usageDescription": "{{startDate}} 至 {{endDate}}（UTC）· 即使进行搜索，占比仍按所有已记录的{{usage}}调用计算",
+    "pagination": "{{singular}}排名分页",
+    "search": "搜索{{plural}}"
+  },
+  "spendOverTime": {
+    "company": {
+      "description": "所选日期范围内每日 FSC 支出。总体显示未拆分的每日总数；按模型和按用户堆叠 FSC 前 7 名，其余合并为其他。按来源拆分每次调用的产品来源（托管聊天、BYOK、计算资源、私有部署 Prem，以及包含实时和回填本地信号的高级分析）；FSC 主要累积于 Factory 托管推理，因此该来源按设计占主导。按访问类型区分人员（交互式）与 API（程序化）支出。",
+      "title": "支出随时间变化"
+    },
+    "personal": {
+      "description": "所选日期范围内你的每日 FSC。总体显示未拆分的每日总数；按模型堆叠 FSC 前 7 个模型，其余合并为其他。模型拆分不包括 Factory 在后台运行的模型（如 Session 标题生成），因此合计可能略低于总体。",
+      "title": "用量随时间变化"
+    },
+    "groups": {
+      "overall": "总体",
+      "byModel": "按模型",
+      "byUser": "按用户",
+      "bySource": "按来源",
+      "byAccessType": "按访问类型"
+    },
+    "totalFsc": "FSC 总计",
+    "subtitle": "每日 · Factory 标准积分"
+  },
+  "topUsers": {
+    "title": "支出最高的用户",
+    "description": "所选日期范围内 FSC 总数前 20 位用户，包含各用户占公司 FSC 的比例、计费 Session 数和占公司所有 Session 的比例。",
+    "columns": {
+      "user": "用户",
+      "fsc": "FSC",
+      "fscPct": "FSC 占比",
+      "sessions": "Session",
+      "sessionPct": "Session 占比"
+    }
+  },
+  "costCopy": {
+    "unknownCategory": "（未知）",
+    "otherCategory": "其他",
+    "columnTooltips": {
+      "sessionsCount": "为此工单或 PR 贡献 FSC 的所有计费 Session，包括子代理 Session；子代理支出归因到启动它的 Session。",
+      "rootSessions": "仅根 Session。子代理支出汇总到根 Session，因此此列表可能短于 Session 计数。",
+      "attributionRootSessions": "仅根 Session。子 Session FSC 汇总到根 Session，不增加此计数。",
+      "fscShare": "占所选日期范围内计费 FSC 总数的比例。",
+      "sessionShare": "占所选日期范围内所有 Session 的比例。",
+      "ticketCompleted": "工单标记为已完成的日期（UTC）。",
+      "ticketProject": "工单所属的项目（若有）。",
+      "ticketStatus": "工单完成时记录的工作流状态。",
+      "ticketFsc": "所选日期范围内你与此工单关联的 FSC。",
+      "projectName": "你已完成工单所属的项目。",
+      "projectCompletedTickets": "此项目中你已完成的工单，有多少处于所选日期范围内。",
+      "projectFsc": "你与此项目中已完成工单关联的 FSC。",
+      "prMerged": "PR 合并日期（UTC）。",
+      "prAdded": "此 PR 新增的代码行。",
+      "prRemoved": "此 PR 删除的代码行。"
+    },
+    "kpiGroups": {
+      "vsAllFrontier": "对比全部前沿模型",
+      "vsOrgUsage": "对比组织用量"
+    },
+    "subpages": {
+      "overview": "概览",
+      "concentration": "消耗集中度",
+      "costAttribution": "消耗归因",
+      "modelRouterSavings": "模型路由器"
+    },
+    "tables": {
+      "routerAdoption": {
+        "title": "模型路由器使用率",
+        "description": "模型路由器 Session 使用率和路由 FSC 占比。"
+      },
+      "routerCoverage": {
+        "title": "模型路由器覆盖范围",
+        "description": "与 Auto 使用相关的路由消息量及 FSC 占比。"
+      },
+      "routerSavingsEstimate": {
+        "title": "模型路由器节省估计",
+        "description": "路由用量相对全部前沿模型基准和组织非 Auto 用量基准的预计节省。"
+      },
+      "myActivitySummary": {
+        "title": "活动摘要",
+        "description": "所选日期范围内你的 FSC 总数、耗时及 Session。"
+      },
+      "myTimeSpent": {
+        "title": "活动",
+        "description": "每日 Session 活动，以 Session 数量着色。悬停可查看持续时间、Session 和 FSC。"
+      },
+      "myIntentBreakdown": {
+        "title": "按标签统计 Session",
+        "description": "你的 Session 按所归因工单标签分类的数量，以及相关 FSC。"
+      },
+      "myTopSessions": {
+        "title": "前 50 个 Session",
+        "description": "FSC 最高的根 Session，包含关联工单、PR 和 FSC 占比。子代理支出汇总到其所属根 Session。"
+      },
+      "myTopTickets": {
+        "title": "FSC 最高的 20 个工单",
+        "description": "将你的 Session FSC 按 Linear 或 Jira 工单汇总。不包括未检测到工单的 Session。"
+      },
+      "myTopPrs": {
+        "title": "FSC 最高的 20 个 PR",
+        "description": "将你的 Session FSC 按 GitHub 拉取请求或 GitLab 合并请求汇总，包含标题。不包括未检测到 PR 的 Session。"
+      }
+    },
+    "sections": {
+      "modelRouterSavings": "模型路由器节省",
+      "activity": "活动",
+      "sessionLabels": "Session 标签",
+      "consumptionAttribution": "消耗归因",
+      "sessions": "Session",
+      "byTicket": "按工单",
+      "byPr": "按 PR"
+    },
+    "attributionModes": {
+      "byProject": {
+        "label": "按项目",
+        "subtitle": "每个项目的 Factory 标准积分消耗",
+        "description": "将 Session FSC 汇总到各已归因工单所属项目。不包括工单没有项目或完全没有工单的 Session。"
+      },
+      "byTicket": {
+        "label": "按工单",
+        "subtitle": "每个工单的 Factory 标准积分消耗",
+        "description": "将 Session FSC 按 Linear 或 Jira 工单汇总。子代理支出在无直接工单关联时归入父 Session 的工单。"
+      },
+      "bySession": {
+        "label": "按 Session",
+        "subtitle": "每个 Session 的 Factory 标准积分消耗",
+        "description": "组织中 FSC 最高的 1,000 个根 Session，包含用户、关联工单和 PR，以及 FSC 占比。子代理支出汇总到其所属根 Session。"
+      },
+      "bySessionBasicDescription": "FSC 最高的 1,000 个根 Session，包含用户、主要模型及从首个到最后一个计费事件的时间跨度。子代理支出汇总到其根 Session。点击标题可打开 Session。",
+      "byUser": {
+        "label": "按用户",
+        "subtitle": "每位用户的 Factory 标准积分消耗",
+        "description": "每位用户的 FSC，以及支出所归因的根 Session、工单和 PR。"
+      }
+    }
+  },
+  "routingReasons": {
+    "routine": {
+      "label": "常规任务",
+      "description": "多数模型均可完成，选择最便宜的"
+    },
+    "taskFit": {
+      "label": "任务适配",
+      "description": "仅部分模型适合，从中选择最便宜的"
+    },
+    "hard": {
+      "label": "高难任务",
+      "description": "没有模型有把握，选择评分最高的"
+    },
+    "modelUnavailable": {
+      "label": "模型不可用",
+      "description": "错误、拒绝、退役或用量上限"
+    },
+    "visionRequired": {
+      "label": "需要视觉能力",
+      "description": "图片需要支持视觉的模型"
+    },
+    "agentEscalated": {
+      "label": "代理升级模型",
+      "description": "模型在任务中途请求更强模型"
+    },
+    "orgPolicy": {
+      "label": "组织策略",
+      "description": "允许模型策略限制了选择"
+    },
+    "default": {
+      "label": "默认",
+      "description": "分类器不可用，使用默认模型"
+    },
+    "unattributed": {
+      "label": "未归因",
+      "description": "这些消息未记录原因"
+    }
+  },
+  "deliveryModes": {
+    "projects": "项目",
+    "tickets": "工单",
+    "prs": "PR"
+  },
+  "deliveryDetail": {
+    "projects": {
+      "description": "按项目分组的已完成工单，以及你与工单关联的 FSC。",
+      "subtitle": "你已完成工单所属的项目"
+    },
+    "tickets": {
+      "description": "所选日期范围内分配给你且已完成的工单，以及你与工单关联的 FSC。",
+      "subtitle": "分配给你且已完成的工单"
+    },
+    "prs": {
+      "description": "所选日期范围内你合并的 PR，以及各 PR 变更的代码行数。",
+      "subtitle": "由你创建并合并的 PR"
+    }
+  },
+  "adoptionSurfaces": {
+    "web": {
+      "label": "网页",
+      "tooltip": "在 Factory 网页应用中工作的用户。"
+    },
+    "nonInteractiveCli": {
+      "label": "非交互式 CLI",
+      "tooltip": "运行 droid exec、脚本或 CI 等无界面 CLI 命令的用户。"
+    },
+    "terminalCli": {
+      "label": "终端 CLI",
+      "tooltip": "在 Droid 交互式终端界面中工作的用户。"
+    }
+  },
+  "adoptionDeltas": {
+    "noChange": "较上一 {{days}} 天时段无变化",
+    "percent": "较上一 {{days}} 天时段 {{value}}%",
+    "points": "较上一 {{days}} 天时段 {{value}} 个百分点"
+  },
+  "lastActive": {
+    "today": "今天",
+    "yesterday": "昨天",
+    "daysAgo": "{{days}} 天前",
+    "weeksAgo": "{{weeks}} 周前"
+  },
+  "readinessCategories": {
+    "style": "代码风格",
+    "build": "构建",
+    "testing": "测试",
+    "docs": "文档",
+    "devEnv": "开发环境",
+    "debugging": "调试",
+    "security": "安全",
+    "taskDiscovery": "任务发现",
+    "product": "产品"
+  },
+  "costColumns": {
+    "agentType": "代理类型",
+    "amount": "金额",
+    "assigneeEmail": "负责人邮箱",
+    "assigneeLogin": "负责人登录名",
+    "assigneeName": "负责人姓名",
+    "associatedPrs": "关联 PR",
+    "authType": "身份验证类型",
+    "authorEmail": "作者邮箱",
+    "authorName": "作者姓名",
+    "avgDailyFsc": "平均每日 FSC",
+    "avgFscPerMessage": "平均 FSC / 消息",
+    "avgFscPerSession": "平均 FSC / Session",
+    "balanceFsc": "FSC 余额",
+    "billedMessages": "计费消息",
+    "billedRouterSessionPct": "计费路由 Session 占比",
+    "billedRouterSessions": "计费路由 Session",
+    "block": "额度块",
+    "bonusFsc": "赠送 FSC",
+    "byokRoutedMessages": "BYOK 路由消息",
+    "commitFsc": "承诺用量 FSC",
+    "commitStart": "承诺用量开始时间",
+    "completed": "完成时间",
+    "completedIssueCount": "已完成问题数",
+    "completedProjects": "已完成项目",
+    "completedTickets": "已完成工单",
+    "consumedBonusFsc": "已消耗赠送 FSC",
+    "consumedPaidFsc": "已消耗付费 FSC",
+    "consumedTotalFsc": "已消耗 FSC 总计",
+    "contributor": "贡献者",
+    "contributorFsc": "贡献者 FSC",
+    "contributors": "贡献者",
+    "createdAt": "创建时间",
+    "cumPctOfFsc": "FSC 累计占比",
+    "cumulativeCommitFsc": "累计承诺用量 FSC",
+    "date": "日期",
+    "day": "天",
+    "distinctBilledModels": "不同计费模型数",
+    "drawnFsc": "已支用 FSC",
+    "durationMinutes": "持续时间（分钟）",
+    "durationSeconds": "持续时间（秒）",
+    "effectiveAt": "生效时间",
+    "eligibleRoutedMessageFsc": "符合条件的路由消息 FSC",
+    "email": "邮箱",
+    "endedAt": "结束时间",
+    "expiry": "到期",
+    "expiryDate": "到期日期",
+    "firstSeen": "首次出现",
+    "fsc": "FSC",
+    "fscCost": "FSC 费用",
+    "fscPct": "FSC 占比",
+    "fscSharePct": "FSC 占比",
+    "grantedFsc": "已发放 FSC",
+    "identityEmail": "身份邮箱",
+    "includedTickets": "计入的工单",
+    "intent": "意图",
+    "isBot": "是否为机器人",
+    "isEpic": "是否为史诗",
+    "isRouted": "是否经路由",
+    "isSubSession": "是否为子 Session",
+    "isSubagent": "是否为子代理",
+    "issueKey": "问题键",
+    "lead": "负责人",
+    "linkedFsc": "关联 FSC",
+    "linkedFscPct": "关联 FSC 占比",
+    "linkedSessionPct": "关联 Session 占比",
+    "linkedSessions": "关联 Session",
+    "longTailUsers": "长尾用户",
+    "manualFsc": "手动选模型 FSC",
+    "manualRawTokens": "手动选模型原始 Token",
+    "manualSessions": "手动选模型 Session",
+    "merged": "合并时间",
+    "mergedPrs": "已合并 PR",
+    "messageDate": "消息日期",
+    "messagePct": "消息占比",
+    "messages": "消息",
+    "mixedPctOfBilledRouterSessions": "混合 Session 占计费路由 Session 的比例",
+    "mixedRouterNonrouterSessions": "混合路由与非路由的 Session",
+    "model": "模型",
+    "modelFsc": "模型 FSC",
+    "modelId": "模型 ID",
+    "month": "月份",
+    "multiModelPctOfBilledRouterSessions": "多模型 Session 占计费路由 Session 的比例",
+    "nonRouterBilledMessages": "非路由计费消息",
+    "nonRouterMessageFsc": "非路由消息 FSC",
+    "owner": "所有者",
+    "ownerEmail": "所有者邮箱",
+    "paidCommitFsc": "付费承诺用量 FSC",
+    "paidCommitStart": "付费承诺用量开始时间",
+    "paidFsc": "付费 FSC",
+    "parentSessionId": "父 Session ID",
+    "pctOfFsc": "FSC 占比",
+    "pr": "PR",
+    "prId": "PR ID",
+    "primaryIntent": "主要意图",
+    "project": "项目",
+    "projectId": "项目 ID",
+    "projectName": "项目名称",
+    "projects": "项目",
+    "provider": "提供商",
+    "prs": "PR",
+    "rawTokens": "原始 Token",
+    "reason": "原因",
+    "remainingPaidFsc": "剩余付费 FSC",
+    "remainingTotalFsc": "剩余 FSC 总计",
+    "repoName": "仓库名称",
+    "rootFsc": "根 Session FSC",
+    "rootSessionId": "根 Session ID",
+    "rootSessions": "根 Session",
+    "routedBilledMessages": "路由计费消息",
+    "routedFsc": "路由 FSC",
+    "routedFscPct": "路由 FSC 占比",
+    "routedMessageCompanyFscPct": "路由消息占公司 FSC 的比例",
+    "routedMessageFsc": "路由消息 FSC",
+    "routedRawTokens": "路由原始 Token",
+    "routedSessions": "路由 Session",
+    "routerMessageShareWithinRouterSessionFsc": "路由消息占路由 Session FSC 的比例",
+    "routerMessages": "路由消息",
+    "routerSessionCompanyFscPct": "路由 Session 占公司 FSC 的比例",
+    "routerSessionFsc": "路由 Session FSC",
+    "routerSessionPct": "路由 Session 占比",
+    "routerSessions": "路由 Session",
+    "routerSessionsMultiModel": "使用多模型的路由 Session",
+    "sdlcStage": "SDLC 阶段",
+    "sessionFsc": "Session FSC",
+    "sessionId": "Session ID",
+    "sessionIds": "Session ID 列表",
+    "sessionName": "Session 名称",
+    "sessionPct": "Session 占比",
+    "sessions": "Session",
+    "startedAt": "开始时间",
+    "state": "状态",
+    "status": "状态",
+    "statusCategory": "状态类别",
+    "statusGroup": "状态组",
+    "statusName": "状态名称",
+    "tagStatus": "标签状态",
+    "ticket": "工单",
+    "ticketKey": "工单键",
+    "ticketTitle": "工单标题",
+    "tickets": "工单",
+    "title": "标题",
+    "tokens": "Token",
+    "topModel": "主要模型",
+    "topRepoFscPct": "最高消耗仓库 FSC 占比",
+    "topRepoName": "最高消耗仓库名称",
+    "totalBilledSessions": "计费 Session 总数",
+    "totalFsc": "FSC 总计",
+    "totalMessages": "消息总数",
+    "totalProjects": "项目总数",
+    "totalSessions": "Session 总数",
+    "totalUsers": "用户总数",
+    "touchedSessionFscPct": "涉及 Session 的 FSC 占比",
+    "usageSource": "用量来源",
+    "usdPerFsc": "每 FSC 美元费用",
+    "userEmail": "用户邮箱",
+    "userId": "用户 ID",
+    "users": "用户",
+    "fscPctOfRaw": "FSC 占原始 Token 比例",
+    "cacheHitPct": "缓存命中率",
+    "cacheRead": "缓存读取",
+    "currentFsc": "当前 FSC",
+    "priorFsc": "此前 FSC",
+    "sessionSharePct": "Session 占比",
+    "messageSharePct": "消息占比",
+    "added": "新增行数",
+    "assignee": "负责人",
+    "associatedSessions": "关联 Session",
+    "duration": "持续时间",
+    "removed": "删除行数",
+    "session": "Session",
+    "user": "用户"
+  },
+  "concentrationKpis": {
+    "top1Sessions": "前 1% Session · FSC 占比",
+    "top1SessionsTooltip": "支出最高的前 1% Session 消耗的 FSC 占总 FSC 的比例。",
+    "top10Users": "前 10% 用户 · FSC 占比",
+    "top10UsersTooltip": "支出最高的前 10% 用户消耗的 FSC 占总 FSC 的比例。",
+    "topRepo": "最高消耗仓库占比",
+    "topRepoTooltip": "最高消耗仓库占所有可归因到仓库的 FSC 的比例。不包括无仓库信息的 Session。",
+    "topRepoTooltipNamed": "最高消耗仓库（{{repo}}）占所有可归因到仓库的 FSC 的比例。不包括无仓库信息的 Session。",
+    "longTailUsers": "长尾用户",
+    "longTailUsersTooltip": "合计占总 FSC 最低 10% 的用户。",
+    "longTailUsersTooltipWithTotal_one": "{{total}} 位活跃用户中，合计占总 FSC 最低 10% 的用户。",
+    "longTailUsersTooltipWithTotal_other": "{{total}} 位活跃用户中，合计占总 FSC 最低 10% 的用户。"
+  }
+}

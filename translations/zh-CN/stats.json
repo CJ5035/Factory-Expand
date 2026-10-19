@@ -1,0 +1,59 @@
+{
+  "activityHeatmap": {
+    "activity": "活动",
+    "less": "较少",
+    "more": "较多",
+    "cellLabel_one": "{{month}}{{day}}日 — {{count}} 个 Session",
+    "cellLabel_other": "{{month}}{{day}}日 — {{count}} 个 Session",
+    "days": {
+      "mon": "周一",
+      "wed": "周三",
+      "fri": "周五"
+    }
+  },
+  "badgeGrid": {
+    "badges": "徽章"
+  },
+  "statsHero": {
+    "sessions": "Session",
+    "totalTime": "总时长",
+    "longestStreak": "最长连续使用天数",
+    "longestSession": "最长 Session",
+    "member": "成员"
+  },
+  "topLanguagesFrameworks": {
+    "noDataYet": "暂无数据。",
+    "stack": "技术栈",
+    "languages": "语言",
+    "frameworks": "框架"
+  },
+  "topModelLine": {
+    "topModel": "最常用模型",
+    "mostActiveTime": "最活跃时段"
+  },
+  "chronotype": {
+    "nightOwl": "夜猫子",
+    "earlyBird": "早起鸟",
+    "afternoonCoder": "午后程序员",
+    "nightHacker": "深夜极客"
+  },
+  "topProjects": {
+    "title": "常用项目",
+    "project": "项目",
+    "sessions": "Session",
+    "time": "时间",
+    "languagesFrameworks": "语言 / 框架"
+  },
+  "stats": {
+    "couldNotLoadStats": "无法加载统计数据",
+    "noDataAvailable": "暂无数据。",
+    "noSessionsYet": "暂无 Session",
+    "noSessionsDescription": "在 Droid CLI 中运行几个 Session，再回来查看统计数据。",
+    "yourDroidStats": "你的 Droid 统计",
+    "subtitle": "个人 Droid 用量概览。",
+    "loading": "正在加载你的用量"
+  },
+  "errors": {
+    "desktopOnly": "统计数据仅在桌面应用中可用"
+  }
+}

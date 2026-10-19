@@ -1,0 +1,276 @@
+{
+  "missionEntryBlockModal": {
+    "cancel": "取消",
+    "setOveragePreference": "设置超额用量偏好",
+    "missionAccessBlocked": "Mission 任务访问受阻",
+    "overageRequiredTitle": "需要配置超额用量",
+    "restrictedTitle": "Mission 任务受限",
+    "overageRequiredDescription": "Mission 任务面向复杂、多步骤工作，会自主运行数小时乃至数天。要运行 Mission 任务，请在用量设置中配置超额用量偏好，选择标准用量耗尽后的处理方式。",
+    "restrictedDescription": "组织管理员已限制 Mission 任务。请联系管理员申请访问权限。"
+  },
+  "missionFeatureDetail": {
+    "backToChat": "返回聊天",
+    "description": "描述",
+    "preconditions": "前提条件",
+    "expectedBehavior": "预期行为",
+    "fulfills": "满足",
+    "milestone": "里程碑：{{milestone}}",
+    "unassignedMilestone": "未分配里程碑",
+    "status": {
+      "completed": "已完成",
+      "inProgress": "进行中",
+      "notStarted": "尚未开始",
+      "cancelled": "已取消"
+    }
+  },
+  "missionFeaturesSection": {
+    "features": "功能",
+    "noFeaturesDefinedYet": "尚未定义功能",
+    "milestoneHeading": "里程碑 {{number}}：{{title}}"
+  },
+  "missionHeader": {
+    "openSidebar": "打开侧边栏",
+    "mission": "⛬ Mission 任务",
+    "time": "时间",
+    "usage": "用量",
+    "factoryStandardCredits": "Factory 标准积分",
+    "fiveHourUsage": "5 小时用量：{{percent}}",
+    "resetsIn": "{{time}}后重置",
+    "activeTime": "活跃时长：{{time}}",
+    "avgPerMilestone": "每个里程碑平均耗时：{{time}}",
+    "avgPerFeature": "每项功能平均耗时：{{time}}",
+    "pause": "暂停",
+    "resuming": "正在恢复",
+    "resume": "恢复",
+    "disconnected": "已断开连接",
+    "untitledMission": "Mission 任务",
+    "progress": "进度"
+  },
+  "missionOnboardingModal": {
+    "cancel": "取消",
+    "runAgentReadinessReport": "运行代理就绪度报告",
+    "fixAgentReadinessReport": "修复代理就绪度报告中的问题",
+    "missionsAutonomousMultiAgentExecution": "Mission 任务 — 自主多代理执行",
+    "howItWorks": "工作方式：",
+    "text1DescribeYourGoal": "1. 描述目标",
+    "text2ReviewAndApproveTheMission": "2. 审查并批准 Mission 任务计划",
+    "text3DroidExecutesFeaturesAutonomously": "3. Droid 自主实现功能",
+    "text4ValidationOccursAtMilestones": "4. 在里程碑处进行验证",
+    "keyConcepts": "核心概念：",
+    "orchestratorPlansAndManagesTheMission": "• 编排器 — 规划并管理 Mission 任务",
+    "workersExecuteIndividualFeatures": "• 工作代理 — 实现各项功能",
+    "milestonesGroupsOfFeaturesWithValidation": "• 里程碑 — 包含验证环节的功能分组",
+    "warnings": "注意事项：",
+    "notForSimpleTasksDesignedFor": "• 面向复杂、多步骤工作，不适合简单任务",
+    "runsForMultipleHoursOrDays": "• 会自主运行数小时乃至数天",
+    "significantlyHigherTokenUsageComparedTo": "• Token 用量明显高于常规 Session",
+    "repositoryNotAgentReady": "仓库尚未达到代理就绪要求",
+    "proceedAnyway": "仍然继续",
+    "continue": "继续"
+  },
+  "missionProgressLogSection": {
+    "progressLog": "进度日志",
+    "noProgressEntriesYet": "暂无进度记录"
+  },
+  "missionSessionSidebar": {
+    "model": "模型",
+    "orchestrator": "编排器",
+    "worker": "工作代理",
+    "validator": "验证代理"
+  },
+  "missionSessionsSidebar": {
+    "backToApp": "返回应用",
+    "filterMissionSessionsByType": "按类型筛选 Mission 任务 Session",
+    "noSessionsMatchThisFilter": "没有符合此筛选条件的 Session。",
+    "filter": {
+      "all": "全部",
+      "workers": "工作代理",
+      "validators": "验证代理"
+    },
+    "fallbackSessionName": "Session {{id}}",
+    "workerNumber": "工作代理 #{{number}}",
+    "validatorNumber": "验证代理 #{{number}}",
+    "sessions": "Session",
+    "awaitingYourInput": "等待你的输入",
+    "orchestrator": "编排器",
+    "milestoneHeading": "里程碑 {{number}}：{{title}}"
+  },
+  "newMissionButtonV2": {
+    "newMission": "新建 Mission 任务"
+  },
+  "newMissionDialog": {
+    "remoteAccessWillBeTurnedOn": "将为此计算机启用远程控制，以便其他计算机上的代理能够访问它。",
+    "orchestratorMachine": "编排器计算机",
+    "workingDirectory": "工作目录",
+    "workingDirectoryValue": "工作目录：{{path}}",
+    "workingDirectoryHelper": "编排器在 {{path}} 中启动。此计算机上的代理也从该目录启动。",
+    "branch": "分支",
+    "branchValue": "分支：{{branch}}",
+    "branchValueWorktree": "分支：{{branch}}，位于新工作树中",
+    "locationBranchHelper": "编排器在 {{path}} 的 {{branch}} 分支上启动。此计算机上的代理共享该检出目录。",
+    "locationDetachedHelper": "编排器在 {{path}} 的当前检出状态上启动。此计算机上的代理共享该目录。",
+    "locationWorktreeHelper": "编排器在 {{path}} 的新工作树中启动，使用从 {{base}} 创建的 {{branch}} 分支。此计算机上的代理共享该工作树。",
+    "locationWorktreeFromTitleHelper": "编排器在 {{path}} 的新工作树中启动，从 {{base}} 创建以 Mission 任务命名的分支。此计算机上的代理共享该工作树。",
+    "locationWorktreeExistingHelper": "编排器在 {{path}} 的新工作树中启动，使用 {{branch}} 分支。此计算机上的代理共享该工作树。",
+    "branchSwitchInProgress": "文件夹仍在切换分支。请完成后重试。",
+    "checkingWorkingDirectory": "正在检查文件夹…",
+    "connectingToListFolders": "正在连接 {{computer}} 以列出文件夹…",
+    "lostConnectionToComputer": "与 {{computer}} 的连接已断开。重新连接后请再次选择文件夹。",
+    "couldNotOpenFolderPicker": "无法打开文件夹选择器。",
+    "folderPathOn": "{{computer}}上的文件夹路径",
+    "useFolder": "使用文件夹",
+    "tryAgain": "重试",
+    "aTemplateCreatesAFreshComputer": "环境会在 Mission 任务启动时创建全新的计算机。",
+    "loadingMachines": "正在加载计算机…",
+    "localRequiresDesktopApp": "本地计算机需要 Factory 桌面应用。",
+    "loadingOrganizationSettings": "正在加载组织设置…",
+    "localComputersDisabled": "你的组织已禁用本地计算机。",
+    "syncSettingsCouldNotLoad": "无法加载组织同步设置。代理将在编排器计算机上运行。",
+    "complianceDisablesCloudSync": "组织合规策略禁用云端同步。代理将在编排器计算机上运行。",
+    "cannotVerifyMultiMachine": "Factory 无法验证组织是否允许跨计算机的 Mission 任务。代理将在编排器计算机上运行。请管理员检查合规设置。",
+    "remoteAccessNotAllowed": "组织不允许远程控制此计算机。代理将在编排器计算机上运行。",
+    "computerNotRegistered": "此计算机尚未注册远程控制。代理将在编排器计算机上运行。请打开设置 › 此计算机进行注册。",
+    "settingsChangedDuringStartup": "Mission 任务设置在启动期间发生变化。请检查必填字段后再继续。",
+    "chooseAvailableOrchestrator": "请选择可用的编排器计算机。",
+    "missionDefaultsCouldNotLoad": "无法加载 Mission 任务默认设置。代理将在编排器计算机上运行。",
+    "startWithoutRemoteAgents": "不使用远程代理启动",
+    "cancel": "取消",
+    "start": "启动",
+    "selectOrchestratorMachine": "选择编排器计算机",
+    "team": "团队",
+    "teamHelper": "此 Mission 任务归属的团队。",
+    "noTeam": "无团队",
+    "launch": {
+      "turnOnRemoteControl": "启用远程控制",
+      "createComputer": "从 {{environment}} 创建计算机",
+      "setUpComputer": "设置编排器计算机",
+      "connectToThisComputer": "连接此计算机",
+      "connectToMachine": "连接 {{machine}}",
+      "connectToComputer": "连接编排器计算机",
+      "startOrchestrator": "启动编排器",
+      "openMission": "打开 Mission 任务",
+      "agentMachines": "代理计算机"
+    },
+    "machineSummary": {
+      "defaultAndYours_one": "代理可使用 {{defaultMachine}} 及你的一台计算机。",
+      "defaultAndYours_other": "代理可使用 {{defaultMachine}} 及你的 {{count}} 台计算机。",
+      "defaultOnly": "代理可使用 {{defaultMachine}}。",
+      "yoursOnly_one": "代理可使用你的一台计算机。",
+      "yoursOnly_other": "代理可使用你的 {{count}} 台计算机。"
+    }
+  },
+  "missionControl": {
+    "title": "标题",
+    "repository": "仓库",
+    "computer": "计算机",
+    "progress": "进度",
+    "created": "创建时间",
+    "missionControl": "Mission 任务控制中心",
+    "newMission": "新建 Mission 任务",
+    "createANewMissionToStart": "创建新的 Mission 任务，开始规划并调度工作代理。",
+    "description": "通过并行工作的 Droid 团队，规划并交付长期项目。当工作跨度达数小时或数天、涉及多项功能，或超出单个 Session 的处理范围时，使用 Mission 任务。",
+    "filter": {
+      "all": "全部",
+      "running": "运行中",
+      "paused": "已暂停",
+      "completed": "已完成"
+    },
+    "empty": {
+      "all": "暂无 Mission 任务",
+      "running": "没有运行中的 Mission 任务",
+      "paused": "没有已暂停的 Mission 任务",
+      "completed": "没有已完成的 Mission 任务"
+    },
+    "localComputer": "本地",
+    "unregisteredComputer": "未注册的计算机",
+    "failedToLoadMissions": "加载 Mission 任务失败"
+  },
+  "missionStatus": {
+    "planning": "规划中",
+    "awaitingInput": "等待输入",
+    "initializing": "初始化中",
+    "running": "运行中",
+    "paused": "已暂停",
+    "orchestratorTurn": "编排器回合",
+    "completed": "已完成"
+  },
+  "newMissionComputerStartup": {
+    "startTimedOut": "编排器计算机启动时间过长。请重试以查看进度。",
+    "provisionFailed": "编排器计算机配置失败。请选择其他环境或重试。",
+    "preparing": "正在准备编排器计算机…"
+  },
+  "progressLog": {
+    "missionAccepted": "Mission 任务已接受",
+    "missionPaused": "Mission 任务已暂停",
+    "missionResumed": "Mission 任务已恢复",
+    "runStarted": "运行已开始",
+    "runStartedWithMessage": "运行已开始：{{message}}",
+    "handoffItemsDismissed": "交接事项已关闭",
+    "role": {
+      "orchestrator": "编排器",
+      "worker": "工作代理",
+      "validator": "验证代理"
+    },
+    "roleWithNumber": "{{role}} #{{number}}",
+    "started": "<role/>已启动<target/>",
+    "startedSubstituted": "<role/>已启动<target/>（组织策略禁用 <fromModel/>，改用 <toModel/>）",
+    "startedSubstitutedWithLabel": "<role/>已启动（组织策略禁用 <fromModel/>，改用 <toModel/>）<target/>",
+    "fallbackModel": "备用模型",
+    "selected": "<role/>已选择<target/>",
+    "completed": "<role/>已完成<target/>",
+    "failed": "<role/>失败",
+    "failedWithReason": "<role/>失败：<reason/>",
+    "failedWithLabel": "<role/>执行<target/>失败",
+    "failedWithReasonAndLabel": "<role/>失败：<reason/> <target/>",
+    "paused": "<role/>已暂停<target/>"
+  },
+  "missionV2Agents": {
+    "needsApprovalToRun": "运行 {{tool}} 需要批准",
+    "needsApprovalToRunAndMore_one": "运行 {{tool}} 及另外 {{count}} 个工具需要批准",
+    "needsApprovalToRunAndMore_other": "运行 {{tool}} 及另外 {{count}} 个工具需要批准",
+    "needsYourApproval": "需要你的批准",
+    "hasQuestions_one": "有 {{count}} 个问题想问你",
+    "hasQuestions_other": "有 {{count}} 个问题想问你",
+    "fallbackAgentName": "代理 {{id}}",
+    "group": {
+      "waitingOnYou": "等待你处理",
+      "working": "工作中",
+      "idle": "空闲"
+    },
+    "newAgent": "新建代理",
+    "activity": {
+      "computerGone": "计算机已不存在",
+      "computerStatus": "计算机{{status}}",
+      "computerStatusUnavailable": "计算机状态不可用",
+      "settingUpComputer": "正在设置计算机",
+      "starting": "正在启动",
+      "working": "工作中"
+    }
+  },
+  "missionChatComposer": {
+    "missionRunning": "Mission 任务正在运行，请暂停后发送消息。",
+    "workerCompleted": "工作代理已完成。请返回编排器继续。",
+    "validatorCompleted": "验证代理已完成。请返回编排器继续。"
+  },
+  "workerSessionTitle": {
+    "fallback": "工作代理 {{id}}"
+  },
+  "changeMissionTeamDialog": {
+    "title": "更改团队",
+    "team": "团队",
+    "loadingTeams": "正在加载团队…",
+    "teamsUnavailable": "团队暂时不可用。",
+    "saveFailed": "无法更改团队。请重试。",
+    "teamHelper": "此 Mission 任务归属的团队。",
+    "cancel": "取消",
+    "save": "保存",
+    "saving": "正在保存…"
+  },
+  "missionSettings": {
+    "defaultOption": "默认（{{name}}）",
+    "defaultOptionUnknown": "默认",
+    "modelsNeedConnection": "仅当已连接的计算机正在运行此 Mission 任务的编排器时，才能更改模型。",
+    "modelsNeedOpenMission": "请先打开一次此 Mission 任务，之后便可在此更改模型。",
+    "modelSaveFailed": "无法更改模型。请重试。"
+  }
+}

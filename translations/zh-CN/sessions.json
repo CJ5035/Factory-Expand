@@ -98,10 +98,10 @@
     "failedToGenerate": "生成语义差异失败"
   },
   "tokenLimitsModal": {
-    "creditLimits": "额度限制",
-    "failedToLoadCreditLimits": "加载额度限制失败",
+    "creditLimits": "积分上限",
+    "failedToLoadCreditLimits": "加载积分上限失败",
     "standardPool": "标准额度池",
-    "yourIncludedCreditAllowanceResetsAutomatically": "套餐内含的额度，按滚动时间窗口自动重置。",
+    "yourIncludedCreditAllowanceResetsAutomatically": "套餐内含的积分额度，按滚动时间窗口自动重置。",
     "text5Hour": "5 小时",
     "weekly": "每周",
     "monthly": "每月",
@@ -120,9 +120,9 @@
     "loadingLimits": "正在加载限制…",
     "exhausted": "已用尽",
     "useDroidCore": "使用 Droid Core",
-    "continueWithPrepaidCredits": "使用预付额度继续使用当前模型。",
+    "continueWithPrepaidCredits": "使用预付积分继续使用当前模型。",
     "enableExtraUsage": "启用额外用量",
-    "unusedExtraUsageCredits": "你有尚未使用的预付额度。启用额外用量即可继续使用当前模型。"
+    "unusedExtraUsageCredits": "你有尚未使用的预付积分。启用额外用量即可继续使用当前模型。"
   },
   "useComputerSessionActions": {
     "openInVsCode": "在 VS Code 中打开",

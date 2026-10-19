@@ -1,0 +1,1954 @@
+{
+  "myLessonsProgress": {
+    "noLessonsAreAssignedToYou": "尚未为你分配课程。",
+    "stepsSummary": "{{completed}} / {{total}} 步 · {{percent}}%",
+    "progressAriaLabel": "{{title}}进度",
+    "stepsAriaLabel": "{{title}}步骤",
+    "completedAt": "完成于 {{date}}",
+    "notCompleted": "未完成",
+    "alreadyUsing": "已在使用",
+    "detectedNote": "你已在使用此功能，因此计为已完成。仍可从侧边栏学习此课程。",
+    "startedAt": "开始于 {{date}}"
+  },
+  "organizationLessonsProgress": {
+    "retry": "重试",
+    "unableToLoadOrganizationProgress": "无法加载组织进度",
+    "showingPreviouslyLoadedProgress": "正在显示此前加载的进度",
+    "orgCompletion": "组织完成率",
+    "orgCompletionTooltip": "已完成课程分配数占全部课程分配数的百分比。",
+    "lessonsCompleted": "已完成课程",
+    "activeLearners": "活跃学员",
+    "activeLearnersTooltip": "所有已报名学员中，过去 {{days}} 天有课程活动的学员。",
+    "completionByLesson": "各课程完成情况",
+    "noLessonsAreAssignedYet": "尚未分配课程。",
+    "lessonCompletionSummary": "{{completed}} 个已完成 · {{percent}}%",
+    "lessonCompletionSummaryWithDetected": "{{completed}} 个已完成（{{detected}} 个已在使用）· {{percent}}%",
+    "lessonCompletionAriaLabel": "{{title}}完成情况",
+    "learnerStatus": "学员状态",
+    "last8WeeksWeeksStartOn": "最近 8 周 · 每周从周一开始（UTC）。",
+    "lessonsCompletedPerWeek": "每周完成课程数",
+    "learners": "学员",
+    "filterLearnersByStatus": "按状态筛选学员",
+    "status": "状态",
+    "allStatuses": "所有状态",
+    "searchLearners": "搜索学员",
+    "markComplete": "标为完成",
+    "markCompleteWithCount": "标为完成（{{number}}）",
+    "marking": "正在标记…",
+    "exportCsv": "导出 CSV",
+    "noLearnersMatchFilters": "没有符合筛选条件的学员。",
+    "noLearnersEnrolled": "尚无学员报名。",
+    "footer": {
+      "learners": "{{shown}} / {{total}} 位学员",
+      "selected": "已选择 {{number}} 位",
+      "selectLimit": "每次最多选择 {{max}} 位"
+    },
+    "markedComplete_one": "已将 {{count}} 位学员标为完成。",
+    "markedComplete_other": "已将 {{count}} 位学员标为完成。",
+    "confirmTitle_one": "将 {{count}} 位学员标为完成？",
+    "confirmTitle_other": "将 {{count}} 位学员标为完成？",
+    "confirmDescription_one": "所选学员的所有已分配课程均会显示为完成。已完成的步骤保留原有日期。",
+    "confirmDescription_other": "所选学员的所有已分配课程均会显示为完成。已完成的步骤保留原有日期。",
+    "loadingProgress": "正在加载组织进度…",
+    "cancel": "取消"
+  },
+  "onboardingTracker": {
+    "retry": "重试",
+    "unableToLoadLessons": "无法加载课程",
+    "loadingLessonProgress": "正在加载课程进度…",
+    "onboardingTracker": "入门进度跟踪",
+    "orgWideProgress": "全组织课程进度",
+    "orgWideProgressUpdated": "全组织课程进度 · 更新于{{timeAgo}}",
+    "yourLessonProgress": "你的课程进度",
+    "showingPreviouslyLoadedLessons": "正在显示此前加载的课程",
+    "progressView": "进度视图",
+    "myProgress": "我的进度",
+    "organization": "组织"
+  },
+  "trackerUtils": {
+    "status": {
+      "completed": "已完成",
+      "inProgress": "进行中",
+      "stalled": "停滞",
+      "notStarted": "尚未开始"
+    },
+    "lessonsCompleted": "已完成课程",
+    "never": "从未",
+    "lessonsWithDetected": "{{completed}} / {{assigned}} · {{detected}} 个已在使用",
+    "csv": {
+      "userId": "用户 ID",
+      "learner": "学员",
+      "email": "邮箱",
+      "lessonsAssigned": "已分配课程数",
+      "stepsCompleted": "已完成步骤数",
+      "stepsAssigned": "已分配步骤数",
+      "progressPercent": "进度（%）",
+      "lastActive": "最近活动",
+      "status": "状态",
+      "stepsSkipped": "已跳过步骤数",
+      "alreadyUsing": "已在使用的课程数"
+    },
+    "progressWithSkipped_one": "{{percent}}% · 已跳过 {{count}} 项",
+    "progressWithSkipped_other": "{{percent}}% · 已跳过 {{count}} 项"
+  },
+  "useLessonActivityPanel": {
+    "draftedMessage": "你的请求已填入输入框。准备好后即可发送。",
+    "exploreBlocker": "再打开 {{number}} 个{{noun}}以继续",
+    "quizBlocker_one": "再答对 {{count}} 题以继续",
+    "quizBlocker_other": "再答对 {{count}} 题以继续"
+  },
+  "useLessonReadinessPanel": {
+    "pillarsBlocker_one": "再打开 {{count}} 个维度以继续",
+    "pillarsBlocker_other": "再打开 {{count}} 个维度以继续",
+    "levelsBlocker_one": "再打开 {{count}} 个级别以继续",
+    "levelsBlocker_other": "再打开 {{count}} 个级别以继续",
+    "reportLoadFailed": "无法加载你的就绪度报告",
+    "waitingForReport": "正在等待你的就绪度报告"
+  },
+  "lessonPanel": {
+    "scorecardReady": "你的评分卡已就绪",
+    "seeYourScorecard": "查看评分卡",
+    "adminMustConfigureConnector": "请管理员配置此连接器。",
+    "connectToContinue": "连接 {{names}} 以继续",
+    "connectAtLeastOneApp": "至少连接一个应用以继续",
+    "continue": "继续",
+    "eyebrow": {
+      "position": "第 {{number}} / {{total}} 课",
+      "preview": "预览"
+    },
+    "finishLesson": "完成课程",
+    "goToPage": "前往{{page}}",
+    "personas": {
+      "engineering": "工程",
+      "product": "产品",
+      "design": "设计",
+      "sales": "销售",
+      "marketing": "市场营销",
+      "finance": "财务",
+      "operations": "运营",
+      "founder": "创始人",
+      "somethingElse": "其他",
+      "admin": "管理员"
+    },
+    "fallback": {
+      "noComputer": "Droid 需要计算机才能工作",
+      "computerConnecting": "等待你的计算机连接",
+      "noProject": "添加项目供 Droid 工作",
+      "notGitRepository": "此文件夹不是 Git 仓库，因此没有可审查的差异",
+      "setUpComputer": "设置计算机",
+      "manageComputers": "管理计算机",
+      "addProject": "添加项目",
+      "skipStep": "跳过此步骤"
+    },
+    "completion": {
+      "yourSession": "你的 Session",
+      "droidStillWorking": "Droid 仍在工作",
+      "recapIntro": "在本课中，你：",
+      "durationSeconds": "{{seconds}} 秒",
+      "durationMinutes": "{{minutes}} 分 {{seconds}} 秒"
+    }
+  },
+  "lessonCoachmarks": {
+    "pressEnterToSend": "按 Enter 发送并继续",
+    "useSamplePrompt": "使用示例提示词",
+    "returnToCurrentTipHint": "按 → 返回当前提示",
+    "nextTipHint": "按 → 查看下一条提示",
+    "stepPosition": "第 {{number}} / {{total}} 步",
+    "finishTour": "完成导览",
+    "next": "下一步",
+    "tourPosition": "导览 · {{current}} / {{total}}"
+  },
+  "utils": {
+    "pageGuide": {
+      "backToAppTitle": "返回应用",
+      "backToAppBody": "此步骤需在 Session 中完成。请返回应用以继续。",
+      "openSettingsTitle": "打开设置",
+      "openSettingsBody": "{{page}}位于设置中。",
+      "openPageTitle": "打开{{page}}",
+      "openPageBody": "此步骤需在{{page}}页面完成。",
+      "app": {
+        "profileMenu": {
+          "title": "打开个人资料菜单",
+          "body": "{{item}}位于个人资料菜单中。打开菜单，再选择{{item}}。",
+          "item": {
+            "wiki": "Wiki",
+            "analytics": "分析",
+            "softwareFactory": "Software Factory"
+          }
+        },
+        "automations": {
+          "title": "打开自动化",
+          "body": "此步骤需在自动化页面完成。请在侧边栏选择自动化。"
+        },
+        "automationTemplates": {
+          "title": "打开模板库",
+          "body": "点击新建自动化会打开模板库。请选择它以继续。",
+          "fromElsewhereBody": "模板库位于自动化页面。请在侧边栏选择自动化。"
+        },
+        "workstreams": {
+          "title": "打开工作流",
+          "body": "此步骤需在工作流页面完成。请在侧边栏选择工作流。"
+        },
+        "softwareFactory": {
+          "title": "打开 Software Factory",
+          "body": "工作流位于 Software Factory 中。先选择 Software Factory，再选择工作流。"
+        },
+        "wiki": {
+          "title": "打开 Wiki",
+          "body": "此步骤需在 Wiki 页面完成。请选择 Wiki。"
+        },
+        "review": {
+          "title": "打开审查",
+          "body": "此步骤需在审查页面完成。请在侧边栏选择审查。"
+        },
+        "agentReadiness": {
+          "title": "打开代理就绪度",
+          "body": "此步骤需在代理就绪度页面完成。请在分析侧边栏选择它。"
+        },
+        "analytics": {
+          "title": "打开分析",
+          "body": "代理就绪度位于分析中。先选择分析，再在其侧边栏选择代理就绪度。"
+        }
+      }
+    }
+  },
+  "content": {
+    "tips": {
+      "newSession": {
+        "title": "启动新 Session",
+        "body": "Select New Session to open a fresh session for this lesson."
+      },
+      "projectPicker": {
+        "title": "选择项目",
+        "body": "Choose the folder Droid should work in."
+      },
+      "model": {
+        "title": "选择模型",
+        "body": "The model sets how fast Droid works and how deeply it reasons. Stronger models suit tricky, multi-file tasks."
+      },
+      "autonomy": {
+        "title": "选择 Droid 自主执行的范围",
+        "body": "Autonomy sets what Droid does without asking. Medium suits most tasks: it edits files and runs tests you can undo.",
+        "actionLabel": "保留此级别"
+      },
+      "specMode": {
+        "title": "切换到 Spec 模式",
+        "body": "Spec mode makes Droid research your task and write a plan you approve before it changes anything."
+      },
+      "smallTask": {
+        "title": "请 Droid 完成任务",
+        "body": "Describe a small task: what done looks like, where to look, what not to touch, and how to check it."
+      },
+      "specReview": {
+        "card": {
+          "title": "打开 Spec",
+          "body": "Droid researched your task and wrote a spec. Open it to read the plan before any code changes."
+        },
+        "read": {
+          "title": "像读计划一样阅读它",
+          "body": "Check four things: the goal, the files Droid plans to change, its approach, and how it will verify the result."
+        },
+        "approve": {
+          "title": "调整后再批准",
+          "body": "Comment on any line or choose Keep iterating if something is off. Approve once the plan matches what you want."
+        },
+        "confirm": {
+          "title": "接受 Spec",
+          "body": "Pick how much Droid does without asking while it builds. Medium suits most tasks. Select Confirm to start."
+        }
+      },
+      "tourPanelTipPrefix": "使用方向键浏览导览。",
+      "choices": {
+        "draft": {
+          "actionLabel": "起草",
+          "doneLabel": "已起草"
+        },
+        "navigate": {
+          "actionLabel": "打开",
+          "doneLabel": "已打开"
+        }
+      }
+    },
+    "glossary": {
+      "specMode": {
+        "term": "Spec 模式",
+        "definition": "Droid researches your task and proposes a plan, called a spec, before it changes any code. While planning it only reads and searches: no file edits, commits, or services. Approve the spec to start building, or keep iterating on it."
+      },
+      "autonomy": {
+        "term": "自主级别",
+        "definition": "Autonomy sets the highest-risk work Droid can run without pausing for approval. Higher levels let Droid do more on its own, and you can cycle levels as you work through a task.",
+        "levels": {
+          "off": {
+            "label": "关闭",
+            "description": "Reads only"
+          },
+          "low": {
+            "label": "低",
+            "description": "Edits files"
+          },
+          "medium": {
+            "label": "中",
+            "description": "Reversible write actions"
+          },
+          "high": {
+            "label": "高",
+            "description": "Pushes, migrations"
+          }
+        }
+      }
+    },
+    "firstSession": {
+      "title": "你的首个 Session",
+      "description": "Connect your tools, give Droid a clear task in Spec mode, then read and approve the spec it writes",
+      "steps": {
+        "connectTools": {
+          "title": "连接工具",
+          "summary": "Give Droid context from your apps",
+          "instructions": "Connect the app where your work is tracked, such as Linear or Jira, then select Continue",
+          "tip": "Droid works from the same sources you do. Once Linear or Jira is connected, you can paste a ticket link and Droid reads the ticket before it writes a spec, so you skip explaining the task again. Connect the app where your work is tracked first; you can add Slack, Notion, or Google Drive later in Settings.",
+          "skipLabel": "暂时跳过"
+        },
+        "startSession": {
+          "title": "启动 Spec Session",
+          "summary": "Give Droid a clear task in Spec mode",
+          "instructions": "Start a new session in a project, pick a model, switch to Spec mode, and send a task, or use the example below",
+          "folderInstructions": "Start a new session in an empty folder, pick a model, switch to Spec mode, and send your task, or use the example below",
+          "tip": "A clear task gets you a spec you can approve on the first pass. Name the outcome, where Droid should look, what it must not touch, and how you will check the result, or start from the example below. A vague task makes Droid guess, and you spend the review correcting its guesses."
+        },
+        "giveTask": {
+          "title": "审查并批准 Spec",
+          "summary": "Read the plan, steer it, and approve it",
+          "instructions": "Droid researches and writes a spec. Read it, comment on anything that is off, then select Approve Spec and Confirm",
+          "tip": "Fixing a plan takes one comment, while fixing code takes another run. Before you approve, check that the spec has the right goal, the files you expect, an approach you agree with, and a way to verify the result. If a part is wrong, comment on that line or choose Keep iterating, and Droid revises the spec.",
+          "restartLabel": "不用此任务",
+          "waitLabel": "Droid 正在编写 Spec",
+          "readyLabel": "你的 Spec 已可审查"
+        }
+      },
+      "example": {
+        "heading": "Droid 可以规划的任务",
+        "whyItWorks": "Why it works",
+        "outcome": {
+          "label": "预期结果",
+          "text": "预期结果：{{part}}",
+          "note": "Names the result, so the spec plans one thing you will recognize when it is done."
+        },
+        "context": {
+          "label": "上下文",
+          "text": "上下文：{{part}}",
+          "note": "Says where to look, so Droid reads your sources instead of guessing."
+        },
+        "constraints": {
+          "label": "约束",
+          "text": "约束：{{part}}",
+          "note": "Says what must not change, so the spec rules out the riskiest edits."
+        },
+        "verify": {
+          "label": "验证方式",
+          "text": "验证方式：{{part}}",
+          "note": "Asks for proof, so you check the result instead of trusting a summary."
+        },
+        "caption": "The prompt coach under the composer lights up as your task names each part."
+      },
+      "completion": {
+        "headline": "你已批准首个 Spec。",
+        "recap": {
+          "task": "在 Spec 模式中编写清晰的任务",
+          "read": "阅读 Droid 为任务编写的 Spec",
+          "approve": "调整计划并批准"
+        },
+        "nextStep": "Droid builds from your spec now. Start your next task the same way.",
+        "sessionLabel": "你的 Spec"
+      },
+      "personas": {
+        "engineering": {
+          "sampleTask": {
+            "title": "为一个未测试的函数添加针对性测试",
+            "description": "Real code, small, and checked by running the tests.",
+            "prompt": "Find one small, important function in this repo that has no tests. Follow the existing test style and runner. Don’t change the function’s behavior or add dependencies. Run the tests and show me they pass."
+          },
+          "parts": {
+            "outcome": "Tests for one small function that has none.",
+            "context": "The repo’s existing test style and runner.",
+            "constraints": "No behavior changes and no new dependencies.",
+            "verify": "Run the tests and show they pass."
+          }
+        },
+        "product": {
+          "taskTip": {
+            "title": "请 Droid 编写有依据的 Spec",
+            "body": "Describe a feature idea. Droid reads the code, then plans a one-page spec for you to approve."
+          },
+          "sampleTask": {
+            "title": "根据当前代码编写 Spec",
+            "description": "Droid writes one Markdown file and changes no code.",
+            "prompt": "Write a one-page spec in docs/specs/ for a small feature idea I’ll describe next. Base “how it works today” on the actual code and link the files. Don’t change any code. End with open questions and 3 acceptance criteria I can test."
+          },
+          "parts": {
+            "outcome": "A one-page spec in docs/specs/ for one feature idea.",
+            "context": "How it works today, from the actual code, with file links.",
+            "constraints": "No code changes.",
+            "verify": "Open questions and 3 acceptance criteria you can test."
+          }
+        },
+        "design": {
+          "taskTip": {
+            "title": "请 Droid 审查界面",
+            "body": "Name one screen. Droid checks it against your design system and plans the two worst fixes."
+          },
+          "sampleTask": {
+            "title": "按设计系统审查一个界面",
+            "description": "A small, visual diff you can judge at a glance.",
+            "prompt": "Audit one settings page for inconsistent spacing, colors, type, and empty, loading, and error states. Use our design tokens and components, not hardcoded values. Fix only the top two issues, no layout redesign. Show before and after screenshots."
+          },
+          "parts": {
+            "outcome": "The top two consistency fixes on one settings page.",
+            "context": "Your design tokens and components.",
+            "constraints": "No hardcoded values and no layout redesign.",
+            "verify": "Before and after screenshots."
+          }
+        },
+        "sales": {
+          "taskTip": {
+            "title": "请 Droid 编写客户简报",
+            "body": "Name the company and the meeting. Droid plans the brief and its sources for you to approve."
+          },
+          "sampleTask": {
+            "title": "准备客户简报",
+            "description": "One page from public sources, with every fact linked.",
+            "prompt": "Create account-brief.md for my next meeting with a company I’ll name. Use public sources, with links. Mark assumptions; no guesses presented as facts. End with 3 discovery questions and one sentence I could open with."
+          },
+          "parts": {
+            "outcome": "account-brief.md for your next meeting.",
+            "context": "Public sources, each one linked.",
+            "constraints": "Assumptions marked, no guesses presented as facts.",
+            "verify": "Every fact links to the source you can open."
+          }
+        },
+        "marketing": {
+          "taskTip": {
+            "title": "请 Droid 编写发布文案",
+            "body": "Name the feature and the audience. Droid plans a one-pager grounded in your docs."
+          },
+          "sampleTask": {
+            "title": "起草一页发布说明",
+            "description": "Short, sourced copy you can check claim by claim.",
+            "prompt": "Write launch.md: a one-page announcement for a feature I’ll name, for our customers. Base it on our docs and changelog. No claims we can’t support, under 300 words. List every factual claim with its source at the end."
+          },
+          "parts": {
+            "outcome": "launch.md, a one-page announcement for customers.",
+            "context": "Your docs and changelog.",
+            "constraints": "Under 300 words, with no claims you cannot support.",
+            "verify": "Every claim listed with its source."
+          }
+        },
+        "finance": {
+          "taskTip": {
+            "title": "请 Droid 编写分析摘要",
+            "body": "Point Droid at a spreadsheet. It plans the analysis and one chart for you to approve."
+          },
+          "sampleTask": {
+            "title": "分析电子表格",
+            "description": "A short readout and one chart. Your file stays untouched.",
+            "prompt": "Analyze a CSV I’ll point you to and write readout.md with the 3 biggest trends and one chart. If I have no file, first create a clearly labeled fictional 12-month revenue CSV. Don’t modify the source file. Show the formulas behind every number."
+          },
+          "parts": {
+            "outcome": "readout.md with the 3 biggest trends and one chart.",
+            "context": "The CSV you point to, or a labeled fictional one.",
+            "constraints": "The source file stays untouched.",
+            "verify": "The formula behind every number."
+          }
+        },
+        "operations": {
+          "taskTip": {
+            "title": "请 Droid 梳理流程",
+            "body": "Describe a process you run. Droid plans a map of its steps, owners, and bottlenecks."
+          },
+          "sampleTask": {
+            "title": "梳理重复执行的流程",
+            "description": "A clear map and a status update you could send.",
+            "prompt": "Map a recurring process I’ll describe as process.md: steps, owners, inputs, and where it stalls. Mark anything you inferred. End with a draft of the weekly status update I could send about it."
+          },
+          "parts": {
+            "outcome": "process.md with steps, owners, inputs, and stalls.",
+            "context": "The process you describe.",
+            "constraints": "Nothing invented beyond what you describe.",
+            "verify": "Anything inferred is marked for you to check."
+          }
+        },
+        "founder": {
+          "taskTip": {
+            "title": "请 Droid 起草投资人简报",
+            "body": "Paste highlights and metrics. Droid plans an update and flags any missing numbers."
+          },
+          "sampleTask": {
+            "title": "起草投资人简报",
+            "description": "Plain and short, with every number from you.",
+            "prompt": "Draft investor-update.md from highlights and metrics I’ll paste next. Keep it under 400 words, no hype, and flag anything that needs a number I didn’t give you. End with 3 concrete asks."
+          },
+          "parts": {
+            "outcome": "investor-update.md from your highlights and metrics.",
+            "context": "The highlights and metrics you paste.",
+            "constraints": "Under 400 words, with no hype.",
+            "verify": "A flag on every number you did not give."
+          }
+        },
+        "somethingElse": {
+          "taskTip": {
+            "title": "请 Droid 处理笔记",
+            "body": "Paste notes or a document. Droid plans a summary of decisions and actions for you."
+          },
+          "sampleTask": {
+            "title": "将会议笔记整理为决策",
+            "description": "Decisions and action items, with nothing invented.",
+            "prompt": "Turn meeting notes I’ll paste next into notes-summary.md: decisions, action items with owners, and open questions. Don’t invent owners or dates; mark anything unclear. End with a short message I could send to the attendees."
+          },
+          "parts": {
+            "outcome": "notes-summary.md with decisions, actions, and questions.",
+            "context": "The notes you paste.",
+            "constraints": "No invented owners or dates.",
+            "verify": "Anything unclear is marked for you to check."
+          }
+        }
+      }
+    },
+    "agentReadiness": {
+      "pillars": "可解决问题的维度",
+      "stumbleReasons": {
+        "context": {
+          "label": "上下文",
+          "description": "Droid doesn’t know your conventions or what a task means, so it guesses. AGENTS.md, a README, and issue templates replace guesses with facts.",
+          "tags": {
+            "0": "文档",
+            "1": "任务"
+          }
+        },
+        "access": {
+          "label": "访问能力",
+          "description": "Droid can’t build or run your code, so it can’t see what it does. Documented builds, env templates, and logs open the door.",
+          "tags": {
+            "0": "构建",
+            "1": "开发环境",
+            "2": "调试"
+          }
+        },
+        "checks": {
+          "label": "检查",
+          "description": "Nothing tells Droid it’s wrong until you do. Linters, tests, branch protection, and analytics catch mistakes before review.",
+          "tags": {
+            "0": "代码风格",
+            "1": "测试",
+            "2": "安全",
+            "3": "产品"
+          }
+        }
+      },
+      "levelOptions": {
+        "level2": {
+          "label": "级别 2"
+        },
+        "level3": {
+          "label": "级别 3"
+        },
+        "level4": {
+          "label": "级别 4"
+        }
+      },
+      "levelScenarios": {
+        "half": {
+          "prompt": "Your repo passes half of all its checks. Which level is it?",
+          "explanation": "50% clears the 40% bar for Level 3, not the 60% for Level 4.",
+          "options": {
+            "0": {
+              "explanation": "Level 2 starts at 20%. Half of all checks reaches higher."
+            },
+            "2": {
+              "explanation": "Level 4 needs 60% of all checks, and you pass 50%."
+            }
+          }
+        },
+        "cheapest": {
+          "prompt": "You have time for one fix: add AGENTS.md (Level 2) or set up tracing (Level 3). Which raises your score more?",
+          "explanation": "Every check counts the same, so do the faster fix first. AGENTS.md takes minutes.",
+          "options": {
+            "agentsMd": {
+              "label": "AGENTS.md",
+              "explanation": "It’s the faster fix, but it doesn’t count for more. Every check weighs the same."
+            },
+            "tracing": {
+              "label": "追踪",
+              "explanation": "A higher-level check doesn’t count for more. Every check weighs the same."
+            },
+            "same": {
+              "label": "相同"
+            }
+          }
+        }
+      },
+      "readinessPageTour": {
+        "tourReadinessSummary": {
+          "title": "组织的级别",
+          "body": "Organization Score averages every scored repo’s level. Repositories Tracked shows how much is measured."
+        },
+        "tourReadinessRepositories": {
+          "title": "各仓库的级别",
+          "body": "Select a repo to see each check and why it failed, or refresh it to score it again."
+        },
+        "tourReadinessNav": {
+          "title": "每次修复后再来查看",
+          "body": "Agent Readiness lives in Analytics. Rescore after a fix and watch your level climb."
+        }
+      },
+      "docsLink": {
+        "label": "阅读代理就绪度说明"
+      },
+      "steps": {
+        "runReadinessReport": {
+          "summary": "Start scoring your repo",
+          "instructions": "In a new session in a Git project with an origin remote, send /readiness-report. It takes several minutes; the sidebar shows when it’s ready.",
+          "tip": "The scorecard shows which checks your repo fails, so you fix real gaps instead of guessing. Droid looks for things like a README, a lint config, and pre-commit hooks, then saves the result to Agent Readiness. Large repos can take up to an hour, so start it now and keep going",
+          "coachmarks": {
+            "runReadinessReport": {
+              "title": "运行就绪度报告",
+              "body": "Send /readiness-report, then come back to the lesson. Droid scores your repo on its own.",
+              "example": "/readiness-report"
+            }
+          }
+        },
+        "learnAgentReadiness": {
+          "summary": "Learn the three reasons agents stumble",
+          "instructions": "When Droid struggles in a repo, it’s missing context, access, or checks. Open each to see which pillars your report grades.",
+          "tip": "Knowing why Droid stumbles tells you which fix pays off. Without an AGENTS.md, Droid guesses your build and test commands and wastes turns; without tests or a linter, it can’t check its own work. Each pillar in your report traces back to one of these three causes",
+          "activity": {
+            "heading": "代理为何遇到困难",
+            "placeholder": "选择原因，查看可解决问题的维度。",
+            "noun": {
+              "one": "原因",
+              "other": "原因"
+            }
+          }
+        },
+        "climbReadinessLevels": {
+          "summary": "See how your level is set",
+          "instructions": "Your level is the share of all checks you pass: 20%, 40%, 60%, and 80% unlock Levels 2 to 5. Every check counts the same.",
+          "tip": "Because every check counts the same, the cheapest failing checks are the fastest way up. Adding a lint config moves your score as much as setting up distributed tracing. Count how many checks stand between you and the next 20% band before you start a big project",
+          "activity": {
+            "heading": "检验你的理解"
+          }
+        },
+        "reviewReadinessReport": {
+          "summary": "Read your level and weakest pillar",
+          "instructions": "Find three things on your scorecard: your level, how far you are from the next one, and your weakest pillar.",
+          "tip": "Your weakest pillar is where Droid wastes the most time in this repo, so it’s the best place to start. Open a failing check to read why it failed, such as no pre-commit hooks. Ask Droid about any check you don’t recognize before you fix it",
+          "coachmarks": {
+            "askAboutReport": {
+              "title": "询问报告内容",
+              "body": "Ask Droid to explain your level in plain words and pick what to fix first.",
+              "example": "Explain my readiness level simply and tell me what to fix first"
+            }
+          },
+          "waitLabel": "Droid 正在为仓库评分",
+          "skip": {
+            "label": "不等待报告，继续学习",
+            "note": "Keep going or leave. The sidebar marks this lesson when your scorecard is ready, so come back to read it."
+          }
+        },
+        "fixReadinessGap": {
+          "summary": "Have Droid fix one failing check",
+          "instructions": "Select Fix on a failing check and send the /readiness-fix it drafts. Then read what Droid changes.",
+          "tip": "One fix moves your score and shows you what a readiness change looks like. /readiness-fix names the failing check, so Droid changes only what that check needs instead of rewriting your setup. If you have no report yet, ask Droid to write an AGENTS.md, the highest-leverage fix in most repos",
+          "confirmLabel": "我已发送",
+          "skip": {
+            "label": "暂时跳过",
+            "note": "Run /readiness-fix later from your scorecard."
+          }
+        },
+        "tourReadinessPage": {
+          "summary": "Track readiness across your repos",
+          "instructions": "Agent Readiness in Analytics tracks every scored repo and your organization’s level. Follow the tour.",
+          "tip": "{{tourPanelTipPrefix}} This page shows every scored repo, so you can spot which ones slow Droid down. After you merge a fix, refresh that repo to confirm the check now passes; your report appears here once Droid saves it."
+        }
+      },
+      "completion": {
+        "headline": "仓库已有评分和计划",
+        "recapItems": {
+          "0": "使用 /readiness-report 为仓库评分",
+          "1": "了解代理受阻的三个原因：上下文、访问权限和检查",
+          "2": "了解等级的评定方式及快速提升方法",
+          "3": "逐项查看评分卡中的不足",
+          "4": "让 Droid 修复一项不足"
+        },
+        "nextStep": "Fix a gap, merge it, then run /readiness-report again to watch your score move."
+      }
+    },
+    "automatedCode": {
+      "sampleFinding": {
+        "title": {
+          "tags": {
+            "0": {
+              "label": "P1"
+            }
+          },
+          "text": "Apply the discount only once per order"
+        },
+        "body": {
+          "text": "A retried payment runs this branch again, so a 10% code takes 20% off and the order is undercharged."
+        },
+        "fix": {
+          "text": "Skip the discount when `order.discountApplied` is set, and set it after the first charge."
+        }
+      },
+      "droidExecExample": {
+        "useCase": {
+          "text": "A CI job reviews each branch and fixes what it finds, with no one at the keyboard."
+        },
+        "warning": {
+          "text": "High lets Droid edit, commit, and push without asking. Use it in CI or on a branch you can throw away."
+        }
+      },
+      "reviewSetup": {
+        "install": {
+          "title": "审查每个拉取请求",
+          "description": "/install-code-review sets up Droid on your GitHub or GitLab repos.",
+          "action": {
+            "text": "/install-code-review"
+          }
+        },
+        "rules": {
+          "title": "添加团队审查规则",
+          "description": "Droid follows them in every review.",
+          "action": {
+            "text": "Create .factory/skills/review-guidelines/SKILL.md with our team’s code review rules"
+          }
+        },
+        "template": {
+          "title": "使用代码审查模板",
+          "description": "Turn on reviews from Automations instead."
+        }
+      },
+      "docsLink": {
+        "label": "阅读代码审查说明"
+      },
+      "steps": {
+        "startSession": {
+          "summary": "Ask Droid to review your changes",
+          "instructions": "Start a new session in a project with uncommitted changes and send the tip’s example. In the CLI, /review does the same.",
+          "noComputerInstructions": "Set up a computer, then start a session in a project with uncommitted changes and send: Review my uncommitted changes",
+          "tip": "A review before you push catches bugs while the change is fresh and cheap to fix. Droid reads your diff and the code around it, and reports only bugs it can explain. If you have no uncommitted changes, ask Droid to review your last commit instead",
+          "coachmarks": {
+            "askForCodeReview": {
+              "title": "请求代码审查",
+              "body": "Ask in plain words. Droid looks for real bugs, not style.",
+              "example": "Review my uncommitted changes"
+            }
+          }
+        },
+        "readCodeReview": {
+          "summary": "Learn the parts of a finding",
+          "instructions": "While Droid reviews, read this sample finding. Select each part, then find the highest priority in your own review.",
+          "tip": "Priority tells you what to fix before you merge and what can wait. P0 blocks the merge, P1 is a real bug Droid is confident about, P2 is plausible but unproven, and P3 is minor. A review with no findings is a good result",
+          "confirmLabel": "知道了",
+          "activity": {
+            "heading": "一条审查发现",
+            "pins": {
+              "priority": {
+                "label": "优先级",
+                "note": "P0 blocks the merge. P1 is a real bug Droid is confident about."
+              },
+              "location": {
+                "label": "位置",
+                "note": "The file and line that break, with the code below."
+              },
+              "impact": {
+                "label": "影响",
+                "note": "What goes wrong for users. Droid skips style nitpicks."
+              },
+              "fix": {
+                "label": "修复",
+                "note": "A suggested fix you can ask Droid to apply."
+              }
+            },
+            "caption": "Start with the highest priority. Fix P0 and P1 before you merge."
+          }
+        },
+        "fixReviewFinding": {
+          "summary": "Have Droid fix the top finding",
+          "instructions": "Draft the fix below and send it. When Droid finishes, open Changes and check the fix and its test.",
+          "tip": "A test proves the fix works and fails if someone brings the bug back. In Changes, check that the test covers the exact case the finding describes. If Droid found nothing, ask it to add a test for your change instead",
+          "activity": {
+            "heading": "修复并证明有效",
+            "choices": {
+              "fixAndTest": {
+                "title": "修复最高优先级发现",
+                "description": "A test shows it’s fixed and keeps it fixed.",
+                "action": {
+                  "text": "Fix the highest-priority finding and add a test that catches it"
+                }
+              }
+            }
+          },
+          "waitLabel": "Droid 正在修复问题",
+          "skip": {
+            "label": "暂时跳过",
+            "whileWorkingLabel": "不等待，继续学习",
+            "note": "Check Changes when Droid finishes."
+          }
+        },
+        "learnDroidExec": {
+          "summary": "Run a review from a script or CI",
+          "instructions": "droid exec runs one task with no chat, so a script or CI job can run it. Read the command a CI review would use.",
+          "tip": "droid exec runs Droid in CI or a script with no one watching, so the --auto level is your safety net. With no flag it only reads; low allows file edits, medium adds installs and commits, and high allows git push. If a task needs more, it stops and keeps what it already changed",
+          "confirmLabel": "知道了",
+          "activity": {
+            "heading": "通过 CI 审查并修复",
+            "pins": {
+              "autonomy": {
+                "label": "自主级别",
+                "note": "With no --auto flag, Droid only reads. high also allows edits, commits, and git push."
+              },
+              "where": {
+                "label": "运行位置",
+                "note": "A CI runner or a throwaway branch keeps a wrong change away from your main work."
+              }
+            }
+          }
+        },
+        "learnPullRequestReview": {
+          "summary": "Review every pull request automatically",
+          "instructions": "Droid can review each pull request and comment on real bugs. Set it up from a session or from Automations, and add your rules.",
+          "tip": "Automatic review checks every pull request, including the ones nobody asked about. Set review_depth: deep for thorough reviews or shallow for fast ones. Write your team’s rules in .factory/skills/review-guidelines/SKILL.md so Droid flags what your reviewers would",
+          "activity": {
+            "heading": "开始设置"
+          }
+        }
+      },
+      "completion": {
+        "headline": "你已学会让 Droid 审查并修复代码",
+        "recapItems": {
+          "0": "让 Droid 审查变更",
+          "1": "阅读发现项的优先级、位置、影响和修复方法",
+          "2": "让 Droid 修复最高优先级问题并添加测试",
+          "3": "学会通过 CI 及每个拉取请求运行审查"
+        },
+        "nextStep": "Ask Droid to review your changes before your next push."
+      }
+    },
+    "automations": {
+      "triggerOptions": {
+        "scheduled": {
+          "label": "定时运行"
+        },
+        "slack": {
+          "label": "Slack"
+        },
+        "github": {
+          "label": "GitHub"
+        },
+        "webhook": {
+          "label": "Webhook"
+        }
+      },
+      "triggerScenarios": {
+        "weekdaySummary": {
+          "prompt": "Summarize changed tickets every weekday at 9am.",
+          "explanation": "A clock starts this run, so it’s Scheduled. Schedules run in UTC unless you name a time zone.",
+          "whyNot": {
+            "slack": "Nobody posts a message to start it. The time of day is the trigger.",
+            "github": "No repository event happens at 9am. Only the clock changes.",
+            "webhook": "No outside service calls in. The time of day is the trigger."
+          }
+        },
+        "channelMessage": {
+          "prompt": "Answer new questions posted in #ask-platform.",
+          "explanation": "A message in a channel starts each run, and Droid replies in its thread.",
+          "whyNot": {
+            "scheduled": "A schedule would answer late and in batches. Each message should start its own run.",
+            "github": "The questions arrive in Slack, not in a repository.",
+            "webhook": "Slack is built in. A webhook is for services that have no trigger of their own."
+          }
+        },
+        "externalAlert": {
+          "prompt": "Investigate each alert your monitoring tool sends.",
+          "explanation": "The monitoring tool posts each alert to the automation’s webhook URL, which starts a run.",
+          "whyNot": {
+            "scheduled": "Polling on a schedule finds alerts late. A webhook starts a run as each one fires.",
+            "slack": "That works only if alerts land in Slack. Here the tool calls Factory directly.",
+            "github": "Alerts come from your monitoring tool, not from a repository."
+          }
+        }
+      },
+      "starterGalleryTour": {
+        "tourCreateWithDroid": {
+          "title": "也可以直接描述需求",
+          "body": "Create with Droid turns a plain description into an automation. You’ll do the same in a session next."
+        },
+        "tourStarters": {
+          "title": "借鉴成熟的工作方式",
+          "body": "Each starter fills in a trigger and a prompt. Starter schedules are in UTC, so check the time.",
+          "chips": {
+            "0": "每日状态摘要",
+            "1": "PR 审查器",
+            "2": "错误分流"
+          }
+        }
+      },
+      "confirmFirst": "Show me the instructions before you create it.",
+      "automationDrafts": {
+        "myPullRequests": {
+          "title": "我的拉取请求",
+          "description": "A weekday list of PRs that need you.",
+          "action": {
+            "text": "Create a private scheduled automation. Every weekday at 9am my time, list my open pull requests that need my action, with links. Reply in the run only; don’t post anywhere or change anything. If none need me, reply \"All clear.\" {{confirmFirst}}"
+          }
+        },
+        "weeklyTickets": {
+          "title": "每周工单摘要",
+          "description": "Monday recap of one project’s tickets.",
+          "action": {
+            "text": "Create a private scheduled automation. Every Monday at 9am my time, summarize tickets in <project> that changed last week as Blocked, Needs review, and Other. Reply in the run only; don’t edit tickets or post. If nothing changed, reply \"No updates.\" {{confirmFirst}}"
+          }
+        },
+        "myTask": {
+          "title": "我重复执行的任务",
+          "description": "Droid interviews you, then drafts it.",
+          "action": {
+            "text": "I want to automate a task I repeat: <describe it>. Ask what should start it, where results go, and what it must never do. Then write private automation instructions with a source, task, output, and limits. {{confirmFirst}}"
+          }
+        }
+      },
+      "docsLink": {
+        "label": "自动化文档"
+      },
+      "steps": {
+        "chooseAutomationTrigger": {
+          "summary": "Match each job to its trigger",
+          "instructions": "An automation is instructions Droid runs on its own. Its trigger decides when. Pick the trigger for each job.",
+          "tip": "The trigger decides whether a run arrives while the work still matters. Scheduled runs use UTC, so a 9am New York digest needs 13:00 or 14:00 depending on daylight saving. Slack, GitHub and webhook triggers start the moment their event fires, so use them instead of checking for events on a schedule.",
+          "activity": {
+            "heading": "什么应启动此次运行？"
+          }
+        },
+        "learnAutomationPrompt": {
+          "summary": "Read a prompt that runs alone",
+          "instructions": "No one is around to answer questions mid-run. Tap each pin to see what makes this prompt work alone.",
+          "tip": "An automation runs with no one to answer its questions, so anything the prompt leaves out, Droid has to guess. Naming the source, task, output and limits turns those guesses into rules you can check in every run. Say what Droid must never post, edit or delete, and keep tokens in Settings › Secrets instead of the prompt.",
+          "activity": {
+            "heading": "无需你参与的提示词",
+            "blocks": {
+              "prompt": {
+                "text": "Read tickets in the Launch project that changed since the last successful run. Group them: Blocked, Needs review, Other. For each: title, owner, what changed, link.\nReply with at most 10 tickets. Do not edit tickets or post anywhere. If nothing changed, reply \"No updates.\" If access fails, say so. Never guess."
+              },
+              "parts": {
+                "text": "四个部分"
+              },
+              "source": {
+                "text": "Source: Launch tickets changed since the last successful run."
+              },
+              "task": {
+                "text": "Task: three groups, and four fields for each ticket."
+              },
+              "output": {
+                "text": "Output: at most 10 tickets, with no edits or posts."
+              },
+              "limits": {
+                "text": "Limits: a fixed reply for a quiet day, and no guessing when access fails."
+              }
+            },
+            "pins": {
+              "source": {
+                "label": "来源",
+                "note": "Names exactly what to read, and only what changed since the last run."
+              },
+              "task": {
+                "label": "任务",
+                "note": "Spells out the grouping and the fields, so every run looks the same."
+              },
+              "output": {
+                "label": "输出",
+                "note": "Caps the length and says where the result goes, and where it must not."
+              },
+              "limits": {
+                "label": "限制",
+                "note": "Covers the empty day and the failure, so Droid never invents an answer."
+              }
+            },
+            "caption": "Source, task, output, limits: check every prompt you write for all four."
+          }
+        },
+        "browseAutomationTemplates": {
+          "summary": "See what teams already automate",
+          "instructions": "New automation opens the starter gallery. Skim a few to borrow ideas for your own.",
+          "tip": "{{tourPanelTipPrefix}} A starter shows a working prompt, trigger and output for a common job, so you can copy its shape instead of starting from a blank page. Browsing is safe; nothing runs until you create an automation."
+        },
+        "startSession": {
+          "summary": "Ask Droid to set one up",
+          "instructions": "Start a new session, pick a draft below, fill in the <placeholders>, and send it.",
+          "tip": "You get a working automation without learning its settings first. Droid asks about whatever your draft leaves open, such as the schedule, the channel to post in or what counts as changed, then writes the prompt and trigger for you to review. Describe the result you want to read and let Droid work out the steps.",
+          "coachmarks": {
+            "sendAutomationRequest": {
+              "title": "发送请求",
+              "body": "Pick a draft in the lesson panel, make it yours, and send it."
+            }
+          },
+          "activity": {
+            "heading": "从草稿开始"
+          }
+        },
+        "createAutomation": {
+          "summary": "Check the prompt, then approve",
+          "instructions": "Answer Droid’s questions. Check its prompt for a source, task, output, and limits, then approve the creation.",
+          "tip": "Approving is your last chance to change what runs without you. Droid creates it with the CreateAutomation tool, and a scheduled automation on a Droid Computer runs once right away, so read the prompt first. Keep it Private until one good run proves it; Run as sets whose identity and billing it uses.",
+          "coachmarks": {
+            "tightenAutomation": {
+              "title": "批准前收紧约束",
+              "body": "Missing a limit or an empty-day rule? Ask Droid to add it before it creates anything.",
+              "example": "Add a limit: never post or edit anything. If nothing changed, reply \"No updates.\""
+            }
+          },
+          "waitLabel": "Droid 正在起草自动化",
+          "readyLabel": "Droid 已回复，批准前请检查提示词。",
+          "skip": {
+            "label": "暂时跳过",
+            "whileWorkingLabel": "不等待，继续学习",
+            "note": "Droid can still create it in this session."
+          }
+        },
+        "tourAutomationsPage": {
+          "summary": "Find your automation and its runs",
+          "instructions": "Your automation now lives on the Automations page. Find it and open its first run.",
+          "tip": "{{tourPanelTipPrefix}} The first run shows whether your instructions hold up on real data. Each run is listed with its outcome and opens to show what Droid did, and Run Now tests an edit without waiting for the schedule.",
+          "coachmarks": {
+            "tourAutomationOwnership": {
+              "title": "在私有分类中查找",
+              "body": "Private automations are yours alone. Share one from its row menu once it earns trust."
+            },
+            "tourAutomationFilters": {
+              "title": "按触发器筛选",
+              "body": "Search by name, or filter by the triggers you matched at the start."
+            },
+            "tourAutomationList": {
+              "title": "打开首次运行",
+              "body": "Open your automation to see each run in Events. The row menu runs it now or pauses it."
+            }
+          }
+        }
+      },
+      "completion": {
+        "headline": "你已准备好自动执行任务",
+        "recapItems": {
+          "0": "为任务选择定时、Slack 或 Webhook 触发器",
+          "1": "了解无人值守提示词的四个组成部分",
+          "2": "学会先检查提示词再批准自动化",
+          "3": "找到自动化及其运行记录的位置"
+        },
+        "nextStep": "Read each new automation’s first run. If it holds up for a week, share it with your team."
+      }
+    },
+    "autoWiki": {
+      "sampleWikiPage": {
+        "title": {
+          "text": "Checkout service"
+        },
+        "purpose": {
+          "text": "Takes a customer’s cart, charges their card, and emails the receipt."
+        },
+        "flowHeading": {
+          "text": "How a payment flows"
+        },
+        "flow": {
+          "items": {
+            "0": "`api/checkout.ts` takes the cart",
+            "1": "`payments/charge.ts` calls the payment provider",
+            "2": "`jobs/receipt.ts` emails the receipt"
+          }
+        },
+        "runHeading": {
+          "text": "Run it locally"
+        },
+        "sources": {
+          "text": "Sources: `api/checkout.ts:12`, `payments/charge.ts:40`"
+        }
+      },
+      "oneTime": {
+        "label": "单次"
+      },
+      "recurring": {
+        "label": "重复执行"
+      },
+      "refreshScenarios": {
+        "everyMerge": {
+          "prompt": "You want the wiki to match main after every merge.",
+          "explanation": "Recurring refreshes run on each push, so no one has to remember.",
+          "options": {
+            "0": {
+              "explanation": "One-time refreshes once. The next merge makes it stale again."
+            }
+          }
+        },
+        "beforeDemo": {
+          "prompt": "You want one repo’s wiki current before a demo tomorrow.",
+          "explanation": "One refresh now is all you need.",
+          "options": {
+            "1": {
+              "explanation": "Recurring sets up CI for every push. That’s more than one demo needs."
+            }
+          }
+        },
+        "laptopClosed": {
+          "prompt": "Twenty wikis need a refresh, and your laptop is about to close.",
+          "explanation": "Cloud refreshes run on a Droid Computer, not your laptop.",
+          "options": {
+            "local": {
+              "label": "本地",
+              "explanation": "Local gives you a command to run on your own machine."
+            },
+            "cloud": {
+              "label": "云端"
+            }
+          }
+        }
+      },
+      "wikiPageTour": {
+        "tourWikiRepositories": {
+          "title": "你有权阅读的每个仓库",
+          "body": "Select a repository to read its wiki. Yours appears here when /wiki finishes."
+        },
+        "tourWikiStats": {
+          "title": "一眼了解更新时间",
+          "body": "A fresh wiki matches the latest code. A stale one may not. Filter to find wikis to refresh.",
+          "chips": {
+            "0": "近期更新",
+            "1": "已过时",
+            "2": "无 Wiki"
+          }
+        },
+        "tourWikiRefresh": {
+          "title": "一次刷新多个",
+          "body": "Pick repositories, then refresh once or on every push, from your machine or in the cloud."
+        }
+      },
+      "wikiQuestions": {
+        "authentication": {
+          "title": "了解身份验证",
+          "description": "Ask what the wiki says about signing in.",
+          "action": {
+            "text": "What does this repository’s wiki say about authentication?"
+          }
+        },
+        "architecture": {
+          "title": "解释架构",
+          "description": "Use the wiki to see how the parts fit together.",
+          "action": {
+            "text": "Use this repository’s wiki to explain the architecture."
+          }
+        },
+        "gettingStarted": {
+          "title": "查找设置指南",
+          "description": "Find how to run and test this repository.",
+          "action": {
+            "text": "Find the getting-started guide in this repository’s wiki."
+          }
+        }
+      },
+      "docsLink": {
+        "label": "阅读 AutoWiki 说明"
+      },
+      "steps": {
+        "generateWiki": {
+          "summary": "Start a wiki for a repo you know",
+          "instructions": "Start a new session in a repository you know and send /wiki. It takes 15 to 20 minutes, so keep going while it runs.",
+          "tip": "A wiki gives you and Droid a map of the repo, so questions start from written answers instead of a fresh code search. Pick a repo you know well so you can judge whether the pages are right. The first run takes 15 to 20 minutes; refreshes update only the pages your changes affect",
+          "coachmarks": {
+            "generateWiki": {
+              "title": "发送 /wiki",
+              "body": "Droid reads the code, writes the wiki, and uploads it to Factory.",
+              "example": "/wiki"
+            }
+          }
+        },
+        "learnAutoWiki": {
+          "summary": "See what a wiki page holds",
+          "instructions": "While Droid writes, read this sample page. Select each part to see what your wiki will answer.",
+          "tip": "Knowing what a page holds tells you which questions the wiki can answer. Each page links to the files it describes, so you can check a claim against the code. If your organization turns off wiki sync, Droid saves the pages to droid-wiki/ in your repo instead",
+          "confirmLabel": "知道了",
+          "activity": {
+            "heading": "一个 Wiki 页面",
+            "pins": {
+              "purpose": {
+                "label": "用途",
+                "note": "Each page explains one part of the repo in plain words."
+              },
+              "architecture": {
+                "label": "架构",
+                "note": "How the parts connect, so you know where a change lands."
+              },
+              "gettingStarted": {
+                "label": "入门",
+                "note": "How to run and test it, so you can make a change."
+              },
+              "sources": {
+                "label": "来源",
+                "note": "Links to the code, so you can check what the page says."
+              }
+            },
+            "caption": "Written from your code. Check important details against the sources."
+          }
+        },
+        "tourWikiPage": {
+          "summary": "Find your wikis and their freshness",
+          "instructions": "Wikis live on the Wiki page. Follow the tour to find yours, check freshness, and refresh.",
+          "tip": "{{tourPanelTipPrefix}} Freshness tells you whether a wiki still matches the code, since a stale page can point you to files that moved. Nothing refreshes until you pick repositories and an option."
+        },
+        "automateWiki": {
+          "summary": "Pick the right refresh",
+          "instructions": "A refresh updates the pages your latest code changes affect. Pick the right refresh for each case.",
+          "tip": "An automatic refresh keeps the wiki matching your code without anyone remembering to run it. /install-wiki adds a GitHub Actions or GitLab CI job that refreshes on every push to your default branch. Save FACTORY_API_KEY as a CI secret, never in the workflow file",
+          "confirmLabel": "知道了",
+          "activity": {
+            "heading": "哪种刷新合适？"
+          }
+        },
+        "browseWiki": {
+          "summary": "Ask your wiki a question",
+          "instructions": "When your wiki is ready, open it on the Wiki page. To ask about it, start a new session in that repo.",
+          "tip": "Asking the wiki first gets you an answer with links to the source, faster than reading the code yourself. Start the session in the same repo so Droid uses its wiki. If it’s still generating, finish now; your wiki appears on the Wiki page when it’s done",
+          "activity": {
+            "heading": "向 Wiki 提问"
+          }
+        }
+      },
+      "completion": {
+        "headline": "仓库的 Wiki 正在生成",
+        "recapItems": {
+          "0": "使用 /wiki 为仓库生成 Wiki",
+          "1": "了解 Wiki 页面的用途及内容来源",
+          "2": "在 Wiki 页面查看 Wiki 及其更新状态",
+          "3": "为不同场景选择合适的刷新方式"
+        },
+        "nextStep": "Read your wiki when it’s ready, then send /install-wiki to keep it fresh on every push."
+      }
+    },
+    "droidComputers": {
+      "whereOptions": {
+        "managed": {
+          "label": "Droid Computer"
+        },
+        "remoteControl": {
+          "label": "远程控制"
+        }
+      },
+      "whereScenarios": {
+        "laptopClosed": {
+          "prompt": "Droid should keep working tonight while your laptop is closed.",
+          "explanation": "A Droid Computer lives in Factory’s cloud, so it keeps going when your laptop sleeps.",
+          "whyNot": {
+            "remote-control": "Remote Control uses your machine. If it sleeps or goes offline, Droid stops."
+          }
+        },
+        "gpuBox": {
+          "prompt": "The task needs your team’s GPU server and its private network.",
+          "explanation": "Remote Control connects a machine you already run, with its hardware, tools, and network.",
+          "whyNot": {
+            "managed": "A Droid Computer is a standard Linux box in Factory’s cloud. It can’t reach your server’s hardware."
+          }
+        },
+        "cleanSetup": {
+          "prompt": "You want a fresh, separate place to set up a repo and leave it ready.",
+          "explanation": "Factory provisions it for you, and files, packages, and services persist between sessions.",
+          "whyNot": {
+            "remote-control": "That would mix the setup into a machine you already use. A Droid Computer keeps it separate."
+          }
+        }
+      },
+      "computerSettingsTour": {
+        "tourManagedComputers": {
+          "title": "了解你的 Droid Computers",
+          "body": "Managed Computers lists your Droid Computers. They keep files and tools between sessions, and idle ones pause until needed."
+        },
+        "tourYourComputers": {
+          "title": "连接自己的计算机",
+          "body": "Your Computers lists machines connected with Remote Control. In the desktop app, turn it on in Settings › This Computer."
+        },
+        "tourNewManagedComputer": {
+          "title": "创建计算机",
+          "body": "Name it and pick repositories. Running time counts toward your plan’s compute; see Settings › Usage."
+        }
+      },
+      "habitScenarios": {
+        "apiKey": {
+          "prompt": "Your tests on the new computer need an API key.",
+          "options": {
+            "paste": {
+              "label": "粘贴到聊天中",
+              "explanation": "The key then sits in your session history, and later sessions won’t have it."
+            },
+            "envFile": {
+              "label": "让 Droid 保存在仓库中",
+              "explanation": "Once committed, everyone with repo access can read it, and git history keeps it after you delete it."
+            },
+            "secrets": {
+              "label": "添加到设置 › 机密"
+            }
+          },
+          "explanation": "New sessions on your Droid Computers get saved secrets as environment variables, and no one can view the value again."
+        },
+        "longJob": {
+          "prompt": "A two-hour data import should finish while you’re in meetings.",
+          "options": {
+            "background": {
+              "label": "在后台启动后关闭标签页",
+              "explanation": "With no session working and nothing connected, the computer pauses after about 5 minutes and the import stops with it."
+            },
+            "watch": {
+              "label": "让 Droid 执行并等待导入完成"
+            }
+          },
+          "explanation": "A working session keeps the computer awake. A paused computer keeps its memory and files, but nothing runs until it wakes."
+        },
+        "delete": {
+          "prompt": "Droid finished a fix on a Droid Computer you’re about to delete.",
+          "options": {
+            "delete": {
+              "label": "直接删除，Session 中已有修复",
+              "explanation": "The session keeps the conversation, not the files. Deleting the computer deletes the fix."
+            },
+            "push": {
+              "label": "先让 Droid 提交并推送"
+            }
+          },
+          "explanation": "The computer’s disk is the only copy of its files. Push or copy anything you need before deleting it."
+        }
+      },
+      "docsLink": {
+        "label": "Droid Computers 文档"
+      },
+      "steps": {
+        "chooseDroidComputer": {
+          "summary": "Pick a Droid Computer or Remote Control",
+          "instructions": "Droid can work on a Droid Computer in Factory’s cloud, or on your own machine with Remote Control. Pick one for each job.",
+          "tip": "Where Droid works decides which files, tools and networks it can reach. A Droid Computer is a Linux machine in Factory’s cloud that keeps working while your laptop sleeps, while Remote Control lets Droid use a machine you already run, with its hardware and private network. Pick by what the task needs to reach.",
+          "activity": {
+            "heading": "Droid 应在哪里工作？"
+          }
+        },
+        "tourComputerSettings": {
+          "summary": "Create a Droid Computer",
+          "instructions": "Droid Computers in Settings lists every computer you can use. Follow the tips, then create one.",
+          "tip": "{{tourPanelTipPrefix}} A Droid Computer keeps its files, packages and services between sessions, so you set up a repo once. Idle computers pause on their own and wake when a session needs them, and running time counts toward your plan’s compute in Settings › Usage.",
+          "skip": {
+            "label": "暂时跳过",
+            "note": "Create one later in Settings › Droid Computers."
+          }
+        },
+        "checkComputerDecisions": {
+          "summary": "Practice three first-week decisions",
+          "instructions": "While your computer sets up, decide what you’d do in each situation.",
+          "activity": {
+            "heading": "你会怎么做？"
+          }
+        },
+        "startSession": {
+          "summary": "Ask Droid to check it’s ready",
+          "instructions": "Start a new session on your new computer and send the draft to finish the lesson. Droid checks it’s ready for your repo.",
+          "tip": "A readiness check finds missing tools before they break a real task halfway through. Dependency installation on a new computer is best-effort, so a clone, install and test run shows what failed in a few minutes. Fix those gaps once and every later session on the computer starts clean.",
+          "coachmarks": {
+            "1": {
+              "title": "选择计算机",
+              "body": "Choose the computer you just created, then a folder on it."
+            },
+            "readinessCheck": {
+              "title": "发送就绪检查",
+              "body": "Pick the draft in the lesson panel, name your repository, and send it."
+            }
+          },
+          "activity": {
+            "heading": "新计算机的第一项任务",
+            "choices": {
+              "readinessCheck": {
+                "title": "检查是否就绪",
+                "description": "Clone, install, run the tests, and report gaps.",
+                "action": {
+                  "text": "Check this computer is ready to work on <repository>: clone it if it’s missing, install dependencies, and run the tests. Report what’s missing or failing. Don’t change any code."
+                }
+              }
+            }
+          },
+          "skip": {
+            "label": "不发送，直接完成",
+            "note": "Run this check on any new computer before real work."
+          }
+        }
+      },
+      "completion": {
+        "headline": "你已了解 Droid 的工作位置",
+        "recapItems": {
+          "0": "学会选择 Droid Computer 或远程控制",
+          "1": "找到设置中创建和管理计算机的位置",
+          "2": "练习机密、长时间任务及清理决策",
+          "3": "学会在正式工作前检查新计算机是否就绪"
+        },
+        "nextStep": "Read the readiness report, fix any gaps, then hand the computer a real task."
+      }
+    },
+    "droidSdk": {
+      "workflowOptions": {
+        "automation": {
+          "label": "自动化"
+        },
+        "sdk": {
+          "label": "SDK"
+        }
+      },
+      "workflowScenarios": {
+        "weekdaySummary": {
+          "prompt": "Summarize open tickets every weekday morning.",
+          "explanation": "A schedule and saved instructions cover it. Code would only add upkeep.",
+          "whyNot": {
+            "sdk": "Nothing here needs your code in the loop. An automation does it with no upkeep."
+          }
+        },
+        "dashboardInvestigation": {
+          "prompt": "Add an Investigate button to your own dashboard that streams Droid’s progress.",
+          "explanation": "Your app starts the session and owns the screen. Only the SDK puts Droid inside your product.",
+          "whyNot": {
+            "automation": "Automations report in Factory, not in your app. Your dashboard needs to drive Droid itself."
+          }
+        },
+        "enforcedRouting": {
+          "prompt": "Route each finding to a review queue by severity, using rules your team owns.",
+          "explanation": "Droid returns structured findings; your code validates them and applies the rule every time.",
+          "whyNot": {
+            "automation": "An automation can follow the rule, but only code can guarantee it on every run."
+          }
+        }
+      },
+      "sdkExample": "import asyncio, sys\nfrom typing import Literal\nfrom pydantic import BaseModel\nfrom droid_sdk import run\n\nclass Triage(BaseModel):\n    summary: str\n    severity: Literal[\"low\", \"medium\", \"high\"]\n\nbug_report = open(sys.argv[1]).read()\nresult = asyncio.run(run(f\"Triage this bug report: {bug_report}\", output=Triage))\nif not result.success:\n    raise SystemExit(result.subtype)\nqueue = \"Priority\" if result.output.severity == \"high\" else \"Standard\"\nprint(queue, result.output.summary)",
+      "sdkBuildChoices": {
+        "python": {
+          "title": "Python",
+          "description": "Uses the droid-sdk package.",
+          "action": {
+            "text": "In a new folder, sdk-practice, build and run a small Python script with the droid-sdk package. Give Droid this fictional bug: \"Search crashes when the query is empty.\" Get a summary and severity (low, medium, high) as structured output; route high to Priority, the rest to Standard. Use my existing login. Run it and show the command, exit status and printed output."
+          }
+        },
+        "typescript": {
+          "title": "TypeScript",
+          "description": "Uses @factory/droid-sdk on Node.",
+          "action": {
+            "text": "In a new folder, sdk-practice, build and run a small Node script with @factory/droid-sdk. Give Droid this fictional bug: \"Search crashes when the query is empty.\" Get a summary and severity (low, medium, high) as structured output; route high to Priority, the rest to Standard. Use my existing login. Run it and show the command, exit status and printed output."
+          }
+        }
+      },
+      "docsLink": {
+        "label": "Droid SDK 文档"
+      },
+      "steps": {
+        "chooseSdkWorkflow": {
+          "summary": "Pick the simplest fit for each job",
+          "instructions": "Automations run saved instructions on a trigger. The SDK runs Droid from your own code. Pick the simplest fit.",
+          "tip": "Picking the right tool keeps you from maintaining code you didn’t need. An automation runs a prompt on a trigger with no code to own, while an SDK script lets your code check Droid’s answer and decide what happens next, such as where a bug is routed. Reach for the SDK when a rule must hold on every run.",
+          "activity": {
+            "heading": "自动化还是 SDK？"
+          }
+        },
+        "learnDroidSdk": {
+          "summary": "See where Droid ends and code begins",
+          "instructions": "Read what the script is for, then tap each pin to see what Droid decides and what your code decides.",
+          "tip": "Reading the script shows where Droid’s judgment ends and your rules begin. In Python, run(prompt, output=Triage) returns a result whose output matches your Pydantic model, and result.success and result.subtype tell you whether the run worked. The TypeScript SDK works the same way, with run() and an outputFormat JSON schema.",
+          "activity": {
+            "heading": "自动分流新收到的缺陷报告",
+            "blocks": {
+              "useCase": {
+                "text": "Bug reports arrive as free text from a form, Slack or your tracker. This script has Droid read one report and return a summary and a severity. Plain code then sends high severity to the Priority queue, the same way every time."
+              }
+            },
+            "pins": {
+              "shape": {
+                "label": "结构",
+                "note": "You define the answer’s shape. Droid must return exactly these fields."
+              },
+              "judgment": {
+                "label": "Droid 判断",
+                "note": "The script reads one incoming report from the file you pass it. Droid decides the summary and severity."
+              },
+              "failures": {
+                "label": "检查是否运行成功",
+                "note": "A failed run is a value, not an exception. Check it before using the output."
+              },
+              "rule": {
+                "label": "代码决定",
+                "note": "Your code applies the routing rule, the same way on every run."
+              }
+            },
+            "caption": "Droid judges each report. Your code routes every report the same way, and the queue feeds your team’s triage board."
+          },
+          "skip": {
+            "label": "暂时跳过"
+          }
+        },
+        "startSession": {
+          "summary": "Have Droid build and run it",
+          "instructions": "Start a new session in any project. Pick a language below and send the draft. Droid builds it and shows the exit status and output.",
+          "tip": "The exit status and printed output prove the script ran; a description of what it should do proves nothing. The draft asks Droid to show the command, its exit status and the real output, and a failed run reports result.success as false with result.subtype saying why. Keep your API key in an environment variable, never in chat.",
+          "coachmarks": {
+            "buildSdkExample": {
+              "title": "发送构建请求",
+              "body": "Pick a language in the lesson panel, then send the draft."
+            }
+          },
+          "activity": {
+            "heading": "构建分流脚本"
+          }
+        },
+        "customizeSdkWorkflow": {
+          "summary": "Change the rule, keep the prompt",
+          "instructions": "Once the first run’s output is in, send the draft to change the routing rule. Compare the new output with the first run.",
+          "tip": "Keeping rules in code means a change takes one edit and behaves the same on every run. Here, sending medium severity to Priority is one line in the routing code, while the prompt that judges severity stays untouched. Put judgment in the prompt and fixed rules in code; mixing them makes runs hard to compare.",
+          "waitLabel": "Droid 正在安装并运行脚本",
+          "readyLabel": "Droid 已完成。检查退出状态和输出，再发送修改请求。",
+          "coachmarks": {
+            "customizeSdkWorkflow": {
+              "title": "修改一条规则",
+              "body": "Pick the draft in the lesson panel and send it."
+            }
+          },
+          "activity": {
+            "heading": "修改一条规则",
+            "choices": {
+              "mediumToPriority": {
+                "title": "将 medium 也升级处理",
+                "description": "Medium and high go to Priority.",
+                "action": {
+                  "text": "Change the routing so medium and high severity go to Priority; low stays Standard. Keep the prompt to Droid unchanged. Rerun the script, test the rule with all three severities, and show the new output next to the first run."
+                }
+              }
+            }
+          }
+        }
+      },
+      "completion": {
+        "headline": "你已构建并修改首个 SDK 脚本",
+        "recapItems": {
+          "0": "为不同任务选择自动化或 SDK",
+          "1": "了解 Droid 判断与代码规则的边界",
+          "2": "让 Droid 构建并运行 SDK 脚本，展示输出",
+          "3": "修改代码规则并检查新输出"
+        },
+        "nextStep": "Pick a step your team repeats by hand and ask Droid if an SDK script fits."
+      }
+    },
+    "securityReview": {
+      "sampleFinding": {
+        "title": {
+          "tags": {
+            "0": {
+              "label": "P1"
+            },
+            "1": {
+              "label": "安全"
+            }
+          },
+          "text": "Parameterize the invoice search query"
+        },
+        "body": {
+          "text": "The `search` parameter is pasted into the SQL string. Any signed-in user can search for `' OR 1=1 --` and read every customer’s invoices."
+        },
+        "fix": {
+          "text": "Pass `q` as a bound parameter, so the database treats it as text, not SQL."
+        }
+      },
+      "priorities": {
+        "p0": {
+          "label": "P0 严重"
+        },
+        "p1": {
+          "label": "P1 高"
+        },
+        "p2": {
+          "label": "P2 中"
+        },
+        "p3": {
+          "label": "P3 低"
+        }
+      },
+      "priorityScenarios": {
+        "openAdmin": {
+          "prompt": "Anyone on the internet can call a new admin endpoint, no login.",
+          "explanation": "Easy to exploit, serious harm, no login: Critical. Block the merge.",
+          "whyNot": {
+            "p1": "High needs some condition, like a login. This needs none.",
+            "p2": "Anyone can do it today, so it’s worse than Medium.",
+            "p3": "Open admin access is serious harm, not a small one."
+          }
+        },
+        "otherInvoices": {
+          "prompt": "A signed-in user can read another customer’s invoices by changing an ID.",
+          "explanation": "Exploitable with a login and leaks real data: High. Fix it before you merge.",
+          "whyNot": {
+            "p0": "It needs a login first, so it’s High, not Critical.",
+            "p2": "The attack path is real and the data is sensitive, so it’s High.",
+            "p3": "Leaking customer data is serious harm, not a small one."
+          }
+        },
+        "loginRateLimit": {
+          "prompt": "The login form lets anyone try passwords without a limit.",
+          "explanation": "It needs many tries to cause harm: Medium. Plan a fix.",
+          "whyNot": {
+            "p0": "Guessing passwords takes many tries, so it isn’t immediately exploitable.",
+            "p1": "An attack needs time and luck, so the risk is moderate.",
+            "p3": "Password guessing can take over accounts, so it’s more than Low."
+          }
+        }
+      },
+      "securityAutomations": {
+        "installCodeReview": {
+          "title": "检查每个拉取请求",
+          "description": "/install-code-review sets up Droid on pull requests. Say yes to security review.",
+          "action": {
+            "text": "/install-code-review"
+          }
+        },
+        "securityAudit": {
+          "title": "定时审计",
+          "description": "The Security Audit template scans a repo on your schedule."
+        },
+        "guidelines": {
+          "title": "教会它你的规则",
+          "description": "Droid follows these in every security review.",
+          "action": {
+            "text": "Create .factory/skills/security-review-guidelines/SKILL.md with our team’s security rules"
+          }
+        }
+      },
+      "docsLink": {
+        "label": "阅读安全审查说明"
+      },
+      "steps": {
+        "startSession": {
+          "summary": "Scan your branch’s changes",
+          "instructions": "Start a new session in a Git project with changes on your branch. Send the tip’s example so Droid scans only those changes.",
+          "noComputerInstructions": "Set up a computer, then start a session in a Git project with branch changes and send: /security-review the changes on my branch",
+          "tip": "Scanning only your changes returns results in minutes, while the code is fresh to fix. /security-review takes plain words, so naming your branch stops Droid from asking what to scan. A full-project scan of a large repo can take much longer",
+          "coachmarks": {
+            "askForSecurityReview": {
+              "title": "扫描变更",
+              "body": "Say what to scan in plain words, so Droid doesn’t have to ask.",
+              "example": "/security-review the changes on my branch"
+            }
+          }
+        },
+        "learnSecurityScan": {
+          "summary": "Learn the parts of a finding",
+          "instructions": "While Droid scans, read this sample finding. Select each part to see what a real finding tells you.",
+          "tip": "A finding you can read quickly is one you can fix before you merge. Droid checks STRIDE threats, the OWASP Top 10, LLM risks like prompt injection, and new dependencies. It reports only issues with a realistic attack, which is why each finding shows the data flow",
+          "confirmLabel": "知道了",
+          "activity": {
+            "heading": "一条安全发现",
+            "pins": {
+              "priority": {
+                "label": "优先级",
+                "note": "P0 to P3 says how soon to fix it. P1 means fix it before you merge."
+              },
+              "sourceToSink": {
+                "label": "数据流",
+                "note": "Droid follows user input from the request into the database query."
+              },
+              "attack": {
+                "label": "攻击",
+                "note": "Every finding names a realistic attack. No attack path, no finding."
+              },
+              "fix": {
+                "label": "修复",
+                "note": "A suggested fix you can ask Droid to apply."
+              }
+            },
+            "caption": "Droid reports only what it can trace, so each finding is worth reading."
+          }
+        },
+        "reviewSecurityFindings": {
+          "summary": "Rank findings by how soon to fix",
+          "instructions": "Rank each finding below. Then read your own results and find the highest priority. No findings is a good result.",
+          "tip": "Priority turns a list of findings into a plan. Fix P0 and P1 before you merge, because P1 means a confident, exploitable issue under some conditions; plan P2, and fix P3 when convenient. If you can’t picture the attack, ask Droid to walk you through it",
+          "coachmarks": {
+            "askAboutFinding": {
+              "title": "询问某条发现",
+              "body": "Not sure what a finding means? Ask Droid to explain it.",
+              "example": "Explain the most severe finding in plain words"
+            }
+          },
+          "confirmLabel": "我已阅读",
+          "activity": {
+            "heading": "你会多快修复？"
+          }
+        },
+        "fixSecurityFinding": {
+          "summary": "Have Droid fix the worst finding",
+          "instructions": "Draft the fix below and send it. When Droid finishes, open Changes and check the fix and its test.",
+          "tip": "A test that replays the attack proves the hole is closed and fails if it reopens. For an injection finding, that’s a test that sends the malicious input and expects a rejection. If Droid found nothing, ask it to add input validation to one route instead",
+          "activity": {
+            "heading": "修复并证明有效",
+            "choices": {
+              "fixAndTest": {
+                "title": "修复最严重问题",
+                "description": "A test shows it’s fixed and keeps it fixed.",
+                "action": {
+                  "text": "Fix the most severe finding and add a test that would have caught it"
+                }
+              }
+            }
+          },
+          "waitLabel": "Droid 正在修复发现的问题",
+          "skip": {
+            "label": "暂时跳过",
+            "whileWorkingLabel": "不等待，继续学习",
+            "note": "Check Changes when Droid finishes."
+          }
+        },
+        "automateSecurityReview": {
+          "summary": "Run security reviews without asking",
+          "instructions": "Pick how Droid keeps checking: on every pull request, on a schedule, or with your team’s own rules.",
+          "tip": "Automatic scans check every teammate’s changes, including ones nobody thought to scan. Write your team’s rules in .factory/skills/security-review-guidelines/SKILL.md so Droid flags what your security team cares about. To audit every file, ask for a full-project scan and pick Deep; it can run for hours",
+          "activity": {
+            "heading": "让它自动执行"
+          }
+        }
+      },
+      "completion": {
+        "headline": "你已学会发现并修复安全风险",
+        "recapItems": {
+          "0": "使用 /security-review 扫描分支变更",
+          "1": "阅读发现项的优先级、数据流、攻击方式和修复方法",
+          "2": "按 P0 至 P3 对发现项分级",
+          "3": "让 Droid 修复最严重的问题并添加测试"
+        },
+        "nextStep": "Scan your changes before your next merge, or turn on security review for every pull request."
+      }
+    },
+    "workstreams": {
+      "goalOptions": {
+        "ongoing": {
+          "label": "持续目标"
+        },
+        "oneOff": {
+          "label": "一次性任务"
+        }
+      },
+      "goalScenarios": {
+        "newBugs": {
+          "prompt": "Fix login bugs customers report in #support.",
+          "explanation": "New reports keep arriving, so a workstream can keep finding and fixing them.",
+          "whyNot": {
+            "one-off": "There’s no finish line: next week brings new reports. One session can’t watch for them."
+          }
+        },
+        "oneBug": {
+          "prompt": "Fix the login bug in ticket APP-42.",
+          "explanation": "One known task with a clear finish line. A regular session is enough.",
+          "whyNot": {
+            "ongoing": "Nothing new will arrive once APP-42 is fixed. A workstream would sit idle."
+          }
+        },
+        "flakyTests": {
+          "prompt": "Keep flaky tests from piling up in CI.",
+          "explanation": "New flaky tests keep appearing, and each needs its own fix. That is ongoing work.",
+          "whyNot": {
+            "one-off": "Fixing today’s flaky tests won’t stop tomorrow’s. The goal needs repeated checks."
+          }
+        }
+      },
+      "approvalScenarios": {
+        "confirmProposal": {
+          "prompt": "During setup you select Confirm proposal. What happens next?",
+          "options": {
+            "build": {
+              "label": "Droid 构建配置"
+            },
+            "live": {
+              "label": "工作流上线",
+              "explanation": "Activation is a separate, later choice. Confirming only approves what Droid builds."
+            }
+          },
+          "explanation": "Droid builds the agreed setup and runs a test. Nothing runs on its own yet."
+        },
+        "testRun": {
+          "prompt": "The test run found real signals. Does it open pull requests?",
+          "options": {
+            "opens": {
+              "label": "会，每项变更一个",
+              "explanation": "A test run is a dry run. It never edits outside systems or opens PRs."
+            },
+            "saves": {
+              "label": "不会，结果保存到草稿"
+            }
+          },
+          "explanation": "You judge the signals, changes, and one plan before anything touches your repos."
+        },
+        "autoMerge": {
+          "prompt": "You activate the workstream. Will Droid merge its own PRs?",
+          "options": {
+            "merges": {
+              "label": "会，检查通过后合并",
+              "explanation": "Auto-merge starts off. You must turn it on, and it never skips required reviews."
+            },
+            "waits": {
+              "label": "不会，除非你允许"
+            }
+          },
+          "explanation": "Auto-merge starts off, and review gates start on. Doing work and merging are separate permissions."
+        }
+      },
+      "suggestOnly": "Research only; don’t create or change anything.",
+      "docsLink": {
+        "label": "Software Factory 文档"
+      },
+      "steps": {
+        "learnWorkstreams": {
+          "summary": "Tell ongoing goals from one-off tasks",
+          "instructions": "A workstream is an ongoing goal Droid keeps working on: it finds new work, fixes it, and follows the PRs. Sort each example.",
+          "tip": "A workstream pays off when the same kind of work keeps arriving. A one-off ticket finishes faster in a normal session, while recurring bug reports or dependency bumps suit a workstream that picks up each new one. If you can’t name where the next item will come from, start with a session.",
+          "activity": {
+            "heading": "这需要工作流吗？"
+          }
+        },
+        "learnWorkstreamStages": {
+          "summary": "Trace one bug from report to merge",
+          "instructions": "Every workstream runs four stages. Tap each pin to follow two bug reports to one merged fix.",
+          "tip": "Knowing the four stages tells you where to look when work stalls. Intake polls your connected sources and records signals, Triage groups them into changes, Workers build each change, and Steward drives its pull request to green through merge or closure. The Software Factory overview maps your whole delivery lifecycle; a workstream is one pipeline inside it.",
+          "activity": {
+            "heading": "一个缺陷，四个阶段",
+            "blocks": {
+              "goal": {
+                "text": "Goal: fix login bugs customers report."
+              },
+              "intakeHeading": {
+                "text": "接收"
+              },
+              "intake": {
+                "items": {
+                  "0": "`#support`: “Login loops on Safari” becomes signal S-12.",
+                  "1": "`#support`: “Can’t sign in on Safari” becomes signal S-13."
+                }
+              },
+              "triageHeading": {
+                "text": "分流"
+              },
+              "triage": {
+                "text": "S-12 and S-13 become one change, C-4: “Fix the Safari redirect loop.”"
+              },
+              "workersHeading": {
+                "text": "工作代理"
+              },
+              "workers": {
+                "items": {
+                  "0": "Droid writes a spec for C-4.",
+                  "1": "You approve the spec.",
+                  "2": "Droid writes the code and opens pull request #481."
+                }
+              },
+              "stewardHeading": {
+                "text": "维护代理"
+              },
+              "steward": {
+                "items": {
+                  "0": "CI fails, so Droid pushes a fix.",
+                  "1": "CI goes green and the pull request merges.",
+                  "2": "C-4 is recorded as done."
+                }
+              }
+            },
+            "pins": {
+              "intake": {
+                "label": "接收",
+                "note": "Intake checks your sources and records each new item as a signal."
+              },
+              "triage": {
+                "label": "分流",
+                "note": "Triage groups related signals into one change you can approve or decline."
+              },
+              "workers": {
+                "label": "工作代理",
+                "note": "A worker writes a spec, waits for your approval, then builds and opens a pull request."
+              },
+              "steward": {
+                "label": "维护代理",
+                "note": "The steward drives the PR to green and records it merged or closed."
+              }
+            },
+            "caption": "Signals come in, changes go out. You approve at each gate."
+          }
+        },
+        "askWorkstreamGoal": {
+          "summary": "Ask Droid for goals that fit",
+          "instructions": "Start a new session in a project you know, or an empty folder. Pick a draft and send it.",
+          "tip": "Droid can only suggest a useful goal if it knows where new work shows up. Naming the source, such as a Slack channel, a Linear project or failing CI runs, lets it check what has really arrived there lately. A goal tied to a real source gives the workstream work on day one.",
+          "coachmarks": {
+            "1": {
+              "body": "Pick a project you know for code-based goals, or an empty folder to talk about your team."
+            },
+            "suggestWorkstreamGoals": {
+              "title": "询问目标",
+              "body": "Pick a draft in the lesson panel, add your context, and send it."
+            }
+          },
+          "activity": {
+            "heading": "找到你的持续目标",
+            "choices": {
+              "projectGoals": {
+                "title": "此项目的目标",
+                "description": "Droid looks for work that keeps coming back.",
+                "action": {
+                  "text": "Suggest up to three ongoing goals in this project that would make good workstreams, not one-off fixes. For each, say where new work shows up, one example change, and how we’d measure success. {{suggestOnly}}"
+                }
+              },
+              "teamGoals": {
+                "title": "我的团队目标",
+                "description": "Start from problems, not code.",
+                "action": {
+                  "text": "Help me find an ongoing goal for a workstream. Ask what my team does, which problems keep coming back, and where we track them. Then suggest up to three goals and how we’d measure each. {{suggestOnly}}"
+                }
+              }
+            }
+          }
+        },
+        "createWorkstream": {
+          "summary": "Know what each approval allows",
+          "instructions": "While Droid researches, check what you control. Setup asks for your approval at each stage.",
+          "tip": "Knowing what each approval allows keeps a workstream from doing more than you meant. Confirming the proposal saves a Draft without activating it, the test run saves results to the Draft without opening pull requests, and approval gates stay on with auto-merge off until you change them. Activate only after you read the test run.",
+          "activity": {
+            "heading": "此次批准允许什么？"
+          }
+        },
+        "tourWorkstreamsPage": {
+          "summary": "Find decisions, then start a Draft",
+          "instructions": "Take one of Droid’s goals to the Workstreams page and select Create workstream.",
+          "tip": "{{tourPanelTipPrefix}} Your Draft runs nothing until you activate it, so you can finish setup at your own pace. Activation turns on scheduled runs and the worker pool, and your approval gates and auto-merge setting stay as you left them.",
+          "coachmarks": {
+            "tourWorkstreamList": {
+              "title": "查看每个工作流",
+              "body": "Each row counts its signals and changes. Open one to see its stages at work."
+            },
+            "tourSoftwareFactoryInbox": {
+              "title": "在收件箱中决策",
+              "body": "Changes and specs waiting for your approval collect here."
+            },
+            "tourNewWorkstream": {
+              "title": "创建草稿",
+              "body": "Select Create workstream to save a Draft, then give Droid your goal. You approve every setup stage."
+            }
+          }
+        }
+      },
+      "completion": {
+        "headline": "首个工作流已开始筹备",
+        "recapItems": {
+          "0": "区分持续目标与一次性任务",
+          "1": "了解缺陷如何经过接收、分流、工作代理和维护代理各阶段",
+          "2": "让 Droid 根据项目或团队提出目标",
+          "3": "了解每次批准允许的操作及仍被禁用的操作",
+          "4": "在工作流页面创建草稿"
+        },
+        "nextStep": "Finish setup in your Draft. Review its test run before you activate it."
+      }
+    }
+  }
+}

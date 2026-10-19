@@ -1,0 +1,109 @@
+{
+  "menu": {
+    "checkForUpdates": "Check for Updates...",
+    "newWindow": "New Window",
+    "settingsEllipsis": "Settings...",
+    "settings": "Settings",
+    "installCli": "Install 'droid' Command...",
+    "uninstallCli": "Uninstall 'droid' Command...",
+    "file": "File",
+    "newSession": "New Session",
+    "closeWindow": "Close Window",
+    "view": "View",
+    "actualSize": "Actual Size",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "window": "Window",
+    "close": "Close",
+    "help": "Help",
+    "checkNetwork": "Check network...",
+    "reportBug": "Report a bug...",
+    "aboutFactory": "About Factory",
+    "aboutMessage": "Factory {{version}}",
+    "aboutDetail": "Version: {{version}}\nElectron: {{electron}}\nChromium: {{chromium}}\nNode.js: {{node}}"
+  },
+  "contextMenu": {
+    "copyLink": "Copy Link",
+    "copyImage": "Copy Image",
+    "learnSpelling": "Learn Spelling",
+    "noGuessesFound": "No Guesses Found"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel"
+  },
+  "auth": {
+    "logoutIncomplete": "Stored credentials were cleared, but the local daemon may still be running. Quit Factory and stop its local daemon to complete sign out."
+  },
+  "quitGuard": {
+    "title": "Quit Factory?",
+    "quit": "Quit Factory",
+    "dontAskAgain": "Don't ask again",
+    "activeSessions_one": "You have {{count}} active Droid session running on this computer.",
+    "activeSessions_other": "You have {{count}} active Droid sessions running on this computer.",
+    "activeSessionsDetail": "If you quit now, active sessions will be interrupted and any in-progress work will stop.",
+    "activeAutomations_one": "You have {{count}} scheduled automation running on this computer.",
+    "activeAutomations_other": "You have {{count}} scheduled automations running on this computer.",
+    "activeAutomationsDetail": "Scheduled automations only run while Factory is open. If you quit now, they will not run until you reopen the app."
+  },
+  "cliInstall": {
+    "install": "Install",
+    "skip": "Skip",
+    "dontAskAgain": "Don't Ask Again",
+    "promptTitle": "Install Droid CLI",
+    "promptMessage": "Add Droid CLI to your terminal?",
+    "promptDetail": "This will add the \"droid\" command to your PATH, allowing you to run Droid from any terminal window.\n\nYou can change this later from the Factory menu.",
+    "successTitle": "Installation Complete",
+    "successMessage": "Droid CLI installed successfully",
+    "successDetail": "The \"droid\" command is now available in your terminal.",
+    "pathUpdated": "Your PATH has been updated. You may need to restart your terminal or open a new terminal window for the changes to take effect.",
+    "pathRequiredTitle": "PATH Configuration Required",
+    "pathRequiredMessage": "Droid CLI installed, but PATH update required",
+    "pathRequiredDetail": "The CLI was installed but is not in your PATH.\n\n{{instructions}}",
+    "errorTitle": "Installation Failed",
+    "errorMessage": "Failed to install Droid CLI",
+    "errorDetail": "{{error}}\n\nYou can install the CLI manually from the documentation.",
+    "viewDocumentation": "View Documentation",
+    "removedTitle": "CLI Removed",
+    "removedMessage": "Droid CLI removed",
+    "removedDetail": "The \"droid\" command has been removed. You can reinstall it anytime from the Factory menu.",
+    "alreadyInstalledTitle": "Already Installed",
+    "alreadyInstalledMessage": "Droid CLI is already installed",
+    "alreadyInstalledDetail": "The \"droid\" command is available in your terminal."
+  },
+  "versionCheck": {
+    "title": "Update Required",
+    "message": "Your version is no longer supported",
+    "detail": "Your version ({{version}}) is no longer supported.\n\nPlease install the latest version to continue.",
+    "checkForUpdates": "Check for Updates",
+    "quit": "Quit"
+  },
+  "updater": {
+    "deploymentDisabled": "Factory-hosted automatic updates are unavailable for this deployment. Contact your administrator for an approved installer.",
+    "configurationUnavailable": "Updates are disabled because the deployment configuration could not be read. Restart the app or contact your administrator.",
+    "airgapDisabled": "Updates are unavailable while Airgap Mode is enabled.",
+    "enterpriseDisabled": "Desktop updates are disabled by your organization.",
+    "serverUnreachable": "Could not reach update server. Please try again.",
+    "cannotUpdateTitle": "Cannot Update",
+    "cannotUpdateMessage": "Factory cannot update from its current location.",
+    "moveToApplications": "Move Factory.app to your Applications folder, then relaunch it to enable auto-updates.",
+    "msixPolicy": "Windows could not update Factory. Check your organization’s deployment policy or contact IT. Do not move files out of WindowsApps.",
+    "noWriteAccess": "Factory does not have write access to its install location. Try running it from a user-writable folder, or launch as Administrator."
+  },
+  "fileDialogs": {
+    "saveDownloadedFile": "Save downloaded file",
+    "selectWorkingDirectory": "Select Working Directory",
+    "selectSoundFile": "Select sound file",
+    "audioFilter": "Audio",
+    "saveBugReport": "Save Bug Report",
+    "zipArchiveFilter": "Zip archive"
+  },
+  "remoteAccess": {
+    "deploymentDisabled": "Factory-hosted remote access is unavailable for this deployment. Use Local sessions on this device instead."
+  },
+  "diagnostics": {
+    "customerHostedSkipped": "Skipped because this is a customer-hosted deployment.",
+    "customerConnectivity": "Customer backend connectivity",
+    "customerConnectivityHint": "Check the customer backend, firewall rules, proxy configuration, and system trust store."
+  }
+}
