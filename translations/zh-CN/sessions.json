@@ -751,7 +751,9 @@
   },
   "archiveSession": {
     "couldNotArchiveOnMachine": "无法在计算机上归档此 Session。请重新连接计算机后重试。",
-    "failedToArchive": "归档 Session 失败"
+    "failedToArchive": "归档 Session 失败",
+    "couldNotArchiveWhileOffline": "Session 所在的计算机处于离线状态，无法保存归档。请检查连接后重试。",
+    "couldNotSaveArchive": "无法保存归档。请检查连接后重试。"
   },
   "preInitCapabilities": {
     "updateComputerDaemonForMcp": "请更新此计算机的守护进程，以便在发送消息前管理 MCP。你仍可先启动 Session，待加载后再使用 MCP。",

@@ -852,54 +852,6 @@
       "selectableAccounts": "可选账号",
       "unselectableAccounts": "不可选账号"
     },
-    "slackChannelsTable": {
-      "createComputer": "创建计算机",
-      "noResultsFound": "未找到结果",
-      "loading": "正在加载…",
-      "runAs": "运行身份",
-      "incidentResponse": "事件响应",
-      "sessionOwner": "Session 所有者",
-      "searchUsers": "搜索用户…",
-      "machineType": "计算机类型",
-      "computer": "计算机",
-      "searchComputers": "搜索计算机…",
-      "workspace": "工作区",
-      "searchWorkspaces": "搜索工作区…",
-      "bringYourOwnMachineComputerSelected": "已选择通过远程控制连接的计算机。Session 输出（可能包含计算机信息）将发布到此频道。",
-      "sessionVisibility": "Session 可见性",
-      "model": "模型",
-      "customPrompt": "自定义提示词",
-      "enterACustomPromptToInject": "输入要注入此频道所创建 Session 的自定义提示词…",
-      "loadingChannels": "正在加载频道…",
-      "channelSettings": "频道设置",
-      "searchChannels": "搜索频道…",
-      "includeArchivedChannels": "包含已归档频道",
-      "channelName": "频道名称",
-      "listenToChannel": "监听频道",
-      "createComputerToEnableIncidentResponse": "创建计算机以启用事件响应。",
-      "createWorkspaceToEnableIncidentResponse": "创建云工作区以启用事件响应。",
-      "selectComputerToEnableIncidentResponse": "选择计算机以启用事件响应。",
-      "selectWorkspaceToEnableIncidentResponse": "选择工作区以启用事件响应。",
-      "machineTypeCloud": "云端",
-      "factoryUser": "Factory 用户",
-      "noSpecificOwner": "无特定所有者",
-      "serviceAccountHasNoComputers": "服务账号没有计算机",
-      "noComputers": "没有计算机。",
-      "noComputer": "无计算机",
-      "managed": "托管",
-      "noWorkspace": "无工作区",
-      "privacyPrivate": "私密（仅 Session 所有者）",
-      "privacyOrganization": "组织（所有成员）",
-      "modelDefault": "默认",
-      "settingsDescriptionWithIncidentResponse": "这些设置仅用于在 Slack 中设置事件响应和服务账号。从 Slack 启动 Droid Session 应当无需在此配置频道。",
-      "settingsDescription": "这些设置仅用于在 Slack 中设置服务账号。从 Slack 启动 Droid Session 应当无需在此配置频道。",
-      "onlyInvitedChannelsAppear": "下方仅显示已邀请 Factory 应用的频道。要邀请 Factory 加入频道，请在该频道发送 <command>/invite @Factory</command>。",
-      "noChannelsMatchingSearch": "没有符合搜索条件的频道",
-      "noChannelsAvailable": "没有可用频道。请确保使用 /invite @Factory 邀请 Factory 加入频道",
-      "listenToChannelName": "监听 {{channelName}}",
-      "errorLoadingChannels": "加载频道出错：{{error}}",
-      "remoteControl": "远程控制"
-    },
     "usernameSetupForm": {
       "username": "用户名",
       "errorFetchingUsernamesYouCanManually": "获取用户名出错。你可以在上方手动输入用户名。",
@@ -1407,7 +1359,7 @@
         },
         "mobileApp": {
           "title": "构建移动应用",
-          "description": "配备 Expo 和 EAS CLI 的 Node 环境，让 Droid 开发 React Native 应用并启动构建。"
+          "description": "提供 Node 和 EAS CLI，让 Droid 能处理 React Native 应用并启动 EAS 云端构建。"
         }
       }
     },
@@ -3447,9 +3399,24 @@
       },
       "reconnect": "重新连接",
       "retry": "重试",
-      "takeControlOfTheComputer": "接管计算机控制权",
-      "takeControl": "接管控制",
-      "clickAnywhereToDrive": "点击任意位置即可操作计算机"
+      "upload": {
+        "dropFiles": "拖放文件以上传到计算机",
+        "sizeLimit": "每个文件最大 {{size}}",
+        "listLabel": "上传到计算机的文件",
+        "uploading": "正在上传到计算机…",
+        "saving": "正在保存到计算机…",
+        "saved": "已添加到计算机",
+        "savedTo": "已添加到 {{path}}",
+        "showInFiles": "在文件中显示",
+        "cancel": "取消上传 {{fileName}}",
+        "dismiss": "关闭 {{fileName}} 的上传提示",
+        "failure": {
+          "tooLarge": "超过 {{size}} 的大小限制",
+          "folder": "无法上传文件夹",
+          "notConnected": "计算机未连接",
+          "failed": "上传失败"
+        }
+      }
     },
     "missionsWelcomeDialog": {
       "eyebrow": "任务 · 欢迎 · 第 {{step}} 步，共 {{total}} 步",
@@ -3743,6 +3710,13 @@
         "sessionLink": "Session 链接",
         "sessionAsMarkdown": "Session 的 Markdown 内容"
       }
+    },
+    "sharedSessionJoinPanel": {
+      "statusLabel": "共享 Session",
+      "untitledSession": "未命名 Session",
+      "description": "加入后即可跟进此 Session 并发送消息。你将成为该 Session 的成员。",
+      "join": "加入 Session",
+      "goHome": "返回首页"
     }
   },
   "app": {
@@ -4416,6 +4390,15 @@
       "backToPreviousSurface": "返回上一界面",
       "backToChanges": "返回变更列表",
       "changeDetailSections": "变更详情分区"
+    },
+    "newSessionTilePlaceholder": {
+      "title": "新建 Session",
+      "hint": "点击“继续”即可在此位置启动 Session。",
+      "continue": "继续",
+      "close": "关闭新建 Session"
+    },
+    "sessionTileDropPreview": {
+      "label": "拖放以平铺"
     }
   },
   "automations": {
@@ -5123,8 +5106,7 @@
       "chooseDeployment": "选择部署",
       "chooseDeploymentSubtitle": "选择组织运行 Factory 的位置。",
       "deviceVerificationTitle": "在浏览器中确认此验证码",
-      "deviceVerificationSubtitle": "批准登录前，请检查浏览器显示的验证码是否一致。",
-      "eyebrow": "Factory // Droids"
+      "deviceVerificationSubtitle": "批准登录前，请检查浏览器显示的验证码是否一致。"
     },
     "workRoles": {
       "engineering": "工程",
@@ -5224,6 +5206,51 @@
         "data": "数据",
         "code": "代码",
         "other": "其他"
+      },
+      "add": {
+        "label": "添加到共享文件夹",
+        "uploadFiles": "上传文件…",
+        "uploadFolder": "上传文件夹…",
+        "dropHere": "拖放以添加到 {{folder}}",
+        "preparing_one": "正在检查 {{count}} 个文件…",
+        "preparing_other": "正在检查 {{count}} 个文件…",
+        "adding": "正在添加文件：{{done}} / {{total}}…",
+        "cancel": "取消",
+        "added_one": "已添加 {{count}} 个文件",
+        "added_other": "已添加 {{count}} 个文件",
+        "skipped_one": "已跳过 {{count}} 个",
+        "skipped_other": "已跳过 {{count}} 个",
+        "summary": "{{added}}，{{skipped}}",
+        "nothingAdded": "没有可添加的文件。空文件夹不会保留。",
+        "showDetails": "详情",
+        "hideDetails": "隐藏详情",
+        "dismiss": "关闭提示",
+        "andMore_one": "以及另外 {{count}} 个",
+        "andMore_other": "以及另外 {{count}} 个",
+        "skippedFile": "{{path}}：{{reason}}",
+        "skipReason": {
+          "not-text": "不是文本文件（暂不支持图片和 PDF）",
+          "too-large": "超过 {{size}} KB",
+          "invalid-name": "名称不允许使用",
+          "already-exists": "已存在",
+          "changed": "自列表生成后已发生变化；请重新添加以替换新版本",
+          "failed": "无法添加",
+          "version-control": "版本控制文件夹，未添加",
+          "dependencies": "依赖项文件夹，未添加",
+          "secret": "疑似为机密文件，未添加",
+          "deleted-at-path": "此路径下存在已删除的文件"
+        },
+        "failure": {
+          "too-many-files": "一次最多添加 {{count}} 个文件。",
+          "batch-too-large": "一次最多添加 {{size}} MB 的文件。",
+          "no-permission": "你无权向此任务的共享文件夹添加文件。",
+          "unknown": "无法添加文件。请重试。"
+        },
+        "replaceTitle": "替换现有文件？",
+        "replaceDescription_one": "共享文件夹中已存在 {{count}} 个文件。",
+        "replaceDescription_other": "共享文件夹中已存在 {{count}} 个文件。",
+        "replace": "替换",
+        "skipThese": "跳过这些文件"
       }
     },
     "missionSymbols": {

@@ -12,8 +12,8 @@ import { patchFuse, inspectFuse } from '../scripts/lib/fuses.mjs';
 import { checkJavaScript } from '../scripts/lib/syntaxcheck.mjs';
 import { validateText, validateTree, validateTerminology, measureCoverage, leafEntries } from './build_resource.mjs';
 
-const home = 'C:/Users/11013/AppData/Local/Factory/app-0.200.0';
-const baselineCtx = context({home}), baselineSet = loadPatchSet('0.200.0');
+const home = 'C:/Users/11013/AppData/Local/Factory/app-0.201.0';
+const baselineCtx = context({home}), baselineSet = loadPatchSet('0.201.0');
 const baseline = checkedPristine(baselineCtx, baselineSet.patches) ?? baselineCtx.files;
 const asar = openAsar(baseline.asar);
 try {
@@ -23,14 +23,14 @@ try {
   for (const source of ['const a=missing;', 'const a=b,b=a;', 'const a={x:1,x:2};', 'const a=fn();', 'const a=`${foo}`;', 'const a={...b};', 'const a=1+2;', 'const a={get x(){}};', 'const a="unterminated', 'const a=/regex/;', 'const a=1,a=2;']) {
     assert.throws(() => parseDataDeclarations(source), undefined, source);
   }
-  const rendererSource = readEntry(asar, '.vite/renderer/main_window/assets/index-CCcgJ39D.js').toString();
-  const en = extractEnglish(rendererSource);
+  const rendererSource = readEntry(asar, '.vite/renderer/main_window/assets/index-DJvfx-E_.js').toString();
+  const en = extractEnglish(rendererSource,'0.201.0');
   for(const [ns,tree]of Object.entries(en)) assert.deepEqual(tree,readJson(join(REPO_ROOT,'translations/en',`${ns}.json`)),`Extracted English source ${ns}`);
-  const jaSource = readEntry(asar, '.vite/renderer/main_window/assets/resources-BauhWe4W.js').toString();
-  const jaData = parseDataDeclarations(jaSource.slice(jaSource.indexOf('const t='), jaSource.indexOf(',sT=e(')) + ';');
-  const jaRoot = jaSource.slice(jaSource.indexOf(',sT=e('));
+  const jaSource = readEntry(asar, '.vite/renderer/main_window/assets/resources-BBBq_qcz.js').toString();
+  const jaData = parseDataDeclarations(jaSource.slice(jaSource.indexOf('const t='), jaSource.indexOf(',rT=e(')) + ';');
+  const jaRoot = jaSource.slice(jaSource.indexOf(',rT=e('));
   const ja = Object.fromEntries([...jaRoot.matchAll(/"\.\/([\w]+)\.json":([\w$]+)/g)].map(([,ns,name]) => [ns, jaData.get(name)]));
-  ja.components = jaData.get('nT');
+  ja.components = jaData.get('aT');
   const leaves = (item, path = '') => item && typeof item === 'object' ? Object.entries(item).flatMap(([key,value]) => leaves(value, path ? `${path}.${key}` : key)) : [[path, typeof item]];
   const enLeaves = new Map(leaves(en));
   const jaLeaves = new Map(leaves(ja));
@@ -44,9 +44,9 @@ try {
   console.log('Samples:', en.common.actions.contactUs, en.settings.appearanceSection.appearance, en.components.user.userProfile.openSettings);
   console.log('Parser PASS: strings/escapes/comments/arrays/literals/references and 11 rejection cases.');
   console.log('Non-singular English additions:', JSON.stringify(onlyEn.filter(key => !key.endsWith('_one'))));
-  const ctx = context({home}); const set = loadPatchSet('0.200.0');
+  const ctx = context({home}); const set = loadPatchSet('0.201.0');
   assertOriginal(baseline, ctx, set.patches);
-  const desktop = extractDesktopEnglish(readEntry(asar,'.vite/build/initLifecycle-C1amcziW.js').toString());
+  const desktop = extractDesktopEnglish(readEntry(asar,'.vite/build/initLifecycle-CRttfuow.js').toString(),'0.201.0');
   assert.equal(leafEntries(desktop).length,85);
   assert.deepEqual(desktop,readJson(join(REPO_ROOT,'translations/en/desktop.json')));
   const replacements = buildReplacements(asar, set);
@@ -64,20 +64,20 @@ try {
   let differences = 0; for (let i=0;i<originalExe.length;i++) if (originalExe[i] !== changedExe[i]) differences++;
   assert.equal(differences, 1);
   console.log(`Patch PASS: ${ctx.manifest.patchShape.edits} unique anchors/markers, repeated edits no-op, JS syntax and one-byte fuse patch.`);
-  const nativeEdit=set.patches.targets.find(target=>target.file.endsWith('/initLifecycle-C1amcziW.js')).edits.find(edit=>edit.find==='function i0(){');
+  const nativeEdit=set.patches.targets.find(target=>target.file.endsWith('/initLifecycle-CRttfuow.js')).edits.find(edit=>edit.find==='function l0(){');
   assert.ok(nativeEdit,'Native default role labels must be localized');
   const nativeZh=readJson(join(REPO_ROOT,'translations/patch-ui.zh-CN.json'));
   const nativeMapStart=nativeEdit.replace.indexOf('const t=');
   const nativeMapEnd=nativeEdit.replace.indexOf(';for(',nativeMapStart);
   const nativeRoles=parseDataDeclarations(nativeEdit.replace.slice(nativeMapStart,nativeMapEnd)+';').get('t');
   assert.deepEqual([...new Set(Object.values(nativeRoles))].sort(),[...ctx.manifest.desktopSupplementKeys].sort());
-  const nativeBuilt=readJson(join(REPO_ROOT,'translations/build/desktop-zh-CN.json'));
+  const nativeBuilt=readJson(join(REPO_ROOT,'translations/build/0.201.0/desktop-zh-CN.json'));
   const nativeSource=readJson(join(REPO_ROOT,'translations/zh-CN/desktop.json'));
   for(const [key,value]of Object.entries(nativeSource))assert.deepEqual(nativeBuilt[key],value,`Native original group ${key}`);
   for(const key of ctx.manifest.desktopSupplementKeys)assert.equal(nativeBuilt[key],nativeZh[key],`Native supplemental label ${key}`);
   assert.equal(leafEntries(nativeBuilt).length,85+ctx.manifest.desktopSupplementKeys.length);
   let nativeLocale='en';
-  const nativeMenu=runInNewContext(nativeEdit.replace.slice(0,nativeEdit.replace.indexOf('function i0(){'))+';FactoryNativeMenu',{
+  const nativeMenu=runInNewContext(nativeEdit.replace.slice(0,nativeEdit.replace.indexOf('function l0(){'))+';FactoryNativeMenu',{
     Fi:{get language(){return nativeLocale;}},ne:(key,options)=>nativeZh[key]??options.defaultValue
   },{timeout:1000});
   const nativeCallback=()=>{};
@@ -94,28 +94,28 @@ try {
   assert.equal(menuFixture.items[0].submenu.items[2].label,'复制');
   assert.equal(menuFixture.items[1].label,'退出');assert.equal(menuFixture.items[2].label,'Unknown dynamic label');
   console.log('Native menus PASS: known generated role labels translate recursively only in Chinese; custom labels, role IDs, callbacks, enabled flags and accelerators stay unchanged.');
-  const rendererEdits = set.patches.targets.find(target => target.file.endsWith('/index-CCcgJ39D.js')).edits;
-  const countryEdit = rendererEdits.find(edit => edit.find.startsWith('let me,ve;e[101]'));
+  const rendererEdits = set.patches.targets.find(target => target.file.endsWith('/index-DJvfx-E_.js')).edits;
+  const countryEdit = rendererEdits.find(edit => edit.find.startsWith('let ge,Ae;e[101]'));
   const rangeEdit = rendererEdits.find(edit => edit.find.startsWith('let wt;t[161]'));
-  const tabsEdit = rendererEdits.find(edit => edit.find.startsWith('let _r;e[188]'));
-  const textEdit = rendererEdits.find(edit => edit.find === 'function Rin(){');
+  const tabsEdit = rendererEdits.find(edit => edit.find.startsWith('let Lr;e[188]'));
+  const textEdit = rendererEdits.find(edit => edit.find === 'function eon(){');
   assert.ok(countryEdit && rangeEdit && tabsEdit && textEdit, 'Required display patches must be present');
   let displayLocale = 'en';
   let billingForm = {country:'CN',taxIdType:'old',taxId:'saved-tax-id',name:'Unchanged'};
   const countryOptions = [{label:'China',value:'CN'},{label:'United States',value:'US'}];
-  const countriesStart=rendererSource.indexOf('const QAc=['),countriesEnd=rendererSource.indexOf(']',countriesStart)+1;
+  const countriesStart=rendererSource.indexOf('const dvc=['),countriesEnd=rendererSource.indexOf(']',countriesStart)+1;
   assert.ok(countriesStart>=0&&countriesEnd>countriesStart);
-  const actualCountries=parseDataDeclarations(rendererSource.slice(countriesStart,countriesEnd)+';').get('QAc');
+  const actualCountries=parseDataDeclarations(rendererSource.slice(countriesStart,countriesEnd)+';').get('dvc');
   const regionNames=new Intl.DisplayNames('zh-CN',{type:'region'});
   for(const country of actualCountries.filter(country=>country.value!=='')) {
     assert.match(country.value,/^[A-Z]{2}$/);
     assert.match(regionNames.of(country.value),/[\u3400-\u9fff]/,`Chinese country display ${country.value}`);
   }
-  const renderCountries = runInNewContext(`(function(){${countryEdit.replace}return {options:me,onChange:ve}})`, {
-    Intl, Rin:()=>({language:displayLocale}), QAc:countryOptions,
-    veu:()=>true, yeu:option=>option,
+  const renderCountries = runInNewContext(`(function(){${countryEdit.replace}return {options:ge,onChange:Ae}})`, {
+    Intl, eon:()=>({language:displayLocale}), dvc:countryOptions,
+    Geu:()=>true,
     e:Array(103).fill(Symbol.for('react.memo_cache_sentinel')),
-    Umt:new Set(['CN']), OAt:country=>`${country}-tax`, g:update=>{billingForm=update(billingForm);}
+    zmt:new Set(['CN']), NAt:country=>`${country}-tax`, g:update=>{billingForm=update(billingForm);}
   }, {timeout:1000});
   const englishCountries = renderCountries();
   assert.deepEqual(Array.from(englishCountries.options, option=>option.label), ['China','United States']);
@@ -130,10 +130,9 @@ try {
   assert.deepEqual(countryOptions, [{label:'China',value:'CN'},{label:'United States',value:'US'}]);
   let selectedRange;
   const rangeChange = value=>{selectedRange=value;};
-  const renderRanges = runInNewContext(`(function(){${rangeEdit.replace}return {options:wt,control:Ft}})`, {
-    Intl, Rin:()=>({language:displayLocale}), eHc:['7d','30d','90d'].map(value=>({value,label:value})),
-    c:{jsx:(type,props,key)=>({type,props,key})}, Pv:'option', Je:'container', T2:'select',
-    MHc:option=>({props:{value:option.value,children:option.label}}),
+  const renderRanges = runInNewContext(`(function(){${rangeEdit.replace}return {options:wt,control:jt}})`, {
+    Intl, eon:()=>({language:displayLocale}), vzc:['7d','30d','90d'].map(value=>({value,label:value})),
+    c:{jsx:(type,props,key)=>({type,props,key})}, zv:'option', Ye:'container', D2:'select',
     t:Array(164).fill(Symbol.for('react.memo_cache_sentinel')), r:'30d', ct:rangeChange
   }, {timeout:1000});
   displayLocale = 'en';
@@ -149,8 +148,8 @@ try {
   const patchUiZh = readJson(join(REPO_ROOT,'translations/patch-ui.zh-CN.json'));
   assert.equal(leafEntries(patchUiEn).length,ctx.manifest.uiSupplement.leaves);
   const translationCalls = [];
-  const textRuntime = runInNewContext(textEdit.replace.slice(0,textEdit.replace.indexOf('function Rin(){'))+';FactoryZhText', {
-    Rin:()=>({t:(key,options)=>{
+  const textRuntime = runInNewContext(textEdit.replace.slice(0,textEdit.replace.indexOf('function eon(){'))+';FactoryZhText', {
+    eon:()=>({t:(key,options)=>{
       translationCalls.push({key,options});
       assert.equal(options.ns,'patchUi'); assert.equal(options.keySeparator,false); assert.equal(options.nsSeparator,false);
       assert.equal(options.defaultValue,key);
@@ -168,8 +167,8 @@ try {
   assert.ok(!textRuntime(pathKey,{path:'C:/项目/a.b'}).includes('{{path}}'));
   let selectedTab;
   const tabChange = value=>{selectedTab=value;};
-  const renderTabs = runInNewContext(`(function(){${tabsEdit.replace}return _r})`, {
-    FactoryZhText:textRuntime, Kh:{Overview:'overview-value',Chain:'chain-value'}, Dt:'chain-value', F:true, rt:false, mt:tabChange,
+  const renderTabs = runInNewContext(`(function(){${tabsEdit.replace}return Lr})`, {
+    FactoryZhText:textRuntime, sp:{Overview:'overview-value',Chain:'chain-value'}, Mt:'chain-value', F:true, gt:false, yt:tabChange,
     e:Array(193).fill(Symbol.for('react.memo_cache_sentinel'))
   }, {timeout:1000});
   displayLocale = 'en';
@@ -181,12 +180,12 @@ try {
   assert.deepEqual(Array.from(chineseTabs.items, item=>item.value), ['overview-value','chain-value']);
   assert.equal(chineseTabs.value,'chain-value'); assert.equal(chineseTabs.onChange,tabChange);
   chineseTabs.onChange(chineseTabs.items[0].value); assert.equal(selectedTab,'overview-value');
-  const catalogEdit = rendererEdits.find(edit => edit.find.startsWith('St=wt?hd.Failed:WAd'));
+  const catalogEdit = rendererEdits.find(edit => edit.find.startsWith('Ct=wt?Ad.Failed:uyd'));
   assert.ok(catalogEdit, 'Catalog display projection patch must be present');
-  const projectCatalog = runInNewContext(`(function(ct,kt,Mt){let St;const Ct=[];${catalogEdit.replace}status:St});return Ct[0]})`, {
-    FactoryZhText:textRuntime, wt:false, hd:{Failed:'failed'}, WAd:()=> 'ready', Pt:{}, Ot:false,
-    st:'setting-id', bt:{operationId:'fixture.operation'}, qt:{},
-    x$:'current-model-sentinel', zK:'default-model-sentinel', Yoe:'inherit-model-sentinel', IE:'org-model-sentinel',
+  const projectCatalog = runInNewContext(`(function(ct,kt,Dt){let Ct;const St=[];${catalogEdit.replace}status:Ct});return St[0]})`, {
+    FactoryZhText:textRuntime, wt:false, Ad:{Failed:'failed'}, uyd:()=> 'ready', Lt:{}, Ot:false,
+    et:'setting-id', bt:{operationId:'fixture.operation'}, Kt:{},
+    O$:'current-model-sentinel', oY:'default-model-sentinel', lse:'inherit-model-sentinel', EE:'org-model-sentinel',
     s:(key,{name}={})=>`${key}:${name ?? ''}`
   }, {timeout:1000});
   const switchCatalog = {
@@ -246,15 +245,15 @@ try {
   assert.equal(directoryProjection.before,localizedCustomPath); assert.equal(directoryProjection.after,localizedCustomPath);
   assert.equal(directoryCatalog.control.options[0].value,specPath);
   console.log('Catalog projection PASS: actual replacement localizes switches/enums/sentinels/custom-directory labels, preserves user text and paths, and retains model snapshot names after option rename/removal.');
-  const tierEdit = rendererEdits.find(edit=>edit.find.startsWith('function uso('));
-  const tierBadgeEdit = rendererEdits.find(edit=>edit.find.startsWith('let v;e[9]!==n?(v=uso('));
-  const tierModalEdit = rendererEdits.find(edit=>edit.find.startsWith('let M;e[18]!==o?(M=uso('));
-  const tierRuntime = runInNewContext(tierEdit.replace+';uso',{FactoryZhText:textRuntime},{timeout:1000});
+  const tierEdit = rendererEdits.find(edit=>edit.find.startsWith('function hro('));
+  const tierBadgeEdit = rendererEdits.find(edit=>edit.find.startsWith('let v;e[9]!==n?(v=hro('));
+  const tierModalEdit = rendererEdits.find(edit=>edit.find.startsWith('let M;e[18]!==o?(M=hro('));
+  const tierRuntime = runInNewContext(tierEdit.replace+';hro',{FactoryZhText:textRuntime},{timeout:1000});
   const renderTierBadge = runInNewContext(`(function(){${tierBadgeEdit.replace}return v})`,{
-    uso:tierRuntime,n:3,e:Array(11).fill(Symbol.for('react.memo_cache_sentinel'))
+    hro:tierRuntime,n:3,e:Array(11).fill(Symbol.for('react.memo_cache_sentinel'))
   },{timeout:1000});
   const renderTierModal = runInNewContext(`(function(){${tierModalEdit.replace}return M})`,{
-    uso:tierRuntime,o:3,e:Array(20).fill(Symbol.for('react.memo_cache_sentinel'))
+    hro:tierRuntime,o:3,e:Array(20).fill(Symbol.for('react.memo_cache_sentinel'))
   },{timeout:1000});
   displayLocale='en';
   assert.equal(renderTierBadge(),'INTERMEDIATE');assert.equal(renderTierModal(),'Intermediate');
@@ -264,8 +263,8 @@ try {
   for(const [level,expected]of [[1,'基础'],[2,'基础'],[3,'中级'],[4,'高级'],[5,'高级']]) {
     assert.equal(tierRuntime(level),expected);assert.equal(tierRuntime(level,true),expected);
   }
-  const fieldEdit = rendererEdits.find(edit=>edit.find.startsWith('function JHl('));
-  const projectField = runInNewContext(fieldEdit.replace+'return n};JHl',{
+  const fieldEdit = rendererEdits.find(edit=>edit.find.startsWith('function xWl('));
+  const projectField = runInNewContext(fieldEdit.replace+'return n};xWl',{
     FactoryZhText:textRuntime,z:{c:()=>[]},le:()=>({t:()=>{}})
   },{timeout:1000});
   const fieldEntries=[['Project','On'],['x-header','user value']];
@@ -280,15 +279,15 @@ try {
     assert.equal(projected.options[0].value,'unchanged-value');assert.equal(projected.options[0].label,patchUiZh['Use default']);
     assert.equal(field.options[0].label,'Use default');
   }
-  const providerStart=rendererSource.indexOf('Ai=(t=>'),providerEnd=rendererSource.indexOf(',Zt=',providerStart);
+  const providerStart=rendererSource.indexOf('vi=(t=>'),providerEnd=rendererSource.indexOf(',Xt=',providerStart);
   assert.ok(providerStart>=0&&providerEnd>providerStart);
-  const providerApi=runInNewContext('var '+rendererSource.slice(providerStart,providerEnd)+';Ai',{}, {timeout:1000});
+  const providerApi=runInNewContext('var '+rendererSource.slice(providerStart,providerEnd)+';vi',{}, {timeout:1000});
   const providerOptions=Object.values(providerApi).map(value=>({value,label:value}));
   const providerField={id:'provider',label:'Provider',value:'anthropic',options:providerOptions};
   assert.deepEqual(Array.from(projectField({field:providerField}).options,option=>[option.value,option.label]),providerOptions.map(option=>[option.value,option.label]));
-  const presetStart=rendererSource.indexOf('yBt={'),presetEnd=rendererSource.indexOf(',XSt=',presetStart);
+  const presetStart=rendererSource.indexOf('Lzs='),presetEnd=rendererSource.indexOf(',eCt=',presetStart);
   assert.ok(presetStart>=0&&presetEnd>presetStart);
-  const presets=runInNewContext('const '+rendererSource.slice(presetStart,presetEnd)+';dVe',{Ai:providerApi},{timeout:1000});
+  const presets=runInNewContext('const '+rendererSource.slice(presetStart,presetEnd)+';xVe',{vi:providerApi},{timeout:1000});
   const presetOptions=Array.from(presets,preset=>({value:preset.id,label:preset.label}));
   assert.equal(presetOptions.filter(option=>option.value!=='custom').length,5);
   const projectedPresets=projectField({field:{id:'preset',label:'Provider',value:'custom',options:presetOptions}});
@@ -296,20 +295,20 @@ try {
     const original=presetOptions.find(item=>item.value===option.value);
     assert.equal(option.label,option.value==='custom'?patchUiZh['Other provider']:original.label);
   }
-  const validationEdit=rendererEdits.find(edit=>edit.find.startsWith('function KOn('));
-  const validationStart=rendererSource.indexOf('function sWs('),validationEnd=rendererSource.indexOf('function rWs(',validationStart);
+  const validationEdit=rendererEdits.find(edit=>edit.find.startsWith('function MLn('));
+  const validationStart=rendererSource.indexOf('function XWs('),validationEnd=rendererSource.indexOf('function ZWs(',validationStart);
   assert.ok(validationStart>=0&&validationEnd>validationStart);
   const validationSource=rendererSource.slice(validationStart,validationEnd);
-  const validationNames=[...validationSource.matchAll(/case g2\.(\w+):/g)].map(match=>match[1]);
+  const validationNames=[...validationSource.matchAll(/case y2\.(\w+):/g)].map(match=>match[1]);
   assert.equal(validationNames.length,9);
-  const validationRuntime=runInNewContext(validationSource+validationEdit.replace+';({sWs,KOn})',{
-    FactoryZhText:textRuntime,g2:Object.fromEntries(validationNames.map(name=>[name,name]))
+  const validationRuntime=runInNewContext(validationSource+validationEdit.replace+';({XWs,MLn})',{
+    FactoryZhText:textRuntime,y2:Object.fromEntries(validationNames.map(name=>[name,name]))
   },{timeout:1000});
-  for(const code of validationNames) assert.equal(validationRuntime.KOn({code}),patchUiZh[validationRuntime.sWs({code})]);
-  for(const message of ['Project','On','Unknown validation message','C:/Project/user-value']) assert.equal(validationRuntime.KOn({code:validationNames[0],message}),message);
-  const checkboxEdit=rendererEdits.find(edit=>edit.find.startsWith('let A;e[4]!==p?(A=c.jsx(Xc,{"aria-label":"Select row"'));
+  for(const code of validationNames) assert.equal(validationRuntime.MLn({code}),patchUiZh[validationRuntime.XWs({code})]);
+  for(const message of ['Project','On','Unknown validation message','C:/Project/user-value']) assert.equal(validationRuntime.MLn({code:validationNames[0],message}),message);
+  const checkboxEdit=rendererEdits.find(edit=>edit.find.startsWith('let A;e[4]!==p?(A=c.jsx(ad,{"aria-label":"Select row"'));
   const renderCheckbox=runInNewContext(`(function(p){${checkboxEdit.replace}return A})`,{
-    FactoryZhText:textRuntime,c:{jsx:(type,props)=>props},Xc:'checkbox',e:Array(6).fill(Symbol.for('react.memo_cache_sentinel'))
+    FactoryZhText:textRuntime,c:{jsx:(type,props)=>props},ad:'checkbox',e:Array(6).fill(Symbol.for('react.memo_cache_sentinel'))
   },{timeout:1000});
   const checkboxProps={checked:true};
   displayLocale='en';assert.equal(renderCheckbox(checkboxProps)['aria-label'],'Select row');
@@ -317,12 +316,12 @@ try {
   const callerCheckbox={'aria-label':'Project',checked:false};
   assert.equal(renderCheckbox(callerCheckbox)['aria-label'],'Project');assert.equal(renderCheckbox(callerCheckbox).checked,false);
   console.log('Readiness/form/accessibility PASS: actual replacements refresh tier caches, translate only form display fields and fixed validation errors, preserve API names/preset brands/user data, and respect caller checkbox labels.');
-  const badgeEdit=rendererEdits.find(edit=>edit.find.startsWith('function wRu('));
+  const badgeEdit=rendererEdits.find(edit=>edit.find.startsWith('function YRu('));
   const badgeDataStart=badgeEdit.replace.indexOf('const e='),badgeDataEnd=badgeEdit.replace.indexOf('].some(',badgeDataStart);
   assert.ok(badgeDataStart>=0&&badgeDataEnd>badgeDataStart);
   const badgeTriples=parseDataDeclarations(badgeEdit.replace.slice(badgeDataStart,badgeDataEnd+1)+';').get('e');
   assert.equal(badgeTriples.length,29);
-  const renderBadge=runInNewContext(badgeEdit.replace+';wRu',{
+  const renderBadge=runInNewContext(badgeEdit.replace+';YRu',{
     FactoryZhText:textRuntime,c:{jsx:(type,props)=>props,jsxs:(type,props)=>props},G:'card',se:'text',Le:'box',
     I:{bg:{surface:0},border:{outer:0},radius:{surface:0},space:{4:4,20:20}},re:{Caption:0,ButtonLabel:1},De:{Secondary:0,Tertiary:1}
   },{timeout:1000});
@@ -340,23 +339,23 @@ try {
     {name:badgeTriples[0][0],description:badgeTriples[0][1],quip:'Changed quip'},
     {name:badgeTriples[0][0],description:'Changed description',quip:badgeTriples[0][2]},
     {name:'Changed name',description:badgeTriples[0][1],quip:badgeTriples[0][2]}]) assert.deepEqual(badgeTexts(dto),[dto.name,dto.description,dto.quip]);
-  const durationEdit=rendererEdits.find(edit=>edit.find.startsWith('function G8t('));
-  const statsHeroEdit=rendererEdits.find(edit=>edit.find.startsWith('function IRu('));
-  const originalStats=runInNewContext(durationEdit.find+statsHeroEdit.find+';({G8t,IRu})',{
-    aRu:value=>String(value),lRu:()=>17
+  const durationEdit=rendererEdits.find(edit=>edit.find.startsWith('function K8t('));
+  const statsHeroEdit=rendererEdits.find(edit=>edit.find.startsWith('function JRu('));
+  const originalStats=runInNewContext(durationEdit.find+statsHeroEdit.find+';({K8t,JRu})',{
+    LRu:value=>String(value),PRu:()=>17
   },{timeout:1000});
-  const localizedStats=runInNewContext(durationEdit.replace+statsHeroEdit.replace+';({G8t,IRu})',{
-    Intl,Rin:()=>({language:displayLocale}),aRu:value=>String(value),lRu:()=>17
+  const localizedStats=runInNewContext(durationEdit.replace+statsHeroEdit.replace+';({K8t,JRu})',{
+    Intl,eon:()=>({language:displayLocale}),LRu:value=>String(value),PRu:()=>17
   },{timeout:1000});
   for(const milliseconds of [0,1,29400,30000,89999,3599999,3600000,5399999,5400000,86399999,86400000,171000000,172800000,360000000]) {
-    displayLocale='en';assert.equal(localizedStats.G8t(milliseconds),originalStats.G8t(milliseconds),String(milliseconds));
+    displayLocale='en';assert.equal(localizedStats.K8t(milliseconds),originalStats.K8t(milliseconds),String(milliseconds));
     const dto=Object.freeze({totalSessions:1234,totalTimeMs:milliseconds,longestStreak:9,firstSessionDate:'2026-10-01',longestSession:Object.freeze({assistantActiveTimeMs:milliseconds})});
     const before=JSON.stringify(dto);
-    assert.equal(JSON.stringify(localizedStats.IRu(dto)),JSON.stringify(originalStats.IRu(dto)));
-    displayLocale='zh-CN';const hero=localizedStats.IRu(dto);
+    assert.equal(JSON.stringify(localizedStats.JRu(dto)),JSON.stringify(originalStats.JRu(dto)));
+    displayLocale='zh-CN';const hero=localizedStats.JRu(dto);
     assert.equal(hero[0].value,'1234');assert.equal(hero[2].value,'9天');assert.equal(hero[4].value,'17天');
     assert.match(hero[1].value,/天|小时|分钟/);assert.equal(hero[3].value,hero[1].value);
-    assert.deepEqual(Array.from(hero,item=>item.value.match(/\d+/g)?.map(Number)),Array.from(originalStats.IRu(dto),item=>item.value.match(/\d+/g)?.map(Number)));
+    assert.deepEqual(Array.from(hero,item=>item.value.match(/\d+/g)?.map(Number)),Array.from(originalStats.JRu(dto),item=>item.value.match(/\d+/g)?.map(Number)));
     assert.equal(JSON.stringify(dto),before);
   }
   console.log('Stats display PASS: all 29 actual badge triples localize without DTO mutation; unknown/changed tuples and Go code stay raw; duration/day units localize with original English thresholds, rounding and numbers preserved.');
@@ -419,21 +418,21 @@ try {
   assert.throws(()=>validateTerminology('Factory Desktop','Factory 桌面版','fixture',terminology));
   assert.throws(()=>validateTerminology('Claude','Gemini','fixture',terminology));
   console.log('Coverage/terminology PASS: missing whole namespaces counted; stale, hidden, unknown and changed preserved keys rejected; all context rules enforced.');
-  const start = rendererSource.indexOf('var S0=(t=>'), end = rendererSource.indexOf('const Sgt=[',start);
+  const start = rendererSource.indexOf('var _0=(t=>'), end = rendererSource.indexOf('const Pgt=[',start);
   assert.ok(start>=0&&end>start);
-  const anatomy = runInNewContext(rendererSource.slice(start,end)+';({HOl,zOl})',{}, {timeout:1000});
+  const anatomy = runInNewContext(rendererSource.slice(start,end)+';({ABl,yBl})',{}, {timeout:1000});
   const zhKeywords=readJson(join(REPO_ROOT,'translations/zh-CN/components.json')).lessons.lessonPromptAnatomy.keywords;
-  const keywords=anatomy.HOl((key,options)=>(options?.lng==='en'?en.components.lessons.lessonPromptAnatomy.keywords:zhKeywords)[key.split('.').at(-1)]);
-  for(const draft of ['修复登录页面 src/auth.ts，不要修改公共 API；运行测试并验证结果。','Fix the login page in src/auth.ts without changing public APIs; run tests and verify the result.']) assert.ok(Object.values(anatomy.zOl({draft,keywords})).every(Boolean),draft);
-  const englishOnly=anatomy.HOl(key=>en.components.lessons.lessonPromptAnatomy.keywords[key.split('.').at(-1)]);
-  assert.equal(anatomy.zOl({draft:'修复登录页面，不要修改公共接口；运行测试并验证结果。',keywords:englishOnly}).outcome,false);
+  const keywords=anatomy.ABl((key,options)=>(options?.lng==='en'?en.components.lessons.lessonPromptAnatomy.keywords:zhKeywords)[key.split('.').at(-1)]);
+  for(const draft of ['修复登录页面 src/auth.ts，不要修改公共 API；运行测试并验证结果。','Fix the login page in src/auth.ts without changing public APIs; run tests and verify the result.']) assert.ok(Object.values(anatomy.yBl({draft,keywords})).every(Boolean),draft);
+  const englishOnly=anatomy.ABl(key=>en.components.lessons.lessonPromptAnatomy.keywords[key.split('.').at(-1)]);
+  assert.equal(anatomy.yBl({draft:'修复登录页面，不要修改公共接口；运行测试并验证结果。',keywords:englishOnly}).outcome,false);
   console.log('Lesson anatomy PASS: actual pristine matcher recognizes Chinese and English prompts with localized keywords; English-only list reproduces prior Chinese failure.');
 } finally { closeAsar(asar); }
 
 if (process.argv.includes('--exercise')) {
   // All installed-file writes below are confined to this new full version copy.
   const exercise = mkdtempSync(join(REPO_ROOT, 'work', 'exercise-'));
-  const copyHome = join(exercise, 'app-0.200.0');
+  const copyHome = join(exercise, 'app-0.201.0');
   const real = context({home});
   const realPair = pairHash(real.files);
   const results = [];
@@ -444,9 +443,14 @@ if (process.argv.includes('--exercise')) {
   const realState = snapshot(real.state);
   const sourceFile = join(REPO_ROOT,'translations/zh-CN/common.json');
   const sourceBefore = readFileSync(sourceFile);
-  const buildFile = join(REPO_ROOT,'translations/build/resources-zh-CN.js');
-  const coverageFile = join(REPO_ROOT,'translations/build/coverage.json');
+  const buildFile = join(REPO_ROOT,'translations/build/0.201.0/resources-zh-CN.js');
+  const coverageFile = join(REPO_ROOT,'translations/build/0.201.0/coverage.json');
+  const desktopFile = join(REPO_ROOT,'translations/build/0.201.0/desktop-zh-CN.json');
   const buildBefore = readFileSync(buildFile), coverageBefore = readFileSync(coverageFile);
+  const desktopBefore = readFileSync(desktopFile);
+  const legacyBuild = ['resources-zh-CN.js','desktop-zh-CN.json','coverage.json'].map(name=>join(REPO_ROOT,'translations/build',name));
+  const legacyBefore = legacyBuild.map(file=>fileHash(file));
+  writeFileSync(join(exercise,'isolation-before.json'),JSON.stringify({realPair,realState,legacyBefore,source:fileHash(sourceFile),build:[buildFile,desktopFile,coverageFile].map(file=>fileHash(file))},null,2));
   const pass = (name) => { results.push(name); console.log(`Exercise PASS: ${name}`); writeFileSync(join(exercise,'results.json'),JSON.stringify({results},null,2)); };
   const run = (operation, flags = [], expected = 0) => {
     const result = spawnSync(process.execPath,[join(REPO_ROOT,'scripts',`${operation}.mjs`),`--home=${copyHome}`,...flags],{cwd:REPO_ROOT,encoding:'utf8',windowsHide:true,timeout:180000});
@@ -551,7 +555,7 @@ if (process.argv.includes('--exercise')) {
       const backupDir = join(REPO_ROOT,'backups',ctx.key,`simulated-${randomUUID()}`); mkdirSync(backupDir,{recursive:true});
       const backup = {exe:join(backupDir,'factory-desktop.exe'),asar:join(backupDir,'app.asar')};
       for(const name of ['exe','asar']) copyFileSync(beforeFiles[name],backup[name]);
-      const pending = {home:ctx.normalized,appVersion:'0.200.0',before:pairHash(beforeFiles),after:pairHash(afterFiles),backup,beforeApplied};
+      const pending = {home:ctx.normalized,appVersion:'0.201.0',before:pairHash(beforeFiles),after:pairHash(afterFiles),backup,beforeApplied};
       atomicJson(ctx.pending,pending);
       copyFileSync(afterFiles.exe,ctx.files.exe);
       chmodSync(ctx.files.exe,0o666);
@@ -578,6 +582,7 @@ if (process.argv.includes('--exercise')) {
     writeFileSync(sourceFile,sourceBefore); build();
     assert.deepEqual(readFileSync(buildFile),buildBefore);
     assert.deepEqual(readFileSync(coverageFile),coverageBefore);
+    assert.deepEqual(readFileSync(desktopFile),desktopBefore);
     pass('resource-byte change refused in-place; restore -> build -> apply update and final restoration succeed');
 
     // A live owner cannot be removed, even if the file claims an old identity.
@@ -608,8 +613,11 @@ if (process.argv.includes('--exercise')) {
     writeFileSync(join(exercise,'results.json'),JSON.stringify({results,error:error.stack},null,2));
     throw error;
   } finally {
-    writeFileSync(sourceFile,sourceBefore); writeFileSync(buildFile,buildBefore); writeFileSync(coverageFile,coverageBefore);
+    writeFileSync(sourceFile,sourceBefore); writeFileSync(buildFile,buildBefore); writeFileSync(coverageFile,coverageBefore); writeFileSync(desktopFile,desktopBefore);
     if(ctx) chmodSync(ctx.files.asar,0o666);
     assert.deepEqual(pairHash(real.files),realPair,'Real installed pair must remain unchanged');
+    assert.deepEqual(snapshot(real.state),realState,'Real installed state must remain unchanged');
+    assert.deepEqual(legacyBuild.map(file=>fileHash(file)),legacyBefore,'Pinned 0.200.0 build must remain unchanged');
+    writeFileSync(join(exercise,'isolation-after.json'),JSON.stringify({realPair:pairHash(real.files),realState:snapshot(real.state),legacyBefore:legacyBuild.map(file=>fileHash(file)),source:fileHash(sourceFile),build:[buildFile,desktopFile,coverageFile].map(file=>fileHash(file))},null,2));
   }
 }

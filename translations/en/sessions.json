@@ -751,6 +751,8 @@
   },
   "archiveSession": {
     "couldNotArchiveOnMachine": "The session could not be archived on its machine. Reconnect the machine and try again.",
+    "couldNotArchiveWhileOffline": "The session's machine is offline and the archive could not be saved. Check your connection and try again.",
+    "couldNotSaveArchive": "The archive could not be saved. Check your connection and try again.",
     "failedToArchive": "Failed to archive session"
   },
   "preInitCapabilities": {

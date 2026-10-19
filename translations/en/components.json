@@ -2844,9 +2844,24 @@
       },
       "reconnect": "Reconnect",
       "retry": "Retry",
-      "takeControlOfTheComputer": "Take control of the computer",
-      "takeControl": "Take control",
-      "clickAnywhereToDrive": "Click anywhere to drive the computer"
+      "upload": {
+        "dropFiles": "Drop files to upload them to the Computer",
+        "sizeLimit": "Up to {{size}} per file",
+        "listLabel": "Uploads to the Computer",
+        "uploading": "Uploading to the Computer…",
+        "saving": "Saving to the Computer…",
+        "saved": "Added to the Computer",
+        "savedTo": "Added to {{path}}",
+        "showInFiles": "Show in Files",
+        "cancel": "Cancel uploading {{fileName}}",
+        "dismiss": "Dismiss {{fileName}}",
+        "failure": {
+          "tooLarge": "Larger than the {{size}} limit",
+          "folder": "Folders can't be uploaded",
+          "notConnected": "The Computer isn't connected",
+          "failed": "Upload failed"
+        }
+      }
     },
     "missionsWelcomeDialog": {
       "eyebrow": "MISSIONS · WELCOME · {{step}} OF {{total}}",
@@ -3000,6 +3015,13 @@
     },
     "errorPanel": {
       "reloadApplication": "Reload Application",
+      "goHome": "Go Home"
+    },
+    "sharedSessionJoinPanel": {
+      "statusLabel": "SHARED SESSION",
+      "untitledSession": "Untitled session",
+      "description": "Join to follow along and send messages in this session. You will be added as a member.",
+      "join": "Join session",
       "goHome": "Go Home"
     },
     "hostedWebAccessModal": {
@@ -4362,6 +4384,15 @@
         "label": "Workstream icon",
         "triggerLabel": "Icon for {{name}}: {{symbol}}"
       }
+    },
+    "newSessionTilePlaceholder": {
+      "title": "New session",
+      "hint": "Continue here to start a session in this spot.",
+      "continue": "Continue",
+      "close": "Close new session"
+    },
+    "sessionTileDropPreview": {
+      "label": "Drop to tile"
     }
   },
   "lessons": {
@@ -4624,6 +4655,51 @@
         "data": "Data",
         "code": "Code",
         "other": "Other"
+      },
+      "add": {
+        "label": "Add to shared folder",
+        "uploadFiles": "Upload files…",
+        "uploadFolder": "Upload folder…",
+        "dropHere": "Drop to add to {{folder}}",
+        "preparing_one": "Checking {{count}} file…",
+        "preparing_other": "Checking {{count}} files…",
+        "adding": "Adding {{done}} of {{total}} files…",
+        "cancel": "Cancel",
+        "added_one": "{{count}} file added",
+        "added_other": "{{count}} files added",
+        "skipped_one": "{{count}} skipped",
+        "skipped_other": "{{count}} skipped",
+        "summary": "{{added}}, {{skipped}}",
+        "nothingAdded": "No files to add. Empty folders aren't kept.",
+        "showDetails": "Details",
+        "hideDetails": "Hide details",
+        "dismiss": "Dismiss",
+        "andMore_one": "and {{count}} more",
+        "andMore_other": "and {{count}} more",
+        "skippedFile": "{{path}}: {{reason}}",
+        "skipReason": {
+          "not-text": "not a text file (images and PDFs aren't supported yet)",
+          "too-large": "larger than {{size}} KB",
+          "invalid-name": "name not allowed",
+          "already-exists": "already exists",
+          "changed": "changed since the listing; add it again to replace the new version",
+          "failed": "could not be added",
+          "version-control": "version control folder, not added",
+          "dependencies": "dependencies folder, not added",
+          "secret": "looks like a secret, not added",
+          "deleted-at-path": "a deleted file is at this path"
+        },
+        "failure": {
+          "too-many-files": "Add up to {{count}} files at a time.",
+          "batch-too-large": "Add up to {{size}} MB of files at a time.",
+          "no-permission": "You can't add files to this mission's shared folder.",
+          "unknown": "The files could not be added. Try again."
+        },
+        "replaceTitle": "Replace existing files?",
+        "replaceDescription_one": "{{count}} file already exists in the shared folder.",
+        "replaceDescription_other": "{{count}} files already exist in the shared folder.",
+        "replace": "Replace",
+        "skipThese": "Skip these"
       }
     },
     "missionSymbols": {
@@ -4891,8 +4967,7 @@
       "chooseDeployment": "Choose a deployment",
       "chooseDeploymentSubtitle": "Select where your organization runs Factory.",
       "deviceVerificationTitle": "Confirm this code in your browser",
-      "deviceVerificationSubtitle": "Check that your browser shows the same code before you approve the sign-in.",
-      "eyebrow": "Factory // Droids"
+      "deviceVerificationSubtitle": "Check that your browser shows the same code before you approve the sign-in."
     },
     "workRoles": {
       "engineering": "Engineering",
@@ -5767,54 +5842,6 @@
       "selectableAccounts": "Selectable accounts",
       "unselectableAccounts": "Unselectable accounts"
     },
-    "slackChannelsTable": {
-      "createComputer": "Create Computer",
-      "noResultsFound": "No results found",
-      "loading": "Loading…",
-      "runAs": "Run as",
-      "incidentResponse": "Incident Response",
-      "sessionOwner": "Session Owner",
-      "searchUsers": "Search users...",
-      "machineType": "Machine Type",
-      "computer": "Computer",
-      "searchComputers": "Search computers...",
-      "workspace": "Workspace",
-      "searchWorkspaces": "Search workspaces...",
-      "bringYourOwnMachineComputerSelected": "Computer connected through Remote Control selected. Session output, possibly including machine information, will be posted to this channel.",
-      "sessionVisibility": "Session Visibility",
-      "model": "Model",
-      "customPrompt": "Custom Prompt",
-      "enterACustomPromptToInject": "Enter a custom prompt to inject into sessions created from this channel...",
-      "loadingChannels": "Loading channels...",
-      "channelSettings": "Channel Settings",
-      "searchChannels": "Search channels...",
-      "includeArchivedChannels": "Include archived channels",
-      "channelName": "Channel Name",
-      "listenToChannel": "Listen to channel",
-      "createComputerToEnableIncidentResponse": "Create a computer to enable Incident Response.",
-      "createWorkspaceToEnableIncidentResponse": "Create a cloud workspace to enable Incident Response.",
-      "selectComputerToEnableIncidentResponse": "Select a computer to enable Incident Response.",
-      "selectWorkspaceToEnableIncidentResponse": "Select a workspace to enable Incident Response.",
-      "machineTypeCloud": "Cloud",
-      "factoryUser": "Factory user",
-      "noSpecificOwner": "No specific owner",
-      "serviceAccountHasNoComputers": "Service account has no computers",
-      "noComputers": "No computers.",
-      "noComputer": "No computer",
-      "managed": "Managed",
-      "noWorkspace": "No workspace",
-      "privacyPrivate": "Private (session owner only)",
-      "privacyOrganization": "Organization (all members)",
-      "modelDefault": "Default",
-      "settingsDescriptionWithIncidentResponse": "These settings are only needed to set up Incident Response and service accounts in Slack. Starting Droid sessions from Slack should work without configuring channels here.",
-      "settingsDescription": "These settings are only needed to set up service accounts in Slack. Starting Droid sessions from Slack should work without configuring channels here.",
-      "onlyInvitedChannelsAppear": "Only channels where the Factory app has been invited appear below. To invite Factory to a channel, send <command>/invite @Factory</command> in that channel.",
-      "noChannelsMatchingSearch": "No channels matching your search",
-      "noChannelsAvailable": "No channels available. Make sure to invite Factory to channels using /invite @Factory",
-      "listenToChannelName": "Listen to {{channelName}}",
-      "errorLoadingChannels": "Error loading channels: {{error}}",
-      "remoteControl": "Remote Control"
-    },
     "usernameSetupForm": {
       "username": "Username",
       "errorFetchingUsernamesYouCanManually": "Error fetching usernames. You can manually enter your username above.",
@@ -6322,7 +6349,7 @@
         },
         "mobileApp": {
           "title": "Build a mobile app",
-          "description": "Node with the Expo and EAS CLIs, so Droid can work on React Native apps and kick off builds."
+          "description": "Node with the EAS CLI, so Droid can work on React Native apps and start EAS cloud builds."
         }
       }
     },

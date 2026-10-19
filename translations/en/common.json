@@ -29,7 +29,9 @@
   },
   "desktopSessionTilingHost": {
     "removeTiledSession": "Remove tiled session",
-    "dropToTile": "Drop to tile"
+    "closeNewSessionTile": "Close new session",
+    "resizeColumns": "Resize session columns",
+    "resizeRows": "Resize session rows"
   },
   "evaluationsNavContent": {
     "backToApp": "Back to App",

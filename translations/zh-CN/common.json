@@ -29,7 +29,9 @@
   },
   "desktopSessionTilingHost": {
     "removeTiledSession": "移除平铺的 Session",
-    "dropToTile": "拖放以平铺"
+    "closeNewSessionTile": "关闭新建 Session",
+    "resizeColumns": "调整 Session 列宽",
+    "resizeRows": "调整 Session 行高"
   },
   "evaluationsNavContent": {
     "backToApp": "返回应用",

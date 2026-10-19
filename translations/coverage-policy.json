@@ -884,11 +884,6 @@
       "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
     },
     {
-      "key": "components.onboarding.welcome.eyebrow",
-      "source": "Factory // Droids",
-      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
-    },
-    {
       "key": "components.softwareFactoryLayout.softwareFactoryChangeDetailV2.esc",
       "source": "Esc",
       "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"

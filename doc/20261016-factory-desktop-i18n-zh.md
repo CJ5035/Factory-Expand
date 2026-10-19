@@ -1,8 +1,37 @@
 # Factory 桌面版中文汉化实施文档
 
-- 日期：2026-10-16；更新：2026-10-19（v8：按用户要求二次核查译文、完整功能界面覆盖、下拉选项与专用名词，并修复）
-- 目标版本：Factory Desktop 0.200.0（`C:\Users\11013\AppData\Local\Factory\app-0.200.0`）
-- 状态：**v8 翻译修复、文档修订、构建演练、正式应用及核心 UI 验收完成**（功能资源 18206/18206；课程正文 471 条按用户选择保留英文。未声称全新 profile 或全部界面状态均逐一视觉验收。禁止推送远程。）
+- 日期：2026-10-16；更新：2026-10-19（当前已适配 0.201.0；下方 v8/0.200.0 内容保留为历史）
+- 当前目标版本：Factory Desktop 0.201.0（`C:\Users\11013\AppData\Local\Factory\app-0.201.0`）；保留 0.200.0 固定补丁及产物。
+- 状态：**0.201.0 适配、构建、自检、15 项副本演练、正式应用及定向 UI 验收完成**（功能资源 18222/18222；课程正文 471 条保留英文。资源覆盖不代表全部界面状态均逐一视觉验收。禁止推送远程。）
+
+## 当前版本与更新安装（0.201.0）
+
+本轮用户明确授权“Factory已更新至0.201.0，请适配拓展，不推送远程”。详细六项计划、固定原始构建哈希、检查点与证据见 [0.201.0 适配实施计划](设计实施文档/20261019-Factory-0.201.0适配实施计划.md)。沿用已批准的 exe 签名失效与关闭嵌入 ASAR 完整性校验方案；不修改 Update.exe、packages、用户凭据或网络配置。
+
+- 新版独立 `patches/0.201.0/` 固定原始 exe/asar、fuse 和 signed keytar；39 条 renderer 与 5 条 main 精准编辑，共 44 条，两个目标、两个新增资源。完整 540 个原始归档条目核验通过。
+- 新版原始资源新增 72 条、修改 1 条、移除 56 条；功能界面与下拉资源完整补齐。19 个 renderer namespace 共 17851 叶，原始 desktop 85 叶，patchUi 757 叶，总资源 18693；其中功能资源 18222/18222、课程正文 471 条原文，缺失/未审核英文/排除均 0。模型/提供商名称、Session/Spec、代码、路径、用户文字按既有规则保留。
+- 当前 `npm run build` 与 `npm run selfcheck` 针对 0.201.0；活动 `translations/en`、`zh-CN`、scope/policy 对应新版。构建输出 `translations/build/0.201.0/`，包含 renderer ESM、desktop JSON 及 coverage。根 `translations/build/` 三份 0.200.0 固定产物和旧 patchset 字节不变，旧版 apply/verify/restore 继续使用旧产物；默认构建不重新生成旧版资源。
+- 构建、完整业务 VM、自检及 15 项事务副本演练通过；真实安装 dry-run→apply→verify 通过，重复 apply 无操作，restore --check 确认可还原。正常启动后再次 verify 通过，临时 9225 调试端口关闭。
+
+真实 UI 定向验收：17 个设置路由均读到中文标题；9 种语言自称保留，English→简体中文切换及 `savedLocale=zh-CN` 保存通过。添加模型空白表单显示中文，提供商下拉保留 Anthropic/OpenAI/AWS Bedrock/OpenRouter/Ollama 品牌及“其他提供商”，随后取消未保存。抽查 7 个默认设置下拉，推理/交互/自主级别等中文，模型名保持原值，展开前后选中值不变。CDP 截图确认设置页、主界面及顶部“文件/编辑/视图/窗口/帮助”为中文；本地 daemon.isAvailable 为 true，输入区与模型按钮可用，未发送消息或上传文件。
+
+验收边界：本轮 UIA 未取得原生子菜单，系统屏幕捕获返回无效句柄；CDP 截图和菜单 VM/源码审查通过，不将其表述为原生子菜单逐项视觉通过。未创建全新 profile，未遍历全部权限、远端服务状态、上传/加入成员的写操作或每个页面的全部下拉状态。现有品牌和服务器动态名称不因含英文而强行翻译。
+
+普通启动确认：实际进程来自 app-0.201.0、无 remote-debugging 参数，日志新增 Process ready、Startup completed、daemon_ready healthy 与 Renderer finished loading。日志另有远端 managed-settings 获取及计算机自动注册超时；本轮未据此修改网络/凭据，也不将其定性为汉化回归或宣称远端注册功能已验收。
+
+支持版本的安装命令（操作前完全退出 Factory，包括托盘）：
+
+```powershell
+Set-Location F:\GitHubs\Factory-Expand
+npm run build
+.\apply.cmd "--home=C:\Users\11013\AppData\Local\Factory\app-0.201.0" --dry-run
+.\apply.cmd "--home=C:\Users\11013\AppData\Local\Factory\app-0.201.0"
+.\verify.cmd "--home=C:\Users\11013\AppData\Local\Factory\app-0.201.0"
+```
+
+已应用后修改译文，使用同一版本目录执行 restore→build→apply→verify；卸载汉化执行 `.\restore.cmd "--home=C:\Users\11013\AppData\Local\Factory\app-0.201.0"`。Factory 后续更新到其他版本时，先正常官方更新，再适配新版本的完整哈希、布局、锚点及资源差异；仅改 `--home`、覆盖旧 exe/asar 或将旧备份还原到新目录均不可行。当前仅明确支持 0.200.0/0.201.0，未知版本或构建继续拒绝。
+
+> 以下 1–5 节及 v8 数字描述 0.200.0 的实施历史；当前版本与结果以本节和 0.201.0 独立实施计划为准。
 
 ## 1. 背景与调查结论
 

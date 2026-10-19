@@ -2012,6 +2012,10 @@
     "connectGithubOrGitlab": "Connect GitHub or GitLab",
     "templatesAreUnavailableBecauseYouHavent": "Environments are unavailable because you haven't connected a personal code provider. Connect GitHub or GitLab to verify repository access and see your environments here. You can still create an environment without repositories.",
     "connectAPersonalCodeProviderTo": "Connect a personal code provider to manage environments",
+    "hiddenOrganizationEnvironments_one": "{{count}} organization environment is hidden",
+    "hiddenOrganizationEnvironments_other": "{{count}} organization environments are hidden",
+    "hiddenOrganizationEnvironmentsDescription": "Your personal code provider account can't access every repository in them. Ask an admin or the environment's creator which repositories it uses, then grant your account access to those repositories.",
+    "manageCodeProviders": "Manage code providers",
     "setAsDefault": "Set as default",
     "rebuild": "Rebuild",
     "cancelBuild": "Cancel build",
@@ -4079,12 +4083,6 @@
   "setupScriptSection": {
     "scriptExceedsMaximumLength": "Script exceeds maximum length of {{maxLength}} characters"
   },
-  "slackChannelsSection": {
-    "clearedServiceAccountFromChannel": "Cleared service account from #{{channelName}}",
-    "clearedServiceAccount": "Cleared service account",
-    "attributedChannelToServiceAccount": "Attributed #{{channelName}} to {{serviceAccountName}}",
-    "attributedChannel": "Attributed channel to service account"
-  },
   "soundsSection": {
     "notificationVolume": "Notification volume",
     "test": "Test",
@@ -4737,7 +4735,6 @@
     "removeNamed": "Remove mapping for {{group}}",
     "cancel": "Cancel",
     "save": "Save mapping",
-    "jsonFormat": "Enter a quoted JSON string, for example {{example}}. Use JSON escapes for line breaks and other control characters.",
     "invalidGroupJson": "Enter a valid, nonempty JSON string with supported characters and within the binding size limit."
   }
 }

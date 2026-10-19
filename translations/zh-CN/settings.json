@@ -2018,7 +2018,11 @@
     "delete": "删除",
     "actionsFor": "{{name}} 的操作",
     "viewDetails": "查看详情",
-    "prebuiltDevEnvironmentsForDroid": "供 Droid 使用的预构建开发环境。仓库克隆和设置在构建时完成，让 Session 启动即可工作。"
+    "prebuiltDevEnvironmentsForDroid": "供 Droid 使用的预构建开发环境。仓库克隆和设置在构建时完成，让 Session 启动即可工作。",
+    "hiddenOrganizationEnvironments_one": "已隐藏 {{count}} 个组织环境",
+    "hiddenOrganizationEnvironments_other": "已隐藏 {{count}} 个组织环境",
+    "hiddenOrganizationEnvironmentsDescription": "你的个人代码提供方账号无法访问这些环境中的所有仓库。请向管理员或环境创建者询问环境使用了哪些仓库，然后为你的账号授予这些仓库的访问权限。",
+    "manageCodeProviders": "管理代码提供方"
   },
   "sandboxEnvironmentDetailsPage": {
     "failedToLoadThisTemplate": "加载此环境失败。",
@@ -4079,12 +4083,6 @@
   "setupScriptSection": {
     "scriptExceedsMaximumLength": "脚本超过 {{maxLength}} 个字符的最大长度"
   },
-  "slackChannelsSection": {
-    "clearedServiceAccountFromChannel": "已清除 #{{channelName}} 的服务账号",
-    "clearedServiceAccount": "已清除服务账号",
-    "attributedChannelToServiceAccount": "已将 #{{channelName}} 归属到 {{serviceAccountName}}",
-    "attributedChannel": "已将频道归属到服务账号"
-  },
   "soundsSection": {
     "notificationVolume": "通知音量",
     "test": "测试",
@@ -4737,7 +4735,6 @@
     "removeNamed": "移除 {{group}} 的映射",
     "cancel": "取消",
     "save": "保存映射",
-    "jsonFormat": "输入带引号的 JSON 字符串，例如 {{example}}。换行和其他控制字符请使用 JSON 转义。",
     "invalidGroupJson": "请输入包含受支持字符且不超过绑定大小限制的有效非空 JSON 字符串。"
   }
 }

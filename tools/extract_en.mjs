@@ -1,9 +1,15 @@
-// Deliberately limited to the data declarations of Factory Desktop 0.200.0.
+// Deliberately limited to the pinned data layouts of Factory Desktop 0.200.0/0.201.0.
 // Never evaluates application code, function calls, getters or template expressions.
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { openAsar, closeAsar, readEntry, listEntries, findEntry, integrityOf, sha256 } from '../scripts/lib/asar.mjs';
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const layouts = {
+  '0.200.0': { start: 'const beu={info:"Info",tip:"Tip"', end: ';function CSu(t)', resourceRoot: /D8t=CSu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:SSu\}\)/g, components: 'SSu', desktopStart: 'Sb={checkForUpdates:"Check for Updates..."', desktopEnd: ',Db={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: '$b', renderer: '.vite/renderer/main_window/assets/index-CCcgJ39D.js', main: '.vite/build/initLifecycle-C1amcziW.js' },
+  '0.201.0': { start: 'const Weu={info:"Info",tip:"Tip"', end: ';function KSu(t)', resourceRoot: /B8t=KSu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:qSu\}\)/g, components: 'qSu', desktopStart: 'Eb={checkForUpdates:"Check for Updates..."', desktopEnd: ',Nb={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: 'Lb', renderer: '.vite/renderer/main_window/assets/index-DJvfx-E_.js', main: '.vite/build/initLifecycle-CRttfuow.js' }
+};
 
 export function parseDataDeclarations(source) {
   let pos = 0;
@@ -121,33 +127,37 @@ export function parseDataDeclarations(source) {
   return resolved;
 }
 
-export function extractEnglish(source) {
-  const startMarker = 'const beu={info:"Info",tip:"Tip"';
-  const endMarker = ';function CSu(t)';
+export function extractEnglish(source, version = '0.200.0') {
+  const layout = layouts[version];
+  if (!layout) throw new Error('Unsupported resource version');
+  const startMarker = layout.start;
+  const endMarker = layout.end;
   const start = source.indexOf(startMarker);
   const end = source.indexOf(endMarker, start);
   if (start < 0 || end < 0 || source.indexOf(startMarker, start + 1) >= 0) throw new Error('Unsupported resource declaration layout');
   const data = parseDataDeclarations(source.slice(start, end + 1));
-  const root = source.match(/D8t=CSu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:SSu\}\)/g);
-  if (root?.length !== 1) throw new Error('Expected one D8t resource root');
-  const entries = [...root[0].matchAll(/"\.\/([\w]+)\.json":([\w$]+)/g)];
+  const matches = source.match(layout.resourceRoot);
+  if (matches?.length !== 1) throw new Error('Expected one pinned resource root');
+  const entries = [...matches[0].matchAll(/"\.\/([\w]+)\.json":([\w$]+)/g)];
   if (entries.length !== 18) throw new Error('Expected 18 JSON namespaces');
   const resources = {};
   for (const [, ns, name] of entries) {
     if (!data.has(name) || Object.hasOwn(resources, ns)) throw new Error(`Invalid namespace ${ns}/${name}`);
     resources[ns] = data.get(name);
   }
-  resources.components = data.get('SSu');
+  resources.components = data.get(layout.components);
   if (!resources.common || !resources.components || Object.keys(resources).length !== 19) throw new Error('Incomplete resources');
   return resources;
 }
 
-export function extractDesktopEnglish(source) {
-  const startMarker = 'Sb={checkForUpdates:"Check for Updates..."';
-  const endMarker = ',Db={checkForUpdates:"Buscar actualizaciones..."';
+export function extractDesktopEnglish(source, version = '0.200.0') {
+  const layout = layouts[version];
+  if (!layout) throw new Error('Unsupported desktop resource version');
+  const startMarker = layout.desktopStart;
+  const endMarker = layout.desktopEnd;
   const start = source.indexOf(startMarker), end = source.indexOf(endMarker, start);
   if (start < 0 || end < 0 || source.indexOf(startMarker, start + 1) >= 0 || source.indexOf(endMarker, end + 1) >= 0) throw new Error('Unsupported desktop resource declaration layout');
-  const desktop = parseDataDeclarations(source.slice(start, end) + ';').get('$b');
+  const desktop = parseDataDeclarations(source.slice(start, end) + ';').get(layout.desktopRoot);
   const count = tree => tree && typeof tree === 'object' ? Object.values(tree).reduce((sum, child) => sum + count(child), 0) : 1;
   if (!desktop?.menu || !desktop?.fileDialogs || count(desktop) !== 85) throw new Error('Incomplete desktop resources');
   return desktop;
@@ -156,13 +166,16 @@ export function extractDesktopEnglish(source) {
 export function validateArchive(file) {
   const asar = openAsar(file);
   try {
+    const version = JSON.parse(readEntry(asar, 'package.json')).version;
+    if (!Object.hasOwn(layouts, version)) throw new Error('Unsupported version');
+    const manifest = JSON.parse(readFileSync(join(root, `patches/${version}/manifest.json`), 'utf8'));
     for (const item of listEntries(asar)) {
       const meta = findEntry(asar.header, item.path);
       let bytes = item.unpacked ? readFileSync(join(`${file}.unpacked`, item.path.slice(1))) : readEntry(asar, item.path);
       if (item.unpacked) {
         // Factory signs keytar after packing. Verify the pinned signed bytes, then
         // compare its original unsigned PE to the archive metadata (not vice versa).
-        if (item.path !== '/node_modules/keytar/build/Release/keytar.node' || sha256(bytes) !== 'e6ac229a5ffe2959e10f3d8f8b210bcc6abecf511060db2fa0362d79f4e25e1b') throw new Error(`Unknown unpacked file: ${item.path}`);
+        if (item.path !== '/node_modules/keytar/build/Release/keytar.node' || sha256(bytes) !== manifest.unpacked?.[item.path.slice(1)]) throw new Error(`Unknown unpacked file: ${item.path}`);
         const optional = bytes.readUInt32LE(0x3c) + 24;
         const cert = optional + 112 + 32;
         if (bytes.readUInt16LE(optional) !== 0x20b || bytes.readUInt32LE(cert) !== item.size || bytes.readUInt32LE(cert + 4) + item.size !== bytes.length) throw new Error('Unsupported signed keytar layout');
@@ -174,7 +187,7 @@ export function validateArchive(file) {
       const expected = meta.integrity;
       if (bytes.length !== item.size || !expected || expected.algorithm !== 'SHA256' || expected.hash !== actual.hash || expected.blockSize !== actual.blockSize || JSON.stringify(expected.blocks) !== JSON.stringify(actual.blocks)) throw new Error(`Entry integrity mismatch: ${item.path}`);
     }
-    return JSON.parse(readEntry(asar, 'package.json')).version;
+    return version;
   } finally { closeAsar(asar); }
 }
 
@@ -182,13 +195,16 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   try {
     const file = process.argv.slice(2).find(arg => arg.startsWith('--asar='))?.slice(7);
     if (!file) throw new Error('Usage: node tools/extract_en.mjs --asar=<original app.asar>');
-    if (sha256(readFileSync(file)) !== '07ac482d497a280c1af6d8f153a8fc1ea4bb9a08c3377a5ce65f6888423c7ace') throw new Error('Unsupported asar build');
-    if (validateArchive(file) !== '0.200.0') throw new Error('Unsupported version');
+    const hash = sha256(readFileSync(file));
+    const version = Object.keys(layouts).find(version => JSON.parse(readFileSync(join(root, `patches/${version}/manifest.json`), 'utf8')).original.asar === hash);
+    if (!version) throw new Error('Unsupported asar build');
+    if (validateArchive(file) !== version) throw new Error('Unsupported version');
+    const layout = layouts[version];
     const asar = openAsar(file);
     let resources;
     try {
-      resources = extractEnglish(readEntry(asar, '.vite/renderer/main_window/assets/index-CCcgJ39D.js').toString('utf8'));
-      resources.desktop = extractDesktopEnglish(readEntry(asar, '.vite/build/initLifecycle-C1amcziW.js').toString('utf8'));
+      resources = extractEnglish(readEntry(asar, layout.renderer).toString('utf8'), version);
+      resources.desktop = extractDesktopEnglish(readEntry(asar, layout.main).toString('utf8'), version);
     }
     finally { closeAsar(asar); }
     const out = resolve(dirname(fileURLToPath(import.meta.url)), '../translations/en'); mkdirSync(out, { recursive: true });

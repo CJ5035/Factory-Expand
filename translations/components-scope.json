@@ -1,6 +1,6 @@
 {
-  "appVersion": "0.200.0",
-  "source": ".vite/renderer/main_window/assets/index-CCcgJ39D.js",
+  "appVersion": "0.201.0",
+  "source": ".vite/renderer/main_window/assets/index-DJvfx-E_.js",
   "groups": [
     "actions",
     "analytics",
@@ -79,7 +79,6 @@
         "removeMemberConfirmModal",
         "richUsageMeter",
         "runAsSelector",
-        "slackChannelsTable",
         "usernameSetupForm",
         "appearanceColorInput",
         "appearanceColorPicker",
@@ -208,7 +207,6 @@
         "specReviewPanel",
         "pluginSettingsModalV2",
         "attachmentPreview",
-        "composerChip",
         "chatComposerMcpButton",
         "chatComposerVoiceDictationButton",
         "droidStatusIndicator",
@@ -300,6 +298,7 @@
         "historyNavigationButtons",
         "diff",
         "errorPanel",
+        "sharedSessionJoinPanel",
         "hostedWebAccessModal",
         "wikiVersionDeleteButton",
         "chipInput",
@@ -325,6 +324,27 @@
     {
       "group": "layout",
       "referencedSubtrees": [
+        "missionAgentAttentionCard",
+        "missionAgentsActivityLine",
+        "missionAgentGroupHeader",
+        "missionAgentRow",
+        "missionWorkstreamFilterChip",
+        "missionCenterTabBar",
+        "pullRequestChangeSummary",
+        "pullRequestChecks",
+        "pullRequestSummaryRow",
+        "pullRequestCommentReactions",
+        "pullRequestControls",
+        "pullRequestDescriptionCard",
+        "pullRequestDiffFileTree",
+        "pullRequestLayerManifestProgress",
+        "pullRequestLinkCard",
+        "pullRequestCommentActions",
+        "pullRequestReplyComposer",
+        "pullRequestListSection",
+        "pullRequestReviewFindingRow",
+        "pullRequestMergeability",
+        "pullRequestUnavailableFile",
         "sessionListV2",
         "sessionListV2FilterMenu",
         "sessionListV2Group",
@@ -334,13 +354,194 @@
         "sessionListV2ViewMenu",
         "sessionManager",
         "sessionsTable",
+        "updateBadge",
+        "missionPullRequestRow",
         "windowSidebar",
-        "sessionListV2WorkstreamRow"
+        "softwareFactoryChangeDetail",
+        "sessionListV2WorkstreamRow",
+        "newSessionTilePlaceholder",
+        "sessionTileDropPreview"
       ],
-      "source": ".vite/renderer/main_window/assets/index-CCcgJ39D.js",
-      "sourceReadMethod": "openAsar/readEntry from original installed app.asar; full source scanned",
-      "sourceSha256": "af28d147e919a917265ae1a71d1151d0f1c44fe982c0ddc7a67c06e587f8cad3",
+      "source": ".vite/renderer/main_window/assets/index-DJvfx-E_.js",
+      "sourceReadMethod": "openAsar/readEntry from hash-pinned original 0.201.0 app.asar; full source literal-reference scan",
+      "sourceSha256": "918c347c34494344310136d14bde4861568af53668b70ea4fe1068d451dab905",
       "references": [
+        {
+          "subtree": "missionAgentAttentionCard",
+          "referenceCount": 2,
+          "examples": [
+            "layout.missionAgentAttentionCard.waitingCount",
+            "layout.missionAgentAttentionCard.viewAgent"
+          ]
+        },
+        {
+          "subtree": "missionAgentsActivityLine",
+          "referenceCount": 4,
+          "examples": [
+            "layout.missionAgentsActivityLine.working",
+            "layout.missionAgentsActivityLine.indicator",
+            "layout.missionAgentsActivityLine.asOfLastCheck"
+          ]
+        },
+        {
+          "subtree": "missionAgentGroupHeader",
+          "referenceCount": 8,
+          "examples": [
+            "layout.missionAgentGroupHeader.lastActivityOptions.all",
+            "layout.missionAgentGroupHeader.lastActivityOptions.oneHour",
+            "layout.missionAgentGroupHeader.lastActivityOptions.fourHours"
+          ]
+        },
+        {
+          "subtree": "missionAgentRow",
+          "referenceCount": 12,
+          "examples": [
+            "layout.missionAgentRow.waitingForYourResponse",
+            "layout.missionAgentRow.unreadMessages",
+            "layout.missionAgentRow.workstreamNoDescription"
+          ]
+        },
+        {
+          "subtree": "missionWorkstreamFilterChip",
+          "referenceCount": 1,
+          "examples": [
+            "layout.missionWorkstreamFilterChip.clear"
+          ]
+        },
+        {
+          "subtree": "missionCenterTabBar",
+          "referenceCount": 1,
+          "examples": [
+            "layout.missionCenterTabBar.showPanel"
+          ]
+        },
+        {
+          "subtree": "pullRequestChangeSummary",
+          "referenceCount": 12,
+          "examples": [
+            "layout.pullRequestChangeSummary.category.core",
+            "layout.pullRequestChangeSummary.category.tests",
+            "layout.pullRequestChangeSummary.category.stories"
+          ]
+        },
+        {
+          "subtree": "pullRequestChecks",
+          "referenceCount": 74,
+          "examples": [
+            "layout.pullRequestChecks.rollup.failed",
+            "layout.pullRequestChecks.groupSummaries.failed",
+            "layout.pullRequestChecks.rollup.needAttention"
+          ]
+        },
+        {
+          "subtree": "pullRequestSummaryRow",
+          "referenceCount": 17,
+          "examples": [
+            "layout.pullRequestSummaryRow.states.open",
+            "layout.pullRequestSummaryRow.states.closed",
+            "layout.pullRequestSummaryRow.states.merged"
+          ]
+        },
+        {
+          "subtree": "pullRequestCommentReactions",
+          "referenceCount": 15,
+          "examples": [
+            "layout.pullRequestCommentReactions.reactionLabels.thumbsUp",
+            "layout.pullRequestCommentReactions.reactionLabels.thumbsDown",
+            "layout.pullRequestCommentReactions.reactionLabels.laugh"
+          ]
+        },
+        {
+          "subtree": "pullRequestControls",
+          "referenceCount": 39,
+          "examples": [
+            "layout.pullRequestControls.stateLabels.merged",
+            "layout.pullRequestControls.stateLabels.closed",
+            "layout.pullRequestControls.stateLabels.open"
+          ]
+        },
+        {
+          "subtree": "pullRequestDescriptionCard",
+          "referenceCount": 2,
+          "examples": [
+            "layout.pullRequestDescriptionCard.showLess",
+            "layout.pullRequestDescriptionCard.showMore"
+          ]
+        },
+        {
+          "subtree": "pullRequestDiffFileTree",
+          "referenceCount": 1,
+          "examples": [
+            "layout.pullRequestDiffFileTree.changedFiles"
+          ]
+        },
+        {
+          "subtree": "pullRequestLayerManifestProgress",
+          "referenceCount": 4,
+          "examples": [
+            "layout.pullRequestLayerManifestProgress.viewSession",
+            "layout.pullRequestLayerManifestProgress.retryGeneration",
+            "layout.pullRequestLayerManifestProgress.checking"
+          ]
+        },
+        {
+          "subtree": "pullRequestLinkCard",
+          "referenceCount": 1,
+          "examples": [
+            "layout.pullRequestLinkCard.opensInYourGitProvider"
+          ]
+        },
+        {
+          "subtree": "pullRequestCommentActions",
+          "referenceCount": 13,
+          "examples": [
+            "layout.pullRequestCommentActions.save",
+            "layout.pullRequestCommentActions.pendingComment",
+            "layout.pullRequestCommentActions.comment"
+          ]
+        },
+        {
+          "subtree": "pullRequestReplyComposer",
+          "referenceCount": 3,
+          "examples": [
+            "layout.pullRequestReplyComposer.writeReply",
+            "layout.pullRequestReplyComposer.cancel",
+            "layout.pullRequestReplyComposer.sendReply"
+          ]
+        },
+        {
+          "subtree": "pullRequestListSection",
+          "referenceCount": 2,
+          "examples": [
+            "layout.pullRequestListSection.loadingMore",
+            "layout.pullRequestListSection.loadMore"
+          ]
+        },
+        {
+          "subtree": "pullRequestReviewFindingRow",
+          "referenceCount": 1,
+          "examples": [
+            "layout.pullRequestReviewFindingRow.inMainConversation"
+          ]
+        },
+        {
+          "subtree": "pullRequestMergeability",
+          "referenceCount": 29,
+          "examples": [
+            "layout.pullRequestMergeability.reviews.approved",
+            "layout.pullRequestMergeability.reviews.changesRequested",
+            "layout.pullRequestMergeability.reviews.changesRequestedDetail"
+          ]
+        },
+        {
+          "subtree": "pullRequestUnavailableFile",
+          "referenceCount": 5,
+          "examples": [
+            "layout.pullRequestUnavailableFile.patchUnavailableReason",
+            "layout.pullRequestUnavailableFile.diffTruncatedReason",
+            "layout.pullRequestUnavailableFile.renamedFrom"
+          ]
+        },
         {
           "subtree": "sessionListV2",
           "referenceCount": 34,
@@ -377,7 +578,7 @@
         },
         {
           "subtree": "sessionListV2SessionRow",
-          "referenceCount": 43,
+          "referenceCount": 42,
           "examples": [
             "layout.sessionListV2SessionRow.repoCount",
             "layout.sessionListV2SessionRow.pullRequestStates.open",
@@ -421,11 +622,38 @@
           ]
         },
         {
+          "subtree": "updateBadge",
+          "referenceCount": 15,
+          "examples": [
+            "layout.updateBadge.current",
+            "layout.updateBadge.latest",
+            "layout.updateBadge.versionsBehind"
+          ]
+        },
+        {
+          "subtree": "missionPullRequestRow",
+          "referenceCount": 5,
+          "examples": [
+            "layout.missionPullRequestRow.draft",
+            "layout.missionPullRequestRow.mergeStatusFor",
+            "layout.missionPullRequestRow.loadingMergeStatus"
+          ]
+        },
+        {
           "subtree": "windowSidebar",
           "referenceCount": 3,
           "examples": [
             "layout.windowSidebar.collapseSidebar",
             "layout.windowSidebar.openSidebar"
+          ]
+        },
+        {
+          "subtree": "softwareFactoryChangeDetail",
+          "referenceCount": 3,
+          "examples": [
+            "layout.softwareFactoryChangeDetail.backToPreviousSurface",
+            "layout.softwareFactoryChangeDetail.backToChanges",
+            "layout.softwareFactoryChangeDetail.changeDetailSections"
           ]
         },
         {
@@ -435,128 +663,144 @@
             "layout.sessionListV2WorkstreamRow.symbolPicker.label",
             "layout.sessionListV2WorkstreamRow.symbolPicker.triggerLabel"
           ]
+        },
+        {
+          "subtree": "newSessionTilePlaceholder",
+          "referenceCount": 4,
+          "examples": [
+            "layout.newSessionTilePlaceholder.close",
+            "layout.newSessionTilePlaceholder.title",
+            "layout.newSessionTilePlaceholder.hint"
+          ]
+        },
+        {
+          "subtree": "sessionTileDropPreview",
+          "referenceCount": 1,
+          "examples": [
+            "layout.sessionTileDropPreview.label"
+          ]
         }
       ]
     },
     {
       "group": "actions",
       "scopeRoot": "components.actions",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "analytics",
       "scopeRoot": "components.analytics",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "announcements",
       "scopeRoot": "components.announcements",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "app",
       "scopeRoot": "components.app",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "auth",
       "scopeRoot": "components.auth",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "automations",
       "scopeRoot": "components.automations",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "billing",
       "scopeRoot": "components.billing",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "chat",
       "scopeRoot": "components.chat",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "common",
       "scopeRoot": "components.common",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "connectors",
       "scopeRoot": "components.connectors",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "coreUi",
       "scopeRoot": "components.coreUi",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "evaluations",
       "scopeRoot": "components.evaluations",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "featureFlags",
       "scopeRoot": "components.featureFlags",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "fleet",
       "scopeRoot": "components.fleet",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "inbox",
       "scopeRoot": "components.inbox",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "layout",
       "scopeRoot": "components.layout",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "lessons",
       "scopeRoot": "components.lessons",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "missions",
       "scopeRoot": "components.missions",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "onboarding",
       "scopeRoot": "components.onboarding",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "settings",
       "scopeRoot": "components.settings",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "softwareFactory",
       "scopeRoot": "components.softwareFactory",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "softwareFactoryLayout",
       "scopeRoot": "components.softwareFactoryLayout",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "terminal",
       "scopeRoot": "components.terminal",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     },
     {
       "group": "user",
       "scopeRoot": "components.user",
-      "coverageBasis": "v8: include every leaf under this English source root as functional UI, including menus, options, dialogs, labels and component configuration. Existing extracted source and reference evidence above is preserved."
+      "coverageBasis": "Include every leaf under this pinned English source root as functional UI, including menus, options, dialogs, labels and component configuration. Explicit course prose remains original English under coverage-policy.json."
     }
   ],
   "keys": [
@@ -2799,9 +3043,6 @@
     "chat.computerDesktop.overlay.unavailable",
     "chat.computerDesktop.reconnect",
     "chat.computerDesktop.retry",
-    "chat.computerDesktop.takeControlOfTheComputer",
-    "chat.computerDesktop.takeControl",
-    "chat.computerDesktop.clickAnywhereToDrive",
     "chat.missionsWelcomeDialog.eyebrow",
     "chat.missionsWelcomeDialog.progressLabel",
     "chat.missionsWelcomeDialog.skip",
@@ -4389,7 +4630,6 @@
     "onboarding.welcome.chooseDeploymentSubtitle",
     "onboarding.welcome.deviceVerificationTitle",
     "onboarding.welcome.deviceVerificationSubtitle",
-    "onboarding.welcome.eyebrow",
     "onboarding.workRoles.engineering",
     "onboarding.workRoles.product",
     "onboarding.workRoles.design",
@@ -5123,52 +5363,6 @@
     "settings.richUsageMeter.getMoreCredits",
     "settings.runAsSelector.selectableAccounts",
     "settings.runAsSelector.unselectableAccounts",
-    "settings.slackChannelsTable.createComputer",
-    "settings.slackChannelsTable.noResultsFound",
-    "settings.slackChannelsTable.loading",
-    "settings.slackChannelsTable.runAs",
-    "settings.slackChannelsTable.incidentResponse",
-    "settings.slackChannelsTable.sessionOwner",
-    "settings.slackChannelsTable.searchUsers",
-    "settings.slackChannelsTable.machineType",
-    "settings.slackChannelsTable.computer",
-    "settings.slackChannelsTable.searchComputers",
-    "settings.slackChannelsTable.workspace",
-    "settings.slackChannelsTable.searchWorkspaces",
-    "settings.slackChannelsTable.bringYourOwnMachineComputerSelected",
-    "settings.slackChannelsTable.sessionVisibility",
-    "settings.slackChannelsTable.model",
-    "settings.slackChannelsTable.customPrompt",
-    "settings.slackChannelsTable.enterACustomPromptToInject",
-    "settings.slackChannelsTable.loadingChannels",
-    "settings.slackChannelsTable.channelSettings",
-    "settings.slackChannelsTable.searchChannels",
-    "settings.slackChannelsTable.includeArchivedChannels",
-    "settings.slackChannelsTable.channelName",
-    "settings.slackChannelsTable.listenToChannel",
-    "settings.slackChannelsTable.createComputerToEnableIncidentResponse",
-    "settings.slackChannelsTable.createWorkspaceToEnableIncidentResponse",
-    "settings.slackChannelsTable.selectComputerToEnableIncidentResponse",
-    "settings.slackChannelsTable.selectWorkspaceToEnableIncidentResponse",
-    "settings.slackChannelsTable.machineTypeCloud",
-    "settings.slackChannelsTable.factoryUser",
-    "settings.slackChannelsTable.noSpecificOwner",
-    "settings.slackChannelsTable.serviceAccountHasNoComputers",
-    "settings.slackChannelsTable.noComputers",
-    "settings.slackChannelsTable.noComputer",
-    "settings.slackChannelsTable.managed",
-    "settings.slackChannelsTable.noWorkspace",
-    "settings.slackChannelsTable.privacyPrivate",
-    "settings.slackChannelsTable.privacyOrganization",
-    "settings.slackChannelsTable.modelDefault",
-    "settings.slackChannelsTable.settingsDescriptionWithIncidentResponse",
-    "settings.slackChannelsTable.settingsDescription",
-    "settings.slackChannelsTable.onlyInvitedChannelsAppear",
-    "settings.slackChannelsTable.noChannelsMatchingSearch",
-    "settings.slackChannelsTable.noChannelsAvailable",
-    "settings.slackChannelsTable.listenToChannelName",
-    "settings.slackChannelsTable.errorLoadingChannels",
-    "settings.slackChannelsTable.remoteControl",
     "settings.usernameSetupForm.username",
     "settings.usernameSetupForm.errorFetchingUsernamesYouCanManually",
     "settings.usernameSetupForm.loadingUsernames",
@@ -6277,6 +6471,69 @@
     "user.userProfile.changeTheme",
     "user.userProfile.logOut",
     "user.userProfile.openUserMenu",
-    "user.userProfile.openSettings"
+    "user.userProfile.openSettings",
+    "chat.computerDesktop.upload.dropFiles",
+    "chat.computerDesktop.upload.sizeLimit",
+    "chat.computerDesktop.upload.listLabel",
+    "chat.computerDesktop.upload.uploading",
+    "chat.computerDesktop.upload.saving",
+    "chat.computerDesktop.upload.saved",
+    "chat.computerDesktop.upload.savedTo",
+    "chat.computerDesktop.upload.showInFiles",
+    "chat.computerDesktop.upload.cancel",
+    "chat.computerDesktop.upload.dismiss",
+    "chat.computerDesktop.upload.failure.tooLarge",
+    "chat.computerDesktop.upload.failure.folder",
+    "chat.computerDesktop.upload.failure.notConnected",
+    "chat.computerDesktop.upload.failure.failed",
+    "common.sharedSessionJoinPanel.statusLabel",
+    "common.sharedSessionJoinPanel.untitledSession",
+    "common.sharedSessionJoinPanel.description",
+    "common.sharedSessionJoinPanel.join",
+    "common.sharedSessionJoinPanel.goHome",
+    "layout.newSessionTilePlaceholder.title",
+    "layout.newSessionTilePlaceholder.hint",
+    "layout.newSessionTilePlaceholder.continue",
+    "layout.newSessionTilePlaceholder.close",
+    "layout.sessionTileDropPreview.label",
+    "missions.missionFilesExplorer.add.label",
+    "missions.missionFilesExplorer.add.uploadFiles",
+    "missions.missionFilesExplorer.add.uploadFolder",
+    "missions.missionFilesExplorer.add.dropHere",
+    "missions.missionFilesExplorer.add.preparing_one",
+    "missions.missionFilesExplorer.add.preparing_other",
+    "missions.missionFilesExplorer.add.adding",
+    "missions.missionFilesExplorer.add.cancel",
+    "missions.missionFilesExplorer.add.added_one",
+    "missions.missionFilesExplorer.add.added_other",
+    "missions.missionFilesExplorer.add.skipped_one",
+    "missions.missionFilesExplorer.add.skipped_other",
+    "missions.missionFilesExplorer.add.summary",
+    "missions.missionFilesExplorer.add.nothingAdded",
+    "missions.missionFilesExplorer.add.showDetails",
+    "missions.missionFilesExplorer.add.hideDetails",
+    "missions.missionFilesExplorer.add.dismiss",
+    "missions.missionFilesExplorer.add.andMore_one",
+    "missions.missionFilesExplorer.add.andMore_other",
+    "missions.missionFilesExplorer.add.skippedFile",
+    "missions.missionFilesExplorer.add.skipReason.not-text",
+    "missions.missionFilesExplorer.add.skipReason.too-large",
+    "missions.missionFilesExplorer.add.skipReason.invalid-name",
+    "missions.missionFilesExplorer.add.skipReason.already-exists",
+    "missions.missionFilesExplorer.add.skipReason.changed",
+    "missions.missionFilesExplorer.add.skipReason.failed",
+    "missions.missionFilesExplorer.add.skipReason.version-control",
+    "missions.missionFilesExplorer.add.skipReason.dependencies",
+    "missions.missionFilesExplorer.add.skipReason.secret",
+    "missions.missionFilesExplorer.add.skipReason.deleted-at-path",
+    "missions.missionFilesExplorer.add.failure.too-many-files",
+    "missions.missionFilesExplorer.add.failure.batch-too-large",
+    "missions.missionFilesExplorer.add.failure.no-permission",
+    "missions.missionFilesExplorer.add.failure.unknown",
+    "missions.missionFilesExplorer.add.replaceTitle",
+    "missions.missionFilesExplorer.add.replaceDescription_one",
+    "missions.missionFilesExplorer.add.replaceDescription_other",
+    "missions.missionFilesExplorer.add.replace",
+    "missions.missionFilesExplorer.add.skipThese"
   ]
 }
