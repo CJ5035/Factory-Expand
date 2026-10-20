@@ -16,6 +16,15 @@ Factory Desktop Windows 版简体中文拓展，通过固定版本的 ASAR 补�
 
 本版本以文件面板 React #321 修复提交 `5355888` 为基线，保留 Preact 原生语言订阅与卸载清理。已在真实会话验证目录展开、搜索、只读预览、Ctrl+P 重开，以及保持同一文件树节点时的中英文即时刷新。
 
+## 获取项目（SSH）
+
+```powershell
+git clone --branch codex/factory-desktop-zh git@github.com:CJ5035/Factory-Expand.git
+Set-Location Factory-Expand
+```
+
+已在本机安装过汉化时，继续保留并使用原项目目录。重新克隆不会带回本机的 `pristine/`、`state/` 和 `backups/`，不能替代已有安装记录；更新前请保留这些目录。
+
 ## 安装前
 
 - 使用 Windows 和 Node.js 18 或更高版本；当前项目没有额外 npm 依赖。
