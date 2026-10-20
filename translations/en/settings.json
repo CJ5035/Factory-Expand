@@ -1109,8 +1109,7 @@
       },
       "remoteDelegations": {
         "label": "Delegations",
-        "guardDescription": "Delegations settings are only available to managers and owners.",
-        "notEnabledGuardDescription": "Delegations isn't enabled for this organization."
+        "guardDescription": "Delegations settings are only available to managers and owners."
       },
       "openCompute": {
         "label": "OpenCompute",

@@ -2067,13 +2067,13 @@
       "takeScreenshot": "截图",
       "forceReload": "强制重新加载",
       "openDevtools": "打开开发者工具",
-      "zoom": "缩放",
       "zoomOut": "缩小",
       "zoomIn": "放大",
       "clearCookies": "清除 Cookie",
       "clearCache": "清除缓存",
       "hideDeviceToolbar": "隐藏设备工具栏",
-      "showDeviceToolbar": "显示设备工具栏"
+      "showDeviceToolbar": "显示设备工具栏",
+      "importFromChrome": "从 Chrome 导入"
     },
     "browserPanel": {
       "back": "返回",
@@ -2103,7 +2103,6 @@
       "noLocalServersOrHtmlFiles": "目前没有可用的本地服务器或 HTML 文件。",
       "localhostSuggestionOptions": "Localhost 建议选项",
       "clearHistory": "清除历史记录",
-      "show": "显示",
       "all": "全部",
       "online": "在线",
       "local": "本地"
@@ -3082,7 +3081,9 @@
     },
     "toolResult": {
       "pending": "待处理…",
-      "aborted": "工具执行已中止，请重试。"
+      "aborted": "工具执行已中止，请重试。",
+      "image": "[图片：{{mediaType}}]",
+      "imageWithoutType": "[图片]"
     },
     "askUserTool": {
       "askingUser_one": "正在向用户提问",
@@ -3546,6 +3547,33 @@
       "notSent": "评论未发送，你的草稿仍保留在此处。",
       "sendUnavailable": "Droid 目前无法接收消息，你的草稿已保存。",
       "sendFailed": "无法发送评论，请重试。"
+    },
+    "chromeImportBanner": {
+      "description": "导入 Chrome 的 Cookie，以在内置浏览器中保持网站登录状态。",
+      "dismiss": "关闭提示",
+      "import": "导入",
+      "title": "从 Chrome 导入数据"
+    },
+    "visualizationSegment": {
+      "copyImage": "复制图片",
+      "downloadHtml": "下载 HTML",
+      "drawingVisualization": "正在绘制可视化内容",
+      "elapsedShort": "{{seconds}}秒",
+      "imageCopied": "图片已复制",
+      "notCompleted": "可视化内容未完成。",
+      "saveImage": "另存为图片",
+      "scriptError": "此可视化内容发生错误：{{message}}",
+      "secondsElapsed_one": "已用时 {{count}} 秒",
+      "secondsElapsed_other": "已用时 {{count}} 秒",
+      "visualization": "可视化内容",
+      "visualizationActions": "可视化操作"
+    },
+    "prAutofixCard": {
+      "autoFix": "自动修复",
+      "toggleFor": "自动修复 {{title}}",
+      "paused": "已转发 {{limit}} 个事件，自动修复已暂停。关闭后重新开启即可恢复。",
+      "tooltipTitle": "自动跟进 PR",
+      "tooltipDescription": "通过向此代理发送后续消息，自动处理审查评论、修复失败的 CI 检查，并对 PR 执行变基。"
     }
   },
   "connectors": {
@@ -3738,6 +3766,14 @@
         "connecting": "正在此计算机上启动 Factory",
         "organization": "正在加载组织",
         "workspace": "正在打开工作区"
+      },
+      "tips": {
+        "specMode": "切换 Spec 模式：",
+        "commandPalette": "打开命令面板：",
+        "stop": "停止 Droid：",
+        "reasoning": "切换推理级别：",
+        "model": "打开模型选择器：",
+        "autonomy": "切换自主级别："
       }
     }
   },
@@ -4078,7 +4114,7 @@
       "openWorkstreamLink": "打开工作流",
       "filterByWorkstream": "按工作流 {{name}} 筛选",
       "workstreamNoDescription": "暂无描述",
-      "workstreamManager": "管理者"
+      "workstreamListener": "监听代理"
     },
     "missionWorkstreamFilterChip": {
       "clear": "清除工作流筛选条件 {{name}}"
@@ -4979,8 +5015,27 @@
       "remoteDelegation": "委派"
     },
     "inboxQueueRow": {
-      "ariaLabel": "{{title}}，{{origin}}，{{state}}，{{timeAgo}}",
-      "ariaLabelUnread": "{{title}}，{{origin}}，{{state}}，未读，{{timeAgo}}"
+      "ariaLabelSeparator": "，",
+      "unread": "未读",
+      "now": "刚刚",
+      "summaryWithMore_one": "{{first}}（另有 {{count}} 项）",
+      "summaryWithMore_other": "{{first}}（另有 {{count}} 项）",
+      "verb": {
+        "askedYou": "<lead/><verb> 向你提问</verb>",
+        "needsPermission": "<lead/><verb> 需要权限</verb>",
+        "wantsSpecApproved": "<lead/><verb> 请求批准 Spec</verb>",
+        "wantsChangeApproved": "<lead/><verb> 请求批准变更</verb>",
+        "openedPullRequest": "<lead/><verb> 创建了拉取请求</verb>",
+        "mergedPullRequest": "<lead/><verb> 合并了拉取请求</verb>",
+        "closedPullRequest": "<lead/><verb> 关闭了拉取请求</verb>",
+        "hitAnError": "<lead/><verb> 遇到错误</verb>",
+        "finished": "<lead/><verb> 已完成</verb>"
+      },
+      "indicator": {
+        "needsYou": "需要你处理",
+        "noOutcomeYet": "暂无结果",
+        "decided": "已决定"
+      }
     }
   },
   "onboarding": {
@@ -5205,7 +5260,9 @@
         "text": "文本",
         "data": "数据",
         "code": "代码",
-        "other": "其他"
+        "other": "其他",
+        "image": "图片",
+        "pdf": "PDF"
       },
       "add": {
         "label": "添加到共享文件夹",
@@ -5229,8 +5286,8 @@
         "andMore_other": "以及另外 {{count}} 个",
         "skippedFile": "{{path}}：{{reason}}",
         "skipReason": {
-          "not-text": "不是文本文件（暂不支持图片和 PDF）",
-          "too-large": "超过 {{size}} KB",
+          "not-text": "不是文本文件、图片或 PDF",
+          "too-large": "超过 {{size}}",
           "invalid-name": "名称不允许使用",
           "already-exists": "已存在",
           "changed": "自列表生成后已发生变化；请重新添加以替换新版本",
@@ -5238,20 +5295,27 @@
           "version-control": "版本控制文件夹，未添加",
           "dependencies": "依赖项文件夹，未添加",
           "secret": "疑似为机密文件，未添加",
-          "deleted-at-path": "此路径下存在已删除的文件"
+          "deleted-at-path": "此路径下存在已删除的文件",
+          "extension-mismatch": "扩展名与文件类型不匹配",
+          "binary-unsupported": "此共享文件夹暂不支持图片或 PDF",
+          "metadata-not-removed": "无法移除照片元数据，未添加"
         },
         "failure": {
           "too-many-files": "一次最多添加 {{count}} 个文件。",
           "batch-too-large": "一次最多添加 {{size}} MB 的文件。",
           "no-permission": "你无权向此任务的共享文件夹添加文件。",
-          "unknown": "无法添加文件。请重试。"
+          "unknown": "无法添加文件。请重试。",
+          "out-of-space": "共享文件夹已没有存放图片和 PDF 的空间。"
         },
         "replaceTitle": "替换现有文件？",
         "replaceDescription_one": "共享文件夹中已存在 {{count}} 个文件。",
         "replaceDescription_other": "共享文件夹中已存在 {{count}} 个文件。",
         "replace": "替换",
-        "skipThese": "跳过这些文件"
-      }
+        "skipThese": "跳过这些文件",
+        "kilobytes": "{{size}} KB",
+        "megabytes": "{{size}} MB"
+      },
+      "couldNotShowFile": "无法显示此文件"
     },
     "missionSymbols": {
       "target": "目标",
@@ -5378,15 +5442,15 @@
       "statusWithLastActive": "{{status}} · {{time}}",
       "columns": {
         "sources": "数据来源",
-        "manager": "管理者",
         "agents": "代理",
-        "pullRequests": "拉取请求"
+        "pullRequests": "拉取请求",
+        "listener": "监听代理"
       },
       "empty": {
         "sources": "未配置数据来源",
-        "manager": "尚未列出管理者",
         "agents": "暂无代理",
-        "pullRequests": "暂无拉取请求"
+        "pullRequests": "暂无拉取请求",
+        "listener": "尚未列出监听代理"
       },
       "sessionStatus": {
         "waitingOnYou": "等待你处理",
@@ -5747,7 +5811,9 @@
         "sessions_one": "{{formattedCount}} 个 Session",
         "sessions_other": "{{formattedCount}} 个 Session",
         "users_one": "{{formattedCount}} 位用户",
-        "users_other": "{{formattedCount}} 位用户"
+        "users_other": "{{formattedCount}} 位用户",
+        "pullRequests_one": "{{formattedCount}} 个拉取请求",
+        "pullRequests_other": "{{formattedCount}} 个拉取请求"
       },
       "tableAriaLabel": {
         "project": "按项目划分的归因清单",
@@ -5790,7 +5856,9 @@
       },
       "truncatedNotice": "显示 {{total}} 个关联 Session 中最新的 {{scanned}} 个",
       "failedToLoad": "加载已归因工作失败：{{message}}",
-      "loadingInventory": "正在加载清单…"
+      "loadingInventory": "正在加载清单…",
+      "linkedSpend": "FSC",
+      "linkedSpendNote": "FSC 是关联 Session 的支出总额，并非分摊到此条目的金额。一个 Session 关联多个条目时，其支出会分别计入每个条目的总额；各行不可相加。"
     },
     "mergedPrsOverTimeSection": {
       "noThroughputDataForThisView": "此视图及所选时段暂无吞吐量数据。",
@@ -5912,7 +5980,8 @@
       "byProject": "按项目",
       "byIssue": "按问题",
       "bySession": "按 Session",
-      "byUser": "按用户"
+      "byUser": "按用户",
+      "byPr": "按 PR"
     },
     "tagAssignmentPopover": {
       "assignTags": "分配标签",
@@ -6003,7 +6072,22 @@
       "share": "占比",
       "cumulative": "累计"
     },
-    "fscTooltip": "FSC（Factory 标准积分）是 Factory 对模型用量计费的标准化单位。"
+    "fscTooltip": "FSC（Factory 标准积分）是 Factory 对模型用量计费的标准化单位。",
+    "throughputChart": {
+      "leftAxis": "{{metric}}（左轴）",
+      "rightAxis": "{{metric}}（右轴）",
+      "chartLabel": "{{title}}：{{series}}",
+      "projectsNote": "已完成项目包含 Linear 项目和 Jira Epic。",
+      "usersNote": "活跃用户按每天或每周去重统计，不是每日用户数的累加。",
+      "metrics": {
+        "fsc": "FSC",
+        "prs": "已合并 PR",
+        "tickets": "已完成工单",
+        "projects": "已完成项目",
+        "sessions": "Session",
+        "users": "活跃用户"
+      }
+    }
   },
   "evaluations": {
     "evaluationDatasetDraft": {

@@ -180,6 +180,15 @@
     "filtersWithCount": "Filters {{activeCount}}"
   },
   "effectivenessPage": {
+    "providerFilterUnsupported": "This backend does not support provider-filtered attribution. Select All providers or update the backend.",
+    "provider": "Issue provider",
+    "allProviders": "All providers",
+    "linear": "Linear",
+    "jira": "Jira",
+    "backfillRunning": "Filling in historical data",
+    "backfillPending": "Historical backfill queued",
+    "backfillDescription": "Earlier sessions are being processed. Attribution and metrics may be incomplete until the backfill and data refresh finish.",
+    "providerScopeNote": "The provider filter narrows issues, projects and cycle time. PR, spend and intent totals are not provider-filtered; cross-provider cost ratios are hidden.",
     "agentEffectiveness": "Agent Effectiveness",
     "tabs": {
       "throughput": "Throughput",

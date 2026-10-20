@@ -1109,8 +1109,7 @@
       },
       "remoteDelegations": {
         "label": "委派",
-        "guardDescription": "仅管理员和所有者可使用委派设置。",
-        "notEnabledGuardDescription": "此组织未启用委派。"
+        "guardDescription": "仅管理员和所有者可使用委派设置。"
       },
       "openCompute": {
         "label": "OpenCompute",

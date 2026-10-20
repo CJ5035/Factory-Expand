@@ -85,7 +85,6 @@
   },
   "authLoading": {
     "cancelSignIn": "取消登录",
-    "browserHint": "在浏览器中完成登录，然后返回这里。",
     "browserSetupHint": "在浏览器中完成设置，然后返回这里。",
     "browserSlowHint": "没有看到浏览器窗口？请取消后重试。",
     "signingOut": "正在退出登录",

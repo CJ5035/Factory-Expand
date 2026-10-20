@@ -129,6 +129,8 @@
       "tagName": "Tag name"
     },
     "attributionInventoryTable": {
+      "linkedSpend": "FSC",
+      "linkedSpendNote": "FSC is the total spend of linked sessions, not an allocation to this item. A session linked to several items appears in each total; rows are not additive.",
       "automation": "Automation",
       "intent": "Intent",
       "issueId": "Issue ID",
@@ -158,6 +160,8 @@
       "inventory": "Inventory",
       "noAttributedWorkMatchesYourSearch": "No attributed work matches your search or filters.",
       "counts": {
+        "pullRequests_one": "{{formattedCount}} pull request",
+        "pullRequests_other": "{{formattedCount}} pull requests",
         "projects_one": "{{formattedCount}} project",
         "projects_other": "{{formattedCount}} projects",
         "issues_one": "{{formattedCount}} issue",
@@ -209,6 +213,21 @@
       "truncatedNotice": "Newest {{scanned}} of {{total}} linked sessions shown",
       "failedToLoad": "Failed to load attributed work: {{message}}",
       "loadingInventory": "Loading inventory..."
+    },
+    "throughputChart": {
+      "leftAxis": "{{metric}} (left axis)",
+      "rightAxis": "{{metric}} (right axis)",
+      "chartLabel": "{{title}}: {{series}}",
+      "projectsNote": "Completed projects combines Linear projects and Jira epics.",
+      "usersNote": "Active users are distinct within each day or week, not summed daily users.",
+      "metrics": {
+        "fsc": "FSC",
+        "prs": "Merged PRs",
+        "tickets": "Completed tickets",
+        "projects": "Completed projects",
+        "sessions": "Sessions",
+        "users": "Active users"
+      }
     },
     "mergedPrsOverTimeSection": {
       "noThroughputDataForThisView": "No throughput data for this view and selected period.",
@@ -327,6 +346,7 @@
       "failedToLoad": "Failed to load effectiveness metrics: {{message}}"
     },
     "outputChartViews": {
+      "byPr": "By PR",
       "byProject": "By Project",
       "byIssue": "By Issue",
       "bySession": "By Session",
@@ -453,6 +473,14 @@
         "connecting": "Starting Factory on this computer",
         "organization": "Loading your organization",
         "workspace": "Opening your workspace"
+      },
+      "tips": {
+        "specMode": "Toggle spec mode with",
+        "commandPalette": "Open the command palette with",
+        "stop": "Stop Droid with",
+        "reasoning": "Cycle the reasoning level with",
+        "model": "Open the model selector with",
+        "autonomy": "Cycle the autonomy level with"
       }
     }
   },
@@ -1512,13 +1540,19 @@
       "takeScreenshot": "Take screenshot",
       "forceReload": "Force reload",
       "openDevtools": "Open DevTools",
-      "zoom": "Zoom",
       "zoomOut": "Zoom out",
       "zoomIn": "Zoom in",
       "clearCookies": "Clear cookies",
+      "importFromChrome": "Import from Chrome",
       "clearCache": "Clear cache",
       "hideDeviceToolbar": "Hide Device Toolbar",
       "showDeviceToolbar": "Show Device Toolbar"
+    },
+    "chromeImportBanner": {
+      "description": "Bring over your Chrome cookies to stay signed in to sites in the built-in browser.",
+      "dismiss": "Dismiss",
+      "import": "Import",
+      "title": "Import data from Chrome"
     },
     "browserPanel": {
       "back": "Back",
@@ -1548,7 +1582,6 @@
       "noLocalServersOrHtmlFiles": "No local servers or HTML files are available right now.",
       "localhostSuggestionOptions": "Localhost suggestion options",
       "clearHistory": "Clear history",
-      "show": "Show",
       "all": "All",
       "online": "Online",
       "local": "Local"
@@ -2527,7 +2560,9 @@
     },
     "toolResult": {
       "pending": "Pending...",
-      "aborted": "Tool execution aborted. Please try again."
+      "aborted": "Tool execution aborted. Please try again.",
+      "image": "[Image: {{mediaType}}]",
+      "imageWithoutType": "[Image]"
     },
     "askUserTool": {
       "askingUser_one": "Asking user a question",
@@ -2991,6 +3026,27 @@
       "notSent": "Comments were not sent. Your drafts are still here.",
       "sendUnavailable": "Droid can't take messages right now. Your drafts are saved.",
       "sendFailed": "Could not send comments. Try again."
+    },
+    "visualizationSegment": {
+      "copyImage": "Copy image",
+      "downloadHtml": "Download HTML",
+      "drawingVisualization": "Drawing visualization",
+      "elapsedShort": "{{seconds}}s",
+      "imageCopied": "Image copied",
+      "notCompleted": "The visualization was not completed.",
+      "saveImage": "Save as image",
+      "scriptError": "This visualization hit an error: {{message}}",
+      "secondsElapsed_one": "{{count}} second elapsed",
+      "secondsElapsed_other": "{{count}} seconds elapsed",
+      "visualization": "Visualization",
+      "visualizationActions": "Visualization actions"
+    },
+    "prAutofixCard": {
+      "autoFix": "Auto-fix",
+      "toggleFor": "Auto-fix {{title}}",
+      "paused": "Paused after {{limit}} forwarded events. Turn auto-fix off and on to resume.",
+      "tooltipTitle": "Automatic PR follow-ups",
+      "tooltipDescription": "Automatically addresses review comments, fixes failing CI checks, and rebases the PR by sending follow-up messages to this agent."
     }
   },
   "common": {
@@ -3753,8 +3809,27 @@
       "remoteDelegation": "Delegation"
     },
     "inboxQueueRow": {
-      "ariaLabel": "{{title}}, {{origin}}, {{state}}, {{timeAgo}}",
-      "ariaLabelUnread": "{{title}}, {{origin}}, {{state}}, unread, {{timeAgo}}"
+      "ariaLabelSeparator": ", ",
+      "unread": "unread",
+      "now": "now",
+      "summaryWithMore_one": "{{first}} (+{{count}} more)",
+      "summaryWithMore_other": "{{first}} (+{{count}} more)",
+      "verb": {
+        "askedYou": "<lead/><verb> asked you</verb>",
+        "needsPermission": "<lead/><verb> needs permission</verb>",
+        "wantsSpecApproved": "<lead/><verb> wants a spec approved</verb>",
+        "wantsChangeApproved": "<lead/><verb> wants a change approved</verb>",
+        "openedPullRequest": "<lead/><verb> opened a pull request</verb>",
+        "mergedPullRequest": "<lead/><verb> merged a pull request</verb>",
+        "closedPullRequest": "<lead/><verb> closed a pull request</verb>",
+        "hitAnError": "<lead/><verb> hit an error</verb>",
+        "finished": "<lead/><verb> finished</verb>"
+      },
+      "indicator": {
+        "needsYou": "Needs you",
+        "noOutcomeYet": "No outcome yet",
+        "decided": "Decided"
+      }
     }
   },
   "layout": {
@@ -3790,7 +3865,7 @@
       "openWorkstreamLink": "Open workstream",
       "filterByWorkstream": "Filter by workstream {{name}}",
       "workstreamNoDescription": "No description yet",
-      "workstreamManager": "Manager"
+      "workstreamListener": "Listener"
     },
     "missionWorkstreamFilterChip": {
       "clear": "Clear workstream filter {{name}}"
@@ -4632,6 +4707,7 @@
       "hideFileTree": "Hide file tree",
       "loadingFile": "Loading file…",
       "couldNotLoadFile": "Could not load this file",
+      "couldNotShowFile": "Could not show this file",
       "emptyFile": "This file is empty",
       "fileDeletedTitle": "This file was deleted",
       "fileDeletedDescription": "You're viewing its last version.",
@@ -4654,6 +4730,8 @@
         "text": "Text",
         "data": "Data",
         "code": "Code",
+        "image": "Image",
+        "pdf": "PDF",
         "other": "Other"
       },
       "add": {
@@ -4677,9 +4755,11 @@
         "andMore_one": "and {{count}} more",
         "andMore_other": "and {{count}} more",
         "skippedFile": "{{path}}: {{reason}}",
+        "kilobytes": "{{size}} KB",
+        "megabytes": "{{size}} MB",
         "skipReason": {
-          "not-text": "not a text file (images and PDFs aren't supported yet)",
-          "too-large": "larger than {{size}} KB",
+          "not-text": "not a text file, image or PDF",
+          "too-large": "larger than {{size}}",
           "invalid-name": "name not allowed",
           "already-exists": "already exists",
           "changed": "changed since the listing; add it again to replace the new version",
@@ -4687,12 +4767,16 @@
           "version-control": "version control folder, not added",
           "dependencies": "dependencies folder, not added",
           "secret": "looks like a secret, not added",
-          "deleted-at-path": "a deleted file is at this path"
+          "deleted-at-path": "a deleted file is at this path",
+          "extension-mismatch": "the extension doesn't match the file's type",
+          "binary-unsupported": "this shared folder doesn't take images or PDFs yet",
+          "metadata-not-removed": "couldn't remove its photo data, not added"
         },
         "failure": {
           "too-many-files": "Add up to {{count}} files at a time.",
           "batch-too-large": "Add up to {{size}} MB of files at a time.",
           "no-permission": "You can't add files to this mission's shared folder.",
+          "out-of-space": "The shared folder has no room left for images and PDFs.",
           "unknown": "The files could not be added. Try again."
         },
         "replaceTitle": "Replace existing files?",
@@ -4827,13 +4911,13 @@
       "statusWithLastActive": "{{status}} · {{time}}",
       "columns": {
         "sources": "Data sources",
-        "manager": "Manager",
+        "listener": "Listener",
         "agents": "Agents",
         "pullRequests": "Pull requests"
       },
       "empty": {
         "sources": "No data sources configured",
-        "manager": "Manager not listed yet",
+        "listener": "Listener not listed yet",
         "agents": "No agents yet",
         "pullRequests": "No pull requests yet"
       },

@@ -199,7 +199,16 @@
       "sessionsNote": "此范围内 {{attributed}} / {{total}} 个 Session 关联了跟踪的工作。",
       "creditsStatus": "{{share}}% 的积分",
       "creditsNote": "此范围内，关联跟踪工作的 Session 占积分的 {{share}}%。"
-    }
+    },
+    "providerFilterUnsupported": "此后端不支持按提供商筛选归因数据。请选择“所有提供商”或更新后端。",
+    "provider": "议题提供商",
+    "allProviders": "所有提供商",
+    "linear": "Linear",
+    "jira": "Jira",
+    "backfillRunning": "正在回填历史数据",
+    "backfillPending": "历史数据回填已排队",
+    "backfillDescription": "正在处理更早的 Session。回填和数据刷新完成前，归因与指标数据可能不完整。",
+    "providerScopeNote": "提供商筛选会缩小议题、项目与周期时长的统计范围。PR、支出及意图总数不按提供商筛选；跨提供商成本比率将隐藏。"
   },
   "myAnalyticsDashboard": {
     "noActivityYet": "暂无活动",

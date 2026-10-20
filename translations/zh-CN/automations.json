@@ -8,98 +8,6 @@
     "localMachine": "本地计算机",
     "notSet": "未设置"
   },
-  "automationCard": {
-    "paused": "（已暂停）",
-    "computer": "计算机",
-    "shared": "已共享",
-    "namePreview": "{{name}} 预览",
-    "never": "从未",
-    "justNow": "刚刚",
-    "minutesAgo": "{{minutes}} 分钟前",
-    "hoursAgo": "{{hours}} 小时前",
-    "daysAgo": "{{days}} 天前"
-  },
-  "automationDashboard": {
-    "openSidebar": "打开侧边栏",
-    "automationActions": "自动化操作",
-    "rename": "重命名",
-    "share": "共享",
-    "fork": "派生",
-    "delete": "删除",
-    "runNow": "立即运行",
-    "reviewAndImproveAutomation": "审查并改进自动化",
-    "resumeSchedule": "恢复计划",
-    "pauseSchedule": "暂停计划",
-    "fullscreen": "全屏",
-    "toggleDetails": "切换详情显示",
-    "renameAutomation": "重命名自动化",
-    "automationName": "自动化名称",
-    "cancel": "取消",
-    "deleteAutomation": "删除自动化",
-    "setupInProgress": "自动化仍在设置中。",
-    "hideDetails": "隐藏详情",
-    "showDetails": "显示详情",
-    "renaming": "正在重命名…",
-    "deleting": "正在删除…",
-    "deleteConfirmation": "确定要删除“{{name}}”吗？这将永久删除该自动化及其所有文件。",
-    "notOwnerTooltip": "你不是此自动化的所有者。派生后即可在本机运行。",
-    "running": "正在运行…",
-    "analyzing": "正在分析…",
-    "resuming": "正在恢复…",
-    "pausing": "正在暂停…"
-  },
-  "automationDetailPanel": {
-    "selectAnAutomationToViewDetails": "选择自动化以查看详情",
-    "retry": "重试",
-    "goToSession": "前往 Session",
-    "runEntryDataMayBeIncomplete": "运行记录数据可能不完整",
-    "runHistory": "运行历史",
-    "loadingHistory": "正在加载历史记录…",
-    "noRunsYet": "尚无运行记录",
-    "automationModel": "自动化模型",
-    "default": "默认",
-    "model": "模型",
-    "thisAutomationWasRemovedOrIs": "此自动化已被删除或已无法访问。",
-    "clearSelection": "清除选择",
-    "thisAutomationIsInADegraded": "此自动化处于降级状态。",
-    "schedule": "运行计划",
-    "utc": "（UTC）",
-    "visibility": "可见范围",
-    "organization": "组织",
-    "private": "私有",
-    "owner": "所有者",
-    "forkedFrom": "派生自",
-    "unableToLoadHistory": "无法加载历史记录：{{message}}",
-    "changeVisibility": "更改可见范围",
-    "notConfigured": "未配置"
-  },
-  "automationVisualViewer": {
-    "selectAnAutomationToViewIts": "选择自动化以查看其可视化输出",
-    "noVisualOutputAvailable": "暂无可视化输出",
-    "runTheAutomationToGenerateA": "运行此自动化以生成可视化内容",
-    "automationVisualOutput": "自动化可视化输出",
-    "unableToDisplayVisualContent": "无法显示可视化内容",
-    "theVisualFileMayContainInvalid": "可视化文件可能包含无效 HTML。请尝试重新运行自动化。",
-    "emptyOrInvalidContent": "可视化内容似乎为空或无效。"
-  },
-  "createAutomationModal": {
-    "cancel": "取消",
-    "newAutomation": "新建自动化",
-    "name": "名称",
-    "eGWeeklyTechDebtReview": "例如：每周技术债务审查",
-    "scheduleUtc": "运行计划（UTC）",
-    "whatShouldThisAutomationDo": "此自动化需要做什么？",
-    "describeWhatYouWantThisAutomation": "描述每次运行时希望此自动化完成的工作…",
-    "visualization": "可视化",
-    "whatShouldTheDashboardDisplayE": "仪表盘应显示什么？例如：未解决问题表格、随时间变化的趋势图…",
-    "memoryEvolution": "记忆与演进",
-    "howShouldThisAutomationImproveOver": "此自动化应如何持续改进？两次运行之间应记住什么？",
-    "runOn": "运行位置",
-    "localComputersRequireTheFactoryDesktop": "本地计算机需要安装 Factory 桌面应用。",
-    "openDesktopApp": "打开桌面应用",
-    "creating": "正在创建…",
-    "createWithSession": "通过 Session 创建"
-  },
   "createRepoGroupModal": {
     "cancel": "取消",
     "createAPersonalSoftwareFactoryView": "使用你有权访问的仓库创建个人 Software Factory 视图。",
@@ -116,26 +24,6 @@
     "createRepositoryGroup": "创建仓库组",
     "chooseRepositoriesHelper": "选择此 Software Factory 视图所涵盖的仓库。",
     "nameRequiredHelper": "必填。请先为此视图命名，再保存。"
-  },
-  "improveAutomationModal": {
-    "cancel": "取消",
-    "reviewImprove": "审查与改进",
-    "whatShouldTheReviewFocusOn": "审查应重点关注什么？（选填）",
-    "eGImproveTheVisualizationReduce": "例如：改进可视化、减少误报、让报告更便于采取行动…",
-    "starting": "正在启动…",
-    "startReview": "开始审查",
-    "description": "这将启动 Droid Session，分析“{{name}}”并就其提示词、记忆及输出提出优化建议。"
-  },
-  "shareAutomationModal": {
-    "shareAutomation": "共享自动化",
-    "visibility": "可见范围",
-    "onlyYouCanAccess": "仅你可以访问",
-    "private": "私有",
-    "anyoneInYourOrganizationCanView": "组织中的任何人均可查看",
-    "organization": "组织",
-    "shareLink": "共享链接",
-    "copied": "已复制",
-    "copy": "复制"
   },
   "softwareFactoryChart": {
     "max": "最大值",
@@ -165,33 +53,8 @@
     "back": "← 返回"
   },
   "automations": {
-    "next": "下一步",
-    "filterByOwnership": "按所有权筛选",
-    "ownership": "所有权：",
-    "automations": "自动化",
-    "automateWorkBySettingUpScheduled": "设置定时对话，让工作自动执行。",
-    "all": "全部",
-    "private": "私有",
-    "shared": "已共享",
     "creating": "正在创建…",
-    "newAutomation": "新建自动化",
-    "sharedWithOrg": "自动化已共享给组织",
-    "setToPrivate": "自动化已设为私有",
-    "failedToUpdatePrivacy": "更新隐私设置失败",
-    "forkedSuccessfully": "已成功派生自动化",
-    "failedToFork": "派生自动化失败",
-    "desktopRequiredDescription": "自动化需要连接到本地守护进程。<desktopLink>打开 Factory 桌面应用</desktopLink>以使用此功能。",
-    "desktopAppRequired": "需要桌面应用",
-    "noAutomationsYet": "暂无自动化",
-    "createYourFirstAutomation": "创建第一个自动化以开始使用。",
-    "noAutomationsMatchFilters": "没有符合当前筛选条件的自动化",
-    "filterByCategory": "按类别筛选",
-    "category": "类别：",
-    "failedToPause": "暂停失败",
-    "failedToResume": "恢复失败",
-    "failedToRename": "重命名失败",
-    "failedToDelete": "删除失败",
-    "failedToWriteForkedFiles": "写入派生自动化文件失败"
+    "newAutomation": "新建自动化"
   },
   "shared": {
     "enabled": "已启用",
@@ -1214,7 +1077,8 @@
     "whereStep": {
       "chained": "每次运行所用的计算机或模板及其可见范围。",
       "default": "每次运行所用的身份、计算机及可见范围。",
-      "customCi": "添加此工作流的仓库。"
+      "customCi": "添加此工作流的仓库。",
+      "gitlabNotSupported": "目前不支持 GitLab 自动化，请尝试<ciLink>改为通过 GitLab CI 运行 Droid</ciLink>。"
     },
     "orgAlreadyHasOrgWideInstall": "{{org}} 已为此模板完成组织级安装，点击创建会打开现有项。"
   },
@@ -1565,11 +1429,6 @@
     "default": "默认",
     "model": "模型",
     "labelWithAvailability": "{{label}}。{{availability}}"
-  },
-  "newAutomationButtonV2": {
-    "createWithDroid": "通过 Droid 创建",
-    "createWithTemplate": "通过模板创建",
-    "newAutomation": "新建自动化"
   },
   "optionalSettingsSection": {
     "additionalSettings": "附加设置"
@@ -2014,22 +1873,6 @@
       "localAt": "{{recurrence}} {{times}}（{{timeZone}}）",
       "localWithUtc": "{{local}}（{{utc}}）"
     }
-  },
-  "useRunAutomation": {
-    "failedToRun": "运行自动化失败"
-  },
-  "useImproveAutomation": {
-    "failedToStart": "启动改进 Session 失败"
-  },
-  "useCreateAutomation": {
-    "failedToStart": "启动自动化创建失败"
-  },
-  "useAutomationSession": {
-    "localRequiresDesktop": "本地自动化只能从桌面应用运行",
-    "authenticationRequired": "需要身份验证"
-  },
-  "automationsQueries": {
-    "localOnlyInDesktop": "本地自动化仅在桌面应用中可用"
   },
   "automationCirepoStatus": {
     "active": "已启用",
@@ -2528,7 +2371,6 @@
       "prFilterPlaceholder": "描述要关注的 PR，例如“由我创建的 PR”“请求我审查的 PR”或“仓库中所有待合并 PR”。",
       "additionalInstructionsPlaceholder": "还有什么需要 Droid 了解？例如：已知不稳定的检查，或绝不能自动推送的修复类型。"
     },
-    "createAutomationSessionPrefill": "使用 Factory 创建自动化。先简要解释自动化的工作方式，涵盖两种触发器：运行计划按周期执行提示词；Webhook 则在外部服务向为自动化生成的接收 URL 发送 POST 请求时执行。然后询问我希望执行什么工作，以及由什么触发。",
     "createWithDroidPrompt": {
       "openingNamed": "使用 Factory 创建名为“{{name}}”的自动化。",
       "opening": "使用 Factory 创建自动化。",

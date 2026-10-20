@@ -4,8 +4,6 @@
     "newWindow": "新建窗口",
     "settingsEllipsis": "设置…",
     "settings": "设置",
-    "installCli": "安装 'droid' 命令…",
-    "uninstallCli": "卸载 'droid' 命令…",
     "file": "文件",
     "newSession": "新建 Session",
     "closeWindow": "关闭窗口",
@@ -20,7 +18,8 @@
     "reportBug": "报告问题…",
     "aboutFactory": "关于 Factory",
     "aboutMessage": "Factory {{version}}",
-    "aboutDetail": "版本：{{version}}\nElectron：{{electron}}\nChromium：{{chromium}}\nNode.js：{{node}}"
+    "aboutDetail": "版本：{{version}}\nElectron：{{electron}}\nChromium：{{chromium}}\nNode.js：{{node}}",
+    "copyCliInstallCommand": "复制 'droid' 安装命令"
   },
   "contextMenu": {
     "copyLink": "复制链接",
@@ -28,7 +27,10 @@
     "learnSpelling": "记住此拼写",
     "noGuessesFound": "无拼写建议"
   },
-  "common": { "ok": "确定", "cancel": "取消" },
+  "common": {
+    "ok": "确定",
+    "cancel": "取消"
+  },
   "auth": {
     "logoutIncomplete": "已清除保存的凭据，但本地守护进程可能仍在运行。请退出 Factory 并停止其本地守护进程，以完成退出登录。"
   },
@@ -44,29 +46,9 @@
     "activeAutomationsDetail": "定时自动化任务仅在 Factory 打开时运行。现在退出后，这些任务将暂停运行，直到你重新打开应用。"
   },
   "cliInstall": {
-    "install": "安装",
-    "skip": "跳过",
-    "dontAskAgain": "不再询问",
-    "promptTitle": "安装 Droid CLI",
-    "promptMessage": "将 Droid CLI 添加到终端？",
-    "promptDetail": "这会将 \"droid\" 命令添加到 PATH，让你可以在任意终端窗口运行 Droid。\n\n你可以稍后在 Factory 菜单中更改此设置。",
-    "successTitle": "安装完成",
-    "successMessage": "Droid CLI 安装成功",
-    "successDetail": "现在可以在终端中使用 \"droid\" 命令。",
-    "pathUpdated": "PATH 已更新。你可能需要重启终端或打开新的终端窗口，才能使更改生效。",
-    "pathRequiredTitle": "需要配置 PATH",
-    "pathRequiredMessage": "Droid CLI 已安装，但仍需更新 PATH",
-    "pathRequiredDetail": "CLI 已安装，但尚未添加到 PATH。\n\n{{instructions}}",
-    "errorTitle": "安装失败",
-    "errorMessage": "Droid CLI 安装失败",
-    "errorDetail": "{{error}}\n\n你可以参照文档手动安装 CLI。",
-    "viewDocumentation": "查看文档",
-    "removedTitle": "CLI 已移除",
-    "removedMessage": "Droid CLI 已移除",
-    "removedDetail": "\"droid\" 命令已移除。你可以随时在 Factory 菜单中重新安装。",
-    "alreadyInstalledTitle": "已安装",
-    "alreadyInstalledMessage": "Droid CLI 已安装",
-    "alreadyInstalledDetail": "可以在终端中使用 \"droid\" 命令。"
+    "copiedTitle": "安装命令已复制",
+    "copiedMessage": "Droid CLI 安装命令已复制",
+    "copiedDetail": "将其粘贴到终端中，以安装或更新“droid”命令：\n\n{{command}}"
   },
   "versionCheck": {
     "title": "需要更新",
@@ -85,7 +67,21 @@
     "cannotUpdateMessage": "Factory 无法在当前安装位置更新。",
     "moveToApplications": "请将 Factory.app 移至“应用程序”文件夹，然后重新启动以启用自动更新。",
     "msixPolicy": "Windows 无法更新 Factory。请检查组织的部署策略或联系 IT 人员。请勿将文件移出 WindowsApps。",
-    "noWriteAccess": "Factory 没有安装目录的写入权限。请尝试从当前用户可写的文件夹运行，或以管理员身份启动。"
+    "noWriteAccess": "Factory 没有安装目录的写入权限。请尝试从当前用户可写的文件夹运行，或以管理员身份启动。",
+    "externalInstallDisabled": "此 Factory 安装由应用内更新器之外的方式管理。请使用包管理器更新，或通过 Factory 安装脚本重新安装。",
+    "installBusy": "此应用的另一项安装正在进行中。请等待其完成后重试。",
+    "installLockFailed": "无法锁定 Linux 安装目录。",
+    "extractFailed": "无法解压更新。请重试。",
+    "checksumInvalid": "更新的校验和无效。",
+    "versionAlreadyRunning": "此版本已在运行。",
+    "downloadVerificationFailed": "下载的更新未通过验证。请重试。",
+    "policyChanged": "组织更新策略已变更。请重试。",
+    "policyUnverified": "无法验证组织更新策略。请重试。",
+    "downloadFailed": "无法下载更新。请重试。",
+    "downloadInvalidSize": "下载的更新大小无效。",
+    "downloadTooLarge": "下载的更新过大。",
+    "downloadIncomplete": "更新下载不完整。请重试。",
+    "previousDownloadNotRemoved": "无法移除上次下载的更新。请重试。"
   },
   "fileDialogs": {
     "saveDownloadedFile": "保存下载的文件",

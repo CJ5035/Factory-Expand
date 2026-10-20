@@ -1,4 +1,4 @@
-// Deliberately limited to the pinned data layouts of Factory Desktop 0.200.0/0.201.0.
+// Deliberately limited to the pinned data layouts of Factory Desktop 0.200.0/0.201.0/0.202.0.
 // Never evaluates application code, function calls, getters or template expressions.
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
@@ -8,7 +8,8 @@ import { openAsar, closeAsar, readEntry, listEntries, findEntry, integrityOf, sh
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const layouts = {
   '0.200.0': { start: 'const beu={info:"Info",tip:"Tip"', end: ';function CSu(t)', resourceRoot: /D8t=CSu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:SSu\}\)/g, components: 'SSu', desktopStart: 'Sb={checkForUpdates:"Check for Updates..."', desktopEnd: ',Db={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: '$b', renderer: '.vite/renderer/main_window/assets/index-CCcgJ39D.js', main: '.vite/build/initLifecycle-C1amcziW.js' },
-  '0.201.0': { start: 'const Weu={info:"Info",tip:"Tip"', end: ';function KSu(t)', resourceRoot: /B8t=KSu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:qSu\}\)/g, components: 'qSu', desktopStart: 'Eb={checkForUpdates:"Check for Updates..."', desktopEnd: ',Nb={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: 'Lb', renderer: '.vite/renderer/main_window/assets/index-DJvfx-E_.js', main: '.vite/build/initLifecycle-CRttfuow.js' }
+  '0.201.0': { start: 'const Weu={info:"Info",tip:"Tip"', end: ';function KSu(t)', resourceRoot: /B8t=KSu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:qSu\}\)/g, components: 'qSu', desktopStart: 'Eb={checkForUpdates:"Check for Updates..."', desktopEnd: ',Nb={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: 'Lb', renderer: '.vite/renderer/main_window/assets/index-DJvfx-E_.js', main: '.vite/build/initLifecycle-CRttfuow.js' },
+  '0.202.0': { start: 'const Plu={info:"Info",tip:"Tip"', end: ';function k4u(t)', resourceRoot: /OMt=k4u\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:T4u\}\)/g, components: 'T4u', desktopStart: 'Ib={checkForUpdates:"Check for Updates..."', desktopEnd: ',Ub={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: 'zb', desktopLeaves: 78, renderer: '.vite/renderer/main_window/assets/index-BqRIJ3kw.js', main: '.vite/build/initLifecycle-CLFSN3ud.js' }
 };
 
 export function parseDataDeclarations(source) {
@@ -159,7 +160,7 @@ export function extractDesktopEnglish(source, version = '0.200.0') {
   if (start < 0 || end < 0 || source.indexOf(startMarker, start + 1) >= 0 || source.indexOf(endMarker, end + 1) >= 0) throw new Error('Unsupported desktop resource declaration layout');
   const desktop = parseDataDeclarations(source.slice(start, end) + ';').get(layout.desktopRoot);
   const count = tree => tree && typeof tree === 'object' ? Object.values(tree).reduce((sum, child) => sum + count(child), 0) : 1;
-  if (!desktop?.menu || !desktop?.fileDialogs || count(desktop) !== 85) throw new Error('Incomplete desktop resources');
+  if (!desktop?.menu || !desktop?.fileDialogs || count(desktop) !== (layout.desktopLeaves ?? 85)) throw new Error('Incomplete desktop resources');
   return desktop;
 }
 

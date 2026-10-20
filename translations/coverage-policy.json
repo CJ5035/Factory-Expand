@@ -3968,6 +3968,41 @@
       "source": "Finish setup in your Draft. Review its test run before you activate it.",
       "category": "course-prose",
       "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
+    },
+    {
+      "key": "analytics.effectivenessPage.linear",
+      "source": "Linear",
+      "reason": "0.202.0逐项复核：品牌、文件格式、计量缩写或带插值的计量格式，保留原值"
+    },
+    {
+      "key": "analytics.effectivenessPage.jira",
+      "source": "Jira",
+      "reason": "0.202.0逐项复核：品牌、文件格式、计量缩写或带插值的计量格式，保留原值"
+    },
+    {
+      "key": "components.analytics.attributionInventoryTable.linkedSpend",
+      "source": "FSC",
+      "reason": "0.202.0逐项复核：品牌、文件格式、计量缩写或带插值的计量格式，保留原值"
+    },
+    {
+      "key": "components.analytics.throughputChart.metrics.fsc",
+      "source": "FSC",
+      "reason": "0.202.0逐项复核：品牌、文件格式、计量缩写或带插值的计量格式，保留原值"
+    },
+    {
+      "key": "components.missions.missionFilesExplorer.kinds.pdf",
+      "source": "PDF",
+      "reason": "0.202.0逐项复核：品牌、文件格式、计量缩写或带插值的计量格式，保留原值"
+    },
+    {
+      "key": "components.missions.missionFilesExplorer.add.kilobytes",
+      "source": "{{size}} KB",
+      "reason": "0.202.0逐项复核：品牌、文件格式、计量缩写或带插值的计量格式，保留原值"
+    },
+    {
+      "key": "components.missions.missionFilesExplorer.add.megabytes",
+      "source": "{{size}} MB",
+      "reason": "0.202.0逐项复核：品牌、文件格式、计量缩写或带插值的计量格式，保留原值"
     }
   ]
 }

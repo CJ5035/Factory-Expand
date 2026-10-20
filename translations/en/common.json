@@ -85,7 +85,6 @@
   },
   "authLoading": {
     "cancelSignIn": "Cancel sign in",
-    "browserHint": "Finish signing in from your browser, then come back here.",
     "browserSetupHint": "Finish setting up in your browser, then come back here.",
     "browserSlowHint": "Didn't see a browser window? Cancel and try again.",
     "signingOut": "Signing out",

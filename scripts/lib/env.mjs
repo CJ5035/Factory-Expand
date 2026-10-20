@@ -35,7 +35,7 @@ export function context(args) {
   const a = openAsar(files.asar);
   let version;
   try { version = JSON.parse(readEntry(a, 'package.json')).version; } finally { closeAsar(a); }
-  if (!['0.200.0', '0.201.0'].includes(version)) throw new Error(`Unsupported version: ${version}`);
+  if (!['0.200.0', '0.201.0', '0.202.0'].includes(version)) throw new Error(`Unsupported version: ${version}`);
   const manifest = readJson(join(patchSetDir(version), 'manifest.json'));
   const key = sha256(Buffer.from(normalized));
   const state = join(REPO_ROOT, 'state', key);

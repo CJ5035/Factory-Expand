@@ -206,7 +206,7 @@
       "cannotOpenInSession": "无法在此 Session 中打开此文件。",
       "failedToFind": "找不到文件。",
       "failedToPrepareGenerated": "准备生成的文件失败。",
-      "cannotOpenFolder": "无法从聊天中打开文件夹。"
+      "cannotOpenFolder": "无法在此 Session 中打开此文件夹。"
     },
     "templateFallbackName": "模板",
     "usage": {
@@ -609,7 +609,7 @@
   },
   "missionComposer": {
     "agentPlaceholder": "向此代理发送消息…",
-    "leadPlaceholder": "向任务负责人发送消息…"
+    "leadPlaceholder": "向编排代理发送消息…"
   },
   "sessionDetail": {
     "cloudSyncOfflineComputer": {
@@ -713,7 +713,16 @@
     "loadingSession": "正在加载 Session"
   },
   "rightPaneInteractions": {
-    "screenshotCopied": "截图已复制到剪贴板"
+    "screenshotCopied": "截图已复制到剪贴板",
+    "chromeImportDatabaseBusy": "Chrome 正在保存 Cookie。请稍候再尝试“导入”。",
+    "chromeImportDecryptionFailed": "无法读取 Chrome 的 Cookie。请退出并重新打开 Chrome，再尝试“导入”。",
+    "chromeImportFailed": "无法从 Chrome 导入。请再次尝试“导入”。",
+    "chromeImportKeychainDenied": "无法从 Chrome 导入。请再次点击“导入”，并在 macOS 请求访问 Chrome Safe Storage 时选择“允许”。",
+    "chromeImportKeychainTimedOut": "由于未响应 macOS 的访问请求，无法从 Chrome 导入。请再次点击“导入”，并在 macOS 请求访问 Chrome Safe Storage 时选择“允许”。",
+    "chromeImportKeyMissing": "找不到 Chrome 的加密密钥。请打开 Chrome 后再次尝试“导入”。",
+    "chromeImportProfileNotFound": "未找到 Chrome 的 Cookie。请打开 Chrome 并登录某个网站后，再尝试“导入”。",
+    "chromeImportSucceeded_one": "已从 Chrome 导入 {{count}} 个 Cookie",
+    "chromeImportSucceeded_other": "已从 Chrome 导入 {{count}} 个 Cookie"
   },
   "worktreeDelete": {
     "keptUncommittedChanges": "工作树已保留，因为其中有未提交的变更。请提交或使用 git stash 储藏这些变更，或使用 git worktree remove --force 移除工作树。",

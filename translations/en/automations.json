@@ -8,98 +8,6 @@
     "localMachine": "Local machine",
     "notSet": "Not set"
   },
-  "automationCard": {
-    "paused": "(paused)",
-    "computer": "Computer",
-    "shared": "Shared",
-    "namePreview": "{{name}} preview",
-    "never": "Never",
-    "justNow": "just now",
-    "minutesAgo": "{{minutes}}m ago",
-    "hoursAgo": "{{hours}}h ago",
-    "daysAgo": "{{days}}d ago"
-  },
-  "automationDashboard": {
-    "openSidebar": "Open sidebar",
-    "automationActions": "Automation actions",
-    "rename": "Rename",
-    "share": "Share",
-    "fork": "Fork",
-    "delete": "Delete",
-    "runNow": "Run Now",
-    "reviewAndImproveAutomation": "Review and improve automation",
-    "resumeSchedule": "Resume schedule",
-    "pauseSchedule": "Pause schedule",
-    "fullscreen": "Fullscreen",
-    "toggleDetails": "Toggle Details",
-    "renameAutomation": "Rename automation",
-    "automationName": "Automation name",
-    "cancel": "Cancel",
-    "deleteAutomation": "Delete automation",
-    "setupInProgress": "Automation setup is still in progress.",
-    "hideDetails": "Hide Details",
-    "showDetails": "Show Details",
-    "renaming": "Renaming...",
-    "deleting": "Deleting...",
-    "deleteConfirmation": "Are you sure you want to delete “{{name}}”? This will permanently remove the automation and all its files.",
-    "notOwnerTooltip": "You don't own this automation. Fork it to run on your machine.",
-    "running": "Running...",
-    "analyzing": "Analyzing...",
-    "resuming": "Resuming...",
-    "pausing": "Pausing..."
-  },
-  "automationDetailPanel": {
-    "selectAnAutomationToViewDetails": "Select an automation to view details",
-    "retry": "retry",
-    "goToSession": "Go to Session",
-    "runEntryDataMayBeIncomplete": "Run entry data may be incomplete",
-    "runHistory": "Run History",
-    "loadingHistory": "Loading history...",
-    "noRunsYet": "No runs yet",
-    "automationModel": "Automation model",
-    "default": "Default",
-    "model": "Model",
-    "thisAutomationWasRemovedOrIs": "This automation was removed or is no longer available.",
-    "clearSelection": "Clear selection",
-    "thisAutomationIsInADegraded": "This automation is in a degraded state.",
-    "schedule": "Schedule",
-    "utc": "(UTC)",
-    "visibility": "Visibility",
-    "organization": "Organization",
-    "private": "Private",
-    "owner": "Owner",
-    "forkedFrom": "Forked from",
-    "unableToLoadHistory": "Unable to load history: {{message}}",
-    "changeVisibility": "Change visibility",
-    "notConfigured": "Not configured"
-  },
-  "automationVisualViewer": {
-    "selectAnAutomationToViewIts": "Select an automation to view its visual output",
-    "noVisualOutputAvailable": "No visual output available",
-    "runTheAutomationToGenerateA": "Run the automation to generate a visual",
-    "automationVisualOutput": "Automation Visual Output",
-    "unableToDisplayVisualContent": "Unable to display visual content",
-    "theVisualFileMayContainInvalid": "The visual file may contain invalid HTML. Try running the automation again.",
-    "emptyOrInvalidContent": "The visual content appears to be empty or invalid."
-  },
-  "createAutomationModal": {
-    "cancel": "Cancel",
-    "newAutomation": "New Automation",
-    "name": "Name",
-    "eGWeeklyTechDebtReview": "e.g. Weekly Tech Debt Review",
-    "scheduleUtc": "Schedule (UTC)",
-    "whatShouldThisAutomationDo": "What should this automation do?",
-    "describeWhatYouWantThisAutomation": "Describe what you want this automation to accomplish each time it runs...",
-    "visualization": "Visualization",
-    "whatShouldTheDashboardDisplayE": "What should the dashboard display? e.g. a table of open issues, a chart of trends over time...",
-    "memoryEvolution": "Memory & Evolution",
-    "howShouldThisAutomationImproveOver": "How should this automation improve over time? What should it remember between runs?",
-    "runOn": "Run on",
-    "localComputersRequireTheFactoryDesktop": "Local computers require the Factory desktop app.",
-    "openDesktopApp": "Open desktop app",
-    "creating": "Creating...",
-    "createWithSession": "Create with session"
-  },
   "createRepoGroupModal": {
     "cancel": "Cancel",
     "createAPersonalSoftwareFactoryView": "Create a personal Software Factory view from repos you can access.",
@@ -116,26 +24,6 @@
     "createRepositoryGroup": "Create repository group",
     "chooseRepositoriesHelper": "Choose the repositories that should drive this Software Factory view.",
     "nameRequiredHelper": "Required. Name this view before saving it."
-  },
-  "improveAutomationModal": {
-    "cancel": "Cancel",
-    "reviewImprove": "Review & Improve",
-    "whatShouldTheReviewFocusOn": "What should the review focus on? (optional)",
-    "eGImproveTheVisualizationReduce": "e.g. improve the visualization, reduce false positives, make reports more actionable...",
-    "starting": "Starting...",
-    "startReview": "Start Review",
-    "description": "This will start a Droid session that analyzes “{{name}}” and suggests optimizations to its prompt, memory, and outputs."
-  },
-  "shareAutomationModal": {
-    "shareAutomation": "Share Automation",
-    "visibility": "Visibility",
-    "onlyYouCanAccess": "Only you can access",
-    "private": "Private",
-    "anyoneInYourOrganizationCanView": "Anyone in your organization can view",
-    "organization": "Organization",
-    "shareLink": "Share Link",
-    "copied": "Copied",
-    "copy": "Copy"
   },
   "softwareFactoryChart": {
     "max": "MAX",
@@ -165,33 +53,8 @@
     "back": "← Back"
   },
   "automations": {
-    "next": "Next",
-    "filterByOwnership": "Filter by ownership",
-    "ownership": "Ownership:",
-    "automations": "Automations",
-    "automateWorkBySettingUpScheduled": "Automate work by setting up scheduled threads.",
-    "all": "All",
-    "private": "Private",
-    "shared": "Shared",
     "creating": "Creating...",
-    "newAutomation": "New automation",
-    "sharedWithOrg": "Automation shared with org",
-    "setToPrivate": "Automation set to private",
-    "failedToUpdatePrivacy": "Failed to update privacy",
-    "forkedSuccessfully": "Automation forked successfully",
-    "failedToFork": "Failed to fork automation",
-    "desktopRequiredDescription": "Automations require a connection to the local daemon. <desktopLink>Open the Factory desktop app</desktopLink> to use this feature.",
-    "desktopAppRequired": "Desktop app required",
-    "noAutomationsYet": "No automations yet",
-    "createYourFirstAutomation": "Create your first automation to get started.",
-    "noAutomationsMatchFilters": "No automations match the current filters",
-    "filterByCategory": "Filter by category",
-    "category": "Category:",
-    "failedToPause": "Failed to pause",
-    "failedToResume": "Failed to resume",
-    "failedToRename": "Failed to rename",
-    "failedToDelete": "Failed to delete",
-    "failedToWriteForkedFiles": "Failed to write forked automation files"
+    "newAutomation": "New automation"
   },
   "softwareFactory": {
     "noPriorData": "No prior data",
@@ -1214,7 +1077,8 @@
     "whereStep": {
       "chained": "The computer or template each run lands on, and its visibility.",
       "default": "The identity, computer, and visibility of each run.",
-      "customCi": "The repository this workflow is added to."
+      "customCi": "The repository this workflow is added to.",
+      "gitlabNotSupported": "GitLab automations are currently not supported, try <ciLink>running Droid from GitLab CI instead</ciLink>."
     },
     "orgAlreadyHasOrgWideInstall": "{{org}} already has an org-wide install for this template — Create will take you to it."
   },
@@ -1565,11 +1429,6 @@
     "default": "Default",
     "model": "Model",
     "labelWithAvailability": "{{label}}. {{availability}}"
-  },
-  "newAutomationButtonV2": {
-    "createWithDroid": "Create with Droid",
-    "createWithTemplate": "Create with Template",
-    "newAutomation": "New automation"
   },
   "optionalSettingsSection": {
     "additionalSettings": "Additional Settings"
@@ -2014,22 +1873,6 @@
       "localAt": "{{recurrence}} at {{times}} {{timeZone}}",
       "localWithUtc": "{{local}} ({{utc}})"
     }
-  },
-  "useRunAutomation": {
-    "failedToRun": "Failed to run automation"
-  },
-  "useImproveAutomation": {
-    "failedToStart": "Failed to start improvement session"
-  },
-  "useCreateAutomation": {
-    "failedToStart": "Failed to start automation creation"
-  },
-  "useAutomationSession": {
-    "localRequiresDesktop": "Local automations can only be run from the desktop app",
-    "authenticationRequired": "Authentication required"
-  },
-  "automationsQueries": {
-    "localOnlyInDesktop": "Local automations are only available in the desktop app"
   },
   "automationCirepoStatus": {
     "active": "Active",
@@ -2528,7 +2371,6 @@
       "prFilterPlaceholder": "Describe which PRs to watch, e.g. \"PRs authored by me\", \"PRs where I'm requested as reviewer\", or \"every open PR in the repo\".",
       "additionalInstructionsPlaceholder": "Anything else Droid should know? e.g. checks that are known-flaky, or types of fixes to never auto-push."
     },
-    "createAutomationSessionPrefill": "Create an automation with Factory. Give me a quick explanation of how automations work, covering both triggers: a schedule runs the prompt on a cadence, and a webhook runs it whenever an external service POSTs to a receiver URL that is minted for the automation. Then ask what I want run and what should trigger it.",
     "createWithDroidPrompt": {
       "openingNamed": "Create an automation with Factory named \"{{name}}\".",
       "opening": "Create an automation with Factory.",

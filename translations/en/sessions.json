@@ -206,7 +206,7 @@
       "cannotOpenInSession": "This file cannot be opened in this session.",
       "failedToFind": "Failed to find the file.",
       "failedToPrepareGenerated": "Failed to prepare generated file.",
-      "cannotOpenFolder": "Folders cannot be opened from the chat."
+      "cannotOpenFolder": "This folder cannot be opened in this session."
     },
     "templateFallbackName": "Template",
     "usage": {
@@ -609,7 +609,7 @@
   },
   "missionComposer": {
     "agentPlaceholder": "Message this agent…",
-    "leadPlaceholder": "Message the mission lead…"
+    "leadPlaceholder": "Message the orchestrator…"
   },
   "sessionDetail": {
     "cloudSyncOfflineComputer": {
@@ -713,6 +713,15 @@
     "loadingSession": "Loading session"
   },
   "rightPaneInteractions": {
+    "chromeImportDatabaseBusy": "Chrome was busy saving its cookies. Wait a moment, then try Import again.",
+    "chromeImportDecryptionFailed": "Couldn't read Chrome's cookies. Quit and reopen Chrome, then try Import again.",
+    "chromeImportFailed": "Couldn't import from Chrome. Try Import again.",
+    "chromeImportKeychainDenied": "Couldn't import from Chrome. Click Import again and choose Allow when macOS asks for Chrome Safe Storage access.",
+    "chromeImportKeychainTimedOut": "Couldn't import from Chrome because macOS got no answer. Click Import again and choose Allow when macOS asks for Chrome Safe Storage access.",
+    "chromeImportKeyMissing": "Couldn't find Chrome's encryption key. Open Chrome, then try Import again.",
+    "chromeImportProfileNotFound": "No Chrome cookies found. Open Chrome and sign in to a site, then try Import again.",
+    "chromeImportSucceeded_one": "Imported {{count}} cookie from Chrome",
+    "chromeImportSucceeded_other": "Imported {{count}} cookies from Chrome",
     "screenshotCopied": "Screenshot Copied to Clipboard"
   },
   "worktreeDelete": {
