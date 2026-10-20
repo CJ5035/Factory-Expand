@@ -95,6 +95,81 @@ try {
   assert.equal(menuFixture.items[1].label,'退出');assert.equal(menuFixture.items[2].label,'Unknown dynamic label');
   console.log('Native menus PASS: known generated role labels translate recursively only in Chinese; custom labels, role IDs, callbacks, enabled flags and accelerators stay unchanged.');
   const rendererEdits = set.patches.targets.find(target => target.file.endsWith('/index-DJvfx-E_.js')).edits;
+  for (const [version, ref, layoutEffect, localeInstance] of [
+    ['0.200.0', 'Ou', 'h4', 'Rin'], ['0.201.0', 'Fu', 'u4', 'eon']
+  ]) {
+    const treeEdit = loadPatchSet(version).patches.targets[0].edits.find(edit =>
+      edit.find.startsWith(`}){"use no memo";const y=${ref}(null)`));
+    assert.ok(treeEdit, `File tree patch ${version}`);
+    const prefixEnd = treeEdit.replace.indexOf(`const y=${ref}(null)`);
+    assert.ok(prefixEnd > 3, `File tree entry ${version}`);
+    const effects = [], listeners = new Set();
+    let renders = 0, state = 0;
+    const i18n = {
+      on: (event, listener) => { assert.equal(event, 'languageChanged'); listeners.add(listener); },
+      off: (event, listener) => { assert.equal(event, 'languageChanged'); listeners.delete(listener); }
+    };
+    const enterTree = runInNewContext(`(function(){${treeEdit.replace.slice(3, prefixEnd)}})`, {
+      le: () => { throw new Error(`React Hook called inside Preact tree ${version}`); },
+      [layoutEffect]: effect => effects.push(effect), [localeInstance]: () => i18n,
+      ne: update => { state = update(state); renders++; }
+    }, {timeout:1000});
+    enterTree(); enterTree();
+    assert.equal(effects.length, 2);
+    const firstCleanup = effects[0](), secondCleanup = effects[1]();
+    assert.equal(listeners.size, 2, 'Instances must own different listeners');
+    for (const listener of listeners) listener('zh-CN');
+    assert.equal(renders, 2); assert.equal(state, 2);
+    firstCleanup(); assert.equal(listeners.size, 1);
+    for (const listener of listeners) listener('en');
+    assert.equal(renders, 3);
+    secondCleanup(); assert.equal(listeners.size, 0);
+    for (const listener of listeners) listener('zh-CN');
+    assert.equal(renders, 3, 'Unmounted listeners must not update state');
+    enterTree();
+    const remountCleanup = effects[2]();
+    assert.equal(listeners.size, 1);
+    remountCleanup(); assert.equal(listeners.size, 0);
+
+    if (version === '0.201.0') {
+      const patchedTreeSource = applyEdits(rendererSource, [treeEdit], 'file-tree lifecycle').text;
+      const coreStart = rendererSource.indexOf('var m1,');
+      const coreEnd = rendererSource.indexOf('const yXs=', coreStart);
+      const hooksStart = rendererSource.indexOf('var Oae,');
+      const hooksEnd = rendererSource.indexOf('function XXs(', hooksStart);
+      const treeStart = patchedTreeSource.indexOf('function Jgn(');
+      const treeEnd = patchedTreeSource.indexOf('we.current=Se;', treeStart);
+      assert.ok(coreStart >= 0 && coreEnd > coreStart);
+      assert.ok(hooksStart >= 0 && hooksEnd > hooksStart);
+      assert.ok(treeStart >= 0 && treeEnd > treeStart);
+      const pending = [];
+      const lifecycle = runInNewContext(
+        rendererSource.slice(coreStart, coreEnd) + rendererSource.slice(hooksStart, hooksEnd) +
+        patchedTreeSource.slice(treeStart, treeEnd + 'we.current=Se;'.length) +
+        `renders++;return null}
+         m1.debounceRendering=fn=>pending.push(fn);
+         const root={nodeType:1,namespaceURI:'http://www.w3.org/1999/xhtml',
+           childNodes:[],firstChild:null,ownerDocument:document};
+         const mount=()=>_Ct(xCt(Jgn,{controller:{},itemHeight:20}),root);
+         mount();
+         ({get renders(){return renders},mount,unmount:()=>_Ct(null,root)})`,
+        {document:{},setTimeout,clearTimeout,renders:0,pending,
+          eon:()=>i18n,le:()=>{throw new Error('React Hook called inside Preact tree');}},
+        {timeout:1000});
+      assert.equal(lifecycle.renders, 1); assert.equal(listeners.size, 1);
+      for (const language of ['zh-CN', 'en']) {
+        for (const listener of listeners) listener(language);
+        while (pending.length) pending.shift()();
+      }
+      assert.equal(lifecycle.renders, 3); assert.equal(listeners.size, 1);
+      lifecycle.unmount(); assert.equal(listeners.size, 0);
+      for (const listener of listeners) listener('zh-CN');
+      assert.equal(pending.length, 0);
+      lifecycle.mount(); assert.equal(lifecycle.renders, 4); assert.equal(listeners.size, 1);
+      lifecycle.unmount(); assert.equal(listeners.size, 0);
+    }
+  }
+  console.log('File tree PASS: both versions use native Preact subscriptions; independent listeners, language updates, cleanup and remount; actual 0.201.0 renderer/hooks validate late setter initialization.');
   const countryEdit = rendererEdits.find(edit => edit.find.startsWith('let ge,Ae;e[101]'));
   const rangeEdit = rendererEdits.find(edit => edit.find.startsWith('let wt;t[161]'));
   const tabsEdit = rendererEdits.find(edit => edit.find.startsWith('let Lr;e[188]'));

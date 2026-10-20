@@ -196,10 +196,10 @@
         },
         {
           "find": "}){\"use no memo\";const y=Fu(null),v=Fu(null),b=Fu(!1),S=Fu(null),C=Fu(null),w=Fu(null),x=Fu(null),E=Fu(null),",
-          "replace": "}){\"use no memo\";le(\"components\");const y=Fu(null),v=Fu(null),b=Fu(!1),S=Fu(null),C=Fu(null),w=Fu(null),x=Fu(null),E=Fu(null),",
+          "replace": "}){\"use no memo\";u4(()=>{const FactoryZhI18n=eon(),FactoryZhRefresh=()=>ne(FactoryZhVersion=>FactoryZhVersion+1);FactoryZhI18n.on(\"languageChanged\",FactoryZhRefresh);return()=>FactoryZhI18n.off(\"languageChanged\",FactoryZhRefresh)},[]);const y=Fu(null),v=Fu(null),b=Fu(!1),S=Fu(null),C=Fu(null),w=Fu(null),x=Fu(null),E=Fu(null),",
           "expect": 1,
-          "marker": "}){\"use no memo\";le(\"components\");const y=Fu(null),v=Fu(null),b=Fu(!1),S=Fu(null),C=Fu(null),w=Fu(null),x=Fu(null),E=Fu(null),",
-          "note": "Subscribe file tree to locale, retaining existing controller data/hooks."
+          "marker": "}){\"use no memo\";u4(()=>{const FactoryZhI18n=eon(),FactoryZhRefresh=()=>ne(FactoryZhVersion=>FactoryZhVersion+1);FactoryZhI18n.on(\"languageChanged\",FactoryZhRefresh);return()=>FactoryZhI18n.off(\"languageChanged\",FactoryZhRefresh)},[]);const y=Fu(null),v=Fu(null),b=Fu(!1),S=Fu(null),C=Fu(null),w=Fu(null),x=Fu(null),E=Fu(null),",
+          "note": "Subscribe file tree to locale with native Preact layout effect; remove listener on unmount and reuse existing redraw setter."
         },
         {
           "find": "placeholder:\"Search…\",\"data-file-tree-search-input\":!0",
