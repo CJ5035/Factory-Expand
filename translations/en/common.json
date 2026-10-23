@@ -91,14 +91,6 @@
     "openingSignIn": "Opening sign-in",
     "openingSignUp": "Opening sign-up"
   },
-  "changeThemeModal": {
-    "theme": "Theme",
-    "appearance": "Appearance",
-    "themePreference": "Theme preference",
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System"
-  },
   "callback": {
     "finishingSignIn": "Finishing sign-in",
     "thisSignInStepHasAlready": "This sign-in step has already finished, expired, or was opened directly. Start sign-in again to continue to Factory.",

@@ -1,0 +1,392 @@
+{
+  "appVersion": "0.205.0",
+  "addFiles": [
+    {
+      "from": "translations/build/0.205.0/resources-zh-CN.js",
+      "to": ".vite/renderer/main_window/assets/resources-zh-CN.js"
+    },
+    {
+      "from": "translations/build/0.205.0/desktop-zh-CN.json",
+      "to": ".vite/build/desktop-zh-CN.json"
+    },
+    {
+      "from": "scripts/runtime/factory-project-remarks.cjs",
+      "to": ".vite/build/factory-project-remarks.cjs"
+    },
+    {
+      "from": "scripts/runtime/factory-project-remarks.js",
+      "to": ".vite/renderer/main_window/assets/factory-project-remarks.js"
+    }
+  ],
+  "targets": [
+    {
+      "file": ".vite/renderer/main_window/assets/index-Czx_74nj.js",
+      "edits": [
+        {
+          "find": "[Af.English,Af.Japanese,Af.Korean,Af.German,Af.Spanish,Af.Italian,Af.Polish,Af.French]",
+          "replace": "[Af.English,Af.Japanese,Af.Korean,Af.German,Af.Spanish,Af.Italian,Af.Polish,Af.French,Af.ChineseSimplified]",
+          "expect": 1,
+          "marker": "[Af.English,Af.Japanese,Af.Korean,Af.German,Af.Spanish,Af.Italian,Af.Polish,Af.French,Af.ChineseSimplified]"
+        },
+        {
+          "find": "[Af.French]:async()=>await Nt(()=>import(\"./resources-BTfbeZDq.js\"),[],import.meta.url)",
+          "replace": "[Af.French]:async()=>await Nt(()=>import(\"./resources-BTfbeZDq.js\"),[],import.meta.url),[Af.ChineseSimplified]:async()=>await Nt(()=>import(\"./resources-zh-CN.js\"),[],import.meta.url)",
+          "expect": 1,
+          "marker": "[Af.French]:async()=>await Nt(()=>import(\"./resources-BTfbeZDq.js\"),[],import.meta.url),[Af.ChineseSimplified]:async()=>await Nt(()=>import(\"./resources-zh-CN.js\"),[],import.meta.url)"
+        },
+        {
+          "find": "let he,Ce;e[101]===Symbol.for(\"react.memo_cache_sentinel\")?(he=N$c.filter(z3u).map(H3u),Ce=je=>{g(Le=>({...Le,country:je,taxIdType:kvt.has(je)?TSt(je):\"\",taxId:kvt.has(je)?Le.taxId:\"\"}))},e[101]=he,e[102]=Ce):(he=e[101],Ce=e[102]);",
+          "replace": "let he=(()=>{const names=new Intl.DisplayNames(Zdn().language,{type:\"region\"});return N$c.filter(z3u).map(je=>({label:names.of(je.value)??je.label,value:je.value}))})(),Ce=je=>{g(Le=>({...Le,country:je,taxIdType:kvt.has(je)?TSt(je):\"\",taxId:kvt.has(je)?Le.taxId:\"\"}))};",
+          "expect": 1,
+          "marker": "let he=(()=>{const names=new Intl.DisplayNames(Zdn().language,{type:\"region\"});return N$c.filter(z3u).map(je=>({label:names.of(je.value)??je.label,value:je.value}))})(),Ce=je=>{g(Le=>({...Le,country:je,taxIdType:kvt.has(je)?TSt(je):\"\",taxId:kvt.has(je)?Le.taxId:\"\"}))};",
+          "note": "Localize country display labels while preserving ISO values; remove once-only option cache"
+        },
+        {
+          "find": "let Et;t[161]===Symbol.for(\"react.memo_cache_sentinel\")?(Et=Lvd.map(u2d),t[161]=Et):Et=t[161];let xt;t[162]!==r?(xt=c.jsx(it,{flexShrink:0,minWidth:92,children:c.jsx(HC,{onValueChange:lt,value:r,children:Et})}),t[162]=r,t[163]=xt):xt=t[163];",
+          "replace": "const Et=Lvd.map(St=>c.jsx(mw,{value:St.value,children:new Intl.NumberFormat(Zdn().language,{style:\"unit\",unit:\"day\",unitDisplay:\"long\"}).format(Number.parseInt(St.value,10))},St.value)),xt=c.jsx(it,{flexShrink:0,minWidth:92,children:c.jsx(HC,{onValueChange:lt,value:r,children:Et})});",
+          "expect": 1,
+          "marker": "const Et=Lvd.map(St=>c.jsx(mw,{value:St.value,children:new Intl.NumberFormat(Zdn().language,{style:\"unit\",unit:\"day\",unitDisplay:\"long\"}).format(Number.parseInt(St.value,10))},St.value)),xt=c.jsx(it,{flexShrink:0,minWidth:92,children:c.jsx(HC,{onValueChange:lt,value:r,children:Et})});",
+          "note": "Localize 7d/30d/90d labels without changing values or caching stale language"
+        },
+        {
+          "find": "function Nwc(t){const n=Date.now()-t,i=Math.floor(n/1e3),o=Math.floor(i/60),s=Math.floor(o/60),r=Math.floor(s/24),a=Math.floor(r/7),l=Math.floor(r/30),d=Math.floor(r/365);return i<60?i===1?\"1 second ago\":`${i} seconds ago`:o<60?o===1?\"1 minute ago\":`${o} minutes ago`:s<24?s===1?\"1 hour ago\":`${s} hours ago`:r<7?r===1?\"1 day ago\":`${r} days ago`:a<4?a===1?\"1 week ago\":`${a} weeks ago`:l<12?l===1?\"1 month ago\":`${l} months ago`:d===1?\"1 year ago\":`${d} years ago`}",
+          "replace": "function Nwc(t){return DT(t,Zdn().language)}",
+          "expect": 1,
+          "marker": "function Nwc(t){return DT(t,Zdn().language)}",
+          "note": "Reuse existing relative time locale formatter"
+        },
+        {
+          "find": "function Lbo(t){const e=z.c(7),{entries:n,colorVariant:i}=t,[o,s]=P.useState(db.All);let r;if(e[0]!==n||e[1]!==o){const d=jwc(n);r=BVc(d,o),e[0]=n,e[1]=o,e[2]=r}else r=e[2];const a=r;let l;return e[3]!==i||e[4]!==a||e[5]!==o?(l=c.jsx(pxc,{colorVariant:i,data:a,onPeriodChange:s,selectedPeriod:o}),e[3]=i,e[4]=a,e[5]=o,e[6]=l):l=e[6],l}",
+          "replace": "function Lbo(t){Vn();const{entries:n,colorVariant:i}=t,[o,s]=P.useState(db.All);return c.jsx(pxc,{colorVariant:i,data:BVc(jwc(n),o),onPeriodChange:s,selectedPeriod:o})}",
+          "expect": 1,
+          "marker": "function Lbo(t){Vn();const{entries:n,colorVariant:i}=t,[o,s]=P.useState(db.All);return c.jsx(pxc,{colorVariant:i,data:BVc(jwc(n),o),onPeriodChange:s,selectedPeriod:o})}",
+          "note": "Subscribe readiness timeline to language changes and invalidate derived dates"
+        },
+        {
+          "find": "let v;e[0]!==s?(v=xHe(mG.back,s),e[0]=s,e[1]=v):v=e[1];const b=v;let S;e[2]!==s?(S=xHe(mG.forward,s),e[2]=s,e[3]=S):S=e[3];const C=S,",
+          "replace": "const b=xHe({...mG.back,label:y(\"common.historyNavigationButtons.back\")},s),C=xHe({...mG.forward,label:y(\"common.historyNavigationButtons.forward\")},s),",
+          "expect": 1,
+          "marker": "const b=xHe({...mG.back,label:y(\"common.historyNavigationButtons.back\")},s),C=xHe({...mG.forward,label:y(\"common.historyNavigationButtons.forward\")},s),",
+          "note": "Translate history tooltips with existing subscribed translator"
+        },
+        {
+          "find": "content:xHe(mG.back,o)",
+          "replace": "content:xHe({...mG.back,label:d(\"chat.pageHeader.back\")},o)",
+          "expect": 1,
+          "marker": "content:xHe({...mG.back,label:d(\"chat.pageHeader.back\")},o)",
+          "note": "Translate page header back tooltip"
+        },
+        {
+          "find": "content:xHe(mG.forward,o)",
+          "replace": "content:xHe({...mG.forward,label:d(\"chat.pageHeader.forward\")},o)",
+          "expect": 1,
+          "marker": "content:xHe({...mG.forward,label:d(\"chat.pageHeader.forward\")},o)",
+          "note": "Translate page header forward tooltip"
+        },
+        {
+          "find": "function Zdn(){",
+          "replace": "function FactoryZhText(t,e){return typeof t===\"string\"?Zdn().t(t,{...e,ns:\"patchUi\",keySeparator:false,nsSeparator:false,defaultValue:t}):t}function Zdn(){",
+          "expect": 1,
+          "marker": "function FactoryZhText(t,e){return typeof t===\"string\"?Zdn().t(t,{...e,ns:\"patchUi\",keySeparator:false,nsSeparator:false,defaultValue:t}):t}function Zdn(){",
+          "note": "Localize only confirmed supplemental display strings through the existing locale instance"
+        },
+        {
+          "find": "let jo;e[189]!==Dt||e[190]!==$||e[191]!==ft||e[192]!==Ge?(jo=$&&!Ge?{value:Dt,onChange:ft,items:[{value:Up.Overview,label:\"Overview\"},{value:Up.Chain,label:\"Chain\"}]}:void 0,e[189]=Dt,e[190]=$,e[191]=ft,e[192]=Ge,e[193]=jo):jo=e[193];",
+          "replace": "const jo=$&&!Ge?{value:Dt,onChange:ft,items:[{value:Up.Overview,label:FactoryZhText(\"Overview\")},{value:Up.Chain,label:FactoryZhText(\"Chain\")}]}:void 0;",
+          "expect": 1,
+          "marker": "const jo=$&&!Ge?{value:Dt,onChange:ft,items:[{value:Up.Overview,label:FactoryZhText(\"Overview\")},{value:Up.Chain,label:FactoryZhText(\"Chain\")}]}:void 0;",
+          "note": "Translate Slack automation tabs and invalidate language-independent compiler cache"
+        },
+        {
+          "find": "Pt=lt?Ed.Failed:TPd({receipt:Bt,isApplying:ft});ht.push({id:bt,operationId:Tt.operationId,section:ut.displaySection??ut.catalogItem.section,label:ut.displayLabel??ut.catalogItem.label,before:Ot.before,after:ut.formatValue(jt,xt),",
+          "replace": "Pt=lt?Ed.Failed:TPd({receipt:Bt,isApplying:ft});const FactoryZhOptionLabel=Pt=>{const Ot=ut.catalogItem.operationId;if(Ot===\"personal.language.set\")return Pt.label;if(Ot.endsWith(\".model.set\")&&![rH,PJ,Xre,Jk].includes(Pt.value))return Pt.disabled&&Pt.label.endsWith(\" (unavailable)\")?s(\"settingRow.unavailableModel\",{name:Pt.label.slice(0,-\" (unavailable)\".length)}):Pt.label;if(Ot===\"sessionDefaults.specMode.saveDirectory.set\"&&Pt.disabled)return FactoryZhText(\"Custom ({{path}})\",{path:Pt.value});return FactoryZhText(Pt.label)},FactoryZhValue=(Pt,Ot)=>{const Bt=Ot??ut.formatValue(Pt,xt);if(ut.catalogItem.operationId.startsWith(\"settings.target.\"))return FactoryZhText(Bt);if(ut.control?.kind===\"switch\")return FactoryZhText(Bt);if(ut.control?.kind===\"select\"){if(Ot!==void 0&&ut.catalogItem.operationId.endsWith(\".model.set\")&&![rH,PJ,Xre,Jk].includes(Pt))return Ot;const At=ut.control.options.find(Ft=>Ft.value===Pt);return At?FactoryZhOptionLabel(At):Bt}if(ut.control?.kind===\"text\"&&(Pt===\"\"||typeof Pt!==\"string\"))return FactoryZhText(Bt);return Bt};ht.push({id:bt,operationId:Tt.operationId,section:FactoryZhText(ut.displaySection??ut.catalogItem.section),label:ut.catalogItem.operationId===\"personal.sounds.focusMode.set\"?s(\"soundsSection.focusMode\"):FactoryZhText(ut.displayLabel??ut.catalogItem.label),before:FactoryZhValue(Ot.beforeValue,Ot.before),after:FactoryZhValue(jt),",
+          "expect": 1,
+          "marker": "Pt=lt?Ed.Failed:TPd({receipt:Bt,isApplying:ft});const FactoryZhOptionLabel=Pt=>{const Ot=ut.catalogItem.operationId;if(Ot===\"personal.language.set\")return Pt.label;if(Ot.endsWith(\".model.set\")&&![rH,PJ,Xre,Jk].includes(Pt.value))return Pt.disabled&&Pt.label.endsWith(\" (unavailable)\")?s(\"settingRow.unavailableModel\",{name:Pt.label.slice(0,-\" (unavailable)\".length)}):Pt.label;if(Ot===\"sessionDefaults.specMode.saveDirectory.set\"&&Pt.disabled)return FactoryZhText(\"Custom ({{path}})\",{path:Pt.value});return FactoryZhText(Pt.label)},FactoryZhValue=(Pt,Ot)=>{const Bt=Ot??ut.formatValue(Pt,xt);if(ut.catalogItem.operationId.startsWith(\"settings.target.\"))return FactoryZhText(Bt);if(ut.control?.kind===\"switch\")return FactoryZhText(Bt);if(ut.control?.kind===\"select\"){if(Ot!==void 0&&ut.catalogItem.operationId.endsWith(\".model.set\")&&![rH,PJ,Xre,Jk].includes(Pt))return Ot;const At=ut.control.options.find(Ft=>Ft.value===Pt);return At?FactoryZhOptionLabel(At):Bt}if(ut.control?.kind===\"text\"&&(Pt===\"\"||typeof Pt!==\"string\"))return FactoryZhText(Bt);return Bt};ht.push({id:bt,operationId:Tt.operationId,section:FactoryZhText(ut.displaySection??ut.catalogItem.section),label:ut.catalogItem.operationId===\"personal.sounds.focusMode.set\"?s(\"soundsSection.focusMode\"):FactoryZhText(ut.displayLabel??ut.catalogItem.label),before:FactoryZhValue(Ot.beforeValue,Ot.before),after:FactoryZhValue(jt),",
+          "note": "Update existing first catalog edit only. Navigation formatValue remains original English so its known static snapshot can project through current locale in both directions; user text/model safeguards stay intact."
+        },
+        {
+          "find": "detail:lt??Bt?.detail,detailLink:lt?void 0:Bt?.detailLink",
+          "replace": "detail:typeof lt===\"string\"?FactoryZhText(lt):Bt?.detail,detailLink:lt?void 0:Bt?.detailLink",
+          "expect": 1,
+          "marker": "detail:typeof lt===\"string\"?FactoryZhText(lt):Bt?.detail,detailLink:lt?void 0:Bt?.detailLink",
+          "note": "Translate only local argument-validation detail; server receipt detail remains raw."
+        },
+        {
+          "find": "control:lt===void 0&&ut.control?ut.control.kind===\"switch\"&&typeof jt==\"boolean\"?{kind:\"switch\",value:jt}:ut.control.kind===\"select\"&&typeof jt==\"string\"?{kind:\"select\",options:ut.control.options,value:jt}:ut.control.kind===\"number\"&&typeof jt==\"string\"?{...ut.control,error:$t,value:jt}:ut.control.kind===\"text\"&&typeof jt==\"string\"?{...ut.control,error:$t,value:jt}:void 0:void 0",
+          "replace": "control:lt===void 0&&ut.control?ut.control.kind===\"switch\"&&typeof jt==\"boolean\"?{kind:\"switch\",value:jt}:ut.control.kind===\"select\"&&typeof jt==\"string\"?{kind:\"select\",options:ut.control.options.map(Nt=>({...Nt,label:FactoryZhOptionLabel(Nt)})),value:jt}:ut.control.kind===\"number\"&&typeof jt==\"string\"?{...ut.control,error:FactoryZhText($t),placeholder:FactoryZhText(ut.control.placeholder),value:jt}:ut.control.kind===\"text\"&&typeof jt==\"string\"?{...ut.control,error:FactoryZhText($t),placeholder:FactoryZhText(ut.control.placeholder),value:jt}:void 0:void 0",
+          "expect": 1,
+          "marker": "control:lt===void 0&&ut.control?ut.control.kind===\"switch\"&&typeof jt==\"boolean\"?{kind:\"switch\",value:jt}:ut.control.kind===\"select\"&&typeof jt==\"string\"?{kind:\"select\",options:ut.control.options.map(Nt=>({...Nt,label:FactoryZhOptionLabel(Nt)})),value:jt}:ut.control.kind===\"number\"&&typeof jt==\"string\"?{...ut.control,error:FactoryZhText($t),placeholder:FactoryZhText(ut.control.placeholder),value:jt}:ut.control.kind===\"text\"&&typeof jt==\"string\"?{...ut.control,error:FactoryZhText($t),placeholder:FactoryZhText(ut.control.placeholder),value:jt}:void 0:void 0",
+          "note": "Project labels/placeholder/local errors; retain exact control values."
+        },
+        {
+          "find": "const s=a=>{const l=typeof a==\"number\"?a:typeof a==\"string\"&&a.trim().length>0?Number(a):Number.NaN;if(!Number.isInteger(l))return\"Enter a whole number.\";if(l<n)return`Enter a value of at least ${n}.`;if(l>e)return`Enter a value no greater than ${e}.`}",
+          "replace": "const s=a=>{const l=typeof a==\"number\"?a:typeof a==\"string\"&&a.trim().length>0?Number(a):Number.NaN;if(!Number.isInteger(l))return FactoryZhText(\"Enter a whole number.\");if(l<n)return FactoryZhText(\"Enter a value of at least {{min}}.\",{min:n});if(l>e)return FactoryZhText(\"Enter a value no greater than {{max}}.\",{max:e})}",
+          "expect": 1,
+          "marker": "const s=a=>{const l=typeof a==\"number\"?a:typeof a==\"string\"&&a.trim().length>0?Number(a):Number.NaN;if(!Number.isInteger(l))return FactoryZhText(\"Enter a whole number.\");if(l<n)return FactoryZhText(\"Enter a value of at least {{min}}.\",{min:n});if(l>e)return FactoryZhText(\"Enter a value no greater than {{max}}.\",{max:e})}",
+          "note": "Named interpolation for numeric bounds; validation rules unchanged."
+        },
+        {
+          "find": "const r=a=>{if(typeof a!=\"string\")return\"The staged value is not valid text.\";if(a.length>e)return`Enter no more than ${e} characters.`}",
+          "replace": "const r=a=>{if(typeof a!=\"string\")return FactoryZhText(\"The staged value is not valid text.\");if(a.length>e)return FactoryZhText(\"Enter no more than {{max}} characters.\",{max:e})}",
+          "expect": 1,
+          "marker": "const r=a=>{if(typeof a!=\"string\")return FactoryZhText(\"The staged value is not valid text.\");if(a.length>e)return FactoryZhText(\"Enter no more than {{max}} characters.\",{max:e})}",
+          "note": "Named interpolation for text length."
+        },
+        {
+          "find": "let a;e[5]!==n.label?(a=c.jsx(qe,{color:\"default\",variant:\"subtitle-3\",children:n.label}),e[5]=n.label,e[6]=a):a=e[6];",
+          "replace": "const a=c.jsx(qe,{color:\"default\",variant:\"subtitle-3\",children:FactoryZhText(n.label)});",
+          "expect": 1,
+          "marker": "const a=c.jsx(qe,{color:\"default\",variant:\"subtitle-3\",children:FactoryZhText(n.label)});",
+          "note": "Translate only diagnostic display label; remove label-only cache to respond to language events."
+        },
+        {
+          "find": "let f;e[15]!==n.hint||e[16]!==n.status||e[17]!==s.textColor?(f=n.hint&&n.status!==\"ok\"?c.jsx(qe,{color:s.textColor,variant:\"body-3\",children:n.hint}):null,e[15]=n.hint,e[16]=n.status,e[17]=s.textColor,e[18]=f):f=e[18];",
+          "replace": "const f=n.hint&&n.status!==\"ok\"?c.jsx(qe,{color:s.textColor,variant:\"body-3\",children:(()=>{const t=n.hint;if(n.id===\"daemon_state\"){const e=new RegExp(\"^An EDR-protected process holds the daemon port and cannot be terminated by user-level Factory\\\\. Reboot or have IT free port ([0-9]+|\\\\?)\\\\.$\").exec(t);if(e)return FactoryZhText(\"An EDR-protected process holds the daemon port and cannot be terminated by user-level Factory. Reboot or have IT free port {{port}}.\",{port:e[1]});}if(n.id===\"zombie_socket\"){const e=new RegExp(\"^PID ([0-9]+) owns port ([0-9]+) but is not responding as a Factory daemon\\\\. The original daemon process likely exited and the OS recycled this PID\\\\. A reboot may be required, or the process holding the port needs to be terminated\\\\.$\").exec(t);if(e)return FactoryZhText(\"PID {{pid}} owns port {{port}} but is not responding as a Factory daemon. The original daemon process likely exited and the OS recycled this PID. A reboot may be required, or the process holding the port needs to be terminated.\",{pid:e[1],port:e[2]});}if(n.id===\"zombie_socket\"){const e=new RegExp(\"^The Windows kernel reports PID ([0-9]+) as owning port ([0-9]+) in LISTEN state, but that process no longer exists\\\\. This is an orphaned kernel socket entry -- typically caused by an endpoint-protection kernel driver \\\\(WFP/TDI filter\\\\) holding a socket handle reference after the process exited\\\\. A reboot is required to clear it\\\\. Run \\\"netstat -ano \\\\| findstr \\\\2\\\" in an admin terminal to confirm\\\\.$\").exec(t);if(e)return FactoryZhText(\"The Windows kernel reports PID {{pid}} as owning port {{port}} in LISTEN state, but that process no longer exists. This is an orphaned kernel socket entry -- typically caused by an endpoint-protection kernel driver (WFP/TDI filter) holding a socket handle reference after the process exited. A reboot is required to clear it. Run \\\"netstat -ano | findstr {{port}}\\\" in an admin terminal to confirm.\",{pid:e[1],port:e[2]});}return FactoryZhText(t)})()}):null;",
+          "expect": 1,
+          "marker": "const f=n.hint&&n.status!==\"ok\"?c.jsx(qe,{color:s.textColor,variant:\"body-3\",children:(()=>{const t=n.hint;if(n.id===\"daemon_state\"){const e=new RegExp(\"^An EDR-protected process holds the daemon port and cannot be terminated by user-level Factory\\\\. Reboot or have IT free port ([0-9]+|\\\\?)\\\\.$\").exec(t);if(e)return FactoryZhText(\"An EDR-protected process holds the daemon port and cannot be terminated by user-level Factory. Reboot or have IT free port {{port}}.\",{port:e[1]});}if(n.id===\"zombie_socket\"){const e=new RegExp(\"^PID ([0-9]+) owns port ([0-9]+) but is not responding as a Factory daemon\\\\. The original daemon process likely exited and the OS recycled this PID\\\\. A reboot may be required, or the process holding the port needs to be terminated\\\\.$\").exec(t);if(e)return FactoryZhText(\"PID {{pid}} owns port {{port}} but is not responding as a Factory daemon. The original daemon process likely exited and the OS recycled this PID. A reboot may be required, or the process holding the port needs to be terminated.\",{pid:e[1],port:e[2]});}if(n.id===\"zombie_socket\"){const e=new RegExp(\"^The Windows kernel reports PID ([0-9]+) as owning port ([0-9]+) in LISTEN state, but that process no longer exists\\\\. This is an orphaned kernel socket entry -- typically caused by an endpoint-protection kernel driver \\\\(WFP/TDI filter\\\\) holding a socket handle reference after the process exited\\\\. A reboot is required to clear it\\\\. Run \\\"netstat -ano \\\\| findstr \\\\2\\\" in an admin terminal to confirm\\\\.$\").exec(t);if(e)return FactoryZhText(\"The Windows kernel reports PID {{pid}} as owning port {{port}} in LISTEN state, but that process no longer exists. This is an orphaned kernel socket entry -- typically caused by an endpoint-protection kernel driver (WFP/TDI filter) holding a socket handle reference after the process exited. A reboot is required to clear it. Run \\\"netstat -ano | findstr {{port}}\\\" in an admin terminal to confirm.\",{pid:e[1],port:e[2]});}return FactoryZhText(t)})()}):null;",
+          "note": "Update existing hint edit; exact check-id/full-template match for three local PID/port instructions. No fuzzy text replacement."
+        },
+        {
+          "find": "function NOd({description:t,pageLabel:e}){const n=t.replace(/\\.$/,\"\");return`Continue in ${e} to ${n.charAt(0).toLowerCase()}${n.slice(1)}.`}",
+          "replace": "function NOd({description:t,pageLabel:e}){const n=FactoryZhText(t).replace(/[.。]$/,\"\");return FactoryZhText(\"Continue in {{page}} to {{description}}.\",{page:FactoryZhText(e),description:n.charAt(0).toLowerCase()+n.slice(1)})}",
+          "expect": 1,
+          "marker": "function NOd({description:t,pageLabel:e}){const n=FactoryZhText(t).replace(/[.。]$/,\"\");return FactoryZhText(\"Continue in {{page}} to {{description}}.\",{page:FactoryZhText(e),description:n.charAt(0).toLowerCase()+n.slice(1)})}",
+          "note": "Localize only known navigation description/page display through named interpolation; retain destination route/IDs."
+        },
+        {
+          "find": "actionCopy:{primary:\"Open settings\",inProgress:\"Opening…\",succeeded:\"Opened\",incompleteSuffix:\"before opening.\"}",
+          "replace": "actionCopy:{primary:FactoryZhText(\"Open settings\"),inProgress:FactoryZhText(\"Opening…\"),succeeded:FactoryZhText(\"Opened\"),incompleteSuffix:FactoryZhText(\"before opening.\")}",
+          "expect": 1,
+          "marker": "actionCopy:{primary:FactoryZhText(\"Open settings\"),inProgress:FactoryZhText(\"Opening…\"),succeeded:FactoryZhText(\"Opened\"),incompleteSuffix:FactoryZhText(\"before opening.\")}",
+          "note": "Navigation CTA display copy only; catalogItem and inputSchema remain original."
+        },
+        {
+          "find": "destination:{description:i.description,instructions:a}",
+          "replace": "destination:{description:FactoryZhText(i.description),instructions:a}",
+          "expect": 1,
+          "marker": "destination:{description:FactoryZhText(i.description),instructions:a}",
+          "note": "Translate human-facing destination description only; keep machine catalog description raw."
+        },
+        {
+          "find": "function u0o(t,e=!1){let n;return t<=2?n=\"Basic\":t===3?n=\"Intermediate\":n=\"Advanced\",e?n.toUpperCase():n}",
+          "replace": "function u0o(t,e=!1){const n=FactoryZhText(t<=2?\"Basic\":t===3?\"Intermediate\":\"Advanced\");return e?n.toUpperCase():n}",
+          "expect": 1,
+          "marker": "function u0o(t,e=!1){const n=FactoryZhText(t<=2?\"Basic\":t===3?\"Intermediate\":\"Advanced\");return e?n.toUpperCase():n}",
+          "note": "Localize readiness tier display labels; retain numeric levels and English uppercase behavior"
+        },
+        {
+          "find": "let v;e[9]!==n?(v=u0o(n,!0),e[9]=n,e[10]=v):v=e[10];",
+          "replace": "const v=u0o(n,!0);",
+          "expect": 1,
+          "marker": "const v=u0o(n,!0);",
+          "note": "Readiness badge uses existing subscribed locale; invalidate level-only compiler cache"
+        },
+        {
+          "find": "let M;e[18]!==o?(M=u0o(o),e[18]=o,e[19]=M):M=e[19];",
+          "replace": "const M=u0o(o);",
+          "expect": 1,
+          "marker": "const M=u0o(o);",
+          "note": "Readiness modal uses existing subscribed locale; invalidate level-only compiler cache"
+        },
+        {
+          "find": "function Tgc(t){const e=z.c(135),{field:n,id:i,isSaving:o,organizationCredentials:s,providerMode:r,hiddenProviderPresets:a,error:l,onChange:d}=t,{t:u}=ce(\"components\");",
+          "replace": "function Tgc(t){const e=z.c(135),{field:FactoryZhField,id:i,isSaving:o,organizationCredentials:s,providerMode:r,hiddenProviderPresets:a,error:l,onChange:d}=t,{t:u}=ce(\"components\"),n={...FactoryZhField,label:FactoryZhText(FactoryZhField.label),helper:FactoryZhText(FactoryZhField.helper),placeholder:[\"Use default\",\"How this model appears in the model picker\",\"Optional server credential\",\"Your provider API key\"].includes(FactoryZhField.placeholder)?FactoryZhText(FactoryZhField.placeholder):FactoryZhField.placeholder,options:FactoryZhField.options.map(FactoryZhOption=>({...FactoryZhOption,label:FactoryZhField.id===\"provider\"||FactoryZhField.id===\"preset\"&&FactoryZhOption.value!==\"custom\"?FactoryZhOption.label:FactoryZhText(FactoryZhOption.label)}))};",
+          "expect": 1,
+          "marker": "function Tgc(t){const e=z.c(135),{field:FactoryZhField,id:i,isSaving:o,organizationCredentials:s,providerMode:r,hiddenProviderPresets:a,error:l,onChange:d}=t,{t:u}=ce(\"components\"),n={...FactoryZhField,label:FactoryZhText(FactoryZhField.label),helper:FactoryZhText(FactoryZhField.helper),placeholder:[\"Use default\",\"How this model appears in the model picker\",\"Optional server credential\",\"Your provider API key\"].includes(FactoryZhField.placeholder)?FactoryZhText(FactoryZhField.placeholder):FactoryZhField.placeholder,options:FactoryZhField.options.map(FactoryZhOption=>({...FactoryZhOption,label:FactoryZhField.id===\"provider\"||FactoryZhField.id===\"preset\"&&FactoryZhOption.value!==\"custom\"?FactoryZhOption.label:FactoryZhText(FactoryZhOption.label)}))};",
+          "note": "Project local custom-model form display only. Preserve provider API names/preset brands, technical examples, IDs, option values, user values and entry data. Existing le subscription plus fresh projected labels/options updates compiler caches on locale changes; nwi/iwi unchanged."
+        },
+        {
+          "find": "function oHn(t){return\"message\"in t?t.message:trr(t)}",
+          "replace": "function oHn(t){return\"message\"in t?t.message:FactoryZhText(trr(t))}",
+          "expect": 1,
+          "marker": "function oHn(t){return\"message\"in t?t.message:FactoryZhText(trr(t))}",
+          "note": "Only validation display return translated; validator codes and sWs unchanged."
+        },
+        {
+          "find": "}){\"use no memo\";const y=sf(null),v=sf(null),b=sf(!1),S=sf(null),C=sf(null),I=sf(null),x=sf(null),E=sf(null),",
+          "replace": "}){\"use no memo\";X4(()=>{const FactoryZhI18n=Zdn(),FactoryZhRefresh=()=>oe(FactoryZhVersion=>FactoryZhVersion+1);FactoryZhI18n.on(\"languageChanged\",FactoryZhRefresh);return()=>FactoryZhI18n.off(\"languageChanged\",FactoryZhRefresh)},[]);const y=sf(null),v=sf(null),b=sf(!1),S=sf(null),C=sf(null),I=sf(null),x=sf(null),E=sf(null),",
+          "expect": 1,
+          "marker": "}){\"use no memo\";X4(()=>{const FactoryZhI18n=Zdn(),FactoryZhRefresh=()=>oe(FactoryZhVersion=>FactoryZhVersion+1);FactoryZhI18n.on(\"languageChanged\",FactoryZhRefresh);return()=>FactoryZhI18n.off(\"languageChanged\",FactoryZhRefresh)},[]);const y=sf(null),v=sf(null),b=sf(!1),S=sf(null),C=sf(null),I=sf(null),x=sf(null),E=sf(null),",
+          "note": "Subscribe file tree to locale with native Preact layout effect; remove listener on unmount and reuse existing redraw setter."
+        },
+        {
+          "find": "placeholder:\"Search…\",\"data-file-tree-search-input\":!0",
+          "replace": "placeholder:FactoryZhText(\"Search…\"),\"data-file-tree-search-input\":!0",
+          "expect": 1,
+          "marker": "placeholder:FactoryZhText(\"Search…\"),\"data-file-tree-search-input\":!0",
+          "note": "Search placeholder display only."
+        },
+        {
+          "find": "\"data-type\":Lar,\"aria-label\":\"Options\",\"aria-haspopup\":\"menu\"",
+          "replace": "\"data-type\":Lar,\"aria-label\":FactoryZhText(\"Options\"),\"aria-haspopup\":\"menu\"",
+          "expect": 1,
+          "marker": "\"data-type\":Lar,\"aria-label\":FactoryZhText(\"Options\"),\"aria-haspopup\":\"menu\"",
+          "note": "Options accessibility label display only."
+        },
+        {
+          "find": "function _n(t){const e=z.c(40);",
+          "replace": "function _n(t){ce(\"components\");const e=z.c(40);",
+          "expect": 1,
+          "marker": "function _n(t){ce(\"components\");const e=z.c(40);",
+          "note": "Subscribe default checkbox label to locale."
+        },
+        {
+          "find": "let A;e[4]!==p?(A=c.jsx(Nc,{\"aria-label\":\"Select row\",...p}),e[4]=p,e[5]=A):A=e[5];",
+          "replace": "const A=c.jsx(Nc,{\"aria-label\":FactoryZhText(\"Select row\"),...p});",
+          "expect": 1,
+          "marker": "const A=c.jsx(Nc,{\"aria-label\":FactoryZhText(\"Select row\"),...p});",
+          "note": "Remove p-only checkbox cache; preserve caller aria-label override and props."
+        },
+        {
+          "find": "function pHt(t){if(DMi(t)){const{label:e,description:n}=jgr[t];return{label:e,description:n}}return{label:rSe(t),description:void 0}}",
+          "replace": "function pHt(t){if(DMi(t)){const{label:e,description:n}=jgr[t];return{label:FactoryZhText(e),description:FactoryZhText(n)}}return{label:rSe(t),description:void 0}}",
+          "expect": 1,
+          "marker": "function pHt(t){if(DMi(t)){const{label:e,description:n}=jgr[t];return{label:FactoryZhText(e),description:FactoryZhText(n)}}return{label:rSe(t),description:void 0}}",
+          "note": "Known failure metadata only; unknown reason-code fallback Yve(t) stays raw."
+        },
+        {
+          "find": "function w0r({eventType:t,reason:e}){if(e){const n=b0r[e];return n?{label:n.label,description:n.description}:{label:rSe(e),description:void 0}}return t===jY.Degraded?{label:gbn.label,description:gbn.description}:{label:rSe(t),description:void 0}}",
+          "replace": "function w0r({eventType:t,reason:e}){if(e){const n=b0r[e];return n?{label:FactoryZhText(n.label),description:FactoryZhText(n.description)}:{label:rSe(e),description:void 0}}return t===jY.Degraded?{label:FactoryZhText(gbn.label),description:FactoryZhText(gbn.description)}:{label:rSe(t),description:void 0}}",
+          "expect": 1,
+          "marker": "function w0r({eventType:t,reason:e}){if(e){const n=b0r[e];return n?{label:FactoryZhText(n.label),description:FactoryZhText(n.description)}:{label:rSe(e),description:void 0}}return t===jY.Degraded?{label:FactoryZhText(gbn.label),description:FactoryZhText(gbn.description)}:{label:rSe(t),description:void 0}}",
+          "note": "Known pause/degraded metadata only; unknown event/reason codes stay raw."
+        },
+        {
+          "find": "function I0r(t){if(y0r(t)){const{label:e,description:n}=Fgr[t];return{label:e,description:n}}return pHt(t)}",
+          "replace": "function I0r(t){if(y0r(t)){const{label:e,description:n}=Fgr[t];return{label:FactoryZhText(e),description:FactoryZhText(n)}}return pHt(t)}",
+          "expect": 1,
+          "marker": "function I0r(t){if(y0r(t)){const{label:e,description:n}=Fgr[t];return{label:FactoryZhText(e),description:FactoryZhText(n)}}return pHt(t)}",
+          "note": "Known dispatch-failure metadata only; delegate other known/unknown reason handling to ANt."
+        },
+        {
+          "find": "function x0r({source:t,status:e}){const n=S0r[t][e];return n?{label:n.label,description:n.description}:{label:rSe(e),description:void 0}}",
+          "replace": "function x0r({source:t,status:e}){const n=S0r[t][e];return n?{label:FactoryZhText(n.label),description:FactoryZhText(n.description)}:{label:rSe(e),description:void 0}}",
+          "expect": 1,
+          "marker": "function x0r({source:t,status:e}){const n=S0r[t][e];return n?{label:FactoryZhText(n.label),description:FactoryZhText(n.description)}:{label:rSe(e),description:void 0}}",
+          "note": "Known source/status presentation only; webhook/Slack status IDs and unknown fallback remain unchanged."
+        },
+        {
+          "find": "function E0r({firstMissedSlot:t,missedSlotCount:e,recoveredAt:n,closedReason:i,formatTime:o}){const s=Math.max(1,e??1),r=`${s} scheduled run${s===1?\"\":\"s\"}`,a=o(t),l=n===void 0?`since ${a}`:`between ${a} and ${o(n)}`,d=`Missed ${r} ${l}.`,u=i??(n===void 0?\"open\":\"recovered\"),f=C0r[u];return f?{label:f.label,description:`${d} ${f.description}`}:{label:`Missed runs (${rSe(u).toLowerCase()})`,description:d}}",
+          "replace": "function E0r({firstMissedSlot:t,missedSlotCount:e,recoveredAt:n,closedReason:i,formatTime:o}){const s=Math.max(1,e??1),a=o(t),d=n===void 0?FactoryZhText(s===1?\"Missed {{count}} scheduled run since {{time}}.\":\"Missed {{count}} scheduled runs since {{time}}.\",{count:s,time:a}):FactoryZhText(s===1?\"Missed {{count}} scheduled run between {{start}} and {{end}}.\":\"Missed {{count}} scheduled runs between {{start}} and {{end}}.\",{count:s,start:a,end:o(n)}),u=i??(n===void 0?\"open\":\"recovered\"),f=C0r[u];return f?{label:FactoryZhText(f.label),description:`${d} ${FactoryZhText(f.description)}`}:{label:FactoryZhText(\"Missed runs ({{reason}})\",{reason:rSe(u).toLowerCase()}),description:d}}",
+          "expect": 1,
+          "marker": "function E0r({firstMissedSlot:t,missedSlotCount:e,recoveredAt:n,closedReason:i,formatTime:o}){const s=Math.max(1,e??1),a=o(t),d=n===void 0?FactoryZhText(s===1?\"Missed {{count}} scheduled run since {{time}}.\":\"Missed {{count}} scheduled runs since {{time}}.\",{count:s,time:a}):FactoryZhText(s===1?\"Missed {{count}} scheduled run between {{start}} and {{end}}.\":\"Missed {{count}} scheduled runs between {{start}} and {{end}}.\",{count:s,start:a,end:o(n)}),u=i??(n===void 0?\"open\":\"recovered\"),f=C0r[u];return f?{label:FactoryZhText(f.label),description:`${d} ${FactoryZhText(f.description)}`}:{label:FactoryZhText(\"Missed runs ({{reason}})\",{reason:rSe(u).toLowerCase()}),description:d}}",
+          "note": "Named interpolation for missed-run count/time and unknown display reason; original closedReason/status/time formatter and raw event payload remain unchanged."
+        },
+        {
+          "find": "function LZu(t){return c.jsxs(G,{bg:w.bg.surface,borderColor:w.border.outer,borderRadius:w.radius.surface,\"data-stats-card-v2\":\"badge\",direction:\"column\",gap:w.space[4],padding:w.space[20],children:[c.jsx(se,{variant:re.Caption,children:t.name}),c.jsx(se,{tone:De.Secondary,variant:re.Caption,children:t.description}),t.quip?c.jsx(Oe,{padding:`${w.space[4]} 0 0`,children:c.jsx(se,{tone:De.Tertiary,variant:re.ButtonLabel,children:t.quip})}):null]},t.name)}",
+          "replace": "function LZu(t){const e=[[\"Super User\",\"1000+ sessions\",\"At this point, Droid should be paying rent in your terminal.\"],[\"Power User\",\"500+ sessions\",\"Your git log is basically a conversation history at this point.\"],[\"Getting Started\",\"100+ sessions\",\"First 100 down, infinite context windows to go.\"],[\"Streak Legend\",\"30+ day streak\",\"A month straight. Even Duolingo owl is impressed.\"],[\"Streak Master\",\"14+ day streak\",\"Two weeks of daily cooking. Your commit graph is thriving.\"],[\"Streak Starter\",\"7+ day streak\",\"A full week. The habit is forming.\"],[\"Centurion\",\"100+ hours total\",\"That's 4+ days of pure Droid time. Touch grass?\"],[\"Droid Veteran\",\"50+ hours total\",\"Longer than most Netflix binges. At least you're shipping.\"],[\"Droid Regular\",\"25+ hours total\",\"A full day with Droid. Time flies when you're shipping features.\"],[\"Droid Familiar\",\"5+ hours total\",\"More than most movies. Better plot too.\"],[\"First Hour\",\"1+ hour total\",\"The first hour of many.\"],[\"Code is Life\",\"16+ hour session\",\"Droid would like to speak with HR about work-life balance.\"],[\"Ultra Marathon\",\"8+ hour session\",\"Longer than a typical Lex Fridman Podcast.\"],[\"Marathon Coder\",\"4+ hour session\",\"All that just for another useEffect?\"],[\"Focused Session\",\"2+ hour session\",\"Could've watched Oppenheimer, chose to ship instead.\"],[\"Hour Block\",\"1+ hour session\",\"More productive than your last 3 standups.\"],[\"Night Owl\",\"35%+ sessions after 10pm\",\"The best code is written when everyone else is asleep.\"],[\"Early Bird\",\"35%+ sessions before 9am\",\"Ship before standup, flex during standup.\"],[\"Weekend Warrior\",\"30%+ sessions on weekends\",\"Side projects or just really behind on work?\"],[\"The DJ\",\"Sounds enabled\",\"Completion sounds hit different at 2am.\"],[\"Skill Collector\",\"10+ skills installed\",\"A skill for every occasion.\"],[\"Droid Builder\",\"3+ custom droids\",\"Why use defaults when you can customize everything?\"],[\"Hook Master\",\"2+ hooks enabled\",\"Automated the automation.\"],[\"BYOK Pioneer\",\"Custom models configured\",\"Bringing your own keys to the party.\"],[\"The Polyglot\",\"4+ languages used\",\"Jack of all trades, master of... probably TypeScript.\"],[\"Rustacean\",\"3+ Rust sessions\",\"Memory safety is not a phase, mom.\"],[\"Gopher\",\"3+ Go sessions\",\"if err != nil { return err }\"],[\"Model Explorer\",\"4+ models used\",\"Testing all the models to find the one that agrees with you.\"],[\"Early Adopter\",\"Joined before October 2025\",\"You were here before it was cool.\"]].some(e=>e[0]===t.name&&e[1]===t.description&&e[2]===t.quip);return c.jsxs(G,{bg:w.bg.surface,borderColor:w.border.outer,borderRadius:w.radius.surface,\"data-stats-card-v2\":\"badge\",direction:\"column\",gap:w.space[4],padding:w.space[20],children:[c.jsx(se,{variant:re.Caption,children:e?FactoryZhText(t.name):t.name}),c.jsx(se,{tone:De.Secondary,variant:re.Caption,children:e?FactoryZhText(t.description):t.description}),t.quip?c.jsx(Oe,{padding:`${w.space[4]} 0 0`,children:c.jsx(se,{tone:De.Tertiary,variant:re.ButtonLabel,children:e?FactoryZhText(t.quip):t.quip})}):null]},t.name)}",
+          "expect": 1,
+          "marker": "function LZu(t){const e=[[\"Super User\",\"1000+ sessions\",\"At this point, Droid should be paying rent in your terminal.\"],[\"Power User\",\"500+ sessions\",\"Your git log is basically a conversation history at this point.\"],[\"Getting Started\",\"100+ sessions\",\"First 100 down, infinite context windows to go.\"],[\"Streak Legend\",\"30+ day streak\",\"A month straight. Even Duolingo owl is impressed.\"],[\"Streak Master\",\"14+ day streak\",\"Two weeks of daily cooking. Your commit graph is thriving.\"],[\"Streak Starter\",\"7+ day streak\",\"A full week. The habit is forming.\"],[\"Centurion\",\"100+ hours total\",\"That's 4+ days of pure Droid time. Touch grass?\"],[\"Droid Veteran\",\"50+ hours total\",\"Longer than most Netflix binges. At least you're shipping.\"],[\"Droid Regular\",\"25+ hours total\",\"A full day with Droid. Time flies when you're shipping features.\"],[\"Droid Familiar\",\"5+ hours total\",\"More than most movies. Better plot too.\"],[\"First Hour\",\"1+ hour total\",\"The first hour of many.\"],[\"Code is Life\",\"16+ hour session\",\"Droid would like to speak with HR about work-life balance.\"],[\"Ultra Marathon\",\"8+ hour session\",\"Longer than a typical Lex Fridman Podcast.\"],[\"Marathon Coder\",\"4+ hour session\",\"All that just for another useEffect?\"],[\"Focused Session\",\"2+ hour session\",\"Could've watched Oppenheimer, chose to ship instead.\"],[\"Hour Block\",\"1+ hour session\",\"More productive than your last 3 standups.\"],[\"Night Owl\",\"35%+ sessions after 10pm\",\"The best code is written when everyone else is asleep.\"],[\"Early Bird\",\"35%+ sessions before 9am\",\"Ship before standup, flex during standup.\"],[\"Weekend Warrior\",\"30%+ sessions on weekends\",\"Side projects or just really behind on work?\"],[\"The DJ\",\"Sounds enabled\",\"Completion sounds hit different at 2am.\"],[\"Skill Collector\",\"10+ skills installed\",\"A skill for every occasion.\"],[\"Droid Builder\",\"3+ custom droids\",\"Why use defaults when you can customize everything?\"],[\"Hook Master\",\"2+ hooks enabled\",\"Automated the automation.\"],[\"BYOK Pioneer\",\"Custom models configured\",\"Bringing your own keys to the party.\"],[\"The Polyglot\",\"4+ languages used\",\"Jack of all trades, master of... probably TypeScript.\"],[\"Rustacean\",\"3+ Rust sessions\",\"Memory safety is not a phase, mom.\"],[\"Gopher\",\"3+ Go sessions\",\"if err != nil { return err }\"],[\"Model Explorer\",\"4+ models used\",\"Testing all the models to find the one that agrees with you.\"],[\"Early Adopter\",\"Joined before October 2025\",\"You were here before it was cool.\"]].some(e=>e[0]===t.name&&e[1]===t.description&&e[2]===t.quip);return c.jsxs(G,{bg:w.bg.surface,borderColor:w.border.outer,borderRadius:w.radius.surface,\"data-stats-card-v2\":\"badge\",direction:\"column\",gap:w.space[4],padding:w.space[20],children:[c.jsx(se,{variant:re.Caption,children:e?FactoryZhText(t.name):t.name}),c.jsx(se,{tone:De.Secondary,variant:re.Caption,children:e?FactoryZhText(t.description):t.description}),t.quip?c.jsx(Oe,{padding:`${w.space[4]} 0 0`,children:c.jsx(se,{tone:De.Tertiary,variant:re.ButtonLabel,children:e?FactoryZhText(t.quip):t.quip})}):null]},t.name)}",
+          "note": "Translate only exact original local badge triples, preserve unknown/mutated badges, DTO, React key and raw code quip."
+        },
+        {
+          "find": "function PZu(t){const e=t.longestSession?.assistantActiveTimeMs??0,n=vZu(t.firstSessionDate);return[{labelKey:\"statsHero.sessions\",value:yZu(t.totalSessions)},{labelKey:\"statsHero.totalTime\",value:wLt(t.totalTimeMs)},{labelKey:\"statsHero.longestStreak\",value:`${t.longestStreak}d`},{labelKey:\"statsHero.longestSession\",value:wLt(e)},{labelKey:\"statsHero.member\",value:`${n}d`}]}",
+          "replace": "function PZu(t){const e=t.longestSession?.assistantActiveTimeMs??0,n=vZu(t.firstSessionDate),i=new Intl.NumberFormat(Zdn().language,{style:\"unit\",unit:\"day\",unitDisplay:\"narrow\",useGrouping:!1});return[{labelKey:\"statsHero.sessions\",value:yZu(t.totalSessions)},{labelKey:\"statsHero.totalTime\",value:wLt(t.totalTimeMs)},{labelKey:\"statsHero.longestStreak\",value:i.format(t.longestStreak)},{labelKey:\"statsHero.longestSession\",value:wLt(e)},{labelKey:\"statsHero.member\",value:i.format(n)}]}",
+          "expect": 1,
+          "marker": "function PZu(t){const e=t.longestSession?.assistantActiveTimeMs??0,n=vZu(t.firstSessionDate),i=new Intl.NumberFormat(Zdn().language,{style:\"unit\",unit:\"day\",unitDisplay:\"narrow\",useGrouping:!1});return[{labelKey:\"statsHero.sessions\",value:yZu(t.totalSessions)},{labelKey:\"statsHero.totalTime\",value:wLt(t.totalTimeMs)},{labelKey:\"statsHero.longestStreak\",value:i.format(t.longestStreak)},{labelKey:\"statsHero.longestSession\",value:wLt(e)},{labelKey:\"statsHero.member\",value:i.format(n)}]}",
+          "note": "Day units use current locale; source values and member-date calculation unchanged."
+        },
+        {
+          "find": "function wLt(t){const e=t/36e5;if(e>=24){const i=Math.floor(e/24),o=Math.round(e%24);return`${i}d ${o}h`}if(e>=1)return`${Math.round(e)}h`;const n=t/(1e3*60);return`${Math.round(n)}m`}",
+          "replace": "function wLt(t){const e=t/36e5,n=(i,o)=>new Intl.NumberFormat(Zdn().language,{style:\"unit\",unit:o,unitDisplay:\"narrow\",useGrouping:!1}).format(i);if(e>=24){const i=Math.floor(e/24),o=Math.round(e%24);return`${n(i,\"day\")} ${n(o,\"hour\")}`}if(e>=1)return n(Math.round(e),\"hour\");return n(Math.round(t/(1e3*60)),\"minute\")}",
+          "expect": 1,
+          "marker": "function wLt(t){const e=t/36e5,n=(i,o)=>new Intl.NumberFormat(Zdn().language,{style:\"unit\",unit:o,unitDisplay:\"narrow\",useGrouping:!1}).format(i);if(e>=24){const i=Math.floor(e/24),o=Math.round(e%24);return`${n(i,\"day\")} ${n(o,\"hour\")}`}if(e>=1)return n(Math.round(e),\"hour\");return n(Math.round(t/(1e3*60)),\"minute\")}",
+          "note": "Stats duration display uses current locale units; source thresholds, rounding and numeric data unchanged."
+        },
+        {
+          "find": "const __vite__mapDeps=",
+          "replace": "import {renderProjectRemarkGroup as FactoryRenderProjectRemarkGroup} from \"./factory-project-remarks.js\";const __vite__mapDeps=",
+          "expect": 1,
+          "marker": "import {renderProjectRemarkGroup as FactoryRenderProjectRemarkGroup} from \"./factory-project-remarks.js\";const __vite__mapDeps=",
+          "note": "Project remarks: renderer module import"
+        },
+        {
+          "find": "function tTc(t){",
+          "replace": "function FactoryRemarkGroup(FactoryProps){return FactoryRenderProjectRemarkGroup(FactoryProps,{React:P,jsx:c.jsx,Group:G8t,Modal:Io,Input:ts,Button:Ue,Stack:G,Text:se,ErrorText:Fs,textProps:{tone:De.Tertiary,variant:re.Caption},buttonVariants:Pe,modalSize:Jo.Sm,space:w.space[8],useModalTheme:Cl,useLocale:()=>ce(\"components\"),text:FactoryZhText,api:window.electronAPI.projectRemarks});}function tTc(t){",
+          "expect": 1,
+          "marker": "function FactoryRemarkGroup(FactoryProps){return FactoryRenderProjectRemarkGroup(FactoryProps,{React:P,jsx:c.jsx,Group:G8t,Modal:Io,Input:ts,Button:Ue,Stack:G,Text:se,ErrorText:Fs,textProps:{tone:De.Tertiary,variant:re.Caption},buttonVariants:Pe,modalSize:Jo.Sm,space:w.space[8],useModalTheme:Cl,useLocale:()=>ce(\"components\"),text:FactoryZhText,api:window.electronAPI.projectRemarks});}function tTc(t){",
+          "note": "Project remarks: native React/UI adapter"
+        },
+        {
+          "find": "return c.jsx(G8t,{branchLabel:Oi.branchLabel",
+          "replace": "return c.jsx(Yt&&Yt.kind!==o3.Unknown?FactoryRemarkGroup:G8t,{factoryProjectKey:Yt&&Yt.kind!==o3.Unknown?Oi.key:void 0,branchLabel:Oi.branchLabel",
+          "expect": 1,
+          "marker": "return c.jsx(Yt&&Yt.kind!==o3.Unknown?FactoryRemarkGroup:G8t,{factoryProjectKey:Yt&&Yt.kind!==o3.Unknown?Oi.key:void 0,branchLabel:Oi.branchLabel",
+          "note": "Project remarks: project group display and menu"
+        },
+        {
+          "find": "function nwr(t){return c.jsxs(z3r,{$active:t.active,\"aria-pressed\":t.active,disabled:t.disabled,onClick:t.onClick,type:\"button\",children:[t.name,\" (\",t.matching.length,\")\"]},t.name)}",
+          "replace": "function nwr(t){return c.jsxs(z3r,{$active:t.active,\"aria-pressed\":t.active,disabled:t.disabled,onClick:t.onClick,type:\"button\",children:[t.label===void 0&&t.name===\"All\"?FactoryZhText(\"All\"):t.name,\" (\",t.matching.length,\")\"]},t.name)}",
+          "marker": "function nwr(t){return c.jsxs(z3r,{$active:t.active,\"aria-pressed\":t.active,disabled:t.disabled,onClick:t.onClick,type:\"button\",children:[t.label===void 0&&t.name===\"All\"?FactoryZhText(\"All\"):t.name,\" (\",t.matching.length,\")\"]},t.name)}",
+          "expect": 1,
+          "note": "Skill browser: translate only built-in All filter; preserve category labels, keys and callbacks"
+        },
+        {
+          "find": "let Q;e[45]!==$||e[46]!==N.length?(Q=N.length?c.jsx(SSn,{children:c.jsx(G,{gap:w.space[6],wrap:\"wrap\",children:$.map(nwr)})}):null,e[45]=$,e[46]=N.length,e[47]=Q):Q=e[47];",
+          "replace": "const Q=N.length?c.jsx(SSn,{children:c.jsx(G,{gap:w.space[6],wrap:\"wrap\",children:$.map(nwr)})}):null;",
+          "marker": "const Q=N.length?c.jsx(SSn,{children:c.jsx(G,{gap:w.space[6],wrap:\"wrap\",children:$.map(nwr)})}):null;",
+          "expect": 1,
+          "note": "Skill browser: refresh filter display on locale changes without caching the translated label"
+        }
+      ]
+    },
+    {
+      "file": ".vite/build/initLifecycle-DxjvbXRO.js",
+      "edits": [
+        {
+          "find": "[Se.English,Se.Japanese,Se.Korean,Se.German,Se.Spanish,Se.Italian,Se.Polish,Se.French]",
+          "replace": "[Se.English,Se.Japanese,Se.Korean,Se.German,Se.Spanish,Se.Italian,Se.Polish,Se.French,Se.ChineseSimplified]",
+          "expect": 1,
+          "marker": "[Se.English,Se.Japanese,Se.Korean,Se.German,Se.Spanish,Se.Italian,Se.Polish,Se.French,Se.ChineseSimplified]"
+        },
+        {
+          "find": "zi.init({resources:hE,lng:nu,",
+          "replace": "zi.init({resources:{...hE,\"zh-CN\":{desktop:require(\"./desktop-zh-CN.json\")}},lng:nu,",
+          "expect": 1,
+          "marker": "zi.init({resources:{...hE,\"zh-CN\":{desktop:require(\"./desktop-zh-CN.json\")}},lng:nu,",
+          "note": "Load all 81 desktop menu/dialog translations using the existing i18next instance"
+        },
+        {
+          "find": "function b1(){",
+          "replace": "function FactoryNativeMenu(e){if(zi.language!==\"zh-CN\")return e;const t={editmenu:\"Edit\",undo:\"Undo\",redo:\"Redo\",cut:\"Cut\",copy:\"Copy\",paste:\"Paste\",pasteandmatchstyle:\"Paste and Match Style\",delete:\"Delete\",selectall:\"Select All\",reload:\"Reload\",forcereload:\"Force Reload\",toggledevtools:\"Toggle Developer Tools\",togglefullscreen:\"Toggle Full Screen\",minimize:\"Minimize\",quit:\"Quit\"};for(const n of e.items){const r=t[n.role?.toLowerCase()];if(r&&(n.label.replace(/&/g,\"\")===r||r===\"Quit\"&&n.label.replace(/&/g,\"\")===\"Exit\"))n.label=ne(r,{defaultValue:r,keySeparator:!1,nsSeparator:!1});if(n.submenu)FactoryNativeMenu(n.submenu)}return e}function b1(){",
+          "expect": 1,
+          "marker": "function FactoryNativeMenu(e){if(zi.language!==\"zh-CN\")return e;const t={editmenu:\"Edit\",undo:\"Undo\",redo:\"Redo\",cut:\"Cut\",copy:\"Copy\",paste:\"Paste\",pasteandmatchstyle:\"Paste and Match Style\",delete:\"Delete\",selectall:\"Select All\",reload:\"Reload\",forcereload:\"Force Reload\",toggledevtools:\"Toggle Developer Tools\",togglefullscreen:\"Toggle Full Screen\",minimize:\"Minimize\",quit:\"Quit\"};for(const n of e.items){const r=t[n.role?.toLowerCase()];if(r&&(n.label.replace(/&/g,\"\")===r||r===\"Quit\"&&n.label.replace(/&/g,\"\")===\"Exit\"))n.label=ne(r,{defaultValue:r,keySeparator:!1,nsSeparator:!1});if(n.submenu)FactoryNativeMenu(n.submenu)}return e}function b1(){",
+          "note": "Localize default native role labels only in zh-CN, recursively preserving MenuItem roles, IDs, callbacks, accelerators and state; other locales unchanged"
+        },
+        {
+          "find": "T.Menu.setApplicationMenu(T.Menu.buildFromTemplate(a))",
+          "replace": "T.Menu.setApplicationMenu(FactoryNativeMenu(T.Menu.buildFromTemplate(a)))",
+          "expect": 1,
+          "marker": "T.Menu.setApplicationMenu(FactoryNativeMenu(T.Menu.buildFromTemplate(a)))",
+          "note": "Postprocess built application menu so Electron-generated Edit/View/Window role labels use Chinese"
+        },
+        {
+          "find": "T.Menu.buildFromTemplate(r).popup({window:o})",
+          "replace": "FactoryNativeMenu(T.Menu.buildFromTemplate(r)).popup({window:o})",
+          "expect": 1,
+          "marker": "FactoryNativeMenu(T.Menu.buildFromTemplate(r)).popup({window:o})",
+          "note": "Postprocess only native context-menu display; cut/copy/paste actions and enabled flags remain original"
+        },
+        {
+          "find": "function Yte(){",
+          "replace": "function Yte(){require(\"./factory-project-remarks.cjs\").registerProjectRemarks({ipcMain:T.ipcMain,BrowserWindow:T.BrowserWindow,filePath:X.join(i.getDesktopHomeDir(),i.getFactoryDirName(),\"factory-expand.json\")});",
+          "expect": 1,
+          "marker": "function Yte(){require(\"./factory-project-remarks.cjs\").registerProjectRemarks({ipcMain:T.ipcMain,BrowserWindow:T.BrowserWindow,filePath:X.join(i.getDesktopHomeDir(),i.getFactoryDirName(),\"factory-expand.json\")});",
+          "note": "Project remarks: main-process IPC registration"
+        }
+      ]
+    },
+    {
+      "file": ".vite/build/preload.js",
+      "edits": [
+        {
+          "find": "i18n:{getPreference:",
+          "replace": "projectRemarks:{get:()=>U.ipcRenderer.invoke(\"factory-expand:projectRemarks:get\"),set:A=>U.ipcRenderer.invoke(\"factory-expand:projectRemarks:set\",A),onChanged:A=>{const e=(t,o)=>A(o);return U.ipcRenderer.on(\"factory-expand:projectRemarks:changed\",e),()=>U.ipcRenderer.removeListener(\"factory-expand:projectRemarks:changed\",e)}},i18n:{getPreference:",
+          "expect": 1,
+          "marker": "projectRemarks:{get:()=>U.ipcRenderer.invoke(\"factory-expand:projectRemarks:get\"),set:A=>U.ipcRenderer.invoke(\"factory-expand:projectRemarks:set\",A),onChanged:A=>{const e=(t,o)=>A(o);return U.ipcRenderer.on(\"factory-expand:projectRemarks:changed\",e),()=>U.ipcRenderer.removeListener(\"factory-expand:projectRemarks:changed\",e)}},i18n:{getPreference:",
+          "note": "Project remarks: limited preload bridge"
+        }
+      ]
+    }
+  ]
+}

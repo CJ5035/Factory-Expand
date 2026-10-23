@@ -85,16 +85,16 @@
   },
   "pullRequestLayeredDiff": {
     "diagram": "图示",
-    "viewedSection": "已查看{{title}}",
     "noChangedLinesInTheCurrent": "当前差异中没有与此层匹配的变更行。",
     "overview": "概览",
     "howItAllFitsTogether": "各部分如何协同",
-    "collapseSection": "收起{{title}}",
-    "expandSection": "展开{{title}}",
     "unassignedChangesSummary": "未分配到代码导览章节的变更。",
     "unassignedChanges": "未分配的变更",
     "fileCount_one": "{{count}} 个文件",
-    "fileCount_other": "{{count}} 个文件"
+    "fileCount_other": "{{count}} 个文件",
+    "productChanges": "产品变更",
+    "internalChanges": "内部变更",
+    "architecture": "架构"
   },
   "pullRequestMoreActions": {
     "morePullRequestActions": "更多拉取请求操作",
@@ -341,7 +341,11 @@
     "commentNotDeleted": "未能删除评论。",
     "commentNotSaved": "未能保存评论。",
     "pendingReviewDiscarded": "已放弃待提交审查。",
-    "pendingReviewNotDiscarded": "未能放弃待提交审查。"
+    "pendingReviewNotDiscarded": "未能放弃待提交审查。",
+    "pullRequestsMerged_one": "已合并 {{count}} 个拉取请求。",
+    "pullRequestsMerged_other": "已合并 {{count}} 个拉取请求。",
+    "pullRequestMergeQueued": "拉取请求已加入合并队列。",
+    "pullRequestMergeInProgress": "代码托管平台仍在执行合并，完成后将更新拉取请求。"
   },
   "pullRequestRowMenu": {
     "openInNewTab": "在新标签页中打开",
@@ -458,5 +462,12 @@
       "inConversation": "对话中的评论",
       "outdated": "{{tooltip}}（已过时）"
     }
+  },
+  "pullRequestStack": {
+    "connectProviderToUnstack": "请在设置中连接代码托管账户，以你的身份解除堆叠。",
+    "keptInStack_one": "{{count}} 个拉取请求仍保留在堆叠中，例如正在排队等待合并。",
+    "keptInStack_other": "{{count}} 个拉取请求仍保留在堆叠中，例如正在排队等待合并。",
+    "notUnstacked": "未解除拉取请求的堆叠。",
+    "unstacked": "已解除拉取请求的堆叠，未关闭任何拉取请求。"
   }
 }

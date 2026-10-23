@@ -323,7 +323,7 @@
   "tokenSpendOverTime": {
     "creditSpendOverTime": "积分支出随时间变化",
     "description": "所选日期范围内组织每日 Factory 标准积分支出。与消耗概览使用相同的计费汇总，因此总计一致。",
-    "subtitle": "总计 {{total}} FSC · {{range}}",
+    "subtitle": "总计 {{total}} FSC · {{range}}（UTC）",
     "totalFsc": "FSC 总计"
   },
   "personalProductivity": {
@@ -376,7 +376,6 @@
     "missingCriterionRationale": "未测量此检查项。报告可能已过时，请刷新报告以测量所有检查项。",
     "passRateSuffix": "通过率",
     "notApplicable": "不适用",
-    "pdfTitle": "{{repoName}} - 代理就绪度报告",
     "allowPopupsToExportPdf": "请允许弹出窗口以导出 PDF",
     "loading": "正在加载仓库就绪度"
   },
@@ -507,7 +506,7 @@
       "byAccessType": "按访问类型"
     },
     "totalFsc": "FSC 总计",
-    "subtitle": "每日 · Factory 标准积分"
+    "subtitle": "按日（UTC）· Factory 标准积分"
   },
   "topUsers": {
     "title": "支出最高的用户",

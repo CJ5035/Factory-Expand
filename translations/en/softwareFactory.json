@@ -975,6 +975,10 @@
       "discard": "The task could not be discarded.",
       "retry": "The task could not be retried."
     },
+    "mergePending": {
+      "queued": "PR added to the merge queue. The task moves once it merges.",
+      "inProgress": "GitHub is still merging the PR. The task moves once it merges."
+    },
     "you": "You",
     "aTeammate": "A teammate",
     "openInSoftwareFactory": "Open in Software Factory",

@@ -91,14 +91,6 @@
     "openingSignIn": "正在打开登录页面",
     "openingSignUp": "正在打开注册页面"
   },
-  "changeThemeModal": {
-    "theme": "主题",
-    "appearance": "外观",
-    "themePreference": "主题偏好",
-    "light": "浅色",
-    "dark": "深色",
-    "system": "跟随系统"
-  },
   "callback": {
     "finishingSignIn": "正在完成登录",
     "thisSignInStepHasAlready": "此登录步骤已完成、已过期或被直接打开。请重新登录以继续使用 Factory。",

@@ -1,101 +1,9 @@
 {
-  "createPrform": {
-    "createPullRequest": "创建拉取请求",
-    "comparing": "比较中",
-    "title": "标题",
-    "prTitle": "PR 标题",
-    "description": "描述",
-    "optionalDescription": "可选描述…",
-    "createAsDraft": "创建为草稿"
-  },
   "diffViewerPanel": {
-    "reviewers": "审查者",
-    "checks": "检查",
-    "allChecksPassed": "所有检查均已通过",
-    "failing": "失败",
-    "fixInSession": "在 Session 中修复",
-    "semanticDiff": "语义差异",
-    "changes": "变更",
-    "readyToMerge": "可合并",
-    "files": "文件",
-    "unstagedChanges": "未暂存的变更",
-    "commitMessage": "提交说明…",
-    "commit": "提交",
-    "generatingSemanticDiff": "正在生成语义差异…",
-    "retry": "重试",
-    "gitDiffUnavailable": "Git 差异不可用",
-    "description": "描述",
-    "regenerateSemanticDiff": "重新生成语义差异",
-    "thisWillDiscardTheCurrentSemantic": "这将丢弃当前的语义差异结果。",
-    "cancel": "取消",
-    "regenerate": "重新生成",
     "unavailable": {
       "missingSessionCwd": "Session 尚未就绪或没有工作目录。",
-      "notGitRepository": "此 Session 的工作目录不是 Git 仓库。",
-      "gitNotAvailable": "此 Session 环境中没有可用的 Git。",
       "unknown": "此 Session 的 Git 差异不可用。"
-    },
-    "copied": "已复制！",
-    "copyBranchName": "复制分支名称",
-    "ciStatus": {
-      "inProgress": "进行中",
-      "passed": "已通过",
-      "failed": "失败",
-      "cancelled": "已取消",
-      "timedOut": "已超时",
-      "skipped": "已跳过",
-      "completed": "已完成"
-    },
-    "reviewerStatus": {
-      "approved": "已批准",
-      "changesRequested": "请求修改",
-      "pending": "待处理",
-      "commented": "已评论",
-      "dismissed": "已撤销"
-    },
-    "prStatus": {
-      "merged": "已合并",
-      "closed": "已关闭",
-      "draft": "草稿",
-      "open": "开放"
-    },
-    "ciSummary": {
-      "failing": "{{count}} 项失败",
-      "successful": "{{count}} 项成功",
-      "skipped": "{{count}} 项已跳过",
-      "pending": "{{count}} 项待处理"
-    },
-    "refresh": "刷新",
-    "close": "关闭",
-    "failedToCommitChanges": "提交变更失败",
-    "gitDiff": "Git 差异",
-    "fileCount_one": "{{count}} 个文件",
-    "fileCount_other": "{{count}} 个文件",
-    "copyAsMarkdown": "复制为 Markdown",
-    "failedToUpdatePr": "更新 PR 失败",
-    "addToPrDescription": "添加到 PR 描述",
-    "noChangesComparedTo": "与 {{branch}} 相比没有变更"
-  },
-  "reviewBar": {
-    "sendToDroid": "发送给 Droid",
-    "yourComments": "你的评论",
-    "reviewerComments": "审查者评论",
-    "you": "你",
-    "semanticDiffSection": "语义差异（第 {{section}} 节）",
-    "pullGitHubComments_one": "拉取 {{count}} 条 GitHub 评论",
-    "pullGitHubComments_other": "拉取 {{count}} 条 GitHub 评论",
-    "noGitHubComments": "没有 GitHub 评论",
-    "commentCount_one": "{{count}} 条评论",
-    "commentCount_other": "{{count}} 条评论",
-    "removeAllStagedComments": "移除所有已暂存的评论",
-    "stageComments_one": "暂存 {{count}} 条评论",
-    "stageComments_other": "暂存 {{count}} 条评论",
-    "removeAllYourComments": "移除你的所有评论",
-    "removeAllReviewerComments": "移除审查者的所有评论"
-  },
-  "semanticDiff": {
-    "theDiffWasTruncatedDueTo": "差异因体积过大而被截断。此语义摘要涵盖最重要的变更。",
-    "failedToGenerate": "生成语义差异失败"
+    }
   },
   "tokenLimitsModal": {
     "creditLimits": "积分上限",
@@ -354,7 +262,8 @@
     "outsideWorkspaceWriteUnsupported": "在此计算机上保存工作区外的文件需要更新 Droid 版本。",
     "migrationRoot": "迁移",
     "workspaceRoot": "工作区",
-    "copiedItemPath": "路径"
+    "copiedItemPath": "路径",
+    "openInNewTab": "在新标签页中打开"
   },
   "missionV2AgentsPanel": {
     "searchAgents": "搜索代理…",
@@ -509,20 +418,6 @@
     "droidComputers": "Droid Computers"
   },
   "reportBugModal": {
-    "reportABug": "报告问题",
-    "uploadingBugReportsToFactoryIs": "此部署已禁用向 Factory 上传问题报告。你可以在下方描述问题，将诊断归档（日志及问题描述）保存为文件，再提供给 IT 或支持团队。",
-    "describeTheIssue": "描述问题",
-    "whatWentWrongPleaseDescribeThe": "发生了什么？请描述你遇到的问题…",
-    "showInFolder": "在文件夹中显示",
-    "close": "关闭",
-    "saveReportToFile": "将报告保存为文件",
-    "bugReportSubmitted": "问题报告已提交",
-    "yourBugReportHasBeenSubmitted": "你的问题报告已成功提交。",
-    "bugReportId": "问题报告 ID",
-    "pleaseShareThisIdWithThe": "请将此 ID 提供给 Factory 团队进行调查。",
-    "done": "完成",
-    "cancel": "取消",
-    "submit": "提交",
     "failedToExport": "导出问题报告失败",
     "savedArchiveToPath": "诊断归档已保存至 {{savedPath}}，未向 Factory 发送任何数据。",
     "savedArchiveToDownloads": "诊断归档已保存至下载目录，未向 Factory 发送任何数据。",
@@ -761,10 +656,11 @@
     "failedToUnpin": "取消置顶 Session 失败"
   },
   "archiveSession": {
-    "couldNotArchiveOnMachine": "无法在计算机上归档此 Session。请重新连接计算机后重试。",
+    "couldNotArchiveOnMachine": "无法在此计算机上归档该 Session。请重试。",
     "failedToArchive": "归档 Session 失败",
-    "couldNotArchiveWhileOffline": "Session 所在的计算机处于离线状态，无法保存归档。请检查连接后重试。",
-    "couldNotSaveArchive": "无法保存归档。请检查连接后重试。"
+    "couldNotArchiveWhileOffline": "此 Session 的计算机未连接，且无法将归档保存到你的账户。请重试，或从该计算机将其归档。",
+    "couldNotSaveArchive": "无法保存归档。请检查连接后重试。",
+    "couldNotArchiveFromHere": "只能从运行此 Session 的计算机将其归档。"
   },
   "preInitCapabilities": {
     "updateComputerDaemonForMcp": "请更新此计算机的守护进程，以便在发送消息前管理 MCP。你仍可先启动 Session，待加载后再使用 MCP。",

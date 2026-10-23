@@ -649,11 +649,6 @@
       "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
     },
     {
-      "key": "automations.automationDetailPanelV2.webhook",
-      "source": "Webhook",
-      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
-    },
-    {
       "key": "automations.automationEventsTableV2.session",
       "source": "Session",
       "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
@@ -671,16 +666,6 @@
     {
       "key": "automations.runOnComputerPicker.droidComputers",
       "source": "Droid Computers",
-      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
-    },
-    {
-      "key": "automations.triggersField.github",
-      "source": "GitHub",
-      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
-    },
-    {
-      "key": "automations.webhookAutomationForm.webhook",
-      "source": "Webhook",
       "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
     },
     {
@@ -4153,6 +4138,41 @@
       "key": "softwareFactory.softwareFactoryAutomationDetail.skills",
       "source": "Skills",
       "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.nodeKindAndChange",
+      "source": "{{kind}} · {{change}}",
+      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.connectionTo",
+      "source": "→ {{node}}",
+      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.connectionFrom",
+      "source": "← {{node}}",
+      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.kinds.hook",
+      "source": "Hook",
+      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.kinds.cli",
+      "source": "CLI",
+      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.layerPosition",
+      "source": "{{index}} / {{total}}",
+      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.settings.customModelEditorModal.provider.model",
+      "source": "{{name}} · {{id}}",
+      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
     }
   ]
 }

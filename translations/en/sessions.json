@@ -1,101 +1,9 @@
 {
-  "createPrform": {
-    "createPullRequest": "Create Pull Request",
-    "comparing": "Comparing",
-    "title": "Title",
-    "prTitle": "PR title",
-    "description": "Description",
-    "optionalDescription": "Optional description...",
-    "createAsDraft": "Create as draft"
-  },
   "diffViewerPanel": {
-    "reviewers": "Reviewers",
-    "checks": "Checks",
-    "allChecksPassed": "All checks passed",
-    "failing": "Failing",
-    "fixInSession": "Fix in session",
-    "semanticDiff": "Semantic Diff",
-    "changes": "Changes",
-    "readyToMerge": "ready to merge",
-    "files": "Files",
-    "unstagedChanges": "Unstaged Changes",
-    "commitMessage": "Commit message...",
-    "commit": "Commit",
-    "generatingSemanticDiff": "Generating semantic diff...",
-    "retry": "Retry",
-    "gitDiffUnavailable": "Git diff unavailable",
-    "description": "Description",
-    "regenerateSemanticDiff": "Regenerate semantic diff",
-    "thisWillDiscardTheCurrentSemantic": "This will discard the current semantic diff result.",
-    "cancel": "Cancel",
-    "regenerate": "Regenerate",
     "unavailable": {
       "missingSessionCwd": "Session is not ready or does not have a working directory.",
-      "notGitRepository": "This session working directory is not a Git repository.",
-      "gitNotAvailable": "Git is not available in this session environment.",
       "unknown": "Git diff is unavailable for this session."
-    },
-    "copied": "Copied!",
-    "copyBranchName": "Copy branch name",
-    "ciStatus": {
-      "inProgress": "In progress",
-      "passed": "Passed",
-      "failed": "Failed",
-      "cancelled": "Cancelled",
-      "timedOut": "Timed out",
-      "skipped": "Skipped",
-      "completed": "Completed"
-    },
-    "reviewerStatus": {
-      "approved": "Approved",
-      "changesRequested": "Changes requested",
-      "pending": "Pending",
-      "commented": "Commented",
-      "dismissed": "Dismissed"
-    },
-    "prStatus": {
-      "merged": "merged",
-      "closed": "closed",
-      "draft": "draft",
-      "open": "open"
-    },
-    "ciSummary": {
-      "failing": "{{count}} failing",
-      "successful": "{{count}} successful",
-      "skipped": "{{count}} skipped",
-      "pending": "{{count}} pending"
-    },
-    "refresh": "Refresh",
-    "close": "Close",
-    "failedToCommitChanges": "Failed to commit changes",
-    "gitDiff": "Git Diff",
-    "fileCount_one": "{{count}} file",
-    "fileCount_other": "{{count}} files",
-    "copyAsMarkdown": "Copy as Markdown",
-    "failedToUpdatePr": "Failed to update PR",
-    "addToPrDescription": "Add to PR description",
-    "noChangesComparedTo": "No changes compared to {{branch}}"
-  },
-  "reviewBar": {
-    "sendToDroid": "Send to Droid",
-    "yourComments": "Your Comments",
-    "reviewerComments": "Reviewer Comments",
-    "you": "You",
-    "semanticDiffSection": "Semantic diff (section {{section}})",
-    "pullGitHubComments_one": "Pull {{count}} GitHub comment",
-    "pullGitHubComments_other": "Pull {{count}} GitHub comments",
-    "noGitHubComments": "No GitHub comments",
-    "commentCount_one": "{{count}} comment",
-    "commentCount_other": "{{count}} comments",
-    "removeAllStagedComments": "Remove all staged comments",
-    "stageComments_one": "Stage {{count}} Comment",
-    "stageComments_other": "Stage {{count}} Comments",
-    "removeAllYourComments": "Remove all your comments",
-    "removeAllReviewerComments": "Remove all reviewer comments"
-  },
-  "semanticDiff": {
-    "theDiffWasTruncatedDueTo": "The diff was truncated due to size. This semantic summary covers the most significant changes.",
-    "failedToGenerate": "Failed to generate semantic diff"
+    }
   },
   "tokenLimitsModal": {
     "creditLimits": "Credit Limits",
@@ -334,6 +242,7 @@
     "couldNotLoadWorkspaceFiles": "Could not load workspace files.",
     "selectAFileFromTheWorkspace": "Select a file from the workspace tree",
     "openFile": "Open file",
+    "openInNewTab": "Open in new tab",
     "viewInBrowser": "View in browser",
     "downloadFile": "Download file",
     "tooLargeToPreview": "This file is too large to preview",
@@ -509,20 +418,6 @@
     "droidComputers": "Droid Computers"
   },
   "reportBugModal": {
-    "reportABug": "Report a Bug",
-    "uploadingBugReportsToFactoryIs": "Uploading bug reports to Factory is disabled for this deployment. You can describe the issue below and save a diagnostics archive (logs and your description) to a file, then share it with your IT or support team.",
-    "describeTheIssue": "Describe the issue",
-    "whatWentWrongPleaseDescribeThe": "What went wrong? Please describe the issue you encountered...",
-    "showInFolder": "Show in folder",
-    "close": "Close",
-    "saveReportToFile": "Save report to file",
-    "bugReportSubmitted": "Bug Report Submitted",
-    "yourBugReportHasBeenSubmitted": "Your bug report has been submitted successfully.",
-    "bugReportId": "Bug Report ID",
-    "pleaseShareThisIdWithThe": "Please share this ID with the Factory team for investigation.",
-    "done": "Done",
-    "cancel": "Cancel",
-    "submit": "Submit",
     "failedToExport": "Failed to export bug report",
     "savedArchiveToPath": "Saved the diagnostics archive to {{savedPath}}. No data was sent to Factory.",
     "savedArchiveToDownloads": "Saved the diagnostics archive to your downloads. No data was sent to Factory.",
@@ -761,8 +656,9 @@
     "failedToUnpin": "Failed to unpin session"
   },
   "archiveSession": {
-    "couldNotArchiveOnMachine": "The session could not be archived on its machine. Reconnect the machine and try again.",
-    "couldNotArchiveWhileOffline": "The session's machine is offline and the archive could not be saved. Check your connection and try again.",
+    "couldNotArchiveFromHere": "This session can only be archived from the computer it ran on.",
+    "couldNotArchiveOnMachine": "The session could not be archived on this computer. Try again.",
+    "couldNotArchiveWhileOffline": "This session's computer isn't connected, and the archive couldn't be saved to your account. Try again, or archive it from that computer.",
     "couldNotSaveArchive": "The archive could not be saved. Check your connection and try again.",
     "failedToArchive": "Failed to archive session"
   },

@@ -586,7 +586,7 @@
   "cloudSyncSection": {
     "controlWhichDataThisDeviceSynchronizes": "Control which data this device synchronizes with the cloud.",
     "cloudSync": "Cloud Sync",
-    "cloudSessionSync": "Cloud session sync",
+    "cloudSessionSync": "Session contents sync",
     "cloudConfigSync": "Cloud config sync",
     "syncSupportedConfigsEGModel": "Sync supported configs (e.g. model, reasoning, autonomy, and compaction level selections) separately from session data. Each device can opt in or out independently."
   },
@@ -761,7 +761,6 @@
     "persistedFilesWillBeKept": "Persisted files will be kept.",
     "forceRebootComputer": "Force reboot computer",
     "recoveredToast": "Computer recovered and daemon reconnected",
-    "preparingRecovery": "Preparing recovery...",
     "rebooting": "Rebooting...",
     "forceReboot": "Force reboot",
     "forceRebootName": "Force reboot {{name}}?"
@@ -1552,7 +1551,6 @@
   "delegationAppManagementModal": {
     "failedToConnect": "Failed to connect {{integration}}. Please try again.",
     "disconnectedSuccessfully": "Disconnected successfully",
-    "channels": "Channels",
     "installJiraApp": "Install Jira App"
   },
   "delegationAppSetup": {
@@ -1570,7 +1568,7 @@
   "delegationDefaultsSection": {
     "defaultsForWorkYouDelegateFrom": "Defaults for work you delegate from Slack, Teams, or other surfaces.",
     "delegations": "Delegations",
-    "privateDelegationTemplate": "Private delegation environment",
+    "privateDelegationMachine": "DM delegation machine",
     "sharedDelegationTemplate": "Shared delegation environment",
     "defaultDelegationModel": "Default delegation model",
     "defaultDelegationReasoningLevel": "Default delegation reasoning level",
@@ -1580,9 +1578,11 @@
     "saveInstructions": "Save instructions",
     "orgDefault": "Org default",
     "modelDefault": "Model default",
-    "privateDelegationTemplateTooltip": "Used for private delegations, currently Slack DMs, running as you.",
+    "privateDelegationMachineTooltip": "What compute delegations from your direct messages run as.",
     "sharedDelegationTemplateTooltip": "Used for Slack channels, Teams, Linear, and Jira, running as the organization's service account. Both you and that account must have access.",
     "unavailableTemplate": "Unavailable environment",
+    "unavailableMachine": "Unavailable machine",
+    "loadingMachine": "Loading…",
     "instructionsAppendedForEmail": "This message is appended to all delegation tasks started by {{email}}",
     "instructionsAppendedForYou": "This message is appended to all delegation tasks started by you"
   },
@@ -1778,6 +1778,7 @@
     "theseUsersCanStillRegisterTheir": "These users can still register their own computers and use Remote Control even though the org-wide setting is off.",
     "enableOpencompute": "Enable OpenCompute",
     "allowThisOrganizationToProvisionComputers": "Allow this organization to provision computers through OpenCompute deployments.",
+    "onlyTheseUsersCanCreateAndUseOpencompute": "Only these users can create and use OpenCompute computers. Other members lose access to their existing OpenCompute computers.",
     "opencompute": "OpenCompute",
     "removeEmail": "Remove {{email}}",
     "droidComputersTooltip": "Control which types of computers are available for your organization. Managed computers and computers connected through Remote Control can still be allowed for specific users when their organization-wide setting is off."
@@ -3441,8 +3442,18 @@
     "missionValidationWorkerModel": "Mission Validation Worker Model",
     "controlOptionalFeaturesAvailableInSessions": "Control optional features available in sessions across your organization.",
     "sessionFeatures": "Session Features",
-    "syncSessionDataToTheCloud": "Sync session data to the cloud for access across devices.",
-    "cloudSessionSync": "Cloud Session Sync",
+    "syncSessionDataToTheCloud": "Sync session contents, such as messages, to the cloud for access across devices. Session metadata (such as IDs, timestamps, machine, and tags) is always stored.",
+    "cloudSessionSync": "Session Contents Sync",
+    "sessionTitleInMetadata": "Store Session Titles",
+    "sessionTitleInMetadataDescription": "Session contents sync is off, so Factory stores only session metadata. Turn this on to also store session titles, which then show in session details, child session lists, and automation run history. Messages and file contents are never stored.",
+    "sessionTitleInMetadataComplianceDescription": "Factory has disabled cloud sync for your organization, so session titles are never stored. Contact Factory to change this restriction.",
+    "readinessReportUpload": {
+      "title": "Agent Readiness Report Upload",
+      "description": "Control whether Droid uploads Agent Readiness reports to Factory. Never upload applies everywhere; Always upload skips the consent prompt.",
+      "ask": "Always ask",
+      "always": "Always upload",
+      "never": "Never upload"
+    },
     "allowUsersToDictateChatMessages": "Allow users to dictate chat messages with their microphone.",
     "voiceDictation": "Voice Dictation",
     "showWhichModelAutoModelPicked": "Show which model Auto Model picked on session model labels.",
@@ -3688,7 +3699,9 @@
       },
       "sessionFeatures": {
         "title": "Session Features",
-        "cloudSessionSync": "Cloud Session Sync",
+        "cloudSessionSync": "Session Contents Sync",
+        "sessionTitleInMetadata": "Store Session Titles",
+        "readinessReportUpload": "Agent Readiness Report Upload",
         "voiceDictation": "Voice Dictation",
         "routedModelVisibility": "Show Auto Model Pick",
         "imageGeneration": "Image Generation",
@@ -3867,7 +3880,7 @@
       },
       "cloudSync": {
         "title": "Cloud Sync",
-        "cloudSessionSync": "Cloud session sync",
+        "cloudSessionSync": "Session contents sync",
         "cloudPreferenceSync": "Cloud config sync",
         "preferenceSync": "Preference sync",
         "cloudItemPull": "Pull configurations",
@@ -4027,7 +4040,7 @@
         "title": "Delegations",
         "delegationModel": "Default delegation model",
         "delegationReasoning": "Default delegation reasoning level",
-        "privateDelegationTemplate": "Private delegation environment",
+        "privateDelegationMachine": "DM delegation machine",
         "sharedDelegationTemplate": "Shared delegation environment",
         "delegationInstructions": "Your custom delegation instructions"
       }
@@ -4837,8 +4850,7 @@
     "editNamed": "Edit role for {{group}}",
     "removeNamed": "Remove mapping for {{group}}",
     "cancel": "Cancel",
-    "save": "Save mapping",
-    "invalidGroupJson": "Enter a valid, nonempty JSON string with supported characters and within the binding size limit."
+    "save": "Save mapping"
   },
   "gitlabSelfHostedAccessSection": {
     "lastSyncFailed": "Last sync failed: {{reason}}.",

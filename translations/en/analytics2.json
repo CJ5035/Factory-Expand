@@ -323,7 +323,7 @@
   "tokenSpendOverTime": {
     "creditSpendOverTime": "Credit Spend Over Time",
     "description": "Daily Factory Standard Credit spend across the organization over the selected date range. Same billing rollup the Consumption Overview reports, so the totals reconcile.",
-    "subtitle": "Total {{total}} FSC · {{range}}",
+    "subtitle": "Total {{total}} FSC · {{range}} (UTC)",
     "totalFsc": "Total FSC"
   },
   "personalProductivity": {
@@ -376,7 +376,6 @@
     "missingCriterionRationale": "This criterion was not measured. The report may be outdated - refresh the report to measure all criteria.",
     "passRateSuffix": "pass rate",
     "notApplicable": "N/A",
-    "pdfTitle": "{{repoName}} - Agent Readiness Report",
     "allowPopupsToExportPdf": "Please allow popups to export PDF",
     "loading": "Loading repository readiness"
   },
@@ -507,7 +506,7 @@
       "byAccessType": "By Access Type"
     },
     "totalFsc": "Total FSC",
-    "subtitle": "Daily · Factory Standard Credits"
+    "subtitle": "Daily (UTC) · Factory Standard Credits"
   },
   "topUsers": {
     "title": "Top Users by Spend",

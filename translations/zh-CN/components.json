@@ -264,7 +264,8 @@
       "branch": "分支",
       "copy": "复制",
       "baseBranch": "基础分支：<chip>{{branch}}</chip>",
-      "baseBranchDetachedHead": "基础分支：<muted>当前提交（分离的 HEAD）</muted>"
+      "baseBranchDetachedHead": "基础分支：<muted>当前提交（分离的 HEAD）</muted>",
+      "loadingBranches": "正在加载分支"
     },
     "branchSwitchResolutionModal": {
       "cancel": "取消",
@@ -658,7 +659,27 @@
       "organizationBedrockCredentials": "Bedrock 凭据在各执行环境中解析。请在那里配置 AWS 配置档、可信凭据命令或 AWS_BEARER_TOKEN_BEDROCK。请勿将凭据粘贴到共享设置中。",
       "organizationCredentials": "凭据在各成员计算机上解析。请使用 ${MODEL_API_KEY} 等环境引用或凭据辅助程序。请勿将 API 密钥明文粘贴到配置中。",
       "storedCredentialHidden": "{{label}} 已隐藏，将予以保留。",
-      "removeStoredCredential": "移除已存储的 {{label}}"
+      "removeStoredCredential": "移除已存储的 {{label}}",
+      "provider": {
+        "docs": "提供商文档",
+        "environmentHelp": "Droid 会在运行时读取此变量。此处不检查变量是否存在。",
+        "displayNamePlaceholder": "此提供商在 Droid 中显示的名称",
+        "referenceOnly": "此处的密钥和请求头请使用环境变量，例如 ${ANTHROPIC_API_KEY}。",
+        "add": "添加提供商",
+        "edit": "编辑提供商",
+        "save": "保存提供商",
+        "id": "提供商 ID",
+        "immutable": "无法更改提供商的 ID 或类型。请添加新的提供商。",
+        "jsonHelp": "编辑单个提供商对象。将保留包含/排除筛选条件及模型覆盖设置。",
+        "unsupported": "此配置使用了不受支持的字段。请仅通过 JSON 编辑，或更新 Droid；不会静默移除不受支持的字段。",
+        "configuration": "提供商配置",
+        "preview": "显示模型",
+        "previewCount_one": "找到 {{count}} 个模型",
+        "previewCount_other": "找到 {{count}} 个模型",
+        "untested": "尚未测试你的密钥。",
+        "model": "{{name}} · {{id}}",
+        "replacementWarning": "使用这些模型的 Session 和默认设置将改用可用的回退模型。若没有回退模型，则会提示你选择模型。"
+      }
     },
     "disconnectConfirmModal": {
       "cancel": "取消",
@@ -2153,7 +2174,8 @@
         "failedToReadFile": "读取文件失败",
         "unknownError": "发生未知错误",
         "failedToUploadFile": "上传文件失败",
-        "failedToAttachAfterUpload": "上传后无法附加“{{name}}”。"
+        "failedToAttachAfterUpload": "上传后无法附加“{{name}}”。",
+        "fileTransferUnavailable": "计算机重新连接前，无法附加“{{name}}”。"
       },
       "voiceDictationErrors": {
         "microphoneAccessDenied": "麦克风访问被拒绝。请启用麦克风权限后重试。",
@@ -2631,7 +2653,6 @@
       }
     },
     "diffViewerV2": {
-      "fileHasReviewComments": "文件有审查评论",
       "viewed": "已查看",
       "viewedFile": "已查看 {{path}}",
       "jumpToFile": "跳转到文件",
@@ -2748,7 +2769,10 @@
     },
     "rightPaneV2": {
       "newTab": "新建标签页",
-      "hidePanel": "隐藏面板"
+      "hidePanel": "隐藏面板",
+      "closeAllTabs": "全部关闭",
+      "closeTab": "关闭",
+      "closeTabsToRight": "关闭右侧标签页"
     },
     "rightPaneV2OpenTag": {
       "open": "打开"
@@ -3288,7 +3312,10 @@
         "downloadPdf": "下载 PDF",
         "downloadWord": "下载 Word",
         "downloadExcel": "下载 Excel"
-      }
+      },
+      "htmlPreviewTitle": "{{fileName}} 的预览",
+      "viewPreview": "查看预览",
+      "viewSource": "查看源文件"
     },
     "pdfPages": {
       "pageOfCount": "第 {{page}} 页，共 {{pageCount}} 页",
@@ -3613,6 +3640,9 @@
       "paused": "已转发 {{limit}} 个事件，自动修复已暂停。关闭后重新开启即可恢复。",
       "tooltipTitle": "自动跟进 PR",
       "tooltipDescription": "通过向此代理发送后续消息，自动处理审查评论、修复失败的 CI 检查，并对 PR 执行变基。"
+    },
+    "reviewRequestMessageCard": {
+      "title": "已要求修改"
     }
   },
   "connectors": {
@@ -3669,7 +3699,8 @@
       "askAdminTurnOn": "请让管理员启用团队使用的工具，它们会显示在此处供你连接。",
       "manageNotEnabled": "你的组织尚未启用任何连接器。",
       "manageTurnOn": "启用团队使用的工具后，每个人都可以连接自己的账号。",
-      "previewLabel": "管理员可以启用的热门连接器"
+      "previewLabel": "管理员可以启用的热门连接器",
+      "managePreviewLabel": "可启用的热门连接器"
     },
     "integrationCard": {
       "connected": "已连接",
@@ -3950,7 +3981,7 @@
         "closed": "已关闭",
         "none": "无 PR"
       },
-      "newSection": "新建分区…"
+      "newSection": "新建分区"
     },
     "sessionListV2Group": {
       "showLess": "收起",
@@ -3964,7 +3995,8 @@
       "rename": "重命名",
       "delete": "删除",
       "hide": "隐藏",
-      "newSection": "新建分区…"
+      "newSection": "新建分区",
+      "hideTooltip": "将此分区移至“更多”"
     },
     "sessionListV2SessionRow": {
       "folder": "文件夹",
@@ -3986,7 +4018,7 @@
         "archive": "归档",
         "copySessionId": "复制 Session ID",
         "moveToSection": "移至分区",
-        "newSection": "新建分区…",
+        "newSection": "新建分区",
         "removeFromSection": "移出分区"
       },
       "hideWorkers": "隐藏工作代理",
@@ -4277,7 +4309,17 @@
       "collapseChecks": "收起检查",
       "expandChecks": "展开检查",
       "checksStatus": "检查状态：{{summary}}",
-      "checkRowLabel": "{{name}}，{{status}}"
+      "checkRowLabel": "{{name}}，{{status}}",
+      "headlines": {
+        "failing_one": "{{count}} 项检查失败",
+        "failing_other": "{{count}} 项检查失败",
+        "needAttention_one": "{{count}} 项检查需要关注",
+        "needAttention_other": "{{count}} 项检查需要关注",
+        "inProgress_one": "{{count}} 项检查进行中",
+        "inProgress_other": "{{count}} 项检查进行中",
+        "passing_one": "{{count}} 项检查通过",
+        "passing_other": "{{count}} 项检查通过"
+      }
     },
     "pullRequestSummaryRow": {
       "states": {
@@ -4304,7 +4346,8 @@
       "byAuthor": "作者：{{author}}",
       "opened": "创建于{{time}}",
       "updated": "更新于{{time}}",
-      "loadingDetails": "正在加载详情"
+      "loadingDetails": "正在加载详情",
+      "stackPosition": "堆叠中的第 {{position}}/{{size}} 个"
     },
     "pullRequestCommentReactions": {
       "addReaction": "添加表情回应",
@@ -4366,7 +4409,13 @@
       "discardPendingReviewWithCommentsDescription_one": "将删除你的待提交审查及其 {{count}} 条评论，不会发布。",
       "discardPendingReviewWithCommentsDescription_other": "将删除你的待提交审查及其 {{count}} 条评论，不会发布。",
       "reviewWithPendingComments_one": "审查，{{count}} 条待提交评论",
-      "reviewWithPendingComments_other": "审查，{{count}} 条待提交评论"
+      "reviewWithPendingComments_other": "审查，{{count}} 条待提交评论",
+      "mergeStack_one": "合并 {{count}} 个拉取请求",
+      "mergeStack_other": "合并 {{count}} 个拉取请求",
+      "mergeStackTitle_one": "合并 {{count}} 个拉取请求？",
+      "mergeStackTitle_other": "合并 {{count}} 个拉取请求？",
+      "mergeStackDescription": "将从堆叠底部开始，依次合并到 {{baseBranch}}。",
+      "mergeStackOrder": "合并顺序"
     },
     "pullRequestDescriptionCard": {
       "showLess": "收起",
@@ -4416,7 +4465,9 @@
         "ready": "可以合并",
         "notReady": "尚不能合并",
         "checking": "正在检查是否可合并…",
-        "stalled": "{{provider}}尚未完成检查"
+        "stalled": "{{provider}}尚未完成检查",
+        "readyStack_one": "已就绪，可合并 {{count}} 个拉取请求",
+        "readyStack_other": "已就绪，可合并 {{count}} 个拉取请求"
       },
       "reviews": {
         "approved": "变更已批准",
@@ -4448,7 +4499,26 @@
         "checking": "正在检查此分支是否可以合并…",
         "stalled": "{{provider}}尚未完成此分支是否可合并的检查"
       },
-      "stalledDetail": "向分支推送提交，以让 {{provider}} 再次检查。"
+      "stalledDetail": "向分支推送提交，以让 {{provider}} 再次检查。",
+      "stack": {
+        "mergesBelow_one": "同时合并其下方的 {{count}} 个拉取请求",
+        "mergesBelow_other": "同时合并其下方的 {{count}} 个拉取请求",
+        "mergesBelowDetail_one": "先将 {{list}} 合并到 {{baseBranch}}。",
+        "mergesBelowDetail_other": "先将 {{list}} 合并到 {{baseBranch}}。",
+        "blockedBy": "被下方的 #{{number}} 阻塞",
+        "checking": "正在检查下方的 #{{number}} 是否可以合并…",
+        "checkingBelow": "正在检查下方的拉取请求…",
+        "reasons": {
+          "draft": "它仍为草稿。",
+          "conflicting": "它存在需要解决的冲突。",
+          "changesRequested": "审查者已要求对其进行修改。",
+          "reviewRequired": "它需要审查批准。",
+          "checksFailed": "它的部分检查未通过。",
+          "behind": "它落后于基准分支。",
+          "blocked": "它尚未满足所需审查、检查或其他分支规则。",
+          "notMergeable": "它暂时无法合并。"
+        }
+      }
     },
     "pullRequestUnavailableFile": {
       "patchUnavailable": "补丁不可用",
@@ -4503,7 +4573,14 @@
     },
     "missionAgentOrigin": {
       "startedBy": "由 <workstream/> 启动",
-      "startedByInResponseTo": "由 <workstream/> 响应 <signal/> 而启动"
+      "startedByInResponseTo": "由 <workstream/> 响应 <signal/> 而启动",
+      "automations_one": "{{count}} 个自动化",
+      "automations_other": "{{count}} 个自动化",
+      "nextRun": "下次运行 {{nextRun}}",
+      "scheduleWithNextRun": "{{schedule}} · 下次运行 {{nextRun}}",
+      "openAutomation": "打开自动化",
+      "openAutomationNamed": "打开自动化 {{name}}",
+      "listenerOf": "<workstream/> 的监听器"
     },
     "pullRequestLabelTag": {
       "remove": "移除标签 {{name}}"
@@ -4552,25 +4629,107 @@
       "setUpQa": "设置 QA"
     },
     "sessionListV2SectionDialog": {
-      "newDescription": "通过 Session 菜单将其移入，或将 Session 拖放到此分区。"
+      "newDescription": "通过 Session 菜单将其移入，或将 Session 拖放到此分区。",
+      "renameSection": "重命名分区",
+      "save": "保存",
+      "deleteSection": "删除分区",
+      "deleteDescription": "{{name}} 中的 Session 将保留在侧边栏中。",
+      "delete": "删除"
     },
     "sessionSidebarEdit": {
-      "pin": "置顶 {{name}}",
-      "unpin": "取消置顶 {{name}}",
       "newSection": "新建分区",
       "sectionName": "分区名称",
       "createSection": "创建分区",
-      "saveName": "保存名称",
-      "delete": "删除 {{name}}",
-      "confirmDelete": "确认删除？",
-      "cancelDelete": "取消删除",
-      "cancelRename": "取消重命名",
       "cancel": "取消",
       "pickedUp": "已选中并开始移动 {{name}}。",
       "over": "{{name}} 位于 {{target}} 上方。",
       "dropped": "已放下 {{name}}。",
       "cancelled": "已停止移动 {{name}}。",
-      "moved": "已将 {{name}} 移至第 {{position}}/{{count}} 个位置。"
+      "moved": "已将 {{name}} 移至第 {{position}}/{{count}} 个位置。",
+      "show": "显示 {{name}}",
+      "hide": "隐藏 {{name}}"
+    },
+    "pullRequestStack": {
+      "triggerLabel": "堆叠 #{{number}} 中的第 {{position}}/{{size}} 个拉取请求",
+      "title": "堆叠 #{{number}}",
+      "unstack": "解除堆叠",
+      "pullRequests": "堆叠中的拉取请求",
+      "loading": "正在加载堆叠",
+      "baseBranch": "基准分支",
+      "cancel": "取消",
+      "unstackTitle_one": "解除 {{count}} 个拉取请求的堆叠？",
+      "unstackTitle_other": "解除 {{count}} 个拉取请求的堆叠？",
+      "unstackDescription_one": "它将移出堆叠，但不会被关闭。Factory 无法将其重新加入堆叠。",
+      "unstackDescription_other": "它们将不再一起合并，但不会被关闭。Factory 无法将其重新加入堆叠。",
+      "unstackIncomplete": "Factory 无法读取此堆叠中的所有拉取请求，因此无法确定解除堆叠所需的操作。请在 GitHub 上解除堆叠。"
+    },
+    "pullRequestStatusCard": {
+      "label": "拉取请求状态",
+      "labels": "标签",
+      "reviews": {
+        "title": "审查",
+        "waitingForApproval": "等待批准"
+      }
+    },
+    "pullRequestWalkthroughInsights": {
+      "before": "变更前",
+      "after": "变更后",
+      "new": "新增",
+      "major": "重大",
+      "minor": "次要",
+      "productChanges": "产品变更",
+      "carousel": "轮播区域",
+      "slide": "轮播项",
+      "changePosition": "第 {{current}}/{{total}} 项",
+      "previousChange": "上一项变更",
+      "nextChange": "下一项变更",
+      "showChange": "显示变更 {{number}}：{{title}}",
+      "noProductChanges": "没有产品变更。此拉取请求仅修改内部实现。",
+      "internalChanges": "内部变更",
+      "whatChanges": "变更内容",
+      "whyItMatters": "影响说明",
+      "categories": {
+        "compatibility": "兼容性",
+        "contract": "接口契约",
+        "rollout": "上线发布",
+        "operations": "运维",
+        "safety": "安全性",
+        "performance": "性能"
+      },
+      "changedIn": "变更位置",
+      "changedInSections_one": "涉及 {{formattedCount}} 个部分的变更",
+      "changedInSections_other": "涉及 {{formattedCount}} 个部分的变更",
+      "codeRefBefore": "{{location}}（变更前）",
+      "architectureLabel": "架构图",
+      "nodeKindAndChange": "{{kind}} · {{change}}",
+      "nodeLabel": "{{label}}，{{kind}}，{{change}}",
+      "connectionTo": "→ {{node}}",
+      "connectionFrom": "← {{node}}",
+      "kinds": {
+        "route": "路由",
+        "page": "页面",
+        "component": "组件",
+        "hook": "Hook",
+        "store": "状态存储",
+        "service": "服务",
+        "module": "模块",
+        "schema": "数据结构",
+        "job": "作业",
+        "cli": "CLI",
+        "external": "外部系统"
+      },
+      "changes": {
+        "added": "新增行数",
+        "modified": "修改时间",
+        "removed": "删除行数",
+        "context": "未更改"
+      },
+      "layerPosition": "{{index}} / {{total}}",
+      "viewedSection": "已查看 {{title}}",
+      "sectionFiles": "{{title}} 中的文件",
+      "showAllFiles_one": "显示全部 {{formattedCount}} 个文件",
+      "showAllFiles_other": "显示全部 {{formattedCount}} 个文件",
+      "showLess": "收起"
     }
   },
   "automations": {
@@ -4581,7 +4740,8 @@
       "environment": "{{name}}（环境）",
       "unknownEnvironment": "未知环境",
       "localMachine": "本地计算机",
-      "notSet": "未设置"
+      "notSet": "未设置",
+      "orgDefault": "组织默认设置"
     },
     "automationsTable": {
       "title": "标题",
@@ -6334,11 +6494,6 @@
         "updated": "更新时间",
         "actions": "操作"
       }
-    },
-    "evaluationDatasetSetup": {
-      "datasetSetup": "数据集设置",
-      "skillsToBenchmark": "要进行基准测试的 Skill",
-      "skillsToBenchmarkCount": "要进行基准测试的 Skill（{{total}}）"
     },
     "evaluationListToolbar": {
       "filter": "筛选",

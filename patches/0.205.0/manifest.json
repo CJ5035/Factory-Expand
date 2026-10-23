@@ -1,0 +1,124 @@
+{
+  "appVersion": "0.205.0",
+  "original": {
+    "exe": "6e7c9e6ba1a5bad74f52e284d39f831affe33bd2ef9b3799b5a5977de5ebdcb5",
+    "asar": "4ae3095115d46aaa4bcfd147163fbb9e5510185de67ddd4464d7905025672506"
+  },
+  "fuse": {
+    "offset": 188907648,
+    "index": 4,
+    "wireVersion": 1,
+    "length": 9
+  },
+  "unpacked": {
+    "node_modules/keytar/build/Release/keytar.node": "5aa6c205c449de495be50bb72111254b5e3fdb0ff5163c85ea2daafd0dbe238f"
+  },
+  "patchShape": {
+    "targets": 3,
+    "edits": 51,
+    "addFiles": 4
+  },
+  "resourceSources": {
+    "academy": {
+      "leaves": 136,
+      "sha256": "1e807102b9d5c7ff58c65a3f9d82cf492b57f6d4c97432f43c4e9b7b5cf70b4c"
+    },
+    "analytics": {
+      "leaves": 507,
+      "sha256": "d4913dab6afbc9a3f315117b329d6b84e28a7aa4e8eade000ca8981875d33f40"
+    },
+    "analytics2": {
+      "leaves": 698,
+      "sha256": "f144fb23442a92a08d320f339e4f0401e348a00809d2747aee18ef84527d4468"
+    },
+    "automations": {
+      "leaves": 1653,
+      "sha256": "20ae2d7421d8a2cc554fe729452d20164fd7184336bb58a4d70e681b73298e49"
+    },
+    "common": {
+      "leaves": 377,
+      "sha256": "2e8bc703430952bea8f8018198df25b1da76838af1c503be69b0df5f8ccfc1d4"
+    },
+    "components": {
+      "leaves": 6024,
+      "sha256": "9c2f44666180abd231d791c72e5f7f4a3734fa5c83185699d5c02adaa3d8bdac"
+    },
+    "desktop": {
+      "leaves": 81,
+      "sha256": "5a3a4a2cd12da9fa314ddf4a1a69fad82ccdaf3f3739f379f545562b751ce570"
+    },
+    "errors": {
+      "leaves": 11,
+      "sha256": "18fbd3bd7acb0081b4cd9f6f76f39df05371a39ee423a72f6ee7970e3030c7e4"
+    },
+    "evaluations": {
+      "leaves": 41,
+      "sha256": "3a1b1f4918c465008e1af47b87914ea2fe0bac4dd4eaf5a4e7244ca6a0412fc0"
+    },
+    "inbox": {
+      "leaves": 55,
+      "sha256": "c23b5af65d57d3ebc33b7da28ee461dddf289edc7918b4550f2fb402ffdd03b1"
+    },
+    "lessons": {
+      "leaves": 943,
+      "sha256": "42ecfd5e9db233a6978a6206b70a2891c340a251d651d20fbf6506611a71b531"
+    },
+    "missions": {
+      "leaves": 217,
+      "sha256": "6863746c7de6e571349261a0f5732c859ce9ade33f328dad9c721a9a35dafb9b"
+    },
+    "onboarding": {
+      "leaves": 151,
+      "sha256": "647fca3454157187fe7245b961e5e277bc76bf24405649d197d9b64cd2b167e1"
+    },
+    "pullRequestReview": {
+      "leaves": 361,
+      "sha256": "c6a4ae7c5fb2dc4c7865edf6c0279f2b436bbcae917e4cac0a6ab5405f797b8f"
+    },
+    "sessions": {
+      "leaves": 697,
+      "sha256": "947d0e7d68cd21c4e9d3cbb65b793c1d7a903e17c0e881df109d07e4dc1ab22f"
+    },
+    "settings": {
+      "leaves": 3755,
+      "sha256": "a49fb0f4e5d0be5ae385dae98a91566713d0c929e3223581d43df94b1a648b14"
+    },
+    "sharing": {
+      "leaves": 12,
+      "sha256": "b39a2b899c7bed3ca15c2b92eefa42dfd21d83f5f2026e93c63af5decff7fc8a"
+    },
+    "softwareFactory": {
+      "leaves": 1835,
+      "sha256": "070f2aa599948d88c3a670af36aa45928eaef1564f2da9c87f86cd00635e59ac"
+    },
+    "stats": {
+      "leaves": 37,
+      "sha256": "11b837b9a3cd07db49924de061c01114baf046181962f799182c541ce594500c"
+    },
+    "wiki": {
+      "leaves": 139,
+      "sha256": "038c818ff6579a13e78f6cc141c5a299f590b18fec160d76f8344eadbd444523"
+    }
+  },
+  "uiSupplement": {
+    "leaves": 787,
+    "sha256": "19689af9672c1739db463d6f787a5bebe4827c3b758355f41a07478870ff5836"
+  },
+  "desktopSupplementKeys": [
+    "Edit",
+    "Undo",
+    "Redo",
+    "Cut",
+    "Copy",
+    "Paste",
+    "Paste and Match Style",
+    "Delete",
+    "Select All",
+    "Reload",
+    "Force Reload",
+    "Toggle Developer Tools",
+    "Toggle Full Screen",
+    "Minimize",
+    "Quit"
+  ]
+}

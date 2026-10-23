@@ -5,10 +5,7 @@
     "createTitle": "Create a dataset",
     "createPlaceholder": "What do we want to measure?",
     "updateTitle": "Update this dataset",
-    "updatePlaceholder": "What should change in this version?",
-    "selectSkillsTitle": "Select skills to benchmark",
-    "selectSkillsEmpty": "No skills found. Publish skills to an organization plugin marketplace, or add them to the .factory/skills folder in this working directory.",
-    "loadingComputerSkills": "Loading skills from this computer…"
+    "updatePlaceholder": "What should change in this version?"
   },
   "evaluationPresets": {
     "cancel": "Cancel",

@@ -6,7 +6,8 @@
     "environment": "{{name}} (environment)",
     "unknownEnvironment": "Unknown environment",
     "localMachine": "Local machine",
-    "notSet": "Not set"
+    "notSet": "Not set",
+    "orgDefault": "Organization default"
   },
   "createRepoGroupModal": {
     "cancel": "Cancel",
@@ -51,10 +52,6 @@
   },
   "stageMetricDetailContent": {
     "back": "← Back"
-  },
-  "automations": {
-    "creating": "Creating...",
-    "newAutomation": "New automation"
   },
   "softwareFactory": {
     "noPriorData": "No prior data",
@@ -441,9 +438,6 @@
       "customInstructions": "Custom instructions: {{extras}}"
     }
   },
-  "automationBreadcrumb": {
-    "automations": "Automations"
-  },
   "automationBreadcrumbV2": {
     "automations": "Automations"
   },
@@ -536,18 +530,15 @@
     "saving": "Saving...",
     "sessionPrivacy": "Session privacy",
     "trigger": "Trigger",
-    "triggeredBy": "Triggered by",
     "chainedAfter": "Chained after"
   },
   "automationChainedEditFormV2": {
     "runsStartWhenARunOf": "Runs start when a run of one of these automations ends, whether it completed or failed.",
-    "triggeredBy": "Triggered by",
     "whatDroidDoesEachTimeThe": "What Droid does each time the automation before it finishes a run.",
     "instructions": "Instructions",
     "agentInstructions": "Agent instructions",
     "describeWhatDroidShouldDoEach": "Describe what Droid should do each time this automation is started...",
     "permanentlyRemovesThisAutomationTheAutomations": "Permanently removes this automation. The automations that triggered it stop starting it. Past run history is kept.",
-    "triggeredByNames": "Triggered by {{names}}",
     "chainedAfter": "Chained after",
     "chainedAfterNames": "Chained after {{names}}"
   },
@@ -557,48 +548,6 @@
   "automationDetailPageShell": {
     "automationDetailSections": "Automation detail sections",
     "openSidebar": "Open sidebar"
-  },
-  "automationDetailPanelV2": {
-    "anyoneInYourOrganization": "Anyone in your organization",
-    "automationModel": "Automation model",
-    "changeVisibility": "Change visibility",
-    "clearSelection": "Clear selection",
-    "creating": "creating",
-    "default": "Default",
-    "editSchedule": "Edit schedule",
-    "forkedFrom": "Forked from",
-    "inProgress": "In progress",
-    "lastDaysOfRuns_one": "Last {{count}} day of runs",
-    "lastDaysOfRuns_other": "Last {{count}} days of runs",
-    "lastRun": "Last run",
-    "model": "Model",
-    "notConfigured": "Not configured",
-    "onlyYouCanSeeThis": "Only you can see this",
-    "openSetupSession": "Open setup session",
-    "organization": "Organization",
-    "owner": "Owner",
-    "private": "Private",
-    "receiverUrl": "Receiver URL",
-    "retry": "Retry",
-    "runAs": "Run as",
-    "runsOn": "Runs on",
-    "schedule": "Schedule",
-    "scheduleUtc": "{{schedule}} (UTC)",
-    "secret": "Secret",
-    "selectAnAutomationToViewDetails": "Select an automation to view details",
-    "sessionEnded": "Session ended",
-    "setup": "Setup",
-    "setupSession": "Setup session",
-    "sparkBarTitle": "{{date}} — {{status}}",
-    "sparkBarTitleNoRun": "{{date}} — no run",
-    "successRate7d": "Success rate (7d)",
-    "thisAutomationIsInADegraded": "This automation is in a degraded state.",
-    "thisAutomationIsStillBeingCreated": "This automation is still being created.",
-    "thisAutomationWasRemovedOrIs": "This automation was removed or is no longer available.",
-    "visibility": "Visibility",
-    "waitingForYourResponse": "Waiting for your response",
-    "webhook": "Webhook",
-    "when": "When"
   },
   "automationEditFormFieldsV2": {
     "sharedSessionModelLocked": "Runs post into an existing session, which keeps using its own model and reasoning settings. To change the model and reasoning settings, open the session from the overview page.",
@@ -616,7 +565,8 @@
     "templateAutomation": "{{name}} automation",
     "automationName": "Automation name",
     "whoCanSeeAndRunThisAutomation": "Who can see and run this automation, and who can open the sessions it starts.",
-    "whoCanOpenTheSessionsThisAutomationStarts": "Who can open the sessions this automation starts."
+    "whoCanOpenTheSessionsThisAutomationStarts": "Who can open the sessions this automation starts.",
+    "orgDefaultModel": "Organization default"
   },
   "automationEventsTableV2": {
     "alerts": "alerts",
@@ -655,26 +605,6 @@
     "chainAFollowUpAutomation": "Chain a follow-up automation",
     "createNew": "Create new",
     "selectExisting": "Select existing"
-  },
-  "automationRunAlertsPanel": {
-    "loadingAlerts": "Loading alerts...",
-    "noRunAlerts": "No run alerts",
-    "noRunId": "none",
-    "runAlerts": "Run Alerts",
-    "showMore": "Show more",
-    "unableToLoadAlerts": "Unable to load alerts: {{message}}"
-  },
-  "automationRunHistoryPanel": {
-    "goToSession": "Go to Session",
-    "loadingHistory": "Loading history...",
-    "noRunsYet": "No runs yet",
-    "retry": "retry",
-    "runEntryDataMayBeIncomplete": "Run entry data may be incomplete",
-    "runHistory": "Run History",
-    "sessionIsBeingCreated": "Session is being created…",
-    "showMore": "Show more",
-    "timestampCreate": "{{timestamp}} (create)",
-    "unableToLoadHistory": "Unable to load history: {{message}}"
   },
   "automationRunHistoryTableV2": {
     "duration": "Duration",
@@ -728,7 +658,6 @@
     "deleting": "Deleting...",
     "edit": "Edit",
     "forkedFrom": "Forked from",
-    "frequency": "Frequency",
     "fullscreen": "Fullscreen",
     "keepCreating": "Keep creating",
     "lastRun": "Last run",
@@ -765,12 +694,6 @@
     "permanentlyRemovesThisAutomationPastRun": "Permanently removes this automation. Past run history is kept.",
     "whenSetScheduledRunsExecuteFrom": "When set, scheduled runs execute from this directory so they can use that project's skills, repo, and relative paths. Leave blank to run from Droid's default automation folder."
   },
-  "automationShareDropdown": {
-    "access": "Access",
-    "private": "Private",
-    "share": "Share",
-    "shared": "Shared"
-  },
   "automationShareDropdownV2": {
     "access": "Access",
     "private": "Private",
@@ -801,7 +724,6 @@
     "save": "Save",
     "saving": "Saving...",
     "sessionPrivacy": "Session privacy",
-    "trigger": "Trigger",
     "triggers": "Triggers"
   },
   "automationSlackEditFormV2": {
@@ -817,26 +739,11 @@
     "creating": "Creating",
     "paused": "Paused"
   },
-  "automationTemplates": {
-    "openSidebar": "Open sidebar",
-    "selectATemplate": "Select a Template",
-    "templates": "Templates"
-  },
   "automationVisualViewerV2": {
     "automationVisualOutput": "Automation Visual Output",
     "runTheAutomationToGenerateA": "Run the automation to generate a visual",
     "selectAnAutomationToViewIts": "Select an automation to view its visual output",
     "theVisualFileMayContainInvalid": "The visual file may contain invalid HTML. Try running the automation again."
-  },
-  "automationWebhookDeliveriesPanel": {
-    "deliveries": "Deliveries",
-    "loadingDeliveries": "Loading deliveries...",
-    "noDeliveriesYetSendARequest": "No deliveries yet — send a request to the webhook URL.",
-    "pageLabel": "Page {{page}}",
-    "reason": "Reason",
-    "size": "Size",
-    "status": "Status",
-    "when": "When"
   },
   "automationWebhookDetailPage": {
     "areYouSureYouWantToDelete": "Are you sure you want to delete \"{{name}}\"? This permanently removes the automation and its receiver URL, and it will no longer accept future deliveries.",
@@ -863,7 +770,6 @@
     "saving": "Saving...",
     "secretFingerprint": "Secret fingerprint",
     "sessionPrivacy": "Session privacy",
-    "trigger": "Trigger",
     "webhookUrl": "Webhook URL",
     "triggers": "Triggers"
   },
@@ -998,6 +904,7 @@
       "pickRepository": "Pick a repository",
       "pickGithubEvent": "Pick at least one GitHub event",
       "pickComputerOrTemplateForServiceAccount": "Pick a computer or Template for the service account to run on",
+      "pickServiceAccount": "Pick a service account for this automation to run as",
       "fixWorkingDirectory": "Fix the working directory",
       "pickDifferentComputer": "Pick a different computer"
     },
@@ -1080,165 +987,21 @@
       "customCi": "The repository this workflow is added to.",
       "gitlabNotSupported": "GitLab automations are currently not supported, try <ciLink>running Droid from GitLab CI instead</ciLink>."
     },
-    "orgAlreadyHasOrgWideInstall": "{{org}} already has an org-wide install for this template — Create will take you to it."
-  },
-  "createAutomationV2": {
-    "whenShouldThisAutomationRunUse": "When should this automation run? Use natural language or cron.",
-    "schedule": "Schedule",
-    "loadingRepositories": "Loading repositories...",
-    "installTheFactoryDroidApp": "Install the Factory Droid App",
-    "noWritableRepositoriesFound": "No writable repositories found",
-    "githubOrganizations": "GitHub organizations",
-    "searchOrganizations": "Search organizations...",
-    "noMatchingOrganizations": "No matching organizations",
-    "noGithubOrganizationsAvailable": "No GitHub organizations available.",
-    "applyTo": "Apply to",
-    "repository": "Repository",
-    "organization": "Organization",
-    "reviewDepth": "Review depth",
-    "shallow": "Shallow",
-    "deep": "Deep",
-    "shallowIsAFastSurfaceReview": "Shallow is a fast surface review. Deep lets the agent explore related code before commenting.",
-    "model": "Model",
-    "overrideTheDefaultModelForThis": "Override the default model for this automation.",
-    "reasoningLevel": "Reasoning Level",
-    "overrideTheModelSpecificDefaultReasoning": "Override the model-specific default reasoning level.",
-    "allowedBots": "Allowed bots",
-    "eGDependabotRenovate": "e.g. dependabot,renovate",
-    "commaSeparatedBotLoginsAllowedTo": "Comma-separated bot logins allowed to trigger reviews. Leave blank to disallow bot-authored PRs.",
-    "securityReview": "Security review",
-    "turnsOnAutomaticSecurityReviewFor": "Turns on automatic_security_review for the droid-action step.",
-    "descriptionOptional": "Description (optional)",
-    "shortSummaryShownInTheAutomation": "Short summary shown in the automation list",
-    "visualization": "Visualization",
-    "whatShouldTheDashboardDisplayE": "What should the dashboard display? e.g. a table of open issues, a chart of trends over time...",
-    "memoryEvolution": "Memory & Evolution",
-    "howShouldThisAutomationImproveOver": "How should this automation improve over time? What should it remember between runs?",
-    "workingDirectoryOptional": "Working directory (optional)",
-    "absolutePathTheRunExecutesIn": "Absolute path the run executes in, e.g. ~/code/my-repo",
-    "checkingDirectory": "Checking directory…",
-    "githubActionParameters": "GitHub Action Parameters",
-    "optionalWorkflowInputsAsYamlOr": "Optional: workflow inputs as YAML or JSON",
-    "whatShouldThisAutomationDo": "What should this automation do?",
-    "describeWhatYouWantThisAutomation": "Describe what you want this automation to accomplish each time it runs...",
-    "ciTemplate": "CI template",
-    "clickingCreateWillOpenANew": "Clicking Create will open a new Droid session pre-filled with the /install-qa command and your selections above. The agent will analyze the selected repository interactively and generate the QA skill plus a .github/workflows/qa.yml workflow you can commit.",
-    "thisRepositoryAlreadyHasAQa": "This repository already has a QA workflow — Create will take you to the existing automation instead.",
-    "clickingCreateWillOpenAPull": "Clicking Create will open a pull request adding .github/workflows/droid-wiki-refresh.yml to the selected repository. The workflow refreshes the Factory Wiki on the trigger you selected (with your settings above) and can also be run manually.",
-    "thisRepositoryAlreadyHasAnAutowiki": "This repository already has an AutoWiki workflow — Create will take you to the existing automation instead.",
-    "clickingCreateWillOpenAPull2": "Clicking Create will open a pull request adding .github/workflows/deep-security-review.yml to the selected repository. The workflow runs /security-review across the codebase on your schedule (with your settings above) and can also be run manually.",
-    "thisRepositoryAlreadyHasASecurity": "This repository already has a security audit workflow — Create will take you to the existing automation instead.",
-    "runAsServiceAccount": "Run as service account?",
-    "openSidebar": "Open sidebar",
-    "automationName": "Automation name",
-    "triggers": "Triggers",
-    "agentInstructions": "Agent Instructions",
-    "agentInstructions2": "Agent instructions",
-    "orgDisableReason": {
-      "planRequired": "requires Team / Enterprise",
-      "alreadyInstalled": "already has an org-wide install",
-      "noAdmin": "needs admin:org permission"
-    },
-    "orgDisableTooltip": {
-      "planRequired": "GitHub Required Workflows require a GitHub Team or Enterprise plan.",
-      "alreadyInstalled": "This organization already has a Factory-managed org-wide workflow installed.",
-      "noAdmin": "Requires GitHub org admin permissions and a GitHub token with the `admin:org` scope."
-    },
-    "eligibleForOrgWideInstall": "Eligible for org-wide install",
-    "orgSelected": "{{login}} selected",
-    "organizationsSelected": "{{count}} organizations selected",
-    "descriptionTooLong": "Description must be {{max}} characters or fewer.",
-    "submit": {
-      "openExisting": "Open existing",
-      "createWithSession": "Create with session",
-      "create": "Create",
-      "creating": "Creating..."
-    },
-    "validation": {
-      "setValidSchedule": "Set a valid schedule or remove the schedule trigger",
-      "pickRepoToScaffoldQa": "Pick a repository to scaffold QA",
-      "pickEventOrSchedule": "Pick at least one GitHub event or add a schedule",
-      "pickComputerForQaSetup": "Pick a computer for the QA setup session to run on",
-      "connectSelectedComputer": "Connect to the selected computer to continue",
-      "pickRepoForAutoWiki": "Pick a repository to set up AutoWiki",
-      "pickRepoForSecurityAudit": "Pick a repository to set up the security audit",
-      "addName": "Add a name",
-      "describeWhatDroidShouldDo": "Describe what Droid should do",
-      "pickSlackChannel": "Pick at least one Slack channel",
-      "pickComputerOrTemplate": "Pick a computer or Template for this automation to run on",
-      "pickOrganization": "Pick an organization",
-      "pickAtLeastOneRepository": "Pick at least one repository",
-      "pickRepository": "Pick a repository",
-      "pickGithubEvent": "Pick at least one GitHub event",
-      "pickComputerOrTemplateForServiceAccount": "Pick a computer or Template for the service account to run on",
-      "fixWorkingDirectory": "Fix the working directory"
-    },
-    "workingDirectoryNotAccessible": "Working directory is not accessible.",
-    "couldNotVerifyWorkingDirectory": "Could not verify the working directory. Try again.",
-    "hostRepositoryLabel": "Host repository (where the workflow file lives)",
-    "repositories": "Repositories",
-    "selectAnOrganizationFirst": "Select an organization first",
-    "droidWillPickHostRepoPerOrg": "Droid will pick a host repo per org",
-    "searchRepositories": "Search repositories...",
-    "openExistingArrow": "Open existing →",
-    "alreadyConfigured": "Already configured",
-    "hasCodeReview": "Has code review",
-    "privateSuffix": " · private",
-    "cannotCreateCiAutomationForRepository": "You cannot create a CI automation for this repository.",
-    "noAccess": "no access",
-    "repoCoveredByOrgWideInstall": "This repo is already covered by an org-wide install on {{org}}. A per-repo workflow added here will run alongside it.",
-    "sessionWillPickHostRepositoryPerOrg": "The Droid session will pick a host repository for each selected org, then create one Required Workflow ruleset per org.",
-    "workflowYamlWillBeCommittedToRepo": "The workflow YAML will be committed to this repo and enforced across the rest of the org via a GitHub Required Workflow ruleset.",
-    "applyToRepositoryHint": "Add the workflow file to one or more repositories.",
-    "applyToOrganizationHint": "Apply via GitHub Required Workflows on organization rulesets.",
-    "workingDirectoryTooltip": "When set, scheduled runs execute from this directory so they can use that project's skills, repo, and relative paths. Leave blank to run from Droid's default automation folder (~/{{factoryDirName}}/automations/<automation-slug>), which stores the prompt, dashboard, memory, and reports.",
     "orgAlreadyHasOrgWideInstall": "{{org}} already has an org-wide install for this template — Create will take you to it.",
-    "noComputersAvailable": "No computers available. Add one in Settings → Droid Computers.",
-    "runAsDescription": "Identity and billing this automation runs under.",
-    "runAsDescriptionWithNote": "Identity and billing this automation runs under. {{note}}",
-    "runAsDescriptionIncidentResponse": "Identity and billing this automation runs under. It is recommended to use a service account for the incident response automation so the computer and session interactivity is shared.",
-    "runAsDescriptionIncidentResponseWithNote": "Identity and billing this automation runs under. It is recommended to use a service account for the incident response automation so the computer and session interactivity is shared. {{note}}",
-    "qaComputerDescription": "Droid uses this computer to create the automation. Runs take place in GitHub Actions.",
-    "setupComputer": "Setup computer",
-    "templates": "Templates",
-    "templateTitle": "{{name}} Template",
-    "webhookPromptPlaceholder": "What should Droid do when an event arrives?",
-    "schedulePromptPlaceholder": "Describe what Droid should do each time this automation runs..."
-  },
-  "createPrBabysitterAutomation": {
-    "schedule": "Schedule",
-    "howOftenShouldPrBabysitterRun": "How often should PR Babysitter run?",
-    "runAsServiceAccount": "Run as service account?",
-    "identityAndBillingThisAutomationRuns": "Identity and billing this automation runs under.",
-    "loadingRepositories": "Loading repositories...",
-    "noRepositoriesFound": "No repositories found",
-    "repositories": "Repositories",
-    "whichRepositoriesShouldDroidWatch": "Which repositories should Droid watch?",
-    "searchRepositories": "Search repositories",
-    "searchRepositories2": "Search repositories...",
-    "selectAtLeastOneRepository": "Select at least one repository.",
-    "model": "Model",
-    "overrideTheDefaultModelForThis": "Override the default model for this automation's scheduled runs.",
-    "reasoningLevel": "Reasoning Level",
-    "overrideTheModelSpecificDefaultReasoning": "Override the model-specific default reasoning level.",
-    "pullRequests": "Pull Requests",
-    "whichPullRequestsShouldDroidWatch": "Which pull requests should Droid watch?",
-    "prFilterDescription": "PR filter description",
-    "includeDraftPrs": "Include draft PRs?",
-    "additionalInstructionsOptional": "Additional instructions (optional)",
-    "anythingElseDroidShouldKnow": "Anything else Droid should know?",
-    "additionalInstructions": "Additional instructions",
-    "automationName": "Automation name",
-    "noComputersAvailableAddOneIn": "No computers available. Add one in Settings → Droid Computers.",
-    "connectToTheSelectedComputerToRun": "Connect to the selected computer to run PR Babysitter.",
-    "pickAComputerOrTemplateToRun": "Pick a computer or Template to run PR Babysitter.",
-    "removeRepo": "Remove {{repo}}",
-    "selectedCount": "{{count}} selected",
-    "selectRepositories": "Select repositories",
-    "templates": "Templates",
-    "creating": "Creating...",
-    "createWithSession": "Create with session",
-    "templateTitle": "{{name}} Template"
+    "orgDefaultModel": "Organization default",
+    "runConfig": {
+      "title": "Config",
+      "orgDefault": "Run on organization default computer and service account (recommended)",
+      "custom": "Configure your own computer and identity settings",
+      "needsSetup": "We'll set up your organization's default service account and environment",
+      "dynamic": "{{serviceAccount}} on {{environment}}",
+      "dynamicWithoutEnvironment": "{{serviceAccount}} on your organization's default environment",
+      "persistent": "{{serviceAccount}} on your organization's delegation computers",
+      "serviceAccountFallback": "Your organization's default service account"
+    },
+    "serviceAccountRequired": {
+      "orgDefaultUnavailable": "Slack automations run as a service account so they never post with your own access, and your organization's default service account isn't available. A Manager can set it up in Settings → Delegations."
+    }
   },
   "createPrBabysitterAutomationV2": {
     "loadingRepositories": "Loading repositories...",
@@ -1295,41 +1058,6 @@
     "droidSkipsPullRequestsThatAre": "Droid skips pull requests that are still drafts.",
     "houseRulesSuchAsWhichChecks": "House rules, such as which checks to leave alone."
   },
-  "createTriageAutomation": {
-    "schedule": "Schedule",
-    "howOftenShouldTriageRun": "How often should triage run?",
-    "runAsServiceAccount": "Run as service account?",
-    "identityAndBillingThisAutomationRuns": "Identity and billing this automation runs under.",
-    "model": "Model",
-    "overrideTheDefaultModelForThis": "Override the default model for this automation's scheduled runs.",
-    "reasoningLevel": "Reasoning Level",
-    "overrideTheModelSpecificDefaultReasoning": "Override the model-specific default reasoning level.",
-    "channelsToScan": "Channels to scan",
-    "whichChannelsShouldDroidScan": "Which channels should Droid scan?",
-    "listTheChannelsOrDescribeThem": "List the channels or describe them in plain language.",
-    "scanChannelsDescription": "Scan channels description",
-    "summaryChannel": "Summary channel",
-    "whereShouldDroidPostEachRun": "Where should Droid post each run summary?",
-    "nameTheChannelWellConfirmAnd": "Name the channel. We'll confirm and join it in the setup session.",
-    "ticketing": "Ticketing",
-    "ticketingSystem": "Ticketing system",
-    "whereTicketsGoWhenTheresNo": "Where tickets go when there's no clear owner. We'll confirm it in the setup session.",
-    "defaultDestination": "Default destination",
-    "eGEngOrEngineering": "e.g. ENG or \"Engineering\"",
-    "ticketCreationGuidance": "Ticket creation guidance",
-    "routingRulesAndWhichLabelsTo": "Routing rules and which labels to apply.",
-    "ticketGuidance": "Ticket guidance",
-    "automationName": "Automation name",
-    "noComputersAvailableAddOneIn": "No computers available. Add one in Settings → Droid Computers.",
-    "connectToTheSelectedComputerToRun": "Connect to the selected computer to run triage.",
-    "pickAComputerOrTemplateToRun": "Pick a computer or Template to run triage.",
-    "defaultJiraProject": "Default Jira project",
-    "defaultLinearTeam": "Default Linear team",
-    "templates": "Templates",
-    "creating": "Creating...",
-    "createWithSession": "Create with session",
-    "templateTitle": "{{name}} Template"
-  },
   "createTriageAutomationV2": {
     "nameYourAutomation": "Name your automation",
     "name": "Name",
@@ -1384,20 +1112,6 @@
     "optional": "Optional",
     "fineTuneHowThisAutomationRuns": "Fine-tune how this automation runs. Everything here has a sensible default."
   },
-  "deleteAutomationConsentModal": {
-    "cancel": "Cancel",
-    "delete": "Delete",
-    "deleteAutomation": "Delete automation"
-  },
-  "forkAutomationModal": {
-    "computerOrTemplateTheForkedAutomation": "Computer or Template the forked automation will run on.",
-    "fork": "Fork",
-    "forkOptions": "Fork Options",
-    "noComputersOrTemplatesAvailable": "No computers or Templates available. Add a computer to fork this automation.",
-    "runAsServiceAccount": "Run as service account?",
-    "selectRunTarget": "Select run target",
-    "serviceAccountForksAreSharedWith": "Service-account forks are shared with your organization."
-  },
   "forkAutomationModalV2": {
     "computerOrTemplateTheForkedAutomation": "Computer or Template the forked automation will run on.",
     "fork": "Fork",
@@ -1416,13 +1130,6 @@
     "thisWillStartADroidSession": "This will start a Droid session that analyzes “{{automationName}}” and suggests optimizations to its prompt, memory, and outputs.",
     "whatShouldTheReviewFocusOn": "What should the review focus on? (optional)"
   },
-  "modelSelector": {
-    "selectAModel": "Select a model...",
-    "noModelsAvailable": "No models available",
-    "loadingCustomModels": "Loading custom models…",
-    "model": "Model",
-    "labelWithAvailability": "{{label}}. {{availability}}"
-  },
   "modelSelectorV2": {
     "loadingCustomModels": "Loading custom models…",
     "selectAModel": "Select a model...",
@@ -1430,9 +1137,6 @@
     "default": "Default",
     "model": "Model",
     "labelWithAvailability": "{{label}}. {{availability}}"
-  },
-  "optionalSettingsSection": {
-    "additionalSettings": "Additional Settings"
   },
   "optionalSettingsSectionV2": {
     "additionalSettings": "Additional settings",
@@ -1452,16 +1156,6 @@
     "scaffoldingAutomationFilesRemotely": "Scaffolding automation files remotely",
     "waitingForYourResponse": "Waiting for your response",
     "wakingAndConnectingRemoteComputer": "Waking and connecting remote computer"
-  },
-  "promptModelSelector": {
-    "default": "Default",
-    "loadingCustomModels": "Loading custom models…",
-    "automationModel": "Automation model",
-    "automationModelWithAvailability": "Automation model. {{availability}}",
-    "loadingModel": "Loading model",
-    "modelName": "Model: {{model}}",
-    "loadingModels": "Loading models...",
-    "noModelsAvailable": "No models available"
   },
   "promptModelSelectorV2": {
     "loadingCustomModels": "Loading custom models…",
@@ -1487,10 +1181,6 @@
     "default": "Default",
     "defaultWithEffort": "Default ({{effort}})"
   },
-  "reasoningLevelSelector": {
-    "selectAReasoningLevel": "Select a reasoning level...",
-    "noReasoningLevelsAvailable": "No reasoning levels available"
-  },
   "reasoningLevelSelectorV2": {
     "selectAReasoningLevel": "Select a reasoning level...",
     "default": "Default",
@@ -1502,12 +1192,11 @@
     "runAsServiceAccount": "Run as service account",
     "runAsServiceAccountOptional": "Run as service account?",
     "searchServiceAccounts": "Search service accounts…",
-    "noServiceAccountsMatch": "No service accounts match"
+    "noServiceAccountsMatch": "No service accounts match",
+    "chooseServiceAccount": "Choose a service account",
+    "noServiceAccounts": "Your organization has no active service accounts yet. Create one in Settings → API Keys → Service Accounts."
   },
   "runOnComputerPicker": {
-    "localComputersRequireTheFactoryDesktop": "Local computers require the Factory desktop app.",
-    "openDesktopApp": "Open desktop app",
-    "retry": "Retry",
     "computer": "computer",
     "connectedToName": "Connected to {{name}}.",
     "reconnectingToName": "Reconnecting to {{name}}…",
@@ -1515,19 +1204,12 @@
     "thisComputerAlreadyHasAutomations": "This computer already has {{count}} automations set up. Consider running this automation on a different computer to avoid overloading it.",
     "localComputerName": "{{name}} (local)",
     "droidComputers": "Droid Computers",
-    "selectTemplateOrComputer": "Select environment or computer",
-    "runOn": "Run on",
-    "computerOrTemplateThisAutomationRunsOn": "Computer or Template this automation runs on."
+    "selectTemplateOrComputer": "Select environment or computer"
   },
   "runOnComputerPickerV2": {
     "retry": "Retry",
     "runOn": "Run on",
     "computerOrTemplateThisAutomationRunsOn": "Computer or Environment this automation runs on."
-  },
-  "sessionPrivacySelector": {
-    "sessionPrivacy": "Session privacy",
-    "private": "Private",
-    "team": "Team"
   },
   "sessionPrivacySelectorV2": {
     "sessionPrivacy": "Session privacy"
@@ -1553,29 +1235,6 @@
     "shareAutomation": "Share Automation",
     "shareLink": "Share Link",
     "visibility": "Visibility"
-  },
-  "slackAutomationForm": {
-    "triggers": "Triggers",
-    "channels": "Channels",
-    "searchChannels": "Search channels...",
-    "triggerOnMessagesFrom": "Trigger on messages from",
-    "anyone": "Anyone",
-    "humansOnly": "Humans only",
-    "botsOnly": "Bots only",
-    "prompt": "Prompt",
-    "instructionsToInjectIntoEverySession": "Instructions to inject into every session triggered from this channel...",
-    "keywords": "Keywords",
-    "optionalIfEmptyTriggersOnAll": "(optional — if empty, triggers on all messages)",
-    "typeKeywordsSeparatedByCommas": "Type keywords separated by commas",
-    "excludeKeywords": "Exclude keywords",
-    "typeKeywordsToExcludeSeparatedBy": "Type keywords to exclude, separated by commas",
-    "excludeSenders": "Exclude senders",
-    "eGB0a663lrwusAxiomMonitorMonitor": "e.g. B0A663LRWUS, Axiom Monitor Monitor",
-    "removeChannelNameRule": "Remove channel name rule {{name}}",
-    "removeChannel": "Remove channel {{name}}",
-    "matchChannelsNamed": "Match channels named {{pattern}}",
-    "optionalAMessageContainingOneOf": "(optional — a message containing one of these never triggers)",
-    "optionalASlackMemberIdA": "(optional — a Slack member ID, a bot ID, or a bot's display name)"
   },
   "slackAutomationFormV2": {
     "channels": "Channels",
@@ -1604,23 +1263,6 @@
     "aMessageContainingOneOfThese": "A message containing one of these never starts a run.",
     "aSlackMemberIdABot": "A Slack member ID, a bot ID, or a bot's display name."
   },
-  "triggersField": {
-    "addTrigger": "Add Trigger",
-    "addTrigger2": "Add trigger",
-    "github": "GitHub",
-    "schedule": "Schedule",
-    "editSchedule": "Edit schedule",
-    "cronExpression": "Cron expression",
-    "removeSchedule": "Remove Schedule",
-    "noEventsConfigured": "No events configured",
-    "presetHourly": "Hourly",
-    "presetDaily": "Daily",
-    "presetWeekly": "Weekly",
-    "presetCustomCron": "Custom (cron)",
-    "setSchedule": "Set schedule",
-    "runsOnAScheduleUseNaturalLanguage": "Runs on a schedule. Use natural language like \"every Monday at 9am\" or a 5-part cron expression.",
-    "removeEvent": "Remove {{event}}"
-  },
   "triggersFieldV2": {
     "frequency": "Frequency",
     "schedule": "Schedule",
@@ -1632,14 +1274,6 @@
     "runsOnAScheduleUseNaturalLanguage": "Runs on a schedule. Use natural language like \"every Monday at 9am\" or a 5-part cron expression.",
     "githubEvents": "GitHub events",
     "other": "Other"
-  },
-  "webhookAutomationForm": {
-    "runsStartWhenAnHttpPost": "Runs start when an HTTP POST hits this automation's unique URL. The URL and its secret are generated after you create the automation and shown once.",
-    "webhook": "Webhook",
-    "payloadFilterRegularExpression": "Payload filter (regular expression)",
-    "payloadFilter": "Payload filter",
-    "eGActionSSOpened": "e.g. \"action\"\\s*:\\s*\"opened\"",
-    "javascriptRegularExpressionTestedAgainstThe": "JavaScript regular expression tested against the raw request body. Deliveries that don't match are recorded as Filtered and don't start a run. Leave empty to run on every event."
   },
   "webhookAutomationFormV2": {
     "payloadFilter": "Payload filter",
@@ -1736,24 +1370,10 @@
     "webhookUrl": "Webhook URL"
   },
   "automationsV2": {
-    "next": "Next",
-    "automationAlerts": "Automation Alerts",
-    "searchAutomations": "Search automations",
-    "showWorkstreamAutomations": "Show workstream automations",
     "automations": "Automations",
-    "refreshCiWorkflows": "Refresh CI workflows",
-    "newAutomation": "New automation",
-    "createWithDroid": "Create with Droid",
-    "createWithTemplate": "Create with Template",
-    "attention": "Attention",
-    "theSetupSessionRequiresYourResponse": "The setup session requires your response to proceed.",
-    "dismiss": "Dismiss",
-    "goToSession": "Go to session",
-    "desktopAppRequired": "Desktop app required",
     "loadingCiWorkflows": "Loading CI workflows...",
     "automationsGeneratedByWorkstreamsWillAppear": "Automations generated by workstreams will appear here.",
     "noWorkstreamAutomationsYet": "No workstream automations yet",
-    "githubWorkflowScanFailed": "GitHub workflow scan failed",
     "pendingPrDescription": "{{repoFullName}} · pending PR",
     "setupTimedOutMessage": "Automation creation timed out before setup finished. Open the setup session to finish setup, or cancel the creation and try again.",
     "setupSessionEndedMessage": "The setup session ended before setup finished. Open the setup session to finish setup, or cancel the creation and try again.",
@@ -1762,11 +1382,8 @@
       "settingUp": "Setting up your automation",
       "configuringFiles": "Configuring automation files"
     },
-    "healthSummary_one": "{{count}} automation has failed runs, please review",
-    "healthSummary_other": "{{count}} automations have failed runs, please review",
     "githubWorkflowsScannedClickToRescan": "GitHub workflows scanned {{scannedAgo}}. Click to rescan.",
     "rescanGithubWorkflows": "Rescan GitHub workflows",
-    "automateWorkBySettingUpScheduledThreads": "Automate work by setting up scheduled threads.",
     "thisMachine": "This machine",
     "webhookSecretRotated": "Webhook secret rotated",
     "failedToRotateTheWebhookSecret": "Failed to rotate the webhook secret",
@@ -1786,18 +1403,12 @@
     "failedToWriteForkedAutomationFiles": "Failed to write forked automation files",
     "automationForkedSuccessfully": "Automation forked successfully",
     "failedToForkAutomationV2": "Failed to fork automation (v2)",
-    "desktopRequiredDescription": "Automations require a connection to the local daemon. <desktopLink>Open the Factory desktop app</desktopLink> to use this feature.",
     "untitledWorkstream": "Untitled workstream",
     "automationsLinkedToThisWorkstreamWillAppear": "Automations linked to this workstream will appear here.",
     "startFromATemplateOrDescribeTheJob": "Start from a template, or describe the job and Droid sets it up with you.",
     "noAutomationsForThisWorkstreamYet": "No automations for this workstream yet",
     "noAutomationsYet": "No automations yet",
-    "createYourFirstAutomationToGetStarted": "Create your first automation to get started.",
     "monitorAndManageThisWorkstreamsAutomations": "Monitor and manage this workstream's automations",
-    "reconnectGithub": "Reconnect GitHub",
-    "connectGithub": "Connect GitHub",
-    "githubConnectionExpired": "Your GitHub connection has expired. Reconnect to view and manage CI automations.",
-    "connectYourGithubAccount": "Connect your GitHub account to view and manage CI automations.",
     "couldNotScanGithubWorkflows": "Could not scan GitHub workflows",
     "untitledSession": "Untitled session"
   },
@@ -1886,17 +1497,11 @@
     "readOnly": "Read-only",
     "writable": "Writable"
   },
-  "automationModelControls": {
-    "automationReasoningLevel": "Automation reasoning level"
-  },
   "triggeredByPickerV2": {
-    "triggeredBy": "Triggered by",
-    "automationsWhoseRunsStartThisOne": "Automations whose runs start this one when they end, whether they completed or failed. Up to {{max}}.",
     "addAutomation": "Add automation…",
     "searchAutomations": "Search automations…",
     "noAutomationsMatch": "No automations match",
     "loadingAutomations": "Loading automations…",
-    "upToMaxAutomations": "Up to {{max}} automations",
     "noOtherAutomationsToPickFrom": "No other automations to pick from",
     "removeName": "Remove {{name}}",
     "onlyTheOwnerCanChangeWhich": "Only the owner can change which automations trigger this one: the sources have to come from the owner's automations.",
@@ -1919,7 +1524,6 @@
     "localDaemonDisconnected": "Not connected to the local daemon. Wait for the desktop app to reconnect and try again."
   },
   "buildAutomationConfigurationRows": {
-    "triggeredBy": "Triggered by",
     "startsNext": "Starts next",
     "openSetupSession": "Open setup session",
     "sessionEnded": "Session ended",
@@ -1946,7 +1550,9 @@
     "successRate7d": "Success rate (7d)",
     "prompt": "Prompt",
     "chainedAfter": "Chained after",
-    "noRunTarget": "No run target — runs can't start. Recreate this automation with a computer or template."
+    "noRunTarget": "No run target — runs can't start. Recreate this automation with a computer or template.",
+    "orgDefaultUnavailable": "Organization default unavailable",
+    "orgDefaultModel": "Organization default"
   },
   "ciRepoAccess": {
     "requiresWriteAccess": "Creating CI automations requires write access to the repo. You only have {{permission}} access.",
@@ -2417,7 +2023,7 @@
     "serviceAccountIdentity": "{{name}} (service account)",
     "myself": "Myself",
     "none": "None",
-    "runAsComputerEmpty": "No computers or Environments available to {{serviceAccountName}} yet. Add a computer in Settings → API Keys → Service Accounts, or create an org environment in Settings → Environments."
+    "runAsComputerEmpty": "No computers or Environments available to {{serviceAccountName}} yet. A Manager can add a computer in Settings → API Keys → Service Accounts, or create an org environment in Settings → Environments."
   },
   "humanizeCron": {
     "days": {
@@ -2517,9 +2123,6 @@
     "matchList_other": "Matches {{count}} channels right now: {{names}}",
     "matchListWithOverflow_one": "Matches {{count}} channel right now: {{names}} (...{{overflow}} more)",
     "matchListWithOverflow_other": "Matches {{count}} channels right now: {{names}} (...{{overflow}} more)"
-  },
-  "useAutomationLegacyModelSelection": {
-    "saveFailed": "Could not save your selection. Please try again."
   },
   "useAutomationSessionV2": {
     "localAutomationsDesktopOnly": "Local automations can only be run from the desktop app",

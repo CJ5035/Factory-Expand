@@ -983,7 +983,11 @@
     "loadErrorTitle": "无法加载此任务",
     "missingTitle": "此任务已不存在",
     "loadErrorDescription": "无法连接到 Software Factory 存储。",
-    "missingDescription": "它可能已移到其他工作流或被删除。"
+    "missingDescription": "它可能已移到其他工作流或被删除。",
+    "mergePending": {
+      "queued": "PR 已加入合并队列，合并后任务将转入下一状态。",
+      "inProgress": "GitHub 仍在合并 PR，合并后任务将转入下一状态。"
+    }
   },
   "softwareFactoryWorkstreamsPane": {
     "status": "状态",

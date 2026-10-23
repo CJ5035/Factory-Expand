@@ -85,12 +85,12 @@
   },
   "pullRequestLayeredDiff": {
     "diagram": "Diagram",
-    "viewedSection": "Viewed {{title}}",
+    "productChanges": "Product changes",
+    "internalChanges": "Under the hood",
+    "architecture": "Architecture",
     "noChangedLinesInTheCurrent": "No changed lines in the current diff match this layer.",
     "overview": "Overview",
     "howItAllFitsTogether": "How it all fits together",
-    "collapseSection": "Collapse {{title}}",
-    "expandSection": "Expand {{title}}",
     "unassignedChangesSummary": "Changes not assigned to a walkthrough section.",
     "unassignedChanges": "Unassigned changes",
     "fileCount_one": "{{count}} file",
@@ -328,6 +328,10 @@
     "connectProviderToMergeOrReview": "Connect your provider account in settings to merge or review as yourself.",
     "pullRequestMerged": "Pull request merged.",
     "pullRequestNotMerged": "The pull request was not merged.",
+    "pullRequestsMerged_one": "{{count}} pull request merged.",
+    "pullRequestsMerged_other": "{{count}} pull requests merged.",
+    "pullRequestMergeQueued": "Pull request added to the merge queue.",
+    "pullRequestMergeInProgress": "The provider is still merging. The pull request updates once it finishes.",
     "reviewNotSubmitted": "The review was not submitted.",
     "pullRequestNotRefreshed": "The pull request could not be refreshed.",
     "linkedPullRequestRequired": "A linked pull request is required to view files.",
@@ -356,6 +360,13 @@
     "openInSidebar": "Open in sidebar",
     "on": "On",
     "off": "Off"
+  },
+  "pullRequestStack": {
+    "connectProviderToUnstack": "Connect your provider account in settings to unstack as yourself.",
+    "keptInStack_one": "{{count}} pull request stayed in the stack, for example because it is queued to merge.",
+    "keptInStack_other": "{{count}} pull requests stayed in the stack, for example because they are queued to merge.",
+    "notUnstacked": "The pull requests were not unstacked.",
+    "unstacked": "Pull requests unstacked without closing any of them."
   },
   "pullRequestSearch": {
     "searchFailed": "Pull requests could not be searched.",

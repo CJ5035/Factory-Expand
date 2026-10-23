@@ -586,7 +586,7 @@
   "cloudSyncSection": {
     "controlWhichDataThisDeviceSynchronizes": "控制此设备与云端同步的数据。",
     "cloudSync": "云同步",
-    "cloudSessionSync": "云端 Session 同步",
+    "cloudSessionSync": "Session 内容同步",
     "cloudConfigSync": "云端配置同步",
     "syncSupportedConfigsEGModel": "将受支持的配置（如模型、推理、自主级别和压缩级别选择）与 Session 数据分开同步。每台设备都可以独立选择是否启用。"
   },
@@ -761,7 +761,6 @@
     "persistedFilesWillBeKept": "已持久化的文件将予以保留。",
     "forceRebootComputer": "强制重启计算机",
     "recoveredToast": "计算机已恢复，守护进程已重新连接",
-    "preparingRecovery": "正在准备恢复…",
     "rebooting": "正在重启…",
     "forceReboot": "强制重启",
     "forceRebootName": "强制重启 {{name}}？"
@@ -1552,7 +1551,6 @@
   "delegationAppManagementModal": {
     "failedToConnect": "连接 {{integration}} 失败。请重试。",
     "disconnectedSuccessfully": "已成功断开连接",
-    "channels": "频道",
     "installJiraApp": "安装 Jira 应用"
   },
   "delegationAppSetup": {
@@ -1570,7 +1568,6 @@
   "delegationDefaultsSection": {
     "defaultsForWorkYouDelegateFrom": "从 Slack、Teams 或其他入口委派工作的默认设置。",
     "delegations": "委派",
-    "privateDelegationTemplate": "私人委派环境",
     "sharedDelegationTemplate": "共享委派环境",
     "defaultDelegationModel": "默认委派模型",
     "defaultDelegationReasoningLevel": "默认委派推理级别",
@@ -1580,11 +1577,14 @@
     "saveInstructions": "保存指令",
     "orgDefault": "组织默认",
     "modelDefault": "模型默认",
-    "privateDelegationTemplateTooltip": "用于以你的身份运行的私人委派，目前为 Slack 私信。",
     "sharedDelegationTemplateTooltip": "用于以组织服务账号身份运行的 Slack 频道、Teams、Linear 和 Jira 委派。你和该账号都必须拥有访问权限。",
     "unavailableTemplate": "不可用的环境",
     "instructionsAppendedForEmail": "此消息会附加到 {{email}} 发起的所有委派任务中",
-    "instructionsAppendedForYou": "此消息会附加到你发起的所有委派任务中"
+    "instructionsAppendedForYou": "此消息会附加到你发起的所有委派任务中",
+    "privateDelegationMachine": "私信委派计算机",
+    "privateDelegationMachineTooltip": "来自私信的委派任务运行所用的计算资源。",
+    "unavailableMachine": "计算机不可用",
+    "loadingMachine": "正在加载…"
   },
   "delegationIntegrationsSection": {
     "setUpForOrg": "为组织设置",
@@ -1780,7 +1780,8 @@
     "allowThisOrganizationToProvisionComputers": "允许此组织通过 OpenCompute 部署配置计算机。",
     "opencompute": "OpenCompute",
     "removeEmail": "移除 {{email}}",
-    "droidComputersTooltip": "控制组织可使用的计算机类型。即使关闭组织范围的设置，仍可允许特定用户使用托管计算机和通过远程控制连接的计算机。"
+    "droidComputersTooltip": "控制组织可使用的计算机类型。即使关闭组织范围的设置，仍可允许特定用户使用托管计算机和通过远程控制连接的计算机。",
+    "onlyTheseUsersCanCreateAndUseOpencompute": "只有这些用户可以创建和使用 OpenCompute 计算机。其他成员将无法访问其现有的 OpenCompute 计算机。"
   },
   "editWorkspaceModal": {
     "yourConfiguration": "你的配置",
@@ -3434,8 +3435,8 @@
     "missionValidationWorkerModel": "任务验证工作代理模型",
     "controlOptionalFeaturesAvailableInSessions": "控制组织内 Session 可使用的可选功能。",
     "sessionFeatures": "Session 功能",
-    "syncSessionDataToTheCloud": "将 Session 数据同步到云端，以便跨设备访问。",
-    "cloudSessionSync": "云端 Session 同步",
+    "syncSessionDataToTheCloud": "将消息等 Session 内容同步到云端，以便跨设备访问。Session 元数据（如 ID、时间戳、计算机和标签）始终会被存储。",
+    "cloudSessionSync": "Session 内容同步",
     "allowUsersToDictateChatMessages": "允许用户通过麦克风听写聊天消息。",
     "voiceDictation": "语音听写",
     "showWhichModelAutoModelPicked": "在 Session 模型标签上显示自动模型选择的模型。",
@@ -3497,7 +3498,17 @@
     "missionOrchestratorReasoningLevel": "任务编排器推理级别",
     "missionWorkerReasoningLevel": "任务工作代理推理级别",
     "missionValidationWorkerReasoningLevel": "任务验证工作代理推理级别",
-    "usersChoose": "由用户选择"
+    "usersChoose": "由用户选择",
+    "sessionTitleInMetadata": "存储 Session 标题",
+    "sessionTitleInMetadataDescription": "Session 内容同步已关闭，Factory 仅存储 Session 元数据。启用此项后，还会存储 Session 标题，并在 Session 详情、子 Session 列表和自动化运行历史中显示。不会存储消息或文件内容。",
+    "sessionTitleInMetadataComplianceDescription": "Factory 已为组织禁用云同步，因此不会存储 Session 标题。如需更改此限制，请联系 Factory。",
+    "readinessReportUpload": {
+      "title": "代理就绪度报告上传",
+      "description": "控制 Droid 是否将代理就绪度报告上传到 Factory。“从不上传”适用于所有位置；“始终上传”会跳过同意提示。",
+      "ask": "始终询问",
+      "always": "始终上传",
+      "never": "从不上传"
+    }
   },
   "sessionDefaultsSettings": {
     "remove": "移除",
@@ -3681,12 +3692,14 @@
       },
       "sessionFeatures": {
         "title": "Session 功能",
-        "cloudSessionSync": "云端 Session 同步",
+        "cloudSessionSync": "Session 内容同步",
         "voiceDictation": "语音听写",
         "routedModelVisibility": "显示自动模型选择",
         "imageGeneration": "图像生成",
         "defaultImageGenerationModel": "默认图像模型",
-        "allowedImageGenerationModels": "允许的图像模型"
+        "allowedImageGenerationModels": "允许的图像模型",
+        "sessionTitleInMetadata": "存储 Session 标题",
+        "readinessReportUpload": "代理就绪度报告上传"
       },
       "builtInToolAutonomy": {
         "title": "内置网络工具",
@@ -3860,7 +3873,7 @@
       },
       "cloudSync": {
         "title": "云同步",
-        "cloudSessionSync": "云端 Session 同步",
+        "cloudSessionSync": "Session 内容同步",
         "cloudPreferenceSync": "云端配置同步",
         "cloudItemPull": "拉取配置",
         "configItems": "发布配置",
@@ -4020,9 +4033,9 @@
         "title": "委派",
         "delegationModel": "默认委派模型",
         "delegationReasoning": "默认委派推理级别",
-        "privateDelegationTemplate": "私人委派环境",
         "sharedDelegationTemplate": "共享委派环境",
-        "delegationInstructions": "你的自定义委派指令"
+        "delegationInstructions": "你的自定义委派指令",
+        "privateDelegationMachine": "私信委派计算机"
       }
     },
     "missionDefaults": {
@@ -4830,8 +4843,7 @@
     "editNamed": "编辑 {{group}} 的角色",
     "removeNamed": "移除 {{group}} 的映射",
     "cancel": "取消",
-    "save": "保存映射",
-    "invalidGroupJson": "请输入包含受支持字符且不超过绑定大小限制的有效非空 JSON 字符串。"
+    "save": "保存映射"
   },
   "gitlabPersonalConnectAlert": {
     "message": "连接你的个人 GitLab 账户，以查看组织的 GitLab 仓库。",

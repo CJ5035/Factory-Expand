@@ -5,10 +5,7 @@
     "createTitle": "创建数据集",
     "createPlaceholder": "我们希望衡量什么？",
     "updateTitle": "更新此数据集",
-    "updatePlaceholder": "此版本需要如何修改？",
-    "selectSkillsTitle": "选择要进行基准测试的 Skill",
-    "selectSkillsEmpty": "未找到 Skill。请将 Skill 发布到组织插件市场，或添加到此工作目录的 .factory/skills 文件夹。",
-    "loadingComputerSkills": "正在从此计算机加载 Skill …"
+    "updatePlaceholder": "此版本需要如何修改？"
   },
   "evaluationPresets": {
     "cancel": "取消",

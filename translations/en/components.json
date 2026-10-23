@@ -512,7 +512,8 @@
       "environment": "{{name}} (environment)",
       "unknownEnvironment": "Unknown environment",
       "localMachine": "Local machine",
-      "notSet": "Not set"
+      "notSet": "Not set",
+      "orgDefault": "Organization default"
     },
     "automationsTable": {
       "title": "Title",
@@ -1423,6 +1424,9 @@
       "copyContents": "Copy contents",
       "copied": "Copied"
     },
+    "reviewRequestMessageCard": {
+      "title": "Changes requested"
+    },
     "thinkingBlockDisplayV3": {
       "thinking": "Thinking",
       "thinkingContentRedactedByProvider": "Thinking content redacted by provider",
@@ -1626,7 +1630,8 @@
         "failedToReadFile": "Failed to read file",
         "unknownError": "Unknown error occurred",
         "failedToUploadFile": "Failed to upload file",
-        "failedToAttachAfterUpload": "Failed to attach \"{{name}}\" after upload."
+        "failedToAttachAfterUpload": "Failed to attach \"{{name}}\" after upload.",
+        "fileTransferUnavailable": "Can't attach \"{{name}}\" until the Computer reconnects."
       },
       "voiceDictationErrors": {
         "microphoneAccessDenied": "Microphone access was denied. Enable microphone permissions and try again.",
@@ -2104,7 +2109,6 @@
       }
     },
     "diffViewerV2": {
-      "fileHasReviewComments": "File has review comments",
       "viewed": "Viewed",
       "viewedFile": "Viewed {{path}}",
       "jumpToFile": "Jump to file",
@@ -2220,6 +2224,9 @@
       "saveAs": "Save as..."
     },
     "rightPaneV2": {
+      "closeAllTabs": "Close all",
+      "closeTab": "Close",
+      "closeTabsToRight": "Close tabs to the right",
       "newTab": "New tab",
       "hidePanel": "Hide panel"
     },
@@ -2729,6 +2736,9 @@
       "comparingBranches": "Comparing {{branch}} to {{compareBranch}}"
     },
     "filePreview": {
+      "htmlPreviewTitle": "Preview of {{fileName}}",
+      "viewPreview": "View preview",
+      "viewSource": "View source",
       "status": {
         "errorWithPrefix": "{{prefix}}: {{error}}",
         "couldNotLoadFile": "Could not load file",
@@ -3222,7 +3232,8 @@
       "askAdminTurnOn": "Ask an admin to turn on the tools your team works in, and they will show up here ready to connect.",
       "manageNotEnabled": "No connectors are enabled for your organization yet.",
       "manageTurnOn": "Turn on the tools your team works in and everyone will be able to connect their own accounts.",
-      "previewLabel": "Popular connectors your admin can enable"
+      "previewLabel": "Popular connectors your admin can enable",
+      "managePreviewLabel": "Popular connectors you can enable"
     },
     "integrationCard": {
       "connected": "Connected",
@@ -3351,11 +3362,6 @@
         "updated": "Updated",
         "actions": "Actions"
       }
-    },
-    "evaluationDatasetSetup": {
-      "datasetSetup": "Dataset setup",
-      "skillsToBenchmark": "Skills to benchmark",
-      "skillsToBenchmarkCount": "Skills to benchmark ({{total}})"
     },
     "evaluationListToolbar": {
       "filter": "Filter",
@@ -3897,6 +3903,13 @@
       "openItemIn": "Open {{item}} in {{source}}"
     },
     "missionAgentOrigin": {
+      "automations_one": "{{count}} automation",
+      "automations_other": "{{count}} automations",
+      "nextRun": "Next run {{nextRun}}",
+      "scheduleWithNextRun": "{{schedule}} · Next run {{nextRun}}",
+      "openAutomation": "Open automation",
+      "openAutomationNamed": "Open automation {{name}}",
+      "listenerOf": "Listener of <workstream/>",
       "startedBy": "Started by <workstream/>",
       "startedByInResponseTo": "Started by <workstream/> in response to <signal/>"
     },
@@ -3990,6 +4003,16 @@
         "canceled": "{{count}} canceled",
         "passed": "{{count}} passed"
       },
+      "headlines": {
+        "failing_one": "{{count}} failing check",
+        "failing_other": "{{count}} failing checks",
+        "needAttention_one": "{{count}} check needs attention",
+        "needAttention_other": "{{count}} checks need attention",
+        "inProgress_one": "{{count}} check in progress",
+        "inProgress_other": "{{count}} checks in progress",
+        "passing_one": "{{count}} passing check",
+        "passing_other": "{{count}} passing checks"
+      },
       "rollup": {
         "failed": "Checks failed",
         "needAttention": "Checks need attention",
@@ -4030,7 +4053,8 @@
       "byAuthor": "by {{author}}",
       "opened": "Opened {{time}}",
       "updated": "Updated {{time}}",
-      "loadingDetails": "Loading details"
+      "loadingDetails": "Loading details",
+      "stackPosition": "{{position}} of {{size}} in a stack"
     },
     "pullRequestCommentReactions": {
       "addReaction": "Add reaction",
@@ -4092,7 +4116,13 @@
       "discardPendingReviewWithCommentsDescription_one": "Your pending review and its {{count}} comment will be deleted without being published.",
       "discardPendingReviewWithCommentsDescription_other": "Your pending review and its {{count}} comments will be deleted without being published.",
       "reviewWithPendingComments_one": "Review, {{count}} pending comment",
-      "reviewWithPendingComments_other": "Review, {{count}} pending comments"
+      "reviewWithPendingComments_other": "Review, {{count}} pending comments",
+      "mergeStack_one": "Merge {{count}} pull request",
+      "mergeStack_other": "Merge {{count}} pull requests",
+      "mergeStackTitle_one": "Merge {{count}} pull request?",
+      "mergeStackTitle_other": "Merge {{count}} pull requests?",
+      "mergeStackDescription": "They merge into {{baseBranch}}, starting at the bottom of the stack.",
+      "mergeStackOrder": "Merge order"
     },
     "pullRequestLabelTag": {
       "remove": "Remove label {{name}}"
@@ -4143,6 +4173,8 @@
       "triggerLabel": "Merge status: {{status}}",
       "headlines": {
         "ready": "Ready to merge",
+        "readyStack_one": "Ready to merge {{count}} pull request",
+        "readyStack_other": "Ready to merge {{count}} pull requests",
         "notReady": "Not ready to merge",
         "checking": "Checking mergeability…",
         "stalled": "{{provider}} hasn't finished checking"
@@ -4177,7 +4209,48 @@
         "checking": "Checking whether this branch can merge…",
         "stalled": "{{provider}} hasn't finished checking whether this branch can merge"
       },
+      "stack": {
+        "mergesBelow_one": "Also merges {{count}} pull request below it",
+        "mergesBelow_other": "Also merges {{count}} pull requests below it",
+        "mergesBelowDetail_one": "{{list}} merges into {{baseBranch}} first.",
+        "mergesBelowDetail_other": "{{list}} merge into {{baseBranch}} first.",
+        "blockedBy": "Blocked by #{{number}} below it",
+        "checking": "Checking whether #{{number}} below it can merge…",
+        "checkingBelow": "Checking the pull requests below it…",
+        "reasons": {
+          "draft": "It's still a draft.",
+          "conflicting": "It has conflicts that must be resolved.",
+          "changesRequested": "A reviewer requested changes on it.",
+          "reviewRequired": "It needs an approving review.",
+          "checksFailed": "Some of its checks were not successful.",
+          "behind": "It's out of date with its base branch.",
+          "blocked": "Its required reviews, checks, or other branch rules are not satisfied.",
+          "notMergeable": "It can't merge yet."
+        }
+      },
       "stalledDetail": "Push a commit to the branch to have {{provider}} check again."
+    },
+    "pullRequestStack": {
+      "triggerLabel": "Pull request {{position}} of {{size}} in stack #{{number}}",
+      "title": "Stack #{{number}}",
+      "unstack": "Unstack",
+      "pullRequests": "Pull requests in the stack",
+      "loading": "Loading the stack",
+      "baseBranch": "Base branch",
+      "cancel": "Cancel",
+      "unstackTitle_one": "Unstack {{count}} pull request?",
+      "unstackTitle_other": "Unstack {{count}} pull requests?",
+      "unstackDescription_one": "It leaves the stack, but unstacking doesn't close it. Factory can't stack it again.",
+      "unstackDescription_other": "They no longer merge together, but unstacking doesn't close them. Factory can't stack them again.",
+      "unstackIncomplete": "Factory can't read every pull request in this stack, so it can't tell what unstacking would take. Unstack it on GitHub."
+    },
+    "pullRequestStatusCard": {
+      "label": "Pull request status",
+      "labels": "Labels",
+      "reviews": {
+        "title": "Reviews",
+        "waitingForApproval": "Waiting for approval"
+      }
     },
     "pullRequestUnavailableFile": {
       "patchUnavailable": "Patch unavailable",
@@ -4185,6 +4258,66 @@
       "viewOn": "View on {{provider}}",
       "patchUnavailableReason": "{{provider}} did not provide a textual patch for this file.",
       "diffTruncatedReason": "This file's patch was omitted because the inline diff reached its size limit."
+    },
+    "pullRequestWalkthroughInsights": {
+      "before": "Before",
+      "after": "After",
+      "new": "New",
+      "major": "Major",
+      "minor": "Minor",
+      "productChanges": "Product changes",
+      "carousel": "carousel",
+      "slide": "slide",
+      "changePosition": "{{current}} of {{total}}",
+      "previousChange": "Previous change",
+      "nextChange": "Next change",
+      "showChange": "Show change {{number}}: {{title}}",
+      "noProductChanges": "No product changes. This pull request only changes internals.",
+      "internalChanges": "Under the hood",
+      "whatChanges": "What changes",
+      "whyItMatters": "Why it matters",
+      "categories": {
+        "compatibility": "Compatibility",
+        "contract": "Contract",
+        "rollout": "Rollout",
+        "operations": "Operations",
+        "safety": "Safety",
+        "performance": "Performance"
+      },
+      "changedIn": "Changed in",
+      "changedInSections_one": "Changed in {{formattedCount}} section",
+      "changedInSections_other": "Changed in {{formattedCount}} sections",
+      "codeRefBefore": "{{location}} (before)",
+      "architectureLabel": "Architecture diagram",
+      "nodeKindAndChange": "{{kind}} · {{change}}",
+      "nodeLabel": "{{label}}, {{kind}}, {{change}}",
+      "connectionTo": "→ {{node}}",
+      "connectionFrom": "← {{node}}",
+      "kinds": {
+        "route": "Route",
+        "page": "Page",
+        "component": "Component",
+        "hook": "Hook",
+        "store": "Store",
+        "service": "Service",
+        "module": "Module",
+        "schema": "Schema",
+        "job": "Job",
+        "cli": "CLI",
+        "external": "External"
+      },
+      "changes": {
+        "added": "Added",
+        "modified": "Modified",
+        "removed": "Removed",
+        "context": "Unchanged"
+      },
+      "layerPosition": "{{index}} / {{total}}",
+      "viewedSection": "Viewed {{title}}",
+      "sectionFiles": "Files in {{title}}",
+      "showAllFiles_one": "Show all {{formattedCount}} file",
+      "showAllFiles_other": "Show all {{formattedCount}} files",
+      "showLess": "Show less"
     },
     "pullRequestValidationQaStatus": {
       "label": "AUTOMATED QA",
@@ -4334,7 +4467,7 @@
         "closed": "Closed",
         "none": "No PR"
       },
-      "newSection": "New Section…"
+      "newSection": "New Section"
     },
     "sessionListV2Group": {
       "showLess": "Show less",
@@ -4348,10 +4481,16 @@
       "rename": "Rename",
       "delete": "Delete",
       "hide": "Hide",
-      "newSection": "New Section…"
+      "hideTooltip": "Moves this section to More",
+      "newSection": "New Section"
     },
     "sessionListV2SectionDialog": {
-      "newDescription": "Move sessions into it from their menu, or drag them onto it."
+      "newDescription": "Move sessions into it from their menu, or drag them onto it.",
+      "renameSection": "Rename section",
+      "save": "Save",
+      "deleteSection": "Delete section",
+      "deleteDescription": "The sessions in {{name}} stay in your sidebar.",
+      "delete": "Delete"
     },
     "sessionListV2SessionRow": {
       "folder": "Folder",
@@ -4373,7 +4512,7 @@
         "archive": "Archive",
         "copySessionId": "Copy Session ID",
         "moveToSection": "Move to Section",
-        "newSection": "New Section…",
+        "newSection": "New Section",
         "removeFromSection": "Remove from Section"
       },
       "hideWorkers": "Hide workers",
@@ -4488,16 +4627,11 @@
       "moreEmpty": "Buttons and sections you hide show up here."
     },
     "sessionSidebarEdit": {
-      "pin": "Pin {{name}}",
-      "unpin": "Unpin {{name}}",
+      "show": "Show {{name}}",
+      "hide": "Hide {{name}}",
       "newSection": "New section",
       "sectionName": "Section name",
       "createSection": "Create section",
-      "saveName": "Save name",
-      "delete": "Delete {{name}}",
-      "confirmDelete": "Confirm delete?",
-      "cancelDelete": "Cancel delete",
-      "cancelRename": "Cancel rename",
       "cancel": "Cancel",
       "pickedUp": "Picked up {{name}}.",
       "over": "{{name}} is over {{target}}.",
@@ -5449,6 +5583,7 @@
       "theBranchIsCreatedInThe": "The branch is created in the new worktree when the session starts. Your current checkout stays on its branch.",
       "newBranchName": "new-branch-name",
       "branch": "Branch",
+      "loadingBranches": "Loading branches",
       "copy": "Copy",
       "baseBranch": "Base branch: <chip>{{branch}}</chip>",
       "baseBranchDetachedHead": "Base branch: <muted>Current commit (detached HEAD)</muted>"
@@ -5802,6 +5937,26 @@
       "show": "Show"
     },
     "customModelEditorModal": {
+      "provider": {
+        "docs": "Provider docs",
+        "environmentHelp": "Droid reads this variable when it runs. We don't check that it exists.",
+        "displayNamePlaceholder": "How this provider appears in Droid",
+        "referenceOnly": "Use an environment variable for keys and headers here, for example ${ANTHROPIC_API_KEY}.",
+        "add": "Add provider",
+        "edit": "Edit provider",
+        "save": "Save provider",
+        "id": "Provider ID",
+        "immutable": "You can't change a provider's ID or type. Add a new provider instead.",
+        "jsonHelp": "Edit one provider object. Include/exclude filters and model overrides are preserved.",
+        "unsupported": "This configuration uses unsupported fields. Edit only in JSON or update Droid; unsupported fields will not be silently removed.",
+        "configuration": "Provider configuration",
+        "preview": "Show models",
+        "previewCount_one": "Found {{count}} model",
+        "previewCount_other": "Found {{count}} models",
+        "untested": "We haven't tested your key yet.",
+        "model": "{{name}} · {{id}}",
+        "replacementWarning": "Sessions and defaults using these models will use a fallback if one is available. Otherwise, you will be asked to choose a model."
+      },
       "optionTrue": "{\"option\": true}",
       "remove": "Remove",
       "addEntry": "Add entry",

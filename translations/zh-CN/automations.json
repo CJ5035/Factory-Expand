@@ -6,7 +6,8 @@
     "environment": "{{name}}（环境）",
     "unknownEnvironment": "未知环境",
     "localMachine": "本地计算机",
-    "notSet": "未设置"
+    "notSet": "未设置",
+    "orgDefault": "组织默认设置"
   },
   "createRepoGroupModal": {
     "cancel": "取消",
@@ -51,10 +52,6 @@
   },
   "stageMetricDetailContent": {
     "back": "← 返回"
-  },
-  "automations": {
-    "creating": "正在创建…",
-    "newAutomation": "新建自动化"
   },
   "shared": {
     "enabled": "已启用",
@@ -213,9 +210,6 @@
       "branches": "分支：{{branches}}",
       "customInstructions": "自定义指令：{{extras}}"
     }
-  },
-  "automationBreadcrumb": {
-    "automations": "自动化"
   },
   "automationBreadcrumbV2": {
     "automations": "自动化"
@@ -536,18 +530,15 @@
     "saving": "正在保存…",
     "sessionPrivacy": "Session 隐私",
     "trigger": "触发器",
-    "triggeredBy": "触发来源",
     "chainedAfter": "前置自动化"
   },
   "automationChainedEditFormV2": {
     "runsStartWhenARunOf": "这些自动化中任意一个结束运行时，无论成功还是失败，均会启动运行。",
-    "triggeredBy": "触发来源",
     "whatDroidDoesEachTimeThe": "Droid 在前置自动化结束一次运行后执行的工作。",
     "instructions": "指令",
     "agentInstructions": "代理指令",
     "describeWhatDroidShouldDoEach": "描述每次启动此自动化时 Droid 应执行的工作…",
     "permanentlyRemovesThisAutomationTheAutomations": "永久删除此自动化。此前触发它的自动化将不再启动它。历史运行记录会保留。",
-    "triggeredByNames": "触发来源：{{names}}",
     "chainedAfter": "前置自动化",
     "chainedAfterNames": "前置自动化：{{names}}"
   },
@@ -557,48 +548,6 @@
   "automationDetailPageShell": {
     "automationDetailSections": "自动化详情分区",
     "openSidebar": "打开侧边栏"
-  },
-  "automationDetailPanelV2": {
-    "anyoneInYourOrganization": "组织中的任何人",
-    "automationModel": "自动化模型",
-    "changeVisibility": "更改可见范围",
-    "clearSelection": "清除选择",
-    "creating": "正在创建",
-    "default": "默认",
-    "editSchedule": "编辑运行计划",
-    "forkedFrom": "派生自",
-    "inProgress": "进行中",
-    "lastDaysOfRuns_one": "最近 {{count}} 天的运行",
-    "lastDaysOfRuns_other": "最近 {{count}} 天的运行",
-    "lastRun": "上次运行",
-    "model": "模型",
-    "notConfigured": "未配置",
-    "onlyYouCanSeeThis": "仅你可见",
-    "openSetupSession": "打开设置 Session",
-    "organization": "组织",
-    "owner": "所有者",
-    "private": "私有",
-    "receiverUrl": "接收 URL",
-    "retry": "重试",
-    "runAs": "运行身份",
-    "runsOn": "运行位置",
-    "schedule": "运行计划",
-    "scheduleUtc": "{{schedule}}（UTC）",
-    "secret": "密钥",
-    "selectAnAutomationToViewDetails": "选择自动化以查看详情",
-    "sessionEnded": "Session 已结束",
-    "setup": "设置",
-    "setupSession": "设置 Session",
-    "sparkBarTitle": "{{date}} — {{status}}",
-    "sparkBarTitleNoRun": "{{date}} — 未运行",
-    "successRate7d": "成功率（7 天）",
-    "thisAutomationIsInADegraded": "此自动化处于降级状态。",
-    "thisAutomationIsStillBeingCreated": "此自动化仍在创建中。",
-    "thisAutomationWasRemovedOrIs": "此自动化已被删除或已无法访问。",
-    "visibility": "可见范围",
-    "waitingForYourResponse": "等待你的回复",
-    "webhook": "Webhook",
-    "when": "时间"
   },
   "automationEditFormFieldsV2": {
     "sharedSessionModelLocked": "运行结果会发到现有 Session，继续使用该 Session 的模型和推理设置。要更改这些设置，请从概览页面打开该 Session。",
@@ -616,7 +565,8 @@
     "templateAutomation": "{{name}} 自动化",
     "automationName": "自动化名称",
     "whoCanSeeAndRunThisAutomation": "谁可以查看和运行此自动化，以及谁可以打开它启动的 Session。",
-    "whoCanOpenTheSessionsThisAutomationStarts": "谁可以打开此自动化启动的 Session。"
+    "whoCanOpenTheSessionsThisAutomationStarts": "谁可以打开此自动化启动的 Session。",
+    "orgDefaultModel": "组织默认设置"
   },
   "automationEventsTableV2": {
     "alerts": "告警",
@@ -655,26 +605,6 @@
     "chainAFollowUpAutomation": "串联后续自动化",
     "createNew": "新建",
     "selectExisting": "选择现有项"
-  },
-  "automationRunAlertsPanel": {
-    "loadingAlerts": "正在加载告警…",
-    "noRunAlerts": "暂无运行告警",
-    "noRunId": "无",
-    "runAlerts": "运行告警",
-    "showMore": "显示更多",
-    "unableToLoadAlerts": "无法加载告警：{{message}}"
-  },
-  "automationRunHistoryPanel": {
-    "goToSession": "前往 Session",
-    "loadingHistory": "正在加载历史记录…",
-    "noRunsYet": "尚无运行记录",
-    "retry": "重试",
-    "runEntryDataMayBeIncomplete": "运行记录数据可能不完整",
-    "runHistory": "运行历史",
-    "sessionIsBeingCreated": "正在创建 Session…",
-    "showMore": "显示更多",
-    "timestampCreate": "{{timestamp}}（创建）",
-    "unableToLoadHistory": "无法加载历史记录：{{message}}"
   },
   "automationRunHistoryTableV2": {
     "duration": "持续时间",
@@ -728,7 +658,6 @@
     "deleting": "正在删除…",
     "edit": "编辑",
     "forkedFrom": "派生自",
-    "frequency": "频率",
     "fullscreen": "全屏",
     "keepCreating": "继续创建",
     "lastRun": "上次运行",
@@ -765,12 +694,6 @@
     "permanentlyRemovesThisAutomationPastRun": "永久删除此自动化。历史运行记录会保留。",
     "whenSetScheduledRunsExecuteFrom": "设置后，定时运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在 Droid 默认自动化文件夹中运行。"
   },
-  "automationShareDropdown": {
-    "access": "访问权限",
-    "private": "私有",
-    "share": "共享",
-    "shared": "已共享"
-  },
   "automationShareDropdownV2": {
     "access": "访问权限",
     "private": "私有",
@@ -801,7 +724,6 @@
     "save": "保存",
     "saving": "正在保存…",
     "sessionPrivacy": "Session 隐私",
-    "trigger": "触发器",
     "triggers": "触发器"
   },
   "automationSlackEditFormV2": {
@@ -817,26 +739,11 @@
     "creating": "正在创建",
     "paused": "已暂停"
   },
-  "automationTemplates": {
-    "openSidebar": "打开侧边栏",
-    "selectATemplate": "选择模板",
-    "templates": "模板"
-  },
   "automationVisualViewerV2": {
     "automationVisualOutput": "自动化可视化输出",
     "runTheAutomationToGenerateA": "运行此自动化以生成可视化内容",
     "selectAnAutomationToViewIts": "选择自动化以查看其可视化输出",
     "theVisualFileMayContainInvalid": "可视化文件可能包含无效 HTML。请尝试重新运行自动化。"
-  },
-  "automationWebhookDeliveriesPanel": {
-    "deliveries": "投递记录",
-    "loadingDeliveries": "正在加载投递记录…",
-    "noDeliveriesYetSendARequest": "尚无投递记录，请向 Webhook URL 发送请求。",
-    "pageLabel": "第 {{page}} 页",
-    "reason": "原因",
-    "size": "大小",
-    "status": "状态",
-    "when": "时间"
   },
   "automationWebhookDetailPage": {
     "areYouSureYouWantToDelete": "确定要删除“{{name}}”吗？这将永久删除此自动化及其接收 URL，此后将不再接受投递。",
@@ -863,7 +770,6 @@
     "saving": "正在保存…",
     "secretFingerprint": "密钥指纹",
     "sessionPrivacy": "Session 隐私",
-    "trigger": "触发器",
     "webhookUrl": "Webhook URL",
     "triggers": "触发器"
   },
@@ -999,7 +905,8 @@
       "pickGithubEvent": "请至少选择一个 GitHub 事件",
       "pickComputerOrTemplateForServiceAccount": "请选择用于运行服务账号的计算机或模板",
       "fixWorkingDirectory": "请修正工作目录",
-      "pickDifferentComputer": "请选择其他计算机"
+      "pickDifferentComputer": "请选择其他计算机",
+      "pickServiceAccount": "选择此自动化运行所用的服务账户"
     },
     "workingDirectoryNotAccessible": "无法访问工作目录。",
     "couldNotVerifyWorkingDirectory": "无法验证工作目录。请重试。",
@@ -1080,165 +987,21 @@
       "customCi": "添加此工作流的仓库。",
       "gitlabNotSupported": "目前不支持 GitLab 自动化，请尝试<ciLink>改为通过 GitLab CI 运行 Droid</ciLink>。"
     },
-    "orgAlreadyHasOrgWideInstall": "{{org}} 已为此模板完成组织级安装，点击创建会打开现有项。"
-  },
-  "createAutomationV2": {
-    "whenShouldThisAutomationRunUse": "此自动化应何时运行？可使用自然语言或 cron。",
-    "schedule": "运行计划",
-    "loadingRepositories": "正在加载仓库…",
-    "installTheFactoryDroidApp": "安装 Factory Droid 应用",
-    "noWritableRepositoriesFound": "未找到可写入的仓库",
-    "githubOrganizations": "GitHub 组织",
-    "searchOrganizations": "搜索组织…",
-    "noMatchingOrganizations": "没有匹配的组织",
-    "noGithubOrganizationsAvailable": "暂无可用的 GitHub 组织。",
-    "applyTo": "应用于",
-    "repository": "仓库",
-    "organization": "组织",
-    "reviewDepth": "审查深度",
-    "shallow": "浅度",
-    "deep": "深度",
-    "shallowIsAFastSurfaceReview": "浅度审查快速检查表面问题。深度审查允许代理先探索相关代码，再发表评论。",
-    "model": "模型",
-    "overrideTheDefaultModelForThis": "覆盖此自动化的默认模型。",
-    "reasoningLevel": "推理级别",
-    "overrideTheModelSpecificDefaultReasoning": "覆盖模型特定的默认推理级别。",
-    "allowedBots": "允许的机器人",
-    "eGDependabotRenovate": "例如：dependabot,renovate",
-    "commaSeparatedBotLoginsAllowedTo": "允许触发审查的机器人登录名，以英文逗号分隔。留空则不允许机器人创建的 PR 触发审查。",
-    "securityReview": "安全审查",
-    "turnsOnAutomaticSecurityReviewFor": "为 droid-action 步骤开启 automatic_security_review。",
-    "descriptionOptional": "描述（选填）",
-    "shortSummaryShownInTheAutomation": "在自动化列表中显示的简短摘要",
-    "visualization": "可视化",
-    "whatShouldTheDashboardDisplayE": "仪表盘应显示什么？例如：未解决问题表格、随时间变化的趋势图…",
-    "memoryEvolution": "记忆与演进",
-    "howShouldThisAutomationImproveOver": "此自动化应如何持续改进？两次运行之间应记住什么？",
-    "workingDirectoryOptional": "工作目录（选填）",
-    "absolutePathTheRunExecutesIn": "运行时所在目录的绝对路径，例如 ~/code/my-repo",
-    "checkingDirectory": "正在检查目录…",
-    "githubActionParameters": "GitHub Action 参数",
-    "optionalWorkflowInputsAsYamlOr": "选填：YAML 或 JSON 格式的工作流输入",
-    "whatShouldThisAutomationDo": "此自动化需要做什么？",
-    "describeWhatYouWantThisAutomation": "描述每次运行时希望此自动化完成的工作…",
-    "ciTemplate": "CI 模板",
-    "clickingCreateWillOpenANew": "点击创建将打开新的 Droid Session，其中预填 /install-qa 命令及上述选择。代理会与你交互分析所选仓库，生成 QA Skill 和可供你提交的 .github/workflows/qa.yml 工作流。",
-    "thisRepositoryAlreadyHasAQa": "此仓库已有 QA 工作流，点击创建会打开现有自动化。",
-    "clickingCreateWillOpenAPull": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/droid-wiki-refresh.yml。工作流根据所选触发器及上述设置刷新 Factory Wiki，也可手动运行。",
-    "thisRepositoryAlreadyHasAnAutowiki": "此仓库已有 AutoWiki 工作流，点击创建会打开现有自动化。",
-    "clickingCreateWillOpenAPull2": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/deep-security-review.yml。工作流按你的计划及上述设置对整个代码库运行 /security-review，也可手动运行。",
-    "thisRepositoryAlreadyHasASecurity": "此仓库已有安全审计工作流，点击创建会打开现有自动化。",
-    "runAsServiceAccount": "以服务账号运行？",
-    "openSidebar": "打开侧边栏",
-    "automationName": "自动化名称",
-    "triggers": "触发器",
-    "agentInstructions": "代理指令",
-    "agentInstructions2": "代理指令",
-    "orgDisableReason": {
-      "planRequired": "需要 Team / Enterprise 套餐",
-      "alreadyInstalled": "已在整个组织安装",
-      "noAdmin": "需要 admin:org 权限"
-    },
-    "orgDisableTooltip": {
-      "planRequired": "GitHub Required Workflows 需要 GitHub Team 或 Enterprise 套餐。",
-      "alreadyInstalled": "此组织已安装由 Factory 管理的组织级工作流。",
-      "noAdmin": "需要 GitHub 组织管理员权限，以及具有 `admin:org` 作用域的 GitHub 令牌。"
-    },
-    "eligibleForOrgWideInstall": "符合组织级安装条件",
-    "orgSelected": "已选择 {{login}}",
-    "organizationsSelected": "已选择 {{count}} 个组织",
-    "descriptionTooLong": "描述不得超过 {{max}} 个字符。",
-    "submit": {
-      "openExisting": "打开现有项",
-      "createWithSession": "通过 Session 创建",
-      "create": "创建",
-      "creating": "正在创建…"
-    },
-    "validation": {
-      "setValidSchedule": "请设置有效的运行计划，或移除定时触发器",
-      "pickRepoToScaffoldQa": "请选择仓库以搭建 QA",
-      "pickEventOrSchedule": "请至少选择一个 GitHub 事件，或添加运行计划",
-      "pickComputerForQaSetup": "请选择用于运行 QA 设置 Session 的计算机",
-      "connectSelectedComputer": "请连接所选计算机以继续",
-      "pickRepoForAutoWiki": "请选择仓库以设置 AutoWiki",
-      "pickRepoForSecurityAudit": "请选择仓库以设置安全审计",
-      "addName": "请添加名称",
-      "describeWhatDroidShouldDo": "请描述 Droid 应执行的工作",
-      "pickSlackChannel": "请至少选择一个 Slack 频道",
-      "pickComputerOrTemplate": "请选择用于运行此自动化的计算机或模板",
-      "pickOrganization": "请选择组织",
-      "pickAtLeastOneRepository": "请至少选择一个仓库",
-      "pickRepository": "请选择仓库",
-      "pickGithubEvent": "请至少选择一个 GitHub 事件",
-      "pickComputerOrTemplateForServiceAccount": "请选择用于运行服务账号的计算机或模板",
-      "fixWorkingDirectory": "请修正工作目录"
-    },
-    "workingDirectoryNotAccessible": "无法访问工作目录。",
-    "couldNotVerifyWorkingDirectory": "无法验证工作目录。请重试。",
-    "hostRepositoryLabel": "宿主仓库（工作流文件所在位置）",
-    "repositories": "仓库",
-    "selectAnOrganizationFirst": "请先选择组织",
-    "droidWillPickHostRepoPerOrg": "Droid 将为每个组织选择宿主仓库",
-    "searchRepositories": "搜索仓库…",
-    "openExistingArrow": "打开现有项 →",
-    "alreadyConfigured": "已配置",
-    "hasCodeReview": "已配置代码审查",
-    "privateSuffix": " · 私有",
-    "cannotCreateCiAutomationForRepository": "你无法为此仓库创建 CI 自动化。",
-    "noAccess": "无访问权限",
-    "repoCoveredByOrgWideInstall": "此仓库已由 {{org}} 的组织级安装覆盖。在此添加的仓库级工作流将与其并行运行。",
-    "sessionWillPickHostRepositoryPerOrg": "Droid Session 将为每个所选组织选择宿主仓库，再为每个组织创建一个 Required Workflow 规则集。",
-    "workflowYamlWillBeCommittedToRepo": "工作流 YAML 将提交到此仓库，并通过 GitHub Required Workflow 规则集在组织内的其他仓库强制执行。",
-    "applyToRepositoryHint": "将工作流文件添加到一个或多个仓库。",
-    "applyToOrganizationHint": "通过组织规则集中的 GitHub Required Workflows 应用。",
-    "workingDirectoryTooltip": "设置后，定时运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在 Droid 默认自动化文件夹（~/{{factoryDirName}}/automations/<automation-slug>）中运行，该文件夹存放提示词、仪表盘、记忆和报告。",
     "orgAlreadyHasOrgWideInstall": "{{org}} 已为此模板完成组织级安装，点击创建会打开现有项。",
-    "noComputersAvailable": "没有可用的计算机。请在设置 → Droid Computers 中添加。",
-    "runAsDescription": "此自动化运行所用的身份及计费归属。",
-    "runAsDescriptionWithNote": "此自动化运行所用的身份及计费归属。{{note}}",
-    "runAsDescriptionIncidentResponse": "此自动化运行所用的身份及计费归属。建议事件响应自动化使用服务账号，以便共享计算机和 Session 交互权限。",
-    "runAsDescriptionIncidentResponseWithNote": "此自动化运行所用的身份及计费归属。建议事件响应自动化使用服务账号，以便共享计算机和 Session 交互权限。{{note}}",
-    "qaComputerDescription": "Droid 使用此计算机创建自动化。实际运行在 GitHub Actions 中进行。",
-    "setupComputer": "设置用计算机",
-    "templates": "模板",
-    "templateTitle": "{{name}} 模板",
-    "webhookPromptPlaceholder": "事件到达时 Droid 应执行什么工作？",
-    "schedulePromptPlaceholder": "描述此自动化每次运行时 Droid 应执行的工作…"
-  },
-  "createPrBabysitterAutomation": {
-    "schedule": "运行计划",
-    "howOftenShouldPrBabysitterRun": "PR 看护应多久运行一次？",
-    "runAsServiceAccount": "以服务账号运行？",
-    "identityAndBillingThisAutomationRuns": "此自动化运行所用的身份及计费归属。",
-    "loadingRepositories": "正在加载仓库…",
-    "noRepositoriesFound": "未找到仓库",
-    "repositories": "仓库",
-    "whichRepositoriesShouldDroidWatch": "Droid 应关注哪些仓库？",
-    "searchRepositories": "搜索仓库",
-    "searchRepositories2": "搜索仓库…",
-    "selectAtLeastOneRepository": "请至少选择一个仓库。",
-    "model": "模型",
-    "overrideTheDefaultModelForThis": "覆盖此自动化定时运行使用的默认模型。",
-    "reasoningLevel": "推理级别",
-    "overrideTheModelSpecificDefaultReasoning": "覆盖模型特定的默认推理级别。",
-    "pullRequests": "拉取请求",
-    "whichPullRequestsShouldDroidWatch": "Droid 应关注哪些拉取请求？",
-    "prFilterDescription": "PR 筛选描述",
-    "includeDraftPrs": "包含草稿 PR？",
-    "additionalInstructionsOptional": "附加指令（选填）",
-    "anythingElseDroidShouldKnow": "还有什么需要 Droid 了解？",
-    "additionalInstructions": "附加指令",
-    "automationName": "自动化名称",
-    "noComputersAvailableAddOneIn": "没有可用的计算机。请在设置 → Droid Computers 中添加。",
-    "connectToTheSelectedComputerToRun": "请连接所选计算机以运行 PR 看护。",
-    "pickAComputerOrTemplateToRun": "请选择计算机或模板以运行 PR 看护。",
-    "removeRepo": "移除 {{repo}}",
-    "selectedCount": "已选择 {{count}} 个",
-    "selectRepositories": "选择仓库",
-    "templates": "模板",
-    "creating": "正在创建…",
-    "createWithSession": "通过 Session 创建",
-    "templateTitle": "{{name}} 模板"
+    "orgDefaultModel": "组织默认设置",
+    "runConfig": {
+      "title": "配置",
+      "orgDefault": "使用组织默认计算机和服务账户运行（推荐）",
+      "custom": "自行配置计算机和身份设置",
+      "needsSetup": "我们将设置组织的默认服务账户和环境",
+      "dynamic": "{{serviceAccount}}，运行于 {{environment}}",
+      "dynamicWithoutEnvironment": "{{serviceAccount}}，运行于组织默认环境",
+      "persistent": "{{serviceAccount}}，运行于组织的委派计算机",
+      "serviceAccountFallback": "组织的默认服务账户"
+    },
+    "serviceAccountRequired": {
+      "orgDefaultUnavailable": "Slack 自动化使用服务账户运行，因此不会使用你的个人权限发帖。组织的默认服务账户目前不可用，管理员可在设置 → 委派中进行配置。"
+    }
   },
   "createPrBabysitterAutomationV2": {
     "loadingRepositories": "正在加载仓库…",
@@ -1295,41 +1058,6 @@
     "droidSkipsPullRequestsThatAre": "Droid 跳过仍为草稿的拉取请求。",
     "houseRulesSuchAsWhichChecks": "团队约定，例如哪些检查不应改动。"
   },
-  "createTriageAutomation": {
-    "schedule": "运行计划",
-    "howOftenShouldTriageRun": "分流应多久运行一次？",
-    "runAsServiceAccount": "以服务账号运行？",
-    "identityAndBillingThisAutomationRuns": "此自动化运行所用的身份及计费归属。",
-    "model": "模型",
-    "overrideTheDefaultModelForThis": "覆盖此自动化定时运行使用的默认模型。",
-    "reasoningLevel": "推理级别",
-    "overrideTheModelSpecificDefaultReasoning": "覆盖模型特定的默认推理级别。",
-    "channelsToScan": "扫描的频道",
-    "whichChannelsShouldDroidScan": "Droid 应扫描哪些频道？",
-    "listTheChannelsOrDescribeThem": "列出频道，或使用自然语言描述。",
-    "scanChannelsDescription": "扫描频道描述",
-    "summaryChannel": "汇总频道",
-    "whereShouldDroidPostEachRun": "Droid 应将每次运行的摘要发布到哪里？",
-    "nameTheChannelWellConfirmAnd": "请填写频道名称。我们会在设置 Session 中确认并加入该频道。",
-    "ticketing": "工单",
-    "ticketingSystem": "工单系统",
-    "whereTicketsGoWhenTheresNo": "没有明确负责人时的工单去向。我们会在设置 Session 中确认。",
-    "defaultDestination": "默认目标",
-    "eGEngOrEngineering": "例如：ENG 或“Engineering”",
-    "ticketCreationGuidance": "工单创建指导",
-    "routingRulesAndWhichLabelsTo": "分派规则及应应用的标签。",
-    "ticketGuidance": "工单指导",
-    "automationName": "自动化名称",
-    "noComputersAvailableAddOneIn": "没有可用的计算机。请在设置 → Droid Computers 中添加。",
-    "connectToTheSelectedComputerToRun": "请连接所选计算机以运行分流。",
-    "pickAComputerOrTemplateToRun": "请选择计算机或模板以运行分流。",
-    "defaultJiraProject": "默认 Jira 项目",
-    "defaultLinearTeam": "默认 Linear 团队",
-    "templates": "模板",
-    "creating": "正在创建…",
-    "createWithSession": "通过 Session 创建",
-    "templateTitle": "{{name}} 模板"
-  },
   "createTriageAutomationV2": {
     "nameYourAutomation": "为自动化命名",
     "name": "名称",
@@ -1384,20 +1112,6 @@
     "optional": "选填",
     "fineTuneHowThisAutomationRuns": "微调此自动化的运行方式。这里的每项设置均有合理的默认值。"
   },
-  "deleteAutomationConsentModal": {
-    "cancel": "取消",
-    "delete": "删除",
-    "deleteAutomation": "删除自动化"
-  },
-  "forkAutomationModal": {
-    "computerOrTemplateTheForkedAutomation": "派生自动化将运行的计算机或模板。",
-    "fork": "派生",
-    "forkOptions": "派生选项",
-    "noComputersOrTemplatesAvailable": "没有可用的计算机或模板。请添加计算机以派生此自动化。",
-    "runAsServiceAccount": "以服务账号运行？",
-    "selectRunTarget": "选择运行目标",
-    "serviceAccountForksAreSharedWith": "服务账号派生的自动化会共享给你的组织。"
-  },
   "forkAutomationModalV2": {
     "computerOrTemplateTheForkedAutomation": "派生自动化将运行的计算机或模板。",
     "fork": "派生",
@@ -1416,13 +1130,6 @@
     "whatShouldTheReviewFocusOn": "审查应重点关注什么？（选填）",
     "startsOnEnvironmentComputer": "此 Session 在从自动化环境启动的新计算机上运行，因此打开可能需要一两分钟。"
   },
-  "modelSelector": {
-    "selectAModel": "选择模型…",
-    "noModelsAvailable": "没有可用的模型",
-    "loadingCustomModels": "正在加载自定义模型…",
-    "model": "模型",
-    "labelWithAvailability": "{{label}}。{{availability}}"
-  },
   "modelSelectorV2": {
     "loadingCustomModels": "正在加载自定义模型…",
     "selectAModel": "选择模型…",
@@ -1430,9 +1137,6 @@
     "default": "默认",
     "model": "模型",
     "labelWithAvailability": "{{label}}。{{availability}}"
-  },
-  "optionalSettingsSection": {
-    "additionalSettings": "附加设置"
   },
   "optionalSettingsSectionV2": {
     "additionalSettings": "附加设置",
@@ -1452,16 +1156,6 @@
     "scaffoldingAutomationFilesRemotely": "正在远程搭建自动化文件",
     "waitingForYourResponse": "等待你的回复",
     "wakingAndConnectingRemoteComputer": "正在唤醒并连接远程计算机"
-  },
-  "promptModelSelector": {
-    "default": "默认",
-    "loadingCustomModels": "正在加载自定义模型…",
-    "automationModel": "自动化模型",
-    "automationModelWithAvailability": "自动化模型。{{availability}}",
-    "loadingModel": "正在加载模型",
-    "modelName": "模型：{{model}}",
-    "loadingModels": "正在加载模型…",
-    "noModelsAvailable": "没有可用的模型"
   },
   "promptModelSelectorV2": {
     "loadingCustomModels": "正在加载自定义模型…",
@@ -1487,10 +1181,6 @@
     "default": "默认",
     "defaultWithEffort": "默认（{{effort}}）"
   },
-  "reasoningLevelSelector": {
-    "selectAReasoningLevel": "选择推理级别…",
-    "noReasoningLevelsAvailable": "没有可用的推理级别"
-  },
   "reasoningLevelSelectorV2": {
     "selectAReasoningLevel": "选择推理级别…",
     "default": "默认",
@@ -1502,12 +1192,11 @@
     "runAsServiceAccount": "以服务账号运行",
     "runAsServiceAccountOptional": "以服务账号运行？",
     "searchServiceAccounts": "搜索服务账号…",
-    "noServiceAccountsMatch": "没有匹配的服务账号"
+    "noServiceAccountsMatch": "没有匹配的服务账号",
+    "chooseServiceAccount": "选择服务账户",
+    "noServiceAccounts": "组织暂无有效的服务账户。请在设置 → API 密钥 → 服务账户中创建。"
   },
   "runOnComputerPicker": {
-    "localComputersRequireTheFactoryDesktop": "本地计算机需要安装 Factory 桌面应用。",
-    "openDesktopApp": "打开桌面应用",
-    "retry": "重试",
     "computer": "计算机",
     "connectedToName": "已连接 {{name}}。",
     "reconnectingToName": "正在重新连接 {{name}}…",
@@ -1515,19 +1204,12 @@
     "thisComputerAlreadyHasAutomations": "此计算机已设置 {{count}} 个自动化。建议将此自动化运行在其他计算机上，以避免过载。",
     "localComputerName": "{{name}}（本地）",
     "droidComputers": "Droid Computers",
-    "selectTemplateOrComputer": "选择环境或计算机",
-    "runOn": "运行位置",
-    "computerOrTemplateThisAutomationRunsOn": "此自动化运行所用的计算机或模板。"
+    "selectTemplateOrComputer": "选择环境或计算机"
   },
   "runOnComputerPickerV2": {
     "retry": "重试",
     "runOn": "运行位置",
     "computerOrTemplateThisAutomationRunsOn": "此自动化运行所用的计算机或环境。"
-  },
-  "sessionPrivacySelector": {
-    "sessionPrivacy": "Session 隐私",
-    "private": "私有",
-    "team": "团队"
   },
   "sessionPrivacySelectorV2": {
     "sessionPrivacy": "Session 隐私"
@@ -1553,29 +1235,6 @@
     "shareAutomation": "共享自动化",
     "shareLink": "共享链接",
     "visibility": "可见范围"
-  },
-  "slackAutomationForm": {
-    "triggers": "触发器",
-    "channels": "频道",
-    "searchChannels": "搜索频道…",
-    "triggerOnMessagesFrom": "触发消息的来源",
-    "anyone": "任何人",
-    "humansOnly": "仅人员",
-    "botsOnly": "仅机器人",
-    "prompt": "提示词",
-    "instructionsToInjectIntoEverySession": "注入由此频道触发的每个 Session 的指令…",
-    "keywords": "关键词",
-    "optionalIfEmptyTriggersOnAll": "（选填，留空则所有消息都会触发）",
-    "typeKeywordsSeparatedByCommas": "输入关键词，以英文逗号分隔",
-    "excludeKeywords": "排除的关键词",
-    "typeKeywordsToExcludeSeparatedBy": "输入要排除的关键词，以英文逗号分隔",
-    "excludeSenders": "排除的发送者",
-    "eGB0a663lrwusAxiomMonitorMonitor": "例如：B0A663LRWUS、Axiom Monitor Monitor",
-    "removeChannelNameRule": "移除频道名称规则 {{name}}",
-    "removeChannel": "移除频道 {{name}}",
-    "matchChannelsNamed": "匹配名称为 {{pattern}} 的频道",
-    "optionalAMessageContainingOneOf": "（选填，包含其中任一关键词的消息均不会触发）",
-    "optionalASlackMemberIdA": "（选填，Slack 成员 ID、机器人 ID 或机器人的显示名称）"
   },
   "slackAutomationFormV2": {
     "channels": "频道",
@@ -1604,23 +1263,6 @@
     "aMessageContainingOneOfThese": "包含其中任一关键词的消息均不会启动运行。",
     "aSlackMemberIdABot": "Slack 成员 ID、机器人 ID 或机器人的显示名称。"
   },
-  "triggersField": {
-    "addTrigger": "添加触发器",
-    "addTrigger2": "添加触发器",
-    "github": "GitHub",
-    "schedule": "运行计划",
-    "editSchedule": "编辑运行计划",
-    "cronExpression": "cron 表达式",
-    "removeSchedule": "移除运行计划",
-    "noEventsConfigured": "未配置事件",
-    "presetHourly": "每小时",
-    "presetDaily": "每天",
-    "presetWeekly": "每周",
-    "presetCustomCron": "自定义（cron）",
-    "setSchedule": "设置运行计划",
-    "runsOnAScheduleUseNaturalLanguage": "按计划运行。可使用自然语言，例如“每周一上午 9 点”，或包含 5 个字段的 cron 表达式。",
-    "removeEvent": "移除 {{event}}"
-  },
   "triggersFieldV2": {
     "frequency": "频率",
     "schedule": "运行计划",
@@ -1632,14 +1274,6 @@
     "runsOnAScheduleUseNaturalLanguage": "按计划运行。可使用自然语言，例如“每周一上午 9 点”，或包含 5 个字段的 cron 表达式。",
     "githubEvents": "GitHub 事件",
     "other": "其他"
-  },
-  "webhookAutomationForm": {
-    "runsStartWhenAnHttpPost": "HTTP POST 请求到达此自动化的专属 URL 时启动运行。URL 和密钥会在创建自动化后生成，仅显示一次。",
-    "webhook": "Webhook",
-    "payloadFilterRegularExpression": "载荷筛选器（正则表达式）",
-    "payloadFilter": "载荷筛选器",
-    "eGActionSSOpened": "例如：\"action\"\\s*:\\s*\"opened\"",
-    "javascriptRegularExpressionTestedAgainstThe": "用于匹配原始请求正文的 JavaScript 正则表达式。不匹配的投递会记录为已筛除，不会启动运行。留空则每个事件均会启动运行。"
   },
   "webhookAutomationFormV2": {
     "payloadFilter": "载荷筛选器",
@@ -1736,24 +1370,10 @@
     "webhookUrl": "Webhook URL"
   },
   "automationsV2": {
-    "next": "下一步",
-    "automationAlerts": "自动化告警",
-    "searchAutomations": "搜索自动化",
-    "showWorkstreamAutomations": "显示工作流自动化",
     "automations": "自动化",
-    "refreshCiWorkflows": "刷新 CI 工作流",
-    "newAutomation": "新建自动化",
-    "createWithDroid": "通过 Droid 创建",
-    "createWithTemplate": "通过模板创建",
-    "attention": "需要注意",
-    "theSetupSessionRequiresYourResponse": "设置 Session 需要你的回复才能继续。",
-    "dismiss": "忽略",
-    "goToSession": "前往 Session",
-    "desktopAppRequired": "需要桌面应用",
     "loadingCiWorkflows": "正在加载 CI 工作流…",
     "automationsGeneratedByWorkstreamsWillAppear": "工作流生成的自动化将显示在此处。",
     "noWorkstreamAutomationsYet": "暂无工作流自动化",
-    "githubWorkflowScanFailed": "GitHub 工作流扫描失败",
     "pendingPrDescription": "{{repoFullName}} · PR 待处理",
     "setupTimedOutMessage": "自动化创建在设置完成前已超时。请打开设置 Session 完成设置，或取消创建后重试。",
     "setupSessionEndedMessage": "设置 Session 在设置完成前已结束。请打开设置 Session 完成设置，或取消创建后重试。",
@@ -1762,11 +1382,8 @@
       "settingUp": "正在设置你的自动化",
       "configuringFiles": "正在配置自动化文件"
     },
-    "healthSummary_one": "{{count}} 个自动化存在失败的运行，请检查",
-    "healthSummary_other": "{{count}} 个自动化存在失败的运行，请检查",
     "githubWorkflowsScannedClickToRescan": "GitHub 工作流扫描于{{scannedAgo}}。点击重新扫描。",
     "rescanGithubWorkflows": "重新扫描 GitHub 工作流",
-    "automateWorkBySettingUpScheduledThreads": "设置定时对话，让工作自动执行。",
     "thisMachine": "本机",
     "webhookSecretRotated": "Webhook 密钥已轮换",
     "failedToRotateTheWebhookSecret": "轮换 Webhook 密钥失败",
@@ -1786,18 +1403,12 @@
     "failedToWriteForkedAutomationFiles": "写入派生自动化文件失败",
     "automationForkedSuccessfully": "已成功派生自动化",
     "failedToForkAutomationV2": "派生自动化（v2）失败",
-    "desktopRequiredDescription": "自动化需要连接到本地守护进程。<desktopLink>打开 Factory 桌面应用</desktopLink>以使用此功能。",
     "untitledWorkstream": "未命名工作流",
     "automationsLinkedToThisWorkstreamWillAppear": "与此工作流关联的自动化将显示在此处。",
     "startFromATemplateOrDescribeTheJob": "从模板开始，或描述工作内容，Droid 会与你一起完成设置。",
     "noAutomationsForThisWorkstreamYet": "此工作流暂无自动化",
     "noAutomationsYet": "暂无自动化",
-    "createYourFirstAutomationToGetStarted": "创建第一个自动化以开始使用。",
     "monitorAndManageThisWorkstreamsAutomations": "监控和管理此工作流的自动化",
-    "reconnectGithub": "重新连接 GitHub",
-    "connectGithub": "连接 GitHub",
-    "githubConnectionExpired": "你的 GitHub 连接已过期。请重新连接以查看和管理 CI 自动化。",
-    "connectYourGithubAccount": "连接你的 GitHub 账号以查看和管理 CI 自动化。",
     "couldNotScanGithubWorkflows": "无法扫描 GitHub 工作流",
     "untitledSession": "未命名 Session"
   },
@@ -1886,17 +1497,11 @@
     "readOnly": "只读",
     "writable": "可写入"
   },
-  "automationModelControls": {
-    "automationReasoningLevel": "自动化推理级别"
-  },
   "triggeredByPickerV2": {
-    "triggeredBy": "触发来源",
-    "automationsWhoseRunsStartThisOne": "这些自动化结束运行时，无论成功还是失败，均会启动此自动化。最多 {{max}} 个。",
     "addAutomation": "添加自动化…",
     "searchAutomations": "搜索自动化…",
     "noAutomationsMatch": "没有匹配的自动化",
     "loadingAutomations": "正在加载自动化…",
-    "upToMaxAutomations": "最多 {{max}} 个自动化",
     "noOtherAutomationsToPickFrom": "没有其他可选的自动化",
     "removeName": "移除 {{name}}",
     "onlyTheOwnerCanChangeWhich": "仅所有者可以更改触发此自动化的来源：来源必须是该所有者的自动化。",
@@ -1919,7 +1524,6 @@
     "localDaemonDisconnected": "未连接到本地守护进程。请等待桌面应用重新连接后重试。"
   },
   "buildAutomationConfigurationRows": {
-    "triggeredBy": "触发来源",
     "startsNext": "后续启动",
     "openSetupSession": "打开设置 Session",
     "sessionEnded": "Session 已结束",
@@ -1946,7 +1550,9 @@
     "successRate7d": "成功率（7 天）",
     "prompt": "提示词",
     "chainedAfter": "前置自动化",
-    "noRunTarget": "没有运行目标，无法启动运行。请指定计算机或模板，重新创建此自动化。"
+    "noRunTarget": "没有运行目标，无法启动运行。请指定计算机或模板，重新创建此自动化。",
+    "orgDefaultUnavailable": "组织默认设置不可用",
+    "orgDefaultModel": "组织默认设置"
   },
   "ciRepoAccess": {
     "requiresWriteAccess": "创建 CI 自动化需要仓库写入权限。你只有 {{permission}} 权限。",
@@ -2417,7 +2023,7 @@
     "serviceAccountIdentity": "{{name}}（服务账号）",
     "myself": "本人",
     "none": "无",
-    "runAsComputerEmpty": "{{serviceAccountName}} 尚无可用的计算机或环境。请在设置 → API 密钥 → 服务账号中添加计算机，或在设置 → 环境中创建组织环境。"
+    "runAsComputerEmpty": "暂无可供 {{serviceAccountName}} 使用的计算机或环境。管理员可在设置 → API 密钥 → 服务账户中添加计算机，或在设置 → 环境中创建组织环境。"
   },
   "humanizeCron": {
     "days": {
@@ -2517,9 +2123,6 @@
     "matchList_other": "当前匹配 {{count}} 个频道：{{names}}",
     "matchListWithOverflow_one": "当前匹配 {{count}} 个频道：{{names}}（另有 {{overflow}} 个）",
     "matchListWithOverflow_other": "当前匹配 {{count}} 个频道：{{names}}（另有 {{overflow}} 个）"
-  },
-  "useAutomationLegacyModelSelection": {
-    "saveFailed": "无法保存你的选择。请重试。"
   },
   "useAutomationSessionV2": {
     "localAutomationsDesktopOnly": "本地自动化只能从桌面应用运行",

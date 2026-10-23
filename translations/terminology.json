@@ -199,8 +199,6 @@
         "automations.automationScheduleEditFormV2.whenSetScheduledRunsExecuteFrom",
         "automations.createAutomationCoreV2.workingDirectoryTooltip",
         "automations.createAutomationCoreV2.modeCreateHelperText.qa",
-        "automations.createAutomationV2.clickingCreateWillOpenANew",
-        "automations.createAutomationV2.workingDirectoryTooltip",
         "automations.constants.slackWorkingDirectoryTooltip",
         "automations.constants.webhookWorkingDirectoryTooltip",
         "automations.constants.ciTemplates.qa.description",
@@ -234,8 +232,6 @@
         "components.chat.chatComposerSkillsButton.skillsWithCount",
         "components.chat.contextWindowModal.tab.skills",
         "components.chat.slashCommandSuggestions.group.skill",
-        "components.evaluations.evaluationDatasetSetup.skillsToBenchmark",
-        "components.evaluations.evaluationDatasetSetup.skillsToBenchmarkCount",
         "components.evaluations.evaluationRunDetail.skills",
         "components.evaluations.evaluationRunConfigFields.skills",
         "components.evaluations.evaluationSkillChips.selectSkills",
@@ -245,9 +241,6 @@
         "components.evaluations.evaluationSkillsPicker.noSkillsAvailable",
         "components.evaluations.evaluationSkillsPicker.noOrganizationSkills",
         "components.missions.workstreamFlow.skills",
-        "evaluations.evaluationDatasetChatShell.selectSkillsTitle",
-        "evaluations.evaluationDatasetChatShell.selectSkillsEmpty",
-        "evaluations.evaluationDatasetChatShell.loadingComputerSkills",
         "evaluations.evaluationSkillFiles.loading",
         "evaluations.evaluationSkillFiles.unavailable",
         "sessions.activeSession.skillCreationUserMessage",
@@ -340,7 +333,9 @@
     "Hook": "Factory生命周期配置保留Hook/Hooks以对应事件标识；git hooks、系统/防病毒注入钩子和动词hook按上下文翻译。",
     "Subagent": "子代理是准确中文译法，保留；Task是工具标识，不能译为普通任务。",
     "Agent": "代理/智能体按上下文翻译；Custom Droid、模型名、工具名保持原文。",
-    "Plugin": "插件、提示词（Prompt）、上下文（Context）、工作树（worktree）、产物（artifact）采用通用中文术语；不因属于AI领域一概保留英文。"
+    "Plugin": "插件、提示词（Prompt）、上下文（Context）、工作树（worktree）、产物（artifact）采用通用中文术语；不因属于AI领域一概保留英文。",
+    "PR Stack": "拉取请求堆叠；Unstack为解除堆叠，不能译为关闭或删除PR；界面文案不改变Git状态。",
+    "架构图 Hook / Store / Contract": "代码架构中的Hook保留名称，Store为状态存储、Contract为接口契约，与Factory生命周期Hook、商店或合同语义分开。"
   },
   "contextRules": [
     {
@@ -477,6 +472,26 @@
       "key": "analytics2.toolUsageUsers.description",
       "source": "All users with recorded {{usage}} usage in the selected range, sorted by invocations. Expand a user to see their own top {{limit}} {{plural}}. User totals include every item.",
       "expected": "所选范围内记录过 {{usage}} 使用的所有用户，按调用次数排序。展开用户可查看其使用最多的 {{limit}} 个{{plural}}。每位用户的合计涵盖所有条目。"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.kinds.hook",
+      "source": "Hook",
+      "expected": "Hook"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.kinds.store",
+      "source": "Store",
+      "expected": "状态存储"
+    },
+    {
+      "key": "components.layout.pullRequestWalkthroughInsights.categories.contract",
+      "source": "Contract",
+      "expected": "接口契约"
+    },
+    {
+      "key": "components.settings.customModelEditorModal.provider.referenceOnly",
+      "source": "Use an environment variable for keys and headers here, for example ${ANTHROPIC_API_KEY}.",
+      "expected": "此处的密钥和请求头请使用环境变量，例如 ${ANTHROPIC_API_KEY}。"
     }
   ]
 }

@@ -166,7 +166,6 @@
     "progress": "Progress",
     "created": "Created",
     "missionControl": "Mission Control",
-    "newMission": "New Mission",
     "createANewMissionToStart": "Create a new mission to start planning and dispatching workers.",
     "description": "Plan and ship long-horizon projects with a team of Droids working in parallel. Reach for a Mission when the work spans hours or days, multiple features, or more than one session can handle.",
     "filter": {

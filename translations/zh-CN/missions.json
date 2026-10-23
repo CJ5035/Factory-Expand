@@ -166,7 +166,6 @@
     "progress": "进度",
     "created": "创建时间",
     "missionControl": "Mission 任务控制中心",
-    "newMission": "新建 Mission 任务",
     "createANewMissionToStart": "创建新的 Mission 任务，开始规划并调度工作代理。",
     "description": "通过并行工作的 Droid 团队，规划并交付长期项目。当工作跨度达数小时或数天、涉及多项功能，或超出单个 Session 的处理范围时，使用 Mission 任务。",
     "filter": {
