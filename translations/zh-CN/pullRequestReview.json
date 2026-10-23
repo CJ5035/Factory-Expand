@@ -86,7 +86,6 @@
   "pullRequestLayeredDiff": {
     "diagram": "图示",
     "viewedSection": "已查看{{title}}",
-    "viewedProgress": "已查看 {{viewed}}/{{total}} 项",
     "noChangedLinesInTheCurrent": "当前差异中没有与此层匹配的变更行。",
     "overview": "概览",
     "howItAllFitsTogether": "各部分如何协同",
@@ -122,12 +121,7 @@
       }
     },
     "stateChangesGithubOnly": "此 Git 提供商不支持更改拉取请求状态。",
-    "connectGithubToChangeState": "请在设置中连接 Git 提供商账号，以更改拉取请求状态。",
-    "copyLink": "复制链接",
-    "copyProviderLink": "复制 {{provider}} 链接",
-    "failedToCopyToClipboard": "复制到剪贴板失败。请检查浏览器权限。",
-    "linkCopied": "链接已复制到剪贴板",
-    "providerLinkCopied": "{{provider}} 链接已复制到剪贴板"
+    "connectGithubToChangeState": "请在设置中连接 Git 提供商账号，以更改拉取请求状态。"
   },
   "pullRequestOmittedFiles": {
     "previewUnavailable": "预览不可用",
@@ -205,7 +199,8 @@
     "addGithubOnly": "此 Git 提供商不支持请求审查或添加标签。",
     "connectGithubToAdd": "请在设置中连接 Git 提供商账号，以请求审查和添加标签。",
     "shownGithubOnly": "此 Git 提供商不支持显示审查或标签详情。",
-    "participantsLoadFailed": "无法加载审查和标签。请刷新后重试。"
+    "participantsLoadFailed": "无法加载审查和标签。请刷新后重试。",
+    "labelNotRemoved": "标签未移除。"
   },
   "pullRequestParticipantSelect": {
     "reviewers": {
@@ -358,7 +353,9 @@
     "copiedProviderLink": "{{provider}} 链接",
     "openInSidebar": "在侧边栏中打开",
     "on": "开启",
-    "off": "关闭"
+    "off": "关闭",
+    "copyDesktopLink": "复制桌面版链接",
+    "copiedDesktopLink": "桌面版链接"
   },
   "pullRequestSearch": {
     "searchFailed": "无法搜索拉取请求。",
@@ -422,7 +419,8 @@
     "search": "搜索",
     "pullRequestChat": "拉取请求聊天",
     "codeHostsLoadFailed": "无法加载代码托管平台。",
-    "noCodeHostConnected": "尚未连接可列出拉取请求的代码托管平台。粘贴拉取请求链接即可打开。"
+    "noCodeHostConnected": "尚未连接可列出拉取请求的代码托管平台。粘贴拉取请求链接即可打开。",
+    "loadingPullRequests": "正在加载拉取请求"
   },
   "pullRequestDiffExpansion": {
     "contextExpansionFailed": "无法展开上下文。文件内容必须可用，且与此差异匹配。请重试。"

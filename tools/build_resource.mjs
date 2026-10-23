@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { checkJavaScript } from '../scripts/lib/syntaxcheck.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const appVersion = '0.202.0';
+const appVersion = '0.204.0';
 export const firstBatch = ['common','settings','sessions','softwareFactory','inbox','onboarding','errors'];
 // These four pinned lesson strings use angle brackets as editable prompt
 // placeholders, rather than paired rich-text elements. Keep their exact tokens.
@@ -59,6 +59,7 @@ export function validateText(english, chinese, label = '') {
 
 export function validateTerminology(english, chinese, label, policy) {
   for (const rule of policy.preserveTerms ?? []) {
+    if (rule.keys && !rule.keys.includes(label)) continue;
     const pattern = new RegExp(rule.pattern, rule.ignoreCase ? 'gi' : 'g');
     const count = [...english.matchAll(pattern)].length;
     if (count && [...chinese.matchAll(pattern)].length !== count) throw new Error(`Protected term ${rule.name} mismatch: ${label}`);

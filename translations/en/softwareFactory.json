@@ -278,18 +278,6 @@
   "safeDashboardFrame": {
     "softwareFactoryWorkstreamDashboard": "Software Factory workstream dashboard"
   },
-  "sfReviewActions": {
-    "optionalCommentRequiredToRequestChanges": "Optional comment; required to request changes",
-    "decline": "Decline",
-    "requestChanges": "Request changes",
-    "approve": "Approve",
-    "resolveReview": "Resolve review"
-  },
-  "sfReviewViewModeControl": {
-    "reviewView": "Review view",
-    "focus": "Focus",
-    "list": "List"
-  },
   "softwareFactoryAutomationDetail": {
     "automationDataIsUnavailable": "Automation data is unavailable.",
     "automationNotVisibleFromScope": "This automation is not visible from your current automation scope.",
@@ -682,24 +670,6 @@
     "loadingTeams": "Loading teams…",
     "unableToLoadTeams": "Unable to load teams.",
     "noTeamsYet": "No teams yet. Add one to organize workstreams."
-  },
-  "softwareFactoryReviewHeader": {
-    "reviewProgress": "Review progress",
-    "yourReviewQueue": "Your review queue",
-    "reviewsClear": "Reviews clear",
-    "reviewsLeft_one": "review left",
-    "reviewsLeft_other": "reviews left",
-    "clearedToday": "{{completed}} cleared today",
-    "reviewsClearedTodayProgress": "{{completed}} of {{total}} reviews cleared today"
-  },
-  "softwareFactoryReviewSession": {
-    "closeReviewSession": "Close review session",
-    "tryAgain": "Try again",
-    "openingReviewSession": "Opening review session…",
-    "reviewSessionTimeout": "The review session did not open within {{seconds}} seconds. Its computer may still be starting.",
-    "reviewSessionCouldNotOpen": "The review session could not be opened.",
-    "sessionTitle": "Review: {{title}}",
-    "untitledChange": "Software Factory change"
   },
   "softwareFactorySavedDraftChat": {
     "stopWaiting": "Stop waiting",
@@ -1218,55 +1188,6 @@
     "retry": "Retry",
     "unableToLoadYourTeams": "Unable to load your teams"
   },
-  "softwareFactoryReview": {
-    "changeQueuedForRetry": "Change queued for retry",
-    "chat": "Chat",
-    "closeReviewSession": "Close review session",
-    "code": "Code",
-    "context": "Context",
-    "description": "Description",
-    "focusedReviewItem": "Focused review item",
-    "groupChanges": "Changes",
-    "groupErrors": "Errors",
-    "groupPullRequests": "Pull requests",
-    "groupSpecifications": "Specifications",
-    "keyboardShortcutsAria": "Keyboard shortcuts: Left Arrow Queue, Up and Down Arrows Navigate, {{shortcut}} Chat",
-    "latestError": "Latest error",
-    "leftArrowReturnsToTheReview": "Left Arrow returns to the review queue",
-    "loadingPrInfo": "Loading PR info",
-    "markAsRead": "Mark as read",
-    "markedAsRead": "Marked as read",
-    "navigate": "Navigate",
-    "needsAttention": "Needs attention",
-    "noAdditionalContextWasProvided": "No additional context was provided.",
-    "noDescriptionWasProvidedOnThis": "No description was provided on this pull request.",
-    "noPullRequestLinkWasFound": "No pull request link was found in the latest result.",
-    "noReviewSelected": "No review selected",
-    "nothingNeedsReviewOrAttention": "Nothing needs review or attention right now.",
-    "openChange": "Open change",
-    "openInbox": "Open inbox",
-    "openReviewSession": "Open review session",
-    "prReview": "PR review",
-    "proposedChange": "Proposed change",
-    "pullRequestNumber": "Pull request {{number}}",
-    "queue": "Queue",
-    "reviewItemNavigation": "Review item navigation",
-    "reviewPreview": "Review preview",
-    "reviewSectionAria": "{{label}} review section",
-    "selectAnItemToInspect": "Select an item to inspect its context and next action.",
-    "showLess": "Show less",
-    "showMore": "Show more",
-    "somethingWentWrongLoadingQueue": "Something went wrong while loading the review queue. Try again.",
-    "specification": "Specification",
-    "swipeToNavigate": "Swipe to navigate",
-    "unableToGetPrInfo": "Unable to get PR info.",
-    "unableToGetPrInfoStatus": "Unable to get PR info",
-    "unableToLoadReview": "Unable to load Review",
-    "unableToMarkThisEventAsRead": "Unable to mark this event as read",
-    "unableToResolveThisReview": "Unable to resolve this review",
-    "unableToRetryThisChange": "Unable to retry this change",
-    "youreAllCaughtUp": "You're all caught up"
-  },
   "softwareFactorySetup": {
     "addAnother": "Add another",
     "budgetsDescription": "Set spending caps and choose where Droid can act autonomously. You can refine every limit later from the workstream settings.",
@@ -1487,14 +1408,6 @@
     "couldNotIdentifyThisComputer": "Could not identify this computer. Reopen the modal to retry, or select an environment.",
     "defaultsCouldNotBeLoaded": "Software Factory defaults could not be loaded. Choose an identity and environment explicitly.",
     "noDefaultsSaved": "No Software Factory defaults are saved. Choose an identity and environment."
-  },
-  "softwareFactoryLogs": {
-    "error": "Error",
-    "warning": "Warning",
-    "info": "Info",
-    "stageReview": "{{stage}} review",
-    "reviewRequested": "Review requested",
-    "review": "Review"
   },
   "softwareFactorySpecification": {
     "couldNotLoadSavedSpecification": "Could not load the saved specification.",
@@ -1918,9 +1831,6 @@
     "teams": "Teams",
     "workstream": "Workstream",
     "workstreams": "Workstreams"
-  },
-  "softwareFactoryPullRequestCard": {
-    "titlePullRequest": "{{title}}, Pull request"
   },
   "useSoftwareFactoryReviewSummary": {
     "itemsReadyForYou_one": "{{count}} item is ready for you.",

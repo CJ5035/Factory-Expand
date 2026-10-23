@@ -264,7 +264,9 @@
     "pressTabToSearchAnotherCategory": "Press Tab to search another category.",
     "recentSessions": "Recent Sessions",
     "recentCommands": "Recent Commands",
-    "searchingSessions": "Searching sessions"
+    "searchingSessions": "Searching sessions",
+    "searchedBackTo": "Searched back to {{date}}",
+    "searchIncomplete": "Search results may be incomplete."
   },
   "archMismatchBanner": {
     "dismiss": "Dismiss",

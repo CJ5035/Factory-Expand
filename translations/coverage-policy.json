@@ -4003,6 +4003,156 @@
       "key": "components.missions.missionFilesExplorer.add.megabytes",
       "source": "{{size}} MB",
       "reason": "0.202.0逐项复核：品牌、文件格式、计量缩写或带插值的计量格式，保留原值"
+    },
+    {
+      "key": "lessons.useLessonsNavState.groupTitle",
+      "source": "{{cohortGroup}} · {{group}}",
+      "reason": "0.204.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.chat.sessionArtifactsPanel.group.github",
+      "source": "GitHub",
+      "reason": "0.204.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.chat.sessionArtifactsPanel.group.gitlab",
+      "source": "GitLab",
+      "reason": "0.204.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.chat.sessionArtifactsPanel.group.jira",
+      "source": "Jira",
+      "reason": "0.204.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.chat.sessionArtifactsPanel.group.linear",
+      "source": "Linear",
+      "reason": "0.204.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.chat.sessionArtifactsPanel.group.notion",
+      "source": "Notion",
+      "reason": "0.204.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "components.settings.subOrganizationList.creditsInMillions",
+      "source": "{{credits}}M",
+      "reason": "0.204.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "academy.lessons.customizations.skills.title",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "academy.lessons.customizations.hooks.title",
+      "source": "Hooks",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics.myAnalyticsDashboard.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics.myAnalyticsDashboard.hooks",
+      "source": "Hooks",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics.toolsDashboard.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics.toolsDashboard.hooks",
+      "source": "Hooks",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics.toolsDashboard.columns.skill",
+      "source": "Skill",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics.chartSeries.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics.chartSeries.hooks",
+      "source": "Hooks",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics2.toolUsageLabels.skills.label",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "analytics2.toolUsageLabels.skills.singular",
+      "source": "Skill",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "common.customize.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "components.chat.skillsBrowser.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "components.chat.chatComposerSkillsButton.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "components.chat.contextWindowModal.tab.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "components.chat.slashCommandSuggestions.group.skill",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "components.evaluations.evaluationRunDetail.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "components.evaluations.evaluationRunConfigFields.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "components.missions.workstreamFlow.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "sessions.slashCommands.skillFallback",
+      "source": "Skill",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "settings.configItems.categories.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "settings.configItems.categories.hooks",
+      "source": "Hooks",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
+    },
+    {
+      "key": "softwareFactory.softwareFactoryAutomationDetail.skills",
+      "source": "Skills",
+      "reason": "保留Factory功能名Skill/Skills、Hook/Hooks，与配置文件和命令对应"
     }
   ]
 }

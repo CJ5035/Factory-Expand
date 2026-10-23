@@ -266,6 +266,18 @@
       "levelOverTime": "LEVEL OVER TIME",
       "all": "All"
     },
+    "deleteReadinessReportsModal": {
+      "title_one": "Delete report",
+      "title_other": "Delete reports",
+      "description_one": "All reports for this repository will be removed for everyone in the organization, and it will no longer count toward the organization score. Anyone with access to the repository can analyze it again to create a new report. This can't be undone.",
+      "description_other": "All reports for these repositories will be removed for everyone in the organization, and they will no longer count toward the organization score. Anyone with access to them can analyze them again to create new reports. This can't be undone.",
+      "moreRepositories_one": "and {{count}} more",
+      "moreRepositories_other": "and {{count}} more",
+      "cancel": "Cancel",
+      "deleting": "Deleting...",
+      "confirm_one": "Delete report",
+      "confirm_other": "Delete {{count}} reports"
+    },
     "readinessRepositoryHeader": {
       "lastUpdate": "Last update:",
       "export": "Export",
@@ -274,7 +286,8 @@
       "totalCriteriaPass": "total criteria pass",
       "exportAsMarkdown": "Export as Markdown",
       "exportAsPdf": "Export as PDF",
-      "levelNumber": "Level {{level}}"
+      "levelNumber": "Level {{level}}",
+      "deleteReport": "Delete report"
     },
     "readinessRepositoryTable": {
       "noRepositoriesFound": "No repositories found",
@@ -282,7 +295,8 @@
       "name": "Name",
       "progress": "Progress",
       "lastUpdate": "Last Update",
-      "tags": "Tags"
+      "tags": "Tags",
+      "selectAllOnPage": "Select all repositories on this page"
     },
     "readinessSessionRow": {
       "viewReport": "View Report",
@@ -429,7 +443,8 @@
     },
     "readinessRepositoryRow": {
       "refresh": "Refresh",
-      "analyze": "Analyze"
+      "analyze": "Analyze",
+      "selectRepository": "Select {{name}}"
     },
     "readinessSearchInput": {
       "search": "Search"
@@ -822,7 +837,9 @@
       "fromAccountBalance": "From account balance ({{amount}} available)",
       "balanceAppliedFirstNotice": "Your account balance is applied first and your default card is charged the remainder immediately. It may take a few seconds for the balance to be reflected in your account.",
       "balanceCoversPurchaseNotice": "Your account balance covers this purchase, so your card is not charged. It may take a few seconds for the balance to be reflected in your account.",
-      "cardChargedNotice": "Your default card will be charged immediately. It may take a few seconds for the balance to be reflected in your account."
+      "cardChargedNotice": "Your default card will be charged immediately. It may take a few seconds for the balance to be reflected in your account.",
+      "addPaymentMethodNotice": "Add a payment method in settings to buy Extra Usage.",
+      "addPaymentMethodForRemainderNotice": "Your account balance is applied first. Add a payment method in settings to pay for any amount it doesn't cover."
     },
     "extraUsageCard": {
       "buyMore": "Buy more",
@@ -1361,6 +1378,9 @@
     },
     "droidMessageV3": {
       "copyMessage": "Copy message",
+      "planning": "Planning",
+      "planningActions_one": "Planning {{count}} action",
+      "planningActions_other": "Planning {{count}} actions",
       "rewindConversationToThisMessage": "Rewind conversation to this message",
       "specNotApproved": "Spec not approved",
       "userBashCommand": "User Bash Command",
@@ -1773,6 +1793,7 @@
       "removeFile": "Remove file {{name}}"
     },
     "droidSessionChat": {
+      "authenticating": "Authenticating…",
       "scrollToPinnedMessage": "Scroll to pinned message",
       "searchChatTranscript": "Search chat transcript",
       "searchSession": "Search session",
@@ -1819,7 +1840,12 @@
       "zoomIn": "Zoom in",
       "downloadImage": "Download image",
       "openInSidebar": "Open in sidebar",
-      "fullSizePreview": "Full size preview"
+      "fullSizePreview": "Full size preview",
+      "previousImage": "Previous image",
+      "nextImage": "Next image",
+      "chooseImage": "Choose image",
+      "imagePosition_one": "Image {{index}} of {{count}}",
+      "imagePosition_other": "Image {{index}} of {{count}}"
     },
     "loopIndicator": {
       "resumeLoop": "Resume loop",
@@ -1873,9 +1899,7 @@
       "clearAllPendingMessages": "Clear all pending messages"
     },
     "sessionArtifactsPanel": {
-      "sections": "Artifact sections",
-      "emptyMentioned": "No pull requests, issues, pages, or links mentioned yet",
-      "emptyOutputs": "No pull requests, issues, or pages created yet",
+      "empty": "No pull requests, issues, pages, or links yet",
       "activity": "{{action}} {{time}}",
       "action": {
         "closed": "Closed",
@@ -1885,6 +1909,14 @@
         "merged": "Merged",
         "updated": "Updated",
         "viewed": "Viewed"
+      },
+      "group": {
+        "github": "GitHub",
+        "gitlab": "GitLab",
+        "jira": "Jira",
+        "linear": "Linear",
+        "notion": "Notion",
+        "web": "Web"
       }
     },
     "sessionDetailsModal": {
@@ -1915,10 +1947,11 @@
       "environment": "Environment",
       "noRepository": "No Repository",
       "changes": "Changes",
-      "mentioned": "Mentioned",
-      "outputs": "Outputs",
+      "artifacts": "Artifacts",
+      "artifactGroup_one": "{{group}}, {{formattedCount}} artifact",
+      "artifactGroup_other": "{{group}}, {{formattedCount}} artifacts",
       "viewAll": "View all",
-      "viewAllSection": "View all {{section}}",
+      "viewAllArtifacts": "View all artifacts",
       "collapseSection": "Collapse {{section}}",
       "expandSection": "Expand {{section}}",
       "issue": "Issue",
@@ -3127,6 +3160,12 @@
         "sessionLink": "session link",
         "sessionAsMarkdown": "session as Markdown"
       }
+    },
+    "unsavedChangesBar": {
+      "label": "Unsaved changes",
+      "message": "You have unsaved changes.",
+      "discard": "Discard",
+      "reviewAndSave": "Review and Save"
     }
   },
   "connectors": {
@@ -3224,23 +3263,18 @@
     "evaluationDatasetDraft": {
       "datasetName": "Dataset name",
       "newDataset": "New dataset",
-      "noDescriptionYet": "No description yet. Describe the dataset in the chat and Droid will draft its tasks.",
-      "droidIsBuilding": "Droid is building this dataset in the chat. It joins your library once you publish it.",
       "tabs": {
         "tasks": {
           "label": "Tasks",
-          "empty": "No tasks yet",
-          "description": "Tasks you agree on in the chat appear here once the dataset is published."
+          "empty": "No tasks yet"
         },
         "runs": {
           "label": "Runs",
-          "empty": "No runs yet",
-          "description": "Run this dataset after it is published."
+          "empty": "No runs yet"
         },
         "presets": {
           "label": "Presets",
-          "empty": "No presets yet",
-          "description": "Save run settings as a preset after the dataset is published."
+          "empty": "No presets yet"
         }
       }
     },
@@ -3280,14 +3314,12 @@
     },
     "evaluationDatasetImport": {
       "importDataset": "Import dataset",
-      "previewAHarborDatasetVersionThen": "Preview a Harbor dataset version, then import it to run it.",
       "cancel": "Cancel",
       "preview": "Preview",
       "importFromHarbor": "Import from Harbor",
       "harborUrlOrReference": "Harbor URL or reference",
       "httpsHubHarborframeworkComDatasetsOrg": "https://hub.harborframework.com/datasets/org/name",
-      "invalidReference": "Use a Harbor Hub URL, org/name@revision, or name@version for the Harbor registry.",
-      "referenceHint": "Without a revision, Hub datasets use the latest one. You can review it before importing."
+      "invalidReference": "Use a Harbor Hub URL, org/name@revision, or name@version for the Harbor registry."
     },
     "evaluationDatasetLibrary": {
       "withdrawn": "Withdrawn",
@@ -3342,7 +3374,6 @@
       "moreActions": "More actions"
     },
     "evaluationPresetEditor": {
-      "chooseAModelWhenYouRun": "Choose a model when you run it.",
       "cancel": "Cancel",
       "savePreset": "Save preset",
       "name": "Name",
@@ -3350,10 +3381,8 @@
       "chooseADataset": "Choose a dataset",
       "version": "Version",
       "chooseAVersion": "Choose a version",
-      "versionFixedWhenSaved": "Version fixed when saved.",
       "notes": "Notes",
       "notesPlaceholder": "Task overview, known quirks, what to watch for",
-      "notesHelper": "Markdown. Shown to people and droids who run this preset.",
       "notesTooLong": "Notes must be {{max}} characters or fewer.",
       "saving": "Saving…",
       "revisionWithdrawn": "This revision was withdrawn by its publisher.",
@@ -3375,8 +3404,6 @@
       "run": "Run",
       "edit": "Edit",
       "openDataset": "Open dataset",
-      "emptyDescriptionScoped": "Save a reusable configuration for this dataset version.",
-      "emptyDescription": "Create a reusable configuration for a public or organization dataset.",
       "noMatchingPresets": "No matching presets",
       "noPresetsYet": "No presets yet",
       "allTasks": "All",
@@ -3457,14 +3484,12 @@
     "evaluationRunConfigFields": {
       "tasks": "Tasks",
       "loadingTasks": "Loading tasks…",
-      "oneTrialPerTask": "1 trial per task.",
       "skills": "Skills",
       "execution": "Execution",
       "concurrency": "Concurrency",
-      "concurrencyHelper": "1–{{max}} parallel tasks.",
+      "concurrencyError": "Enter a number from 1 to {{max}}.",
       "droidCliFlags": "Droid CLI flags",
-      "flagValue": "--flag value",
-      "droidCliFlagsHelper": "Space-separated. Added after the model and reasoning effort chosen at launch."
+      "flagValue": "--flag value"
     },
     "evaluationRunPanel": {
       "saveAsPreset": "Save as preset",
@@ -3483,7 +3508,6 @@
       "savePreset": "Save preset",
       "saving": "Saving…",
       "presetName": "Preset name",
-      "saveAsPresetHelper": "Saves this dataset version with its tasks, skills, and execution settings. Choose a model when you run it.",
       "notes": "Notes"
     },
     "evaluationRunsTable": {
@@ -3587,15 +3611,13 @@
         "title": "Organization",
         "label": "Organization datasets",
         "searchLabel": "Search organization datasets",
-        "emptyTitle": "No organization datasets",
-        "emptyDescription": "Datasets you publish or others share with your organization appear here."
+        "emptyTitle": "No organization datasets"
       },
       "public": {
         "title": "Public",
         "label": "Public datasets",
         "searchLabel": "Search public datasets",
-        "emptyTitle": "No public datasets",
-        "emptyDescription": "Import a Harbor dataset version to pin it for your organization. Only imported versions can be run."
+        "emptyTitle": "No public datasets"
       }
     },
     "datasetVisibility": {
@@ -3867,8 +3889,20 @@
       "workstreamNoDescription": "No description yet",
       "workstreamListener": "Listener"
     },
+    "missionAgentSignal": {
+      "title": "Signals",
+      "subtitle": "What started this agent",
+      "filterBySource": "Filter by {{source}}",
+      "openIn": "Open in {{source}}",
+      "openItemIn": "Open {{item}} in {{source}}"
+    },
+    "missionAgentOrigin": {
+      "startedBy": "Started by <workstream/>",
+      "startedByInResponseTo": "Started by <workstream/> in response to <signal/>"
+    },
     "missionWorkstreamFilterChip": {
-      "clear": "Clear workstream filter {{name}}"
+      "clear": "Clear workstream filter {{name}}",
+      "clearSource": "Clear source filter {{name}}"
     },
     "missionCenterTabBar": {
       "showPanel": "Show panel"
@@ -4029,7 +4063,6 @@
         "open": "Open pull request",
         "unavailable": "Pull request status unavailable"
       },
-      "openPullRequestTitle": "Open pull request: {{title}}",
       "copyBranch": "Copy {{branch}}",
       "mergeMethods": {
         "squash": "Squash and merge",
@@ -4060,6 +4093,9 @@
       "discardPendingReviewWithCommentsDescription_other": "Your pending review and its {{count}} comments will be deleted without being published.",
       "reviewWithPendingComments_one": "Review, {{count}} pending comment",
       "reviewWithPendingComments_other": "Review, {{count}} pending comments"
+    },
+    "pullRequestLabelTag": {
+      "remove": "Remove label {{name}}"
     },
     "pullRequestDescriptionCard": {
       "showLess": "Show less",
@@ -4150,6 +4186,49 @@
       "patchUnavailableReason": "{{provider}} did not provide a textual patch for this file.",
       "diffTruncatedReason": "This file's patch was omitted because the inline diff reached its size limit."
     },
+    "pullRequestValidationQaStatus": {
+      "label": "AUTOMATED QA",
+      "labelWithCommit": "AUTOMATED QA · {{commit}}",
+      "notInstalled": {
+        "title": "Automated QA isn't set up",
+        "description": "Set up the QA automation to test this repository's pull requests and post a report here.",
+        "status": "NOT SET UP"
+      },
+      "notOnPullRequests": {
+        "title": "QA doesn't run on pull requests",
+        "description": "This repository has a QA workflow, but pull requests don't trigger it.",
+        "status": "OFF FOR PRS"
+      },
+      "notRun": {
+        "title": "QA hasn't run on this commit",
+        "description": "The report appears here once QA runs on the latest commit.",
+        "status": "NOT RUN",
+        "reportBelowDescription": "The report below is from an earlier commit."
+      },
+      "running": {
+        "title": "QA is running",
+        "description": "The report appears here when the run finishes.",
+        "status": "RUNNING",
+        "reportBelowDescription": "The report below is from an earlier run."
+      },
+      "skipped": {
+        "title": "QA skipped this commit",
+        "description": "The latest QA run on this commit was skipped.",
+        "status": "SKIPPED"
+      },
+      "failed": {
+        "title": "QA didn't finish",
+        "description": "The latest QA run on this commit failed, timed out, or was cancelled.",
+        "status": "FAILED"
+      },
+      "finished": {
+        "title": "QA finished",
+        "description": "The latest QA run on this commit finished, but its report isn't on the pull request.",
+        "status": "FINISHED"
+      },
+      "viewRun": "View QA run",
+      "setUpQa": "Set up QA"
+    },
     "sessionListV2": {
       "addProject": "Add Project",
       "newMission": "New Mission",
@@ -4188,7 +4267,8 @@
         "cloud": "Cloud",
         "local": "Local"
       },
-      "cleaningUpWorktree": "Cleaning up worktree..."
+      "cleaningUpWorktree": "Cleaning up worktree...",
+      "noSectionSessionsYet": "No sessions yet"
     },
     "sessionListV2FilterMenu": {
       "configureRecentSessions": "Configure recent sessions",
@@ -4213,7 +4293,8 @@
         "exec": "Exec",
         "automations": "Automations",
         "softwareFactory": "Software Factory",
-        "evaluations": "Evaluations"
+        "evaluations": "Evaluations",
+        "codeReview": "Code Review"
       },
       "lastActivityOptions": {
         "all": "All",
@@ -4252,7 +4333,8 @@
         "merged": "Merged",
         "closed": "Closed",
         "none": "No PR"
-      }
+      },
+      "newSection": "New Section…"
     },
     "sessionListV2Group": {
       "showLess": "Show less",
@@ -4261,7 +4343,15 @@
       "newSessionIn": "New session in {{label}}"
     },
     "sessionListV2Section": {
-      "sectionActionsFor": "{{title}} actions"
+      "sectionActionsFor": "{{title}} actions",
+      "newSessionIn": "New session in {{title}}",
+      "rename": "Rename",
+      "delete": "Delete",
+      "hide": "Hide",
+      "newSection": "New Section…"
+    },
+    "sessionListV2SectionDialog": {
+      "newDescription": "Move sessions into it from their menu, or drag them onto it."
     },
     "sessionListV2SessionRow": {
       "folder": "Folder",
@@ -4281,7 +4371,10 @@
         "rename": "Rename",
         "missionSettings": "Settings",
         "archive": "Archive",
-        "copySessionId": "Copy Session ID"
+        "copySessionId": "Copy Session ID",
+        "moveToSection": "Move to Section",
+        "newSection": "New Section…",
+        "removeFromSection": "Remove from Section"
       },
       "hideWorkers": "Hide workers",
       "showWorkers": "Show workers",
@@ -4390,7 +4483,27 @@
       "paymentOverdue": "Payment overdue",
       "goToBilling": "Go to billing",
       "usageWillBeHaltedOn": "Usage will be halted on {{date}}.",
-      "inboxNeedsAction": "Inbox, {{badge}} need your action"
+      "inboxNeedsAction": "Inbox, {{badge}} need your action",
+      "more": "More",
+      "moreEmpty": "Buttons and sections you hide show up here."
+    },
+    "sessionSidebarEdit": {
+      "pin": "Pin {{name}}",
+      "unpin": "Unpin {{name}}",
+      "newSection": "New section",
+      "sectionName": "Section name",
+      "createSection": "Create section",
+      "saveName": "Save name",
+      "delete": "Delete {{name}}",
+      "confirmDelete": "Confirm delete?",
+      "cancelDelete": "Cancel delete",
+      "cancelRename": "Cancel rename",
+      "cancel": "Cancel",
+      "pickedUp": "Picked up {{name}}.",
+      "over": "{{name}} is over {{target}}.",
+      "dropped": "Dropped {{name}}.",
+      "cancelled": "Stopped moving {{name}}.",
+      "moved": "Moved {{name}} to position {{position}} of {{count}}."
     },
     "sessionsTable": {
       "sessionControls": "Session controls",
@@ -5460,6 +5573,9 @@
       "characterCount": "{{count}} / {{max}} characters"
     },
     "subOrganizationList": {
+      "globalLimitPerUser": "Global limit / user",
+      "unlimited": "Unlimited",
+      "creditsInMillions": "{{credits}}M",
       "organization": "Organization",
       "euRegion": "EU region",
       "globalRegion": "Global region",
@@ -5475,6 +5591,26 @@
       "renameNamed": "Rename {{name}}",
       "manageBindings": "Manage IdP group mappings",
       "manageBindingsFor": "Manage IdP group mappings for {{name}}"
+    },
+    "subOrganizationBulkGlobalLimit": {
+      "title": "Set global limits",
+      "description": "Applies one global limit per user to each selected organization now. This is a one-time update: organizations created later won’t inherit it.",
+      "limitLabel": "Global limit per user (M credits)",
+      "limitPlaceholder": "e.g. 50",
+      "limitInvalid": "Enter a number of M credits with up to 6 decimal places.",
+      "selectAll": "Select all",
+      "selectedCount": "Selected: {{selected}} of {{total}}",
+      "currentLimit": "Current limit / user",
+      "unlimited": "Unlimited",
+      "credits": "{{credits}}M credits",
+      "cancel": "Cancel",
+      "removeLimit": "Remove limit",
+      "apply": "Apply to selected organizations",
+      "saving": "Saving…",
+      "resultSummary": "Saved: {{saved}} of {{total}}",
+      "saved": "Saved",
+      "failed": "Not saved",
+      "done": "Done"
     },
     "templateSelectionCard": {
       "searchForATemplate": "Search for a template",
@@ -7104,6 +7240,10 @@
       "showFullSpecification": "Show full specification",
       "fullSpecification": "Full Specification"
     },
+    "softwareFactoryAttachmentMedia": {
+      "loading": "Loading attachment…",
+      "unavailable": "Could not show this attachment"
+    },
     "workstreamConfiguration": {
       "collapseSection": "Collapse {{title}}",
       "expandSection": "Expand {{title}}",
@@ -7182,25 +7322,13 @@
     "softwareFactoryChangeDetailV2": {
       "pullRequestChecks": "Pull request checks",
       "pullRequestMeta": "{{number}} opened {{openedAt}} · {{status}}",
-      "esc": "Esc",
-      "reviewsComplete": "Reviews complete",
-      "youreAllCaughtUp": "You're all caught up",
-      "theresNothingWaitingForYourReview": "There's nothing waiting for your review right now."
+      "esc": "Esc"
     },
     "softwareFactoryReviewControls": {
-      "previousReviewItem": "Previous review item",
-      "nextReviewItem": "Next review item",
-      "itemPosition": "Item {{current}} of {{total}}",
-      "itemCounter": "Items {{current}} / {{total}}",
       "approve": "Approve",
       "approveAndCreatePr": "Approve & create PR",
       "request": "Request",
       "requestChanges": "Request changes",
-      "retry": "Retry",
-      "retryChange": "Retry change",
-      "fix": "Fix",
-      "fixInSession": "Fix in session",
-      "openChange": "Open change",
       "decline": "Decline",
       "cancel": "Cancel",
       "sendFeedback": "Send feedback",

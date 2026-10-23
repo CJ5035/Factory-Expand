@@ -53,7 +53,8 @@
     "notInDirectory": "{{id}}（不在目录中）",
     "notConfigured": "未配置",
     "usageLimitDetail": "每位成员每月 {{limit}} 积分",
-    "usageLimitRange": "因组织而异：每位成员每月 {{min}} 至 {{max}} 积分"
+    "usageLimitRange": "因组织而异：每位成员每月 {{min}} 至 {{max}} 积分",
+    "allGroupsWithCount": "所有组 · {{count}}"
   },
   "directoryGroupConfiguration": {
     "title": "配置 {{name}}",
@@ -98,7 +99,7 @@
     "yourAccount": "你的账号"
   },
   "configItems": {
-    "overview": "将标准用户文件夹中受支持的技能、指令、钩子、插件、Droid 和命令发布到个人云目录。已知凭据文件、MCP 和输出样式除外。发布前请检查提示词和脚本中是否含有机密信息。",
+    "overview": "将标准用户文件夹中受支持的 Skill 、指令、 Hook 、插件、Droid 和命令发布到个人云目录。已知凭据文件、MCP 和输出样式除外。发布前请检查提示词和脚本中是否含有机密信息。",
     "checking": "正在检查配置…",
     "publishingConfigurations": "正在发布配置…",
     "publicationStatus": "已发布 {{published}} 项。",
@@ -110,9 +111,9 @@
     "groupHeading": "{{category}}（{{count}}）",
     "categories": {
       "instructions": "指令",
-      "skills": "技能",
+      "skills": "Skills",
       "plugins": "插件",
-      "hooks": "钩子",
+      "hooks": "Hooks",
       "droids": "Droid",
       "commands": "命令"
     },
@@ -172,7 +173,10 @@
       "end": "结束"
     },
     "cycleTimeRoleAriaLabel": "{{status}} 的周期计时角色",
-    "clockStartsAtAndStopsAt": "计时从 {{start}} 开始，到 {{end}} 结束。"
+    "clockStartsAtAndStopsAt": "计时从 {{start}} 开始，到 {{end}} 结束。",
+    "issueProvider": "事项跟踪平台",
+    "automaticIssueProvider": "自动",
+    "issueProviderDescription": "未连接唯一的事项跟踪平台时，设置代理效能的默认平台，以及实时和异步信号的上下文。如果仅连接一个跟踪平台，则始终优先使用它。仪表盘筛选条件不会更改此设置。"
   },
   "agentBehaviorSection": {
     "controlHowDroidAgentsBehaveDuring": "控制 Droid 代理在 Session 中的行为。",
@@ -358,7 +362,8 @@
     "allSubOrganizations": "所有子组织",
     "titleWithCount": "审计日志 · {{total}}",
     "loading": "正在加载…",
-    "loadMore": "加载更多"
+    "loadMore": "加载更多",
+    "allEventsWithCount": "所有事件 · {{total}}"
   },
   "autoModelCandidatesDraft": {
     "turnedOnWithoutGuidelines": "{{name}} 已在自动模型中启用，但尚无指南。请在自动模型候选中添加指南，或将其关闭。",
@@ -432,7 +437,9 @@
       "webSearch": "搜索公共网络。",
       "fetchUrl": "从外部 URL 获取内容。"
     },
-    "autonomyAriaLabel": "{{level}} {{tool}} 自主级别"
+    "autonomyAriaLabel": "{{level}} {{tool}} 自主级别",
+    "chooseWhichBuiltInWebTools": "选择 Droid 可以使用的内置网页工具，以及无需批准即可运行这些工具所需的 Session 自主程度。",
+    "builtInWebTools": "内置网页工具"
   },
   "bulkActionConfirmModal": {
     "cancel": "取消",
@@ -1029,7 +1036,8 @@
     "pages": {
       "general": {
         "label": "通用",
-        "guardDescription": "所有组织成员都可使用通用设置。"
+        "guardDescription": "所有组织成员都可使用通用设置。",
+        "description": "你的账户、组织和日常偏好设置。"
       },
       "inbox": {
         "label": "收件箱",
@@ -1037,19 +1045,23 @@
       },
       "appearance": {
         "label": "外观",
-        "guardDescription": "此账号未启用外观设置。"
+        "guardDescription": "此账号未启用外观设置。",
+        "description": "设置应用外观，包括主题、文字和代码差异。"
       },
       "apiKeys": {
         "label": "API 密钥",
-        "guardDescription": "隔离网络模式下无法使用 API 密钥设置。"
+        "guardDescription": "隔离网络模式下无法使用 API 密钥设置。",
+        "description": "创建 API 密钥和服务账户，让脚本和工具能够使用 Factory。"
       },
       "secrets": {
         "label": "机密",
-        "guardDescription": "隔离网络模式下无法使用计算机机密。"
+        "guardDescription": "隔离网络模式下无法使用计算机机密。",
+        "description": "受管 Droid Computers 在工作时可以使用的令牌和密码。"
       },
       "connectors": {
         "label": "连接器",
-        "guardDescription": "此组织未启用连接器。"
+        "guardDescription": "此组织未启用连接器。",
+        "description": "连接你使用的应用，让 Droid 能够与它们协作。"
       },
       "sessionManagement": {
         "label": "Session 管理",
@@ -1077,15 +1089,18 @@
       },
       "customModels": {
         "label": "自定义模型",
-        "guardDescription": "自定义模型仅在组织启用后的桌面应用中可用。"
+        "guardDescription": "自定义模型仅在组织启用后的桌面应用中可用。",
+        "description": "添加使用你自己 API 密钥的模型。"
       },
       "worktrees": {
         "label": "工作树",
-        "guardDescription": "工作树设置仅在桌面应用中可用。"
+        "guardDescription": "工作树设置仅在桌面应用中可用。",
+        "description": "设置工作树的位置、初始化方式和清理时间。"
       },
       "usage": {
         "label": "用量",
-        "guardDescription": "隔离网络模式下无法使用用量数据。"
+        "guardDescription": "隔离网络模式下无法使用用量数据。",
+        "description": "查看用量、上限和用量提醒。"
       },
       "commitmentUsage": {
         "label": "承诺用量",
@@ -1093,15 +1108,18 @@
       },
       "support": {
         "label": "支持",
-        "guardDescription": "所有组织成员都可使用支持服务。"
+        "guardDescription": "所有组织成员都可使用支持服务。",
+        "description": "阅读文档、联系支持并分享诊断信息。"
       },
       "organization": {
         "label": "组织",
-        "guardDescription": "仅管理员和所有者可使用组织设置。"
+        "guardDescription": "仅管理员和所有者可使用组织设置。",
+        "description": "管理组织可以使用的应用和代码托管平台。"
       },
       "members": {
         "label": "成员",
-        "guardDescription": "仅管理员和所有者可使用成员设置。"
+        "guardDescription": "仅管理员和所有者可使用成员设置。",
+        "description": "邀请成员加入组织并管理其角色。"
       },
       "enterpriseControls": {
         "label": "企业控制",
@@ -1109,7 +1127,8 @@
       },
       "remoteDelegations": {
         "label": "委派",
-        "guardDescription": "仅管理员和所有者可使用委派设置。"
+        "guardDescription": "仅管理员和所有者可使用委派设置。",
+        "description": "允许成员从 Slack 和 Linear 等应用向 Droid 委派任务。"
       },
       "openCompute": {
         "label": "OpenCompute",
@@ -1125,7 +1144,8 @@
       },
       "subOrganizations": {
         "label": "组织",
-        "guardDescription": "仅企业根组织所有者可使用组织功能。"
+        "guardDescription": "仅企业根组织所有者可使用组织功能。",
+        "description": "创建和管理企业中的组织。"
       },
       "groups": {
         "label": "用户组",
@@ -1133,15 +1153,18 @@
       },
       "billing": {
         "label": "账单",
-        "guardDescription": "仅根组织所有者可使用账单设置。"
+        "guardDescription": "仅根组织所有者可使用账单设置。",
+        "description": "管理套餐、付款方式和发票。"
       },
       "credits": {
         "label": "积分",
-        "guardDescription": "仅按多个席位计费的组织管理员可查看积分用量。"
+        "guardDescription": "仅按多个席位计费的组织管理员可查看积分用量。",
+        "description": "查看整个组织的积分使用情况。"
       },
       "securityIdentity": {
         "label": "安全与身份",
-        "guardDescription": "仅企业组织所有者可使用安全与身份设置。"
+        "guardDescription": "仅企业组织所有者可使用安全与身份设置。",
+        "description": "设置单点登录并验证公司域名。"
       }
     },
     "settingsSections": {
@@ -1161,7 +1184,7 @@
       "security": "安全",
       "networkPolicy": "网络策略",
       "sandboxPolicy": "沙箱",
-      "hooksPolicy": "钩子策略",
+      "hooksPolicy": "Hook 策略",
       "plugins": "插件",
       "connectors": "连接器",
       "wiki": "Wiki",
@@ -1171,7 +1194,8 @@
       "gitCommits": "Git 与提交",
       "retentionPolicy": "Session 保留",
       "personas": "角色设定",
-      "rawConfig": "原始配置"
+      "rawConfig": "原始配置",
+      "ipRestrictions": "IP 限制"
     },
     "connectorsSections": {
       "allConnectors": "所有集成"
@@ -1271,7 +1295,8 @@
       "computerSecretsChange": "计算机机密",
       "organizationMonthlyUsageSettingsChange": "组织用量设置",
       "delegationActivity": "委派",
-      "remoteDelegationConfigChange": "委派配置"
+      "remoteDelegationConfigChange": "委派配置",
+      "agentReadinessReportChange": "代理就绪度报告"
     },
     "auditScope": {
       "organization": "组织",
@@ -1291,7 +1316,8 @@
       "workosEvent": "目录同步",
       "admin": "Factory 管理员",
       "llmProxy": "LLM 代理",
-      "delegation": "委派"
+      "delegation": "委派",
+      "webAnalyticsReadiness": "代理就绪度"
     },
     "teamsInstallFallbackCopy": "如果 Teams 未打开，Teams 管理员可能需要在 Teams 管理中心允许 Droid。",
     "jiraForgeAppInstallDescription": "Factory 的 Jira 应用可让你在 Jira 中向 Factory 委派问题。请打开 Atlassian，将其安装到你的 Jira 站点。",
@@ -1329,7 +1355,47 @@
       }
     },
     "autoModelCustomCandidateBlockedReason": "被模型访问策略阻止：自定义模型已关闭，或此端点不在允许的基础 URL 范围内。",
-    "autoModelCustomCandidateMissingReason": "此自定义模型已不在共享模型中。请在这里也将其移除。"
+    "autoModelCustomCandidateMissingReason": "此自定义模型已不在共享模型中。请在这里也将其移除。",
+    "mergedPages": {
+      "defaults": {
+        "label": "默认设置",
+        "sessionsTab": "Session",
+        "missionsTab": "任务",
+        "description": "新建 Session 和任务的默认设置。"
+      },
+      "environments": {
+        "label": "环境",
+        "computersTab": "计算机",
+        "templatesTab": "模板",
+        "description": "Droid Session 运行所用的计算机和模板。"
+      }
+    },
+    "enterpriseControlsGroups": {
+      "models": {
+        "label": "模型",
+        "description": "成员可用的模型，以及 Auto 的选择方式。"
+      },
+      "agentDefaults": {
+        "label": "代理默认设置",
+        "description": "Session 的启动方式和行为。"
+      },
+      "toolsPermissions": {
+        "label": "工具与权限",
+        "description": "Droid 可以运行哪些操作，以及何时需要询问。"
+      },
+      "securityNetwork": {
+        "label": "安全与网络",
+        "description": "密钥、成员访问权限和网络边界。"
+      },
+      "dataCompute": {
+        "label": "数据与计算",
+        "description": "数据存储位置和 Droid 运行位置。"
+      },
+      "advanced": {
+        "label": "高级",
+        "description": "不常用的控制项，包括原始 JSON 配置。"
+      }
+    }
   },
   "createApiKeyFormFields": {
     "keyName": "密钥名称",
@@ -1435,7 +1501,8 @@
     "failedToRemoveCustomModel": "移除自定义模型失败",
     "description": "使用自己的 API 密钥来调用模型（BYOK）。密钥保留在此计算机上，绝不会发送给 Factory。<anchor>了解更多</anchor>。",
     "customModelsWithCount": "自定义模型 · {{total}}",
-    "failedToLoadCustomModels": "从本地 Droid 服务加载自定义模型失败。"
+    "failedToLoadCustomModels": "从本地 Droid 服务加载自定义模型失败。",
+    "allModelsWithCount": "所有模型 · {{total}}"
   },
   "daemonVersionCard": {
     "checkingVersion": "正在检查版本…",
@@ -1594,17 +1661,18 @@
     "title": "目录",
     "titleWithCount": "目录 · {{total}}",
     "noMatchingDirectoryMembers": "没有匹配的目录成员。",
-    "noDirectoryMembersYet": "暂无目录成员。"
+    "noDirectoryMembersYet": "暂无目录成员。",
+    "allMembersWithCount": "所有成员 · {{total}}"
   },
   "disabledSkillsSection": {
-    "disableBuiltInOrCustomSkills": "为此组织的所有人禁用内置或自定义技能。此处禁用的技能无法在用户或项目设置中重新启用。",
-    "skillPolicy": "技能策略",
-    "disabledSkills": "已禁用技能",
-    "noSkillsAreDisabled": "没有禁用任何技能。",
+    "disableBuiltInOrCustomSkills": "为此组织的所有人禁用内置或自定义 Skill。此处禁用的 Skill 无法在用户或项目设置中重新启用。",
+    "skillPolicy": "Skill 策略",
+    "disabledSkills": "已禁用 Skill",
+    "noSkillsAreDisabled": "没有禁用任何 Skill。",
     "eGAgentBrowser": "例如 agent-browser",
     "disable": "禁用",
-    "thisRemovesTheSkillFromDroids": "这会从 Droid 的可用技能中移除该技能，但不会阻止同名可执行文件。如还需在可执行文件层面阻止，请使用命令策略。",
-    "disabledSkillsTooltip": "输入技能 frontmatter 中的名称。添加时会规范化名称，例如 Agent Browser 会变为 agent-browser。",
+    "thisRemovesTheSkillFromDroids": "这会从 Droid 的可用 Skill 中移除该 Skill，但不会阻止同名可执行文件。如还需在可执行文件层面阻止，请使用命令策略。",
+    "disabledSkillsTooltip": "输入 Skill frontmatter 中的名称。添加时会规范化名称，例如 Agent Browser 会变为 agent-browser。",
     "removeSkill": "移除 {{skill}}"
   },
   "droidComputerCreationProposal": {
@@ -1867,7 +1935,9 @@
     "couldNotBeSaved": "无法保存企业控制设置。请重试。",
     "failedToLoad": "加载企业控制设置失败。",
     "highCostOptInRecorded": "{{modelName}}：保存时将记录高费用模型选择。",
-    "highCostOptInRevoked": "{{modelName}}：保存时将撤销高费用模型选择。"
+    "highCostOptInRevoked": "{{modelName}}：保存时将撤销高费用模型选择。",
+    "savesSeparately": "单独保存",
+    "savesSeparatelyHint": "此部分有独立的保存按钮，不包含在底部保存栏的操作中。"
   },
   "enterpriseControlsFormUtils": {
     "item": "第 {{number}} 项",
@@ -2174,23 +2244,23 @@
     "retrySetup": "重试设置"
   },
   "hooksPolicySection": {
-    "hookEvent": "钩子事件",
-    "addHook": "添加钩子",
+    "hookEvent": "Hook 事件",
+    "addHook": "添加 Hook",
     "matcher": "匹配器",
     "commandToRun": "要运行的命令",
     "add": "添加",
-    "configureHooksThatRunCommandsIn": "配置在代理生命周期事件发生时运行命令的钩子。",
-    "hooksPolicy": "钩子策略",
-    "onlyLoadHooksFromTheseManaged": "仅从这些托管设置和组织启用的插件中加载钩子。不允许用户或项目设置中的钩子。",
-    "allowManagedHooksOnly": "仅允许托管钩子",
-    "managedHooks": "托管钩子",
-    "hookCommandsAreVisibleToAll": "钩子命令对所有组织成员可见，并在其计算机上运行。请勿在命令中嵌入机密，改为引用脚本路径或机密管理器。",
+    "configureHooksThatRunCommandsIn": "配置在代理生命周期事件发生时运行命令的 Hook。",
+    "hooksPolicy": "Hook 策略",
+    "onlyLoadHooksFromTheseManaged": "仅从这些托管设置和组织启用的插件中加载 Hook。不允许用户或项目设置中的 Hook。",
+    "allowManagedHooksOnly": "仅允许托管 Hook",
+    "managedHooks": "托管 Hook",
+    "hookCommandsAreVisibleToAll": "Hook 命令对所有组织成员可见，并在其计算机上运行。请勿在命令中嵌入机密，改为引用脚本路径或机密管理器。",
     "thisPolicyProvidesOrganizationalGuidanceRather": "此策略提供组织指导，而非严格的安全强制执行。拥有本地计算机访问权限的用户可能通过修改后的二进制程序绕过限制。",
-    "noManagedHooksAreConfigured": "未配置托管钩子。",
-    "commandContainsSecret": "此命令似乎包含机密（例如 API 密钥或令牌）。钩子命令对所有成员可见，请改为引用脚本或机密管理器。",
+    "noManagedHooksAreConfigured": "未配置托管 Hook。",
+    "commandContainsSecret": "此命令似乎包含机密（例如 API 密钥或令牌）。 Hook 命令对所有成员可见，请改为引用脚本或机密管理器。",
     "matcherLabel": "匹配器：{{matcher}}",
     "timeoutSuffix": "（超时 {{seconds}} 秒）",
-    "removeHook": "移除 {{event}} 钩子"
+    "removeHook": "移除 {{event}} Hook"
   },
   "initializingStep": {
     "howToFix": "修复方法",
@@ -2237,7 +2307,8 @@
     "disconnectedSuccessfully": "已成功断开连接",
     "failedToReconnect": "重新连接 {{integration}} 失败。请重试。",
     "setup": "设置",
-    "setUsername": "设置用户名"
+    "setUsername": "设置用户名",
+    "memberAccess": "成员访问权限"
   },
   "integrationStart": {
     "failedToStartIntegration": "启动集成失败。请重试。",
@@ -2341,7 +2412,8 @@
     "inviteMember": "邀请成员",
     "addingAndRemovingUsersIsHandled": "添加和移除用户由企业管理员负责。",
     "memberRemovedSuccessfully": "成员已成功移除",
-    "membersWithCount": "成员 · {{total}}"
+    "membersWithCount": "成员 · {{total}}",
+    "allMembersWithCount": "所有成员 · {{total}}"
   },
   "metricPanel": {
     "cpu": "CPU",
@@ -2865,7 +2937,8 @@
   "rawConfigSection": {
     "viewAndEditSettingsAsJson": "以 JSON 格式查看和编辑设置。此处的更改会更新上方控件。",
     "rawConfiguration": "原始配置",
-    "validationErrors": "验证错误"
+    "validationErrors": "验证错误",
+    "viewAndEditAllSettingsAsJson": "以 JSON 格式查看和编辑所有设置。这里的更改也会同步更新相应控件。"
   },
   "remoteDelegationConfigSection": {
     "plugins": "插件",
@@ -2992,7 +3065,9 @@
     "connectGithub": "连接 GitHub",
     "connectGitlab": "连接 GitLab",
     "connectBitbucket": "连接 Bitbucket",
-    "connectAzureDevops": "连接 Azure DevOps"
+    "connectAzureDevops": "连接 Azure DevOps",
+    "connectGitlabForOrganization": "为组织连接 GitLab",
+    "gitlabRequiresOrganizationConnection": "组织管理员在组织设置中连接 GitLab 后，GitLab 仓库会显示在这里。"
   },
   "reposListVariant": {
     "searchRepositories": "搜索仓库",
@@ -3049,7 +3124,8 @@
     "resolveErrorsBeforeSaving_one": "保存前请解决 {{count}} 个错误",
     "resolveErrorsBeforeSaving_other": "保存前请解决 {{count}} 个错误",
     "warnings_one": "警告",
-    "warnings_other": "警告"
+    "warnings_other": "警告",
+    "ipRestrictionsWarning": "IP 限制警告"
   },
   "sandboxPolicySection": {
     "add": "添加",
@@ -3110,7 +3186,8 @@
     "removeEntry": "移除 {{value}}",
     "allowByDefaultDescription": "除拒绝的域名外，所有目标均可访问。",
     "denyByDefaultDescription": "仅允许的域名可访问。拒绝的域名即使匹配允许的模式，也会被阻止。",
-    "blockEveryDomainHint": "要阻止所有域名，请将默认网络访问设为“默认拒绝”。"
+    "blockEveryDomainHint": "要阻止所有域名，请将默认网络访问设为“默认拒绝”。",
+    "sandboxNetworkAccess": "沙箱网络访问"
   },
   "scmSetupSection": {
     "codeProviders": "代码托管服务",
@@ -3129,7 +3206,8 @@
       "gitlabOrganization": "GitLab 组织",
       "selfHostedGitlab": "自托管 GitLab",
       "bitbucketOrganization": "Bitbucket 组织",
-      "azureDevopsOrganization": "Azure DevOps 组织"
+      "azureDevopsOrganization": "Azure DevOps 组织",
+      "personalGitlabSelfHostedAccount": "个人 GitLab 自托管版账户"
     },
     "descriptions": {
       "githubPersonal": "访问个人 GitHub 账号中的仓库、问题和拉取请求。",
@@ -3143,7 +3221,8 @@
       "bitbucketOrg": "允许 Factory 访问 Bitbucket 工作区中的仓库。",
       "bitbucketDataCenter": "允许 Factory 访问 Bitbucket Data Center 中的仓库。",
       "azureDevopsOrg": "允许 Factory 访问 Azure DevOps 组织中的仓库。",
-      "azureDevopsServer": "允许 Factory 访问 Azure DevOps Server 中的仓库。"
+      "azureDevopsServer": "允许 Factory 访问 Azure DevOps Server 中的仓库。",
+      "gitlabSelfHostedPersonal": "使用你自己的账户访问组织自托管 GitLab 上的项目和合并请求。"
     },
     "kindLabels": {
       "organization": "组织",
@@ -3152,7 +3231,8 @@
       "dataCenter": "数据中心",
       "servicesOrganization": "Services 组织",
       "servicesPersonal": "Services 个人",
-      "server": "服务器"
+      "server": "服务器",
+      "selfHostedPersonal": "自托管版个人账户"
     },
     "providerNames": {
       "githubSelfHosted": "GitHub 自托管",
@@ -3255,7 +3335,15 @@
     "noTokenConfigured": "尚未配置 {{provider}} 令牌。",
     "title": "Git 凭据 · {{name}}",
     "description": "为下方每个使用中的 SCM 提供商存储一个归 {{name}} 所有的访问令牌，以便它使用自己的身份克隆和推送。GitHub 云端及自托管凭据会自动处理。令牌保存时会接受验证，且不会再次显示。",
-    "couldNotLoadGitCredentials": "无法加载 Git 凭据。请刷新后重试。"
+    "couldNotLoadGitCredentials": "无法加载 Git 凭据。请刷新后重试。",
+    "commitsAs": "以 {{author}} 身份提交",
+    "commitAuthorNameLabel": "提交作者姓名（可选）",
+    "commitAuthorEmailLabel": "提交作者邮箱（可选）",
+    "commitAuthorHint": "留空则使用令牌所属账户的提交邮箱。若提交者邮箱未在令牌所属账户中验证，自托管 GitLab 可能拒绝推送。",
+    "keepTokenHint": "令牌留空则保留当前令牌。",
+    "saveChanges": "保存",
+    "commitAuthorUpdated": "已更新 {{provider}} 提交作者。",
+    "commitAuthorNotSaved": "{{provider}} 令牌已保存，但提交作者未保存。此服务器尚不支持固定提交作者，因此提交将使用令牌所属账户的邮箱。"
   },
   "serviceAccountRow": {
     "editServiceAccount": "编辑服务账号",
@@ -3408,7 +3496,8 @@
     "subagentAutonomyTooltip": "Task 工具创建的子代理的自主级别。“继承”使用父 Session 的自主级别。不适用于任务工作代理。",
     "missionOrchestratorReasoningLevel": "任务编排器推理级别",
     "missionWorkerReasoningLevel": "任务工作代理推理级别",
-    "missionValidationWorkerReasoningLevel": "任务验证工作代理推理级别"
+    "missionValidationWorkerReasoningLevel": "任务验证工作代理推理级别",
+    "usersChoose": "由用户选择"
   },
   "sessionDefaultsSettings": {
     "remove": "移除",
@@ -3624,8 +3713,8 @@
         "blocklist": "阻止列表"
       },
       "skillPolicy": {
-        "title": "技能策略",
-        "disabledSkills": "已禁用技能"
+        "title": "Skill 策略",
+        "disabledSkills": "已禁用 Skill"
       },
       "mcpPolicy": {
         "title": "MCP 服务器策略",
@@ -3663,8 +3752,8 @@
         "socksProxyPort": "SOCKS 代理端口"
       },
       "hooksPolicy": {
-        "title": "钩子策略",
-        "managedHooksOnly": "仅允许托管钩子"
+        "title": "Hook 策略",
+        "managedHooksOnly": "仅允许托管 Hook"
       },
       "plugins": {
         "title": "插件",
@@ -3716,6 +3805,10 @@
       },
       "rawConfig": {
         "title": "原始配置"
+      },
+      "advancedAnalytics": {
+        "title": "高级分析",
+        "advancedAnalyticsEnabled": "高级分析"
       }
     },
     "general": {
@@ -3770,7 +3863,8 @@
         "cloudSessionSync": "云端 Session 同步",
         "cloudPreferenceSync": "云端配置同步",
         "cloudItemPull": "拉取配置",
-        "configItems": "发布配置"
+        "configItems": "发布配置",
+        "preferenceSync": "偏好设置同步"
       },
       "autoModel": {
         "title": "自动模型",
@@ -4188,7 +4282,9 @@
     "organizationsAppearOnceLoaded": "层级数据加载后，组织将显示在这里。",
     "organizationCreated": "组织已创建",
     "title": "组织",
-    "titleWithCount": "组织 · {{total}}"
+    "titleWithCount": "组织 · {{total}}",
+    "setGlobalLimits": "设置全局上限",
+    "allOrganizationsWithCount": "所有组织 · {{total}}"
   },
   "suggestConnectorModal": {
     "cancel": "取消",
@@ -4503,7 +4599,8 @@
       "unavailable": "云同步暂时不可用。本地更改已保存，将自动重试。",
       "unauthenticated": "使用用户账号登录以同步偏好设置。",
       "invalidSettings": "本地偏好设置无效。请修复用户设置文件以恢复同步。",
-      "tooLarge": "偏好设置请求超过 1 KB。请移除部分覆盖设置以恢复同步。"
+      "tooLarge": "偏好设置请求超过 1 KB。请移除部分覆盖设置以恢复同步。",
+      "notAvailable": "此设备目前无法使用偏好设置同步。"
     }
   },
   "verifiedDomains": {
@@ -4735,5 +4832,52 @@
     "cancel": "取消",
     "save": "保存映射",
     "invalidGroupJson": "请输入包含受支持字符且不超过绑定大小限制的有效非空 JSON 字符串。"
+  },
+  "gitlabPersonalConnectAlert": {
+    "message": "连接你的个人 GitLab 账户，以查看组织的 GitLab 仓库。",
+    "connect": "连接个人 GitLab",
+    "messageSelfHosted": "组织要求使用个人 GitLab 自托管版连接。请连接你的账户，以查看和使用组织的 GitLab 自托管版仓库。",
+    "messageBoth": "连接你的个人 GitLab 账户，以查看组织的 GitLab 和 GitLab 自托管版仓库。",
+    "connectSelfHosted": "连接 GitLab 自托管版"
+  },
+  "gitlabSelfHostedAccessSection": {
+    "lastSyncFailed": "上次同步失败：{{reason}}。",
+    "syncingRepositories": "正在同步仓库…",
+    "loadFailed": "无法加载 GitLab 自托管版访问策略",
+    "personalConnectionUnavailable": "成员无法连接自己的 GitLab 账户",
+    "personalConnectionUnavailableDescription": "此组织已关闭个人 GitLab 自托管版连接，或其 OAuth 应用配置不完整。在修复连接设置或关闭此要求之前，必须使用个人连接的成员无法访问 GitLab 仓库。",
+    "requirePersonalConnection": "要求个人 GitLab 连接",
+    "requirePersonalConnectionDescription": "启用后，成员只能通过自己连接的 GitLab 账户查看、克隆和推送 GitLab 自托管版仓库。服务账户仍使用各自配置的凭据。",
+    "retry": "重试",
+    "saved": "已更新 GitLab 自托管版访问策略"
+  },
+  "scmRepositorySync": {
+    "title": "同步仓库",
+    "description": "从所有已连接的源代码管理集成获取最新仓库列表。同步完成后，新仓库会显示在仓库选择器中。",
+    "action": "立即同步",
+    "syncing": "正在同步…",
+    "synced": "仓库已同步",
+    "failed": "仓库同步失败。{{details}}",
+    "failureDetail": "{{integration}}：{{reason}}。",
+    "noIntegrations": "尚未连接可供同步的源代码管理集成。",
+    "reasons": {
+      "reconnectRequired": "连接不完整，请重新连接",
+      "tokenRejected": "平台拒绝了已存储的令牌，请重新连接",
+      "accessDenied": "已连接的账户无法访问其组或项目",
+      "rateLimited": "已达到平台的请求速率上限，请几分钟后重试",
+      "instanceUnreachable": "Factory 无法连接此实例，请检查实例是否在线且可以访问",
+      "timeLimitReached": "同步超时，请重试",
+      "reconnected": "同步期间集成已重新连接，请重试",
+      "unknown": "发生意外错误，请重试或重新连接"
+    }
+  },
+  "sandboxEnvironmentRepositoriesEmpty": {
+    "title": "暂无可用仓库",
+    "loadFailed": "无法加载仓库",
+    "retry": "重试",
+    "syncHintManager": "组织的源代码管理集成同步后，仓库会显示在这里。立即同步以获取最新列表。",
+    "syncHintMember": "组织的源代码管理集成同步后，仓库会显示在这里。若缺少所需仓库，请联系组织管理员同步。",
+    "connectHintManager": "在设置中为组织连接源代码管理集成，然后同步仓库。",
+    "connectHintMember": "在设置中连接个人源代码管理集成，或请组织管理员为组织连接一个集成。"
   }
 }

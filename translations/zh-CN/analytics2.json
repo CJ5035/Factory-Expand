@@ -361,7 +361,9 @@
     "hoursAgo_other": "小时前",
     "daysAgo_one": "天前",
     "daysAgo_other": "天前",
-    "loading": "正在加载代理就绪度"
+    "loading": "正在加载代理就绪度",
+    "deleteReports_one": "删除报告",
+    "deleteReports_other": "删除 {{count}} 份报告"
   },
   "readinessRepositoryDetail": {
     "passRateByCategory": "各类别通过率",
@@ -399,18 +401,18 @@
   },
   "toolsTab": {
     "tools": "工具",
-    "observedUsageOfSkillsMcpServers": "观测到的技能、MCP 服务器和斜杠命令使用情况。",
+    "observedUsageOfSkillsMcpServers": "观测到的 Skill 、MCP 服务器和斜杠命令使用情况。",
     "toolsSubpages": "工具子页面",
-    "footnote": "{{scope}}所选日期范围内记录的使用情况，每日更新。这不是完整清单；缺少遥测数据不代表没有使用。用户包括服务账号。类别可能重叠：通过斜杠命令调用的技能可同时出现在技能和斜杠命令中。请勿将各类别总数相加。"
+    "footnote": "{{scope}}所选日期范围内记录的使用情况，每日更新。这不是完整清单；缺少遥测数据不代表没有使用。用户包括服务账号。类别可能重叠：通过斜杠命令调用的 Skill 可同时出现在 Skill 和斜杠命令中。请勿将各类别总数相加。"
   },
   "toolUsageLabels": {
     "skills": {
-      "label": "技能",
-      "singular": "技能",
-      "plural": "技能",
-      "usage": "技能",
-      "usageTitle": "技能使用情况",
-      "scope": "技能按名称分组。"
+      "label": "Skills",
+      "singular": "Skill",
+      "plural": "Skills",
+      "usage": "Skill",
+      "usageTitle": "Skill 使用情况",
+      "scope": "Skill 按名称分组。"
     },
     "mcp": {
       "label": "MCP",
@@ -426,7 +428,7 @@
       "plural": "斜杠命令",
       "usage": "斜杠命令",
       "usageTitle": "斜杠命令使用情况",
-      "scope": "斜杠命令按命令名称分组，包括内置、自定义命令和技能入口。次数记录调用，不代表成功完成。"
+      "scope": "斜杠命令按命令名称分组，包括内置、自定义命令和 Skill 入口。次数记录调用，不代表成功完成。"
     }
   },
   "toolUsageOverview": {

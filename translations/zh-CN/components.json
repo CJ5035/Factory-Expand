@@ -400,7 +400,10 @@
       "renameOrganization": "重命名组织",
       "renameNamed": "重命名 {{name}}",
       "manageBindings": "管理 IdP 组映射",
-      "manageBindingsFor": "管理 {{name}} 的 IdP 组映射"
+      "manageBindingsFor": "管理 {{name}} 的 IdP 组映射",
+      "globalLimitPerUser": "全局上限 / 用户",
+      "unlimited": "无限制",
+      "creditsInMillions": "{{credits}}M"
     },
     "templateSelectionCard": {
       "searchForATemplate": "搜索模板",
@@ -413,7 +416,7 @@
     "trustFolderDialog": {
       "dontTrust": "不信任",
       "trustThisFolder": "信任此文件夹？",
-      "droidMayReadWriteOrExecute": "Droid 可能读取、写入或执行此文件夹中的文件，并加载此处定义的项目配置，包括钩子和 MCP 服务器。仅在信任此文件夹时继续。",
+      "droidMayReadWriteOrExecute": "Droid 可能读取、写入或执行此文件夹中的文件，并加载此处定义的项目配置，包括 Hook 和 MCP 服务器。仅在信任此文件夹时继续。",
       "saving": "正在保存…",
       "trustFolder": "信任文件夹"
     },
@@ -1372,6 +1375,26 @@
       "status": "状态",
       "actions": "操作",
       "editRow": "编辑 {{label}}"
+    },
+    "subOrganizationBulkGlobalLimit": {
+      "title": "设置全局上限",
+      "description": "立即为每个选中组织设置统一的每用户全局上限。这是一次性更新，之后创建的组织不会继承此设置。",
+      "limitLabel": "每用户全局上限（百万积分）",
+      "limitPlaceholder": "例如 50",
+      "limitInvalid": "请输入以百万积分为单位的数值，最多保留 6 位小数。",
+      "selectAll": "全选",
+      "selectedCount": "已选择：{{selected}}/{{total}}",
+      "currentLimit": "当前上限 / 用户",
+      "unlimited": "无限制",
+      "credits": "{{credits}}M 积分",
+      "cancel": "取消",
+      "removeLimit": "移除上限",
+      "apply": "应用到选中组织",
+      "saving": "正在保存…",
+      "resultSummary": "已保存：{{saved}}/{{total}}",
+      "saved": "已保存",
+      "failed": "未保存",
+      "done": "完成"
     }
   },
   "chat": {
@@ -1802,21 +1825,21 @@
       "cancel": "取消",
       "use": "使用",
       "useExample": "使用示例：{{example}}",
-      "title": "创建技能",
-      "description": "将重复执行的工作流转为可复用技能，供 Droid 稍后调用。",
+      "title": "创建 Skill",
+      "description": "将重复执行的工作流转为可复用 Skill，供 Droid 稍后调用。",
       "howItWorks": {
-        "fork": "将此对话分叉为技能创建 Session。当前 Session 会完整保留。",
+        "fork": "将此对话派生为 Skill 创建 Session。当前 Session 会完整保留。",
         "review": "Droid 会查看相关上下文，例如本地 Session 历史和仓库，以涵盖不同情况和边界场景。",
-        "save": "你将审查提议的技能（名称、描述、指令），并选择保存位置：项目或个人。"
+        "save": "你将审查提议的 Skill（名称、描述、指令），并选择保存位置：项目或个人。"
       },
       "fieldLabel": "要记录的工作流",
-      "fieldHelper": "用 1–2 句话说明用途和使用时机（用户可能说的关键词）。步骤和检查清单应写在技能内部。",
+      "fieldHelper": "用 1–2 句话说明用途和使用时机（用户可能说的关键词）。步骤和检查清单应写在 Skill 内部。",
       "fieldPlaceholder": "例如：根据日志和堆栈跟踪调查生产错误。用户报告事件或异常时使用。",
       "examplesLabel": "示例",
       "emptyError": "描述要记录的工作流（一句话即可）。",
-      "start": "开始创建技能",
+      "start": "开始创建 Skill",
       "starting": "正在启动…",
-      "genericError": "启动技能创建失败。请重试。",
+      "genericError": "启动 Skill 创建失败。请重试。",
       "examples": {
         "commitMessages": "根据 Git 差异生成描述性的提交信息。用户请求帮助撰写提交信息或审查暂存更改时使用。",
         "failingCi": "排查并修复失败的 CI 工作流。CI 失败且用户希望恢复测试和构建通过时使用。",
@@ -1825,21 +1848,21 @@
       }
     },
     "skillBrowserModal": {
-      "searchSkills": "搜索技能",
-      "noSkillsMatchYourFilters": "没有符合筛选条件的技能",
+      "searchSkills": "搜索 Skill",
+      "noSkillsMatchYourFilters": "没有符合筛选条件的 Skill",
       "done": "完成",
       "selectNameWithBadge": "选择 {{name}}，{{badge}}",
-      "selectASkillToViewDetails": "选择技能以查看详情"
+      "selectASkillToViewDetails": "选择 Skill 以查看详情"
     },
     "skillsBrowser": {
       "modelOnly": "仅模型可调用",
-      "noDetailedDocumentationAvailableForThis": "此技能暂无详细文档。",
+      "noDetailedDocumentationAvailableForThis": "此 Skill 暂无详细文档。",
       "references": "参考资料",
       "assets": "资源",
-      "selectASkillToViewDetails": "选择技能以查看详情",
-      "skills": "技能",
-      "browseAndExploreAvailableSkills": "浏览和探索可用技能",
-      "searchSkills": "搜索技能…",
+      "selectASkillToViewDetails": "选择 Skill 以查看详情",
+      "skills": "Skills",
+      "browseAndExploreAvailableSkills": "浏览和探索可用 Skill",
+      "searchSkills": "搜索 Skill …",
       "locationProject": "项目",
       "locationPersonal": "个人",
       "locationBuiltin": "内置",
@@ -1859,8 +1882,8 @@
       "enabled": "已启用",
       "manageName": "管理 {{name}}",
       "selectedCount": "已选择 {{total}} 项",
-      "skillsNotSupportedForCloudTemplates": "使用云模板的沙箱暂不支持技能。",
-      "noSkillsFound": "未找到技能。请将技能添加到 ~/.factory/skills 或 .factory/skills 文件夹。",
+      "skillsNotSupportedForCloudTemplates": "使用云模板的沙箱暂不支持 Skill。",
+      "noSkillsFound": "未找到 Skill。请将 Skill 添加到 ~/.factory/skills 或 .factory/skills 文件夹。",
       "filter": {
         "all": "全部（{{total}}）",
         "org": "组织（{{total}}）",
@@ -1870,8 +1893,8 @@
         "builtin": "内置（{{total}}）",
         "disabled": "已禁用（{{total}}）"
       },
-      "noSkillsMatchFilters": "没有符合筛选条件的技能",
-      "noSkillsAvailable": "没有可用技能"
+      "noSkillsMatchFilters": "没有符合筛选条件的 Skill",
+      "noSkillsAvailable": "没有可用 Skill"
     },
     "connectorAuthCard": {
       "connected": "已连接",
@@ -1903,8 +1926,8 @@
         "searches_other": "{{count}} 次搜索",
         "loading": "正在加载",
         "loaded": "已加载",
-        "skills_one": "{{count}} 个技能",
-        "skills_other": "{{count}} 个技能",
+        "skills_one": "{{count}} 个 Skill",
+        "skills_other": "{{count}} 个 Skill",
         "performing": "正在执行",
         "performed": "已执行",
         "actions_one": "{{count}} 项操作",
@@ -1916,15 +1939,18 @@
         "apps_one": "{{count}} 个应用",
         "apps_other": "{{count}} 个应用",
         "extra": {
-          "loadingSkills_one": "正在加载 {{count}} 个技能",
-          "loadingSkills_other": "正在加载 {{count}} 个技能",
-          "loadedSkills_one": "已加载 {{count}} 个技能",
-          "loadedSkills_other": "已加载 {{count}} 个技能",
+          "loadingSkills_one": "正在加载 {{count}} 个 Skill",
+          "loadingSkills_other": "正在加载 {{count}} 个 Skill",
+          "loadedSkills_one": "已加载 {{count}} 个 Skill",
+          "loadedSkills_other": "已加载 {{count}} 个 Skill",
           "thinking": "正在思考",
           "thought_one": "思考了 {{count}} 次",
           "thought_other": "思考了 {{count}} 次"
         }
-      }
+      },
+      "planning": "正在规划",
+      "planningActions_one": "正在规划 {{count}} 项操作",
+      "planningActions_other": "正在规划 {{count}} 项操作"
     },
     "systemActionMessageCardV3": {
       "copyContents": "复制内容",
@@ -2214,8 +2240,8 @@
       }
     },
     "chatComposerSkillsButton": {
-      "skills": "技能",
-      "skillsWithCount": "技能（{{skillCount}}）"
+      "skills": "Skills",
+      "skillsWithCount": "Skill（{{skillCount}}）"
     },
     "chatComposerVoiceDictationFeed": {
       "voiceDictationAudioFeed": "语音听写音频流"
@@ -2268,7 +2294,7 @@
         "automation": "自动化"
       },
       "tab": {
-        "skills": "技能",
+        "skills": "Skills",
         "mcpServers": "MCP 服务器",
         "customAgents": "自定义代理"
       },
@@ -2322,7 +2348,8 @@
         "waitingForSession": "等待 Session…"
       },
       "loadingPreviousMessages": "正在加载更早的消息…",
-      "loadPreviousMessages": "加载更早的消息"
+      "loadPreviousMessages": "加载更早的消息",
+      "authenticating": "正在验证身份…"
     },
     "droidSessionLoadingShell": {
       "loadingSession": "正在加载 Session"
@@ -2340,7 +2367,12 @@
       "zoomIn": "放大",
       "downloadImage": "下载图像",
       "openInSidebar": "在侧边栏中打开",
-      "fullSizePreview": "原始大小预览"
+      "fullSizePreview": "原始大小预览",
+      "previousImage": "上一张图片",
+      "nextImage": "下一张图片",
+      "chooseImage": "选择图片",
+      "imagePosition_one": "第 {{index}}/{{count}} 张图片",
+      "imagePosition_other": "第 {{index}}/{{count}} 张图片"
     },
     "loopIndicator": {
       "resumeLoop": "恢复循环",
@@ -2394,9 +2426,6 @@
       "clearAllPendingMessages": "清除所有待发送消息"
     },
     "sessionArtifactsPanel": {
-      "sections": "产物分区",
-      "emptyMentioned": "尚未提及拉取请求、问题、页面或链接",
-      "emptyOutputs": "尚未创建拉取请求、问题或页面",
       "activity": "{{action}} {{time}}",
       "action": {
         "closed": "已关闭",
@@ -2406,6 +2435,15 @@
         "merged": "已合并",
         "updated": "更新时间",
         "viewed": "已查看"
+      },
+      "empty": "暂无拉取请求、事项、页面或链接",
+      "group": {
+        "github": "GitHub",
+        "gitlab": "GitLab",
+        "jira": "Jira",
+        "linear": "Linear",
+        "notion": "Notion",
+        "web": "网页"
       }
     },
     "sessionDetailsModal": {
@@ -2436,15 +2474,16 @@
       "environment": "环境",
       "noRepository": "无仓库",
       "changes": "变更",
-      "mentioned": "已提及",
-      "outputs": "输出",
       "viewAll": "查看全部",
-      "viewAllSection": "查看全部{{section}}",
       "collapseSection": "折叠 {{section}}",
       "expandSection": "展开 {{section}}",
       "issue": "问题",
       "issueWithReference": "问题 {{reference}}",
-      "notionPage": "Notion 页面"
+      "notionPage": "Notion 页面",
+      "artifacts": "产物",
+      "artifactGroup_one": "{{group}}，{{formattedCount}} 个产物",
+      "artifactGroup_other": "{{group}}，{{formattedCount}} 个产物",
+      "viewAllArtifacts": "查看所有产物"
     },
     "sessionInfoTooltip": {
       "sessionDetails": "Session 详情",
@@ -3355,7 +3394,7 @@
         "session": "Session 命令",
         "builtIn": "内置命令",
         "custom": "自定义命令",
-        "skill": "技能"
+        "skill": "Skills"
       },
       "source": {
         "automation": "自动化",
@@ -3745,6 +3784,12 @@
       "description": "加入后即可跟进此 Session 并发送消息。你将成为该 Session 的成员。",
       "join": "加入 Session",
       "goHome": "返回首页"
+    },
+    "unsavedChangesBar": {
+      "label": "未保存的更改",
+      "message": "你有未保存的更改。",
+      "discard": "丢弃",
+      "reviewAndSave": "检查并保存"
     }
   },
   "app": {
@@ -3838,7 +3883,8 @@
         "cloud": "云端",
         "local": "本地"
       },
-      "cleaningUpWorktree": "正在清理工作树…"
+      "cleaningUpWorktree": "正在清理工作树…",
+      "noSectionSessionsYet": "暂无 Session"
     },
     "sessionListV2FilterMenu": {
       "configureRecentSessions": "配置最近的 Session",
@@ -3863,7 +3909,8 @@
         "exec": "执行",
         "automations": "自动化",
         "softwareFactory": "Software Factory",
-        "evaluations": "评估"
+        "evaluations": "评估",
+        "codeReview": "代码审查"
       },
       "lastActivityOptions": {
         "all": "全部",
@@ -3902,7 +3949,8 @@
         "merged": "已合并",
         "closed": "已关闭",
         "none": "无 PR"
-      }
+      },
+      "newSection": "新建分区…"
     },
     "sessionListV2Group": {
       "showLess": "收起",
@@ -3911,7 +3959,12 @@
       "newSessionIn": "在 {{label}} 中新建 Session"
     },
     "sessionListV2Section": {
-      "sectionActionsFor": "{{title}} 的操作"
+      "sectionActionsFor": "{{title}} 的操作",
+      "newSessionIn": "在 {{title}} 中新建 Session",
+      "rename": "重命名",
+      "delete": "删除",
+      "hide": "隐藏",
+      "newSection": "新建分区…"
     },
     "sessionListV2SessionRow": {
       "folder": "文件夹",
@@ -3931,7 +3984,10 @@
         "rename": "重命名",
         "missionSettings": "设置",
         "archive": "归档",
-        "copySessionId": "复制 Session ID"
+        "copySessionId": "复制 Session ID",
+        "moveToSection": "移至分区",
+        "newSection": "新建分区…",
+        "removeFromSection": "移出分区"
       },
       "hideWorkers": "隐藏工作代理",
       "showWorkers": "显示工作代理",
@@ -4040,7 +4096,9 @@
       "paymentOverdue": "付款已逾期",
       "goToBilling": "前往账单",
       "usageWillBeHaltedOn": "你将于 {{date}} 起无法继续使用。",
-      "inboxNeedsAction": "收件箱，{{badge}} 项需要你处理"
+      "inboxNeedsAction": "收件箱，{{badge}} 项需要你处理",
+      "more": "较多",
+      "moreEmpty": "隐藏的按钮和分区会显示在这里。"
     },
     "sessionsTable": {
       "sessionControls": "Session 控件",
@@ -4117,7 +4175,8 @@
       "workstreamListener": "监听代理"
     },
     "missionWorkstreamFilterChip": {
-      "clear": "清除工作流筛选条件 {{name}}"
+      "clear": "清除工作流筛选条件 {{name}}",
+      "clearSource": "清除来源筛选 {{name}}"
     },
     "missionCenterTabBar": {
       "showPanel": "显示面板"
@@ -4278,7 +4337,6 @@
         "open": "待合并的拉取请求",
         "unavailable": "拉取请求状态不可用"
       },
-      "openPullRequestTitle": "打开拉取请求：{{title}}",
       "copyBranch": "复制 {{branch}}",
       "mergeMethods": {
         "squash": "压缩并合并",
@@ -4435,6 +4493,84 @@
     },
     "sessionTileDropPreview": {
       "label": "拖放以平铺"
+    },
+    "missionAgentSignal": {
+      "title": "信号",
+      "subtitle": "此代理的启动来源",
+      "filterBySource": "按 {{source}} 筛选",
+      "openIn": "在 {{source}} 中打开",
+      "openItemIn": "在 {{source}} 中打开 {{item}}"
+    },
+    "missionAgentOrigin": {
+      "startedBy": "由 <workstream/> 启动",
+      "startedByInResponseTo": "由 <workstream/> 响应 <signal/> 而启动"
+    },
+    "pullRequestLabelTag": {
+      "remove": "移除标签 {{name}}"
+    },
+    "pullRequestValidationQaStatus": {
+      "label": "自动化 QA",
+      "labelWithCommit": "自动化 QA · {{commit}}",
+      "notInstalled": {
+        "title": "尚未设置自动化 QA",
+        "description": "设置 QA 自动化，以测试此仓库的拉取请求并在这里发布报告。",
+        "status": "未设置"
+      },
+      "notOnPullRequests": {
+        "title": "QA 不在拉取请求上运行",
+        "description": "此仓库有 QA 工作流，但拉取请求不会触发它。",
+        "status": "未对 PR 启用"
+      },
+      "notRun": {
+        "title": "QA 尚未在此提交上运行",
+        "description": "QA 在最新提交上运行后，报告会显示在这里。",
+        "status": "未运行",
+        "reportBelowDescription": "下方报告来自较早的提交。"
+      },
+      "running": {
+        "title": "QA 正在运行",
+        "description": "运行完成后，报告会显示在这里。",
+        "status": "运行中",
+        "reportBelowDescription": "下方报告来自较早的一次运行。"
+      },
+      "skipped": {
+        "title": "QA 已跳过此提交",
+        "description": "此提交的最近一次 QA 运行已跳过。",
+        "status": "已跳过"
+      },
+      "failed": {
+        "title": "QA 未完成",
+        "description": "此提交的最近一次 QA 运行失败、超时或已取消。",
+        "status": "失败"
+      },
+      "finished": {
+        "title": "QA 已完成",
+        "description": "此提交的最近一次 QA 运行已完成，但拉取请求上没有其报告。",
+        "status": "已完成"
+      },
+      "viewRun": "查看 QA 运行",
+      "setUpQa": "设置 QA"
+    },
+    "sessionListV2SectionDialog": {
+      "newDescription": "通过 Session 菜单将其移入，或将 Session 拖放到此分区。"
+    },
+    "sessionSidebarEdit": {
+      "pin": "置顶 {{name}}",
+      "unpin": "取消置顶 {{name}}",
+      "newSection": "新建分区",
+      "sectionName": "分区名称",
+      "createSection": "创建分区",
+      "saveName": "保存名称",
+      "delete": "删除 {{name}}",
+      "confirmDelete": "确认删除？",
+      "cancelDelete": "取消删除",
+      "cancelRename": "取消重命名",
+      "cancel": "取消",
+      "pickedUp": "已选中并开始移动 {{name}}。",
+      "over": "{{name}} 位于 {{target}} 上方。",
+      "dropped": "已放下 {{name}}。",
+      "cancelled": "已停止移动 {{name}}。",
+      "moved": "已将 {{name}} 移至第 {{position}}/{{count}} 个位置。"
     }
   },
   "automations": {
@@ -4789,7 +4925,9 @@
       "fromAccountBalance": "使用账户余额（可用 {{amount}}）",
       "balanceAppliedFirstNotice": "将优先使用账户余额，其余金额立即从默认信用卡扣除。账户余额可能需要几秒钟才会更新。",
       "balanceCoversPurchaseNotice": "账户余额足以支付此次购买，因此不会从信用卡扣款。账户余额可能需要几秒钟才会更新。",
-      "cardChargedNotice": "将立即从默认信用卡扣款。账户余额可能需要几秒钟才会更新。"
+      "cardChargedNotice": "将立即从默认信用卡扣款。账户余额可能需要几秒钟才会更新。",
+      "addPaymentMethodNotice": "请在设置中添加付款方式，以购买额外用量。",
+      "addPaymentMethodForRemainderNotice": "将优先使用账户余额。请在设置中添加付款方式，以支付余额不足的部分。"
     },
     "extraUsageCard": {
       "buyMore": "购买更多",
@@ -5435,7 +5573,7 @@
       "active": "已启用",
       "paused": "已暂停",
       "settings": "工作流设置",
-      "skills": "技能",
+      "skills": "Skills",
       "flowLabel": "{{name}}的数据流",
       "pollSchedule": "按{{schedule}}轮询",
       "untitledSession": "未命名代理",
@@ -5905,7 +6043,8 @@
       "totalCriteriaPass": "总检查项通过率",
       "exportAsMarkdown": "导出为 Markdown",
       "exportAsPdf": "导出为 PDF",
-      "levelNumber": "级别 {{level}}"
+      "levelNumber": "级别 {{level}}",
+      "deleteReport": "删除报告"
     },
     "readinessRepositoryTable": {
       "noRepositoriesFound": "未找到仓库",
@@ -5913,7 +6052,8 @@
       "name": "名称",
       "progress": "进度",
       "lastUpdate": "上次更新",
-      "tags": "标签"
+      "tags": "标签",
+      "selectAllOnPage": "选择本页所有仓库"
     },
     "readinessSessionRow": {
       "viewReport": "查看报告",
@@ -6060,7 +6200,8 @@
     },
     "readinessRepositoryRow": {
       "refresh": "刷新",
-      "analyze": "分析"
+      "analyze": "分析",
+      "selectRepository": "选择 {{name}}"
     },
     "readinessSearchInput": {
       "search": "搜索"
@@ -6087,29 +6228,36 @@
         "sessions": "Session",
         "users": "活跃用户"
       }
+    },
+    "deleteReadinessReportsModal": {
+      "title_one": "删除报告",
+      "title_other": "删除报告",
+      "description_one": "此仓库的所有报告将对组织内所有人删除，且不再计入组织评分。拥有仓库访问权限的人可以重新分析并创建新报告。此操作无法撤销。",
+      "description_other": "这些仓库的所有报告将对组织内所有人删除，且不再计入组织评分。拥有相应仓库访问权限的人可以重新分析并创建新报告。此操作无法撤销。",
+      "moreRepositories_one": "以及另外 {{count}} 个",
+      "moreRepositories_other": "以及另外 {{count}} 个",
+      "cancel": "取消",
+      "deleting": "正在删除…",
+      "confirm_one": "删除报告",
+      "confirm_other": "删除 {{count}} 份报告"
     }
   },
   "evaluations": {
     "evaluationDatasetDraft": {
       "datasetName": "数据集名称",
       "newDataset": "新建数据集",
-      "noDescriptionYet": "暂无描述。在聊天中描述数据集，Droid 会起草其中的任务。",
-      "droidIsBuilding": "Droid 正在聊天中构建此数据集。发布后会加入你的资源库。",
       "tabs": {
         "tasks": {
           "label": "任务",
-          "empty": "暂无任务",
-          "description": "数据集发布后，在聊天中确认的任务会显示在此处。"
+          "empty": "暂无任务"
         },
         "runs": {
           "label": "运行记录",
-          "empty": "尚无运行记录",
-          "description": "数据集发布后即可运行。"
+          "empty": "尚无运行记录"
         },
         "presets": {
           "label": "预设",
-          "empty": "暂无预设",
-          "description": "数据集发布后，可将运行设置保存为预设。"
+          "empty": "暂无预设"
         }
       }
     },
@@ -6149,14 +6297,12 @@
     },
     "evaluationDatasetImport": {
       "importDataset": "导入数据集",
-      "previewAHarborDatasetVersionThen": "预览 Harbor 数据集版本，再导入以运行。",
       "cancel": "取消",
       "preview": "预览",
       "importFromHarbor": "从 Harbor 导入",
       "harborUrlOrReference": "Harbor URL 或引用",
       "httpsHubHarborframeworkComDatasetsOrg": "https://hub.harborframework.com/datasets/org/name",
-      "invalidReference": "请使用 Harbor Hub URL、org/name@revision，或 Harbor 注册表中的 name@version。",
-      "referenceHint": "未指定修订版本时，Hub 数据集使用最新版本。你可以在导入前查看。"
+      "invalidReference": "请使用 Harbor Hub URL、org/name@revision，或 Harbor 注册表中的 name@version。"
     },
     "evaluationDatasetLibrary": {
       "withdrawn": "已撤回",
@@ -6191,8 +6337,8 @@
     },
     "evaluationDatasetSetup": {
       "datasetSetup": "数据集设置",
-      "skillsToBenchmark": "要进行基准测试的技能",
-      "skillsToBenchmarkCount": "要进行基准测试的技能（{{total}}）"
+      "skillsToBenchmark": "要进行基准测试的 Skill",
+      "skillsToBenchmarkCount": "要进行基准测试的 Skill（{{total}}）"
     },
     "evaluationListToolbar": {
       "filter": "筛选",
@@ -6211,7 +6357,6 @@
       "moreActions": "更多操作"
     },
     "evaluationPresetEditor": {
-      "chooseAModelWhenYouRun": "运行时选择模型。",
       "cancel": "取消",
       "savePreset": "保存预设",
       "name": "名称",
@@ -6219,10 +6364,8 @@
       "chooseADataset": "选择数据集",
       "version": "版本",
       "chooseAVersion": "选择版本",
-      "versionFixedWhenSaved": "保存后版本固定。",
       "notes": "备注",
       "notesPlaceholder": "任务概述、已知特性及注意事项",
-      "notesHelper": "支持 Markdown。向运行此预设的人员和 Droid 展示。",
       "notesTooLong": "备注不得超过 {{max}} 个字符。",
       "saving": "正在保存…",
       "revisionWithdrawn": "此修订版本已被发布者撤回。",
@@ -6244,8 +6387,6 @@
       "run": "运行",
       "edit": "编辑",
       "openDataset": "打开数据集",
-      "emptyDescriptionScoped": "为此数据集版本保存可重复使用的配置。",
-      "emptyDescription": "为公开或组织数据集创建可重复使用的配置。",
       "noMatchingPresets": "没有匹配的预设",
       "noPresetsYet": "暂无预设",
       "allTasks": "全部",
@@ -6269,7 +6410,7 @@
       "submittedBy": "提交者",
       "started": "开始时间",
       "finished": "结束时间",
-      "skills": "技能",
+      "skills": "Skills",
       "results": "结果",
       "score": "得分",
       "finishedTrials": "已完成试验",
@@ -6326,14 +6467,12 @@
     "evaluationRunConfigFields": {
       "tasks": "任务",
       "loadingTasks": "正在加载任务…",
-      "oneTrialPerTask": "每个任务进行 1 次试验。",
-      "skills": "技能",
+      "skills": "Skills",
       "execution": "执行",
       "concurrency": "并发数",
-      "concurrencyHelper": "1–{{max}} 个并行任务。",
       "droidCliFlags": "Droid CLI 标志",
       "flagValue": "--flag value",
-      "droidCliFlagsHelper": "以空格分隔。追加在启动时选择的模型和推理强度之后。"
+      "concurrencyError": "请输入 1 到 {{max}} 之间的数字。"
     },
     "evaluationRunPanel": {
       "saveAsPreset": "另存为预设",
@@ -6352,7 +6491,6 @@
       "savePreset": "保存预设",
       "saving": "正在保存…",
       "presetName": "预设名称",
-      "saveAsPresetHelper": "保存此数据集版本及其任务、技能和执行设置。运行时选择模型。",
       "notes": "备注"
     },
     "evaluationRunsTable": {
@@ -6385,15 +6523,15 @@
       "loading": "正在加载…"
     },
     "evaluationSkillChips": {
-      "selectSkills": "选择技能",
-      "addSkills": "添加技能"
+      "selectSkills": "选择 Skill",
+      "addSkills": "添加 Skill"
     },
     "evaluationSkillsPicker": {
-      "refreshSkills": "刷新技能",
-      "selectSkills": "选择技能",
+      "refreshSkills": "刷新 Skill",
+      "selectSkills": "选择 Skill",
       "selectedCount": "已选 {{selected}} / {{max}} 项",
-      "noSkillsAvailable": "没有可用的技能。",
-      "noOrganizationSkills": "没有可用的组织技能。请在企业控制 → 插件中配置市场。"
+      "noSkillsAvailable": "没有可用的 Skill。",
+      "noOrganizationSkills": "没有可用的组织 Skill。请在企业控制 → 插件中配置市场。"
     },
     "evaluationTaskDetails": {
       "viewSource": "查看源文件",
@@ -6456,15 +6594,13 @@
         "title": "组织",
         "label": "组织数据集",
         "searchLabel": "搜索组织数据集",
-        "emptyTitle": "暂无组织数据集",
-        "emptyDescription": "你发布的或他人共享给组织的数据集会显示在此处。"
+        "emptyTitle": "暂无组织数据集"
       },
       "public": {
         "title": "公开",
         "label": "公开数据集",
         "searchLabel": "搜索公开数据集",
-        "emptyTitle": "暂无公开数据集",
-        "emptyDescription": "导入 Harbor 数据集版本，为组织固定使用该版本。只有导入的版本才能运行。"
+        "emptyTitle": "暂无公开数据集"
       }
     },
     "datasetVisibility": {
@@ -6484,25 +6620,13 @@
     "softwareFactoryChangeDetailV2": {
       "pullRequestChecks": "拉取请求检查",
       "pullRequestMeta": "{{number}} 创建于 {{openedAt}} · {{status}}",
-      "esc": "Esc",
-      "reviewsComplete": "审查已完成",
-      "youreAllCaughtUp": "已全部处理完毕",
-      "theresNothingWaitingForYourReview": "目前没有等待你审查的事项。"
+      "esc": "Esc"
     },
     "softwareFactoryReviewControls": {
-      "previousReviewItem": "上一个审查事项",
-      "nextReviewItem": "下一个审查事项",
-      "itemPosition": "第 {{current}} / {{total}} 项",
-      "itemCounter": "事项 {{current}} / {{total}}",
       "approve": "批准",
       "approveAndCreatePr": "批准并创建 PR",
       "request": "请求",
       "requestChanges": "要求修改",
-      "retry": "重试",
-      "retryChange": "重试变更",
-      "fix": "修复",
-      "fixInSession": "在 Session 中修复",
-      "openChange": "打开变更",
       "decline": "拒绝",
       "cancel": "取消",
       "sendFeedback": "发送反馈",
@@ -7374,6 +7498,10 @@
       "title": "计算机磁盘空间不足",
       "description": "此工作流因其计算机磁盘空间不足而暂停。请先释放计算机空间，再恢复工作流。",
       "resume": "恢复"
+    },
+    "softwareFactoryAttachmentMedia": {
+      "loading": "正在加载附件…",
+      "unavailable": "无法显示此附件"
     }
   }
 }

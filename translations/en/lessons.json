@@ -50,7 +50,14 @@
     "confirmDescription_one": "Every assigned lesson will show as complete for the selected learner. Steps they already finished keep their original dates.",
     "confirmDescription_other": "Every assigned lesson will show as complete for the selected learners. Steps they already finished keep their original dates.",
     "loadingProgress": "Loading organization progress...",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "persona": "Persona",
+    "allPersonas": "All personas",
+    "filterByPersona": "Filter progress by persona",
+    "allCohorts": "All cohorts",
+    "clearFilters": "Clear filters",
+    "everyone": "Everyone",
+    "filterByCohort": "Filter progress by cohort"
   },
   "onboardingTracker": {
     "retry": "Retry",
@@ -151,9 +158,10 @@
   "lessonCoachmarks": {
     "pressEnterToSend": "Press Enter to send and continue",
     "useSamplePrompt": "Use the example prompt",
-    "returnToCurrentTipHint": "Press → to return to your current tip",
+    "backToCurrentTip": "Back to current tip",
     "nextTipHint": "Press → for the next tip",
     "stepPosition": "Step {{number}} of {{total}}",
+    "stepTipPosition": "Step {{number}} · Tip {{current}} of {{total}}",
     "finishTour": "Finish tour",
     "next": "Next",
     "tourPosition": "Tour · {{current}} of {{total}}"
@@ -1950,5 +1958,8 @@
         "nextStep": "Finish setup in your Draft. Review its test run before you activate it."
       }
     }
+  },
+  "useLessonsNavState": {
+    "groupTitle": "{{cohortGroup}} · {{group}}"
   }
 }

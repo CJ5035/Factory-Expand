@@ -82,7 +82,7 @@
     },
     "customizations": {
       "title": "Droid 201：自定义 Droid",
-      "description": "掌握 Factory 自定义功能：AGENTS.md、技能、自定义 Droid、钩子、插件、市场和进阶技巧。"
+      "description": "掌握 Factory 自定义功能：AGENTS.md、 Skill 、自定义 Droid、 Hook 、插件、市场和进阶技巧。"
     },
     "automations": {
       "title": "Droid 202：自动化",
@@ -156,20 +156,20 @@
         "description": "学习编写有效的 AGENTS.md 文件，并使用 /init 命令初始化项目上下文。"
       },
       "skills": {
-        "title": "技能",
-        "description": "学习创建和管理技能，以可重复使用的能力扩展 Droid 的工作范围。"
+        "title": "Skills",
+        "description": "学习创建和管理 Skill，以可重复使用的能力扩展 Droid 的工作范围。"
       },
       "customDroids": {
         "title": "自定义 Droid",
         "description": "创建使用受限工具集的专用子代理，处理代码审查、安全扫描和文档等特定任务。"
       },
       "hooks": {
-        "title": "钩子",
-        "description": "通过钩子配置确定性的生命周期操作，包括格式化、日志、通知和自定义权限。"
+        "title": "Hooks",
+        "description": "通过 Hook 配置确定性的生命周期操作，包括格式化、日志、通知和自定义权限。"
       },
       "plugins": {
         "title": "插件",
-        "description": "安装并管理插件，即可分发的技能、命令、代理、钩子和 MCP 服务器组合包。"
+        "description": "安装并管理插件，即可分发的 Skill 、命令、代理、 Hook 和 MCP 服务器组合包。"
       },
       "marketplace": {
         "title": "市场",
@@ -205,7 +205,7 @@
       },
       "execution": {
         "title": "Mission 任务执行与工作代理",
-        "description": "了解 Mission 任务如何通过工作代理 Session、功能分配和感知技能的编排执行工作。"
+        "description": "了解 Mission 任务如何通过工作代理 Session、功能分配和结合 Skill 的编排执行工作。"
       },
       "validation": {
         "title": "验证与质量",

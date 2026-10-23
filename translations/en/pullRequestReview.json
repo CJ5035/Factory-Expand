@@ -86,7 +86,6 @@
   "pullRequestLayeredDiff": {
     "diagram": "Diagram",
     "viewedSection": "Viewed {{title}}",
-    "viewedProgress": "{{viewed}}/{{total}} viewed",
     "noChangedLinesInTheCurrent": "No changed lines in the current diff match this layer.",
     "overview": "Overview",
     "howItAllFitsTogether": "How it all fits together",
@@ -122,12 +121,7 @@
       }
     },
     "stateChangesGithubOnly": "This Git provider does not support pull request state changes.",
-    "connectGithubToChangeState": "Connect your Git provider account in settings to change the pull request state.",
-    "copyLink": "Copy link",
-    "copyProviderLink": "Copy {{provider}} link",
-    "failedToCopyToClipboard": "Failed to copy to clipboard. Check browser permissions.",
-    "linkCopied": "Link copied to clipboard",
-    "providerLinkCopied": "{{provider}} link copied to clipboard"
+    "connectGithubToChangeState": "Connect your Git provider account in settings to change the pull request state."
   },
   "pullRequestOmittedFiles": {
     "previewUnavailable": "Preview unavailable",
@@ -177,6 +171,7 @@
     "expandSection": "Expand {{section}}",
     "labels": "Labels",
     "noLabels": "No labels",
+    "labelNotRemoved": "The label was not removed.",
     "reviewerState": {
       "approved": "Approved",
       "changesRequested": "Changes requested",
@@ -353,8 +348,10 @@
     "openOnProvider": "Open on {{provider}}",
     "openInCodeReview": "Open in Code Review",
     "copyLink": "Copy link",
+    "copyDesktopLink": "Copy desktop link",
     "copyProviderLink": "Copy {{provider}} link",
     "copiedLink": "link",
+    "copiedDesktopLink": "desktop link",
     "copiedProviderLink": "{{provider}} link",
     "openInSidebar": "Open in sidebar",
     "on": "On",
@@ -418,6 +415,7 @@
   },
   "review": {
     "codeReview": "Code Review",
+    "loadingPullRequests": "Loading pull requests",
     "searchOrPasteALink": "Search or paste a pull request link",
     "search": "Search",
     "pullRequestChat": "Pull request chat",

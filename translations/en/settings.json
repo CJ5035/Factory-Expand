@@ -45,6 +45,7 @@
   "groupsSettings": {
     "title": "User Groups",
     "titleWithCount": "User Groups · {{count}}",
+    "allGroupsWithCount": "All groups · {{count}}",
     "description": "Groups synced from your identity provider. Configure a group to apply settings to every member of the group in the organizations you choose.",
     "loading": "Loading groups...",
     "emptyTitle": "No groups synced from your identity provider",
@@ -158,6 +159,9 @@
     "publicationStatusWithAttention_other": "{{published}} published, {{count}} need attention."
   },
   "advancedAnalyticsSection": {
+    "issueProvider": "Issue provider",
+    "automaticIssueProvider": "Automatic",
+    "issueProviderDescription": "Sets the Agent Effectiveness default and live and async signals context when no single issue tracker is connected. A sole connected tracker always takes precedence. Dashboard filters do not change this setting.",
     "statusesAreUnavailableSavedSelectionsAre": "Statuses are unavailable. Saved selections are preserved.",
     "cycleTime": "Cycle time",
     "chooseWhichStatusesStartAndStop": "Choose which statuses start and stop the clock for each team.",
@@ -357,6 +361,7 @@
     "thisOrganizationOnly": "This organization only",
     "allSubOrganizations": "All sub-organizations",
     "titleWithCount": "Audit Log · {{total}}",
+    "allEventsWithCount": "All events · {{total}}",
     "loading": "Loading...",
     "loadMore": "Load more"
   },
@@ -425,7 +430,9 @@
   },
   "builtInToolAutonomySection": {
     "chooseWhichBuiltInNetworkTools": "Choose which built-in network tools Droid can use and the session autonomy required to run them without approval.",
+    "chooseWhichBuiltInWebTools": "Choose which built-in web tools Droid can use and the session autonomy required to run them without approval.",
     "builtInNetworkTools": "Built-in Network Tools",
+    "builtInWebTools": "Built-in Web Tools",
     "disableWebSearch": "Disable Web Search",
     "removeTheWebSearchToolSo": "Remove the Web Search tool so Droid cannot search the public web. Web Fetch is governed separately.",
     "toolDescription": {
@@ -1029,7 +1036,8 @@
     "pages": {
       "general": {
         "label": "General",
-        "guardDescription": "General settings are available to all organization members."
+        "guardDescription": "General settings are available to all organization members.",
+        "description": "Your account, your organization, and everyday preferences."
       },
       "inbox": {
         "label": "Inbox",
@@ -1037,19 +1045,23 @@
       },
       "appearance": {
         "label": "Appearance",
-        "guardDescription": "Appearance settings are not enabled for this account."
+        "guardDescription": "Appearance settings are not enabled for this account.",
+        "description": "Choose how the app looks, including theme, text, and code diffs."
       },
       "apiKeys": {
         "label": "API Keys",
-        "guardDescription": "API key settings are not available in airgap mode."
+        "guardDescription": "API key settings are not available in airgap mode.",
+        "description": "Create API keys and service accounts so scripts and tools can use Factory."
       },
       "secrets": {
         "label": "Secrets",
-        "guardDescription": "Computer secrets are not available in airgap mode."
+        "guardDescription": "Computer secrets are not available in airgap mode.",
+        "description": "Tokens and passwords that managed Droid Computers can use while they work."
       },
       "connectors": {
         "label": "Connectors",
-        "guardDescription": "Connectors are not enabled for this organization."
+        "guardDescription": "Connectors are not enabled for this organization.",
+        "description": "Connect the apps you use so Droid can work with them."
       },
       "sessionManagement": {
         "label": "Session Management",
@@ -1077,15 +1089,18 @@
       },
       "customModels": {
         "label": "Custom Models",
-        "guardDescription": "Custom models are only available in the desktop app when enabled for your organization."
+        "guardDescription": "Custom models are only available in the desktop app when enabled for your organization.",
+        "description": "Add models that use your own API keys."
       },
       "worktrees": {
         "label": "Worktrees",
-        "guardDescription": "Worktree settings are only available in the desktop app."
+        "guardDescription": "Worktree settings are only available in the desktop app.",
+        "description": "Choose where worktrees go, how they are set up, and when they are cleaned up."
       },
       "usage": {
         "label": "Usage",
-        "guardDescription": "Usage data is not available in airgap mode."
+        "guardDescription": "Usage data is not available in airgap mode.",
+        "description": "See how much has been used, your limits, and usage alerts."
       },
       "commitmentUsage": {
         "label": "Commitment Usage",
@@ -1093,15 +1108,18 @@
       },
       "support": {
         "label": "Support",
-        "guardDescription": "Support is available to all organization members."
+        "guardDescription": "Support is available to all organization members.",
+        "description": "Read the docs, contact support, and share diagnostics."
       },
       "organization": {
         "label": "Organization",
-        "guardDescription": "Organization settings are only available to managers and owners."
+        "guardDescription": "Organization settings are only available to managers and owners.",
+        "description": "Control which apps and code providers your organization can use."
       },
       "members": {
         "label": "Members",
-        "guardDescription": "Members settings are only available to managers and owners."
+        "guardDescription": "Members settings are only available to managers and owners.",
+        "description": "Invite people to your organization and manage their roles."
       },
       "enterpriseControls": {
         "label": "Enterprise Controls",
@@ -1109,7 +1127,8 @@
       },
       "remoteDelegations": {
         "label": "Delegations",
-        "guardDescription": "Delegations settings are only available to managers and owners."
+        "guardDescription": "Delegations settings are only available to managers and owners.",
+        "description": "Let people hand tasks to Droid from apps like Slack and Linear."
       },
       "openCompute": {
         "label": "OpenCompute",
@@ -1125,7 +1144,8 @@
       },
       "subOrganizations": {
         "label": "Organizations",
-        "guardDescription": "Organizations are only available to enterprise root organization owners."
+        "guardDescription": "Organizations are only available to enterprise root organization owners.",
+        "description": "Create and manage the organizations in your enterprise."
       },
       "groups": {
         "label": "User Groups",
@@ -1133,21 +1153,64 @@
       },
       "billing": {
         "label": "Billing",
-        "guardDescription": "Billing settings are only available to root organization owners."
+        "guardDescription": "Billing settings are only available to root organization owners.",
+        "description": "Manage your plan, payment method, and invoices."
       },
       "credits": {
         "label": "Credits",
-        "guardDescription": "Credit usage is only available to managers of organizations that bill multiple seats."
+        "guardDescription": "Credit usage is only available to managers of organizations that bill multiple seats.",
+        "description": "See how credits are used across your organization."
       },
       "securityIdentity": {
         "label": "Security & Identity",
-        "guardDescription": "Security & Identity settings are only available to enterprise organization owners."
+        "guardDescription": "Security & Identity settings are only available to enterprise organization owners.",
+        "description": "Set up single sign-on and verify your company domains."
       }
     },
     "settingsSections": {
       "account": "Account",
       "orgSettings": "Org Settings",
       "adminConsole": "Admin Console"
+    },
+    "mergedPages": {
+      "defaults": {
+        "label": "Defaults",
+        "sessionsTab": "Sessions",
+        "missionsTab": "Missions",
+        "description": "Default settings for new sessions and missions."
+      },
+      "environments": {
+        "label": "Environments",
+        "computersTab": "Computers",
+        "templatesTab": "Templates",
+        "description": "The computers and templates that Droid sessions run on."
+      }
+    },
+    "enterpriseControlsGroups": {
+      "models": {
+        "label": "Models",
+        "description": "Which models members can use and how Auto picks."
+      },
+      "agentDefaults": {
+        "label": "Agent Defaults",
+        "description": "How sessions start and behave."
+      },
+      "toolsPermissions": {
+        "label": "Tools & Permissions",
+        "description": "What Droid can run, and when it has to ask."
+      },
+      "securityNetwork": {
+        "label": "Security & Network",
+        "description": "Secrets, member access, and network boundaries."
+      },
+      "dataCompute": {
+        "label": "Data & Compute",
+        "description": "Where data is kept and where Droid runs."
+      },
+      "advanced": {
+        "label": "Advanced",
+        "description": "Rarely used controls, including the raw JSON configuration."
+      }
     },
     "enterpriseControlsSections": {
       "sessionDefaults": "Session Defaults",
@@ -1160,6 +1223,7 @@
       "missionPolicy": "Mission Access",
       "security": "Security",
       "networkPolicy": "Network Policy",
+      "ipRestrictions": "IP Restrictions",
       "sandboxPolicy": "Sandbox",
       "hooksPolicy": "Hooks Policy",
       "plugins": "Plugins",
@@ -1271,7 +1335,8 @@
       "computerSecretsChange": "Computer secrets",
       "organizationMonthlyUsageSettingsChange": "Organization usage settings",
       "delegationActivity": "Delegation",
-      "remoteDelegationConfigChange": "Delegation config"
+      "remoteDelegationConfigChange": "Delegation config",
+      "agentReadinessReportChange": "Agent Readiness reports"
     },
     "auditScope": {
       "organization": "Organization",
@@ -1286,6 +1351,7 @@
       "webSettingsOrg": "Organization settings",
       "webSettingsBilling": "Billing settings",
       "webSettingsAdminConsole": "Admin Console",
+      "webAnalyticsReadiness": "Agent Readiness",
       "publicApiV0": "Public API",
       "openComputeEnrollment": "OpenCompute enrollment",
       "workosEvent": "Directory sync",
@@ -1435,6 +1501,7 @@
     "failedToRemoveCustomModel": "Failed to remove custom model",
     "description": "Use models with your own API keys (BYOK). Keys stay on this computer and are never sent to Factory. <anchor>Learn more</anchor>.",
     "customModelsWithCount": "Custom Models · {{total}}",
+    "allModelsWithCount": "All models · {{total}}",
     "failedToLoadCustomModels": "Failed to load custom models from the local Droid service."
   },
   "daemonVersionCard": {
@@ -1593,6 +1660,7 @@
     "description": "View members across your root organization and sub-organizations.",
     "title": "Directory",
     "titleWithCount": "Directory · {{total}}",
+    "allMembersWithCount": "All members · {{total}}",
     "noMatchingDirectoryMembers": "No matching directory members.",
     "noDirectoryMembersYet": "No directory members yet."
   },
@@ -1855,6 +1923,8 @@
     "searchEnterpriseControls": "Search Enterprise Controls",
     "viewHistory": "View History",
     "discardChanges": "Discard Changes",
+    "savesSeparately": "Saves separately",
+    "savesSeparatelyHint": "This section has its own save button. The save bar does not include it.",
     "networkPolicy": "Network Policy",
     "retry": "Retry",
     "defaultDescription": "Configure organization-wide settings and security policies for your team.",
@@ -2237,7 +2307,8 @@
     "disconnectedSuccessfully": "Disconnected successfully",
     "failedToReconnect": "Failed to reconnect {{integration}}. Please try again.",
     "setup": "Setup",
-    "setUsername": "Set Username"
+    "setUsername": "Set Username",
+    "memberAccess": "Member access"
   },
   "integrationStart": {
     "failedToStartIntegration": "Failed to start integration. Please try again.",
@@ -2341,7 +2412,8 @@
     "inviteMember": "Invite member",
     "addingAndRemovingUsersIsHandled": "Adding and removing users is handled by the enterprise admin.",
     "memberRemovedSuccessfully": "Member removed successfully",
-    "membersWithCount": "Members · {{total}}"
+    "membersWithCount": "Members · {{total}}",
+    "allMembersWithCount": "All members · {{total}}"
   },
   "metricPanel": {
     "cpu": "CPU",
@@ -2864,6 +2936,7 @@
   },
   "rawConfigSection": {
     "viewAndEditSettingsAsJson": "View and edit settings as JSON. Changes here will update the controls above.",
+    "viewAndEditAllSettingsAsJson": "View and edit all settings as JSON. Changes here also update the matching controls.",
     "rawConfiguration": "Raw Configuration",
     "validationErrors": "Validation Errors"
   },
@@ -2991,8 +3064,17 @@
     "pickFromYourRepositoriesDirectlyInstead": "Pick from your repositories directly instead of pasting URLs.",
     "connectGithub": "Connect GitHub",
     "connectGitlab": "Connect GitLab",
+    "connectGitlabForOrganization": "Connect GitLab for your organization",
+    "gitlabRequiresOrganizationConnection": "GitLab repositories appear here after an organization manager connects GitLab in organization settings.",
     "connectBitbucket": "Connect Bitbucket",
     "connectAzureDevops": "Connect Azure DevOps"
+  },
+  "gitlabPersonalConnectAlert": {
+    "message": "Connect your personal GitLab account to see your organization's GitLab repositories.",
+    "connect": "Connect personal GitLab",
+    "messageSelfHosted": "Your organization requires a personal GitLab Self-Hosted connection. Connect your account to see and use its GitLab Self-Hosted repositories.",
+    "messageBoth": "Connect your personal GitLab accounts to see your organization's GitLab and GitLab Self-Hosted repositories.",
+    "connectSelfHosted": "Connect GitLab Self-Hosted"
   },
   "reposListVariant": {
     "searchRepositories": "Search repositories",
@@ -3039,6 +3121,7 @@
     "pendingChanges": "Pending changes",
     "saveFailed": "Save failed",
     "networkPolicyWarning": "Network Policy Warning",
+    "ipRestrictionsWarning": "IP Restrictions Warning",
     "sessionRetentionWarning": "Saving these changes will permanently delete existing sessions that have not been updated in the last {{days}} days during the next retention cleanup. This cannot be undone.",
     "fixErrors_one": "Fix Error",
     "fixErrors_other": "Fix Errors",
@@ -3072,6 +3155,7 @@
     "eGAwsConfig": "e.g. ~/.aws/config",
     "allowedReadPaths": "Allowed Read Paths",
     "network": "Network",
+    "sandboxNetworkAccess": "Sandbox Network Access",
     "controlWhichNetworkDestinationsAreReachable": "Control which network destinations are reachable from sandboxed sessions. Factory service domains and WorkOS authentication domains are always allowed unless denied.",
     "defaultNetworkAccess": "Default network access",
     "defaultNetworkAccess2": "Default Network Access",
@@ -3129,7 +3213,8 @@
       "gitlabOrganization": "GitLab organization",
       "selfHostedGitlab": "self-hosted GitLab",
       "bitbucketOrganization": "Bitbucket organization",
-      "azureDevopsOrganization": "Azure DevOps organization"
+      "azureDevopsOrganization": "Azure DevOps organization",
+      "personalGitlabSelfHostedAccount": "personal GitLab Self-Hosted account"
     },
     "descriptions": {
       "githubPersonal": "Access repositories, issues, and pull requests from your personal GitHub account.",
@@ -3143,7 +3228,8 @@
       "bitbucketOrg": "Give Factory access to repositories in your Bitbucket workspace.",
       "bitbucketDataCenter": "Give Factory access to repositories in Bitbucket Data Center.",
       "azureDevopsOrg": "Give Factory access to repositories in your Azure DevOps organization.",
-      "azureDevopsServer": "Give Factory access to repositories in Azure DevOps Server."
+      "azureDevopsServer": "Give Factory access to repositories in Azure DevOps Server.",
+      "gitlabSelfHostedPersonal": "Access projects and merge requests on your organization's self-hosted GitLab with your own account."
     },
     "kindLabels": {
       "organization": "Organization",
@@ -3152,7 +3238,8 @@
       "dataCenter": "Data Center",
       "servicesOrganization": "Services organization",
       "servicesPersonal": "Services personal",
-      "server": "Server"
+      "server": "Server",
+      "selfHostedPersonal": "Self-Hosted personal"
     },
     "providerNames": {
       "githubSelfHosted": "GitHub Self-Hosted",
@@ -3242,6 +3329,14 @@
     "azureDevOpsServerTokenLabel": "Collection-scoped Azure DevOps Server PAT",
     "tokenRemoved": "{{provider}} token removed",
     "authenticatesAs": "Authenticates as @{{username}}",
+    "commitsAs": "Commits as {{author}}",
+    "commitAuthorNameLabel": "Commit author name (optional)",
+    "commitAuthorEmailLabel": "Commit author email (optional)",
+    "commitAuthorHint": "Leave blank to use the token owner's commit email. Self-hosted GitLab can reject pushes whose committer email is not verified for the token's account.",
+    "keepTokenHint": "Leave the token blank to keep the current one.",
+    "saveChanges": "Save",
+    "commitAuthorUpdated": "{{provider}} commit author updated.",
+    "commitAuthorNotSaved": "{{provider}} token saved, but the commit author was not. This server does not support pinned commit authors yet, so commits use the token owner's email.",
     "updatedAt": "Updated {{date}}",
     "removeWarning": "Removing stops new sessions and computers from using this token. It doesn't revoke the token or remove it from existing computers — for guaranteed revocation, revoke it in {{provider}}.",
     "removing": "Removing...",
@@ -3366,6 +3461,7 @@
     "inheritParentSession": "Inherit (parent session)",
     "onForEveryone": "On for everyone",
     "offForEveryone": "Off for everyone",
+    "usersChoose": "Users choose",
     "subagentTier": {
       "light": "Light task",
       "medium": "Medium task",
@@ -3682,6 +3778,10 @@
         "title": "Evaluations",
         "evaluationsEnabled": "Evaluations"
       },
+      "advancedAnalytics": {
+        "title": "Advanced Analytics",
+        "advancedAnalyticsEnabled": "Advanced Analytics"
+      },
       "droidComputers": {
         "title": "Droid Computers",
         "localComputers": "Local Computers",
@@ -3769,6 +3869,7 @@
         "title": "Cloud Sync",
         "cloudSessionSync": "Cloud session sync",
         "cloudPreferenceSync": "Cloud config sync",
+        "preferenceSync": "Preference sync",
         "cloudItemPull": "Pull configurations",
         "configItems": "Publish configurations"
       },
@@ -4178,6 +4279,7 @@
   },
   "subOrganizationsSettings": {
     "viewUsage": "View usage",
+    "setGlobalLimits": "Set global limits",
     "new": "New",
     "searchOrganizations": "Search organizations...",
     "loadingOrganizations": "Loading organizations...",
@@ -4188,7 +4290,8 @@
     "organizationsAppearOnceLoaded": "Organizations appear here once hierarchy data loads.",
     "organizationCreated": "Organization created",
     "title": "Organizations",
-    "titleWithCount": "Organizations · {{total}}"
+    "titleWithCount": "Organizations · {{total}}",
+    "allOrganizationsWithCount": "All organizations · {{total}}"
   },
   "suggestConnectorModal": {
     "cancel": "Cancel",
@@ -4500,6 +4603,7 @@
       "syncing": "Syncing preferences…",
       "synced": "Preferences are synced to cloud.",
       "conflict": "Local and cloud preferences have changed. Choose which preferences to keep.",
+      "notAvailable": "Preference sync isn't available on this device right now.",
       "unavailable": "Cloud sync is temporarily unavailable. Local changes are saved and will retry automatically.",
       "unauthenticated": "Sign in with your user account to sync preferences.",
       "invalidSettings": "Local preferences are invalid. Fix your user settings file to resume sync.",
@@ -4735,5 +4839,45 @@
     "cancel": "Cancel",
     "save": "Save mapping",
     "invalidGroupJson": "Enter a valid, nonempty JSON string with supported characters and within the binding size limit."
+  },
+  "gitlabSelfHostedAccessSection": {
+    "lastSyncFailed": "Last sync failed: {{reason}}.",
+    "syncingRepositories": "Syncing repositories…",
+    "loadFailed": "Couldn't load the GitLab Self-Hosted access policy",
+    "personalConnectionUnavailable": "Members can't connect their own GitLab accounts",
+    "personalConnectionUnavailableDescription": "Personal GitLab Self-Hosted connections are turned off for this organization, or its OAuth application is incomplete. Members who must use their own connection can't reach GitLab repositories until you fix the connection settings or turn off this requirement.",
+    "requirePersonalConnection": "Require personal GitLab connection",
+    "requirePersonalConnectionDescription": "When on, members can see, clone, and push GitLab Self-Hosted repositories only through their own connected GitLab account. Service accounts keep using their own configured credentials.",
+    "retry": "Retry",
+    "saved": "GitLab Self-Hosted access policy updated"
+  },
+  "scmRepositorySync": {
+    "title": "Sync repositories",
+    "description": "Fetch the latest repository list from every connected source control integration. New repositories appear in repository pickers when the sync finishes.",
+    "action": "Sync now",
+    "syncing": "Syncing…",
+    "synced": "Repositories synced",
+    "failed": "Repository sync failed. {{details}}",
+    "failureDetail": "{{integration}}: {{reason}}.",
+    "noIntegrations": "No source control integrations are connected to sync.",
+    "reasons": {
+      "reconnectRequired": "the connection is incomplete, so reconnect it",
+      "tokenRejected": "the provider rejected the stored token, so reconnect it",
+      "accessDenied": "the connected account can't access its groups or projects",
+      "rateLimited": "the provider rate limit was reached, so try again in a few minutes",
+      "instanceUnreachable": "Factory couldn't reach the instance, so check that it is online and reachable",
+      "timeLimitReached": "the sync ran out of time, so try again",
+      "reconnected": "the integration was reconnected during the sync, so try again",
+      "unknown": "an unexpected error occurred, so try again or reconnect"
+    }
+  },
+  "sandboxEnvironmentRepositoriesEmpty": {
+    "title": "No repositories available yet",
+    "loadFailed": "Couldn't load repositories",
+    "retry": "Retry",
+    "syncHintManager": "Repositories appear here after your organization's source control integration syncs them. Sync now to fetch the latest list.",
+    "syncHintMember": "Repositories appear here after your organization's source control integration syncs them. If yours are missing, ask an organization admin to sync repositories.",
+    "connectHintManager": "Connect a source control integration for your organization in Settings, then sync repositories.",
+    "connectHintMember": "Connect a personal source control integration in Settings, or ask an organization admin to connect one for your organization."
   }
 }

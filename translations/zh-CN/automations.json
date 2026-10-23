@@ -150,7 +150,7 @@
     "editCurrentlyUnsupported": "（暂不支持编辑）",
     "disableToKeepTheQaWorkflow": "禁用后保留磁盘上的 QA 工作流，但跳过所有运行。",
     "failureLearning": "从失败中学习",
-    "howQaShouldPropagateNewFailure": "QA 应如何将新学到的失败模式回写到技能文件中。",
+    "howQaShouldPropagateNewFailure": "QA 应如何将新学到的失败模式回写到 Skill 文件中。",
     "suggestInReportDefault": "在报告中建议（默认）",
     "autoCommitUpdates": "自动提交更新",
     "openAPr": "创建 PR",
@@ -163,7 +163,7 @@
     "editCurrentlyUnsupported": "（暂不支持编辑）",
     "disableToKeepTheQaWorkflow": "禁用后保留磁盘上的 QA 工作流，但跳过所有运行。",
     "failureLearning": "从失败中学习",
-    "howQaShouldPropagateNewFailure": "QA 应如何将新学到的失败模式回写到技能文件中。",
+    "howQaShouldPropagateNewFailure": "QA 应如何将新学到的失败模式回写到 Skill 文件中。",
     "suggestInReportDefault": "在报告中建议（默认）",
     "autoCommitUpdates": "自动提交更新",
     "openAPr": "创建 PR",
@@ -763,7 +763,7 @@
     "agentInstructions": "代理指令",
     "describeWhatDroidShouldDoEach": "描述此自动化每次运行时 Droid 应执行的工作…",
     "permanentlyRemovesThisAutomationPastRun": "永久删除此自动化。历史运行记录会保留。",
-    "whenSetScheduledRunsExecuteFrom": "设置后，定时运行会在此目录中执行，以使用该项目的技能、仓库和相对路径。留空则在 Droid 默认自动化文件夹中运行。"
+    "whenSetScheduledRunsExecuteFrom": "设置后，定时运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在 Droid 默认自动化文件夹中运行。"
   },
   "automationShareDropdown": {
     "access": "访问权限",
@@ -1026,13 +1026,13 @@
     "descriptionHelperText": "帮助团队成员了解此自动化的用途。",
     "visualizationHelperText": "Droid 根据此描述为每次运行构建仪表盘。",
     "memoryEvolutionHelperText": "设置跨运行保留的内容，让自动化持续改进。",
-    "workingDirectoryTooltip": "设置后，定时运行会在此目录中执行，以使用该项目的技能、仓库和相对路径。留空则在 Droid 默认自动化文件夹（~/{{factoryDirName}}/automations/<automation-slug>）中运行，该文件夹存放提示词、仪表盘、记忆和报告。",
+    "workingDirectoryTooltip": "设置后，定时运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在 Droid 默认自动化文件夹（~/{{factoryDirName}}/automations/<automation-slug>）中运行，该文件夹存放提示词、仪表盘、记忆和报告。",
     "slackPromptPlaceholder": "注入由此频道触发的每个 Session 的指令…",
     "webhookPromptPlaceholder": "事件到达时 Droid 应执行什么工作？",
     "customCiPromptPlaceholder": "描述每次运行时希望此自动化完成的工作…",
     "schedulePromptPlaceholder": "描述此自动化每次运行时 Droid 应执行的工作…",
     "modeCreateHelperText": {
-      "qa": "点击创建将打开新的 Droid Session，其中预填 /install-qa 命令及上述选择。代理会与你交互分析所选仓库，生成 QA 技能和可供你提交的 .github/workflows/qa.yml 工作流。",
+      "qa": "点击创建将打开新的 Droid Session，其中预填 /install-qa 命令及上述选择。代理会与你交互分析所选仓库，生成 QA Skill 和可供你提交的 .github/workflows/qa.yml 工作流。",
       "wiki": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/droid-wiki-refresh.yml。工作流根据所选触发器及上述设置刷新 Factory Wiki，也可手动运行。每次刷新还会将 Wiki 提交到 factory/droid-wiki 分支，并维持一个包含最新版本的拉取请求。",
       "securityAudit": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/deep-security-review.yml。工作流按你的计划及上述设置对整个代码库运行 /security-review，也可手动运行。",
       "codeWalkthrough": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/droid-code-walkthrough.yml。工作流在拉取请求创建或标记为可审查时生成代码导览，并在每次新提交时更新。代码导览适用于在 Factory 桌面和网页应用中审查的拉取请求。仓库需要配置 FACTORY_API_KEY Actions 密钥。",
@@ -1122,7 +1122,7 @@
     "whatShouldThisAutomationDo": "此自动化需要做什么？",
     "describeWhatYouWantThisAutomation": "描述每次运行时希望此自动化完成的工作…",
     "ciTemplate": "CI 模板",
-    "clickingCreateWillOpenANew": "点击创建将打开新的 Droid Session，其中预填 /install-qa 命令及上述选择。代理会与你交互分析所选仓库，生成 QA 技能和可供你提交的 .github/workflows/qa.yml 工作流。",
+    "clickingCreateWillOpenANew": "点击创建将打开新的 Droid Session，其中预填 /install-qa 命令及上述选择。代理会与你交互分析所选仓库，生成 QA Skill 和可供你提交的 .github/workflows/qa.yml 工作流。",
     "thisRepositoryAlreadyHasAQa": "此仓库已有 QA 工作流，点击创建会打开现有自动化。",
     "clickingCreateWillOpenAPull": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/droid-wiki-refresh.yml。工作流根据所选触发器及上述设置刷新 Factory Wiki，也可手动运行。",
     "thisRepositoryAlreadyHasAnAutowiki": "此仓库已有 AutoWiki 工作流，点击创建会打开现有自动化。",
@@ -1191,7 +1191,7 @@
     "workflowYamlWillBeCommittedToRepo": "工作流 YAML 将提交到此仓库，并通过 GitHub Required Workflow 规则集在组织内的其他仓库强制执行。",
     "applyToRepositoryHint": "将工作流文件添加到一个或多个仓库。",
     "applyToOrganizationHint": "通过组织规则集中的 GitHub Required Workflows 应用。",
-    "workingDirectoryTooltip": "设置后，定时运行会在此目录中执行，以使用该项目的技能、仓库和相对路径。留空则在 Droid 默认自动化文件夹（~/{{factoryDirName}}/automations/<automation-slug>）中运行，该文件夹存放提示词、仪表盘、记忆和报告。",
+    "workingDirectoryTooltip": "设置后，定时运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在 Droid 默认自动化文件夹（~/{{factoryDirName}}/automations/<automation-slug>）中运行，该文件夹存放提示词、仪表盘、记忆和报告。",
     "orgAlreadyHasOrgWideInstall": "{{org}} 已为此模板完成组织级安装，点击创建会打开现有项。",
     "noComputersAvailable": "没有可用的计算机。请在设置 → Droid Computers 中添加。",
     "runAsDescription": "此自动化运行所用的身份及计费归属。",
@@ -1413,7 +1413,8 @@
     "startSession": "启动 Session",
     "starting": "正在启动…",
     "thisWillStartADroidSession": "这将启动 Droid Session，分析“{{automationName}}”并就其提示词、记忆及输出提出优化建议。",
-    "whatShouldTheReviewFocusOn": "审查应重点关注什么？（选填）"
+    "whatShouldTheReviewFocusOn": "审查应重点关注什么？（选填）",
+    "startsOnEnvironmentComputer": "此 Session 在从自动化环境启动的新计算机上运行，因此打开可能需要一两分钟。"
   },
   "modelSelector": {
     "selectAModel": "选择模型…",
@@ -2067,8 +2068,8 @@
     "maxRunsPerHourInvalid": "请输入 1 到 {{max}} 之间的整数。",
     "runAsSelfIdentityNote": "运行使用你的连接器访问权限，Slack 消息由你的账号发布。",
     "runAsServiceIdentityNote": "运行使用此服务账号的连接器访问权限，Slack 消息由 Factory 发布。",
-    "slackWorkingDirectoryTooltip": "设置后，由 Slack 触发的运行会在此目录中执行，以使用该项目的技能、仓库和相对路径。留空则在计算机的主目录中运行。",
-    "webhookWorkingDirectoryTooltip": "设置后，由此 Webhook 触发的运行会在此目录中执行，以使用该项目的技能、仓库和相对路径。留空则在计算机的主目录中运行。",
+    "slackWorkingDirectoryTooltip": "设置后，由 Slack 触发的运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在计算机的主目录中运行。",
+    "webhookWorkingDirectoryTooltip": "设置后，由此 Webhook 触发的运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在计算机的主目录中运行。",
     "modelUnavailableTooltip": "此模型在此自动化的运行位置不可用。",
     "recommendedModelLabel": "推荐",
     "recommendedModelHelperText": "推荐模式使用由 Factory 持续更新的快速、低成本模型。选择特定模型，即可自行指定模型及其推理级别。",
@@ -2129,7 +2130,7 @@
       },
       "qa": {
         "label": "QA 测试",
-        "description": "为此仓库设置自动化 QA 测试。打开 Droid Session 运行 /install-qa，分析代码库并生成 QA 技能和工作流。"
+        "description": "为此仓库设置自动化 QA 测试。打开 Droid Session 运行 /install-qa，分析代码库并生成 QA Skill 和工作流。"
       },
       "wiki": {
         "label": "AutoWiki",

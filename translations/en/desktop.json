@@ -32,7 +32,10 @@
     "cancel": "Cancel"
   },
   "auth": {
-    "logoutIncomplete": "Stored credentials were cleared, but the local daemon may still be running. Quit Factory and stop its local daemon to complete sign out."
+    "logoutIncomplete": "Stored credentials were cleared, but the local daemon may still be running. Quit Factory and stop its local daemon to complete sign out.",
+    "devApiKeyName": "Dev API key",
+    "devApiKeyRejected": "Factory couldn't sign in with FACTORY_DESKTOP_DEV_API_KEY. Set a valid user API key or unset the variable, then restart Factory.",
+    "devApiKeyReplacesSignIn": "This dev build is signed in with FACTORY_DESKTOP_DEV_API_KEY instead of your saved sign-in. Unset the variable and restart Factory to use your own account."
   },
   "quitGuard": {
     "title": "Quit Factory?",

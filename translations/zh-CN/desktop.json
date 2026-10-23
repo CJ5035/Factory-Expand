@@ -32,7 +32,10 @@
     "cancel": "取消"
   },
   "auth": {
-    "logoutIncomplete": "已清除保存的凭据，但本地守护进程可能仍在运行。请退出 Factory 并停止其本地守护进程，以完成退出登录。"
+    "logoutIncomplete": "已清除保存的凭据，但本地守护进程可能仍在运行。请退出 Factory 并停止其本地守护进程，以完成退出登录。",
+    "devApiKeyName": "开发 API 密钥",
+    "devApiKeyRejected": "Factory 无法使用 FACTORY_DESKTOP_DEV_API_KEY 登录。请设置有效的用户 API 密钥或取消此变量，然后重启 Factory。",
+    "devApiKeyReplacesSignIn": "此开发构建已使用 FACTORY_DESKTOP_DEV_API_KEY 登录，替代了保存的登录信息。请取消此变量并重启 Factory，以使用你自己的账户。"
   },
   "quitGuard": {
     "title": "退出 Factory？",

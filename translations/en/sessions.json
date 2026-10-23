@@ -106,7 +106,7 @@
     "weekly": "Weekly",
     "monthly": "Monthly",
     "standardPoolExhausted": "Standard pool exhausted",
-    "youveUsedYourStandardTokenAllowance": "You've used your standard token allowance. Choose how to continue.",
+    "youveUsedYourStandardCreditAllowance": "You've used your standard credit allowance. Choose how to continue.",
     "droidCore": "Droid Core",
     "aSmallerFasterModelOptimizedFor": "A smaller, faster model optimized for common tasks.",
     "or": "or",
@@ -731,7 +731,9 @@
     "failedToDelete": "Failed to delete worktree"
   },
   "terminal": {
+    "cannotOpenTerminal": "Can't open a terminal",
     "failedToCreateTerminal": "Failed to create terminal. Please try again.",
+    "sessionFolderMissing": "This session's folder no longer exists: {{path}}",
     "tabLabel": "Terminal {{number}}"
   },
   "activeSessionSettings": {

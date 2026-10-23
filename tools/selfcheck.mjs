@@ -18,8 +18,8 @@ const remarksTests = spawnSync(process.execPath, ['--test', join(REPO_ROOT, 'too
 assert.equal(remarksTests.status, 0, remarksTests.stdout + remarksTests.stderr);
 console.log('Project remarks runtime PASS: 8 isolated storage/IPC/client/component tests.');
 
-const home = 'C:/Users/11013/AppData/Local/Factory/app-0.202.0';
-const baselineCtx = context({home}), baselineSet = loadPatchSet('0.202.0');
+const home = 'C:/Users/11013/AppData/Local/Factory/app-0.204.0';
+const baselineCtx = context({home}), baselineSet = loadPatchSet('0.204.0');
 const baseline = checkedPristine(baselineCtx, baselineSet.patches) ?? baselineCtx.files;
 const asar = openAsar(baseline.asar);
 try {
@@ -29,14 +29,14 @@ try {
   for (const source of ['const a=missing;', 'const a=b,b=a;', 'const a={x:1,x:2};', 'const a=fn();', 'const a=`${foo}`;', 'const a={...b};', 'const a=1+2;', 'const a={get x(){}};', 'const a="unterminated', 'const a=/regex/;', 'const a=1,a=2;']) {
     assert.throws(() => parseDataDeclarations(source), undefined, source);
   }
-  const rendererSource = readEntry(asar, '.vite/renderer/main_window/assets/index-BqRIJ3kw.js').toString();
-  const en = extractEnglish(rendererSource,'0.202.0');
+  const rendererSource = readEntry(asar, '.vite/renderer/main_window/assets/index-D5VdbPv5.js').toString();
+  const en = extractEnglish(rendererSource,'0.204.0');
   for(const [ns,tree]of Object.entries(en)) assert.deepEqual(tree,readJson(join(REPO_ROOT,'translations/en',`${ns}.json`)),`Extracted English source ${ns}`);
-  const jaSource = readEntry(asar, '.vite/renderer/main_window/assets/resources-paLCx6et.js').toString();
-  const jaData = parseDataDeclarations(jaSource.slice(jaSource.indexOf('const t='), jaSource.indexOf(',Zw=e(')) + ';');
-  const jaRoot = jaSource.slice(jaSource.indexOf(',Zw=e('));
+  const jaSource = readEntry(asar, '.vite/renderer/main_window/assets/resources-BqW1PA7o.js').toString();
+  const jaData = parseDataDeclarations(jaSource.slice(jaSource.indexOf('const t='), jaSource.indexOf(',sT=e(')) + ';');
+  const jaRoot = jaSource.slice(jaSource.indexOf(',sT=e('));
   const ja = Object.fromEntries([...jaRoot.matchAll(/"\.\/([\w]+)\.json":([\w$]+)/g)].map(([,ns,name]) => [ns, jaData.get(name)]));
-  ja.components = jaData.get('Qw');
+  ja.components = jaData.get('nT');
   const leaves = (item, path = '') => item && typeof item === 'object' ? Object.entries(item).flatMap(([key,value]) => leaves(value, path ? `${path}.${key}` : key)) : [[path, typeof item]];
   const enLeaves = new Map(leaves(en));
   const jaLeaves = new Map(leaves(ja));
@@ -50,15 +50,15 @@ try {
   console.log('Samples:', en.common.actions.contactUs, en.settings.appearanceSection.appearance, en.components.user.userProfile.openSettings);
   console.log('Parser PASS: strings/escapes/comments/arrays/literals/references and 11 rejection cases.');
   console.log('Non-singular English additions:', JSON.stringify(onlyEn.filter(key => !key.endsWith('_one'))));
-  const ctx = context({home}); const set = loadPatchSet('0.202.0');
+  const ctx = context({home}); const set = loadPatchSet('0.204.0');
   assert.equal(set.patches.targets.length, 3, 'Project remarks add the pinned preload target');
   assertOriginal(baseline, ctx, set.patches);
-  const desktop = extractDesktopEnglish(readEntry(asar,'.vite/build/initLifecycle-CLFSN3ud.js').toString(),'0.202.0');
+  const desktop = extractDesktopEnglish(readEntry(asar,'.vite/build/initLifecycle-Cl2ZZ5qo.js').toString(),'0.204.0');
   assert.equal(leafEntries(desktop).length,ctx.manifest.resourceSources.desktop.leaves);
   assert.deepEqual(desktop,readJson(join(REPO_ROOT,'translations/en/desktop.json')));
   const replacements = buildReplacements(asar, set);
   assert.equal(replacements.replace.size, 3);
-  assert.deepEqual(ctx.manifest.patchShape, { targets: 3, edits: 49, addFiles: 4 });
+  assert.deepEqual(ctx.manifest.patchShape, { targets: 3, edits: 51, addFiles: 4 });
   assert.equal(new Set(set.patches.targets.flatMap(target => target.edits.map(edit => edit.marker))).size, ctx.manifest.patchShape.edits);
   for (const target of set.patches.targets) {
     const changed = replacements.replace.get(target.file).toString();
@@ -73,13 +73,13 @@ try {
   assert.equal(differences, 1);
   console.log(`Patch PASS: ${ctx.manifest.patchShape.edits} unique anchors/markers, repeated edits no-op, JS syntax and one-byte fuse patch.`);
   const rendererTarget = set.patches.targets.find(target =>
-    target.file.endsWith('/index-BqRIJ3kw.js'));
+    target.file.endsWith('/index-D5VdbPv5.js'));
   const groupEdit = rendererTarget.edits.find(edit =>
-    edit.find === 'return c.jsx(ukt,{branchLabel:Eo.branchLabel');
+    edit.find === 'return c.jsx(vRt,{branchLabel:$i.branchLabel');
   assert.ok(groupEdit);
   const chooseGroup = runInNewContext(
-    '(function(fa,Eo,c,ukt,FactoryRemarkGroup,Z3){' +
-    groupEdit.replace + '},Eo.key)})');
+    '(function($c,$i,c,vRt,FactoryRemarkGroup,jC){' +
+    groupEdit.replace + '},$i.key)})');
   const nativeGroup = {}, remarkGroup = {}, unknown = { Unknown: 'unknown' };
   const jsx = { jsx: (type, props, key) => ({ type, props, key }) };
   const group = { key: 'C:/a/app', branchLabel: 'main' };
@@ -93,11 +93,11 @@ try {
     assert.equal(result.props.factoryProjectKey, undefined);
   }
 
-  const nativeEdit = set.patches.targets.find(target=>target.file.endsWith('/initLifecycle-CLFSN3ud.js')).edits.find(edit=>edit.find.startsWith("function m1(){"));
-  assert.ok(rendererSource.includes('fa=ae===tm.Project?Ul:void 0'));
-  assert.ok(rendererSource.includes('Ie=_===tm.UpdatedAt&&ye.length>0'));
-  const projectKeySource = rendererSource.slice(rendererSource.indexOf('function uQe('), rendererSource.indexOf('function Ijl('));
-  const keyOf = runInNewContext(projectKeySource + ';uQe', { tm: { Computer: 'computer' }, jt: { Local: 'local' } });
+  const nativeEdit = set.patches.targets.find(target=>target.file.endsWith('/initLifecycle-Cl2ZZ5qo.js')).edits.find(edit=>edit.find.startsWith("function w1(){"));
+  assert.ok(rendererSource.includes('$c=ke===Am.Project?oa:void 0'));
+  assert.ok(rendererSource.includes('ke=T===Am.UpdatedAt&&_e.length>0'));
+  const projectKeySource = rendererSource.slice(rendererSource.indexOf('function GHe('), rendererSource.indexOf('function pVl('));
+  const keyOf = runInNewContext(projectKeySource + ';GHe', { Am: { Computer: 'computer' }, jt: { Local: 'local' } });
   const localKey = keyOf({ computerType: 'local', projectKey: 'C:/a/app' }, 'project');
   assert.equal(localKey, 'C:/a/app');
   assert.notEqual(localKey, keyOf({ computerType: 'local', projectKey: 'C:/b/app' }, 'project'));
@@ -127,14 +127,14 @@ try {
   const nativeMapEnd=nativeEdit.replace.indexOf(';for(',nativeMapStart);
   const nativeRoles=parseDataDeclarations(nativeEdit.replace.slice(nativeMapStart,nativeMapEnd)+';').get('t');
   assert.deepEqual([...new Set(Object.values(nativeRoles))].sort(),[...ctx.manifest.desktopSupplementKeys].sort());
-  const nativeBuilt=readJson(join(REPO_ROOT,'translations/build/0.202.0/desktop-zh-CN.json'));
+  const nativeBuilt=readJson(join(REPO_ROOT,'translations/build/0.204.0/desktop-zh-CN.json'));
   const nativeSource=readJson(join(REPO_ROOT,'translations/zh-CN/desktop.json'));
   for(const [key,value]of Object.entries(nativeSource))assert.deepEqual(nativeBuilt[key],value,`Native original group ${key}`);
   for(const key of ctx.manifest.desktopSupplementKeys)assert.equal(nativeBuilt[key],nativeZh[key],`Native supplemental label ${key}`);
   assert.equal(leafEntries(nativeBuilt).length,ctx.manifest.resourceSources.desktop.leaves+ctx.manifest.desktopSupplementKeys.length);
   let nativeLocale='en';
-  const nativeMenu=runInNewContext(nativeEdit.replace.slice(0,nativeEdit.replace.indexOf('function m1(){'))+';FactoryNativeMenu',{
-    Li:{get language(){return nativeLocale;}},ne:(key,options)=>nativeZh[key]??options.defaultValue
+  const nativeMenu=runInNewContext(nativeEdit.replace.slice(0,nativeEdit.replace.indexOf('function w1(){'))+';FactoryNativeMenu',{
+    Fi:{get language(){return nativeLocale;}},ne:(key,options)=>nativeZh[key]??options.defaultValue
   },{timeout:1000});
   const nativeCallback=()=>{};
   const menuFixture={items:[{id:'Edit',role:'editMenu',label:'Edit',submenu:{items:[{role:'undo',label:'&Undo',enabled:false,accelerator:'Ctrl+Z',click:nativeCallback},{role:'copy',label:'Copy custom content',enabled:true},{role:'copy',label:'Copy',enabled:true}]}},{role:'quit',label:'Exit'},{label:'Unknown dynamic label'}]};
@@ -150,10 +150,11 @@ try {
   assert.equal(menuFixture.items[0].submenu.items[2].label,'复制');
   assert.equal(menuFixture.items[1].label,'退出');assert.equal(menuFixture.items[2].label,'Unknown dynamic label');
   console.log('Native menus PASS: known generated role labels translate recursively only in Chinese; custom labels, role IDs, callbacks, enabled flags and accelerators stay unchanged.');
-  const rendererEdits = set.patches.targets.find(target => target.file.endsWith('/index-BqRIJ3kw.js')).edits;
+  const rendererEdits = set.patches.targets.find(target => target.file.endsWith('/index-D5VdbPv5.js')).edits;
   for (const [version, ref, layoutEffect, localeInstance, treeName, coreEndMarker, hooksStartMarker, hooksEndMarker, renderRoot, createVNode] of [
     ['0.200.0', 'Ou', 'h4', 'Rin'], ['0.201.0', 'Fu', 'u4', 'eon', 'Jgn', 'const yXs=', 'var Oae,', 'function XXs(', '_Ct', 'xCt'],
-    ['0.202.0', 'Hu', 'S4', 'yrn', 'h0n', 'const $nr=', 'var rle,', 'function Sir(', 'a3t', 's3t']
+    ['0.202.0', 'Hu', 'S4', 'yrn', 'h0n', 'const $nr=', 'var rle,', 'function Sir(', 'a3t', 's3t'],
+    ['0.204.0', 'Vu', 'k4', 'ccn', 'tvn', 'const flr=', 'var ece,', 'function Wlr(', 'lxt', 'rxt']
   ]) {
     const treeEdit = loadPatchSet(version).patches.targets[0].edits.find(edit =>
       edit.find.startsWith(`}){"use no memo";const y=${ref}(null)`));
@@ -169,7 +170,7 @@ try {
     const enterTree = runInNewContext(`(function(){${treeEdit.replace.slice(3, prefixEnd)}})`, {
       le: () => { throw new Error(`React Hook called inside Preact tree ${version}`); },
       [layoutEffect]: effect => effects.push(effect), [localeInstance]: () => i18n,
-      ne: update => { state = update(state); renders++; }
+      [version==='0.204.0'?'ie':'ne']: update => { state = update(state); renders++; }
     }, {timeout:1000});
     enterTree(); enterTree();
     assert.equal(effects.length, 2);
@@ -188,7 +189,7 @@ try {
     assert.equal(listeners.size, 1);
     remountCleanup(); assert.equal(listeners.size, 0);
 
-    if (version === '0.201.0' || version === '0.202.0') {
+    if (version === '0.201.0' || version === '0.202.0' || version === '0.204.0') {
       let treeSource=rendererSource;
       if(version !== ctx.manifest.appVersion){
         const legacySet=loadPatchSet(version),m=legacySet.manifest;
@@ -197,21 +198,22 @@ try {
         const legacyArchive=openAsar(legacyFile);try{treeSource=readEntry(legacyArchive,legacySet.patches.targets[0].file).toString();}finally{closeAsar(legacyArchive);}
       }
       const patchedTreeSource = applyEdits(treeSource, [treeEdit], 'file-tree lifecycle').text;
-      const coreStart = treeSource.indexOf('var m1,');
+      const coreStart = treeSource.indexOf(version==='0.204.0'?'var C1,':'var m1,');
       const coreEnd = treeSource.indexOf(coreEndMarker, coreStart);
       const hooksStart = treeSource.indexOf(hooksStartMarker);
       const hooksEnd = treeSource.indexOf(hooksEndMarker, hooksStart);
       const treeStart = patchedTreeSource.indexOf('function '+treeName+'(');
-      const treeEnd = patchedTreeSource.indexOf('we.current=Se;', treeStart);
+      const treeEndMarker=version==='0.204.0'?'Ie.current=Ce;':'we.current=Se;';
+      const treeEnd = patchedTreeSource.indexOf(treeEndMarker, treeStart);
       assert.ok(coreStart >= 0 && coreEnd > coreStart);
       assert.ok(hooksStart >= 0 && hooksEnd > hooksStart);
       assert.ok(treeStart >= 0 && treeEnd > treeStart);
       const pending = [];
       const lifecycle = runInNewContext(
         treeSource.slice(coreStart, coreEnd) + treeSource.slice(hooksStart, hooksEnd) +
-        patchedTreeSource.slice(treeStart, treeEnd + 'we.current=Se;'.length) +
+        patchedTreeSource.slice(treeStart, treeEnd + treeEndMarker.length) +
         `renders++;return null}
-         m1.debounceRendering=fn=>pending.push(fn);
+         ${version==='0.204.0'?'C1':'m1'}.debounceRendering=fn=>pending.push(fn);
          const root={nodeType:1,namespaceURI:'http://www.w3.org/1999/xhtml',
            childNodes:[],firstChild:null,ownerDocument:document};
          const mount=()=>${renderRoot}(${createVNode}(${treeName},{controller:{},itemHeight:20}),root);
@@ -233,28 +235,28 @@ try {
       lifecycle.unmount(); assert.equal(listeners.size, 0);
     }
   }
-  console.log('File tree PASS: all three versions use native Preact subscriptions; independent listeners, language updates, cleanup and remount; actual 0.201.0/0.202.0 renderer/hooks validate late setter initialization.');
-  const countryEdit = rendererEdits.find(edit=>edit.find.startsWith("let me,Ae;e[101]===Symbol.for(\"react.memo_cache_sentinel\")?(me=WIc.filter(Llu).m"));
-  const rangeEdit = rendererEdits.find(edit=>edit.find.startsWith("let Tt;t[161]===Symbol.for(\"react.memo_cache_sentinel\")?(Tt=QXc.map(vZc),t[161]="));
-  const tabsEdit = rendererEdits.find(edit=>edit.find.startsWith("let Er;e[188]!==Rt||e[189]!==F||e[190]!==bt||e[191]!==mt?(Er=F&&!mt?{value:Rt,on"));
-  const textEdit = rendererEdits.find(edit=>edit.find.startsWith("function yrn(){"));
+  console.log('File tree PASS: all four versions use native Preact subscriptions; independent listeners, language updates, cleanup and remount; actual 0.201.0/0.202.0/0.204.0 renderer/hooks validate late setter initialization.');
+  const countryEdit = rendererEdits.find(edit=>edit.find.startsWith("let pe,ye;e[101]===Symbol.for(\"react.memo_cache_sentinel\")?(pe=h8c.filter(cAu).m"));
+  const rangeEdit = rendererEdits.find(edit=>edit.find.startsWith("let Tt;t[161]===Symbol.for(\"react.memo_cache_sentinel\")?(Tt=Mld.map(lcd),t[161]="));
+  const tabsEdit = rendererEdits.find(edit=>edit.find.startsWith("let Lr;e[188]!==Mt||e[189]!==F||e[190]!==wt||e[191]!==gt?(Lr=F&&!gt?{value:Mt,on"));
+  const textEdit = rendererEdits.find(edit=>edit.find.startsWith("function ccn(){"));
   assert.ok(countryEdit && rangeEdit && tabsEdit && textEdit, 'Required display patches must be present');
   let displayLocale = 'en';
   let billingForm = {country:'CN',taxIdType:'old',taxId:'saved-tax-id',name:'Unchanged'};
   const countryOptions = [{label:'China',value:'CN'},{label:'United States',value:'US'}];
-  const countriesStart=rendererSource.indexOf('const WIc=['),countriesEnd=rendererSource.indexOf(']',countriesStart)+1;
+  const countriesStart=rendererSource.indexOf('const h8c=['),countriesEnd=rendererSource.indexOf(']',countriesStart)+1;
   assert.ok(countriesStart>=0&&countriesEnd>countriesStart);
-  const actualCountries=parseDataDeclarations(rendererSource.slice(countriesStart,countriesEnd)+';').get('WIc');
+  const actualCountries=parseDataDeclarations(rendererSource.slice(countriesStart,countriesEnd)+';').get('h8c');
   const regionNames=new Intl.DisplayNames('zh-CN',{type:'region'});
   for(const country of actualCountries.filter(country=>country.value!=='')) {
     assert.match(country.value,/^[A-Z]{2}$/);
     assert.match(regionNames.of(country.value),/[\u3400-\u9fff]/,`Chinese country display ${country.value}`);
   }
-  const renderCountries = runInNewContext(`(function(){${countryEdit.replace}return {options:me,onChange:Ae}})`, {
-    Intl, yrn:()=>({language:displayLocale}), WIc:countryOptions,
-    Llu:()=>true,
+  const renderCountries = runInNewContext(`(function(){${countryEdit.replace}return {options:pe,onChange:ye}})`, {
+    Intl, ccn:()=>({language:displayLocale}), h8c:countryOptions,
+    cAu:()=>true,
     e:Array(103).fill(Symbol.for('react.memo_cache_sentinel')),
-    w0t:new Set(['CN']), Avt:country=>`${country}-tax`, g:update=>{billingForm=update(billingForm);}
+    wyt:new Set(['CN']), bbt:country=>`${country}-tax`, g:update=>{billingForm=update(billingForm);}
   }, {timeout:1000});
   const englishCountries = renderCountries();
   assert.deepEqual(Array.from(englishCountries.options, option=>option.label), ['China','United States']);
@@ -269,10 +271,10 @@ try {
   assert.deepEqual(countryOptions, [{label:'China',value:'CN'},{label:'United States',value:'US'}]);
   let selectedRange;
   const rangeChange = value=>{selectedRange=value;};
-  const renderRanges = runInNewContext(`(function(){${rangeEdit.replace}return {options:Tt,control:Lt}})`, {
-    Intl, yrn:()=>({language:displayLocale}), QXc:['7d','30d','90d'].map(value=>({value,label:value})),
-    c:{jsx:(type,props,key)=>({type,props,key})}, Fw:'option', Ye:'container', hC:'select',
-    t:Array(164).fill(Symbol.for('react.memo_cache_sentinel')), r:'30d', Ze:rangeChange
+  const renderRanges = runInNewContext(`(function(){${rangeEdit.replace}return {options:Tt,control:xt}})`, {
+    Intl, ccn:()=>({language:displayLocale}), Mld:['7d','30d','90d'].map(value=>({value,label:value})),
+    c:{jsx:(type,props,key)=>({type,props,key})}, t3:'option', Je:'container', wC:'select',
+    t:Array(164).fill(Symbol.for('react.memo_cache_sentinel')), r:'30d', at:rangeChange
   }, {timeout:1000});
   displayLocale = 'en';
   assert.deepEqual(Array.from(renderRanges().options, option=>option.props.children), ['7 days','30 days','90 days']);
@@ -287,8 +289,8 @@ try {
   const patchUiZh = readJson(join(REPO_ROOT,'translations/patch-ui.zh-CN.json'));
   assert.equal(leafEntries(patchUiEn).length,ctx.manifest.uiSupplement.leaves);
   const translationCalls = [];
-  const textRuntime = runInNewContext(textEdit.replace.slice(0,textEdit.replace.indexOf('function yrn(){'))+';FactoryZhText', {
-    yrn:()=>({t:(key,options)=>{
+  const textRuntime = runInNewContext(textEdit.replace.slice(0,textEdit.replace.indexOf('function ccn(){'))+';FactoryZhText', {
+    ccn:()=>({t:(key,options)=>{
       translationCalls.push({key,options});
       assert.equal(options.ns,'patchUi'); assert.equal(options.keySeparator,false); assert.equal(options.nsSeparator,false);
       assert.equal(options.defaultValue,key);
@@ -300,14 +302,26 @@ try {
   const callsBeforeUndefined = translationCalls.length;
   assert.equal(textRuntime(undefined),undefined);
   assert.equal(translationCalls.length,callsBeforeUndefined,'Undefined must not reach the translator');
+  const skillFilterEdit=rendererEdits.find(edit=>edit.find.startsWith('function Ebr(t){'));
+  const skillFilterCacheEdit=rendererEdits.find(edit=>edit.find.startsWith('let Q;e[45]!==$||e[46]!==N.length?'));
+  assert.ok(skillFilterEdit&&skillFilterCacheEdit);
+  assert.ok(skillFilterCacheEdit.replace.startsWith('const Q=N.length?'));
+  const filterView=runInNewContext(skillFilterEdit.replace+';Ebr',{FactoryZhText:textRuntime,pbr:'button',c:{jsxs:(type,props,key)=>({type,props,key})}});
+  const filterClick=()=>{},filterDto=Object.freeze({name:'All',label:undefined,matching:[1,2],active:true,disabled:false,onClick:filterClick});
+  for(const locale of ['en','zh-CN','en','zh-CN']){
+    displayLocale=locale;const view=filterView(filterDto);
+    assert.equal(view.props.children[0],locale==='zh-CN'?patchUiZh.All:'All');
+    assert.equal(view.key,'All');assert.equal(view.props.onClick,filterClick);assert.equal(view.props['aria-pressed'],true);assert.equal(view.props.disabled,false);
+    assert.equal(filterView({...filterDto,label:'All'}).props.children[0],'All','User category named All remains unchanged');
+  }
   const pathKey = Object.keys(patchUiEn).find(key=>key.includes('{{path}}'));
   assert.ok(pathKey, 'Supplement must include a real path interpolation display string');
   assert.equal(textRuntime(pathKey,{path:'C:/项目/a.b'}),patchUiZh[pathKey].replaceAll('{{path}}','C:/项目/a.b'));
   assert.ok(!textRuntime(pathKey,{path:'C:/项目/a.b'}).includes('{{path}}'));
   let selectedTab;
   const tabChange = value=>{selectedTab=value;};
-  const renderTabs = runInNewContext(`(function(){${tabsEdit.replace}return Er})`, {
-    FactoryZhText:textRuntime, ip:{Overview:'overview-value',Chain:'chain-value'}, Rt:'chain-value', F:true, mt:false, bt:tabChange,
+  const renderTabs = runInNewContext(`(function(){${tabsEdit.replace}return Lr})`, {
+    FactoryZhText:textRuntime, vp:{Overview:'overview-value',Chain:'chain-value'}, Mt:'chain-value', F:true, gt:false, wt:tabChange,
     e:Array(193).fill(Symbol.for('react.memo_cache_sentinel'))
   }, {timeout:1000});
   displayLocale = 'en';
@@ -319,12 +333,12 @@ try {
   assert.deepEqual(Array.from(chineseTabs.items, item=>item.value), ['overview-value','chain-value']);
   assert.equal(chineseTabs.value,'chain-value'); assert.equal(chineseTabs.onChange,tabChange);
   chineseTabs.onChange(chineseTabs.items[0].value); assert.equal(selectedTab,'overview-value');
-  const catalogEdit = rendererEdits.find(edit=>edit.find.startsWith("Nt=Ze?bd.Failed:F3d({receipt:Yt,isApplying:Ct});ot.push({id:St,operationId:Mt.op"));
+  const catalogEdit = rendererEdits.find(edit=>edit.find.startsWith("Pt=at?bd.Failed:w8d({receipt:Ht,isApplying:mt});ct.push({id:It,operationId:Dt.op"));
   assert.ok(catalogEdit, 'Catalog display projection patch must be present');
-  const projectCatalog = runInNewContext(`(function(dt,Jt,$t){let Nt;const ot=[];${catalogEdit.replace}status:Nt});return ot[0]})`, {
-    FactoryZhText:textRuntime, Ze:false, bd:{Failed:'failed'}, F3d:()=> 'ready', Yt:{}, Ct:false,
-    St:'setting-id', Mt:{operationId:'fixture.operation'}, Lt:{},
-    eQ:'current-model-sentinel', TY:'default-model-sentinel', Bse:'inherit-model-sentinel', BE:'org-model-sentinel',
+  const projectCatalog = runInNewContext(`(function(rt,on,sn){let Pt;const ct=[];${catalogEdit.replace}status:Pt});return ct[0]})`, {
+    FactoryZhText:textRuntime, at:false, bd:{Failed:'failed'}, w8d:()=> 'ready', Ht:{}, mt:false,
+    It:'setting-id', Dt:{operationId:'fixture.operation'}, xt:{},
+    kQ:'current-model-sentinel', uJ:'default-model-sentinel', Pre:'inherit-model-sentinel', i_:'org-model-sentinel',
     s:(key,{name}={})=>`${key}:${name ?? ''}`
   }, {timeout:1000});
   const switchCatalog = {
@@ -384,15 +398,15 @@ try {
   assert.equal(directoryProjection.before,localizedCustomPath); assert.equal(directoryProjection.after,localizedCustomPath);
   assert.equal(directoryCatalog.control.options[0].value,specPath);
   console.log('Catalog projection PASS: actual replacement localizes switches/enums/sentinels/custom-directory labels, preserves user text and paths, and retains model snapshot names after option rename/removal.');
-  const tierEdit = rendererEdits.find(edit=>edit.find.startsWith("function ndo(t,e=!1){let n;return t<=2?n=\"Basic\":t===3?n=\"Intermediate\":n=\"Advan"));
-  const tierBadgeEdit = rendererEdits.find(edit=>edit.find.startsWith("let v;e[9]!==n?(v=ndo(n,!0),e[9]=n,e[10]=v):v=e[10];"));
-  const tierModalEdit = rendererEdits.find(edit=>edit.find.startsWith("let D;e[18]!==o?(D=ndo(o),e[18]=o,e[19]=D):D=e[19];"));
-  const tierRuntime = runInNewContext(tierEdit.replace+';ndo',{FactoryZhText:textRuntime},{timeout:1000});
+  const tierEdit = rendererEdits.find(edit=>edit.find.startsWith("function Wpo(t,e=!1){let n;return t<=2?n=\"Basic\":t===3?n=\"Intermediate\":n=\"Advan"));
+  const tierBadgeEdit = rendererEdits.find(edit=>edit.find.startsWith("let v;e[9]!==n?(v=Wpo(n,!0),e[9]=n,e[10]=v):v=e[10];"));
+  const tierModalEdit = rendererEdits.find(edit=>edit.find.startsWith("let D;e[18]!==o?(D=Wpo(o),e[18]=o,e[19]=D):D=e[19];"));
+  const tierRuntime = runInNewContext(tierEdit.replace+';Wpo',{FactoryZhText:textRuntime},{timeout:1000});
   const renderTierBadge = runInNewContext(`(function(){${tierBadgeEdit.replace}return v})`,{
-    ndo:tierRuntime,n:3,e:Array(11).fill(Symbol.for('react.memo_cache_sentinel'))
+    Wpo:tierRuntime,n:3,e:Array(11).fill(Symbol.for('react.memo_cache_sentinel'))
   },{timeout:1000});
   const renderTierModal = runInNewContext(`(function(){${tierModalEdit.replace}return D})`,{
-    ndo:tierRuntime,o:3,e:Array(20).fill(Symbol.for('react.memo_cache_sentinel'))
+    Wpo:tierRuntime,o:3,e:Array(20).fill(Symbol.for('react.memo_cache_sentinel'))
   },{timeout:1000});
   displayLocale='en';
   assert.equal(renderTierBadge(),'INTERMEDIATE');assert.equal(renderTierModal(),'Intermediate');
@@ -402,9 +416,9 @@ try {
   for(const [level,expected]of [[1,'基础'],[2,'基础'],[3,'中级'],[4,'高级'],[5,'高级']]) {
     assert.equal(tierRuntime(level),expected);assert.equal(tierRuntime(level,true),expected);
   }
-  const fieldEdit = rendererEdits.find(edit=>edit.find.startsWith("function RZl(t){const e=Q.c(134),{field:n,id:i,isSaving:o,organizationCredential"));
-  const projectField = runInNewContext(fieldEdit.replace+'return n};RZl',{
-    FactoryZhText:textRuntime,Q:{c:()=>[]},ce:()=>({t:()=>{}})
+  const fieldEdit = rendererEdits.find(edit=>edit.find.startsWith("function zlc(t){const e=z.c(134),{field:n,id:i,isSaving:o,organizationCredential"));
+  const projectField = runInNewContext(fieldEdit.replace+'return n};zlc',{
+    FactoryZhText:textRuntime,z:{c:()=>[]},ce:()=>({t:()=>{}})
   },{timeout:1000});
   const fieldEntries=[['Project','On'],['x-header','user value']];
   for(const placeholder of ['Use default','How this model appears in the model picker','Optional server credential','Your provider API key','MODEL_API_KEY','/usr/local/bin/mint-model-token']) {
@@ -418,15 +432,15 @@ try {
     assert.equal(projected.options[0].value,'unchanged-value');assert.equal(projected.options[0].label,patchUiZh['Use default']);
     assert.equal(field.options[0].label,'Use default');
   }
-  const providerStart=rendererSource.indexOf('si=(t=>'),providerEnd=rendererSource.indexOf(',Xt=',providerStart);
+  const providerStart=rendererSource.indexOf('li=(t=>'),providerEnd=rendererSource.indexOf(',Yt=',providerStart);
   assert.ok(providerStart>=0&&providerEnd>providerStart);
-  const providerApi=runInNewContext('var '+rendererSource.slice(providerStart,providerEnd)+';si',{}, {timeout:1000});
+  const providerApi=runInNewContext('var '+rendererSource.slice(providerStart,providerEnd)+';li',{}, {timeout:1000});
   const providerOptions=Object.values(providerApi).map(value=>({value,label:value}));
   const providerField={id:'provider',label:'Provider',value:'anthropic',options:providerOptions};
   assert.deepEqual(Array.from(projectField({field:providerField}).options,option=>[option.value,option.label]),providerOptions.map(option=>[option.value,option.label]));
-  const presetStart=rendererSource.indexOf('WVs='),presetEnd=rendererSource.indexOf(',Lwt=',presetStart);
+  const presetStart=rendererSource.indexOf('dZs='),presetEnd=rendererSource.indexOf(',BIt=',presetStart);
   assert.ok(presetStart>=0&&presetEnd>presetStart);
-  const presets=runInNewContext('const '+rendererSource.slice(presetStart,presetEnd)+';jqe',{si:providerApi},{timeout:1000});
+  const presets=runInNewContext('const '+rendererSource.slice(presetStart,presetEnd)+';Cbe',{li:providerApi},{timeout:1000});
   const presetOptions=Array.from(presets,preset=>({value:preset.id,label:preset.label}));
   assert.equal(presetOptions.filter(option=>option.value!=='custom').length,5);
   const projectedPresets=projectField({field:{id:'preset',label:'Provider',value:'custom',options:presetOptions}});
@@ -434,20 +448,20 @@ try {
     const original=presetOptions.find(item=>item.value===option.value);
     assert.equal(option.label,option.value==='custom'?patchUiZh['Other provider']:original.label);
   }
-  const validationEdit = rendererEdits.find(edit=>edit.find.startsWith("function bNn(t){return\"message\"in t?t.message:yJs(t)}"));
-  const validationStart=rendererSource.indexOf('function yJs('),validationEnd=rendererSource.indexOf('function vJs(',validationStart);
+  const validationEdit = rendererEdits.find(edit=>edit.find.startsWith("function qUn(t){return\"message\"in t?t.message:$nr(t)}"));
+  const validationStart=rendererSource.indexOf('function $nr('),validationEnd=rendererSource.indexOf('function Qnr(',validationStart);
   assert.ok(validationStart>=0&&validationEnd>validationStart);
   const validationSource=rendererSource.slice(validationStart,validationEnd);
-  const validationNames=[...validationSource.matchAll(/case S2\.(\w+):/g)].map(match=>match[1]);
+  const validationNames=[...validationSource.matchAll(/case M2\.(\w+):/g)].map(match=>match[1]);
   assert.equal(validationNames.length,9);
-  const validationRuntime=runInNewContext(validationSource+validationEdit.replace+';({yJs,bNn})',{
-    FactoryZhText:textRuntime,S2:Object.fromEntries(validationNames.map(name=>[name,name]))
+  const validationRuntime=runInNewContext(validationSource+validationEdit.replace+';({$nr,qUn})',{
+    FactoryZhText:textRuntime,M2:Object.fromEntries(validationNames.map(name=>[name,name]))
   },{timeout:1000});
-  for(const code of validationNames) assert.equal(validationRuntime.bNn({code}),patchUiZh[validationRuntime.yJs({code})]);
-  for(const message of ['Project','On','Unknown validation message','C:/Project/user-value']) assert.equal(validationRuntime.bNn({code:validationNames[0],message}),message);
-  const checkboxEdit = rendererEdits.find(edit=>edit.find.startsWith("let A;e[4]!==p?(A=c.jsx(ld,{\"aria-label\":\"Select row\",...p}),e[4]=p,e[5]=A):A=e[5];"));
+  for(const code of validationNames) assert.equal(validationRuntime.qUn({code}),patchUiZh[validationRuntime.$nr({code})]);
+  for(const message of ['Project','On','Unknown validation message','C:/Project/user-value']) assert.equal(validationRuntime.qUn({code:validationNames[0],message}),message);
+  const checkboxEdit = rendererEdits.find(edit=>edit.find.startsWith("let A;e[4]!==p?(A=c.jsx(jc,{\"aria-label\":\"Select row\",...p}),e[4]=p,e[5]=A):A=e["));
   const renderCheckbox=runInNewContext(`(function(p){${checkboxEdit.replace}return A})`,{
-    FactoryZhText:textRuntime,c:{jsx:(type,props)=>props},ld:'checkbox',e:Array(6).fill(Symbol.for('react.memo_cache_sentinel'))
+    FactoryZhText:textRuntime,c:{jsx:(type,props)=>props},jc:'checkbox',e:Array(6).fill(Symbol.for('react.memo_cache_sentinel'))
   },{timeout:1000});
   const checkboxProps={checked:true};
   displayLocale='en';assert.equal(renderCheckbox(checkboxProps)['aria-label'],'Select row');
@@ -455,13 +469,13 @@ try {
   const callerCheckbox={'aria-label':'Project',checked:false};
   assert.equal(renderCheckbox(callerCheckbox)['aria-label'],'Project');assert.equal(renderCheckbox(callerCheckbox).checked,false);
   console.log('Readiness/form/accessibility PASS: actual replacements refresh tier caches, translate only form display fields and fixed validation errors, preserve API names/preset brands/user data, and respect caller checkbox labels.');
-  const badgeEdit = rendererEdits.find(edit=>edit.find.startsWith("function kPu(t){return c.jsxs(z,{bg:w.bg.surface,borderColor:w.border.outer,bord"));
+  const badgeEdit = rendererEdits.find(edit=>edit.find.startsWith("function bWu(t){return c.jsxs(G,{bg:w.bg.surface,borderColor:w.border.outer,bord"));
   const badgeDataStart=badgeEdit.replace.indexOf('const e='),badgeDataEnd=badgeEdit.replace.indexOf('].some(',badgeDataStart);
   assert.ok(badgeDataStart>=0&&badgeDataEnd>badgeDataStart);
   const badgeTriples=parseDataDeclarations(badgeEdit.replace.slice(badgeDataStart,badgeDataEnd+1)+';').get('e');
   assert.equal(badgeTriples.length,29);
-  const renderBadge=runInNewContext(badgeEdit.replace+';kPu',{
-    FactoryZhText:textRuntime,c:{jsx:(type,props)=>props,jsxs:(type,props)=>props},z:'card',se:'text',Le:'box',
+  const renderBadge=runInNewContext(badgeEdit.replace+';bWu',{
+    FactoryZhText:textRuntime,c:{jsx:(type,props)=>props,jsxs:(type,props)=>props},G:'card',se:'text',Oe:'box',
     w:{bg:{surface:0},border:{outer:0},radius:{surface:0},space:{4:4,20:20}},re:{Caption:0,ButtonLabel:1},De:{Secondary:0,Tertiary:1}
   },{timeout:1000});
   const badgeTexts=dto=>{const view=renderBadge(dto);return[view.children[0].children,view.children[1].children,view.children[2]?.children.children];};
@@ -478,23 +492,23 @@ try {
     {name:badgeTriples[0][0],description:badgeTriples[0][1],quip:'Changed quip'},
     {name:badgeTriples[0][0],description:'Changed description',quip:badgeTriples[0][2]},
     {name:'Changed name',description:badgeTriples[0][1],quip:badgeTriples[0][2]}]) assert.deepEqual(badgeTexts(dto),[dto.name,dto.description,dto.quip]);
-  const durationEdit = rendererEdits.find(edit=>edit.find.startsWith("function WMt(t){const e=t/36e5;if(e>=24){const i=Math.floor(e/24),o=Math.round(e"));
-  const statsHeroEdit = rendererEdits.find(edit=>edit.find.startsWith("function RPu(t){const e=t.longestSession?.assistantActiveTimeMs??0,n=pPu(t.first"));
-  const originalStats=runInNewContext(durationEdit.find+statsHeroEdit.find+';({WMt,RPu})',{
-    hPu:value=>String(value),pPu:()=>17
+  const durationEdit = rendererEdits.find(edit=>edit.find.startsWith("function oOt(t){const e=t/36e5;if(e>=24){const i=Math.floor(e/24),o=Math.round(e"));
+  const statsHeroEdit = rendererEdits.find(edit=>edit.find.startsWith("function SWu(t){const e=t.longestSession?.assistantActiveTimeMs??0,n=sWu(t.first"));
+  const originalStats=runInNewContext(durationEdit.find+statsHeroEdit.find+';({oOt,SWu})',{
+    oWu:value=>String(value),sWu:()=>17
   },{timeout:1000});
-  const localizedStats=runInNewContext(durationEdit.replace+statsHeroEdit.replace+';({WMt,RPu})',{
-    Intl,yrn:()=>({language:displayLocale}),hPu:value=>String(value),pPu:()=>17
+  const localizedStats=runInNewContext(durationEdit.replace+statsHeroEdit.replace+';({oOt,SWu})',{
+    Intl,ccn:()=>({language:displayLocale}),oWu:value=>String(value),sWu:()=>17
   },{timeout:1000});
   for(const milliseconds of [0,1,29400,30000,89999,3599999,3600000,5399999,5400000,86399999,86400000,171000000,172800000,360000000]) {
-    displayLocale='en';assert.equal(localizedStats.WMt(milliseconds),originalStats.WMt(milliseconds),String(milliseconds));
+    displayLocale='en';assert.equal(localizedStats.oOt(milliseconds),originalStats.oOt(milliseconds),String(milliseconds));
     const dto=Object.freeze({totalSessions:1234,totalTimeMs:milliseconds,longestStreak:9,firstSessionDate:'2026-10-01',longestSession:Object.freeze({assistantActiveTimeMs:milliseconds})});
     const before=JSON.stringify(dto);
-    assert.equal(JSON.stringify(localizedStats.RPu(dto)),JSON.stringify(originalStats.RPu(dto)));
-    displayLocale='zh-CN';const hero=localizedStats.RPu(dto);
+    assert.equal(JSON.stringify(localizedStats.SWu(dto)),JSON.stringify(originalStats.SWu(dto)));
+    displayLocale='zh-CN';const hero=localizedStats.SWu(dto);
     assert.equal(hero[0].value,'1234');assert.equal(hero[2].value,'9天');assert.equal(hero[4].value,'17天');
     assert.match(hero[1].value,/天|小时|分钟/);assert.equal(hero[3].value,hero[1].value);
-    assert.deepEqual(Array.from(hero,item=>item.value.match(/\d+/g)?.map(Number)),Array.from(originalStats.RPu(dto),item=>item.value.match(/\d+/g)?.map(Number)));
+    assert.deepEqual(Array.from(hero,item=>item.value.match(/\d+/g)?.map(Number)),Array.from(originalStats.SWu(dto),item=>item.value.match(/\d+/g)?.map(Number)));
     assert.equal(JSON.stringify(dto),before);
   }
   console.log('Stats display PASS: all 29 actual badge triples localize without DTO mutation; unknown/changed tuples and Go code stay raw; duration/day units localize with original English thresholds, rounding and numbers preserved.');
@@ -502,7 +516,7 @@ try {
   const hintEdit = rendererEdits.find(edit=>edit.find.startsWith("let f;e[15]!==n.hint||e[16]!==n.status||e[17]!==s.textColor?(f=n.hint&&n.status!"));
   assert.ok(hintEdit,'Diagnostic hint projection patch must be present');
   const renderDiagnostic=runInNewContext(`(function(n){${hintEdit.replace}return f})`,{
-    FactoryZhText:textRuntime,s:{textColor:'warning'},Ve:'text',c:{jsx:(_type,props)=>props.children}
+    FactoryZhText:textRuntime,s:{textColor:'warning'},qe:'text',c:{jsx:(_type,props)=>props.children}
   },{timeout:1000});
   for(const [id,prefix]of [['daemon_state','An EDR-protected process holds'],['zombie_socket','PID {{pid}} owns port'],['zombie_socket','The Windows kernel reports PID {{pid}}']]) {
     const key=Object.keys(patchUiEn).find(key=>key.startsWith(prefix));assert.ok(key);
@@ -556,22 +570,37 @@ try {
   }
   assert.throws(()=>validateTerminology('Factory Desktop','Factory 桌面版','fixture',terminology));
   assert.throws(()=>validateTerminology('Claude','Gemini','fixture',terminology));
+  const termSource = new Map(Object.entries({...en,desktop,patchUi:patchUiEn}).flatMap(([ns,tree])=>leafEntries(tree).map(([key,value])=>[`${ns}.${key}`,value])));
+  const termTranslations = new Map([...Object.keys(en),'desktop'].flatMap(ns=>leafEntries(readJson(join(REPO_ROOT,`translations/zh-CN/${ns}.json`))).map(([key,value])=>[`${ns}.${key}`,value])).concat(leafEntries(patchUiZh).map(([key,value])=>[`patchUi.${key}`,value])));
+  for(const rule of terminology.preserveTerms.filter(rule=>rule.keys)) {
+    assert.equal(new Set(rule.keys).size,rule.keys.length);
+    for(const key of rule.keys) {
+      assert.ok(termSource.has(key),`Stale terminology context ${key}`);
+      const source=termSource.get(key),translation=termTranslations.get(key);
+      assert.match(source,new RegExp(rule.pattern,rule.ignoreCase?'i':''));
+      validateTerminology(source,translation,key,terminology);
+      assert.throws(()=>validateTerminology(source,translation.replace(new RegExp(rule.pattern,rule.ignoreCase?'gi':'g'),'误译'),key,terminology));
+    }
+  }
+  validateTerminology('Hook Droid into your systems','将 Droid 接入你的系统','academy.lessons.automations.eventTriggers.description',terminology);
+  validateTerminology('an injected hook is failing','注入的钩子发生故障','fixture.systemHook',terminology);
+  validateTerminology('Subagent Task Models','子代理 Task 模型','settings.sessionDefaultsSection.subagentTaskModels',terminology);
   console.log('Coverage/terminology PASS: missing whole namespaces counted; stale, hidden, unknown and changed preserved keys rejected; all context rules enforced.');
-  const start = rendererSource.indexOf('var T0=(t=>'), end = rendererSource.indexOf('const h1t=[',start);
+  const start = rendererSource.indexOf('var P0=(t=>'), end = rendererSource.indexOf('const yAt=[',start);
   assert.ok(start>=0&&end>start);
-  const anatomy = runInNewContext(rendererSource.slice(start,end)+';({CHl,wHl})',{}, {timeout:1000});
+  const anatomy = runInNewContext(rendererSource.slice(start,end)+';({BXl,NXl})',{}, {timeout:1000});
   const zhKeywords=readJson(join(REPO_ROOT,'translations/zh-CN/components.json')).lessons.lessonPromptAnatomy.keywords;
-  const keywords=anatomy.CHl((key,options)=>(options?.lng==='en'?en.components.lessons.lessonPromptAnatomy.keywords:zhKeywords)[key.split('.').at(-1)]);
-  for(const draft of ['修复登录页面 src/auth.ts，不要修改公共 API；运行测试并验证结果。','Fix the login page in src/auth.ts without changing public APIs; run tests and verify the result.']) assert.ok(Object.values(anatomy.wHl({draft,keywords})).every(Boolean),draft);
-  const englishOnly=anatomy.CHl(key=>en.components.lessons.lessonPromptAnatomy.keywords[key.split('.').at(-1)]);
-  assert.equal(anatomy.wHl({draft:'修复登录页面，不要修改公共接口；运行测试并验证结果。',keywords:englishOnly}).outcome,false);
+  const keywords=anatomy.BXl((key,options)=>(options?.lng==='en'?en.components.lessons.lessonPromptAnatomy.keywords:zhKeywords)[key.split('.').at(-1)]);
+  for(const draft of ['修复登录页面 src/auth.ts，不要修改公共 API；运行测试并验证结果。','Fix the login page in src/auth.ts without changing public APIs; run tests and verify the result.']) assert.ok(Object.values(anatomy.NXl({draft,keywords})).every(Boolean),draft);
+  const englishOnly=anatomy.BXl(key=>en.components.lessons.lessonPromptAnatomy.keywords[key.split('.').at(-1)]);
+  assert.equal(anatomy.NXl({draft:'修复登录页面，不要修改公共接口；运行测试并验证结果。',keywords:englishOnly}).outcome,false);
   console.log('Lesson anatomy PASS: actual pristine matcher recognizes Chinese and English prompts with localized keywords; English-only list reproduces prior Chinese failure.');
 } finally { closeAsar(asar); }
 
 if (process.argv.includes('--exercise')) {
   // All installed-file writes below are confined to this new full version copy.
   const exercise = mkdtempSync(join(REPO_ROOT, 'work', 'exercise-'));
-  const copyHome = join(exercise, 'app-0.202.0');
+  const copyHome = join(exercise, 'app-0.204.0');
   const real = context({home});
   const realPair = pairHash(real.files);
   const results = [];
@@ -586,12 +615,12 @@ if (process.argv.includes('--exercise')) {
   let remarksBefore;
   const sourceFile = join(REPO_ROOT,'translations/zh-CN/common.json');
   const sourceBefore = readFileSync(sourceFile);
-  const buildFile = join(REPO_ROOT,'translations/build/0.202.0/resources-zh-CN.js');
-  const coverageFile = join(REPO_ROOT,'translations/build/0.202.0/coverage.json');
-  const desktopFile = join(REPO_ROOT,'translations/build/0.202.0/desktop-zh-CN.json');
+  const buildFile = join(REPO_ROOT,'translations/build/0.204.0/resources-zh-CN.js');
+  const coverageFile = join(REPO_ROOT,'translations/build/0.204.0/coverage.json');
+  const desktopFile = join(REPO_ROOT,'translations/build/0.204.0/desktop-zh-CN.json');
   const buildBefore = readFileSync(buildFile), coverageBefore = readFileSync(coverageFile);
   const desktopBefore = readFileSync(desktopFile);
-  const legacyBuild = ['translations/build','translations/build/0.201.0'].flatMap(dir=>['resources-zh-CN.js','desktop-zh-CN.json','coverage.json'].map(name=>join(REPO_ROOT,dir,name)));
+  const legacyBuild = ['translations/build','translations/build/0.201.0','translations/build/0.202.0'].flatMap(dir=>['resources-zh-CN.js','desktop-zh-CN.json','coverage.json'].map(name=>join(REPO_ROOT,dir,name)));
   const legacyBefore = legacyBuild.map(file=>fileHash(file));
   writeFileSync(join(exercise,'isolation-before.json'),JSON.stringify({realPair,realState,legacyBefore,source:fileHash(sourceFile),build:[buildFile,desktopFile,coverageFile].map(file=>fileHash(file))},null,2));
   const pass = (name) => { results.push(name); console.log(`Exercise PASS: ${name}`); writeFileSync(join(exercise,'results.json'),JSON.stringify({results},null,2)); };
@@ -702,7 +731,7 @@ if (process.argv.includes('--exercise')) {
       const backupDir = join(REPO_ROOT,'backups',ctx.key,`simulated-${randomUUID()}`); mkdirSync(backupDir,{recursive:true});
       const backup = {exe:join(backupDir,'factory-desktop.exe'),asar:join(backupDir,'app.asar')};
       for(const name of ['exe','asar']) copyFileSync(beforeFiles[name],backup[name]);
-      const pending = {home:ctx.normalized,appVersion:'0.202.0',before:pairHash(beforeFiles),after:pairHash(afterFiles),backup,beforeApplied};
+      const pending = {home:ctx.normalized,appVersion:'0.204.0',before:pairHash(beforeFiles),after:pairHash(afterFiles),backup,beforeApplied};
       atomicJson(ctx.pending,pending);
       copyFileSync(afterFiles.exe,ctx.files.exe);
       chmodSync(ctx.files.exe,0o666);
@@ -770,9 +799,13 @@ if (process.argv.includes('--exercise')) {
       mkdirSync(dirname(destination), {recursive:true});
       writeFileSync(destination,execFileSync('git',['show',`dc07e7f:${path}`],{cwd:REPO_ROOT,maxBuffer:16*1024*1024}));
     }
-    cpSync(copyHome,upgradeHome,{recursive:true,errorOnExist:true,force:false});
-    const upgradePristine = join(upgradeFixture,relative(REPO_ROOT,ctx.pristine.dir));
-    cpSync(ctx.pristine.dir,upgradePristine,{recursive:true});
+    const oldHome='C:/Users/11013/AppData/Local/Factory/app-0.202.0';
+    const oldContext=context({home:oldHome}),oldSet=loadPatchSet('0.202.0');
+    const oldPristine=checkedPristine(oldContext,oldSet.patches);assert.ok(oldPristine);
+    cpSync(oldHome,upgradeHome,{recursive:true,errorOnExist:true,force:false});
+    for(const [name,destination]of [['exe','factory-desktop.exe'],['asar','resources/app.asar']]){const target=join(upgradeHome,destination);chmodSync(target,0o666);copyFileSync(oldPristine[name],target);chmodSync(target,0o666);}
+    const upgradePristine = join(upgradeFixture,relative(REPO_ROOT,oldContext.pristine.dir));
+    cpSync(oldContext.pristine.dir,upgradePristine,{recursive:true});
     const upgradeRun = (operation,flags=[],expected=0) => {
       const result=spawnSync(process.execPath,[join(upgradeFixture,'scripts',`${operation}.mjs`),`--home=${upgradeHome}`,...flags],{cwd:upgradeFixture,encoding:'utf8',windowsHide:true,timeout:180000});
       const output=(result.stdout??'')+(result.stderr??'');
@@ -799,7 +832,7 @@ if (process.argv.includes('--exercise')) {
     if(ctx) chmodSync(ctx.files.asar,0o666);
     assert.deepEqual(pairHash(real.files),realPair,'Real installed pair must remain unchanged');
     assert.deepEqual(snapshot(real.state),realState,'Real installed state must remain unchanged');
-    assert.deepEqual(legacyBuild.map(file=>fileHash(file)),legacyBefore,'Pinned 0.200.0/0.201.0 builds must remain unchanged');
+    assert.deepEqual(legacyBuild.map(file=>fileHash(file)),legacyBefore,'Pinned 0.200.0/0.201.0/0.202.0 builds must remain unchanged');
     assert.equal(existsSync(realRemarksPath) ? fileHash(realRemarksPath) : null, realRemarksBefore, 'Real user remarks must remain unchanged');
     writeFileSync(join(exercise,'isolation-after.json'),JSON.stringify({realPair:pairHash(real.files),realState:snapshot(real.state),legacyBefore:legacyBuild.map(file=>fileHash(file)),source:fileHash(sourceFile),build:[buildFile,desktopFile,coverageFile].map(file=>fileHash(file))},null,2));
   }

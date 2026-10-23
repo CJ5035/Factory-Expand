@@ -264,7 +264,9 @@
     "pressTabToSearchAnotherCategory": "按 Tab 搜索其他类别。",
     "recentSessions": "最近的 Session",
     "recentCommands": "最近的命令",
-    "searchingSessions": "正在搜索 Session"
+    "searchingSessions": "正在搜索 Session",
+    "searchedBackTo": "已搜索至 {{date}}",
+    "searchIncomplete": "搜索结果可能不完整。"
   },
   "archMismatchBanner": {
     "dismiss": "忽略",
@@ -345,7 +347,7 @@
   "customize": {
     "customize": "自定义",
     "customizeSections": "自定义分区",
-    "skills": "技能",
+    "skills": "Skills",
     "connectors": "连接器",
     "plugins": "插件"
   },

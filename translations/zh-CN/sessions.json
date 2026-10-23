@@ -106,7 +106,6 @@
     "weekly": "每周",
     "monthly": "每月",
     "standardPoolExhausted": "标准额度池已用尽",
-    "youveUsedYourStandardTokenAllowance": "你已用完标准 token 配额。请选择后续使用方式。",
     "droidCore": "Droid Core",
     "aSmallerFasterModelOptimizedFor": "针对常见任务优化的更小、更快模型。",
     "or": "或",
@@ -122,7 +121,8 @@
     "useDroidCore": "使用 Droid Core",
     "continueWithPrepaidCredits": "使用预付积分继续使用当前模型。",
     "enableExtraUsage": "启用额外用量",
-    "unusedExtraUsageCredits": "你有尚未使用的预付积分。启用额外用量即可继续使用当前模型。"
+    "unusedExtraUsageCredits": "你有尚未使用的预付积分。启用额外用量即可继续使用当前模型。",
+    "youveUsedYourStandardCreditAllowance": "你已用完标准积分额度。请选择接下来如何继续。"
   },
   "useComputerSessionActions": {
     "openInVsCode": "在 VS Code 中打开",
@@ -242,7 +242,7 @@
     "stopAgentConfirm": "停止代理",
     "forking": "正在派生…",
     "fork": "派生",
-    "skillCreationUserMessage": "创建可复用的技能：{{description}}"
+    "skillCreationUserMessage": "创建可复用的 Skill：{{description}}"
   },
   "allSessions": {
     "newSession": "新建 Session",
@@ -732,7 +732,9 @@
   },
   "terminal": {
     "failedToCreateTerminal": "创建终端失败，请重试。",
-    "tabLabel": "终端 {{number}}"
+    "tabLabel": "终端 {{number}}",
+    "cannotOpenTerminal": "无法打开终端",
+    "sessionFolderMissing": "此 Session 的文件夹已不存在：{{path}}"
   },
   "activeSessionSettings": {
     "failedToUpdateInteractionSettings": "更新交互设置失败",
@@ -769,7 +771,7 @@
     "updateDesktopForMcp": "请更新桌面应用，以便在发送消息前管理 MCP。你仍可先启动 Session，待加载后再使用 MCP。",
     "configError": "配置错误，打开以查看详情",
     "loadingConnectors": "正在加载连接器信息…",
-    "loadingSkills": "正在加载技能…",
+    "loadingSkills": "正在加载 Skill …",
     "failedToUpdateMcpSettings": "更新 MCP 设置失败",
     "failedToAddMcpServer": "添加 MCP 服务器失败",
     "failedToRemoveMcpServer": "移除 MCP 服务器失败"
@@ -901,7 +903,7 @@
       "context": "显示上下文窗口用量明细",
       "copy": "将助手的最后一条消息复制到剪贴板",
       "cost": "显示 token 用量和费用详情",
-      "createSkill": "从此 Session 创建可复用的技能",
+      "createSkill": "从此 Session 创建可复用的 Skill",
       "cwd": "更改当前 Session 的工作目录",
       "fast": "启用当前模型的快速模式（使用 /fast off 禁用）",
       "favorite": "/pin 的别名",
@@ -919,11 +921,11 @@
       "rewindConversation": "将对话回退到之前的消息",
       "settings": "前往设置页面",
       "share": "打开分享 Session 对话框",
-      "skills": "打开技能设置",
+      "skills": "打开 Skill 设置",
       "stats": "查看本地 Droid 统计数据"
     },
     "compactAlias": "/compress 的别名",
-    "skillFallback": "技能"
+    "skillFallback": "Skill"
   },
   "composerDraftRequests": {
     "title": "发送你的草稿？",
@@ -958,7 +960,7 @@
     "failedFor": "{{serverName}} 认证失败。"
   },
   "sessionCapabilities": {
-    "failedToUpdateSkill": "更新技能失败"
+    "failedToUpdateSkill": "更新 Skill 失败"
   },
   "composerDefaults": {
     "reasoning": "推理",

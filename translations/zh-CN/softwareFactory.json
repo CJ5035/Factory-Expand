@@ -206,7 +206,7 @@
     "describeTheGoal": "描述目标",
     "describeTheGoalDetail": "用自然语言为工作流设定负责的目标。示例展示了合适的目标写法。",
     "droidBuildsAndDryRunsTheLoop": "Droid 构建并演练循环",
-    "droidBuildsAndDryRunsTheLoopDetail": "自动生成自动化、仪表盘和技能，并以只读模式运行一次，供你检查结果。",
+    "droidBuildsAndDryRunsTheLoopDetail": "自动生成自动化、仪表盘和 Skill，并以只读模式运行一次，供你检查结果。",
     "droidResearchesAndInterviewsYou": "Droid 调研并向你提问",
     "droidResearchesAndInterviewsYouDetail": "Droid 会研究仓库和连接器，再通过几个问题确认来源、规则和范围。",
     "gotIt": "明白了",
@@ -278,18 +278,6 @@
   "safeDashboardFrame": {
     "softwareFactoryWorkstreamDashboard": "Software Factory 工作流仪表盘"
   },
-  "sfReviewActions": {
-    "optionalCommentRequiredToRequestChanges": "评论可选；请求修改时必须填写",
-    "decline": "拒绝",
-    "requestChanges": "请求修改",
-    "approve": "批准",
-    "resolveReview": "完成审查"
-  },
-  "sfReviewViewModeControl": {
-    "reviewView": "审查视图",
-    "focus": "专注",
-    "list": "列表"
-  },
   "softwareFactoryAutomationDetail": {
     "automationDataIsUnavailable": "自动化数据不可用。",
     "automationNotVisibleFromScope": "当前自动化范围内无法查看此自动化。",
@@ -329,8 +317,8 @@
     "updated": "已更新",
     "agentDroid": "代理：Droid",
     "droid": "Droid",
-    "skills": "技能",
-    "noSkillsConfigured": "未配置技能。",
+    "skills": "Skills",
+    "noSkillsConfigured": "未配置 Skill。",
     "fscSpend": "FSC 消耗",
     "started": "已开始",
     "openSession": "打开 Session",
@@ -682,24 +670,6 @@
     "loadingTeams": "正在加载团队…",
     "unableToLoadTeams": "无法加载团队。",
     "noTeamsYet": "暂无团队，添加团队以组织工作流。"
-  },
-  "softwareFactoryReviewHeader": {
-    "reviewProgress": "审查进度",
-    "yourReviewQueue": "你的审查队列",
-    "reviewsClear": "审查已清空",
-    "reviewsLeft_one": "项审查待处理",
-    "reviewsLeft_other": "项审查待处理",
-    "clearedToday": "今天已处理 {{completed}} 项",
-    "reviewsClearedTodayProgress": "今天已处理 {{total}} 项审查中的 {{completed}} 项"
-  },
-  "softwareFactoryReviewSession": {
-    "closeReviewSession": "关闭审查 Session",
-    "tryAgain": "重试",
-    "openingReviewSession": "正在打开审查 Session…",
-    "reviewSessionTimeout": "审查 Session 未在 {{seconds}} 秒内打开，其计算机可能仍在启动。",
-    "reviewSessionCouldNotOpen": "无法打开审查 Session。",
-    "sessionTitle": "审查：{{title}}",
-    "untitledChange": "Software Factory 变更"
   },
   "softwareFactorySavedDraftChat": {
     "stopWaiting": "停止等待",
@@ -1218,55 +1188,6 @@
     "retry": "重试",
     "unableToLoadYourTeams": "无法加载你的团队"
   },
-  "softwareFactoryReview": {
-    "changeQueuedForRetry": "变更已加入重试队列",
-    "chat": "聊天",
-    "closeReviewSession": "关闭审查 Session",
-    "code": "代码",
-    "context": "上下文",
-    "description": "描述",
-    "focusedReviewItem": "当前聚焦的审查项",
-    "groupChanges": "变更",
-    "groupErrors": "错误",
-    "groupPullRequests": "拉取请求",
-    "groupSpecifications": "Spec",
-    "keyboardShortcutsAria": "键盘快捷键：左箭头返回队列，上下箭头导航，{{shortcut}} 打开聊天",
-    "latestError": "最新错误",
-    "leftArrowReturnsToTheReview": "左箭头返回审查队列",
-    "loadingPrInfo": "正在加载 PR 信息",
-    "markAsRead": "标为已读",
-    "markedAsRead": "已标为已读",
-    "navigate": "导航",
-    "needsAttention": "需要关注",
-    "noAdditionalContextWasProvided": "未提供其他上下文。",
-    "noDescriptionWasProvidedOnThis": "此拉取请求未提供描述。",
-    "noPullRequestLinkWasFound": "最新结果中没有拉取请求链接。",
-    "noReviewSelected": "未选择审查",
-    "nothingNeedsReviewOrAttention": "目前没有需要审查或关注的内容。",
-    "openChange": "打开变更",
-    "openInbox": "打开收件箱",
-    "openReviewSession": "打开审查 Session",
-    "prReview": "PR 审查",
-    "proposedChange": "拟议变更",
-    "pullRequestNumber": "拉取请求 {{number}}",
-    "queue": "队列",
-    "reviewItemNavigation": "审查项导航",
-    "reviewPreview": "审查预览",
-    "reviewSectionAria": "{{label}}审查分区",
-    "selectAnItemToInspect": "选择一个项目，查看其上下文及后续操作。",
-    "showLess": "收起",
-    "showMore": "展开",
-    "somethingWentWrongLoadingQueue": "加载审查队列时出错，请重试。",
-    "specification": "Spec",
-    "swipeToNavigate": "滑动以导航",
-    "unableToGetPrInfo": "无法获取 PR 信息。",
-    "unableToGetPrInfoStatus": "无法获取 PR 信息",
-    "unableToLoadReview": "无法加载审查",
-    "unableToMarkThisEventAsRead": "无法将此事件标为已读",
-    "unableToResolveThisReview": "无法完成此审查",
-    "unableToRetryThisChange": "无法重试此变更",
-    "youreAllCaughtUp": "已处理完所有事项"
-  },
   "softwareFactorySetup": {
     "addAnother": "再添加一项",
     "budgetsDescription": "设置开支上限，并选择 Droid 可以自主操作的范围。之后你仍可在工作流设置中细化每项限制。",
@@ -1487,14 +1408,6 @@
     "couldNotIdentifyThisComputer": "无法识别此计算机。请重新打开对话框以重试，或选择环境。",
     "defaultsCouldNotBeLoaded": "无法加载 Software Factory 默认值，请明确选择身份和环境。",
     "noDefaultsSaved": "未保存 Software Factory 默认值，请选择身份和环境。"
-  },
-  "softwareFactoryLogs": {
-    "error": "错误",
-    "warning": "警告",
-    "info": "信息",
-    "stageReview": "{{stage}}审查",
-    "reviewRequested": "已请求审查",
-    "review": "审查"
   },
   "softwareFactorySpecification": {
     "couldNotLoadSavedSpecification": "无法加载已保存的 Spec。",
@@ -1918,9 +1831,6 @@
     "teams": "团队",
     "workstream": "工作流",
     "workstreams": "工作流"
-  },
-  "softwareFactoryPullRequestCard": {
-    "titlePullRequest": "{{title}}，拉取请求"
   },
   "useSoftwareFactoryReviewSummary": {
     "itemsReadyForYou_one": "{{count}} 项已准备好等待你处理。",

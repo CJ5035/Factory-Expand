@@ -1411,6 +1411,7 @@
     "eGImproveTheVisualizationReduce": "e.g. improve the visualization, reduce false positives, make reports more actionable...",
     "reviewImprove": "Review & Improve",
     "startSession": "Start session",
+    "startsOnEnvironmentComputer": "The session runs on a new Computer started from the automation's Environment, so it can take a minute or two to open.",
     "starting": "Starting...",
     "thisWillStartADroidSession": "This will start a Droid session that analyzes “{{automationName}}” and suggests optimizations to its prompt, memory, and outputs.",
     "whatShouldTheReviewFocusOn": "What should the review focus on? (optional)"

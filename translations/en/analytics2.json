@@ -361,7 +361,9 @@
     "hoursAgo_other": "hours ago",
     "daysAgo_one": "day ago",
     "daysAgo_other": "days ago",
-    "loading": "Loading agent readiness"
+    "loading": "Loading agent readiness",
+    "deleteReports_one": "Delete report",
+    "deleteReports_other": "Delete {{count}} reports"
   },
   "readinessRepositoryDetail": {
     "passRateByCategory": "PASS RATE BY CATEGORY",

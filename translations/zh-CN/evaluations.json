@@ -3,14 +3,12 @@
     "datasetChat": "数据集聊天",
     "chooseAComputerAndRetry": "选择计算机并重试",
     "createTitle": "创建数据集",
-    "createDescription": "描述要衡量的工作。Droid 会起草任务，逐个验证，并在发布前与你确认。",
     "createPlaceholder": "我们希望衡量什么？",
     "updateTitle": "更新此数据集",
-    "updateDescription": "描述需要修改的内容。Droid 会从版本 {{version}} 开始，再次验证每个任务，并在发布前与你确认。",
     "updatePlaceholder": "此版本需要如何修改？",
-    "selectSkillsTitle": "选择要进行基准测试的技能",
-    "selectSkillsEmpty": "未找到技能。请将技能发布到组织插件市场，或添加到此工作目录的 .factory/skills 文件夹。",
-    "loadingComputerSkills": "正在从此计算机加载技能…"
+    "selectSkillsTitle": "选择要进行基准测试的 Skill",
+    "selectSkillsEmpty": "未找到 Skill。请将 Skill 发布到组织插件市场，或添加到此工作目录的 .factory/skills 文件夹。",
+    "loadingComputerSkills": "正在从此计算机加载 Skill …"
   },
   "evaluationPresets": {
     "cancel": "取消",
@@ -25,8 +23,8 @@
     "symlink": "文件预览不会跟随符号链接。"
   },
   "evaluationSkillFiles": {
-    "loading": "正在加载技能文件…",
-    "unavailable": "技能文件不可用。"
+    "loading": "正在加载 Skill 文件…",
+    "unavailable": "Skill 文件不可用。"
   },
   "evaluationTaskFiles": {
     "loading": "正在加载文件…",

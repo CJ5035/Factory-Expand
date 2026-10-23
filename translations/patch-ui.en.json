@@ -765,5 +765,6 @@
   "Could not load project remarks.": "Could not load project remarks.",
   "Could not save project remark.": "Could not save project remark.",
   "Retry": "Retry",
-  "Project remark cannot exceed 80 characters.": "Project remark cannot exceed 80 characters."
+  "Project remark cannot exceed 80 characters.": "Project remark cannot exceed 80 characters.",
+  "All": "All"
 }
