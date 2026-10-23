@@ -8,6 +8,14 @@
     {
       "from": "translations/build/0.202.0/desktop-zh-CN.json",
       "to": ".vite/build/desktop-zh-CN.json"
+    },
+    {
+      "from": "scripts/runtime/factory-project-remarks.cjs",
+      "to": ".vite/build/factory-project-remarks.cjs"
+    },
+    {
+      "from": "scripts/runtime/factory-project-remarks.js",
+      "to": ".vite/renderer/main_window/assets/factory-project-remarks.js"
     }
   ],
   "targets": [
@@ -284,6 +292,27 @@
           "expect": 1,
           "marker": "function WMt(t){const e=t/36e5,n=(i,o)=>new Intl.NumberFormat(yrn().language,{style:\"unit\",unit:o,unitDisplay:\"narrow\",useGrouping:!1}).format(i);if(e>=24){const i=Math.floor(e/24),o=Math.round(e%24);return`${n(i,\"day\")} ${n(o,\"hour\")}`}if(e>=1)return n(Math.round(e),\"hour\");return n(Math.round(t/(1e3*60)),\"minute\")}",
           "note": "Stats duration display uses current locale units; source thresholds, rounding and numeric data unchanged."
+        },
+        {
+          "find": "const __vite__mapDeps=",
+          "replace": "import {renderProjectRemarkGroup as FactoryRenderProjectRemarkGroup} from \"./factory-project-remarks.js\";const __vite__mapDeps=",
+          "expect": 1,
+          "marker": "import {renderProjectRemarkGroup as FactoryRenderProjectRemarkGroup} from \"./factory-project-remarks.js\";const __vite__mapDeps=",
+          "note": "Project remarks: renderer module import"
+        },
+        {
+          "find": "function J1c(t){",
+          "replace": "function FactoryRemarkGroup(FactoryProps){return FactoryRenderProjectRemarkGroup(FactoryProps,{React:P,jsx:c.jsx,Group:ukt,Modal:bo,Input:ts,Button:Ue,Stack:z,Text:se,ErrorText:Gs,textProps:{tone:De.Tertiary,variant:re.Caption},buttonVariants:Be,modalSize:ns.Sm,space:w.space[8],useModalTheme:Jl,useLocale:()=>ce(\"components\"),text:FactoryZhText,api:window.electronAPI.projectRemarks});}function J1c(t){",
+          "expect": 1,
+          "marker": "function FactoryRemarkGroup(FactoryProps){return FactoryRenderProjectRemarkGroup(FactoryProps,{React:P,jsx:c.jsx,Group:ukt,Modal:bo,Input:ts,Button:Ue,Stack:z,Text:se,ErrorText:Gs,textProps:{tone:De.Tertiary,variant:re.Caption},buttonVariants:Be,modalSize:ns.Sm,space:w.space[8],useModalTheme:Jl,useLocale:()=>ce(\"components\"),text:FactoryZhText,api:window.electronAPI.projectRemarks});}function J1c(t){",
+          "note": "Project remarks: native React/UI adapter"
+        },
+        {
+          "find": "return c.jsx(ukt,{branchLabel:Eo.branchLabel",
+          "replace": "return c.jsx(fa&&fa.kind!==Z3.Unknown?FactoryRemarkGroup:ukt,{factoryProjectKey:fa&&fa.kind!==Z3.Unknown?Eo.key:void 0,branchLabel:Eo.branchLabel",
+          "expect": 1,
+          "marker": "return c.jsx(fa&&fa.kind!==Z3.Unknown?FactoryRemarkGroup:ukt,{factoryProjectKey:fa&&fa.kind!==Z3.Unknown?Eo.key:void 0,branchLabel:Eo.branchLabel",
+          "note": "Project remarks: project group display and menu"
         }
       ]
     },
@@ -323,6 +352,25 @@
           "expect": 1,
           "marker": "FactoryNativeMenu(A.Menu.buildFromTemplate(r)).popup({window:o})",
           "note": "Postprocess only native context-menu display; cut/copy/paste actions and enabled flags remain original"
+        },
+        {
+          "find": "function Rte(){",
+          "replace": "function Rte(){require(\"./factory-project-remarks.cjs\").registerProjectRemarks({ipcMain:A.ipcMain,BrowserWindow:A.BrowserWindow,filePath:Z.join(i.getDesktopHomeDir(),i.getFactoryDirName(),\"factory-expand.json\")});",
+          "expect": 1,
+          "marker": "function Rte(){require(\"./factory-project-remarks.cjs\").registerProjectRemarks({ipcMain:A.ipcMain,BrowserWindow:A.BrowserWindow,filePath:Z.join(i.getDesktopHomeDir(),i.getFactoryDirName(),\"factory-expand.json\")});",
+          "note": "Project remarks: main-process IPC registration"
+        }
+      ]
+    },
+    {
+      "file": ".vite/build/preload.js",
+      "edits": [
+        {
+          "find": "i18n:{getPreference:",
+          "replace": "projectRemarks:{get:()=>U.ipcRenderer.invoke(\"factory-expand:projectRemarks:get\"),set:A=>U.ipcRenderer.invoke(\"factory-expand:projectRemarks:set\",A),onChanged:A=>{const e=(t,o)=>A(o);return U.ipcRenderer.on(\"factory-expand:projectRemarks:changed\",e),()=>U.ipcRenderer.removeListener(\"factory-expand:projectRemarks:changed\",e)}},i18n:{getPreference:",
+          "expect": 1,
+          "marker": "projectRemarks:{get:()=>U.ipcRenderer.invoke(\"factory-expand:projectRemarks:get\"),set:A=>U.ipcRenderer.invoke(\"factory-expand:projectRemarks:set\",A),onChanged:A=>{const e=(t,o)=>A(o);return U.ipcRenderer.on(\"factory-expand:projectRemarks:changed\",e),()=>U.ipcRenderer.removeListener(\"factory-expand:projectRemarks:changed\",e)}},i18n:{getPreference:",
+          "note": "Project remarks: limited preload bridge"
         }
       ]
     }

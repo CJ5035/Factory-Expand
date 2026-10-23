@@ -1,20 +1,20 @@
 {
   "schemaVersion": 2,
   "summary": {
-    "total": 18638,
-    "provided": 18638,
+    "total": 18648,
+    "provided": 18648,
     "missing": 0,
     "excluded": 0,
     "missingRequired": 0,
-    "changed": 17894,
+    "changed": 17904,
     "identical": 744,
     "preservedEnglish": 706,
     "courseProse": 471,
-    "required": 18638,
+    "required": 18648,
     "requiredCoveragePercent": 100,
     "resourceCoveragePercent": 100,
-    "functionalTotal": 18167,
-    "functionalProvided": 18167,
+    "functionalTotal": 18177,
+    "functionalProvided": 18177,
     "functionalCoveragePercent": 100
   },
   "namespaces": {
@@ -2308,12 +2308,12 @@
       "courseProseKeys": []
     },
     "patchUi": {
-      "total": 757,
-      "provided": 757,
+      "total": 767,
+      "provided": 767,
       "missing": 0,
       "excluded": 0,
       "missingRequired": 0,
-      "changed": 757,
+      "changed": 767,
       "identical": 0,
       "preservedEnglish": 0,
       "courseProse": 0,
@@ -2328,8 +2328,8 @@
   "note": "Provided keys include reviewed English brands/code/identifiers and user-selected original English course prose. Functional coverage excludes only the explicit course-prose keys; no source keys disappear from the total. Resource coverage is not a claim that every UI state, native menu or server-provided string was visually tested.",
   "renderer": {
     "namespaces": 20,
-    "total": 18560,
-    "provided": 18560
+    "total": 18570,
+    "provided": 18570
   },
   "desktop": {
     "total": 78,
@@ -2342,7 +2342,7 @@
   },
   "supplement": {
     "namespace": "patchUi",
-    "total": 757,
-    "provided": 757
+    "total": 767,
+    "provided": 767
   }
 }

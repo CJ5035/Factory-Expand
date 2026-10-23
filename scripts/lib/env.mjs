@@ -72,7 +72,8 @@ export function assertOriginal(files, ctx, patches, signature = true) {
   if (!samePair(pairHash(files), ctx.manifest.original)) throw new Error('Original build hash mismatch');
   if (!inspectFuse(readFileSync(files.exe), ctx.manifest.fuse).enabled) throw new Error('Original fuse must be enabled');
   const shape = ctx.manifest.patchShape;
-  if (!shape || shape.targets !== 2 || !Number.isInteger(shape.edits) || shape.edits < 3 || shape.addFiles !== 2 || patches.targets.length !== shape.targets || patches.targets.some(target => !target.edits?.length) || patches.targets.reduce((n,t) => n+t.edits.length,0) !== shape.edits || patches.addFiles?.length !== shape.addFiles || new Set(patches.targets.map(target=>target.file)).size !== shape.targets || new Set(patches.addFiles.map(item=>item.to)).size !== shape.addFiles) throw new Error('Expected the pinned non-empty patch shape from the version manifest');
+  const expected = { '0.200.0': { targets: 2, addFiles: 2 }, '0.201.0': { targets: 2, addFiles: 2 }, '0.202.0': { targets: 3, addFiles: 4 } }[ctx.manifest.appVersion];
+  if (!expected || !shape || shape.targets !== expected.targets || !Number.isInteger(shape.edits) || shape.edits < 3 || shape.addFiles !== expected.addFiles || patches.targets.length !== shape.targets || patches.targets.some(target => !target.edits?.length) || patches.targets.reduce((n,t) => n+t.edits.length,0) !== shape.edits || patches.addFiles?.length !== shape.addFiles || new Set(patches.targets.map(target=>target.file)).size !== shape.targets || new Set(patches.addFiles.map(item=>item.to)).size !== shape.addFiles) throw new Error('Expected the pinned non-empty patch shape from the version manifest');
   const asar = openAsar(files.asar);
   try {
     for (const target of patches.targets) {

@@ -14,9 +14,9 @@
     "node_modules/keytar/build/Release/keytar.node": "4b0fadd544df933731fdd5b1b8d16d1b7a5d762fcecef2d0ebc5a39b7aa953ed"
   },
   "patchShape": {
-    "targets": 2,
-    "edits": 44,
-    "addFiles": 2
+    "targets": 3,
+    "edits": 49,
+    "addFiles": 4
   },
   "resourceSources": {
     "academy": {
@@ -101,8 +101,8 @@
     }
   },
   "uiSupplement": {
-    "leaves": 757,
-    "sha256": "d20c9b7e3aa7b1523cc78f67ed9c68a7cc20fd308753532baf747c169bda32f5"
+    "leaves": 767,
+    "sha256": "812cd08a49377aed159c50952c0c3d4f35ece2b845b35866b4ce9e71a2bc879e"
   },
   "desktopSupplementKeys": [
     "Edit",

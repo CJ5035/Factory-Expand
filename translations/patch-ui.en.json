@@ -755,5 +755,15 @@
   "Toggle Developer Tools": "Toggle Developer Tools",
   "Toggle Full Screen": "Toggle Full Screen",
   "Minimize": "Minimize",
-  "Quit": "Quit"
+  "Quit": "Quit",
+  "Edit project remark": "Edit project remark",
+  "Project remark": "Project remark",
+  "Save": "Save",
+  "Cancel": "Cancel",
+  "Saving…": "Saving…",
+  "Leave empty to clear the remark.": "Leave empty to clear the remark.",
+  "Could not load project remarks.": "Could not load project remarks.",
+  "Could not save project remark.": "Could not save project remark.",
+  "Retry": "Retry",
+  "Project remark cannot exceed 80 characters.": "Project remark cannot exceed 80 characters."
 }

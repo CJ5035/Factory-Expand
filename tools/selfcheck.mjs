@@ -1,16 +1,22 @@
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync, existsSync, cpSync, copyFileSync, chmodSync, readdirSync, statSync, unlinkSync, mkdtempSync } from 'node:fs';
-import { resolve, join, relative } from 'node:path';
-import { spawnSync, spawn } from 'node:child_process';
+import { resolve, join, relative, dirname } from 'node:path';
+import { spawnSync, spawn, execFileSync } from 'node:child_process';
 import { randomUUID } from 'node:crypto';
 import { runInNewContext } from 'node:vm';
 import { parseDataDeclarations, extractEnglish, extractDesktopEnglish } from './extract_en.mjs';
 import { openAsar, closeAsar, readEntry } from '../scripts/lib/asar.mjs';
 import { context, assertOriginal, checkedPristine, pairHash, samePair, REPO_ROOT, fileHash, atomicJson, readJson } from '../scripts/lib/env.mjs';
-import { loadPatchSet, applyEdits, buildReplacements } from '../scripts/lib/patch.mjs';
+import { loadPatchSet, applyEdits, buildReplacements, loadAddedFiles } from '../scripts/lib/patch.mjs';
 import { patchFuse, inspectFuse } from '../scripts/lib/fuses.mjs';
 import { checkJavaScript } from '../scripts/lib/syntaxcheck.mjs';
 import { validateText, validateTree, validateTerminology, measureCoverage, leafEntries } from './build_resource.mjs';
+import projectRemarksRuntime from '../scripts/runtime/factory-project-remarks.cjs';
+
+const remarksTests = spawnSync(process.execPath, ['--test', join(REPO_ROOT, 'tools/project-remarks.test.mjs')],
+  { cwd: REPO_ROOT, encoding: 'utf8', windowsHide: true });
+assert.equal(remarksTests.status, 0, remarksTests.stdout + remarksTests.stderr);
+console.log('Project remarks runtime PASS: 8 isolated storage/IPC/client/component tests.');
 
 const home = 'C:/Users/11013/AppData/Local/Factory/app-0.202.0';
 const baselineCtx = context({home}), baselineSet = loadPatchSet('0.202.0');
@@ -45,26 +51,76 @@ try {
   console.log('Parser PASS: strings/escapes/comments/arrays/literals/references and 11 rejection cases.');
   console.log('Non-singular English additions:', JSON.stringify(onlyEn.filter(key => !key.endsWith('_one'))));
   const ctx = context({home}); const set = loadPatchSet('0.202.0');
+  assert.equal(set.patches.targets.length, 3, 'Project remarks add the pinned preload target');
   assertOriginal(baseline, ctx, set.patches);
   const desktop = extractDesktopEnglish(readEntry(asar,'.vite/build/initLifecycle-CLFSN3ud.js').toString(),'0.202.0');
   assert.equal(leafEntries(desktop).length,ctx.manifest.resourceSources.desktop.leaves);
   assert.deepEqual(desktop,readJson(join(REPO_ROOT,'translations/en/desktop.json')));
   const replacements = buildReplacements(asar, set);
-  assert.equal(replacements.replace.size, 2);
+  assert.equal(replacements.replace.size, 3);
+  assert.deepEqual(ctx.manifest.patchShape, { targets: 3, edits: 49, addFiles: 4 });
   assert.equal(new Set(set.patches.targets.flatMap(target => target.edits.map(edit => edit.marker))).size, ctx.manifest.patchShape.edits);
   for (const target of set.patches.targets) {
     const changed = replacements.replace.get(target.file).toString();
     const repeated = applyEdits(changed, target.edits, target.file);
     assert.equal(repeated.text, changed); assert.ok(repeated.report.every(edit => edit.status === 'already-applied'));
   }
-  assert.equal(checkJavaScript(replacements.replace).failures.length, 0);
+  assert.equal(checkJavaScript(new Map([...replacements.replace, ...loadAddedFiles(set)])).failures.length, 0);
   const originalExe = readFileSync(baseline.exe);
   const changedExe = patchFuse(originalExe, ctx.manifest);
   assert.equal(inspectFuse(changedExe, ctx.manifest.fuse).enabled, false);
   let differences = 0; for (let i=0;i<originalExe.length;i++) if (originalExe[i] !== changedExe[i]) differences++;
   assert.equal(differences, 1);
   console.log(`Patch PASS: ${ctx.manifest.patchShape.edits} unique anchors/markers, repeated edits no-op, JS syntax and one-byte fuse patch.`);
+  const rendererTarget = set.patches.targets.find(target =>
+    target.file.endsWith('/index-BqRIJ3kw.js'));
+  const groupEdit = rendererTarget.edits.find(edit =>
+    edit.find === 'return c.jsx(ukt,{branchLabel:Eo.branchLabel');
+  assert.ok(groupEdit);
+  const chooseGroup = runInNewContext(
+    '(function(fa,Eo,c,ukt,FactoryRemarkGroup,Z3){' +
+    groupEdit.replace + '},Eo.key)})');
+  const nativeGroup = {}, remarkGroup = {}, unknown = { Unknown: 'unknown' };
+  const jsx = { jsx: (type, props, key) => ({ type, props, key }) };
+  const group = { key: 'C:/a/app', branchLabel: 'main' };
+  const valid = chooseGroup({ kind: 'directory' }, group, jsx, nativeGroup, remarkGroup, unknown);
+  assert.equal(valid.type, remarkGroup);
+  assert.equal(valid.props.factoryProjectKey, group.key);
+  assert.equal(valid.key, group.key);
+  for (const excluded of [undefined, { kind: 'unknown' }]) {
+    const result = chooseGroup(excluded, group, jsx, nativeGroup, remarkGroup, unknown);
+    assert.equal(result.type, nativeGroup);
+    assert.equal(result.props.factoryProjectKey, undefined);
+  }
+
   const nativeEdit = set.patches.targets.find(target=>target.file.endsWith('/initLifecycle-CLFSN3ud.js')).edits.find(edit=>edit.find.startsWith("function m1(){"));
+  assert.ok(rendererSource.includes('fa=ae===tm.Project?Ul:void 0'));
+  assert.ok(rendererSource.includes('Ie=_===tm.UpdatedAt&&ye.length>0'));
+  const projectKeySource = rendererSource.slice(rendererSource.indexOf('function uQe('), rendererSource.indexOf('function Ijl('));
+  const keyOf = runInNewContext(projectKeySource + ';uQe', { tm: { Computer: 'computer' }, jt: { Local: 'local' } });
+  const localKey = keyOf({ computerType: 'local', projectKey: 'C:/a/app' }, 'project');
+  assert.equal(localKey, 'C:/a/app');
+  assert.notEqual(localKey, keyOf({ computerType: 'local', projectKey: 'C:/b/app' }, 'project'));
+  assert.notEqual(keyOf({ computerKey: 'machine:a', projectKey: '/app' }, 'project'), keyOf({ computerKey: 'machine:b', projectKey: '/app' }, 'project'));
+  assert.equal(keyOf({ computerType: 'local', projectKey: 'worktree:C:/app/tree' }, 'project'), 'worktree:C:/app/tree');
+  const bridgeEdit = set.patches.targets.find(target=>target.file.endsWith('/preload.js')).edits[0];
+  const bridgeCalls = [], bridgeListeners = new Map();
+  const ipcRenderer = {
+    invoke: (channel, payload) => { bridgeCalls.push({ channel, payload }); return Promise.resolve(); },
+    on: (channel, listener) => bridgeListeners.set(channel, listener),
+    removeListener: (channel, listener) => { assert.equal(bridgeListeners.get(channel), listener); bridgeListeners.delete(channel); }
+  };
+  const remarksBridge = runInNewContext('({' + bridgeEdit.replace.slice(0,-bridgeEdit.find.length) + '})', { U: { ipcRenderer } }).projectRemarks;
+  await remarksBridge.get();
+  const input = { key: 'C:/app', remark: '备注' };
+  await remarksBridge.set(input);
+  assert.deepEqual(bridgeCalls, [{channel:'factory-expand:projectRemarks:get',payload:undefined},{channel:'factory-expand:projectRemarks:set',payload:input}]);
+  let received;
+  const unsubscribe = remarksBridge.onChanged(payload => { received = payload; });
+  const payload = { revision: 1, projectRemarks: {} };
+  bridgeListeners.get('factory-expand:projectRemarks:changed')({sender:'must not leak'}, payload);
+  assert.equal(received, payload); unsubscribe(); assert.equal(bridgeListeners.size, 0);
+  console.log('Project remarks patch PASS: actual group projection, native identities, excluded groups and limited preload IPC.');
   assert.ok(nativeEdit,'Native default role labels must be localized');
   const nativeZh=readJson(join(REPO_ROOT,'translations/patch-ui.zh-CN.json'));
   const nativeMapStart=nativeEdit.replace.indexOf('const t=');
@@ -524,6 +580,10 @@ if (process.argv.includes('--exercise')) {
     return info.isFile() ? [name,info.size,info.mtimeMs,fileHash(file)] : [name,'directory'];
   });
   const realState = snapshot(real.state);
+  const realRemarksPath = join(process.env.USERPROFILE, '.factory', 'factory-expand.json');
+  const realRemarksBefore = existsSync(realRemarksPath) ? fileHash(realRemarksPath) : null;
+  const remarksPath = join(exercise, 'user-data', 'factory-expand.json');
+  let remarksBefore;
   const sourceFile = join(REPO_ROOT,'translations/zh-CN/common.json');
   const sourceBefore = readFileSync(sourceFile);
   const buildFile = join(REPO_ROOT,'translations/build/0.202.0/resources-zh-CN.js');
@@ -539,6 +599,7 @@ if (process.argv.includes('--exercise')) {
     const result = spawnSync(process.execPath,[join(REPO_ROOT,'scripts',`${operation}.mjs`),`--home=${copyHome}`,...flags],{cwd:REPO_ROOT,encoding:'utf8',windowsHide:true,timeout:180000});
     const output = (result.stdout ?? '') + (result.stderr ?? '');
     if (result.status !== expected) throw new Error(`${operation} ${flags} returned ${result.status}, expected ${expected}: ${output}`);
+    if (remarksBefore) assert.equal(fileHash(remarksPath), remarksBefore, 'Installer operations must preserve project remarks');
     return output;
   };
   const build = () => {
@@ -547,6 +608,9 @@ if (process.argv.includes('--exercise')) {
   };
   let ctx;
   try {
+    const remarksStore = projectRemarksRuntime.createRemarksStore({ filePath: remarksPath });
+    await remarksStore.set({ key: 'C:/exercise/project', remark: '副本自检' });
+    remarksBefore = fileHash(remarksPath);
     cpSync(home,copyHome,{recursive:true,errorOnExist:true,force:false});
     ctx = context({home:copyHome});
     assert.ok(ctx.normalized.startsWith(join(REPO_ROOT,'work').toLowerCase()+'\\'));
@@ -691,6 +755,41 @@ if (process.argv.includes('--exercise')) {
     assert.deepEqual(pairHash(real.files),realPair); assert.deepEqual(snapshot(real.state),realState);
     assert.notEqual(ctx.state,real.state); assert.notEqual(ctx.pending,real.pending);
     pass('cmd preserves nonzero exit; real installation/state isolated and unchanged throughout');
+    assert.equal(fileHash(remarksPath), remarksBefore);
+    assert.equal((await projectRemarksRuntime.createRemarksStore({ filePath: remarksPath }).get()).projectRemarks['C:/exercise/project'], '副本自检');
+    pass('remarks bytes survive every installer apply/verify/repeat/restore and a fresh store reload');
+
+    // Export the complete old tools, not just JSON: old env pins the old 2/2 shape.
+    const upgradeFixture = join(exercise, 'upgrade-tool-fixture');
+    const upgradeHome = join(exercise, 'upgrade-app-0.202.0');
+    mkdirSync(upgradeFixture);
+    const oldFiles = execFileSync('git', ['ls-tree','-r','--name-only','dc07e7f','--','scripts','tools','patches','translations','package.json'], {cwd:REPO_ROOT,encoding:'utf8'}).trim().split(/\r?\n/);
+    for (const path of oldFiles) {
+      const destination = resolve(upgradeFixture,path);
+      assert.ok(destination.startsWith(resolve(upgradeFixture) + '\\'));
+      mkdirSync(dirname(destination), {recursive:true});
+      writeFileSync(destination,execFileSync('git',['show',`dc07e7f:${path}`],{cwd:REPO_ROOT,maxBuffer:16*1024*1024}));
+    }
+    cpSync(copyHome,upgradeHome,{recursive:true,errorOnExist:true,force:false});
+    const upgradePristine = join(upgradeFixture,relative(REPO_ROOT,ctx.pristine.dir));
+    cpSync(ctx.pristine.dir,upgradePristine,{recursive:true});
+    const upgradeRun = (operation,flags=[],expected=0) => {
+      const result=spawnSync(process.execPath,[join(upgradeFixture,'scripts',`${operation}.mjs`),`--home=${upgradeHome}`,...flags],{cwd:upgradeFixture,encoding:'utf8',windowsHide:true,timeout:180000});
+      const output=(result.stdout??'')+(result.stderr??'');
+      assert.equal(result.status,expected,output);
+      assert.equal(fileHash(remarksPath),remarksBefore);
+      return output;
+    };
+    assert.match(upgradeRun('apply'),/Applied Chinese localization/);
+    for(const dir of ['scripts','tools','patches','translations']) cpSync(join(REPO_ROOT,dir),join(upgradeFixture,dir),{recursive:true});
+    assert.match(upgradeRun('apply',['--dry-run'],1),/Missing\/non-unique marker|Translation source changed/);
+    assert.match(upgradeRun('restore',['--check']),/restorable/);
+    upgradeRun('restore');
+    assert.match(upgradeRun('apply',['--dry-run']),/Dry-run PASS/);
+    upgradeRun('apply'); upgradeRun('verify');
+    assert.match(upgradeRun('apply'),/Already applied/);
+    upgradeRun('restore');
+    pass('complete old 2/44/2 localization upgrades via restore to new 3/49/4 and remains restorable');
     console.log(`Full exercise PASS: ${results.length} scenarios; artifacts ${exercise}`);
   } catch(error) {
     writeFileSync(join(exercise,'results.json'),JSON.stringify({results,error:error.stack},null,2));
@@ -701,6 +800,7 @@ if (process.argv.includes('--exercise')) {
     assert.deepEqual(pairHash(real.files),realPair,'Real installed pair must remain unchanged');
     assert.deepEqual(snapshot(real.state),realState,'Real installed state must remain unchanged');
     assert.deepEqual(legacyBuild.map(file=>fileHash(file)),legacyBefore,'Pinned 0.200.0/0.201.0 builds must remain unchanged');
+    assert.equal(existsSync(realRemarksPath) ? fileHash(realRemarksPath) : null, realRemarksBefore, 'Real user remarks must remain unchanged');
     writeFileSync(join(exercise,'isolation-after.json'),JSON.stringify({realPair:pairHash(real.files),realState:snapshot(real.state),legacyBefore:legacyBuild.map(file=>fileHash(file)),source:fileHash(sourceFile),build:[buildFile,desktopFile,coverageFile].map(file=>fileHash(file))},null,2));
   }
 }

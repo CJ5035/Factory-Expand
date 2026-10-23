@@ -755,5 +755,15 @@
   "Toggle Developer Tools": "切换开发者工具",
   "Toggle Full Screen": "切换全屏",
   "Minimize": "最小化",
-  "Quit": "退出"
+  "Quit": "退出",
+  "Edit project remark": "编辑项目备注",
+  "Project remark": "项目备注",
+  "Save": "保存",
+  "Cancel": "取消",
+  "Saving…": "保存中…",
+  "Leave empty to clear the remark.": "留空保存即可清除备注。",
+  "Could not load project remarks.": "无法加载项目备注。",
+  "Could not save project remark.": "无法保存项目备注。",
+  "Retry": "重试",
+  "Project remark cannot exceed 80 characters.": "项目备注不能超过 80 个字符。"
 }
