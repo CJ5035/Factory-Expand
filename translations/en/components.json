@@ -487,7 +487,19 @@
         "signingIn": "Signing in",
         "connecting": "Starting Factory on this computer",
         "organization": "Loading your organization",
-        "workspace": "Opening your workspace"
+        "workspace": "Opening your workspace",
+        "githubPreparing": "Getting ready to open GitHub",
+        "githubConnect": "Opening GitHub to connect your account",
+        "githubInstall": "Opening GitHub to install the Factory app",
+        "integrationStarting": "Starting the connection",
+        "integrationFinishing": "Finishing the connection",
+        "returning": "Returning you to Factory",
+        "githubConnected": "GitHub connected. Returning you to Factory",
+        "githubInstallRequested": "Approval request sent to your GitHub org owner. Returning you to Factory",
+        "githubInstallCancelled": "Factory app not installed. Returning you to Factory",
+        "githubOrgInstallRequired": "GitHub account connected. Returning you to Factory",
+        "githubRepositoriesUpdated": "Repository access saved. Returning you to Factory",
+        "openingDesktop": "Opening the Factory desktop app"
       },
       "tips": {
         "specMode": "Toggle spec mode with",
@@ -585,6 +597,13 @@
       "nameThisAutomation": "Name this automation",
       "hideSection": "Hide {{title}}",
       "editSection": "Edit {{title}}"
+    },
+    "automationManagedModelField": {
+      "label": "Model",
+      "helperText": "Factory manages this model and keeps it up to date, skipping any model your organization blocks.",
+      "unavailable": "Your organization blocks every model this automation can use. Ask an admin to allow {{models}}.",
+      "checking": "Checking which models your organization allows…",
+      "noModel": "No model available"
     },
     "automationMarketplace": {
       "searchTemplates": "Search templates",
@@ -984,13 +1003,14 @@
     },
     "subagentFocusPanel": {
       "stopping": "Stopping…",
-      "openSubagentSession": "Open subagent session",
+      "expandSubagentSession": "Expand subagent session",
       "closeSubagentTranscript": "Close subagent transcript",
       "subagentTranscript": "{{title}} subagent transcript",
       "stopThisTask": "Stop this task",
       "stoppingSubagent": "Stopping subagent",
       "stopSubagent": "Stop subagent",
-      "openSession": "Open session",
+      "transcriptLoadFailed": "Couldn't load this subagent's transcript.",
+      "expand": "Expand",
       "close": "Close"
     },
     "v2ExecuteToolResult": {
@@ -1067,23 +1087,25 @@
       "resetDiagramView": "Reset diagram view"
     },
     "missionWelcomeBlock": {
-      "greeting": "Hi {{firstName}} 👋",
-      "greetingAnonymous": "Hi 👋",
-      "welcomeToYourMission": "Welcome to your <mission/>",
-      "intro": "Inside this mission, you talk to me, the orchestrator. My job is to keep a natural conversation going with you, and to use it to decide how I manage a fleet of agents toward the goals you've set for this mission.",
-      "agents": "<term>Your agents:</term> every agent I start shows up in <agents>Agents</agents>. Open one there to follow its work, message it directly, or answer its questions and approvals.",
-      "whereTheWorkRuns": "<term>Where the work runs:</term> by default, I run every agent on <where></where>. You can change this for future missions in <settings>Mission Defaults</settings>.",
-      "whereTheWorkRunsWithOthers": "<term>Where the work runs:</term> by default, I run every agent on <where></where>. I can also use <others></others>. You can change this for future missions in <settings>Mission Defaults</settings>.",
-      "orchestratorMachine": "the same machine I run on",
-      "yourMachines_one": "your machine: {{machines}}",
-      "yourMachines_other": "your machines: {{machines}}",
-      "freshComputerFrom_one": "a fresh computer from the {{templates}} template",
-      "freshComputerFrom_other": "a fresh computer from the {{templates}} templates",
-      "freshComputerOrYourMachines": "{{freshComputer}}, or {{yourMachines}}",
-      "templateName": "“{{name}}”",
-      "sharedNotes": "<term>Shared notes and plans</term> that I and the agents write go into the mission's shared folder. Browse them in <files>Files</files>.",
-      "pullRequests": "<term>Pull requests</term> the agents open show up in <prs>PRs</prs>, with their CI status.",
-      "steer": "<term>You can steer anytime:</term> change priorities, ask for a status update, or have me stop or redirect an agent."
+      "title": "Welcome to your Mission!",
+      "intro": "Your environment is ready. Tell me what to work on first, or I'll start planning from the mission name.",
+      "settingUpIntro": "Your environment is getting set up. Here's how this mission works while you wait.",
+      "orchestratorMachine": "Orchestrator machine",
+      "local": "Local",
+      "workingDirectory": "Working directory",
+      "branch": "Branch",
+      "howThisMissionWorks": "How this mission works",
+      "agentsTitle": "Agents work on their own",
+      "agentsDescription": "Each owns a piece of the work and reports back to me. Answer their questions here.",
+      "agentsAction": "Agents",
+      "filesTitle": "Shared notes and plans",
+      "filesDescription": "What I and the agents write goes into the mission's shared folder.",
+      "filesAction": "Files",
+      "pullRequestsTitle": "Pull requests",
+      "pullRequestsDescription": "PRs the agents open show up with their CI status.",
+      "pullRequestsAction": "PRs",
+      "startFailed": "This mission could not start.",
+      "discard": "Discard"
     },
     "pageHeader": {
       "back": "Back",
@@ -1349,7 +1371,6 @@
       "disabled": "Disabled",
       "enabled": "Enabled",
       "manageName": "Manage {{name}}",
-      "selectedCount": "{{total}} selected",
       "skillsNotSupportedForCloudTemplates": "Skills are not yet supported for sandboxes using cloud templates.",
       "noSkillsFound": "No skills found. Add skills to your ~/.factory/skills or .factory/skills folder.",
       "filter": {
@@ -1403,6 +1424,8 @@
         "performed": "Performed",
         "actions_one": "{{count}} action",
         "actions_other": "{{count}} actions",
+        "times_one": "{{count}} time",
+        "times_other": "{{count}} times",
         "performingActionsIn_one": "Performing {{count}} action in",
         "performingActionsIn_other": "Performing {{count}} actions in",
         "performedActionsIn_one": "Performed {{count}} action in",
@@ -1456,10 +1479,21 @@
     "v3ExecuteToolResult": {
       "clickToSeeProgress": "Click to see progress",
       "waitingForCommandOutput": "Waiting for command output...",
-      "expandCommandOutput": "Expand command output"
+      "expandCommandOutput": "Expand command output",
+      "ran": "Ran"
     },
     "v3ExitSpecModeToolResult": {
-      "proposeSpecification": "Propose Specification"
+      "proposeSpecification": "Propose Specification",
+      "specification": "Specification",
+      "writingSpec": "Writing spec…",
+      "awaitingReview": "Awaiting review",
+      "approved": "Approved",
+      "changesRequested": "Changes requested",
+      "notReviewed": "Not reviewed",
+      "interrupted": "Interrupted",
+      "failed": "Failed",
+      "untitledSpecification": "Untitled specification",
+      "reviewTitle": "Review {{title}}"
     },
     "v3FileChangeToolResult": {
       "noDiffAvailable": "No diff available",
@@ -1505,6 +1539,7 @@
       "missionSettings": "Settings",
       "archive": "Archive",
       "forceReboot": "Force Reboot",
+      "openTerminal": "Start a terminal on this machine",
       "copyWorkingDirectory": "Copy Working Directory",
       "copySessionId": "Copy Session ID",
       "copySessionLink": "Copy Session Link",
@@ -1550,6 +1585,32 @@
       "connect": "Connect",
       "connecting": "Connecting...",
       "offlineConnectToAnswer": "Offline — connect to answer"
+    },
+    "browserExternalProtocolPrompt": {
+      "title": "Open {{app}}?",
+      "detail": "{{origin}} wants to open this application.",
+      "detailUnknownOrigin": "A website wants to open this application.",
+      "detailPreview": "Preview of port {{port}} on {{computer}} wants to open this application.",
+      "alwaysAllow": "Always allow {{origin}} to open links of this type in the associated app",
+      "alwaysAllowPreview": "Always allow the preview of port {{port}} on {{computer}} to open links of this type in the associated app",
+      "open": "Open",
+      "cancel": "Cancel",
+      "defaultApplication": "the default application",
+      "unnamedComputer": "a remote computer"
+    },
+    "browserSitePermissionPrompt": {
+      "title": "{{origin}} wants to",
+      "titleLocalFile": "This file wants to",
+      "titlePreview": "Preview of port {{port}} on {{computer}} wants to",
+      "titleUnknown": "This page wants to",
+      "camera": "Use your camera",
+      "microphone": "Use your microphone",
+      "geolocation": "Know your location",
+      "notifications": "Show notifications",
+      "clipboardRead": "See text and images copied to the clipboard",
+      "allow": "Allow",
+      "block": "Block",
+      "unnamedComputer": "a remote computer"
     },
     "browserLoadError": {
       "sendToDroid": "Send to Droid",
@@ -1640,9 +1701,6 @@
         "dictationFailed": "Voice dictation failed.",
         "notSupported": "Voice dictation is not supported in this browser."
       }
-    },
-    "chatComposerExpandButton": {
-      "expand": "Expand chat composer"
     },
     "chatComposerAutonomySelector": {
       "loadingSessionSettings": "Loading session settings",
@@ -1859,8 +1917,6 @@
       "scheduledLoops": "Scheduled loops",
       "status": {
         "runningNow": "{{cadence}} · running now",
-        "held": "{{cadence}} · held",
-        "heldWithReason": "{{cadence}} · {{reason}}",
         "paused": "{{cadence}} · paused",
         "error": "{{cadence}} · error",
         "errorWithMessage": "{{cadence}} · error: {{error}}",
@@ -1880,6 +1936,11 @@
       "expandMarkdownTable": "Expand Markdown table",
       "markdownTableCopied": "Markdown table copied",
       "copyMarkdownTable": "Copy Markdown table"
+    },
+    "markdownMediaFallback": {
+      "tooLarge": "Too large to preview",
+      "unavailable": "Preview unavailable",
+      "openOnProvider": "Open on {{provider}}"
     },
     "queuedMessagesPanel": {
       "attachmentPreview": "Attachment preview",
@@ -1961,7 +2022,13 @@
       "expandSection": "Expand {{section}}",
       "issue": "Issue",
       "issueWithReference": "Issue {{reference}}",
-      "notionPage": "Notion page"
+      "notionPage": "Notion page",
+      "pullRequestState": {
+        "draft": "Draft",
+        "merged": "Merged",
+        "closed": "Closed"
+      },
+      "pullRequestWithState": "{{title}} ({{state}})"
     },
     "sessionInfoTooltip": {
       "sessionDetails": "Session Details",
@@ -2257,32 +2324,16 @@
       "leaveACommentOnSelectedText": "Leave a comment on the selected text"
     },
     "specReviewApprovalBar": {
-      "deleteComment": "Delete comment",
-      "comments": "Comments",
-      "noInlineComments": "No inline comments.",
-      "autonomyLevel": "Autonomy level",
-      "cancel": "Cancel",
-      "confirm": "Confirm",
-      "autonomyChoice": {
-        "off": "Auto (Off)",
-        "low": "Auto (Low)",
-        "medium": "Auto (Medium)",
-        "high": "Auto (High)"
-      },
       "approveMission": "Approve Mission",
       "approveSpec": "Approve Spec",
       "requestChanges": "Request changes",
       "keepIterating": "Keep iterating",
-      "proceedWithComments": "Proceed with comments",
-      "proceedWithSpec": "Proceed with Spec",
       "addInlineCommentToRequestChanges": "Add an inline comment to request changes",
-      "continueIn": "Continue in",
       "thisChat": "This chat",
       "thisChatDescription": "Keep the current conversation",
       "newChat": "New chat",
       "newChatDescription": "Start fresh with only the approved spec",
       "contextSavings": "({{savings}}% context savings)",
-      "proceedWithSpecInNewChat": "Proceed with Spec in a new chat",
       "startingNewChat": "Starting new chat…"
     },
     "specReviewPanel": {
@@ -2953,7 +3004,7 @@
       "orchestratorAndAgentsTitle": "A lead droid and its team",
       "orchestratorAndAgentsBody": "An <term>orchestrator</term> breaks your goal into areas and puts an <term>agent</term> on each one. Agents build and report back; the orchestrator keeps them coordinated and pulls the results together.",
       "machinesTitle": "It works while you’re away",
-      "machinesBody": "Pick a <term>template</term> when you start and each agent gets its own cloud computer, so the mission keeps going after you close your laptop. You can also run it on this computer or one of your machines, where the agents share it. Change the defaults anytime in <term>Mission Defaults</term> in Settings.",
+      "machinesBody": "Pick an <term>environment</term> when you start and each agent gets its own cloud computer, so the mission keeps going after you close your laptop. You can also run it on this computer or one of your machines, where the agents share it. Change the defaults anytime in <term>Mission Defaults</term> in Settings.",
       "steeringTitle": "You’re the lead, not the operator",
       "steeringBody": "The mission checks in only when a decision is yours, and the work comes back as pull requests to review. Follow any agent in the <term>Agents</term> pane. Missions use more tokens than a single session, so save them for big work."
     },
@@ -2971,13 +3022,13 @@
       "ownsTheTests": "owns the tests",
       "assignsAndReports": "assigns ↓ · reports ↑",
       "orchestratorAndAgentsAriaLabel": "The orchestrator assigns work to three agents, each owning one area, and they report back",
-      "template": "Template",
+      "template": "Environment",
       "freshComputer": "Fresh computer",
       "yourMachine": "Your machine",
       "allAgents": "All agents",
       "ownCloudComputerPerAgent": "its own cloud computer per agent",
       "agentsShareOneMachine": "agents share one machine",
-      "machinesAriaLabel": "A template gives each agent a fresh computer; on your own machine, agents share one machine",
+      "machinesAriaLabel": "An environment gives each agent a fresh computer; on your own machine, agents share one machine",
       "you": "You",
       "chatAndDecide": "chat and decide",
       "agentsPane": "Agents pane",
@@ -3092,6 +3143,16 @@
       "tooltipDescription": "Automatically addresses review comments, fixes failing CI checks, and rebases the PR by sending follow-up messages to this agent."
     }
   },
+  "checkForUpdatesModal": {
+    "youreOnTheLatestVersion": "You're on the latest version",
+    "checkingForUpdates": "Checking for updates…",
+    "newVersionAvailable": "A new version is available",
+    "newVersionAvailableVersionsBehind": "A new version is available ({{behind}} versions behind)",
+    "preparingUpdateTo": "Preparing update to v{{version}}…",
+    "downloadingVersion": "Downloading v{{version}}…",
+    "downloadingUpdate": "Downloading update…",
+    "readyToInstallOnRestart": "v{{version}} is downloaded and installs the next time the app restarts."
+  },
   "common": {
     "copyableId": {
       "copyFullId": "Copy full ID",
@@ -3158,6 +3219,9 @@
     },
     "stepProgressDots": {
       "stepsComplete": "{{completed}} of {{total}} steps complete"
+    },
+    "wizardStepIndicator": {
+      "stepLabel": "{{number}}. {{label}}"
     },
     "clipboardToast": {
       "copied": "Copied {{item}}",
@@ -3268,6 +3332,24 @@
       "label": "Pagination",
       "nextPage": "Next page",
       "previousPage": "Previous page"
+    }
+  },
+  "desktopRepoPicker": {
+    "ariaLabel": "Choose a working folder",
+    "title": "Where should Droid work?",
+    "subtitle": "Pick a project. Droid reads, edits, and runs code there.",
+    "subtitleNoRecents": "Choose a project folder. Until you do, Droid works in your home folder.",
+    "subtitleLoading": "Loading your recent folders…",
+    "recent": "Recent",
+    "selectFolder": "Work in {{name}} ({{path}})",
+    "chooseFolder": "Choose folder…",
+    "useHomeFolder": "Use home folder",
+    "opening": "Opening {{name}} for this session…",
+    "trust": {
+      "title": "Trust {{name}}?",
+      "confirm": "Trust and continue",
+      "saving": "Trusting this folder…",
+      "cancel": "Pick another"
     }
   },
   "evaluations": {
@@ -3393,7 +3475,9 @@
       "saving": "Saving…",
       "revisionWithdrawn": "This revision was withdrawn by its publisher.",
       "datasetHasNoTasks": "This dataset has no tasks.",
-      "details": "Details"
+      "details": "Details",
+      "tasks": "Tasks",
+      "loadingTasks": "Loading tasks…"
     },
     "evaluationPresetLibrary": {
       "searchPresets": "Search presets",
@@ -3487,15 +3571,19 @@
       "noMatchingFiles": "No matching files",
       "filePreview": "File preview"
     },
+    "evaluationAdvancedOptionsField": {
+      "droidCliFlags": "Droid CLI flags",
+      "droidVersion": "Droid version",
+      "latestRelease": "Latest release",
+      "invalidVersion": "Enter a full version, such as 1.2.3.",
+      "environmentVariables": "Environment variables",
+      "envWarning": "One KEY=value per line. The agent and the grader can read these values, so never put secrets here."
+    },
     "evaluationRunConfigFields": {
-      "tasks": "Tasks",
-      "loadingTasks": "Loading tasks…",
       "skills": "Skills",
       "execution": "Execution",
       "concurrency": "Concurrency",
-      "concurrencyError": "Enter a number from 1 to {{max}}.",
-      "droidCliFlags": "Droid CLI flags",
-      "flagValue": "--flag value"
+      "concurrencyError": "Enter a number from 1 to {{max}}."
     },
     "evaluationRunPanel": {
       "saveAsPreset": "Save as preset",
@@ -3510,11 +3598,12 @@
       "startRun": "Start run",
       "noPreset": "No preset",
       "setup": "Setup",
-      "back": "Back",
       "savePreset": "Save preset",
       "saving": "Saving…",
       "presetName": "Preset name",
-      "notes": "Notes"
+      "notes": "Notes",
+      "notSavedInPreset": "Presets do not save these advanced options: {{keys}}.",
+      "tasks": "Tasks"
     },
     "evaluationRunsTable": {
       "runsUnavailable": "Runs unavailable",
@@ -3893,7 +3982,8 @@
       "openWorkstreamLink": "Open workstream",
       "filterByWorkstream": "Filter by workstream {{name}}",
       "workstreamNoDescription": "No description yet",
-      "workstreamListener": "Listener"
+      "workstreamListener": "Listener",
+      "noListenerAutomations": "No automations run in its session."
     },
     "missionAgentSignal": {
       "title": "Signals",
@@ -4117,8 +4207,12 @@
       "discardPendingReviewWithCommentsDescription_other": "Your pending review and its {{count}} comments will be deleted without being published.",
       "reviewWithPendingComments_one": "Review, {{count}} pending comment",
       "reviewWithPendingComments_other": "Review, {{count}} pending comments",
-      "mergeStack_one": "Merge {{count}} pull request",
-      "mergeStack_other": "Merge {{count}} pull requests",
+      "mergeStack": "Merge stack",
+      "mergeStackMethods": {
+        "squash": "Squash and merge stack",
+        "merge": "Merge stack",
+        "rebase": "Rebase and merge stack"
+      },
       "mergeStackTitle_one": "Merge {{count}} pull request?",
       "mergeStackTitle_other": "Merge {{count}} pull requests?",
       "mergeStackDescription": "They merge into {{baseBranch}}, starting at the bottom of the stack.",
@@ -4131,14 +4225,89 @@
       "showLess": "Show less",
       "showMore": "Show more"
     },
+    "pullRequestQaRecordingPlayer": {
+      "play": "Play",
+      "pause": "Pause",
+      "position": "Recording position",
+      "positionValue": "{{current}} of {{duration}}",
+      "markLabel": "{{time}} {{label}}",
+      "timeReadout": "{{current}} / {{duration}}",
+      "fullscreen": "Full screen",
+      "exitFullscreen": "Exit full screen"
+    },
+    "pullRequestQaReport": {
+      "verdicts": {
+        "passed": "Passed",
+        "partial": "Partial",
+        "failed": "Failed",
+        "blocked": "Blocked",
+        "skipped": "Skipped"
+      },
+      "statuses": {
+        "passed": "Passed",
+        "failed": "Failed",
+        "blocked": "Blocked",
+        "flaky": "Flaky",
+        "inconclusive": "Inconclusive",
+        "cannotTest": "Cannot test"
+      },
+      "statusMeanings": {
+        "passed": "QA ran this case and the change behaved as intended.",
+        "failed": "QA ran this case and the change did not behave as intended.",
+        "blocked": "QA started this case, but setup or the environment stopped it before a result.",
+        "flaky": "QA got an unreliable result, such as a timeout or an outcome that changed between attempts.",
+        "inconclusive": "QA could not tell what this case should prove, so it did not call it a pass.",
+        "cannotTest": "QA could not test this change in its environment, so another tester has to check it."
+      },
+      "title": "QA report",
+      "passedCount": "{{passed}} of {{total}} passed",
+      "unnamedMoment": "Verified moment",
+      "media": "Media",
+      "recording": "Recording",
+      "recordingNotes_one": "{{count}} recording note",
+      "recordingNotes_other": "{{count}} recording notes",
+      "playFrom": "Play from {{time}}: {{label}}",
+      "playFromInTestCase": "Play from {{time}}: {{label}} (test case: {{testCase}})",
+      "playTestFrom": "Play {{name}} from {{time}}",
+      "momentTestCaseLabel": "Test case:",
+      "actionRequired": "Action required",
+      "actionRequiredApps_one": "{{count}} app: {{apps}}",
+      "actionRequiredApps_other": "{{count}} apps: {{apps}}",
+      "actionRequiredItems_one": "{{count}} item",
+      "actionRequiredItems_other": "{{count}} items",
+      "actionRequiredScope": "· {{scope}}",
+      "testCases": "Test cases",
+      "filterLabel": "Show test cases",
+      "filters": {
+        "all": "All {{total}}",
+        "needsAttention": "Needs attention {{total}}",
+        "passed": "Passed {{total}}"
+      },
+      "testCount_one": "{{count}} test",
+      "testCount_other": "{{count}} tests",
+      "attentionCount_one": "{{count}} needs attention",
+      "attentionCount_other": "{{count}} need attention",
+      "groupCountWithAttention": "{{tests}} · {{attention}}",
+      "foldedPasses_one": "{{count}} passed",
+      "foldedPasses_other": "{{count}} passed",
+      "show": "Show",
+      "hide": "Hide",
+      "showPasses_one": "Show {{count}} passed test",
+      "showPasses_other": "Show {{count}} passed tests",
+      "hidePasses_one": "Hide {{count}} passed test",
+      "hidePasses_other": "Hide {{count}} passed tests",
+      "observed": "What QA saw",
+      "toTest": "Left to test",
+      "evidenceFiles": "Evidence files",
+      "testedAs": "Tested as",
+      "more": "More",
+      "appEvidence": "{{app}} evidence",
+      "appRecording": "{{app}} recording",
+      "notes": "Notes",
+      "statusMeaningSuffix": "· {{meaning}}"
+    },
     "pullRequestDiffFileTree": {
       "changedFiles": "Changed files"
-    },
-    "pullRequestLayerManifestProgress": {
-      "viewSession": "View session",
-      "retryGeneration": "Retry generation",
-      "checking": "Checking…",
-      "checkAgain": "Check again"
     },
     "pullRequestLinkCard": {
       "opensInYourGitProvider": "Opens in your Git provider"
@@ -4169,6 +4338,22 @@
     "pullRequestReviewFindingRow": {
       "inMainConversation": "In main conversation"
     },
+    "pullRequestReviewFloatingChat": {
+      "minimize": "Minimize chat",
+      "restore": "Show chat",
+      "dock": "Open chat in side panel",
+      "needsApproval": "Needs your approval",
+      "hasQuestion": "Droid has a question",
+      "working": "Working",
+      "replied": "Replied"
+    },
+    "pullRequestReviewerRow": {
+      "codeOwner": "Code owner"
+    },
+    "pullRequestCodeOwnerApproval": {
+      "title": "Needs code owner approval",
+      "owners": "Code owners"
+    },
     "pullRequestMergeability": {
       "triggerLabel": "Merge status: {{status}}",
       "headlines": {
@@ -4184,13 +4369,31 @@
         "changesRequested": "Changes requested",
         "changesRequestedDetail": "A reviewer requested changes before this can merge.",
         "reviewRequired": "Review required",
-        "reviewRequiredDetail": "The base branch requires an approving review."
+        "reviewRequiredDetail": "The base branch requires an approving review.",
+        "approvalsRequired_one": "{{approvals}} of {{count}} required approval",
+        "approvalsRequired_other": "{{approvals}} of {{count}} required approvals",
+        "approvalsRequiredDetail": "More approving reviews are needed before merging.",
+        "codeOwnerReviewRequired": "Code owner review required",
+        "codeOwnerReviewRequiredDetail": "A code owner of the changed files must approve before merging.",
+        "codeOwnerReviewRequiredFrom": "Waiting on review from {{owners}}.",
+        "latestPushApprovalRequired": "Approval of the latest push required",
+        "latestPushApprovalRequiredDetail": "Someone other than the last person to push must approve the latest changes."
+      },
+      "conversations": {
+        "unresolved": "Unresolved conversations",
+        "unresolvedCount_one": "{{count}} unresolved conversation",
+        "unresolvedCount_other": "{{count}} unresolved conversations",
+        "unresolvedDetail": "The base branch requires all conversations to be resolved before merging."
       },
       "checks": {
         "passed": "All checks have passed",
         "failed": "Some checks were not successful",
         "needAttention": "Some checks need attention",
-        "inProgress": "Some checks haven't completed yet"
+        "inProgress": "Some checks haven't completed yet",
+        "optionalFailed": "Some optional checks were not successful",
+        "requiredFailed": "Some required checks were not successful",
+        "requiredMustPass": "Required checks must pass before merging",
+        "requiredInProgress": "Some required checks haven't completed yet"
       },
       "conflicts": {
         "none": "No conflicts with the base branch",
@@ -4289,10 +4492,16 @@
       "changedInSections_other": "Changed in {{formattedCount}} sections",
       "codeRefBefore": "{{location}} (before)",
       "architectureLabel": "Architecture diagram",
+      "expandArchitecture": "Expand",
+      "expandedArchitectureTitle": "Architecture",
+      "closeExpandedArchitecture": "Close",
       "nodeKindAndChange": "{{kind}} · {{change}}",
       "nodeLabel": "{{label}}, {{kind}}, {{change}}",
-      "connectionTo": "→ {{node}}",
-      "connectionFrom": "← {{node}}",
+      "connectionsLabel": "Connections",
+      "connectionTo": "To {{node}}",
+      "connectionToLabeled": "To {{node}}: {{label}}",
+      "connectionFrom": "From {{node}}",
+      "connectionFromLabeled": "From {{node}}: {{label}}",
       "kinds": {
         "route": "Route",
         "page": "Page",
@@ -4378,8 +4587,6 @@
         "projects": "Projects",
         "computers": "Computers",
         "recent": "Recent",
-        "personalSessions": "Personal Sessions",
-        "sharedSessions": "Shared Sessions",
         "pinned": "Pinned",
         "yourMissions": "Missions"
       },
@@ -4423,6 +4630,7 @@
       },
       "types": {
         "sessions": "Sessions",
+        "delegations": "Delegations",
         "exec": "Exec",
         "automations": "Automations",
         "softwareFactory": "Software Factory",
@@ -4500,11 +4708,13 @@
       "draft": "Draft",
       "unpinSession": "Unpin session",
       "pinSession": "Pin session",
+      "tiledTitle": "{{title}} (tiled)",
       "actions": {
         "unpin": "Unpin",
         "pin": "Pin",
         "markAsUnread": "Mark as Unread",
         "tileSession": "Tile Session",
+        "removeFromTiles": "Remove from Tiles",
         "openInNewWindow": "Open in New Window",
         "fork": "Fork",
         "rename": "Rename",
@@ -4515,10 +4725,6 @@
         "newSection": "New Section",
         "removeFromSection": "Remove from Section"
       },
-      "hideWorkers": "Hide workers",
-      "showWorkers": "Show workers",
-      "hideWorkstreams": "Hide workstreams",
-      "showWorkstreams": "Show workstreams",
       "unpinTitle": "Unpin {{title}}",
       "pinTitle": "Pin {{title}}",
       "archiveSession": "Archive session",
@@ -4538,16 +4744,19 @@
         "year_one": "{{count}}y",
         "year_other": "{{count}}y"
       },
-      "hideWorkersFor": "Hide workers for {{title}}",
-      "showWorkersFor": "Show workers for {{title}}",
-      "hideWorkstreamsFor": "Hide workstreams for {{title}}",
-      "showWorkstreamsFor": "Show workstreams for {{title}}",
       "environments": {
-        "template": "Template",
+        "template": "Environment",
         "droidComputer": "Droid Computer"
       },
       "pullRequestLabel": "Pull request {{state}}",
       "pullRequestLabelLastKnown": "Pull request {{state}} (last known)",
+      "pullRequestTooltipLastKnown": "{{title}} (last known state)",
+      "pullRequestTooltipMore_one": "{{count}} more pull request",
+      "pullRequestTooltipMore_other": "{{count}} more pull requests",
+      "pullRequestCountLabel_one": "{{count}} pull request {{state}}",
+      "pullRequestCountLabel_other": "{{count}} pull requests {{state}}",
+      "pullRequestCountLabelLastKnown_one": "{{count}} pull request {{state}} (last known)",
+      "pullRequestCountLabelLastKnown_other": "{{count}} pull requests {{state}} (last known)",
       "pullRequestStates": {
         "open": "open",
         "draft": "draft",
@@ -4618,6 +4827,7 @@
       "automations": "Automations",
       "customize": "Customize",
       "codeReview": "Code Review",
+      "tileCodeReview": "Tile Code Review",
       "search": "Search",
       "paymentOverdue": "Payment overdue",
       "goToBilling": "Go to billing",
@@ -4683,7 +4893,12 @@
       "downloadingVersion": "Downloading version {{version}}",
       "downloadingUpdate": "Downloading update",
       "updateFailedClickToRetry": "Update failed. Click to retry.",
-      "updateAvailableAriaLabel": "Update available: v{{version}}. Click to download and restart into the latest version."
+      "updateAvailableAriaLabel": "Update available: v{{version}}. Click to download and restart into the latest version.",
+      "keepWorkingInstallsOnRestart": "You can keep working. It installs the next time you restart.",
+      "versionReady": "Version {{version}} is ready",
+      "clickToRestartNow": "Click to restart now. Otherwise it installs the next time the app restarts.",
+      "restartToUpdate": "Restart to update",
+      "restartToUpdateAriaLabel": "Version {{version}} is ready. Restart to update."
     },
     "missionPullRequestRow": {
       "draft": "Draft",
@@ -4701,12 +4916,6 @@
       "backToChanges": "Back to changes",
       "changeDetailSections": "Change detail sections"
     },
-    "sessionListV2WorkstreamRow": {
-      "symbolPicker": {
-        "label": "Workstream icon",
-        "triggerLabel": "Icon for {{name}}: {{symbol}}"
-      }
-    },
     "newSessionTilePlaceholder": {
       "title": "New session",
       "hint": "Continue here to start a session in this spot.",
@@ -4714,7 +4923,8 @@
       "close": "Close new session"
     },
     "sessionTileDropPreview": {
-      "label": "Drop to tile"
+      "label": "Drop to tile",
+      "swapLabel": "Drop to swap"
     }
   },
   "lessons": {
@@ -5081,18 +5291,6 @@
       "cancel": "Cancel",
       "enterToStart": "to start"
     },
-    "newMissionLaunch": {
-      "label": "Starting {{title}}",
-      "summary": "Mission settings",
-      "summaryItem": "{{label}}: {{value}}",
-      "steps": "Startup steps",
-      "done": "Done",
-      "upcoming": "Upcoming",
-      "announcement": "Now: {{step}}",
-      "provisioningProgress": "{{index}}/{{count}} · {{percent}}",
-      "stepCount": "Step {{current}} of {{total}}",
-      "opensWhenReady": "Opens automatically when ready."
-    },
     "missionSettings": {
       "title": "Mission settings",
       "sections": {
@@ -5109,40 +5307,25 @@
         "orchestratorReasoning": "Orchestrator reasoning",
         "orchestratorReasoningDescription": "Reasoning effort for the orchestrator's next turns.",
         "agentModel": "Agent model",
-        "agentModelDescription": "Model for agents started from now on. Running agents keep theirs.",
+        "agentModelDescription": "Model for all agents. Running agents switch at their next turn; Default applies only to new agents.",
         "agentReasoning": "Agent reasoning",
-        "agentReasoningDescription": "Reasoning effort for agents started from now on.",
+        "agentReasoningDescription": "Reasoning effort for all agents. Running agents switch at their next turn; Default applies only to new agents.",
         "readOnly": "You can view these settings but not change them from here."
       },
       "usage": {
         "thisMission": "This mission",
         "credits": "Credits",
-        "tokens": "Tokens",
         "agents": "Agents",
         "estimateNote": "Credits are Factory Standard Credits as each session estimates them. Your bill may differ slightly.",
-        "tokenBreakdown": "Token breakdown",
-        "tokenBreakdownFor": "Token breakdown for {{name}}",
-        "categories": {
-          "inputTokens": "Input",
-          "outputTokens": "Output",
-          "cacheWriteTokens": "Cache write",
-          "cacheReadTokens": "Cache read"
-        },
-        "missingTokens_one": "Leaves out {{count}} session whose token counts are not available yet.",
-        "missingTokens_other": "Leaves out {{count}} sessions whose token counts are not available yet.",
         "sessions": "Sessions",
         "columns": {
           "session": "Session",
           "model": "Model",
           "credits": "Credits",
-          "tokens": "Tokens",
           "share": "Share"
         },
         "orchestrator": "Orchestrator",
         "openSession": "Open {{name}}",
-        "showBreakdown": "Show token breakdown for {{name}}",
-        "hideBreakdown": "Hide token breakdown for {{name}}",
-        "noTokens": "No token counts reported yet.",
         "notReported": "Not reported",
         "shareLabel": "{{name}}'s share of the mission"
       }
@@ -5153,7 +5336,6 @@
       "settings": "Workstream settings",
       "skills": "Skills",
       "flowLabel": "{{name}} data flow",
-      "pollSchedule": "Polls on {{schedule}}",
       "untitledSession": "Untitled agent",
       "statusWithLastActive": "{{status}} · {{time}}",
       "columns": {
@@ -5173,19 +5355,50 @@
         "working": "Working",
         "idle": "Idle"
       }
+    },
+    "workstreamList": {
+      "title": "Workstreams",
+      "newWorkstream": "New workstream",
+      "emptyTitle": "No workstreams yet",
+      "emptyDescription": "Workstreams the orchestrator creates in this mission show up here.",
+      "agentCount_one": "{{count}} agent",
+      "agentCount_other": "{{count}} agents",
+      "pullRequestCount_one": "{{count}} PR",
+      "pullRequestCount_other": "{{count}} PRs"
+    },
+    "usageBanner": {
+      "nearLimitTitleFiveHour": "You've used {{percent}}% of your 5-hour usage",
+      "nearLimitTitleWeekly": "You've used {{percent}}% of your weekly usage",
+      "nearLimitTitleMonthly": "You've used {{percent}}% of your monthly usage",
+      "nearLimitTitleBillingPeriod": "You've used {{percent}}% of your usage for this billing period",
+      "nearLimitDescription": "Agents keep working until the limit, then stop until it resets {{resetTime}}. To make it last, switch agents or the orchestrator to a lower reasoning effort or a cheaper model.",
+      "nearLimitDescriptionNoReset": "Agents keep working until the limit, then stop. To make it last, switch agents or the orchestrator to a lower reasoning effort or a cheaper model.",
+      "standardUsedUpTitle": "Your standard usage is used up",
+      "standardUsedUpDescription": "Agents in this mission have stopped until it resets {{resetTime}}. Switch the mission to Droid Core to keep going on its separate allowance, or add usage.",
+      "organizationLimitTitle": "You've reached the usage limit set by your organization",
+      "organizationLimitDescription": "Agents in this mission have stopped until it resets {{resetTime}}. Ask your admin to raise it.",
+      "organizationLimitDescriptionNoReset": "Agents in this mission have stopped. Ask your admin to raise the limit.",
+      "usedUpTitle": "Usage limit reached",
+      "usedUpDescription": "Agents in this mission have stopped until usage resets {{resetTime}}. Add usage, or switch to a model you bring yourself (BYOK) in mission settings.",
+      "usedUpDescriptionNoReset": "Agents in this mission have stopped. Check your usage, or switch to a model you bring yourself (BYOK) in mission settings.",
+      "changeModels": "Change models",
+      "manageUsage": "Manage usage",
+      "dismiss": "Dismiss"
     }
   },
   "onboarding": {
     "firstRunOnboarding": {
-      "tellUsAboutYourRole": "Tell us about your role",
-      "back": "Back",
       "skip": "Skip",
-      "hereAreAFewWaysTo": "Here are a few ways to get started",
-      "installedForYourRole": "Installed for your role:",
+      "whatDoYouWorkOn": "What do you work on?",
       "greeting": "Welcome to Factory",
       "greetingWithName": "Welcome to Factory, {{name}}",
       "teammateCount_one": "{{count}} teammate",
       "teammateCount_other": "{{count}} teammates"
+    },
+    "starterSuggestions": {
+      "heading": "Start with an idea",
+      "installedForYourRole": "Installed for your role:",
+      "loading": "Finding ideas for your code"
     },
     "nameStage": {
       "theSanFranciscoAiFactory": "The San Francisco AI Factory",
@@ -5202,7 +5415,6 @@
       "returnToDesktopApp": "Return to desktop app",
       "learnMore": "Learn more",
       "youAlreadyHaveTheCliInstalled": "You already have the CLI installed. You can close this tab and continue in your terminal.",
-      "continueOnWeb": "Continue in your browser",
       "runDroidInYourTerminalWith": "Run Droid in your terminal with full control over your workflow. Integrates with VS Code and JetBrains IDEs.",
       "commandLine": "Command line",
       "useYourOwnApiKeys": "Use your own API keys",
@@ -5318,6 +5530,133 @@
       "getStarted": "Get started",
       "stepOf": "Step {{current}} of {{total}}",
       "currentLabel": " · {{label}}"
+    },
+    "webEnvironmentSetup": {
+      "stepOfTotal": "Step {{step}} of {{total}}",
+      "freeHoursLeft_one": "{{hours}} free cloud hour left",
+      "freeHoursLeft_other": "{{hours}} free cloud hours left",
+      "skipForNow": "Skip for now",
+      "tryAgain": "Try again",
+      "checkAgain": "Check again",
+      "cancel": "Cancel",
+      "dismiss": "Dismiss",
+      "connect": {
+        "title": "Connect GitHub to work on your code",
+        "connectGitHub": "Connect GitHub",
+        "waitingForAccount": "Waiting for GitHub sign-in…",
+        "waitingForApp": "Waiting for the app install on GitHub…",
+        "checkingStatus": "Checking for the app install…",
+        "popupBlocked": "Your browser blocked the GitHub window. Allow pop-ups for this site, then try again.",
+        "failedFallback": "Couldn't connect to GitHub.",
+        "installCancelledDescription": "Finish installing the Factory app on GitHub to pick a repository.",
+        "accountStep": "Connect your GitHub account",
+        "appStep": "Install the Factory app on your GitHub org",
+        "stepDone": "Done",
+        "stepNeedsAdmin": "Needs an admin",
+        "installApp": "Install Factory app",
+        "adminLinkLabel": "Install link for an admin",
+        "copyLink": "Copy link",
+        "copied": "Copied",
+        "subtitle": {
+          "connect": "Droid needs access to your repositories to work on your code.",
+          "connectFreeHours": "Connecting GitHub installs the Factory app and unlocks your free cloud hours.",
+          "waiting": "Finish in the GitHub window. We'll pick up here automatically.",
+          "install": "Factory reads your repositories through this app to build your cloud environment.",
+          "installFreeHours": "Factory reads your repositories through this app to build your cloud environment. Installing it also unlocks your free cloud hours.",
+          "askAdmin": "Send this link to a Factory admin in your org so they can install the app, then check again.",
+          "approval": "A GitHub org owner needs to approve the Factory app. Once they do, check again to choose your repositories.",
+          "approvalFreeHours": "A GitHub org owner needs to approve the Factory app. Once they do, your free cloud hours start and you can choose your repositories."
+        }
+      },
+      "chooseRepos": {
+        "title": "Choose repositories for your environment",
+        "announcement": "GitHub connected. Choose repositories for your environment.",
+        "searchLabel": "Search repositories",
+        "searchPlaceholder": "Search repositories",
+        "listLabel": "Repositories",
+        "loading": "Loading your repositories from GitHub…",
+        "noMatches": "No repositories match “{{query}}”",
+        "emptyTitle": "Factory can't see any repositories yet",
+        "emptyDescription": "Choose which repositories the Factory app can access on GitHub.",
+        "configureOnGitHub": "Configure on GitHub",
+        "nameLabel": "Environment name",
+        "namePlaceholder": "my-environment",
+        "nameHelper": "Lowercase letters, numbers and dashes.",
+        "create": "Create environment",
+        "creating": "Creating environment…",
+        "controlKey": "Ctrl",
+        "selectedCount_one": "{{count}} repository selected",
+        "selectedCount_other": "{{count}} repositories selected",
+        "ssoInstruction": "<authorize>Authorize SSO for {{organization}}</authorize> to see its repositories",
+        "reconnectGitHub": "Reconnect GitHub",
+        "emptyNoReposDescription": "Repositories you create on GitHub, or give the Factory app access to, show up here.",
+        "addRepositories": "Add repositories on {{account}}",
+        "addingRepositories": "Waiting for you to choose repositories on GitHub…",
+        "loadMore": "Show more repositories",
+        "loadingMore": "Loading more repositories…",
+        "searching": "Searching GitHub for “{{query}}”…",
+        "startingComputer": "Starting a cloud computer…"
+      },
+      "building": {
+        "droidLabel": "Droid",
+        "title": "Building {{name}}",
+        "keepWorking": "You can keep working. We'll let you know when it's ready.",
+        "phase": {
+          "queued": "Waiting to start",
+          "building": "Setting up your environment",
+          "validating": "Testing that it starts"
+        }
+      },
+      "ready": {
+        "message": "{{name}} is ready. New sessions will use it.",
+        "useEnvironment": "Use {{name}}"
+      },
+      "buildFailed": {
+        "title": "Environment build failed",
+        "fallback": "We couldn't build {{name}}.",
+        "retry": "Retry",
+        "viewDetails": "View details",
+        "retrying": "Restarting the build…"
+      },
+      "computeUnavailable": {
+        "allowanceExhaustedTitle": "You've used your free cloud hours",
+        "allowanceExhaustedDescription": "Start a plan to keep running Droid in the cloud, or use the desktop app to work on your own machine.",
+        "alreadyClaimedTitle": "Free cloud hours already used",
+        "alreadyClaimedDescription": "Free cloud hours for this GitHub account were already used by another workspace. Start a plan to run Droid in the cloud, or use the desktop app on your own machine.",
+        "billingIssueTitle": "Billing needs an update",
+        "billingIssueDescription": "Cloud computers resume once your billing is updated. Until then, you can use the desktop app on your own machine.",
+        "blockedTitle": "Cloud computers aren't available for this workspace",
+        "blockedDescription": "Your region or an admin policy may limit cloud access. You can still run Droid on your own machine with the desktop app.",
+        "startPlan": "Start a plan",
+        "updateBilling": "Update billing",
+        "useDesktop": "Use Desktop"
+      }
+    },
+    "scmConnectOnly": {
+      "notNow": "Not now",
+      "cancel": "Cancel",
+      "connect": {
+        "title": "Connect your {{provider}} account",
+        "titleAny": "Connect your code host account",
+        "subtitle": "Your team already set up cloud environments. Connect your account to start sessions in them.",
+        "subtitleCount_one": "Your team set up {{count}} cloud environment. Connect your account to start a session in it.",
+        "subtitleCount_other": "Your team set up {{count}} cloud environments. Connect your account to start a session in one.",
+        "button": "Connect {{provider}}",
+        "tryAgain": "Retry {{provider}}",
+        "popupBlocked": "Your browser blocked the {{provider}} window. Allow pop-ups for this site, then try again.",
+        "waiting": "Finish connecting {{provider}} in your browser…"
+      },
+      "pick": {
+        "title": "Pick an environment",
+        "subtitle": "Your account can now use these environments. Pick one to start a session there.",
+        "connectedAs": "{{provider}} connected",
+        "repoCount_one": "{{count}} repo",
+        "repoCount_other": "{{count}} repos",
+        "repoNamesMore": "{{names}} +{{count}}",
+        "rowLabel": "Start in {{name}} ({{summary}})",
+        "emptyTitle": "No environments you can use yet",
+        "emptyDescription": "Ask an admin to give you access to one. You can still start a session without a cloud environment."
+      }
     }
   },
   "settings": {
@@ -5398,6 +5737,7 @@
     },
     "directoryGroupList": {
       "usageLimit": "Usage limit",
+      "modelAccess": "Model access",
       "configurationLabel": "{{label}}: {{detail}}",
       "none": "None",
       "editConfiguration": "Edit group configuration",
@@ -6110,11 +6450,15 @@
         "model": "Model",
         "fast": "Fast",
         "multiplier": "Multiplier",
-        "enabled": "Enabled"
+        "enabled": "Enabled",
+        "allow": "Allow",
+        "block": "Block"
       },
       "ungroupedLabel": "Other",
       "yes": "Yes",
-      "toggleModel": "Toggle {{modelName}}"
+      "toggleModel": "Toggle {{modelName}}",
+      "allowModel": "Allow {{modelName}}",
+      "blockModel": "Block {{modelName}}"
     },
     "networkPolicySection": {
       "whenEnabledAllApiAndApplication": "When enabled, all API and application requests must originate from an allowed IP address. This applies to CLI, web app, and API key usage.",
@@ -6411,7 +6755,7 @@
         "updateFailed": "The latest build failed. Sessions keep using the last successful build.",
         "updating": "A new build is running. Sessions use the last successful build until it finishes.",
         "queued": "Waiting for a build slot.",
-        "environmentUnavailable": "The OpenCompute deployment or driver this template uses no longer exists. Edit the template and select a new provider."
+        "environmentUnavailable": "The OpenCompute deployment or driver this environment uses no longer exists. Edit the environment and select a new provider."
       },
       "onboarding": {
         "title": "Give Droid a computer that's ready to work",
@@ -6507,8 +6851,8 @@
     },
     "sandboxEnvironmentDetailView": {
       "environmentUnavailable": {
-        "title": "This template's provider is no longer available",
-        "description": "The OpenCompute deployment or driver this template uses no longer exists, so new sessions can't start from it. Edit the template and select a new provider."
+        "title": "This environment's provider is no longer available",
+        "description": "The OpenCompute deployment or driver this environment uses no longer exists, so new sessions can't start from it. Edit the environment and select a new provider."
       },
       "healthStatus": {
         "queued": {
@@ -6658,7 +7002,7 @@
       "environment": "Source",
       "unsupportedCustomization": "Some customization options are unavailable for this environment.",
       "preparesInBuiltEnvironment": "Factory prepares repositories and setup scripts in the built environment.",
-      "providerUnavailable": "This provider's OpenCompute deployment or driver no longer exists. Select a new provider and environment for this template.",
+      "providerUnavailable": "This provider's OpenCompute deployment or driver no longer exists. Select a new provider and source for this environment.",
       "providerUnavailableOption": "{{name}} (unavailable)",
       "providersPartiallyUnavailable": "Some providers couldn't be loaded. Other environments are still available.",
       "retrying": "Retrying…",
@@ -7652,6 +7996,7 @@
       "activeOrganization": "Active organization",
       "support": "Support",
       "featureFlags": "Feature Flags",
+      "advanced": "Advanced",
       "replayOnboarding": "Replay onboarding",
       "changeTheme": "Change theme",
       "logOut": "Log out",

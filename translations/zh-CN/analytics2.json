@@ -3,7 +3,8 @@
     "factoryStandardCreditConsumptionAcrossThe": "组织内的 Factory 标准积分消耗。",
     "consumption": "消耗",
     "yourFactoryStandardCreditConsumption": "你的 Factory 标准积分消耗。",
-    "usage": "用量"
+    "usage": "用量",
+    "factoryStandardCreditConsumptionAcrossYour": "根组织及其子组织的 Factory 标准积分消耗。"
   },
   "adoptionCapabilities": {
     "toolUsage": "工具使用情况",
@@ -199,7 +200,7 @@
   "personalUsageOverview": {
     "shareOfYourFscByModel": "所选日期范围内，各模型占你的 FSC 的比例（计费模型前 20 名），其余归入其他。不包括 Factory 在后台运行的模型（如 Session 标题生成），因此反映你主动使用的模型。",
     "modelMix": "模型构成",
-    "shareOfYourFscByThe": "按 Session 所归因工单的标签，统计你的 FSC 占比。没有归因到带标签工单的 Session 显示为未分类。",
+    "shareOfYourFscByThe": "按 Session 归因工单的标签统计你的 FSC 占比。不包含未归因到工单的 Session；没有标签的工单显示为无标签。",
     "usageBySessionLabel": "按 Session 标签统计用量",
     "usageAttribution": "用量归因",
     "kpi": {
@@ -503,10 +504,22 @@
       "byModel": "按模型",
       "byUser": "按用户",
       "bySource": "按来源",
-      "byAccessType": "按访问类型"
+      "byAccessType": "按访问类型",
+      "byOrganization": "按组织",
+      "byUserType": "按用户类型"
     },
     "totalFsc": "FSC 总计",
-    "subtitle": "按日（UTC）· Factory 标准积分"
+    "subtitle": "按日（UTC）· Factory 标准积分",
+    "enterprise": {
+      "description": "所选日期范围内根组织及其子组织的每日或每月 FSC 消耗，当前月份统计至今天。总览显示未分组的总数；按组织、模型或用户分组时，分别堆叠显示 FSC 最高的 7 项，其余归入其他。按用户类型区分人类用户和服务账户，按来源区分每次调用所属的产品来源，按访问类型区分人工交互与 API 程序化调用的消耗。"
+    },
+    "monthlySubtitle": "按月（UTC）· Factory 标准积分",
+    "interval": {
+      "daily": "按日",
+      "monthly": "每月"
+    },
+    "intervalLabel": "{{title}}时间间隔",
+    "groupLabel": "{{title}}分组"
   },
   "topUsers": {
     "title": "支出最高的用户",
@@ -516,8 +529,16 @@
       "fsc": "FSC",
       "fscPct": "FSC 占比",
       "sessions": "Session",
-      "sessionPct": "Session 占比"
-    }
+      "sessionPct": "Session 占比",
+      "fscPerMonth": "FSC / 月",
+      "organization": "组织"
+    },
+    "enterpriseDescription": "按所选日期范围内的总 FSC 对根组织及其子组织中有用量的全部用户排名，同时显示消耗计入的组织、用户占合计 FSC 的比例、计费 Session 及占全部 Session 的比例。FSC / 月按范围内完整自然月计算用户每个活跃月份的平均 FSC，不包含尚未结束的当前月份。",
+    "organizationSpend": "{{name}}：{{fsc}}",
+    "moreOrganizations": "+{{extra}}",
+    "moreOrganizationsLabel": "还在 {{names}} 中产生消耗",
+    "pageSummary": "{{start}}–{{end}}，共 {{total}} 位用户",
+    "cappedSubtitle": "按 FSC 排名的前 {{shown}} 位用户，共 {{total}} 位"
   },
   "costCopy": {
     "unknownCategory": "（未知）",
@@ -572,7 +593,7 @@
       },
       "myIntentBreakdown": {
         "title": "按标签统计 Session",
-        "description": "你的 Session 按所归因工单标签分类的数量，以及相关 FSC。"
+        "description": "按 Session 归因工单的各个标签，统计你的 Session 数及其 FSC。不包含未归因到工单的 Session；没有标签的工单显示为无标签。"
       },
       "myTopSessions": {
         "title": "前 50 个 Session",
@@ -898,5 +919,49 @@
     "longTailUsersTooltip": "合计占总 FSC 最低 10% 的用户。",
     "longTailUsersTooltipWithTotal_one": "{{total}} 位活跃用户中，合计占总 FSC 最低 10% 的用户。",
     "longTailUsersTooltipWithTotal_other": "{{total}} 位活跃用户中，合计占总 FSC 最低 10% 的用户。"
+  },
+  "enterpriseCost": {
+    "orgFilter": {
+      "label": "组织",
+      "ariaLabel": "按组织筛选",
+      "all": "所有组织",
+      "noneInHierarchy": "所选组织均已不在你的组织层级中。请清除筛选条件以查看所有组织。"
+    },
+    "filters": {
+      "all": "全部",
+      "model": "模型",
+      "user": "用户",
+      "userType": "用户类型",
+      "source": "来源",
+      "accessType": "访问类型"
+    },
+    "rangeFilter": {
+      "label": "日期范围",
+      "thisMonth": "本月",
+      "lastMonth": "上个月",
+      "last3Months": "最近 3 个月",
+      "last6Months": "最近 6 个月"
+    },
+    "organizationsPageSummary": "第 {{start}}–{{end}} 个，共 {{total}} 个组织",
+    "kpi": {
+      "fscPerUserMonth": "FSC / 用户 / 月",
+      "fscPerUserMonthTooltip": "所选日期范围内，按完整自然月计算的每位活跃用户月均计费 FSC；不包含尚未结束的当前月份。",
+      "activeOrganizations": "活跃组织",
+      "activeOrganizationsTooltip": "统计范围内在所选日期范围有 FSC 用量的组织，统计范围为筛选出的组织或整个组织层级。"
+    },
+    "leaderboard": {
+      "title": "组织排行榜",
+      "subtitle": "按 FSC 排名",
+      "description": "按所选日期范围的 FSC 对范围内所有组织排名，包含根组织自身的用量。活跃用户仅统计产生计费用量的用户。FSC / 用户 / 月按范围内完整自然月计算每位活跃用户的月均计费 FSC，不包含尚未结束的当前月份。",
+      "tableLabel": "按 FSC 排名的组织",
+      "columns": {
+        "organization": "组织",
+        "fsc": "FSC",
+        "share": "共享",
+        "activeUsers": "活跃用户",
+        "fscPerUser": "FSC / 用户 / 月",
+        "sessions": "Session"
+      }
+    }
   }
 }

@@ -21,7 +21,8 @@
     "usage": "用量",
     "productivity": "生产力",
     "company": "公司",
-    "personal": "个人"
+    "personal": "个人",
+    "enterprise": "企业"
   },
   "analyticsNavContentV2": {
     "backToApp": "返回应用",
@@ -31,7 +32,8 @@
     "removeTiledSession": "移除平铺的 Session",
     "closeNewSessionTile": "关闭新建 Session",
     "resizeColumns": "调整 Session 列宽",
-    "resizeRows": "调整 Session 行高"
+    "resizeRows": "调整 Session 行高",
+    "removeTiledReview": "移除平铺的代码审查"
   },
   "evaluationsNavContent": {
     "backToApp": "返回应用",
@@ -272,29 +274,23 @@
     "reauthenticateMessage": "我们重新设计了 MCP OAuth 架构以提高稳定性。请通过 MCP 按钮重新验证 MCP OAuth 服务器。"
   },
   "checkForUpdatesModal": {
-    "youreOnTheLatestVersion": "已是最新版本",
     "checkAgain": "再次检查",
     "retryUpdate": "重试更新",
     "updating": "正在更新…",
     "close": "关闭",
     "checkForUpdates": "检查更新",
-    "checkingForUpdates": "正在检查更新…",
     "releasedToday": "{{date}}（今天）",
     "releasedYesterday": "{{date}}（昨天）",
     "releasedDaysAgo_one": "{{date}}（{{count}} 天前）",
     "releasedDaysAgo_other": "{{date}}（{{count}} 天前）",
     "arm64Emulation": "ARM64 模拟运行",
     "rosetta": "Rosetta",
-    "newVersionAvailable": "有新版本可用",
-    "newVersionAvailableVersionsBehind": "有新版本可用（落后 {{behind}} 个版本）",
-    "preparingUpdateTo": "正在准备更新至 v{{version}}…",
-    "downloadingVersion": "正在下载 v{{version}}…",
-    "downloadingUpdate": "正在下载更新…",
     "currentVersion": "当前版本",
     "latestVersion": "最新版本",
     "released": "发布时间",
     "platform": "平台",
-    "updateToVersion": "更新至 v{{version}}"
+    "updateToVersion": "更新至 v{{version}}",
+    "restartToUpdate": "重启以更新"
   },
   "health": {
     "healthCheck": "健康检查",
@@ -316,7 +312,12 @@
     "integrationConnected": "集成已连接。",
     "connectorConnected": "连接器已连接。",
     "connectorFailed": "连接器未能连接。请返回 Factory 重试。",
-    "connectorCanceled": "连接器设置已取消。"
+    "connectorCanceled": "连接器设置已取消。",
+    "githubConnected": "GitHub 已连接。",
+    "githubInstallRequested": "GitHub 已连接。你的 GitHub 组织所有者需要批准 Factory 应用。",
+    "githubInstallCancelled": "GitHub 已连接，但尚未安装 Factory 应用。",
+    "githubOrgInstallRequired": "GitHub 已连接。请联系 Factory 管理员在 GitHub 上安装 Factory 应用。",
+    "githubRepositoriesUpdated": "你的 GitHub 仓库访问权限已更新。"
   },
   "openVscode": {
     "notWhereYouWantedToGo": "打开的位置不符合预期？请在下方设置 SSH 访问后重试。",
@@ -469,5 +470,12 @@
   },
   "userProfileMenu": {
     "failedToLogOut": "退出登录失败"
+  },
+  "integrationHandoff": {
+    "openApp": "打开 Factory 应用",
+    "closeTab": "应用打开后即可关闭此标签页。",
+    "didNotOpen": "未打开？请确保已安装 Factory 应用，然后点击按钮。",
+    "couldNotOpen": "无法打开 Factory 应用",
+    "invalidLink": "此链接无法打开 Factory 应用。请返回 Factory 后重试。"
   }
 }

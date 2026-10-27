@@ -116,10 +116,13 @@
       "failedToPrepareGenerated": "准备生成的文件失败。",
       "cannotOpenFolder": "无法在此 Session 中打开此文件夹。"
     },
-    "templateFallbackName": "模板",
+    "templateFallbackName": "环境",
     "usage": {
       "userOverQuota": "你已达到组织管理员设置的用量配额。",
-      "orgOverLimit": "你的组织已达到用量上限。"
+      "orgOverLimit": "你的组织已达到用量上限。",
+      "missionLimitReached": "已达到用量上限。在 {{resetTime}} 用量重置前，发送给 Factory 模型的消息不会运行。你仍可将指令排入队列，或选择 BYOK 模型。",
+      "missionLimitReachedNoReset": "已达到用量上限。在用量恢复前，发送给 Factory 模型的消息不会运行。你仍可将指令排入队列，或选择 BYOK 模型。",
+      "missionOrganizationLimit": "已达到组织设置的用量上限。请联系管理员提高上限。"
     },
     "subscription": {
       "remoteRequiresPro": "远程 Session 需要 Pro 订阅。你可以在本地使用自己的 API 密钥，或升级至 Pro。",
@@ -334,7 +337,7 @@
     },
     "defaultTag": "默认",
     "templateLabel": "环境",
-    "generalPurposeEnvironment": "{{templateName}} 是一个不含仓库的通用环境。",
+    "generalPurposeEnvironment": "{{environmentName}} 是不包含仓库的通用环境。",
     "cloudDeprecationTooltip": "云端计算机已由 Droid Computers 取代。云端仍受支持，但为了稳定性，强烈建议切换至 <droidComputersLink>Droid Computers</droidComputersLink>。",
     "templateBeingPreparedCustomize": "正在准备你的环境，你可以在<settingsLink>设置</settingsLink>中进行自定义。",
     "templateBeingPrepared": "正在准备你的环境。",
@@ -467,9 +470,6 @@
     "missionMustBeAvailableToChangeSymbol": "此任务的计算机不可用，因此无法更改其标识",
     "signInToChangeMissionSymbol": "重新登录以更改任务标识",
     "failedToChangeMissionSymbol": "更改任务标识失败",
-    "workstreamMustBeAvailableToChangeSymbol": "此工作流的计算机不可用，因此无法更改其图标",
-    "signInToChangeWorkstreamSymbol": "重新登录以更改工作流图标",
-    "failedToChangeWorkstreamSymbol": "更改工作流图标失败",
     "unregisteredComputer": "未注册的计算机",
     "untitledWorkstream": "未命名工作流",
     "unregisteredComputerNumbered": "未注册的计算机 {{index}}"
@@ -547,7 +547,8 @@
     "automations": "自动化",
     "backToAutomations": "返回自动化",
     "backToNamedAutomation": "返回自动化：{{name}}",
-    "backToAutomation": "返回自动化"
+    "backToAutomation": "返回自动化",
+    "backToParentSession": "返回父 Session：{{name}}"
   },
   "sandboxEnvironmentLaunch": {
     "provisioningFailed": "环境配置失败",
@@ -557,7 +558,7 @@
     "attachmentUploadFailed": "附件上传失败，请重试，或移除后重新附加文件。",
     "creationLaunchTimedOut": "创建启动过程超时，请重试以重新连接已批准的环境。",
     "attachmentsNoLongerAvailable": "此应用窗口中的附件已不可用。请重试并重新附加文件。",
-    "creatingComputerFrom": "正在从 {{templateName}} 创建计算机",
+    "creatingComputerFrom": "正在从 {{environmentName}} 创建计算机",
     "settingUpComputer": "正在设置你的计算机",
     "cloningRepositories": "正在克隆仓库",
     "installingDependencies": "正在安装依赖"
@@ -695,7 +696,8 @@
     "plan": "计划",
     "pullRequest": "拉取请求",
     "sideChat": "侧边聊天",
-    "terminal": "终端"
+    "terminal": "终端",
+    "subagents": "子代理"
   },
   "rightPaneToolDescriptions": {
     "agents": "处理此任务的代理",
@@ -705,7 +707,8 @@
     "computer": "查看并控制计算机桌面",
     "files": "浏览 Session 的工作区",
     "sideChat": "在不打断工作的情况下提问",
-    "terminal": "在 Session 计算机上运行的 shell"
+    "terminal": "在 Session 计算机上运行的 shell",
+    "subagents": "跟踪此 Session 的子代理"
   },
   "rightPaneV2Launcher": {
     "agents": {
@@ -913,5 +916,22 @@
     "archived_other": "已归档 {{count}} 个 Session",
     "archivedWithFailures_one": "已归档 {{count}} 个 Session，{{failedCount}} 个失败",
     "archivedWithFailures_other": "已归档 {{count}} 个 Session，{{failedCount}} 个失败"
+  },
+  "sessionSubagentsPanel": {
+    "group": {
+      "waitingOnYou": "等待你处理",
+      "working": "工作中",
+      "done": "完成"
+    },
+    "fallbackName": "子代理 {{id}}",
+    "activity": {
+      "waitingOnYou": "等待你处理",
+      "working": "工作中",
+      "failed": "失败",
+      "cancelled": "已取消"
+    },
+    "typeActivity": "{{type}} · {{activity}}",
+    "subagentsShowUpHere": "此 Session 启动的子代理会显示在这里。",
+    "noSubagentsYet": "暂无子代理"
   }
 }

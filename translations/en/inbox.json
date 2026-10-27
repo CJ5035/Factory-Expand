@@ -44,6 +44,11 @@
       }
     }
   },
+  "desktopNotifications": {
+    "summaryTitle_one": "{{count}} new item needs your attention",
+    "summaryTitle_other": "{{count}} new items need your attention",
+    "summaryBody": "Open your inbox to review them."
+  },
   "snooze": {
     "oneHour": "1 hour",
     "tomorrowMorning": "Tomorrow, 9am",

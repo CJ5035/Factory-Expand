@@ -25,7 +25,8 @@
     "copyLink": "复制链接",
     "copyImage": "复制图片",
     "learnSpelling": "记住此拼写",
-    "noGuessesFound": "无拼写建议"
+    "noGuessesFound": "无拼写建议",
+    "openInBrowserPanel": "在应用内浏览器中打开"
   },
   "common": {
     "ok": "确定",
@@ -84,7 +85,9 @@
     "downloadInvalidSize": "下载的更新大小无效。",
     "downloadTooLarge": "下载的更新过大。",
     "downloadIncomplete": "更新下载不完整。请重试。",
-    "previousDownloadNotRemoved": "无法移除上次下载的更新。请重试。"
+    "previousDownloadNotRemoved": "无法移除上次下载的更新。请重试。",
+    "userSettingDisabled": "Factory 设置（~/.factory/settings.json）中的 disableAutoUpdate 已关闭桌面版更新。",
+    "restartFailed": "无法重启并应用更新。请重试。"
   },
   "fileDialogs": {
     "saveDownloadedFile": "保存下载的文件",

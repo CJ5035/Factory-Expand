@@ -178,11 +178,16 @@
         "profileMenu": {
           "title": "Open your profile menu",
           "body": "{{item}} is in your profile menu. Open it, then select {{item}}.",
+          "advancedBody": "{{item}} is under Advanced in your profile menu. Open the menu, then Advanced.",
           "item": {
             "wiki": "Wiki",
             "analytics": "Analytics",
             "softwareFactory": "Software Factory"
           }
+        },
+        "profileMenuAdvanced": {
+          "title": "Open Advanced",
+          "body": "{{item}} is under Advanced. Point at Advanced, then select {{item}}."
         },
         "automations": {
           "title": "Open Automations",
@@ -259,10 +264,6 @@
         "approve": {
           "title": "Steer it, then approve it",
           "body": "Comment on any line or choose Keep iterating if something is off. Approve once the plan matches what you want."
-        },
-        "confirm": {
-          "title": "Accept the spec",
-          "body": "Pick how much Droid does without asking while it builds. Medium suits most tasks. Select Confirm to start."
         }
       },
       "tourPanelTipPrefix": "Use the arrow keys to move through the tour.",
@@ -326,7 +327,7 @@
         "giveTask": {
           "title": "Review and approve the spec",
           "summary": "Read the plan, steer it, and approve it",
-          "instructions": "Droid researches and writes a spec. Read it, comment on anything that is off, then select Approve Spec and Confirm",
+          "instructions": "Droid researches and writes a spec. Read it, comment on anything that is off, then select Approve Spec",
           "tip": "Fixing a plan takes one comment, while fixing code takes another run. Before you approve, check that the spec has the right goal, the files you expect, an approach you agree with, and a way to verify the result. If a part is wrong, comment on that line or choose Keep iterating, and Droid revises the spec.",
           "restartLabel": "Not this task",
           "waitLabel": "Droid is writing your spec",

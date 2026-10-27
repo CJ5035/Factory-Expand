@@ -130,7 +130,6 @@
     "cannotVerifyMultiMachine": "Factory 无法验证组织是否允许跨计算机的 Mission 任务。代理将在编排器计算机上运行。请管理员检查合规设置。",
     "remoteAccessNotAllowed": "组织不允许远程控制此计算机。代理将在编排器计算机上运行。",
     "computerNotRegistered": "此计算机尚未注册远程控制。代理将在编排器计算机上运行。请打开设置 › 此计算机进行注册。",
-    "settingsChangedDuringStartup": "Mission 任务设置在启动期间发生变化。请检查必填字段后再继续。",
     "chooseAvailableOrchestrator": "请选择可用的编排器计算机。",
     "missionDefaultsCouldNotLoad": "无法加载 Mission 任务默认设置。代理将在编排器计算机上运行。",
     "startWithoutRemoteAgents": "不使用远程代理启动",
@@ -140,17 +139,6 @@
     "team": "团队",
     "teamHelper": "此 Mission 任务归属的团队。",
     "noTeam": "无团队",
-    "launch": {
-      "turnOnRemoteControl": "启用远程控制",
-      "createComputer": "从 {{environment}} 创建计算机",
-      "setUpComputer": "设置编排器计算机",
-      "connectToThisComputer": "连接此计算机",
-      "connectToMachine": "连接 {{machine}}",
-      "connectToComputer": "连接编排器计算机",
-      "startOrchestrator": "启动编排器",
-      "openMission": "打开 Mission 任务",
-      "agentMachines": "代理计算机"
-    },
     "machineSummary": {
       "defaultAndYours_one": "代理可使用 {{defaultMachine}} 及你的一台计算机。",
       "defaultAndYours_other": "代理可使用 {{defaultMachine}} 及你的 {{count}} 台计算机。",
@@ -195,8 +183,7 @@
   },
   "newMissionComputerStartup": {
     "startTimedOut": "编排器计算机启动时间过长。请重试以查看进度。",
-    "provisionFailed": "编排器计算机配置失败。请选择其他环境或重试。",
-    "preparing": "正在准备编排器计算机…"
+    "provisionFailed": "编排器计算机配置失败。请选择其他环境或重试。"
   },
   "progressLog": {
     "missionAccepted": "Mission 任务已接受",
@@ -271,5 +258,19 @@
     "modelsNeedConnection": "仅当已连接的计算机正在运行此 Mission 任务的编排器时，才能更改模型。",
     "modelsNeedOpenMission": "请先打开一次此 Mission 任务，之后便可在此更改模型。",
     "modelSaveFailed": "无法更改模型。请重试。"
+  },
+  "missionLaunch": {
+    "startFailed": "无法启动任务。",
+    "composerLocked": "任务就绪后即可使用。",
+    "composerPlaceholder": "正在设置任务…",
+    "step": {
+      "turnOnRemoteControl": "正在启用远程控制",
+      "createComputer": "正在从 {{environment}} 创建计算机",
+      "setUpComputer": "正在设置计算机",
+      "connectToThisComputer": "正在连接此计算机",
+      "connectToMachine": "正在连接 {{machine}}",
+      "connectToComputer": "正在连接计算机",
+      "startMission": "正在启动任务"
+    }
   }
 }

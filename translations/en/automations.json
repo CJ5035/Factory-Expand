@@ -358,15 +358,10 @@
   },
   "codeWalkthroughModeV2": {
     "disableToKeepTheWorkflow": "Disable to keep the code walkthrough workflow on disk but skip every pull request event.",
-    "updateOnNewCommits": "Update on new commits",
-    "updatesOnNewCommits": "Droid updates the walkthrough whenever new commits are pushed to the pull request.",
-    "keepsTheFirstWalkthrough": "Droid keeps the first walkthrough and does not update it when new commits are pushed.",
     "includeDraftPrs": "Include draft PRs",
     "skipsDraftPullRequests": "Droid skips draft pull requests and writes the walkthrough once one is marked ready for review.",
     "writesAndUpdatesOnDrafts": "Droid also writes and updates walkthroughs on draft pull requests. Every push to a draft starts a run.",
-    "writesOnDrafts": "Droid also writes walkthroughs on draft pull requests.",
     "summary": {
-      "noUpdatesOnNewCommits": "No updates on new commits",
       "includesDraftPrs": "Includes draft PRs"
     }
   },
@@ -895,15 +890,16 @@
       "pickRepoForAutoWiki": "Pick a repository to set up AutoWiki",
       "pickRepoForSecurityAudit": "Pick a repository to set up the security audit",
       "pickRepoForCodeWalkthrough": "Pick a repository to set up code walkthroughs",
+      "allowManagedModel": "Ask an admin to allow one of this automation's models",
       "addName": "Add a name",
       "describeWhatDroidShouldDo": "Describe what Droid should do",
       "pickSlackChannel": "Pick at least one Slack channel",
-      "pickComputerOrTemplate": "Pick a computer or Template for this automation to run on",
+      "pickComputerOrTemplate": "Pick a computer or environment for this automation to run on",
       "pickOrganization": "Pick an organization",
       "pickAtLeastOneRepository": "Pick at least one repository",
       "pickRepository": "Pick a repository",
       "pickGithubEvent": "Pick at least one GitHub event",
-      "pickComputerOrTemplateForServiceAccount": "Pick a computer or Template for the service account to run on",
+      "pickComputerOrTemplateForServiceAccount": "Pick a computer or environment for the service account to run on",
       "pickServiceAccount": "Pick a service account for this automation to run as",
       "fixWorkingDirectory": "Fix the working directory",
       "pickDifferentComputer": "Pick a different computer"
@@ -942,8 +938,7 @@
       "qa": "Clicking Create will open a new Droid session pre-filled with the /install-qa command and your selections above. The agent will analyze the selected repository interactively and generate the QA skill plus a .github/workflows/qa.yml workflow you can commit.",
       "wiki": "Clicking Create will open a pull request adding .github/workflows/droid-wiki-refresh.yml to the selected repository. The workflow refreshes the Factory Wiki on the trigger you selected (with your settings above) and can also be run manually. Each refresh also commits the wiki to the factory/droid-wiki branch and keeps a single pull request open with the latest version.",
       "securityAudit": "Clicking Create will open a pull request adding .github/workflows/deep-security-review.yml to the selected repository. The workflow runs /security-review across the codebase on your schedule (with your settings above) and can also be run manually.",
-      "codeWalkthrough": "Clicking Create will open a pull request adding .github/workflows/droid-code-walkthrough.yml to the selected repository. The workflow generates a code walkthrough when a pull request is opened or marked ready for review, and updates it on every new commit. Walkthroughs are for pull requests reviewed in Factory's desktop and web app. The repository needs a FACTORY_API_KEY Actions secret.",
-      "codeWalkthroughWithoutUpdates": "Clicking Create will open a pull request adding .github/workflows/droid-code-walkthrough.yml to the selected repository. The workflow generates a code walkthrough when a pull request is opened or marked ready for review. Walkthroughs are for pull requests reviewed in Factory's desktop and web app. The repository needs a FACTORY_API_KEY Actions secret."
+      "codeWalkthrough": "Clicking Create will open a pull request adding .github/workflows/droid-code-walkthrough.yml to the selected repository. The workflow generates a code walkthrough when a pull request is opened or marked ready for review, and updates it on every new commit. Walkthroughs are for pull requests reviewed in Factory's desktop and web app. The repository needs a FACTORY_API_KEY Actions secret."
     },
     "existingModeWorkflowHelperText": {
       "qa": "This repository already has a QA workflow — Create will take you to the existing automation instead.",
@@ -982,7 +977,7 @@
     },
     "nameHelperText": "Shown in your Automations list and on every session this automation starts.",
     "whereStep": {
-      "chained": "The computer or template each run lands on, and its visibility.",
+      "chained": "The computer or environment each run lands on, and its visibility.",
       "default": "The identity, computer, and visibility of each run.",
       "customCi": "The repository this workflow is added to.",
       "gitlabNotSupported": "GitLab automations are currently not supported, try <ciLink>running Droid from GitLab CI instead</ciLink>."
@@ -1033,13 +1028,13 @@
     "descriptionMustBeCharactersOrFewer": "Description must be {{max}} characters or fewer.",
     "addAName": "Add a name",
     "pickADifferentComputer": "Pick a different computer",
-    "pickAComputerOrTemplateForTheServiceAccount": "Pick a computer or Template for the service account to run on",
+    "pickAComputerOrTemplateForTheServiceAccount": "Pick a computer or environment for the service account to run on",
     "connectToTheSelectedComputerToContinue": "Connect to the selected computer to continue",
-    "pickAComputerOrTemplateForThisAutomation": "Pick a computer or Template for this automation to run on",
+    "pickAComputerOrTemplateForThisAutomation": "Pick a computer or environment for this automation to run on",
     "pickAtLeastOneRepository": "Pick at least one repository",
     "describeThePullRequestsToWatch": "Describe the pull requests to watch",
     "connectToTheSelectedComputerToRun": "Connect to the selected computer to run PR Babysitter.",
-    "pickAComputerOrTemplateToRun": "Pick a computer or Template to run PR Babysitter.",
+    "pickAComputerOrTemplateToRun": "Pick a computer or environment to run PR Babysitter.",
     "selectAtLeastOneRepository": "Select at least one repository.",
     "removeRepo": "Remove {{repo}}",
     "selectedCount": "{{count}} selected",
@@ -1083,16 +1078,16 @@
     "descriptionMustBeCharactersOrFewer": "Description must be {{max}} characters or fewer.",
     "addAName": "Add a name",
     "pickADifferentComputer": "Pick a different computer",
-    "pickAComputerOrTemplateForTheServiceAccount": "Pick a computer or Template for the service account to run on",
+    "pickAComputerOrTemplateForTheServiceAccount": "Pick a computer or environment for the service account to run on",
     "connectToTheSelectedComputerToContinue": "Connect to the selected computer to continue",
-    "pickAComputerOrTemplateForThisAutomation": "Pick a computer or Template for this automation to run on",
+    "pickAComputerOrTemplateForThisAutomation": "Pick a computer or environment for this automation to run on",
     "describeTheChannelsToScan": "Describe the channels to scan",
     "nameTheChannelForRunSummaries": "Name the channel for run summaries",
     "nameADefaultJiraProject": "Name a default Jira project",
     "nameADefaultLinearTeam": "Name a default Linear team",
     "addTicketCreationGuidance": "Add ticket creation guidance",
     "connectToTheSelectedComputerToRun": "Connect to the selected computer to run triage.",
-    "pickAComputerOrTemplateToRun": "Pick a computer or Template to run triage.",
+    "pickAComputerOrTemplateToRun": "Pick a computer or environment to run triage.",
     "templates": "Templates",
     "creating": "Creating...",
     "createWithSession": "Create with session",
@@ -1113,10 +1108,10 @@
     "fineTuneHowThisAutomationRuns": "Fine-tune how this automation runs. Everything here has a sensible default."
   },
   "forkAutomationModalV2": {
-    "computerOrTemplateTheForkedAutomation": "Computer or Template the forked automation will run on.",
+    "computerOrTemplateTheForkedAutomation": "Computer or environment the forked automation will run on.",
     "fork": "Fork",
     "forkOptions": "Fork Options",
-    "noComputersOrTemplatesAvailable": "No computers or Templates available. Add a computer to fork this automation.",
+    "noComputersOrTemplatesAvailable": "No computers or environments available. Add a computer to fork this automation.",
     "selectRunTarget": "Select run target",
     "serviceAccountForksAreSharedWith": "Service-account forks are shared with your organization."
   },
@@ -1204,7 +1199,11 @@
     "thisComputerAlreadyHasAutomations": "This computer already has {{count}} automations set up. Consider running this automation on a different computer to avoid overloading it.",
     "localComputerName": "{{name}} (local)",
     "droidComputers": "Droid Computers",
-    "selectTemplateOrComputer": "Select environment or computer"
+    "selectTemplateOrComputer": "Select environment or computer",
+    "remoteComputersNotEnabled": "Remote computers are not enabled for your organization",
+    "remoteComputersNotOnPlan": "Droid Computers are not available on your current plan. Upgrade to Pro or higher to use them.",
+    "remoteComputersSubscriptionInactive": "Droid Computers are not available due to your subscription status",
+    "remoteComputersRegionUnsupported": "Droid Computers are not available in this region."
   },
   "runOnComputerPickerV2": {
     "retry": "Retry",
@@ -1550,7 +1549,7 @@
     "successRate7d": "Success rate (7d)",
     "prompt": "Prompt",
     "chainedAfter": "Chained after",
-    "noRunTarget": "No run target — runs can't start. Recreate this automation with a computer or template.",
+    "noRunTarget": "No run target — runs can't start. Recreate this automation with a computer or environment.",
     "orgDefaultUnavailable": "Organization default unavailable",
     "orgDefaultModel": "Organization default"
   },
@@ -1624,7 +1623,7 @@
     "incidentResponseMcpSetupDescription": "Add and authenticate MCP servers for the observability tools and context sources Droid needs to respond to incidents. MCP servers are per computer.",
     "computerConnectFailure": "Could not connect to computer. It may be offline or hibernating.",
     "computerConnectionLost": "Lost connection to the computer. It may be offline or hibernating.",
-    "computerPickerRequired": "Pick a computer or Template for this automation to run on.",
+    "computerPickerRequired": "Pick a computer or environment for this automation to run on.",
     "computerPickerConnectRequired": "Connect to the selected computer to continue.",
     "templateVariablesUnresolved": "Please fill out template variables {{placeholder}} to proceed",
     "breadcrumbLabels": {
@@ -1666,7 +1665,7 @@
       "additional": "Additional settings"
     },
     "createScheduleStepLabel": "Schedule",
-    "payloadFilterInvalid": "payloadRegex must be a valid JavaScript regular expression.",
+    "payloadFilterInvalid": "payloadRegex must be a valid JavaScript regular expression without lookaheads, lookbehinds, or backreferences.",
     "payloadFilterPlaceholder": "e.g. \"action\"\\s*:\\s*\"opened\"",
     "payloadFilterHelpText": "JavaScript regular expression tested against the raw request body. Deliveries that don't match are recorded as Filtered and don't start a run. Leave empty to run on every event.",
     "maxRunsPerHourLabel": "Max runs per hour",
@@ -1677,8 +1676,6 @@
     "slackWorkingDirectoryTooltip": "When set, runs triggered from Slack execute from this directory so they can use that project's skills, repo, and relative paths. Leave blank to run from the computer's home directory.",
     "webhookWorkingDirectoryTooltip": "When set, runs triggered by this webhook execute from this directory so they can use that project's skills, repo, and relative paths. Leave blank to run from the computer's home directory.",
     "modelUnavailableTooltip": "This model is not available where this automation will run.",
-    "recommendedModelLabel": "Recommended",
-    "recommendedModelHelperText": "Recommended runs a fast, low-cost model that Factory keeps up to date. Pick a specific model to choose it and its reasoning level yourself.",
     "modelUnverifiedTooltip": "This model could not be checked because the machine this automation will run on is not connected. If it is not set up there, the run will use the default model instead.",
     "modelConnectingTooltip": "This custom model's host computer is currently connecting…",
     "modelUnavailableHint": "Pick a model that is available where this automation will run",
@@ -1689,10 +1686,14 @@
     "chainedTriggeredByUnavailable": "Chained automations are not enabled for your organization",
     "chainAfterExistingLabel": "Chain after existing automation?",
     "chainAfterExistingHelperText": "Set this automation to run after another automation completes.",
+    "passUpstreamContextLabel": "Pass upstream context?",
+    "passUpstreamContextHelperText": "Turn this off if this automation doesn't depend on the output of the run that triggered it",
+    "passUpstreamContextOwnerOnly": "Only the owner of this automation can turn upstream context back on.",
     "wikiPullRequestTriggerWarning": "Warning: This workflow triggers a full wiki rebuild. These triggers may be too frequent on busy repositories.",
     "chainOutboundLimitMessage": "This automation has reached the limit of {{max}} outbound chained automations.",
     "chainInboundLimitMessage": "This automation has reached the limit of {{max}} inbound chained automations.",
     "chainDepthLimitMessage": "Chaining this automation would exceed the depth limit of {{max}} chained automations.",
+    "chainTargetLocalOnlyMessage": "Only an automation that runs on a Droid Computer, a self-hosted computer, an environment, or the organization default can be chained after other automations.",
     "chainPickerLoadError": "Could not load your automations. Reload the page to try again.",
     "chainFollowUpsRefreshError": "Could not refresh your automations, so nothing was saved. Try again.",
     "reviewGuidelinesSchedule": {
@@ -1883,18 +1884,18 @@
       },
       "alertResponder": {
         "name": "Webhook Alert Responder",
-        "description": "Investigate Sentry, Datadog, or PagerDuty alerts as they fire: root-cause analysis and a fix PR when safe. Runs on a Droid Computer or execution template. After saving, add the webhook URL to the sending service."
+        "description": "Investigate Sentry, Datadog, or PagerDuty alerts as they fire: root-cause analysis and a fix PR when safe. Runs on a Droid Computer or an environment. After saving, add the webhook URL to the sending service."
       },
       "ciFailureTriage": {
         "name": "CI Failure Triage",
-        "description": "Classify failed GitHub Actions or GitLab pipelines as flaky, infrastructure, or regression, and name the commit responsible. Runs on a Droid Computer or execution template. After saving, add the webhook URL to the sending service.",
+        "description": "Classify failed GitHub Actions or GitLab pipelines as flaky, infrastructure, or regression, and name the commit responsible. Runs on a Droid Computer or an environment. After saving, add the webhook URL to the sending service.",
         "connectorPurposes": {
           "github": "Reads the failed run and the commits behind it."
         }
       },
       "newIssueInvestigator": {
         "name": "New Issue Investigator",
-        "description": "Investigate each new Linear, Jira, or GitHub issue: duplicates, likely cause, files involved, and a PR for trivial fixes. Runs on a Droid Computer or execution template. After saving, add the webhook URL to the sending service.",
+        "description": "Investigate each new Linear, Jira, or GitHub issue: duplicates, likely cause, files involved, and a PR for trivial fixes. Runs on a Droid Computer or an environment. After saving, add the webhook URL to the sending service.",
         "connectorPurposes": {
           "linear": "Reads each new issue and comments with what it found."
         }

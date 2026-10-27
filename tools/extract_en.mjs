@@ -1,4 +1,4 @@
-// Deliberately limited to the pinned data layouts of Factory Desktop 0.200.0/0.201.0/0.202.0/0.204.0/0.205.0.
+// Deliberately limited to the pinned data layouts of Factory Desktop 0.200.0/0.201.0/0.202.0/0.204.0/0.205.0/0.207.0.
 // Never evaluates application code, function calls, getters or template expressions.
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
@@ -7,6 +7,7 @@ import { openAsar, closeAsar, readEntry, listEntries, findEntry, integrityOf, sh
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const layouts = {
+  '0.207.0': { start: 'const zFu={info:"Info",tip:"Tip"', end: ';function ldf(t)', resourceRoot: /eFt=ldf\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:adf\}\)/g, components: 'adf', desktopStart: 'Dk={checkForUpdates:"Check for Updates..."', desktopEnd: ',qk={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: 'Gk', desktopLeaves: 84, renderer: '.vite/renderer/main_window/assets/index-XMuN1FQ2.js', main: '.vite/build/initLifecycle-BsdiUb2Z.js' },
   '0.205.0': { start: 'const G3u={info:"Info",tip:"Tip"', end: ';function IUu(t)', resourceRoot: /uLt=IUu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:wUu\}\)/g, components: 'wUu', desktopStart: 'LS={checkForUpdates:"Check for Updates..."', desktopEnd: ',YS={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: 'qS', desktopLeaves: 81, renderer: '.vite/renderer/main_window/assets/index-Czx_74nj.js', main: '.vite/build/initLifecycle-DxjvbXRO.js' },
   '0.204.0': { start: 'const dAu={info:"Info",tip:"Tip"', end: ';function fOu(t)', resourceRoot: /W9t=fOu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:uOu\}\)/g, components: 'uOu', desktopStart: 'IS={checkForUpdates:"Check for Updates..."', desktopEnd: ',US={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: 'zS', desktopLeaves: 81, renderer: '.vite/renderer/main_window/assets/index-D5VdbPv5.js', main: '.vite/build/initLifecycle-Cl2ZZ5qo.js' },
   '0.200.0': { start: 'const beu={info:"Info",tip:"Tip"', end: ';function CSu(t)', resourceRoot: /D8t=CSu\(\{\.\.\.Object\.assign\(\{([^}]+)\}\),components:SSu\}\)/g, components: 'SSu', desktopStart: 'Sb={checkForUpdates:"Check for Updates..."', desktopEnd: ',Db={checkForUpdates:"Buscar actualizaciones..."', desktopRoot: '$b', renderer: '.vite/renderer/main_window/assets/index-CCcgJ39D.js', main: '.vite/build/initLifecycle-C1amcziW.js' },

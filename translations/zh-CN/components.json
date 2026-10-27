@@ -83,7 +83,8 @@
       "editGroup": "编辑 {{name}}",
       "group": "组",
       "organizations": "组织",
-      "appliedConfigurations": "已应用配置"
+      "appliedConfigurations": "已应用配置",
+      "modelAccess": "模型访问权限"
     },
     "addProjectModal": {
       "cancel": "取消",
@@ -769,11 +770,15 @@
         "model": "模型",
         "fast": "快速",
         "multiplier": "倍率",
-        "enabled": "已启用"
+        "enabled": "已启用",
+        "allow": "允许",
+        "block": "额度块"
       },
       "ungroupedLabel": "其他",
       "yes": "是",
-      "toggleModel": "切换 {{modelName}}"
+      "toggleModel": "切换 {{modelName}}",
+      "allowModel": "允许 {{modelName}}",
+      "blockModel": "阻止 {{modelName}}"
     },
     "networkPolicySection": {
       "whenEnabledAllApiAndApplication": "启用后，所有 API 和应用请求都必须来自允许的 IP 地址。适用于 CLI、网页应用以及使用 API 密钥发起的请求。",
@@ -1070,7 +1075,7 @@
         "updateFailed": "最新构建失败。Session 将继续使用上次成功的构建。",
         "updating": "新构建正在运行。完成前，Session 使用上次成功的构建。",
         "queued": "正在等待构建名额。",
-        "environmentUnavailable": "此模板使用的 OpenCompute 部署或驱动已不存在。请编辑模板并选择新提供商。"
+        "environmentUnavailable": "此环境使用的 OpenCompute 部署或驱动已不存在。请编辑环境并选择新的提供商。"
       },
       "onboarding": {
         "title": "为 Droid 提供开机即可工作的计算机",
@@ -1166,8 +1171,8 @@
     },
     "sandboxEnvironmentDetailView": {
       "environmentUnavailable": {
-        "title": "此模板的提供商已不可用",
-        "description": "此模板使用的 OpenCompute 部署或驱动已不存在，因此无法基于它启动新 Session。请编辑模板并选择新提供商。"
+        "title": "此环境的提供商已不可用",
+        "description": "此环境使用的 OpenCompute 部署或驱动已不存在，因此无法从此环境启动新 Session。请编辑环境并选择新的提供商。"
       },
       "healthStatus": {
         "queued": {
@@ -1317,7 +1322,7 @@
       "environment": "来源",
       "unsupportedCustomization": "此环境的部分自定义选项不可用。",
       "preparesInBuiltEnvironment": "Factory 在构建环境中准备仓库和设置脚本。",
-      "providerUnavailable": "此提供商的 OpenCompute 部署或驱动已不存在。请为此模板选择新的提供商和环境。",
+      "providerUnavailable": "此提供商的 OpenCompute 部署或驱动已不存在。请为此环境选择新的提供商和来源。",
       "providerUnavailableOption": "{{name}}（不可用）",
       "providersPartiallyUnavailable": "部分提供商无法加载。其他环境仍可使用。",
       "retrying": "正在重试…",
@@ -1537,14 +1542,15 @@
     },
     "subagentFocusPanel": {
       "stopping": "正在停止…",
-      "openSubagentSession": "打开子代理 Session",
       "closeSubagentTranscript": "关闭子代理对话记录",
       "subagentTranscript": "{{title}} 子代理对话记录",
       "stopThisTask": "停止此任务",
       "stoppingSubagent": "正在停止子代理",
       "stopSubagent": "停止子代理",
-      "openSession": "打开 Session",
-      "close": "关闭"
+      "close": "关闭",
+      "expandSubagentSession": "展开子代理 Session",
+      "transcriptLoadFailed": "无法加载此子代理的对话记录。",
+      "expand": "展开"
     },
     "v2ExecuteToolResult": {
       "waitingForCommandOutput": "等待命令输出…",
@@ -1620,23 +1626,25 @@
       "resetDiagramView": "重置图表视图"
     },
     "missionWelcomeBlock": {
-      "greeting": "你好，{{firstName}} 👋",
-      "greetingAnonymous": "你好 👋",
-      "welcomeToYourMission": "欢迎进入你的<mission/>",
-      "intro": "在此任务中，你会与作为编排器的我对话。我的职责是与你自然交流，并根据对话决定如何管理一组代理，共同实现你为此任务设定的目标。",
-      "agents": "<term>你的代理：</term>我启动的每个代理都会显示在<agents>代理</agents>中。在那里打开代理，即可跟踪其工作、直接发送消息，或回答问题和审批请求。",
-      "whereTheWorkRuns": "<term>工作运行位置：</term>默认情况下，我会在 <where></where> 上运行所有代理。你可以在<settings>任务默认设置</settings>中为未来任务更改此设置。",
-      "whereTheWorkRunsWithOthers": "<term>工作运行位置：</term>默认情况下，我会在 <where></where> 上运行所有代理。我也可以使用 <others></others>。你可以在<settings>任务默认设置</settings>中为未来任务更改此设置。",
-      "orchestratorMachine": "与我运行在同一台计算机",
-      "yourMachines_one": "你的计算机：{{machines}}",
-      "yourMachines_other": "你的计算机：{{machines}}",
-      "freshComputerFrom_one": "从 {{templates}} 模板创建的全新计算机",
-      "freshComputerFrom_other": "从 {{templates}} 模板创建的全新计算机",
-      "freshComputerOrYourMachines": "{{freshComputer}}，或 {{yourMachines}}",
-      "templateName": "“{{name}}”",
-      "sharedNotes": "我和代理编写的<term>共享笔记和计划</term>会放在任务共享文件夹中。可在<files>文件</files>中浏览。",
-      "pullRequests": "代理创建的<term>拉取请求</term>会显示在<prs>PR</prs>中，并附带 CI 状态。",
-      "steer": "<term>你随时可以调整方向：</term>更改优先级、询问进度，或让我停止代理或调整其工作方向。"
+      "intro": "环境已就绪。请告诉我先处理什么，否则我将根据任务名称开始规划。",
+      "orchestratorMachine": "编排器计算机",
+      "title": "欢迎开始你的任务！",
+      "settingUpIntro": "正在设置环境。等待期间，先了解此任务的工作方式。",
+      "local": "本地",
+      "workingDirectory": "工作目录",
+      "branch": "分支",
+      "howThisMissionWorks": "此任务如何运作",
+      "agentsTitle": "代理独立工作",
+      "agentsDescription": "每个代理负责一部分工作并向我汇报。请在这里回答它们的问题。",
+      "agentsAction": "代理",
+      "filesTitle": "共享笔记和计划",
+      "filesDescription": "我和代理编写的内容会保存到任务的共享文件夹。",
+      "filesAction": "文件",
+      "pullRequestsTitle": "拉取请求",
+      "pullRequestsDescription": "代理创建的 PR 会在这里显示及其 CI 状态。",
+      "pullRequestsAction": "PR",
+      "startFailed": "无法启动此任务。",
+      "discard": "丢弃"
     },
     "pageHeader": {
       "back": "返回",
@@ -1902,7 +1910,6 @@
       "disabled": "已禁用",
       "enabled": "已启用",
       "manageName": "管理 {{name}}",
-      "selectedCount": "已选择 {{total}} 项",
       "skillsNotSupportedForCloudTemplates": "使用云模板的沙箱暂不支持 Skill。",
       "noSkillsFound": "未找到 Skill。请将 Skill 添加到 ~/.factory/skills 或 .factory/skills 文件夹。",
       "filter": {
@@ -1967,7 +1974,9 @@
           "thinking": "正在思考",
           "thought_one": "思考了 {{count}} 次",
           "thought_other": "思考了 {{count}} 次"
-        }
+        },
+        "times_one": "{{count}} 次",
+        "times_other": "{{count}} 次"
       },
       "planning": "正在规划",
       "planningActions_one": "正在规划 {{count}} 项操作",
@@ -2006,10 +2015,21 @@
     "v3ExecuteToolResult": {
       "clickToSeeProgress": "点击查看进度",
       "waitingForCommandOutput": "等待命令输出…",
-      "expandCommandOutput": "展开命令输出"
+      "expandCommandOutput": "展开命令输出",
+      "ran": "已运行"
     },
     "v3ExitSpecModeToolResult": {
-      "proposeSpecification": "提出 Spec"
+      "proposeSpecification": "提出 Spec",
+      "specification": "Spec",
+      "writingSpec": "正在编写 Spec…",
+      "awaitingReview": "待审查",
+      "approved": "已批准",
+      "changesRequested": "请求修改",
+      "notReviewed": "尚未审查",
+      "interrupted": "已中断",
+      "failed": "失败",
+      "untitledSpecification": "未命名 Spec",
+      "reviewTitle": "审查 {{title}}"
     },
     "v3FileChangeToolResult": {
       "noDiffAvailable": "没有可用差异",
@@ -2080,7 +2100,8 @@
       "settingUpDownload": "正在设置下载…",
       "downloadRemoteFiles": "下载远程文件",
       "sessionLimitReached": "已达到 Session 上限，无法发送新消息。",
-      "subscriptionRequired": "需要订阅，无法发送新消息。"
+      "subscriptionRequired": "需要订阅，无法发送新消息。",
+      "openTerminal": "在此计算机上启动终端"
     },
     "askUserCard": {
       "selectAllThatApply": "选择所有适用项",
@@ -2184,9 +2205,6 @@
         "dictationFailed": "语音听写失败。",
         "notSupported": "此浏览器不支持语音听写。"
       }
-    },
-    "chatComposerExpandButton": {
-      "expand": "展开聊天输入框"
     },
     "chatComposerAutonomySelector": {
       "loadingSessionSettings": "正在加载 Session 设置",
@@ -2403,8 +2421,6 @@
       "scheduledLoops": "定时循环",
       "status": {
         "runningNow": "{{cadence}} · 正在运行",
-        "held": "{{cadence}} · 已暂缓",
-        "heldWithReason": "{{cadence}} · {{reason}}",
         "paused": "{{cadence}} · 已暂停",
         "error": "{{cadence}} · 错误",
         "errorWithMessage": "{{cadence}} · 错误：{{error}}",
@@ -2505,7 +2521,13 @@
       "artifacts": "产物",
       "artifactGroup_one": "{{group}}，{{formattedCount}} 个产物",
       "artifactGroup_other": "{{group}}，{{formattedCount}} 个产物",
-      "viewAllArtifacts": "查看所有产物"
+      "viewAllArtifacts": "查看所有产物",
+      "pullRequestState": {
+        "draft": "草稿",
+        "merged": "合并时间",
+        "closed": "已关闭"
+      },
+      "pullRequestWithState": "{{title}}（{{state}}）"
     },
     "sessionInfoTooltip": {
       "sessionDetails": "Session 详情",
@@ -2801,32 +2823,16 @@
       "leaveACommentOnSelectedText": "对选中文本发表评论"
     },
     "specReviewApprovalBar": {
-      "deleteComment": "删除评论",
-      "comments": "评论",
-      "noInlineComments": "没有行内评论。",
-      "autonomyLevel": "自主性级别",
-      "cancel": "取消",
-      "confirm": "确认",
-      "autonomyChoice": {
-        "off": "自动（关闭）",
-        "low": "自动（低）",
-        "medium": "自动（中）",
-        "high": "自动（高）"
-      },
       "approveMission": "批准任务",
       "approveSpec": "批准 Spec",
       "requestChanges": "请求修改",
       "keepIterating": "继续迭代",
-      "proceedWithComments": "带评论继续",
-      "proceedWithSpec": "按 Spec 继续",
       "addInlineCommentToRequestChanges": "添加行内评论以请求更改",
-      "continueIn": "继续位置",
       "thisChat": "此聊天",
       "thisChatDescription": "保留当前对话",
       "newChat": "新建聊天",
       "newChatDescription": "仅使用已批准的 Spec 全新开始",
       "contextSavings": "（节省 {{savings}}% 上下文）",
-      "proceedWithSpecInNewChat": "在新聊天中按 Spec 继续",
       "startingNewChat": "正在启动新聊天…"
     },
     "specReviewPanel": {
@@ -3497,7 +3503,7 @@
       "orchestratorAndAgentsTitle": "一个负责的 Droid 及其团队",
       "orchestratorAndAgentsBody": "<term>编排代理</term>将你的目标划分为多个领域，并为每个领域安排一个<term>代理</term>。代理构建并汇报，编排代理负责协调并汇总结果。",
       "machinesTitle": "你离开后，它仍在工作",
-      "machinesBody": "启动时选择<term>模板</term>，每个代理便会获得自己的云端计算机。因此，即使你合上笔记本，任务仍会继续。也可以在此计算机或你自己的某台计算机上运行，由代理共享该计算机。你随时可以在设置的<term>任务默认值</term>中更改默认设置。",
+      "machinesBody": "启动时选择一个<term>环境</term>，每个代理都会获得独立的云计算机，因此关闭笔记本后任务仍会继续。你也可以在此计算机或自己的其他计算机上运行，代理将在其中共享计算机。可随时在设置的<term>任务默认设置</term>中更改默认选项。",
       "steeringTitle": "你负责决策，无需亲自操作",
       "steeringBody": "只有需要你决策时，任务才会请你介入，并将成果以拉取请求的形式交给你审查。可在<term>代理</term>面板跟踪任意代理。任务比单个 Session 消耗更多 token，因此适合大型工作。"
     },
@@ -3515,13 +3521,13 @@
       "ownsTheTests": "负责测试",
       "assignsAndReports": "分派 ↓ · 汇报 ↑",
       "orchestratorAndAgentsAriaLabel": "编排代理将工作分派给三个代理，各自负责一个领域并向其汇报",
-      "template": "模板",
+      "template": "环境",
       "freshComputer": "全新计算机",
       "yourMachine": "你的计算机",
       "allAgents": "所有代理",
       "ownCloudComputerPerAgent": "每个代理独享云端计算机",
       "agentsShareOneMachine": "代理共享一台计算机",
-      "machinesAriaLabel": "模板为每个代理提供全新计算机；使用你自己的计算机时，代理共享一台计算机",
+      "machinesAriaLabel": "环境为每个代理提供全新的计算机；使用自己的计算机时，代理共享一台计算机",
       "you": "你",
       "chatAndDecide": "聊天并决策",
       "agentsPane": "代理面板",
@@ -3643,6 +3649,37 @@
     },
     "reviewRequestMessageCard": {
       "title": "已要求修改"
+    },
+    "browserExternalProtocolPrompt": {
+      "title": "打开 {{app}}？",
+      "detail": "{{origin}} 想要打开此应用。",
+      "detailUnknownOrigin": "某个网站想要打开此应用。",
+      "detailPreview": "{{computer}} 上端口 {{port}} 的预览想要打开此应用。",
+      "alwaysAllow": "始终允许 {{origin}} 在关联应用中打开此类链接",
+      "alwaysAllowPreview": "始终允许 {{computer}} 上端口 {{port}} 的预览在关联应用中打开此类链接",
+      "open": "打开",
+      "cancel": "取消",
+      "defaultApplication": "默认应用",
+      "unnamedComputer": "一台远程计算机"
+    },
+    "browserSitePermissionPrompt": {
+      "title": "{{origin}} 想要",
+      "titleLocalFile": "此文件想要",
+      "titlePreview": "{{computer}} 上端口 {{port}} 的预览想要",
+      "titleUnknown": "此页面想要",
+      "camera": "使用摄像头",
+      "microphone": "使用麦克风",
+      "geolocation": "获取你的位置",
+      "notifications": "显示通知",
+      "clipboardRead": "查看复制到剪贴板的文字和图片",
+      "allow": "允许",
+      "block": "额度块",
+      "unnamedComputer": "一台远程计算机"
+    },
+    "markdownMediaFallback": {
+      "tooLarge": "内容过大，无法预览",
+      "unavailable": "预览不可用",
+      "openOnProvider": "在 {{provider}} 上打开"
     }
   },
   "connectors": {
@@ -3821,6 +3858,9 @@
       "message": "你有未保存的更改。",
       "discard": "丢弃",
       "reviewAndSave": "检查并保存"
+    },
+    "wizardStepIndicator": {
+      "stepLabel": "{{number}}. {{label}}"
     }
   },
   "app": {
@@ -3841,7 +3881,19 @@
         "signingIn": "正在登录",
         "connecting": "正在此计算机上启动 Factory",
         "organization": "正在加载组织",
-        "workspace": "正在打开工作区"
+        "workspace": "正在打开工作区",
+        "githubPreparing": "正在准备打开 GitHub",
+        "githubConnect": "正在打开 GitHub 以连接账户",
+        "githubInstall": "正在打开 GitHub 以安装 Factory 应用",
+        "integrationStarting": "正在启动连接",
+        "integrationFinishing": "正在完成连接",
+        "returning": "正在返回 Factory",
+        "githubConnected": "GitHub 已连接，正在返回 Factory",
+        "githubInstallRequested": "已向 GitHub 组织所有者发送批准请求，正在返回 Factory",
+        "githubInstallCancelled": "尚未安装 Factory 应用，正在返回 Factory",
+        "githubOrgInstallRequired": "GitHub 账户已连接，正在返回 Factory",
+        "githubRepositoriesUpdated": "仓库访问权限已保存，正在返回 Factory",
+        "openingDesktop": "正在打开 Factory 桌面应用"
       },
       "tips": {
         "specMode": "切换 Spec 模式：",
@@ -3872,7 +3924,8 @@
       "changeTheme": "更改主题",
       "logOut": "退出登录",
       "openUserMenu": "打开用户菜单",
-      "openSettings": "打开设置"
+      "openSettings": "打开设置",
+      "advanced": "高级"
     }
   },
   "layout": {
@@ -3892,8 +3945,6 @@
         "projects": "项目",
         "computers": "计算机",
         "recent": "最近",
-        "personalSessions": "个人 Session",
-        "sharedSessions": "共享 Session",
         "pinned": "已固定",
         "yourMissions": "任务"
       },
@@ -3941,7 +3992,8 @@
         "automations": "自动化",
         "softwareFactory": "Software Factory",
         "evaluations": "评估",
-        "codeReview": "代码审查"
+        "codeReview": "代码审查",
+        "delegations": "委派"
       },
       "lastActivityOptions": {
         "all": "全部",
@@ -4019,12 +4071,9 @@
         "copySessionId": "复制 Session ID",
         "moveToSection": "移至分区",
         "newSection": "新建分区",
-        "removeFromSection": "移出分区"
+        "removeFromSection": "移出分区",
+        "removeFromTiles": "从平铺中移除"
       },
-      "hideWorkers": "隐藏工作代理",
-      "showWorkers": "显示工作代理",
-      "hideWorkstreams": "隐藏工作流",
-      "showWorkstreams": "显示工作流",
       "unpinTitle": "取消固定 {{title}}",
       "pinTitle": "固定 {{title}}",
       "archiveSession": "归档 Session",
@@ -4044,12 +4093,8 @@
         "year_one": "{{count}} 年",
         "year_other": "{{count}} 年"
       },
-      "hideWorkersFor": "隐藏 {{title}} 的工作代理",
-      "showWorkersFor": "显示 {{title}} 的工作代理",
-      "hideWorkstreamsFor": "隐藏 {{title}} 的工作流",
-      "showWorkstreamsFor": "显示 {{title}} 的工作流",
       "environments": {
-        "template": "模板",
+        "template": "环境",
         "droidComputer": "Droid Computer"
       },
       "pullRequestLabel": "拉取请求 {{state}}",
@@ -4062,7 +4107,15 @@
       },
       "branch": "分支",
       "repoCount_one": "{{count}} 个仓库",
-      "repoCount_other": "{{count}} 个仓库"
+      "repoCount_other": "{{count}} 个仓库",
+      "tiledTitle": "{{title}}（已平铺）",
+      "pullRequestTooltipLastKnown": "{{title}}（上次已知状态）",
+      "pullRequestTooltipMore_one": "另外 {{count}} 个拉取请求",
+      "pullRequestTooltipMore_other": "另外 {{count}} 个拉取请求",
+      "pullRequestCountLabel_one": "{{count}} 个拉取请求，{{state}}",
+      "pullRequestCountLabel_other": "{{count}} 个拉取请求，{{state}}",
+      "pullRequestCountLabelLastKnown_one": "{{count}} 个拉取请求，{{state}}（上次已知）",
+      "pullRequestCountLabelLastKnown_other": "{{count}} 个拉取请求，{{state}}（上次已知）"
     },
     "sessionListV2ViewDialog": {
       "addDescription": "将当前侧边栏保存为视图",
@@ -4130,7 +4183,8 @@
       "usageWillBeHaltedOn": "你将于 {{date}} 起无法继续使用。",
       "inboxNeedsAction": "收件箱，{{badge}} 项需要你处理",
       "more": "较多",
-      "moreEmpty": "隐藏的按钮和分区会显示在这里。"
+      "moreEmpty": "隐藏的按钮和分区会显示在这里。",
+      "tileCodeReview": "平铺代码审查"
     },
     "sessionsTable": {
       "sessionControls": "Session 控件",
@@ -4166,12 +4220,6 @@
       "collapseSidebar": "折叠侧边栏",
       "openSidebar": "打开侧边栏"
     },
-    "sessionListV2WorkstreamRow": {
-      "symbolPicker": {
-        "label": "工作流图标",
-        "triggerLabel": "{{name}} 的图标：{{symbol}}"
-      }
-    },
     "missionAgentAttentionCard": {
       "viewAgent": "查看代理",
       "waitingCount": "{{count}} 个等待中"
@@ -4204,7 +4252,8 @@
       "openWorkstreamLink": "打开工作流",
       "filterByWorkstream": "按工作流 {{name}} 筛选",
       "workstreamNoDescription": "暂无描述",
-      "workstreamListener": "监听代理"
+      "workstreamListener": "监听代理",
+      "noListenerAutomations": "没有自动化在其 Session 中运行。"
     },
     "missionWorkstreamFilterChip": {
       "clear": "清除工作流筛选条件 {{name}}",
@@ -4410,12 +4459,16 @@
       "discardPendingReviewWithCommentsDescription_other": "将删除你的待提交审查及其 {{count}} 条评论，不会发布。",
       "reviewWithPendingComments_one": "审查，{{count}} 条待提交评论",
       "reviewWithPendingComments_other": "审查，{{count}} 条待提交评论",
-      "mergeStack_one": "合并 {{count}} 个拉取请求",
-      "mergeStack_other": "合并 {{count}} 个拉取请求",
       "mergeStackTitle_one": "合并 {{count}} 个拉取请求？",
       "mergeStackTitle_other": "合并 {{count}} 个拉取请求？",
       "mergeStackDescription": "将从堆叠底部开始，依次合并到 {{baseBranch}}。",
-      "mergeStackOrder": "合并顺序"
+      "mergeStackOrder": "合并顺序",
+      "mergeStack": "合并堆叠",
+      "mergeStackMethods": {
+        "squash": "压缩并合并堆叠",
+        "merge": "合并堆叠",
+        "rebase": "变基并合并堆叠"
+      }
     },
     "pullRequestDescriptionCard": {
       "showLess": "收起",
@@ -4423,12 +4476,6 @@
     },
     "pullRequestDiffFileTree": {
       "changedFiles": "变更的文件"
-    },
-    "pullRequestLayerManifestProgress": {
-      "viewSession": "查看 Session",
-      "retryGeneration": "重试生成",
-      "checking": "正在检查…",
-      "checkAgain": "再次检查"
     },
     "pullRequestLinkCard": {
       "opensInYourGitProvider": "在 Git 提供商平台上打开"
@@ -4474,13 +4521,25 @@
         "changesRequested": "已要求修改",
         "changesRequestedDetail": "审查者要求先修改，再合并。",
         "reviewRequired": "需要审查",
-        "reviewRequiredDetail": "目标分支要求审查批准。"
+        "reviewRequiredDetail": "目标分支要求审查批准。",
+        "approvalsRequired_one": "已获得 {{approvals}} 项批准，共需 {{count}} 项",
+        "approvalsRequired_other": "已获得 {{approvals}} 项批准，共需 {{count}} 项",
+        "approvalsRequiredDetail": "合并前需要更多批准审查。",
+        "codeOwnerReviewRequired": "需要代码所有者审查",
+        "codeOwnerReviewRequiredDetail": "合并前必须得到变更文件的代码所有者批准。",
+        "codeOwnerReviewRequiredFrom": "等待 {{owners}} 审查。",
+        "latestPushApprovalRequired": "需要批准最新推送",
+        "latestPushApprovalRequiredDetail": "最新修改必须由最后推送者之外的其他人批准。"
       },
       "checks": {
         "passed": "所有检查均已通过",
         "failed": "部分检查未成功",
         "needAttention": "部分检查需要关注",
-        "inProgress": "部分检查尚未完成"
+        "inProgress": "部分检查尚未完成",
+        "optionalFailed": "部分可选检查未通过",
+        "requiredFailed": "部分必需检查未通过",
+        "requiredMustPass": "合并前必须通过必需检查",
+        "requiredInProgress": "部分必需检查尚未完成"
       },
       "conflicts": {
         "none": "与目标分支无冲突",
@@ -4518,6 +4577,12 @@
           "blocked": "它尚未满足所需审查、检查或其他分支规则。",
           "notMergeable": "它暂时无法合并。"
         }
+      },
+      "conversations": {
+        "unresolved": "未解决的讨论",
+        "unresolvedCount_one": "{{count}} 条未解决讨论",
+        "unresolvedCount_other": "{{count}} 条未解决讨论",
+        "unresolvedDetail": "基准分支要求在合并前解决所有讨论。"
       }
     },
     "pullRequestUnavailableFile": {
@@ -4541,7 +4606,12 @@
       "downloadingVersion": "正在下载版本 {{version}}",
       "downloadingUpdate": "正在下载更新",
       "updateFailedClickToRetry": "更新失败。点击重试。",
-      "updateAvailableAriaLabel": "有可用更新：v{{version}}。点击下载并重启以使用最新版本。"
+      "updateAvailableAriaLabel": "有可用更新：v{{version}}。点击下载并重启以使用最新版本。",
+      "keepWorkingInstallsOnRestart": "你可以继续工作，更新将在下次重启时安装。",
+      "versionReady": "版本 {{version}} 已就绪",
+      "clickToRestartNow": "点击立即重启。否则，将在应用下次重启时安装。",
+      "restartToUpdate": "重启以更新",
+      "restartToUpdateAriaLabel": "版本 {{version}} 已就绪。重启以更新。"
     },
     "missionPullRequestRow": {
       "draft": "草稿",
@@ -4562,7 +4632,8 @@
       "close": "关闭新建 Session"
     },
     "sessionTileDropPreview": {
-      "label": "拖放以平铺"
+      "label": "拖放以平铺",
+      "swapLabel": "释放以交换位置"
     },
     "missionAgentSignal": {
       "title": "信号",
@@ -4703,8 +4774,8 @@
       "architectureLabel": "架构图",
       "nodeKindAndChange": "{{kind}} · {{change}}",
       "nodeLabel": "{{label}}，{{kind}}，{{change}}",
-      "connectionTo": "→ {{node}}",
-      "connectionFrom": "← {{node}}",
+      "connectionTo": "指向 {{node}}",
+      "connectionFrom": "来自 {{node}}",
       "kinds": {
         "route": "路由",
         "page": "页面",
@@ -4729,7 +4800,110 @@
       "sectionFiles": "{{title}} 中的文件",
       "showAllFiles_one": "显示全部 {{formattedCount}} 个文件",
       "showAllFiles_other": "显示全部 {{formattedCount}} 个文件",
-      "showLess": "收起"
+      "showLess": "收起",
+      "expandArchitecture": "展开",
+      "expandedArchitectureTitle": "架构",
+      "closeExpandedArchitecture": "关闭",
+      "connectionsLabel": "连接关系",
+      "connectionToLabeled": "指向 {{node}}：{{label}}",
+      "connectionFromLabeled": "来自 {{node}}：{{label}}"
+    },
+    "pullRequestQaRecordingPlayer": {
+      "play": "播放",
+      "pause": "暂停",
+      "position": "录制播放位置",
+      "positionValue": "{{current}}，共 {{duration}}",
+      "markLabel": "{{time}} {{label}}",
+      "timeReadout": "{{current}} / {{duration}}",
+      "fullscreen": "全屏",
+      "exitFullscreen": "退出全屏"
+    },
+    "pullRequestQaReport": {
+      "verdicts": {
+        "passed": "已通过",
+        "partial": "部分完成",
+        "failed": "失败",
+        "blocked": "已阻塞",
+        "skipped": "已跳过"
+      },
+      "statuses": {
+        "passed": "已通过",
+        "failed": "失败",
+        "blocked": "已阻塞",
+        "flaky": "结果不稳定",
+        "inconclusive": "无法确定",
+        "cannotTest": "无法测试"
+      },
+      "statusMeanings": {
+        "passed": "QA 已执行此用例，变更行为符合预期。",
+        "failed": "QA 已执行此用例，变更行为不符合预期。",
+        "blocked": "QA 已开始此用例，但设置或环境问题使其在得出结果前停止。",
+        "flaky": "QA 得到了不可靠的结果，例如超时或多次尝试的结果不同。",
+        "inconclusive": "QA 无法确定此用例应验证的内容，因此未将其判为通过。",
+        "cannotTest": "QA 无法在其环境中测试此变更，需要其他测试人员检查。"
+      },
+      "title": "QA 报告",
+      "passedCount": "已通过 {{passed}} 项，共 {{total}} 项",
+      "unnamedMoment": "已验证时刻",
+      "media": "媒体",
+      "recording": "录制",
+      "recordingNotes_one": "{{count}} 条录制备注",
+      "recordingNotes_other": "{{count}} 条录制备注",
+      "playFrom": "从 {{time}} 播放：{{label}}",
+      "playFromInTestCase": "从 {{time}} 播放：{{label}}（测试用例：{{testCase}}）",
+      "playTestFrom": "从 {{time}} 播放 {{name}}",
+      "momentTestCaseLabel": "测试用例：",
+      "actionRequired": "需要操作",
+      "actionRequiredApps_one": "{{count}} 个应用：{{apps}}",
+      "actionRequiredApps_other": "{{count}} 个应用：{{apps}}",
+      "actionRequiredItems_one": "{{count}} 项",
+      "actionRequiredItems_other": "{{count}} 项",
+      "actionRequiredScope": "· {{scope}}",
+      "testCases": "测试用例",
+      "filterLabel": "显示测试用例",
+      "filters": {
+        "all": "全部 {{total}} 项",
+        "needsAttention": "需要关注 {{total}} 项",
+        "passed": "已通过 {{total}} 项"
+      },
+      "testCount_one": "{{count}} 项测试",
+      "testCount_other": "{{count}} 项测试",
+      "attentionCount_one": "{{count}} 项需要关注",
+      "attentionCount_other": "{{count}} 个需要关注",
+      "groupCountWithAttention": "{{tests}} · {{attention}}",
+      "foldedPasses_one": "{{count}} 个已通过",
+      "foldedPasses_other": "{{count}} 个已通过",
+      "show": "显示",
+      "hide": "隐藏",
+      "showPasses_one": "显示 {{count}} 项已通过测试",
+      "showPasses_other": "显示 {{count}} 项已通过测试",
+      "hidePasses_one": "隐藏 {{count}} 项已通过测试",
+      "hidePasses_other": "隐藏 {{count}} 项已通过测试",
+      "observed": "QA 观察结果",
+      "toTest": "待测试内容",
+      "evidenceFiles": "证据文件",
+      "testedAs": "测试使用的身份",
+      "more": "较多",
+      "appEvidence": "{{app}} 证据",
+      "appRecording": "{{app}} 录制",
+      "notes": "备注",
+      "statusMeaningSuffix": "· {{meaning}}"
+    },
+    "pullRequestReviewFloatingChat": {
+      "minimize": "最小化聊天",
+      "restore": "显示聊天",
+      "dock": "在侧面板中打开聊天",
+      "needsApproval": "需要你的批准",
+      "hasQuestion": "Droid 有一个问题",
+      "working": "工作中",
+      "replied": "已回复"
+    },
+    "pullRequestReviewerRow": {
+      "codeOwner": "代码所有者"
+    },
+    "pullRequestCodeOwnerApproval": {
+      "title": "需要代码所有者批准",
+      "owners": "代码所有者"
     }
   },
   "automations": {
@@ -4984,6 +5158,13 @@
         "ci": "GitHub 事件",
         "automation": "另一个自动化"
       }
+    },
+    "automationManagedModelField": {
+      "label": "模型",
+      "helperText": "Factory 管理此模型并保持更新，跳过组织阻止的模型。",
+      "unavailable": "组织阻止了此自动化可用的所有模型。请联系管理员允许 {{models}}。",
+      "checking": "正在检查组织允许的模型…",
+      "noModel": "没有可用模型"
     }
   },
   "actions": {
@@ -5338,15 +5519,12 @@
   },
   "onboarding": {
     "firstRunOnboarding": {
-      "tellUsAboutYourRole": "请介绍你的岗位",
-      "back": "返回",
       "skip": "跳过",
-      "hereAreAFewWaysTo": "以下是几种开始使用的方式",
-      "installedForYourRole": "已为你的岗位安装：",
       "greeting": "欢迎使用 Factory",
       "greetingWithName": "欢迎使用 Factory，{{name}}",
       "teammateCount_one": "{{count}} 位团队成员",
-      "teammateCount_other": "{{count}} 位团队成员"
+      "teammateCount_other": "{{count}} 位团队成员",
+      "whatDoYouWorkOn": "你从事什么工作？"
     },
     "nameStage": {
       "theSanFranciscoAiFactory": "旧金山 AI Factory",
@@ -5363,7 +5541,6 @@
       "returnToDesktopApp": "返回桌面应用",
       "learnMore": "了解详情",
       "youAlreadyHaveTheCliInstalled": "你已经安装 CLI。可以关闭此标签页，在终端中继续。",
-      "continueOnWeb": "在浏览器中继续",
       "runDroidInYourTerminalWith": "在终端中运行 Droid，完全掌控工作流程。支持与 VS Code 和 JetBrains IDE 集成。",
       "commandLine": "命令行",
       "useYourOwnApiKeys": "使用自己的 API 密钥",
@@ -5479,6 +5656,138 @@
       "getStarted": "开始使用",
       "stepOf": "第 {{current}} / {{total}} 步",
       "currentLabel": " · {{label}}"
+    },
+    "starterSuggestions": {
+      "heading": "从一个想法开始",
+      "installedForYourRole": "已为你的岗位安装：",
+      "loading": "正在为你的代码寻找想法"
+    },
+    "webEnvironmentSetup": {
+      "stepOfTotal": "第 {{step}} 步，共 {{total}} 步",
+      "freeHoursLeft_one": "剩余 {{hours}} 小时免费云端时长",
+      "freeHoursLeft_other": "剩余 {{hours}} 小时免费云端时长",
+      "skipForNow": "暂时跳过",
+      "tryAgain": "重试",
+      "checkAgain": "再次检查",
+      "cancel": "取消",
+      "dismiss": "忽略",
+      "connect": {
+        "title": "连接 GitHub 以处理你的代码",
+        "connectGitHub": "连接 GitHub",
+        "waitingForAccount": "正在等待 GitHub 登录…",
+        "waitingForApp": "正在等待在 GitHub 上安装应用…",
+        "checkingStatus": "正在检查应用安装状态…",
+        "popupBlocked": "浏览器阻止了 GitHub 窗口。请允许此网站弹出窗口后重试。",
+        "failedFallback": "无法连接 GitHub。",
+        "installCancelledDescription": "请完成在 GitHub 上安装 Factory 应用，然后选择仓库。",
+        "accountStep": "连接你的 GitHub 账户",
+        "appStep": "在 GitHub 组织中安装 Factory 应用",
+        "stepDone": "完成",
+        "stepNeedsAdmin": "需要管理员操作",
+        "installApp": "安装 Factory 应用",
+        "adminLinkLabel": "提供给管理员的安装链接",
+        "copyLink": "复制链接",
+        "copied": "已复制",
+        "subtitle": {
+          "connect": "Droid 需要访问你的仓库才能处理代码。",
+          "connectFreeHours": "连接 GitHub 将安装 Factory 应用并解锁免费云端时长。",
+          "waiting": "请在 GitHub 窗口中完成操作，此处将自动继续。",
+          "install": "Factory 通过此应用读取你的仓库，以构建云环境。",
+          "installFreeHours": "Factory 通过此应用读取你的仓库，以构建云环境。安装后还会解锁免费云端时长。",
+          "askAdmin": "将此链接发送给组织中的 Factory 管理员，请其安装应用，然后重新检查。",
+          "approval": "GitHub 组织所有者需要批准 Factory 应用。批准后，请重新检查并选择仓库。",
+          "approvalFreeHours": "GitHub 组织所有者需要批准 Factory 应用。批准后，免费云端时长开始计时，你即可选择仓库。"
+        }
+      },
+      "chooseRepos": {
+        "title": "选择环境使用的仓库",
+        "announcement": "GitHub 已连接。请选择环境使用的仓库。",
+        "searchLabel": "搜索仓库",
+        "searchPlaceholder": "搜索仓库",
+        "listLabel": "仓库",
+        "loading": "正在从 GitHub 加载你的仓库…",
+        "noMatches": "没有匹配“{{query}}”的仓库",
+        "emptyTitle": "Factory 尚无法看到任何仓库",
+        "emptyDescription": "选择 Factory 应用在 GitHub 上可以访问的仓库。",
+        "configureOnGitHub": "在 GitHub 上配置",
+        "nameLabel": "环境名称",
+        "namePlaceholder": "my-environment",
+        "nameHelper": "使用小写字母、数字和连字符。",
+        "create": "创建环境",
+        "creating": "正在创建环境…",
+        "controlKey": "Ctrl",
+        "selectedCount_one": "已选择 {{count}} 个仓库",
+        "selectedCount_other": "已选择 {{count}} 个仓库",
+        "ssoInstruction": "<authorize>为 {{organization}} 授权 SSO</authorize>以查看其仓库",
+        "reconnectGitHub": "重新连接 GitHub",
+        "emptyNoReposDescription": "你在 GitHub 上创建或授权 Factory 应用访问的仓库会显示在这里。",
+        "addRepositories": "在 {{account}} 上添加仓库",
+        "addingRepositories": "正在等待你在 GitHub 上选择仓库…",
+        "loadMore": "显示更多仓库",
+        "loadingMore": "正在加载更多仓库…",
+        "searching": "正在 GitHub 上搜索“{{query}}”…",
+        "startingComputer": "正在启动云计算机…"
+      },
+      "building": {
+        "droidLabel": "Droid",
+        "title": "正在构建 {{name}}",
+        "keepWorking": "你可以继续工作，就绪时我们会通知你。",
+        "phase": {
+          "queued": "等待开始",
+          "building": "正在设置环境",
+          "validating": "正在测试能否启动"
+        }
+      },
+      "ready": {
+        "message": "{{name}} 已就绪，新 Session 将使用此环境。",
+        "useEnvironment": "使用 {{name}}"
+      },
+      "buildFailed": {
+        "title": "环境构建失败",
+        "fallback": "无法构建 {{name}}。",
+        "retry": "重试",
+        "viewDetails": "查看详情",
+        "retrying": "正在重新启动构建…"
+      },
+      "computeUnavailable": {
+        "allowanceExhaustedTitle": "免费云端时长已用完",
+        "allowanceExhaustedDescription": "开通套餐以继续在云端运行 Droid，或使用桌面应用在自己的计算机上工作。",
+        "alreadyClaimedTitle": "免费云端时长已被使用",
+        "alreadyClaimedDescription": "此 GitHub 账户的免费云端时长已被其他工作区使用。请开通套餐以在云端运行 Droid，或使用桌面应用在自己的计算机上工作。",
+        "billingIssueTitle": "需要更新账单信息",
+        "billingIssueDescription": "更新账单信息后，云计算机将恢复运行。在此之前，你可以使用桌面应用在自己的计算机上工作。",
+        "blockedTitle": "此工作区无法使用云计算机",
+        "blockedDescription": "地区限制或管理员策略可能限制云端访问。你仍可使用桌面应用在自己的计算机上运行 Droid。",
+        "startPlan": "开通套餐",
+        "updateBilling": "更新账单信息",
+        "useDesktop": "使用桌面版"
+      }
+    },
+    "scmConnectOnly": {
+      "notNow": "暂时不用",
+      "cancel": "取消",
+      "connect": {
+        "title": "连接你的 {{provider}} 账户",
+        "titleAny": "连接你的代码托管账户",
+        "subtitle": "团队已设置好云环境。请连接你的账户，以在其中启动 Session。",
+        "subtitleCount_one": "团队已设置 {{count}} 个云环境。请连接你的账户，以在其中启动 Session。",
+        "subtitleCount_other": "团队已设置 {{count}} 个云环境。请连接你的账户，以在其中启动 Session。",
+        "button": "连接 {{provider}}",
+        "tryAgain": "重试 {{provider}}",
+        "popupBlocked": "浏览器阻止了 {{provider}} 窗口。请允许此网站弹出窗口后重试。",
+        "waiting": "请在浏览器中完成 {{provider}} 连接…"
+      },
+      "pick": {
+        "title": "选择环境",
+        "subtitle": "你的账户现在可以使用这些环境。请选择一个以在其中启动 Session。",
+        "connectedAs": "{{provider}} 已连接",
+        "repoCount_one": "{{count}} 个仓库",
+        "repoCount_other": "{{count}} 个仓库",
+        "repoNamesMore": "{{names}} +{{count}}",
+        "rowLabel": "在 {{name}} 中启动（{{summary}}）",
+        "emptyTitle": "暂无可用环境",
+        "emptyDescription": "请联系管理员授予访问权限。你仍可以在不使用云环境的情况下启动 Session。"
+      }
     }
   },
   "terminal": {
@@ -5663,18 +5972,6 @@
       "cancel": "取消",
       "enterToStart": "以启动"
     },
-    "newMissionLaunch": {
-      "label": "正在启动 {{title}}",
-      "summary": "Mission 任务设置",
-      "summaryItem": "{{label}}：{{value}}",
-      "steps": "启动步骤",
-      "done": "已完成",
-      "upcoming": "待执行",
-      "announcement": "当前：{{step}}",
-      "provisioningProgress": "{{index}}/{{count}} · {{percent}}",
-      "stepCount": "第 {{current}} / {{total}} 步",
-      "opensWhenReady": "就绪后自动打开。"
-    },
     "missionSettings": {
       "title": "Mission 任务设置",
       "sections": {
@@ -5691,40 +5988,25 @@
         "orchestratorReasoning": "编排器推理强度",
         "orchestratorReasoningDescription": "编排器后续轮次使用的推理强度。",
         "agentModel": "代理模型",
-        "agentModelDescription": "用于此后启动的代理。正在运行的代理保持原有模型。",
+        "agentModelDescription": "所有代理使用的模型。运行中的代理将在下一轮切换；默认选项仅适用于新代理。",
         "agentReasoning": "代理推理强度",
-        "agentReasoningDescription": "用于此后启动的代理的推理强度。",
+        "agentReasoningDescription": "所有代理使用的推理强度。运行中的代理将在下一轮切换；默认选项仅适用于新代理。",
         "readOnly": "你可以查看这些设置，但无法在此更改。"
       },
       "usage": {
         "thisMission": "此 Mission 任务",
         "credits": "积分",
-        "tokens": "Token",
         "agents": "代理",
         "estimateNote": "积分为各 Session 估算的 Factory 标准积分。实际账单可能略有差异。",
-        "tokenBreakdown": "Token 明细",
-        "tokenBreakdownFor": "{{name}}的 token 明细",
-        "categories": {
-          "inputTokens": "输入",
-          "outputTokens": "输出",
-          "cacheWriteTokens": "缓存写入",
-          "cacheReadTokens": "缓存读取"
-        },
-        "missingTokens_one": "未计入 {{count}} 个尚无 token 数量的 Session。",
-        "missingTokens_other": "未计入 {{count}} 个尚无 token 数量的 Session。",
         "sessions": "Session",
         "columns": {
           "session": "Session",
           "model": "模型",
           "credits": "积分",
-          "tokens": "Token",
           "share": "占比"
         },
         "orchestrator": "编排器",
         "openSession": "打开 {{name}}",
-        "showBreakdown": "显示{{name}}的 token 明细",
-        "hideBreakdown": "隐藏{{name}}的 token 明细",
-        "noTokens": "尚未报告 token 数量。",
         "notReported": "未报告",
         "shareLabel": "{{name}}在 Mission 任务中的占比"
       }
@@ -5735,7 +6017,6 @@
       "settings": "工作流设置",
       "skills": "Skills",
       "flowLabel": "{{name}}的数据流",
-      "pollSchedule": "按{{schedule}}轮询",
       "untitledSession": "未命名代理",
       "statusWithLastActive": "{{status}} · {{time}}",
       "columns": {
@@ -5755,6 +6036,35 @@
         "working": "工作中",
         "idle": "空闲"
       }
+    },
+    "workstreamList": {
+      "title": "工作流",
+      "newWorkstream": "新建工作流",
+      "emptyTitle": "暂无工作流",
+      "emptyDescription": "协调代理在此任务中创建的工作流会显示在这里。",
+      "agentCount_one": "{{count}} 个代理",
+      "agentCount_other": "{{count}} 个代理",
+      "pullRequestCount_one": "{{count}} 个 PR",
+      "pullRequestCount_other": "{{count}} 个 PR"
+    },
+    "usageBanner": {
+      "nearLimitTitleFiveHour": "你已使用 5 小时用量额度的 {{percent}}%",
+      "nearLimitTitleWeekly": "你已使用每周用量额度的 {{percent}}%",
+      "nearLimitTitleMonthly": "你已使用每月用量额度的 {{percent}}%",
+      "nearLimitTitleBillingPeriod": "你已使用本计费周期用量额度的 {{percent}}%",
+      "nearLimitDescription": "代理会继续工作至达到上限，然后暂停到 {{resetTime}} 重置。要延长可用时间，可降低代理或协调代理的推理强度，或改用费用更低的模型。",
+      "nearLimitDescriptionNoReset": "代理会继续工作至达到上限，然后停止。要延长可用时间，可降低代理或协调代理的推理强度，或改用费用更低的模型。",
+      "standardUsedUpTitle": "标准用量已用完",
+      "standardUsedUpDescription": "此任务中的代理已停止，将在 {{resetTime}} 重置后恢复。可将任务切换到 Droid Core 使用其独立额度继续，或增加用量。",
+      "organizationLimitTitle": "已达到组织设置的用量上限",
+      "organizationLimitDescription": "此任务中的代理已停止，将在 {{resetTime}} 重置后恢复。请联系管理员提高上限。",
+      "organizationLimitDescriptionNoReset": "此任务中的代理已停止。请联系管理员提高上限。",
+      "usedUpTitle": "已达到用量上限",
+      "usedUpDescription": "此任务中的代理已停止，将在 {{resetTime}} 用量重置后恢复。请增加用量，或在任务设置中切换到你自带密钥的模型（BYOK）。",
+      "usedUpDescriptionNoReset": "此任务中的代理已停止。请检查用量，或在任务设置中切换到你自带密钥的模型（BYOK）。",
+      "changeModels": "更改模型",
+      "manageUsage": "管理用量",
+      "dismiss": "忽略"
     }
   },
   "lessons": {
@@ -6525,7 +6835,9 @@
       "saving": "正在保存…",
       "revisionWithdrawn": "此修订版本已被发布者撤回。",
       "datasetHasNoTasks": "此数据集没有任务。",
-      "details": "详情"
+      "details": "详情",
+      "tasks": "任务",
+      "loadingTasks": "正在加载任务…"
     },
     "evaluationPresetLibrary": {
       "searchPresets": "搜索预设",
@@ -6620,13 +6932,9 @@
       "filePreview": "文件预览"
     },
     "evaluationRunConfigFields": {
-      "tasks": "任务",
-      "loadingTasks": "正在加载任务…",
       "skills": "Skills",
       "execution": "执行",
       "concurrency": "并发数",
-      "droidCliFlags": "Droid CLI 标志",
-      "flagValue": "--flag value",
       "concurrencyError": "请输入 1 到 {{max}} 之间的数字。"
     },
     "evaluationRunPanel": {
@@ -6642,11 +6950,12 @@
       "startRun": "开始运行",
       "noPreset": "不使用预设",
       "setup": "设置",
-      "back": "返回",
       "savePreset": "保存预设",
       "saving": "正在保存…",
       "presetName": "预设名称",
-      "notes": "备注"
+      "notes": "备注",
+      "notSavedInPreset": "预设不会保存这些高级选项：{{keys}}。",
+      "tasks": "任务"
     },
     "evaluationRunsTable": {
       "runsUnavailable": "运行记录不可用",
@@ -6766,6 +7075,14 @@
       "revision": "修订版本 {{revision}}",
       "revisionWithTags_one": "修订版本 {{revision}} · 标签 {{tags}}",
       "revisionWithTags_other": "修订版本 {{revision}} · 标签 {{tags}}"
+    },
+    "evaluationAdvancedOptionsField": {
+      "droidCliFlags": "Droid CLI 标志",
+      "droidVersion": "Droid 版本",
+      "latestRelease": "最新发行版",
+      "invalidVersion": "请输入完整版本号，例如 1.2.3。",
+      "environmentVariables": "环境变量",
+      "envWarning": "每行一项 KEY=value。代理和评分器都能读取这些值，请勿在此填写机密信息。"
     }
   },
   "softwareFactoryLayout": {
@@ -7657,6 +7974,34 @@
     "softwareFactoryAttachmentMedia": {
       "loading": "正在加载附件…",
       "unavailable": "无法显示此附件"
+    }
+  },
+  "checkForUpdatesModal": {
+    "youreOnTheLatestVersion": "已是最新版本",
+    "checkingForUpdates": "正在检查更新…",
+    "newVersionAvailable": "有新版本可用",
+    "newVersionAvailableVersionsBehind": "有新版本可用（落后 {{behind}} 个版本）",
+    "preparingUpdateTo": "正在准备更新至 v{{version}}…",
+    "downloadingVersion": "正在下载 v{{version}}…",
+    "downloadingUpdate": "正在下载更新…",
+    "readyToInstallOnRestart": "v{{version}} 已下载，将在应用下次重启时安装。"
+  },
+  "desktopRepoPicker": {
+    "ariaLabel": "选择工作文件夹",
+    "title": "Droid 应在哪里工作？",
+    "subtitle": "选择项目。Droid 将在其中读取、编辑和运行代码。",
+    "subtitleNoRecents": "选择项目文件夹。在选择之前，Droid 将在你的主目录中工作。",
+    "subtitleLoading": "正在加载最近使用的文件夹…",
+    "recent": "最近",
+    "selectFolder": "在 {{name}}（{{path}}）中工作",
+    "chooseFolder": "选择文件夹…",
+    "useHomeFolder": "使用主目录",
+    "opening": "正在为此 Session 打开 {{name}}…",
+    "trust": {
+      "title": "信任 {{name}}？",
+      "confirm": "信任并继续",
+      "saving": "正在信任此文件夹…",
+      "cancel": "选择其他文件夹"
     }
   }
 }

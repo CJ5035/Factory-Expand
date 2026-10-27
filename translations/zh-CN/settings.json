@@ -54,13 +54,12 @@
     "notConfigured": "未配置",
     "usageLimitDetail": "每位成员每月 {{limit}} 积分",
     "usageLimitRange": "因组织而异：每位成员每月 {{min}} 至 {{max}} 积分",
-    "allGroupsWithCount": "所有组 · {{count}}"
+    "allGroupsWithCount": "所有组 · {{count}}",
+    "modelAccessDetail": "允许 {{allowed}} 个，阻止 {{blocked}} 个",
+    "modelAccessVaries": "因组织而异"
   },
   "directoryGroupConfiguration": {
     "title": "配置 {{name}}",
-    "settingsStep": "配置设置",
-    "organizationsStep": "选择组织",
-    "step": "第 {{step}} 步，共 {{total}} 步",
     "limitTitle": "每月用量上限",
     "limitDescription": "此组成员使用该上限，除非为其单独设置了覆盖值。该上限优先于全局用户上限。",
     "limitLabel": "每位成员的上限（百万积分）",
@@ -79,7 +78,20 @@
     "back": "返回",
     "saving": "正在保存…",
     "save": "保存",
-    "next": "下一步"
+    "next": "下一步",
+    "limitOptional": "留空则不设置组上限。",
+    "modelAccessTitle": "模型访问权限",
+    "modelAccessDescription": "在各组织模型策略的基础上，为组成员允许或阻止模型。只要成员所属的任意一个组允许某模型，成员即可使用；用户级覆盖设置优先。",
+    "searchModels": "搜索模型",
+    "clearModelAccess": "全部清除",
+    "nothingToSave": "设置用量上限或模型访问权限后，才能保存此组。",
+    "nothingToSaveLimitOnly": "设置用量上限后，才能保存此组。",
+    "limitRemovedChange": "{{organization}} 中的 {{group}}：已移除用量上限",
+    "limitInvalid": "请输入零或正数，单位为百万积分。",
+    "limitAddedChange": "{{organization}} 中的 {{group}}：新增 {{next}} 积分用量上限",
+    "modelAccessAddedChange": "{{organization}} 中的 {{group}}：新增模型访问权限 {{next}}",
+    "modelAccessChange": "{{organization}} 中的 {{group}}：模型访问权限从 {{previous}} 更改为 {{next}}",
+    "modelAccessRemovedChange": "{{organization}} 中的 {{group}}：已移除模型访问权限"
   },
   "fleet": {
     "label": "设备群",
@@ -423,7 +435,8 @@
     "followTheDocumentation": "按照 <anchor>Bitbucket Data Center 文档</anchor>创建 OAuth 应用并获取所需凭据。",
     "configurationSaved": "Bitbucket Data Center 配置已保存",
     "saving": "正在保存…",
-    "saveConfiguration": "保存配置"
+    "saveConfiguration": "保存配置",
+    "cloudConfigurationSaved": "Bitbucket 配置已保存"
   },
   "buildConnectionStatusSection": {
     "connectionStatus": "连接状态"
@@ -1294,8 +1307,8 @@
       "computerSecretsChange": "计算机机密",
       "organizationMonthlyUsageSettingsChange": "组织用量设置",
       "delegationActivity": "委派",
-      "remoteDelegationConfigChange": "委派配置",
-      "agentReadinessReportChange": "代理就绪度报告"
+      "agentReadinessReportChange": "代理就绪度报告",
+      "agentProfileChange": "代理配置档"
     },
     "auditScope": {
       "organization": "组织",
@@ -1343,16 +1356,6 @@
       "medium": "继承（中）",
       "heavy": "继承（高）"
     },
-    "remoteDelegationConfigs": {
-      "apps": {
-        "title": "应用",
-        "description": "为 Slack、Teams、Linear 和 Jira 中的 Factory 提供支持。"
-      },
-      "softwareFactory": {
-        "title": "Software Factory",
-        "description": "为 Software Factory 中的聊天 Session 和工作流创建提供支持。"
-      }
-    },
     "autoModelCustomCandidateBlockedReason": "被模型访问策略阻止：自定义模型已关闭，或此端点不在允许的基础 URL 范围内。",
     "autoModelCustomCandidateMissingReason": "此自定义模型已不在共享模型中。请在这里也将其移除。",
     "mergedPages": {
@@ -1365,8 +1368,8 @@
       "environments": {
         "label": "环境",
         "computersTab": "计算机",
-        "templatesTab": "模板",
-        "description": "Droid Session 运行所用的计算机和模板。"
+        "templatesTab": "环境",
+        "description": "Droid Session 运行所用的计算机和环境。"
       }
     },
     "enterpriseControlsGroups": {
@@ -1393,6 +1396,16 @@
       "advanced": {
         "label": "高级",
         "description": "不常用的控制项，包括原始 JSON 配置。"
+      }
+    },
+    "agentProfiles": {
+      "apps": {
+        "title": "应用",
+        "description": "为 Slack、Teams、Linear 和 Jira 中的 Factory 提供支持。"
+      },
+      "softwareFactory": {
+        "title": "Software Factory",
+        "description": "为 Software Factory 中的聊天 Session 和工作流创建提供支持。"
       }
     }
   },
@@ -1533,7 +1546,6 @@
   "explicitModelOptInModal": {
     "dataRetentionStep": "数据保留",
     "highCostStep": "费用更高",
-    "stepLabel": "{{number}}. {{label}}",
     "title": "模型明确授权：{{modelName}}",
     "highCostTitle": "高费用模型授权：{{modelName}}",
     "continue": "继续",
@@ -1680,7 +1692,7 @@
       "providersLoad": "无法加载计算提供商。",
       "repositoriesLoad": "无法加载仓库。请重试。",
       "computersLoad": "无法加载现有 Droid Computers，暂时无法检查名称。请重试。",
-      "templatesLoad": "无法加载模板。请重试。",
+      "templatesLoad": "无法加载环境。请重试。",
       "creationUnavailable": "无法创建 Droid Computer。请重试。",
       "creationStatusLoad": "无法加载创建状态。重试前请检查 Droid Computers 列表。",
       "createFailed": "无法创建 Droid Computer。"
@@ -2028,11 +2040,11 @@
     "cancel": "取消",
     "continue": "继续",
     "back": "返回",
-    "text1TemplateDetails": "1. 环境详情",
-    "text2BuildSteps": "2. 构建步骤",
     "creating": "正在创建…",
     "create": "创建",
-    "createTemplate": "创建环境"
+    "createTemplate": "创建环境",
+    "environmentDetails": "环境详情",
+    "buildSteps": "构建步骤"
   },
   "sandboxEnvironmentEditorPage": {
     "editDescription": "更改环境、仓库或设置脚本会重新构建环境。",
@@ -2293,8 +2305,7 @@
     "createComputer": "创建计算机"
   },
   "integrationCallback": {
-    "failedToCompleteIntegration": "完成集成失败。请重试。",
-    "loading": "正在完成连接"
+    "failedToCompleteIntegration": "完成集成失败。请重试。"
   },
   "integrationError": {
     "returnToSettings": "返回设置",
@@ -2312,8 +2323,7 @@
     "memberAccess": "成员访问权限"
   },
   "integrationStart": {
-    "failedToStartIntegration": "启动集成失败。请重试。",
-    "loading": "正在启动连接"
+    "failedToStartIntegration": "启动集成失败。请重试。"
   },
   "jiraDelegationSetupSection": {
     "jiraAppStatus": "Jira 应用状态",
@@ -2563,7 +2573,15 @@
     "nativeNotificationsAreShownWhenThe": "应用未获得焦点时显示原生通知。",
     "notifications": "通知",
     "notifyWhenDroidFinishesWork": "Droid 完成工作时通知",
-    "notifyWhenDroidNeedsInput": "Droid 需要输入时通知"
+    "notifyWhenDroidNeedsInput": "Droid 需要输入时通知",
+    "desktopNotifications": "桌面通知",
+    "desktopNotificationsDescription": "收件箱有新事项且你尚未查看时，显示系统通知。",
+    "followInboxCategories": "桌面通知遵循你的<anchor>收件箱分类</anchor>设置。",
+    "openSystemSettings": "打开系统通知设置",
+    "preferencesSaved": "通知偏好设置已保存",
+    "systemSettings": "系统通知",
+    "systemSettingsDescription": "如果未显示通知，请确认系统设置允许 Factory 发送通知。",
+    "systemUnsupportedDescription": "此系统无法显示 Factory 通知。"
   },
   "openComputeDeploymentCard": {
     "rename": "重命名",
@@ -2920,7 +2938,11 @@
       "large": "大（120%）",
       "extraLarge": "特大（130%）"
     },
-    "keepAwakeSaveFailed": "保存保持唤醒偏好失败"
+    "keepAwakeSaveFailed": "保存保持唤醒偏好失败",
+    "automaticallyUpdate": "自动更新",
+    "automaticallyUpdateDescription": "在后台下载更新，以便重启时安装。组织的更新设置仍然适用。",
+    "autoUpdateSaveFailed": "保存自动更新偏好失败",
+    "autoUpdateSaveFailedDescription": "已恢复原设置。请重试。"
   },
   "providerSelector": {
     "computeProvider": "计算提供商",
@@ -2940,114 +2962,6 @@
     "rawConfiguration": "原始配置",
     "validationErrors": "验证错误",
     "viewAndEditAllSettingsAsJson": "以 JSON 格式查看和编辑所有设置。这里的更改也会同步更新相应控件。"
-  },
-  "remoteDelegationConfigSection": {
-    "plugins": "插件",
-    "installedForEveryDelegatedSessionThat": "除企业控制 › 插件中组织范围启用的插件外，还会为使用此配置运行的每个委派 Session 安装。",
-    "enabledOrgWide": "组织范围内已启用",
-    "addedByThisConfig": "由此配置添加",
-    "noPluginsAddedByThisConfig": "此配置未添加任何插件。",
-    "pluginName": "插件名称",
-    "pluginName2": "plugin-name",
-    "marketplace": "市场",
-    "marketplace2": "@marketplace",
-    "add": "添加",
-    "registerAMarketplaceUnderEnterpriseControls": "添加插件前，请先在企业控制 › 插件中注册市场。",
-    "enterJustThePluginNameAnd": "仅输入插件名称，并从列表中选择其市场。",
-    "thatPluginIsAlreadyListed": "该插件已在列表中。",
-    "thatPluginIsAlreadyEnabledOrg": "该插件已在组织范围内启用，因此每个 Session 都会使用。",
-    "thatPluginIsTurnedOffFor": "该插件已在整个组织中关闭，此配置无法启用它。",
-    "failedToLoadServiceAccountsRefresh": "加载服务账号失败。请刷新页面后重试。",
-    "loadingServiceAccounts": "正在加载服务账号…",
-    "identity": "身份",
-    "delegatedSessionsRunAsThisService": "委派 Session 以此服务账号运行，配置池中的所有计算机均归其所有。",
-    "useExistingServiceAccount": "使用现有服务账号",
-    "newServiceAccount": "新建服务账号",
-    "theRemoteDelegationsServiceAccountIs": "委派服务账号尚未设置。请刷新页面后重试。",
-    "noActiveServiceAccountsYetCreate": "暂无活跃服务账号。请创建一个以运行委派 Session。",
-    "serviceAccount": "服务账号",
-    "name": "名称",
-    "eGDelegationWorker": "例如 delegation-worker",
-    "namesArePermanentIdentifiersAndCannot": "名称是永久标识符，一旦使用便无法重复使用。",
-    "descriptionOptional": "描述（可选）",
-    "couldNotCreateTheServiceAccount": "无法创建服务账号。名称可能已被占用，或已达到套餐上限。",
-    "addManagedComputer": "添加托管计算机",
-    "type": "类型",
-    "status": "状态",
-    "loadingComputers": "正在加载计算机…",
-    "failedToLoadComputersRefreshThe": "加载计算机失败。请刷新页面后重试。",
-    "noComputersYetAddAManaged": "暂无计算机。添加托管计算机，或通过远程控制连接自己的计算机，以支持委派。",
-    "failedToSaveTryAgain": "保存失败。请重试。",
-    "back": "返回",
-    "next": "下一步",
-    "access": "访问权限",
-    "everyone": "所有人",
-    "defaultModel": "默认模型",
-    "defaultReasoningLevel": "默认推理级别",
-    "customInstructionsOptional": "自定义指令（可选）",
-    "eGAlwaysReplyInThe": "例如：始终在讨论串中回复摘要和 Session 链接。",
-    "compute": "计算资源",
-    "machineType": "计算机类型",
-    "useExistingTemplate": "使用现有环境",
-    "newTemplate": "新建环境",
-    "removeSelectedTemplate": "移除所选环境",
-    "templateUnavailable": "环境已删除或不可用。请移除后选择其他环境。",
-    "templateInaccessible": "你无法访问此环境中的所有仓库，因此它未显示在环境列表中。",
-    "perMachineParallelWorkerLimit": "每台计算机的并行工作代理上限",
-    "perMachineParallelWorkerLimitHelp": "每台计算机的并行工作代理上限说明",
-    "remoteDelegationConfigs": "委派配置",
-    "computerTypes": {
-      "bringYourOwnMachine": "远程控制",
-      "managedByFactory": "由 Factory 管理"
-    },
-    "computerStatuses": {
-      "provisioning": "正在配置…",
-      "active": "活跃",
-      "error": "错误",
-      "unknown": "未知"
-    },
-    "sectionDescription": "定义代理如何运行委派工作。",
-    "machineTypes": {
-      "dynamic": "动态",
-      "persistent": "持久化"
-    },
-    "wizardSteps": {
-      "general": "通用",
-      "plugins": "插件",
-      "identity": "身份",
-      "compute": "计算资源"
-    },
-    "untitledConfig": "未命名配置",
-    "edit": "编辑",
-    "setUp": "设置",
-    "editConfig": "编辑 {{title}}",
-    "setUpConfig": "设置 {{title}}",
-    "removePlugin": "移除 {{pluginId}}",
-    "unregisteredPluginsWillNotInstall": "以下插件需要先在企业控制中注册其市场才能安装：{{pluginIds}}。",
-    "blockedPluginsWillNotInstall": "以下插件在整个组织中已关闭，此设置覆盖本配置，因此不会安装：{{pluginIds}}。",
-    "maximumPluginsPerConfigReached": "已达到每个配置最多 {{max}} 个插件的上限。",
-    "creating": "正在创建…",
-    "createServiceAccount": "创建服务账号",
-    "seeByomGuide": "<anchor>查看远程控制指南</anchor>以注册自己的计算机",
-    "finishBlocked": {
-      "identityInactive": "所选身份已不再活跃。请在身份步骤选择一个活跃的服务账号以完成设置。",
-      "chooseTemplate": "请在计算资源步骤选择环境以完成设置。",
-      "templateUnavailable": "所选环境已删除或不可用。请在计算资源步骤选择其他环境以完成设置。",
-      "failedToLoadMachines": "加载此身份的计算机失败。请刷新页面后重试。",
-      "loadingMachines": "正在加载此身份的计算机…",
-      "addMachine": "请在计算资源步骤添加至少一台计算机以完成设置。"
-    },
-    "chooseAnIdentityToContinue": "请选择身份以继续。",
-    "saving": "正在保存…",
-    "finish": "完成",
-    "editModalTitle": "编辑委派配置 - {{name}}",
-    "setUpModalTitle": "设置委派配置 - {{name}}",
-    "oneTemplatePerConfig": "一个配置在一个环境中运行。移除所选环境后可选择其他环境。",
-    "parallelWorkerLimitTooltip": "建议设为 3–5。限制每台计算机同时活跃的 Session 数量。Session 在运行期间及空闲后 30 分钟内均计入，以便为后续交互预留容量。"
-  },
-  "remoteDelegationConfigTag": {
-    "delegationApps": "委派应用",
-    "softwareFactory": "Software Factory"
   },
   "remoteDelegationsSettings": {
     "loadingRemoteDelegationSettings": "正在加载委派设置…",
@@ -3085,10 +2999,10 @@
     "continue": "继续",
     "additionalRepositories": "额外仓库",
     "cloneRepositories": "克隆仓库",
-    "additionalRepositoriesDescription": "选择要克隆的额外仓库。下方模板仓库已配置，无需再次选择。",
+    "additionalRepositoriesDescription": "选择额外需要克隆的仓库。下方环境仓库已经配置，无需再次选择。",
     "cloneRepositoriesDescription": "Droid 会在计算机上线后将所选仓库克隆到计算机上。此步骤可选，也可以不选任何仓库直接继续。",
     "includedIn": "{{name}} 中已包含",
-    "templateHasNoRepositories": "此模板不包含任何仓库。",
+    "templateHasNoRepositories": "此环境不包含仓库。",
     "includedRepositories_one": "已配置 {{count}} 个仓库，计算机启动后即可使用。",
     "includedRepositories_other": "已配置 {{count}} 个仓库，计算机启动后即可使用。",
     "removeUrl": "移除 {{url}}",
@@ -3208,7 +3122,8 @@
       "selfHostedGitlab": "自托管 GitLab",
       "bitbucketOrganization": "Bitbucket 组织",
       "azureDevopsOrganization": "Azure DevOps 组织",
-      "personalGitlabSelfHostedAccount": "个人 GitLab 自托管版账户"
+      "personalGitlabSelfHostedAccount": "个人 GitLab 自托管版账户",
+      "bitbucketDataCenter": "Bitbucket Data Center"
     },
     "descriptions": {
       "githubPersonal": "访问个人 GitHub 账号中的仓库、问题和拉取请求。",
@@ -3223,7 +3138,9 @@
       "bitbucketDataCenter": "允许 Factory 访问 Bitbucket Data Center 中的仓库。",
       "azureDevopsOrg": "允许 Factory 访问 Azure DevOps 组织中的仓库。",
       "azureDevopsServer": "允许 Factory 访问 Azure DevOps Server 中的仓库。",
-      "gitlabSelfHostedPersonal": "使用你自己的账户访问组织自托管 GitLab 上的项目和合并请求。"
+      "gitlabSelfHostedPersonal": "使用你自己的账户访问组织自托管 GitLab 上的项目和合并请求。",
+      "bitbucketPersonalDisabled": "已被组织关闭。",
+      "bitbucketPersonalNeedsOrganization": "请联系管理员先连接 Bitbucket Cloud。"
     },
     "kindLabels": {
       "organization": "组织",
@@ -3238,6 +3155,10 @@
     "providerNames": {
       "githubSelfHosted": "GitHub 自托管",
       "gitlabSelfHosted": "GitLab 自托管"
+    },
+    "bitbucketPersonalCompletion": {
+      "connected": "你的 Bitbucket 账户已连接。",
+      "otherOrganization": "此 Bitbucket 连接从另一个组织发起。请切换到该组织后重新打开链接。"
     }
   },
   "scmSetupSectionCard": {
@@ -3274,7 +3195,12 @@
     "creating": "正在创建…",
     "title": "API 密钥 · {{name}}",
     "description": "这些密钥以 {{name}} 身份验证 API 请求。可用于 CI 流水线、脚本或任何需要稳定非人类身份运行的自动化。密钥值仅在创建时显示一次，请立即复制并妥善保存。",
-    "atKeyCap": "已达到每个服务账号 {{max}} 个密钥的上限。请撤销现有密钥后再创建。"
+    "atKeyCap": "已达到每个服务账号 {{max}} 个密钥的上限。请撤销现有密钥后再创建。",
+    "creationFailed": "无法创建 API 密钥。已保留草稿。",
+    "creationUncertain": "未收到创建响应。密钥可能已创建，但无法恢复其值。请检查刷新后的密钥列表，撤销未使用的密钥，再主动创建新密钥。此请求不会自动重试。",
+    "reviewKeys": "创建其他密钥前先检查现有密钥",
+    "inactiveAccount": "此服务账户已停用。你可以查看和撤销密钥，但不能创建新密钥。",
+    "failedToLoadKeys": "无法加载 API 密钥。请刷新后重试。"
   },
   "serviceAccountComputersModal": {
     "delete": "删除",
@@ -3373,7 +3299,8 @@
     "copyId": "复制 ID",
     "moreActionsFor": "{{name}} 的更多操作",
     "checkingWhetherRemoteDelegationsUseThisAccount": "正在检查委派是否使用此账号。",
-    "usedByRemoteDelegationsChooseADifferentIdentity": "委派正在使用此账号。请先在那里选择其他身份。"
+    "usedByRemoteDelegationsChooseADifferentIdentity": "委派正在使用此账号。请先在那里选择其他身份。",
+    "privateDeleteDescription": "此操作将永久删除服务账户并撤销其密钥。名称仍将保留，审计和用量记录也会保留。现有守护进程连接将持续到断开为止。不会删除计算机或其他资源。"
   },
   "serviceAccountsSection": {
     "createServiceAccount": "创建服务账号",
@@ -3861,7 +3788,8 @@
         "loadingStatuses": "禁用动态加载状态",
         "filePreviews": "自动打开文件预览",
         "openLinksInDesktop": "在桌面应用中打开链接",
-        "keepAwake": "屏幕关闭时保持 Droid 运行"
+        "keepAwake": "屏幕关闭时保持 Droid 运行",
+        "autoUpdate": "自动更新"
       },
       "keyboardShortcuts": {
         "title": "键盘快捷键",
@@ -3886,7 +3814,9 @@
       "notifications": {
         "title": "通知",
         "notifyComplete": "Droid 完成工作时通知",
-        "notifyInput": "Droid 需要输入时通知"
+        "notifyInput": "Droid 需要输入时通知",
+        "desktopNotifications": "桌面通知",
+        "systemNotifications": "系统通知"
       },
       "emailNotifications": {
         "title": "邮件通知",
@@ -4128,8 +4058,8 @@
       "delegationApps": {
         "title": "委派应用"
       },
-      "remoteDelegationConfig": {
-        "title": "委派配置"
+      "agentProfile": {
+        "title": "代理配置档"
       }
     },
     "openCompute": {
@@ -4891,5 +4821,145 @@
     "syncHintMember": "组织的源代码管理集成同步后，仓库会显示在这里。若缺少所需仓库，请联系组织管理员同步。",
     "connectHintManager": "在设置中为组织连接源代码管理集成，然后同步仓库。",
     "connectHintMember": "在设置中连接个人源代码管理集成，或请组织管理员为组织连接一个集成。"
+  },
+  "subOrganizationLifecycle": {
+    "title": "组织生命周期",
+    "select": "选择组织",
+    "deactivate": "停用",
+    "confirmTitle": "停用此组织？",
+    "cancel": "取消",
+    "acknowledge": "我理解停用后将无法访问此组织。",
+    "activeMembers": "仍有活跃成员，无法停用。请先移除其访问权限。",
+    "activeServiceAccounts": "仍有活跃的客户管理服务账户，无法停用。请先停用这些账户。",
+    "activeDescendants": "仍有活跃的下级组织，无法停用。请从最下级开始停用。",
+    "restored": "已存在同名组织，现已重新启用。"
+  },
+  "privateBitbucket": {
+    "repositories": "仓库选择",
+    "setupInstructions": "注册客户自有的 Bitbucket OAuth 应用，回调 URL 使用 Factory Private 管理员配置的地址。Cloud 使用 https://bitbucket.org; Data Center 使用你的实例 URL。",
+    "search": "搜索仓库或工作区/项目",
+    "enabledOnly": "仅显示已启用仓库",
+    "enableAll": "启用所有仓库",
+    "sync": "刷新仓库",
+    "loading": "正在发现仓库…",
+    "retry": "重试",
+    "empty": "没有匹配的仓库。",
+    "paginationSummary": "{{start}}–{{end}}，共 {{total}} 项"
+  },
+  "organizationPersonalKeys": {
+    "title": "组织个人密钥",
+    "description": "撤销此组织中的个人密钥，包括此前身份提供商签发的密钥。所有者详情和角色以密钥创建时的记录为准。",
+    "ownerMetadata": "所有者：{{owner}} · 创建时的角色：{{role}} · 签发者：{{issuer}}",
+    "unknown": "未知",
+    "loadFailed": "无法加载组织个人密钥。此部署可能需要更新。",
+    "retry": "重试"
+  },
+  "agentProfileSection": {
+    "plugins": "插件",
+    "installedForEveryDelegatedSessionThat": "除企业控制 › 插件中为全组织启用的插件外，这些插件还会安装到使用此配置档运行的每个委派 Session。",
+    "enabledOrgWide": "组织范围内已启用",
+    "addedByThisConfig": "由此配置档添加",
+    "noPluginsAddedByThisConfig": "此配置档未添加插件。",
+    "pluginName": "插件名称",
+    "pluginName2": "plugin-name",
+    "marketplace": "市场",
+    "marketplace2": "@marketplace",
+    "add": "添加",
+    "registerAMarketplaceUnderEnterpriseControls": "添加插件前，请先在企业控制 › 插件中注册市场。",
+    "enterJustThePluginNameAnd": "仅输入插件名称，并从列表中选择其市场。",
+    "thatPluginIsAlreadyListed": "该插件已在列表中。",
+    "thatPluginIsAlreadyEnabledOrg": "该插件已在组织范围内启用，因此每个 Session 都会使用。",
+    "thatPluginIsTurnedOffFor": "该插件已在整个组织中关闭，此配置档无法启用它。",
+    "failedToLoadServiceAccountsRefresh": "加载服务账号失败。请刷新页面后重试。",
+    "loadingServiceAccounts": "正在加载服务账号…",
+    "identity": "身份",
+    "delegatedSessionsRunAsThisService": "委派 Session 使用此服务账户运行，该账户拥有配置档池中的每台计算机。",
+    "useExistingServiceAccount": "使用现有服务账号",
+    "newServiceAccount": "新建服务账号",
+    "theRemoteDelegationsServiceAccountIs": "委派服务账号尚未设置。请刷新页面后重试。",
+    "noActiveServiceAccountsYetCreate": "暂无活跃服务账号。请创建一个以运行委派 Session。",
+    "serviceAccount": "服务账号",
+    "name": "名称",
+    "eGDelegationWorker": "例如 delegation-worker",
+    "namesArePermanentIdentifiersAndCannot": "名称是永久标识符，一旦使用便无法重复使用。",
+    "descriptionOptional": "描述（选填）",
+    "couldNotCreateTheServiceAccount": "无法创建服务账号。名称可能已被占用，或已达到套餐上限。",
+    "addManagedComputer": "添加托管计算机",
+    "type": "类型",
+    "status": "状态",
+    "loadingComputers": "正在加载计算机…",
+    "failedToLoadComputersRefreshThe": "加载计算机失败。请刷新页面后重试。",
+    "noComputersYetAddAManaged": "暂无计算机。添加托管计算机，或通过远程控制连接自己的计算机，以支持委派。",
+    "failedToSaveTryAgain": "保存失败。请重试。",
+    "back": "返回",
+    "next": "下一页",
+    "access": "访问权限",
+    "everyone": "所有人",
+    "defaultModel": "默认模型",
+    "defaultReasoningLevel": "默认推理级别",
+    "customInstructionsOptional": "自定义指令（可选）",
+    "eGAlwaysReplyInThe": "例如：始终在讨论串中回复摘要和 Session 链接。",
+    "compute": "计算资源",
+    "machineType": "计算机类型",
+    "useExistingTemplate": "使用现有环境",
+    "newTemplate": "新建环境",
+    "removeSelectedTemplate": "移除所选环境",
+    "templateUnavailable": "环境已删除或不可用。请移除后选择其他环境。",
+    "templateInaccessible": "你无法访问此环境中的所有仓库，因此它未显示在环境列表中。",
+    "perMachineParallelWorkerLimit": "每台计算机的并行工作代理上限",
+    "perMachineParallelWorkerLimitHelp": "每台计算机的并行工作代理上限说明",
+    "agentProfiles": "代理配置档",
+    "computerTypes": {
+      "bringYourOwnMachine": "远程控制",
+      "managedByFactory": "由 Factory 管理"
+    },
+    "computerStatuses": {
+      "provisioning": "正在配置…",
+      "active": "已启用",
+      "error": "错误",
+      "unknown": "未知"
+    },
+    "sectionDescription": "定义代理如何运行委派工作。",
+    "machineTypes": {
+      "dynamic": "动态",
+      "persistent": "持久化"
+    },
+    "wizardSteps": {
+      "general": "通用",
+      "plugins": "插件",
+      "identity": "身份",
+      "compute": "计算资源"
+    },
+    "untitledConfig": "未命名配置档",
+    "edit": "编辑",
+    "setUp": "设置",
+    "editConfig": "编辑 {{title}}",
+    "setUpConfig": "设置 {{title}}",
+    "removePlugin": "移除 {{pluginId}}",
+    "unregisteredPluginsWillNotInstall": "以下插件需要先在企业控制中注册其市场才能安装：{{pluginIds}}。",
+    "blockedPluginsWillNotInstall": "这些插件已在整个组织中关闭，组织设置优先于此配置档，因此不会安装：{{pluginIds}}。",
+    "maximumPluginsPerConfigReached": "每个配置档最多允许 {{max}} 个插件，已达到上限。",
+    "creating": "正在创建…",
+    "createServiceAccount": "创建服务账号",
+    "seeByomGuide": "<anchor>查看远程控制指南</anchor>以注册自己的计算机",
+    "finishBlocked": {
+      "identityInactive": "所选身份已不再活跃。请在身份步骤选择一个活跃的服务账号以完成设置。",
+      "chooseTemplate": "请在计算资源步骤选择环境以完成设置。",
+      "templateUnavailable": "所选环境已删除或不可用。请在计算资源步骤选择其他环境以完成设置。",
+      "failedToLoadMachines": "加载此身份的计算机失败。请刷新页面后重试。",
+      "loadingMachines": "正在加载此身份的计算机…",
+      "addMachine": "请在计算资源步骤添加至少一台计算机以完成设置。"
+    },
+    "chooseAnIdentityToContinue": "请选择身份以继续。",
+    "saving": "正在保存…",
+    "finish": "完成",
+    "editModalTitle": "编辑代理配置档 - {{name}}",
+    "setUpModalTitle": "设置代理配置档 - {{name}}",
+    "oneTemplatePerConfig": "一个配置档使用一个环境。请先移除已选环境，再选择其他环境。",
+    "parallelWorkerLimitTooltip": "建议设为 3–5。限制每台计算机同时活跃的 Session 数量。Session 在运行期间及空闲后 30 分钟内均计入，以便为后续交互预留容量。"
+  },
+  "agentProfileTag": {
+    "delegationApps": "委派应用",
+    "softwareFactory": "Software Factory"
   }
 }

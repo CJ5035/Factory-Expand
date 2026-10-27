@@ -1,113 +1,184 @@
 {
   "constants": {
     "starterIdeas": {
-      "exploreCodebase": {
-        "title": "Explore your codebase",
-        "description": "Get a guided tour of the repo and how it fits together."
+      "buildMiniApp": {
+        "title": "Build a small app from scratch",
+        "description": "Droid builds a polished habit tracker, runs it, and shows you how to open it.",
+        "prompt": "Build a polished single-page habit tracker from scratch in a new folder: add, check off, and delete habits, show a seven-day streak, and keep data in local storage. Run it, check that it works, and tell me how to open it."
       },
-      "ticketToPr": {
-        "title": "Turn a ticket into a PR",
-        "description": "Pick up an issue and drive it to an open pull request."
-      },
-      "fixProductionError": {
-        "title": "Fix a production error",
-        "description": "Triage a live error and land the fix."
-      },
-      "mapProductSurface": {
-        "title": "Map the product surface",
-        "description": "Tour the user-facing features and flows in your repo."
-      },
-      "draftSpec": {
-        "title": "Draft a spec from your backlog",
-        "description": "Ground a PRD in how the product actually works."
-      },
-      "feedbackToPlan": {
-        "title": "Turn feedback into a plan",
-        "description": "Mine customer feedback for themes and next steps."
-      },
-      "figmaToLife": {
-        "title": "Bring a Figma frame to life",
-        "description": "Build a faithful, clickable version in your repo."
-      },
-      "auditUi": {
-        "title": "Audit the UI",
-        "description": "Find inconsistent styling, states, and interactions."
-      },
-      "polishInterface": {
-        "title": "Make an interface feel finished",
-        "description": "Polish the weakest screen, states, and interactions."
-      },
-      "analyzeSpreadsheet": {
-        "title": "Analyze a spreadsheet",
-        "description": "Turn raw numbers into trends and takeaways."
-      },
-      "reviewRevenue": {
-        "title": "Review revenue data",
-        "description": "Cross-check billing numbers and flag anomalies."
-      },
-      "boardReadyReport": {
-        "title": "Build a board-ready report",
-        "description": "Create a polished Excel or PDF report with charts."
-      },
-      "researchMarket": {
-        "title": "Research a market",
-        "description": "Investigate a competitor or topic, with sources."
-      },
-      "draftLaunchContent": {
-        "title": "Draft launch content",
-        "description": "Write a blog post or one-pager you could publish."
-      },
-      "customerVoice": {
-        "title": "Capture the customer voice",
-        "description": "Pull what customers keep saying, in their own words."
-      },
-      "accountBrief": {
-        "title": "Prep an account brief",
-        "description": "Research a prospect and build talking points."
-      },
-      "mineCalls": {
-        "title": "Mine your calls",
-        "description": "Turn call recordings into objections and next steps."
-      },
-      "draftOutreach": {
-        "title": "Draft outreach that lands",
-        "description": "Write a short, specific email sequence."
-      },
-      "automateUpdate": {
-        "title": "Automate a recurring update",
-        "description": "Draft the update and make it repeatable."
-      },
-      "untangleProcess": {
-        "title": "Untangle a process",
-        "description": "Map the steps, owners, and bottlenecks."
-      },
-      "dataToDecisions": {
-        "title": "Turn data into decisions",
-        "description": "Build a clear operational readout from a spreadsheet."
-      },
-      "layOfTheLand": {
-        "title": "Get the lay of the land",
-        "description": "Tour your codebase and product like a new hire."
-      },
-      "investorUpdate": {
-        "title": "Draft an investor update",
-        "description": "Shape your highlights into a crisp, confident update."
-      },
-      "competitorScan": {
-        "title": "Size up a competitor",
-        "description": "Research a rival and where you can win."
+      "weighTechChoice": {
+        "title": "Weigh a technical decision",
+        "description": "Compare two options with current sources and get a clear recommendation.",
+        "prompt": "Help me choose between Postgres and MongoDB for a new multi-tenant SaaS app. Research current sources, compare them on data modeling, scaling, operations, and cost, and end with a clear recommendation and the trade-offs I am accepting."
       },
       "tourDroid": {
         "title": "See what Droid can do",
-        "description": "Get a live demo picked from your environment."
+        "description": "A short live demo that needs no setup.",
+        "prompt": "Give me a quick tour of what you can do. Suggest three impressive things you could do right now without any setup on my side, then do the most impressive one live."
       },
-      "workWithFiles": {
-        "title": "Work with your files",
-        "description": "Summarize, transform, or build on a document."
+      "competitorTeardown": {
+        "title": "Tear down a product",
+        "description": "Workflows, pricing, and positioning of a product you name, with sources.",
+        "prompt": "Do a product teardown of Notion: core workflows, pricing tiers, positioning, and where users complain most, using current public sources. Cite your sources and end with three opportunities a competitor could exploit."
+      },
+      "draftPrd": {
+        "title": "Draft a PRD from an idea",
+        "description": "Turn a one-line feature idea into a structured spec.",
+        "prompt": "Turn this feature idea into a PRD: \"Let users schedule reports to be emailed weekly.\" Cover the problem, users, goals and non-goals, requirements, success metrics, and open questions, and save it as a Markdown file."
+      },
+      "interviewGuide": {
+        "title": "Plan customer interviews",
+        "description": "A screener, a discussion guide, and a synthesis outline.",
+        "prompt": "Plan customer discovery interviews for a B2B expense-reporting tool: write a five-question screener, a 30-minute discussion guide with follow-up probes, and a synthesis outline, all in one Markdown doc."
+      },
+      "landingPagePrototype": {
+        "title": "Prototype a landing page",
+        "description": "A polished, responsive page you can open in your browser.",
+        "prompt": "Prototype a polished, responsive landing page for a fictional coffee subscription brand as a single HTML file: hero, features, pricing, testimonials, and footer. Run it and tell me how to open it in my browser."
+      },
+      "designSystemStarter": {
+        "title": "Start a design system",
+        "description": "Color, type, and spacing tokens on one reference page.",
+        "prompt": "Create a starter design system as one HTML reference page: color, type, and spacing tokens as CSS variables, plus buttons, inputs, and cards in light and dark themes. Run it and tell me how to open it."
+      },
+      "critiqueSite": {
+        "title": "Critique a live website",
+        "description": "A UX review of any public page, with concrete fixes.",
+        "prompt": "Do a UX critique of https://stripe.com: hierarchy, copy, navigation, accessibility, and conversion. Rank the ten most important issues and give a concrete fix for each."
+      },
+      "saasModel": {
+        "title": "Build a revenue model",
+        "description": "A 24-month SaaS model with inputs you can change.",
+        "prompt": "Build a 24-month revenue model for a SaaS startup as an Excel file: inputs for starting customers, growth rate, churn, and price per tier, with monthly MRR, ARR, and a chart. Use sensible example numbers I can change."
+      },
+      "unitEconomics": {
+        "title": "Work through unit economics",
+        "description": "CAC, LTV, and payback on example numbers, with formulas.",
+        "prompt": "Walk me through unit economics for a subscription business with example numbers: calculate CAC, LTV, LTV to CAC, and payback period, show every formula, and put it in a spreadsheet I can reuse."
+      },
+      "budgetTemplate": {
+        "title": "Create a budget vs. actuals sheet",
+        "description": "A ready-to-fill spreadsheet with variance and a chart.",
+        "prompt": "Create a budget versus actuals spreadsheet for a 20-person team: monthly budget and actuals by department, variance in amount and percent, conditional formatting for overspend, and a summary chart. Fill it with example data."
+      },
+      "researchMarket": {
+        "title": "Research a market",
+        "description": "Investigate a competitor or topic, with sources.",
+        "prompt": "Research the market for AI meeting-notes tools: the main players, their positioning and pricing, and gaps in the market. Use current sources, cite them, and summarize what a new entrant should do."
+      },
+      "launchPost": {
+        "title": "Write a launch post",
+        "description": "A crisp announcement for a product you describe.",
+        "prompt": "Write a launch blog post for a fictional product called Tidy, an app that cleans up your inbox automatically. Give me a punchy headline, 400 words, three social posts, and a short email to existing customers."
+      },
+      "contentCalendar": {
+        "title": "Plan a month of content",
+        "description": "Weekly themes, channels, and first-week drafts.",
+        "prompt": "Plan a month of content for a B2B SaaS brand: weekly themes, channels, and post ideas in a spreadsheet, plus full drafts for the first week."
+      },
+      "accountBrief": {
+        "title": "Prep an account brief",
+        "description": "Research a prospect and build talking points.",
+        "prompt": "Prepare an account brief on Shopify for a first sales call: what they do, recent news, likely priorities, key people, and five tailored talking points. Use current public sources and cite them."
+      },
+      "draftOutreach": {
+        "title": "Draft outreach that lands",
+        "description": "Write a short, specific email sequence.",
+        "prompt": "Write a three-email outreach sequence to a VP of Operations at a mid-size logistics company, selling a workflow automation tool. Keep each email under 120 words, specific, and with one clear ask."
+      },
+      "objectionHandling": {
+        "title": "Prep for objections",
+        "description": "The common pushbacks and a crisp answer to each.",
+        "prompt": "Create an objection-handling guide for selling a B2B SaaS product: the ten most common objections (price, timing, competitor, security, and more), a crisp response to each, and a question to keep the deal moving."
+      },
+      "writeSop": {
+        "title": "Write an SOP",
+        "description": "A clear procedure with owners, steps, and checklists.",
+        "prompt": "Write a standard operating procedure for onboarding a new employee in their first week: owners, step-by-step tasks by day, checklists, and common pitfalls, as a clean Markdown doc."
+      },
+      "mapProcess": {
+        "title": "Map a process",
+        "description": "A flowchart of steps and owners, plus a simpler version.",
+        "prompt": "Map a typical purchase-order approval process as a Mermaid flowchart with owners and handoffs, point out the bottlenecks, and propose a simpler version alongside it."
+      },
+      "statusTemplate": {
+        "title": "Design a weekly update",
+        "description": "A reusable status format, filled with an example.",
+        "prompt": "Design a reusable weekly status update for an operations team: sections, the questions each should answer, and a filled-in example, short enough to read in two minutes."
+      },
+      "competitorScan": {
+        "title": "Size up a competitor",
+        "description": "Research a rival and where you can win.",
+        "prompt": "Ask me which competitor to look at, then research what they ship, how they price and position themselves, and where a smaller team could win. Cite current sources."
+      },
+      "investorUpdate": {
+        "title": "Draft an investor update",
+        "description": "Shape your highlights into a crisp, confident update.",
+        "prompt": "Help me draft a monthly investor update. Ask me for this month's highlights, metrics, lowlights, and asks in one short message, then shape them into a crisp, confident update I could send today."
+      },
+      "pitchOutline": {
+        "title": "Outline a pitch deck",
+        "description": "A 10-slide story and what each slide must prove.",
+        "prompt": "Outline a ten-slide seed pitch deck: the story arc, what each slide must prove, and the questions investors will ask about it. Ask me for a one-line description of my company first."
       },
       "craftDeliverable": {
         "title": "Craft a deliverable",
-        "description": "Produce a polished doc, PDF, or spreadsheet."
+        "description": "Produce a polished doc, PDF, or spreadsheet.",
+        "prompt": "Create a polished one-page PDF guide to running effective meetings, with a short checklist and a simple diagram. Tell me where you saved it."
+      },
+      "researchTopic": {
+        "title": "Research any topic",
+        "description": "A sourced briefing on something you are curious about.",
+        "prompt": "Give me a sourced briefing on the current state of nuclear fusion energy: where the technology stands, the main players, and what to watch for in the next five years. Keep it to one page and cite current sources."
+      }
+    },
+    "workspaceIdeas": {
+      "dirtyBranch": {
+        "title": "Finish the work on {{branch}}",
+        "titleWithoutBranch": "Finish your changes in {{repo}}",
+        "description": "Changed files: {{fileCount}}. Droid finishes the work and runs the checks.",
+        "prompt": "I have uncommitted changes in {{fileCount}} files on the branch {{branch}}. Review them, work out what I was in the middle of, finish it, and run the relevant tests and checks. Summarize what you changed.",
+        "promptWithoutBranch": "I have uncommitted changes in {{fileCount}} files in {{repo}}. Review them, work out what I was in the middle of, finish it, and run the relevant tests and checks. Summarize what you changed."
+      },
+      "branchReview": {
+        "title": "Review {{branch}} before a PR",
+        "description": "Checks its changes against {{defaultBranch}} for bugs and gaps.",
+        "prompt": "Review the branch {{branch}} against {{defaultBranch}}: read its commits, look for bugs, missing tests, and unfinished work, and fix what you find. End with a short pull request description I can paste."
+      },
+      "runTests": {
+        "title": "Run {{repo}}'s tests",
+        "description": "Finds how the tests run, runs them, and fixes what fails.",
+        "descriptionWithCommand": "Runs {{command}} and fixes what fails.",
+        "descriptionWithToolchain": "Finds how the tests run with {{toolchain}}, runs them, and fixes what fails.",
+        "prompt": "Work out how the tests run in {{repo}}, run them, and fix any failures. Summarize what you fixed.",
+        "promptWithCommand": "Run the tests in {{repo}} with `{{command}}`. If anything fails, find the cause and fix it, then run them again until they pass. Summarize what you fixed.",
+        "promptWithToolchain": "Work out how the tests run in {{repo}} (it is set up with {{toolchain}}), run them, and fix any failures. Summarize what you fixed."
+      },
+      "explainRepo": {
+        "title": "Explain how {{repo}} works",
+        "description": "The main parts, how they connect, and where to start reading.",
+        "prompt": "Explain how {{repo}} is structured: the main parts, how they connect, and how a request or command flows through it. Point me to the files I should read first.",
+        "promptWithLanguage": "Explain how {{repo}} is structured: the main parts, how they connect, and how a request or command flows through it in this {{primaryLanguage}} codebase. Point me to the files I should read first."
+      },
+      "multiRepo": {
+        "title": "Trace how {{first}} and {{second}} connect",
+        "description": "The APIs, calls, and shared code between them, as a diagram.",
+        "prompt": "This environment has {{repositories}}. Trace how they connect: the APIs, calls, and shared code between them. Draw it as a Mermaid diagram and point out anything fragile."
+      },
+      "addTests": {
+        "title": "Add tests to {{repo}}",
+        "description": "Covers the important code that has no tests yet.",
+        "prompt": "Find the most important code in {{repo}} that has no tests, add focused tests for it, and run them. Tell me what you covered and why."
+      },
+      "lint": {
+        "title": "Fix lint errors in {{repo}}",
+        "description": "Runs {{command}} and fixes what it reports.",
+        "prompt": "Run `{{command}}` in {{repo}} and fix everything it reports without changing behavior. Run it again to confirm it is clean."
+      },
+      "findBug": {
+        "title": "Find and fix a bug in {{repo}}",
+        "description": "Finds a real bug, explains it, and fixes it with a test.",
+        "prompt": "Look through {{repo}} for a real bug: a crash, a wrong result, or an unhandled edge case. Explain it, fix it, and add a test that would have caught it."
       }
     }
   },
@@ -214,7 +285,6 @@
     "missingSignInDetails": "This page is missing sign-in details. Restart Factory Desktop and sign in again.",
     "openDesktopApp": "Open desktop app",
     "manageAccount": "Manage account",
-    "continueToWebApp": "Continue to web app",
     "signedInToFactory": "Signed in to Factory",
     "authenticationFailed": "Authentication failed",
     "backToFactory": "Back to Factory"
@@ -233,5 +303,16 @@
     "accountOnlySubtitle": "Your account uses Droid in the terminal and the desktop app. Install one to get started.",
     "desktopReturnSubtitle": "Head back to the desktop app to start working with Droid.",
     "finishingSetup": "Finishing setup"
+  },
+  "webEnvironmentSetup": {
+    "createFailed": "Couldn't create the environment. Try again.",
+    "reposFailed": "Couldn't load your repositories.",
+    "privateRepository": "Private",
+    "welcome": {
+      "intro": "Hi, I'm Droid. Your cloud computer is getting set up with {{repositories}}.",
+      "introWithMore": "Hi, I'm Droid. Your cloud computer is getting set up with {{repositories}} +{{count}}.",
+      "capabilities": "I can explore the code, fix bugs, write tests, and open pull requests, and you can follow every step here.",
+      "question": "What should we work on first?"
+    }
   }
 }

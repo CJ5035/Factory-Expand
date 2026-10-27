@@ -182,7 +182,8 @@
             "wiki": "Wiki",
             "analytics": "分析",
             "softwareFactory": "Software Factory"
-          }
+          },
+          "advancedBody": "{{item}} 位于个人资料菜单的高级选项中。请打开菜单，然后打开高级。"
         },
         "automations": {
           "title": "打开自动化",
@@ -216,6 +217,10 @@
         "analytics": {
           "title": "打开分析",
           "body": "代理就绪度位于分析中。先选择分析，再在其侧边栏选择代理就绪度。"
+        },
+        "profileMenuAdvanced": {
+          "title": "打开高级选项",
+          "body": "{{item}} 位于高级选项中。将指针移至高级，然后选择 {{item}}。"
         }
       }
     }
@@ -259,10 +264,6 @@
         "approve": {
           "title": "调整后再批准",
           "body": "Comment on any line or choose Keep iterating if something is off. Approve once the plan matches what you want."
-        },
-        "confirm": {
-          "title": "接受 Spec",
-          "body": "Pick how much Droid does without asking while it builds. Medium suits most tasks. Select Confirm to start."
         }
       },
       "tourPanelTipPrefix": "使用方向键浏览导览。",
@@ -326,7 +327,7 @@
         "giveTask": {
           "title": "审查并批准 Spec",
           "summary": "Read the plan, steer it, and approve it",
-          "instructions": "Droid researches and writes a spec. Read it, comment on anything that is off, then select Approve Spec and Confirm",
+          "instructions": "Droid researches and writes a spec. Read it, comment on anything that is off, then select Approve Spec",
           "tip": "Fixing a plan takes one comment, while fixing code takes another run. Before you approve, check that the spec has the right goal, the files you expect, an approach you agree with, and a way to verify the result. If a part is wrong, comment on that line or choose Keep iterating, and Droid revises the spec.",
           "restartLabel": "不用此任务",
           "waitLabel": "Droid 正在编写 Spec",

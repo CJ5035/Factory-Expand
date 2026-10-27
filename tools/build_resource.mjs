@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { checkJavaScript } from '../scripts/lib/syntaxcheck.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const appVersion = '0.205.0';
+const appVersion = '0.207.0';
 export const firstBatch = ['common','settings','sessions','softwareFactory','inbox','onboarding','errors'];
 // These four pinned lesson strings use angle brackets as editable prompt
 // placeholders, rather than paired rich-text elements. Keep their exact tokens.

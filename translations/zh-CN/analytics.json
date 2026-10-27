@@ -518,7 +518,8 @@
     "usage": "用量",
     "zeroCreditAdvancedAnalytics": "已记录高级分析历史数据回填活动，收取 0 积分。",
     "noOrganizationUsage": "此日期范围内没有归属于所选组织的用量。",
-    "noUsageData": "所选日期范围内暂无用量数据。"
+    "noUsageData": "所选日期范围内暂无用量数据。",
+    "deactivatedOrganization": "{{name}}（已停用）"
   },
   "exportMenu": {
     "downloadCsv": "下载为 CSV",

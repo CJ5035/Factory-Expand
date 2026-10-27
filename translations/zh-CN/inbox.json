@@ -97,5 +97,10 @@
       "connectionFailed": "无法连接到 Session 所属的计算机。",
       "readFailed": "无法读取 Session。"
     }
+  },
+  "desktopNotifications": {
+    "summaryTitle_one": "{{count}} 条新事项需要你关注",
+    "summaryTitle_other": "{{count}} 条新事项需要你关注",
+    "summaryBody": "打开收件箱以查看。"
   }
 }

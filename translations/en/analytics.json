@@ -477,6 +477,7 @@
     "noSessionData": "No session data available."
   },
   "usageEventsExplorer": {
+    "deactivatedOrganization": "{{name}} (deactivated)",
     "loading": "Loading usage data...",
     "failedToLoad": "Failed to load usage data",
     "groupByOptions": {

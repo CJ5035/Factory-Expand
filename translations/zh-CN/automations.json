@@ -131,15 +131,10 @@
   },
   "codeWalkthroughModeV2": {
     "disableToKeepTheWorkflow": "禁用后保留磁盘上的代码导览工作流，但跳过所有拉取请求事件。",
-    "updateOnNewCommits": "新提交时更新",
-    "updatesOnNewCommits": "拉取请求推送新提交时，Droid 会更新代码导览。",
-    "keepsTheFirstWalkthrough": "Droid 保留首版代码导览，推送新提交时不更新。",
     "includeDraftPrs": "包含草稿 PR",
     "skipsDraftPullRequests": "Droid 跳过草稿拉取请求，在其标记为可审查后编写代码导览。",
     "writesAndUpdatesOnDrafts": "Droid 也会为草稿拉取请求编写和更新代码导览。每次向草稿推送都会触发一次运行。",
-    "writesOnDrafts": "Droid 也会为草稿拉取请求编写代码导览。",
     "summary": {
-      "noUpdatesOnNewCommits": "新提交时不更新",
       "includesDraftPrs": "包含草稿 PR"
     }
   },
@@ -898,15 +893,16 @@
       "addName": "请添加名称",
       "describeWhatDroidShouldDo": "请描述 Droid 应执行的工作",
       "pickSlackChannel": "请至少选择一个 Slack 频道",
-      "pickComputerOrTemplate": "请选择用于运行此自动化的计算机或模板",
+      "pickComputerOrTemplate": "选择此自动化运行所用的计算机或环境",
       "pickOrganization": "请选择组织",
       "pickAtLeastOneRepository": "请至少选择一个仓库",
       "pickRepository": "请选择仓库",
       "pickGithubEvent": "请至少选择一个 GitHub 事件",
-      "pickComputerOrTemplateForServiceAccount": "请选择用于运行服务账号的计算机或模板",
+      "pickComputerOrTemplateForServiceAccount": "选择服务账户运行所用的计算机或环境",
       "fixWorkingDirectory": "请修正工作目录",
       "pickDifferentComputer": "请选择其他计算机",
-      "pickServiceAccount": "选择此自动化运行所用的服务账户"
+      "pickServiceAccount": "选择此自动化运行所用的服务账户",
+      "allowManagedModel": "请联系管理员允许此自动化使用至少一个模型"
     },
     "workingDirectoryNotAccessible": "无法访问工作目录。",
     "couldNotVerifyWorkingDirectory": "无法验证工作目录。请重试。",
@@ -942,8 +938,7 @@
       "qa": "点击创建将打开新的 Droid Session，其中预填 /install-qa 命令及上述选择。代理会与你交互分析所选仓库，生成 QA Skill 和可供你提交的 .github/workflows/qa.yml 工作流。",
       "wiki": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/droid-wiki-refresh.yml。工作流根据所选触发器及上述设置刷新 Factory Wiki，也可手动运行。每次刷新还会将 Wiki 提交到 factory/droid-wiki 分支，并维持一个包含最新版本的拉取请求。",
       "securityAudit": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/deep-security-review.yml。工作流按你的计划及上述设置对整个代码库运行 /security-review，也可手动运行。",
-      "codeWalkthrough": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/droid-code-walkthrough.yml。工作流在拉取请求创建或标记为可审查时生成代码导览，并在每次新提交时更新。代码导览适用于在 Factory 桌面和网页应用中审查的拉取请求。仓库需要配置 FACTORY_API_KEY Actions 密钥。",
-      "codeWalkthroughWithoutUpdates": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/droid-code-walkthrough.yml。工作流在拉取请求创建或标记为可审查时生成代码导览。代码导览适用于在 Factory 桌面和网页应用中审查的拉取请求。仓库需要配置 FACTORY_API_KEY Actions 密钥。"
+      "codeWalkthrough": "点击创建将打开拉取请求，向所选仓库添加 .github/workflows/droid-code-walkthrough.yml。工作流在拉取请求创建或标记为可审查时生成代码导览，并在每次新提交时更新。代码导览适用于在 Factory 桌面和网页应用中审查的拉取请求。仓库需要配置 FACTORY_API_KEY Actions 密钥。"
     },
     "existingModeWorkflowHelperText": {
       "qa": "此仓库已有 QA 工作流，点击创建会打开现有自动化。",
@@ -982,7 +977,7 @@
     },
     "nameHelperText": "显示在自动化列表及此自动化启动的每个 Session 中。",
     "whereStep": {
-      "chained": "每次运行所用的计算机或模板及其可见范围。",
+      "chained": "每次运行所在的计算机或环境，以及可见性。",
       "default": "每次运行所用的身份、计算机及可见范围。",
       "customCi": "添加此工作流的仓库。",
       "gitlabNotSupported": "目前不支持 GitLab 自动化，请尝试<ciLink>改为通过 GitLab CI 运行 Droid</ciLink>。"
@@ -1033,13 +1028,13 @@
     "descriptionMustBeCharactersOrFewer": "描述不得超过 {{max}} 个字符。",
     "addAName": "请添加名称",
     "pickADifferentComputer": "请选择其他计算机",
-    "pickAComputerOrTemplateForTheServiceAccount": "请选择用于运行服务账号的计算机或模板",
+    "pickAComputerOrTemplateForTheServiceAccount": "选择服务账户运行所用的计算机或环境",
     "connectToTheSelectedComputerToContinue": "请连接所选计算机以继续",
-    "pickAComputerOrTemplateForThisAutomation": "请选择用于运行此自动化的计算机或模板",
+    "pickAComputerOrTemplateForThisAutomation": "选择此自动化运行所用的计算机或环境",
     "pickAtLeastOneRepository": "请至少选择一个仓库",
     "describeThePullRequestsToWatch": "请描述要关注的拉取请求",
     "connectToTheSelectedComputerToRun": "请连接所选计算机以运行 PR 看护。",
-    "pickAComputerOrTemplateToRun": "请选择计算机或模板以运行 PR 看护。",
+    "pickAComputerOrTemplateToRun": "选择 PR Babysitter 运行所用的计算机或环境。",
     "selectAtLeastOneRepository": "请至少选择一个仓库。",
     "removeRepo": "移除 {{repo}}",
     "selectedCount": "已选择 {{count}} 个",
@@ -1083,16 +1078,16 @@
     "descriptionMustBeCharactersOrFewer": "描述不得超过 {{max}} 个字符。",
     "addAName": "请添加名称",
     "pickADifferentComputer": "请选择其他计算机",
-    "pickAComputerOrTemplateForTheServiceAccount": "请选择用于运行服务账号的计算机或模板",
+    "pickAComputerOrTemplateForTheServiceAccount": "选择服务账户运行所用的计算机或环境",
     "connectToTheSelectedComputerToContinue": "请连接所选计算机以继续",
-    "pickAComputerOrTemplateForThisAutomation": "请选择用于运行此自动化的计算机或模板",
+    "pickAComputerOrTemplateForThisAutomation": "选择此自动化运行所用的计算机或环境",
     "describeTheChannelsToScan": "请描述要扫描的频道",
     "nameTheChannelForRunSummaries": "请填写运行摘要的发布频道名称",
     "nameADefaultJiraProject": "请填写默认 Jira 项目名称",
     "nameADefaultLinearTeam": "请填写默认 Linear 团队名称",
     "addTicketCreationGuidance": "请添加工单创建指导",
     "connectToTheSelectedComputerToRun": "请连接所选计算机以运行分流。",
-    "pickAComputerOrTemplateToRun": "请选择计算机或模板以运行分流。",
+    "pickAComputerOrTemplateToRun": "选择分流运行所用的计算机或环境。",
     "templates": "模板",
     "creating": "正在创建…",
     "createWithSession": "通过 Session 创建",
@@ -1113,10 +1108,10 @@
     "fineTuneHowThisAutomationRuns": "微调此自动化的运行方式。这里的每项设置均有合理的默认值。"
   },
   "forkAutomationModalV2": {
-    "computerOrTemplateTheForkedAutomation": "派生自动化将运行的计算机或模板。",
+    "computerOrTemplateTheForkedAutomation": "派生的自动化运行所用的计算机或环境。",
     "fork": "派生",
     "forkOptions": "派生选项",
-    "noComputersOrTemplatesAvailable": "没有可用的计算机或模板。请添加计算机以派生此自动化。",
+    "noComputersOrTemplatesAvailable": "没有可用的计算机或环境。请添加计算机以派生此自动化。",
     "selectRunTarget": "选择运行目标",
     "serviceAccountForksAreSharedWith": "服务账号派生的自动化会共享给你的组织。"
   },
@@ -1204,7 +1199,11 @@
     "thisComputerAlreadyHasAutomations": "此计算机已设置 {{count}} 个自动化。建议将此自动化运行在其他计算机上，以避免过载。",
     "localComputerName": "{{name}}（本地）",
     "droidComputers": "Droid Computers",
-    "selectTemplateOrComputer": "选择环境或计算机"
+    "selectTemplateOrComputer": "选择环境或计算机",
+    "remoteComputersNotEnabled": "组织尚未启用远程计算机",
+    "remoteComputersNotOnPlan": "当前套餐不提供 Droid Computers。请升级到 Pro 或更高套餐以使用。",
+    "remoteComputersSubscriptionInactive": "由于订阅状态限制，Droid Computers 不可用",
+    "remoteComputersRegionUnsupported": "此地区暂不提供 Droid Computers。"
   },
   "runOnComputerPickerV2": {
     "retry": "重试",
@@ -1550,7 +1549,7 @@
     "successRate7d": "成功率（7 天）",
     "prompt": "提示词",
     "chainedAfter": "前置自动化",
-    "noRunTarget": "没有运行目标，无法启动运行。请指定计算机或模板，重新创建此自动化。",
+    "noRunTarget": "没有运行目标，无法启动运行。请选择计算机或环境重新创建此自动化。",
     "orgDefaultUnavailable": "组织默认设置不可用",
     "orgDefaultModel": "组织默认设置"
   },
@@ -1624,7 +1623,7 @@
     "incidentResponseMcpSetupDescription": "添加并验证 Droid 响应事件所需的可观测性工具和上下文来源的 MCP 服务器。MCP 服务器按计算机配置。",
     "computerConnectFailure": "无法连接计算机。它可能已离线或正在休眠。",
     "computerConnectionLost": "与计算机的连接已断开。它可能已离线或正在休眠。",
-    "computerPickerRequired": "请选择用于运行此自动化的计算机或模板。",
+    "computerPickerRequired": "选择此自动化运行所用的计算机或环境。",
     "computerPickerConnectRequired": "请连接所选计算机以继续。",
     "templateVariablesUnresolved": "请填写模板变量 {{placeholder}} 以继续",
     "breadcrumbLabels": {
@@ -1666,7 +1665,7 @@
       "additional": "附加设置"
     },
     "createScheduleStepLabel": "运行计划",
-    "payloadFilterInvalid": "payloadRegex 必须是有效的 JavaScript 正则表达式。",
+    "payloadFilterInvalid": "payloadRegex 必须是有效的 JavaScript 正则表达式，且不能包含前瞻、后顾或反向引用。",
     "payloadFilterPlaceholder": "例如：\"action\"\\s*:\\s*\"opened\"",
     "payloadFilterHelpText": "用于匹配原始请求正文的 JavaScript 正则表达式。不匹配的投递会记录为已筛除，不会启动运行。留空则每个事件均会启动运行。",
     "maxRunsPerHourLabel": "每小时最多运行次数",
@@ -1677,8 +1676,6 @@
     "slackWorkingDirectoryTooltip": "设置后，由 Slack 触发的运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在计算机的主目录中运行。",
     "webhookWorkingDirectoryTooltip": "设置后，由此 Webhook 触发的运行会在此目录中执行，以使用该项目的 Skill 、仓库和相对路径。留空则在计算机的主目录中运行。",
     "modelUnavailableTooltip": "此模型在此自动化的运行位置不可用。",
-    "recommendedModelLabel": "推荐",
-    "recommendedModelHelperText": "推荐模式使用由 Factory 持续更新的快速、低成本模型。选择特定模型，即可自行指定模型及其推理级别。",
     "modelUnverifiedTooltip": "无法检查此模型，因为此自动化的运行计算机尚未连接。如果该计算机未配置此模型，运行时将改用默认模型。",
     "modelConnectingTooltip": "此自定义模型的宿主计算机正在连接…",
     "modelUnavailableHint": "请选择在此自动化运行位置可用的模型",
@@ -1883,18 +1880,18 @@
       },
       "alertResponder": {
         "name": "Webhook 告警响应",
-        "description": "Sentry、Datadog 或 PagerDuty 发出告警时立即调查：进行根因分析，并在安全可行时创建修复 PR。在 Droid Computer 或执行模板上运行。保存后，请将 Webhook URL 添加到发送服务中。"
+        "description": "在 Sentry、Datadog 或 PagerDuty 告警触发时调查：分析根因，并在安全可行时提交修复 PR。在 Droid Computer 或环境中运行。保存后，将 Webhook URL 添加到发送告警的服务。"
       },
       "ciFailureTriage": {
         "name": "CI 失败分流",
-        "description": "将失败的 GitHub Actions 或 GitLab 流水线分类为偶发失败、基础设施问题或回归，并指出导致问题的提交。在 Droid Computer 或执行模板上运行。保存后，请将 Webhook URL 添加到发送服务中。",
+        "description": "将失败的 GitHub Actions 或 GitLab 流水线归类为偶发失败、基础设施问题或回归，并指出相关提交。在 Droid Computer 或环境中运行。保存后，将 Webhook URL 添加到发送事件的服务。",
         "connectorPurposes": {
           "github": "读取失败的运行及其相关提交。"
         }
       },
       "newIssueInvestigator": {
         "name": "新问题调查",
-        "description": "调查每个新的 Linear、Jira 或 GitHub 问题：检查重复项、可能原因和涉及文件，并为简单修复创建 PR。在 Droid Computer 或执行模板上运行。保存后，请将 Webhook URL 添加到发送服务中。",
+        "description": "调查每个新的 Linear、Jira 或 GitHub 事项：检查重复项、可能原因和相关文件，并为简单修复创建 PR。在 Droid Computer 或环境中运行。保存后，将 Webhook URL 添加到发送事件的服务。",
         "connectorPurposes": {
           "linear": "读取每个新问题，并评论调查发现。"
         }
@@ -1983,7 +1980,11 @@
       "opening": "使用 Factory 创建自动化。",
       "whatItShouldDo": "需要执行的工作：{{description}}",
       "guidance": "创建前，请询问仍需要的任何信息，包括触发方式：运行计划按周期执行提示词；Webhook 则在外部服务向为自动化生成的接收 URL 发送 POST 请求时执行。"
-    }
+    },
+    "passUpstreamContextLabel": "传递上游上下文？",
+    "passUpstreamContextHelperText": "如果此自动化不依赖触发它的那次运行的输出，请关闭此项",
+    "passUpstreamContextOwnerOnly": "只有此自动化的所有者可以重新启用上游上下文。",
+    "chainTargetLocalOnlyMessage": "只有在 Droid Computer、自托管计算机、环境或组织默认设置上运行的自动化，才能链接到其他自动化之后。"
   },
   "editSectionSummaries": {
     "privacy": {

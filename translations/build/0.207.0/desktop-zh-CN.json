@@ -1,0 +1,123 @@
+{
+  "menu": {
+    "checkForUpdates": "检查更新…",
+    "newWindow": "新建窗口",
+    "settingsEllipsis": "设置…",
+    "settings": "设置",
+    "file": "文件",
+    "newSession": "新建 Session",
+    "closeWindow": "关闭窗口",
+    "view": "视图",
+    "actualSize": "实际大小",
+    "zoomIn": "放大",
+    "zoomOut": "缩小",
+    "window": "窗口",
+    "close": "关闭",
+    "help": "帮助",
+    "checkNetwork": "检查网络…",
+    "reportBug": "报告问题…",
+    "aboutFactory": "关于 Factory",
+    "aboutMessage": "Factory {{version}}",
+    "aboutDetail": "版本：{{version}}\nElectron：{{electron}}\nChromium：{{chromium}}\nNode.js：{{node}}",
+    "copyCliInstallCommand": "复制 'droid' 安装命令"
+  },
+  "contextMenu": {
+    "copyLink": "复制链接",
+    "copyImage": "复制图片",
+    "learnSpelling": "记住此拼写",
+    "noGuessesFound": "无拼写建议",
+    "openInBrowserPanel": "在应用内浏览器中打开"
+  },
+  "common": {
+    "ok": "确定",
+    "cancel": "取消"
+  },
+  "auth": {
+    "logoutIncomplete": "已清除保存的凭据，但本地守护进程可能仍在运行。请退出 Factory 并停止其本地守护进程，以完成退出登录。",
+    "devApiKeyName": "开发 API 密钥",
+    "devApiKeyRejected": "Factory 无法使用 FACTORY_DESKTOP_DEV_API_KEY 登录。请设置有效的用户 API 密钥或取消此变量，然后重启 Factory。",
+    "devApiKeyReplacesSignIn": "此开发构建已使用 FACTORY_DESKTOP_DEV_API_KEY 登录，替代了保存的登录信息。请取消此变量并重启 Factory，以使用你自己的账户。"
+  },
+  "quitGuard": {
+    "title": "退出 Factory？",
+    "quit": "退出 Factory",
+    "dontAskAgain": "不再询问",
+    "activeSessions_one": "此计算机上有 {{count}} 个 Droid Session 正在运行。",
+    "activeSessions_other": "此计算机上有 {{count}} 个 Droid Session 正在运行。",
+    "activeSessionsDetail": "现在退出会中断正在运行的 Session，并停止所有进行中的工作。",
+    "activeAutomations_one": "此计算机上有 {{count}} 个定时自动化任务正在运行。",
+    "activeAutomations_other": "此计算机上有 {{count}} 个定时自动化任务正在运行。",
+    "activeAutomationsDetail": "定时自动化任务仅在 Factory 打开时运行。现在退出后，这些任务将暂停运行，直到你重新打开应用。"
+  },
+  "cliInstall": {
+    "copiedTitle": "安装命令已复制",
+    "copiedMessage": "Droid CLI 安装命令已复制",
+    "copiedDetail": "将其粘贴到终端中，以安装或更新“droid”命令：\n\n{{command}}"
+  },
+  "versionCheck": {
+    "title": "需要更新",
+    "message": "当前版本已不受支持",
+    "detail": "当前版本（{{version}}）已不受支持。\n\n请安装最新版本以继续使用。",
+    "checkForUpdates": "检查更新",
+    "quit": "退出"
+  },
+  "updater": {
+    "deploymentDisabled": "此部署不支持 Factory 托管的自动更新。请联系管理员获取已批准的安装程序。",
+    "configurationUnavailable": "无法读取部署配置，更新已停用。请重启应用或联系管理员。",
+    "airgapDisabled": "启用隔离网络模式后无法更新。",
+    "enterpriseDisabled": "你的组织已停用桌面应用更新。",
+    "serverUnreachable": "无法连接更新服务器。请重试。",
+    "cannotUpdateTitle": "无法更新",
+    "cannotUpdateMessage": "Factory 无法在当前安装位置更新。",
+    "moveToApplications": "请将 Factory.app 移至“应用程序”文件夹，然后重新启动以启用自动更新。",
+    "msixPolicy": "Windows 无法更新 Factory。请检查组织的部署策略或联系 IT 人员。请勿将文件移出 WindowsApps。",
+    "noWriteAccess": "Factory 没有安装目录的写入权限。请尝试从当前用户可写的文件夹运行，或以管理员身份启动。",
+    "externalInstallDisabled": "此 Factory 安装由应用内更新器之外的方式管理。请使用包管理器更新，或通过 Factory 安装脚本重新安装。",
+    "installBusy": "此应用的另一项安装正在进行中。请等待其完成后重试。",
+    "installLockFailed": "无法锁定 Linux 安装目录。",
+    "extractFailed": "无法解压更新。请重试。",
+    "checksumInvalid": "更新的校验和无效。",
+    "versionAlreadyRunning": "此版本已在运行。",
+    "downloadVerificationFailed": "下载的更新未通过验证。请重试。",
+    "policyChanged": "组织更新策略已变更。请重试。",
+    "policyUnverified": "无法验证组织更新策略。请重试。",
+    "downloadFailed": "无法下载更新。请重试。",
+    "downloadInvalidSize": "下载的更新大小无效。",
+    "downloadTooLarge": "下载的更新过大。",
+    "downloadIncomplete": "更新下载不完整。请重试。",
+    "previousDownloadNotRemoved": "无法移除上次下载的更新。请重试。",
+    "userSettingDisabled": "Factory 设置（~/.factory/settings.json）中的 disableAutoUpdate 已关闭桌面版更新。",
+    "restartFailed": "无法重启并应用更新。请重试。"
+  },
+  "fileDialogs": {
+    "saveDownloadedFile": "保存下载的文件",
+    "selectWorkingDirectory": "选择工作目录",
+    "selectSoundFile": "选择声音文件",
+    "audioFilter": "音频",
+    "saveBugReport": "保存问题报告",
+    "zipArchiveFilter": "Zip 压缩文件"
+  },
+  "remoteAccess": {
+    "deploymentDisabled": "此部署不支持 Factory 托管的远程访问。请使用此设备上的本地 Session。"
+  },
+  "diagnostics": {
+    "customerHostedSkipped": "当前为客户自托管部署，已跳过。",
+    "customerConnectivity": "客户后端连接状态",
+    "customerConnectivityHint": "请检查客户后端、防火墙规则、代理配置及系统信任存储。"
+  },
+  "Edit": "编辑",
+  "Undo": "撤销",
+  "Redo": "重做",
+  "Cut": "剪切",
+  "Copy": "复制",
+  "Paste": "粘贴",
+  "Paste and Match Style": "粘贴并匹配样式",
+  "Delete": "删除",
+  "Select All": "全选",
+  "Reload": "重新加载",
+  "Force Reload": "强制重新加载",
+  "Toggle Developer Tools": "切换开发者工具",
+  "Toggle Full Screen": "切换全屏",
+  "Minimize": "最小化",
+  "Quit": "退出"
+}

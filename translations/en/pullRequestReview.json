@@ -45,44 +45,6 @@
     "fileCount_one": "{{count}} file",
     "fileCount_other": "{{count}} files"
   },
-  "pullRequestLayerManifestGeneration": {
-    "walkthroughCompleted": "Walkthrough completed",
-    "walkthroughOutcomeUnavailable": "Walkthrough outcome unavailable",
-    "walkthroughPreparationInterrupted": "Walkthrough preparation interrupted",
-    "activity": {
-      "waitingForAgent": "Waiting for the agent",
-      "thinking": "Thinking",
-      "streaming": "Streaming",
-      "executing": "Executing",
-      "waitingForApproval": "Waiting for approval",
-      "compactingHistory": "Compacting history"
-    },
-    "updatingWalkthrough": "Updating walkthrough",
-    "generatingWalkthrough": "Generating walkthrough",
-    "sessionLoadFailedCheckingOutcome": "The walkthrough session could not be loaded. Checking its outcome.",
-    "progressLoadFailed": "The walkthrough progress could not be loaded.",
-    "reconnecting": "Reconnecting",
-    "preparingSession": "Preparing session…",
-    "connectionUnavailable": "Connection unavailable",
-    "checkingResult": "Checking result",
-    "loadingWalkthrough": "Loading the walkthrough",
-    "walkthroughSaved": "The walkthrough was saved.",
-    "resultNotConfirmed": "The result could not be confirmed.",
-    "canStartNewAttempt": "You can start a new attempt. The previous walkthrough is kept.",
-    "anotherGenerationActive": "Another generation is active.",
-    "sessionNotStarted": "The generation session was not started.",
-    "preparing": "Preparing",
-    "preparingFreshSession": "Preparing a fresh generation session",
-    "generationTimedOut": "Walkthrough generation timed out",
-    "generationReachedTimeLimit": "Generation reached its time limit.",
-    "generationFailed": "Walkthrough generation failed",
-    "runDidNotComplete": "The run did not complete successfully.",
-    "generationCancelled": "Walkthrough generation cancelled",
-    "generationSessionCancelled": "The generation session was cancelled.",
-    "generationMayStillBeActive": "Generation may still be active. Checking for a saved result.",
-    "newAttemptNotAvailableYet": "A new attempt is not available yet. Checking again automatically.",
-    "statusTemporarilyUnavailable": "Status is temporarily unavailable. Checking again automatically."
-  },
   "pullRequestLayeredDiff": {
     "diagram": "Diagram",
     "productChanges": "Product changes",
@@ -256,16 +218,16 @@
   },
   "pullRequestReviewChatSession": {
     "tryAgain": "Try again",
-    "preparingChat": "Preparing pull request chat…",
-    "loadingChat": "Loading pull request chat…"
-  },
-  "pullRequestReviewFloatingComposer": {
-    "minimize": "Minimize chat composer"
+    "loadingChat": "Loading pull request chat…",
+    "newChat": "New chat",
+    "chatUnavailable": "This chat can't be shown.",
+    "chatReadOnly": "This chat can't continue."
   },
   "pullRequestReviewWorkspace": {
     "thePullRequestDiffCouldNot": "The pull request diff could not be loaded",
     "theProvidersChangedFileListMay": "The provider's changed-file list may be incomplete. Open the pull request to see all files.",
     "loadingWalkthrough": "Loading walkthrough...",
+    "noWalkthrough": "No walkthrough for this pull request yet.",
     "diffLayers": "Diff layers",
     "noPullRequestYet": "No pull request yet",
     "pullRequestView": "Pull request view",
@@ -285,24 +247,13 @@
     "reactionNotSaved": "The reaction was not saved.",
     "commentNotPosted": "The comment was not posted.",
     "allChanges": "All changes",
-    "walkthroughNotUpdated": "The walkthrough could not be updated.",
-    "walkthroughNotGenerated": "The walkthrough could not be generated.",
-    "walkthroughResultNotConfirmed": "The walkthrough result could not be confirmed.",
     "refreshToRetry": "Refresh the pull request to retry.",
-    "validationSection": "Validation section",
-    "validationView": {
-      "summary": "Summary",
-      "details": "Details"
-    },
     "sidebarView": "Sidebar view",
     "resizeLayerSidebar": "Resize sidebar",
     "sidebarMode": {
       "walkthrough": "Walkthrough",
       "files": "Files"
     },
-    "generateWalkthrough": "Generate Walkthrough",
-    "updateWalkthrough": "Update Walkthrough",
-    "updateWalkthroughTooltip": "Some changes were made since the last walkthrough was generated.",
     "codeFromEarlierRevision": "Code from an earlier revision.",
     "codePreviewUnavailable": "Code preview unavailable.",
     "commentOnEarlierRevision": "This comment is on an earlier revision.",
@@ -407,10 +358,10 @@
   },
   "pullRequestValidation": {
     "noQaDetailsWereReportedFor": "No QA details were reported for this section.",
-    "qaReportSections": "QA report sections",
     "noAutomatedQaCommentsYet": "No automated QA comments yet.",
-    "noQaDetailsReported": "No QA details were reported.",
-    "noQaSummaryReported": "No QA summary was reported.",
+    "noQaReported": "No QA results were reported.",
+    "qaRecording": "QA recording",
+    "qaAppRecording": "{{app}} QA recording",
     "collapseCommentBy": "Collapse comment by {{author}}",
     "expandCommentBy": "Expand comment by {{author}}",
     "reply": "Reply",
@@ -435,22 +386,6 @@
   },
   "pullRequestDiffExpansion": {
     "contextExpansionFailed": "Context could not be expanded. File contents must be available and match this diff. Try again."
-  },
-  "pullRequestReviewComputer": {
-    "couldNotBePrepared": "The chat computer could not be prepared.",
-    "tookTooLongToConnect": "The chat computer took too long to connect.",
-    "loading": "Loading the chat computer…",
-    "enterSupportedUrl": "Enter a supported GitHub or GitLab pull request URL.",
-    "couldNotBeResolved": "The chat computer could not be resolved.",
-    "noComputerCouldConnect": "No available review computer could connect. Try again to refresh the environments.",
-    "noTemplateIncludesRepository": "No built environment includes this pull request repository.",
-    "noTemplateAvailable": "No built environment is available for pull request review.",
-    "connectingToAnother": "Connecting to another chat computer…",
-    "preparingStep": "Preparing chat computer · {{step}}",
-    "preparing": "Preparing chat computer…",
-    "computerMissingRepository": "{{name}} does not include this pull request repository.",
-    "ready": "Chat computer ready.",
-    "connecting": "Connecting to the chat computer…"
   },
   "walkthroughReadError": {
     "loadFailed": "Could not load the walkthrough. Refresh to try again.",

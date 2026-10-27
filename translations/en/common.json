@@ -20,6 +20,7 @@
     "bugAttribution": "Bug Attribution",
     "usage": "Usage",
     "productivity": "Productivity",
+    "enterprise": "ENTERPRISE",
     "company": "COMPANY",
     "personal": "PERSONAL"
   },
@@ -29,6 +30,7 @@
   },
   "desktopSessionTilingHost": {
     "removeTiledSession": "Remove tiled session",
+    "removeTiledReview": "Remove tiled Code Review",
     "closeNewSessionTile": "Close new session",
     "resizeColumns": "Resize session columns",
     "resizeRows": "Resize session rows"
@@ -272,29 +274,23 @@
     "reauthenticateMessage": "We re-architected MCP OAuth to increase stability. Please re-authenticate your MCP OAuth servers via the MCP button."
   },
   "checkForUpdatesModal": {
-    "youreOnTheLatestVersion": "You're on the latest version",
     "checkAgain": "Check again",
     "retryUpdate": "Retry update",
     "updating": "Updating…",
     "close": "Close",
     "checkForUpdates": "Check for updates",
-    "checkingForUpdates": "Checking for updates…",
     "releasedToday": "{{date}} (today)",
     "releasedYesterday": "{{date}} (yesterday)",
     "releasedDaysAgo_one": "{{date}} ({{count}} day ago)",
     "releasedDaysAgo_other": "{{date}} ({{count}} days ago)",
     "arm64Emulation": "ARM64 emulation",
     "rosetta": "Rosetta",
-    "newVersionAvailable": "A new version is available",
-    "newVersionAvailableVersionsBehind": "A new version is available ({{behind}} versions behind)",
-    "preparingUpdateTo": "Preparing update to v{{version}}…",
-    "downloadingVersion": "Downloading v{{version}}…",
-    "downloadingUpdate": "Downloading update…",
     "currentVersion": "Current version",
     "latestVersion": "Latest version",
     "released": "Released",
     "platform": "Platform",
-    "updateToVersion": "Update to v{{version}}"
+    "updateToVersion": "Update to v{{version}}",
+    "restartToUpdate": "Restart to update"
   },
   "health": {
     "healthCheck": "Health Check",
@@ -316,7 +312,12 @@
     "integrationConnected": "Your integration is connected.",
     "connectorConnected": "Your connector is connected.",
     "connectorFailed": "The connector didn't connect. Return to Factory to try again.",
-    "connectorCanceled": "Connector setup was canceled."
+    "connectorCanceled": "Connector setup was canceled.",
+    "githubConnected": "GitHub is connected.",
+    "githubInstallRequested": "GitHub is connected. Your GitHub organization owner needs to approve the Factory app.",
+    "githubInstallCancelled": "GitHub is connected, but the Factory app wasn't installed.",
+    "githubOrgInstallRequired": "GitHub is connected. Ask a Factory admin to install the Factory app on GitHub.",
+    "githubRepositoriesUpdated": "Your GitHub repository access is updated."
   },
   "openVscode": {
     "notWhereYouWantedToGo": "Not where you wanted to go? Set up SSH access below, then retry.",
@@ -469,5 +470,12 @@
   },
   "userProfileMenu": {
     "failedToLogOut": "Failed to log out"
+  },
+  "integrationHandoff": {
+    "openApp": "Open the Factory app",
+    "closeTab": "You can close this tab once the app opens.",
+    "didNotOpen": "Didn't open? Make sure the Factory app is installed, then use the button.",
+    "couldNotOpen": "Couldn't open the Factory app",
+    "invalidLink": "This link can't open the Factory app. Return to Factory and try again."
   }
 }

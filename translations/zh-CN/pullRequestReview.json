@@ -45,44 +45,6 @@
     "fileCount_one": "{{count}} 个文件",
     "fileCount_other": "{{count}} 个文件"
   },
-  "pullRequestLayerManifestGeneration": {
-    "walkthroughCompleted": "代码导览已完成",
-    "walkthroughOutcomeUnavailable": "代码导览结果不可用",
-    "walkthroughPreparationInterrupted": "代码导览准备已中断",
-    "activity": {
-      "waitingForAgent": "等待代理",
-      "thinking": "思考中",
-      "streaming": "流式输出中",
-      "executing": "执行中",
-      "waitingForApproval": "等待批准",
-      "compactingHistory": "正在压缩历史记录"
-    },
-    "updatingWalkthrough": "正在更新代码导览",
-    "generatingWalkthrough": "正在生成代码导览",
-    "sessionLoadFailedCheckingOutcome": "无法加载代码导览 Session，正在检查其结果。",
-    "progressLoadFailed": "无法加载代码导览进度。",
-    "reconnecting": "正在重新连接",
-    "preparingSession": "正在准备 Session…",
-    "connectionUnavailable": "连接不可用",
-    "checkingResult": "正在检查结果",
-    "loadingWalkthrough": "正在加载代码导览",
-    "walkthroughSaved": "代码导览已保存。",
-    "resultNotConfirmed": "无法确认结果。",
-    "canStartNewAttempt": "可以重新尝试。之前的代码导览会保留。",
-    "anotherGenerationActive": "另一个生成过程正在进行。",
-    "sessionNotStarted": "生成 Session 未启动。",
-    "preparing": "准备中",
-    "preparingFreshSession": "正在准备新的生成 Session",
-    "generationTimedOut": "代码导览生成超时",
-    "generationReachedTimeLimit": "生成已达到时间上限。",
-    "generationFailed": "代码导览生成失败",
-    "runDidNotComplete": "此次运行未成功完成。",
-    "generationCancelled": "代码导览生成已取消",
-    "generationSessionCancelled": "生成 Session 已取消。",
-    "generationMayStillBeActive": "生成可能仍在进行，正在检查是否已有保存的结果。",
-    "newAttemptNotAvailableYet": "暂时无法重新尝试，正在自动再次检查。",
-    "statusTemporarilyUnavailable": "状态暂时不可用，正在自动再次检查。"
-  },
   "pullRequestLayeredDiff": {
     "diagram": "图示",
     "noChangedLinesInTheCurrent": "当前差异中没有与此层匹配的变更行。",
@@ -256,11 +218,10 @@
   },
   "pullRequestReviewChatSession": {
     "tryAgain": "重试",
-    "preparingChat": "正在准备拉取请求聊天…",
-    "loadingChat": "正在加载拉取请求聊天…"
-  },
-  "pullRequestReviewFloatingComposer": {
-    "minimize": "最小化聊天输入框"
+    "loadingChat": "正在加载拉取请求聊天…",
+    "newChat": "新建聊天",
+    "chatUnavailable": "无法显示此聊天。",
+    "chatReadOnly": "无法继续此聊天。"
   },
   "pullRequestReviewWorkspace": {
     "thePullRequestDiffCouldNot": "无法加载拉取请求差异",
@@ -285,24 +246,13 @@
     "reactionNotSaved": "未能保存表情回应。",
     "commentNotPosted": "未能发布评论。",
     "allChanges": "所有变更",
-    "walkthroughNotUpdated": "无法更新代码导览。",
-    "walkthroughNotGenerated": "无法生成代码导览。",
-    "walkthroughResultNotConfirmed": "无法确认代码导览结果。",
     "refreshToRetry": "请刷新拉取请求后重试。",
-    "validationSection": "验证分区",
-    "validationView": {
-      "summary": "摘要",
-      "details": "详情"
-    },
     "sidebarView": "侧边栏视图",
     "resizeLayerSidebar": "调整侧边栏大小",
     "sidebarMode": {
       "walkthrough": "代码导览",
       "files": "文件"
     },
-    "generateWalkthrough": "生成代码导览",
-    "updateWalkthrough": "更新代码导览",
-    "updateWalkthroughTooltip": "自上次生成代码导览后，有部分内容发生变更。",
     "codeFromEarlierRevision": "来自较早修订版本的代码。",
     "codePreviewUnavailable": "代码预览不可用。",
     "commentOnEarlierRevision": "此评论针对较早的修订版本。",
@@ -345,7 +295,8 @@
     "pullRequestsMerged_one": "已合并 {{count}} 个拉取请求。",
     "pullRequestsMerged_other": "已合并 {{count}} 个拉取请求。",
     "pullRequestMergeQueued": "拉取请求已加入合并队列。",
-    "pullRequestMergeInProgress": "代码托管平台仍在执行合并，完成后将更新拉取请求。"
+    "pullRequestMergeInProgress": "代码托管平台仍在执行合并，完成后将更新拉取请求。",
+    "noWalkthrough": "此拉取请求暂无导览。"
   },
   "pullRequestRowMenu": {
     "openInNewTab": "在新标签页中打开",
@@ -400,10 +351,7 @@
   },
   "pullRequestValidation": {
     "noQaDetailsWereReportedFor": "此分区未报告 QA 详情。",
-    "qaReportSections": "QA 报告章节",
     "noAutomatedQaCommentsYet": "暂无自动 QA 评论。",
-    "noQaDetailsReported": "未报告 QA 详情。",
-    "noQaSummaryReported": "未报告 QA 摘要。",
     "collapseCommentBy": "收起 {{author}} 的评论",
     "expandCommentBy": "展开 {{author}} 的评论",
     "reply": "回复",
@@ -415,7 +363,10 @@
     "sendComment": "发送评论",
     "qaCommentsLoadFailed": "无法加载 QA 评论。请刷新后重试。",
     "checksLoadFailed": "无法加载检查。请刷新后重试。",
-    "emptyCommentBody": "未提供评论正文。"
+    "emptyCommentBody": "未提供评论正文。",
+    "noQaReported": "没有报告 QA 结果。",
+    "qaRecording": "QA 录制",
+    "qaAppRecording": "{{app}} QA 录制"
   },
   "review": {
     "codeReview": "代码审查",
@@ -428,22 +379,6 @@
   },
   "pullRequestDiffExpansion": {
     "contextExpansionFailed": "无法展开上下文。文件内容必须可用，且与此差异匹配。请重试。"
-  },
-  "pullRequestReviewComputer": {
-    "couldNotBePrepared": "无法准备聊天计算机。",
-    "tookTooLongToConnect": "聊天计算机连接超时。",
-    "loading": "正在加载聊天计算机…",
-    "enterSupportedUrl": "请输入支持的 GitHub 或 GitLab 拉取请求 URL。",
-    "couldNotBeResolved": "无法解析聊天计算机。",
-    "noComputerCouldConnect": "没有可用的审查计算机能够连接。请重试以刷新环境。",
-    "noTemplateIncludesRepository": "没有已构建的环境包含此拉取请求仓库。",
-    "noTemplateAvailable": "没有可用于拉取请求审查的已构建环境。",
-    "connectingToAnother": "正在连接另一台聊天计算机…",
-    "preparingStep": "正在准备聊天计算机 · {{step}}",
-    "preparing": "正在准备聊天计算机…",
-    "computerMissingRepository": "{{name}} 不包含此拉取请求仓库。",
-    "ready": "聊天计算机已就绪。",
-    "connecting": "正在连接聊天计算机…"
   },
   "walkthroughReadError": {
     "loadFailed": "无法加载代码导览。请刷新后重试。",

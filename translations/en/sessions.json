@@ -116,10 +116,13 @@
       "failedToPrepareGenerated": "Failed to prepare generated file.",
       "cannotOpenFolder": "This folder cannot be opened in this session."
     },
-    "templateFallbackName": "Template",
+    "templateFallbackName": "Environment",
     "usage": {
       "userOverQuota": "You have reached the usage quota set by your organization administrator.",
-      "orgOverLimit": "Your organization has hit its usage limit."
+      "orgOverLimit": "Your organization has hit its usage limit.",
+      "missionLimitReached": "Usage limit reached. Messages to Factory models won't run until usage resets {{resetTime}}. You can still queue instructions or pick a BYOK model.",
+      "missionLimitReachedNoReset": "Usage limit reached. Messages to Factory models won't run until usage is available again. You can still queue instructions or pick a BYOK model.",
+      "missionOrganizationLimit": "You've reached the usage limit your organization set. Ask your admin to raise it."
     },
     "subscription": {
       "remoteRequiresPro": "Remote sessions require a Pro subscription. Use your own API keys locally or upgrade to Pro.",
@@ -334,7 +337,7 @@
     },
     "defaultTag": "Default",
     "templateLabel": "Environment",
-    "generalPurposeEnvironment": "{{templateName}} is a general-purpose environment without repositories.",
+    "generalPurposeEnvironment": "{{environmentName}} is a general-purpose environment without repositories.",
     "cloudDeprecationTooltip": "Cloud Machines have been superseded by Droid Computers. Cloud is still supported, but we highly recommend switching to <droidComputersLink>Droid Computers</droidComputersLink> for stability.",
     "templateBeingPreparedCustomize": "Your environment is being prepared. You can customize it in <settingsLink>settings</settingsLink>.",
     "templateBeingPrepared": "Your environment is being prepared.",
@@ -467,9 +470,6 @@
     "missionMustBeAvailableToChangeSymbol": "This mission's computer isn't available, so its symbol can't be changed",
     "signInToChangeMissionSymbol": "Sign in again to change the mission's symbol",
     "failedToChangeMissionSymbol": "Failed to change mission symbol",
-    "workstreamMustBeAvailableToChangeSymbol": "This workstream's computer isn't available, so its icon can't be changed",
-    "signInToChangeWorkstreamSymbol": "Sign in again to change the workstream's icon",
-    "failedToChangeWorkstreamSymbol": "Failed to change workstream icon",
     "unregisteredComputer": "Unregistered Computer",
     "untitledWorkstream": "Untitled workstream",
     "unregisteredComputerNumbered": "Unregistered Computer {{index}}"
@@ -543,6 +543,7 @@
     "catalogSyncFailed": "The connected machine did not return its session list. Reconnect the machine and try again.",
     "missingMachineId": "This session cannot be connected because the required machine identifier is missing. The workspace sandbox or computer may no longer be available.",
     "backToMission": "Back to mission: {{name}}",
+    "backToParentSession": "Back to parent session: {{name}}",
     "parentSession": "Parent session",
     "automations": "Automations",
     "backToAutomations": "Back to automations",
@@ -557,7 +558,7 @@
     "attachmentUploadFailed": "Attachment upload failed. Try again or remove and reattach the files.",
     "creationLaunchTimedOut": "Creation launch timed out. Retry to reconnect to the approved environment.",
     "attachmentsNoLongerAvailable": "Attached files are no longer available in this app window. Try again and reattach the files.",
-    "creatingComputerFrom": "Creating a computer from {{templateName}}",
+    "creatingComputerFrom": "Creating a computer from {{environmentName}}",
     "settingUpComputer": "Setting up your computer",
     "cloningRepositories": "Cloning repositories",
     "installingDependencies": "Installing dependencies"
@@ -695,6 +696,7 @@
     "plan": "Plan",
     "pullRequest": "Pull request",
     "sideChat": "Side chat",
+    "subagents": "Subagents",
     "terminal": "Terminal"
   },
   "rightPaneToolDescriptions": {
@@ -705,6 +707,7 @@
     "computer": "Watch and control the computer's desktop",
     "files": "Browse the session's workspace",
     "sideChat": "Ask a question without interrupting",
+    "subagents": "Track this session's subagents",
     "terminal": "A shell on the session computer"
   },
   "rightPaneV2Launcher": {
@@ -740,6 +743,23 @@
       "description": "Temporary shortcut to workstream creation",
       "label": "New workstream"
     }
+  },
+  "sessionSubagentsPanel": {
+    "group": {
+      "waitingOnYou": "Waiting on you",
+      "working": "Working",
+      "done": "Done"
+    },
+    "fallbackName": "Subagent {{id}}",
+    "activity": {
+      "waitingOnYou": "Waiting on you",
+      "working": "Working",
+      "failed": "Failed",
+      "cancelled": "Cancelled"
+    },
+    "typeActivity": "{{type}} · {{activity}}",
+    "subagentsShowUpHere": "Subagents this session starts show up here.",
+    "noSubagentsYet": "No subagents yet"
   },
   "remoteLocalhost": {
     "unreachableOnComputer": "Couldn’t reach port {{port}} on {{computer}}.",

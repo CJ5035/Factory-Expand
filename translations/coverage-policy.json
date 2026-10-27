@@ -314,11 +314,6 @@
       "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
     },
     {
-      "key": "settings.constants.remoteDelegationConfigs.softwareFactory.title",
-      "source": "Software Factory",
-      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
-    },
-    {
       "key": "settings.createWorkspaceModal.myWorkspace",
       "source": "my-workspace",
       "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
@@ -416,21 +411,6 @@
     {
       "key": "settings.providerSelector.providers.opencompute",
       "source": "OpenCompute",
-      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
-    },
-    {
-      "key": "settings.remoteDelegationConfigSection.pluginName2",
-      "source": "plugin-name",
-      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
-    },
-    {
-      "key": "settings.remoteDelegationConfigSection.marketplace2",
-      "source": "@marketplace",
-      "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
-    },
-    {
-      "key": "settings.remoteDelegationConfigTag.softwareFactory",
-      "source": "Software Factory",
       "reason": "首批及v8交叉复审确认：品牌、技术标识、代码或示例值应保留原文"
     },
     {
@@ -791,11 +771,6 @@
     {
       "key": "components.evaluations.evaluationDatasetHub.gpu",
       "source": "GPU",
-      "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
-    },
-    {
-      "key": "components.evaluations.evaluationRunConfigFields.flagValue",
-      "source": "--flag value",
       "reason": "v8逐项复核：产品名称、协议/计量缩写、代码参数、示例标识或带插值的格式，保留原值"
     },
     {
@@ -1213,12 +1188,6 @@
       "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
     },
     {
-      "key": "lessons.content.tips.specReview.confirm.body",
-      "source": "Pick how much Droid does without asking while it builds. Medium suits most tasks. Select Confirm to start.",
-      "category": "course-prose",
-      "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
-    },
-    {
       "key": "lessons.content.glossary.specMode.definition",
       "source": "Droid researches your task and proposes a plan, called a spec, before it changes any code. While planning it only reads and searches: no file edits, commits, or services. Approve the spec to start building, or keep iterating on it.",
       "category": "course-prose",
@@ -1310,7 +1279,7 @@
     },
     {
       "key": "lessons.content.firstSession.steps.giveTask.instructions",
-      "source": "Droid researches and writes a spec. Read it, comment on anything that is off, then select Approve Spec and Confirm",
+      "source": "Droid researches and writes a spec. Read it, comment on anything that is off, then select Approve Spec",
       "category": "course-prose",
       "reason": "用户明确选择课程正文保留英文：讲解、示例、提示词或学习解释；导航标题、按钮、选项标签及状态反馈仍中文"
     },
@@ -4145,16 +4114,6 @@
       "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
     },
     {
-      "key": "components.layout.pullRequestWalkthroughInsights.connectionTo",
-      "source": "→ {{node}}",
-      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
-    },
-    {
-      "key": "components.layout.pullRequestWalkthroughInsights.connectionFrom",
-      "source": "← {{node}}",
-      "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
-    },
-    {
       "key": "components.layout.pullRequestWalkthroughInsights.kinds.hook",
       "source": "Hook",
       "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
@@ -4173,6 +4132,96 @@
       "key": "components.settings.customModelEditorModal.provider.model",
       "source": "{{name}} · {{id}}",
       "reason": "0.205.0逐项复核：品牌、标识符或计量格式保持原文"
+    },
+    {
+      "key": "analytics2.enterpriseCost.leaderboard.columns.fsc",
+      "source": "FSC",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "analytics2.topUsers.moreOrganizations",
+      "source": "+{{extra}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "sessions.sessionSubagentsPanel.typeActivity",
+      "source": "{{type}} · {{activity}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "settings.constants.agentProfiles.softwareFactory.title",
+      "source": "Software Factory",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "settings.agentProfileSection.pluginName2",
+      "source": "plugin-name",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "settings.agentProfileSection.marketplace2",
+      "source": "@marketplace",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "settings.agentProfileTag.softwareFactory",
+      "source": "Software Factory",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "settings.scmSetupSection.targets.bitbucketDataCenter",
+      "source": "Bitbucket Data Center",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.common.wizardStepIndicator.stepLabel",
+      "source": "{{number}}. {{label}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestQaRecordingPlayer.markLabel",
+      "source": "{{time}} {{label}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestQaRecordingPlayer.timeReadout",
+      "source": "{{current}} / {{duration}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestQaReport.actionRequiredScope",
+      "source": "· {{scope}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestQaReport.groupCountWithAttention",
+      "source": "{{tests}} · {{attention}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.layout.pullRequestQaReport.statusMeaningSuffix",
+      "source": "· {{meaning}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.onboarding.webEnvironmentSetup.chooseRepos.namePlaceholder",
+      "source": "my-environment",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.onboarding.webEnvironmentSetup.chooseRepos.controlKey",
+      "source": "Ctrl",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.onboarding.webEnvironmentSetup.building.droidLabel",
+      "source": "Droid",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
+    },
+    {
+      "key": "components.onboarding.scmConnectOnly.pick.repoNamesMore",
+      "source": "{{names}} +{{count}}",
+      "reason": "0.207.0逐项复核：品牌、技术标识、格式或插值组成，保持原文"
     }
   ]
 }

@@ -1,113 +1,184 @@
 {
   "constants": {
     "starterIdeas": {
-      "exploreCodebase": {
-        "title": "探索你的代码库",
-        "description": "在引导下了解仓库及各部分的关联。"
-      },
-      "ticketToPr": {
-        "title": "将工单变成 PR",
-        "description": "领取一个问题，并推进到创建拉取请求。"
-      },
-      "fixProductionError": {
-        "title": "修复生产环境错误",
-        "description": "诊断线上错误并完成修复。"
-      },
-      "mapProductSurface": {
-        "title": "梳理产品功能范围",
-        "description": "了解仓库中面向用户的功能和流程。"
-      },
-      "draftSpec": {
-        "title": "根据待办需求起草 Spec",
-        "description": "根据产品的实际运作方式编写 PRD。"
-      },
-      "feedbackToPlan": {
-        "title": "将反馈转化为计划",
-        "description": "从客户反馈中提炼主题及后续行动。"
-      },
-      "figmaToLife": {
-        "title": "让 Figma 画面成为现实",
-        "description": "在仓库中构建忠实还原、可交互的版本。"
-      },
-      "auditUi": {
-        "title": "审查界面",
-        "description": "找出不一致的样式、状态和交互。"
-      },
-      "polishInterface": {
-        "title": "完善界面",
-        "description": "打磨最薄弱的页面、状态和交互。"
-      },
-      "analyzeSpreadsheet": {
-        "title": "分析电子表格",
-        "description": "将原始数字转化为趋势和结论。"
-      },
-      "reviewRevenue": {
-        "title": "审查收入数据",
-        "description": "交叉核对账单数据并标记异常。"
-      },
-      "boardReadyReport": {
-        "title": "制作董事会报告",
-        "description": "创建带有图表的精美 Excel 或 PDF 报告。"
-      },
       "researchMarket": {
         "title": "研究市场",
-        "description": "研究竞争对手或主题，并提供来源。"
-      },
-      "draftLaunchContent": {
-        "title": "起草发布内容",
-        "description": "撰写可直接发布的博客文章或单页简介。"
-      },
-      "customerVoice": {
-        "title": "收集客户声音",
-        "description": "用客户的原话总结他们反复提到的内容。"
+        "description": "研究竞争对手或主题，并提供来源。",
+        "prompt": "研究 AI 会议纪要工具市场：主要参与者、产品定位、定价和市场缺口。使用最新资料并引用来源，总结新进入者应采取的行动。"
       },
       "accountBrief": {
         "title": "准备客户简报",
-        "description": "研究潜在客户并整理沟通要点。"
-      },
-      "mineCalls": {
-        "title": "挖掘通话记录",
-        "description": "从通话录音中提炼异议和后续行动。"
+        "description": "研究潜在客户并整理沟通要点。",
+        "prompt": "为首次销售电话准备 Shopify 客户简报：公司业务、近期新闻、可能的优先事项、关键人物，以及五个针对性话题。使用最新公开资料并引用来源。"
       },
       "draftOutreach": {
         "title": "撰写有效的外联内容",
-        "description": "编写简短且有针对性的系列邮件。"
-      },
-      "automateUpdate": {
-        "title": "自动生成定期更新",
-        "description": "起草更新内容，并使其可重复执行。"
-      },
-      "untangleProcess": {
-        "title": "理清流程",
-        "description": "梳理步骤、负责人和瓶颈。"
-      },
-      "dataToDecisions": {
-        "title": "将数据转化为决策",
-        "description": "根据电子表格生成清晰的运营分析。"
-      },
-      "layOfTheLand": {
-        "title": "了解整体情况",
-        "description": "像新员工一样了解代码库和产品。"
+        "description": "编写简短且有针对性的系列邮件。",
+        "prompt": "为中型物流公司的运营副总裁编写三封连续的开发邮件，推介工作流自动化工具。每封不超过 120 个词，内容具体，并包含一个明确诉求。"
       },
       "investorUpdate": {
         "title": "起草投资者更新",
-        "description": "将重点进展整理成简洁有力的更新。"
+        "description": "将重点进展整理成简洁有力的更新。",
+        "prompt": "帮我起草月度投资人简报。用一条简短消息询问本月亮点、指标、不足和需要的支持，再整理成简洁、自信且今天就能发送的简报。"
       },
       "competitorScan": {
         "title": "分析竞争对手",
-        "description": "研究对手及你的优势机会。"
+        "description": "研究对手及你的优势机会。",
+        "prompt": "先询问我要分析哪家竞争者，再研究其产品、定价、定位以及小团队可以取胜的方向。引用最新资料。"
       },
       "tourDroid": {
         "title": "了解 Droid 的能力",
-        "description": "根据你的环境观看现场演示。"
-      },
-      "workWithFiles": {
-        "title": "处理你的文件",
-        "description": "总结、转换或基于文档继续创作。"
+        "description": "无需配置的简短现场演示。",
+        "prompt": "简要介绍你的能力。提出三件无需我配置、你现在就能演示的亮点任务，然后现场完成其中最出色的一项。"
       },
       "craftDeliverable": {
         "title": "制作交付物",
-        "description": "生成精美的文档、PDF 或电子表格。"
+        "description": "生成精美的文档、PDF 或电子表格。",
+        "prompt": "创建一份精美的单页 PDF 指南，介绍如何高效开会，包含简短检查清单和简单示意图。告诉我保存位置。"
+      },
+      "buildMiniApp": {
+        "title": "从零构建小应用",
+        "description": "Droid 构建精美的习惯追踪器，运行它并告诉你如何打开。",
+        "prompt": "在新文件夹中从零构建一个精美的单页习惯追踪器：支持添加、打卡和删除习惯，显示连续七天的记录，并将数据保存在本地存储中。运行它，检查是否正常，并告诉我如何打开。"
+      },
+      "weighTechChoice": {
+        "title": "权衡技术选择",
+        "description": "依据最新资料比较两个方案，并给出明确建议。",
+        "prompt": "帮我为新的多租户 SaaS 应用在 Postgres 和 MongoDB 之间做选择。研究最新资料，比较数据建模、扩展能力、运维和成本，最后给出明确建议，并说明我需要接受的取舍。"
+      },
+      "competitorTeardown": {
+        "title": "拆解一款产品",
+        "description": "分析你指定产品的工作流、定价和定位，并附资料来源。",
+        "prompt": "利用最新公开资料拆解 Notion：核心工作流、定价层级、产品定位，以及用户最常抱怨的问题。引用来源，最后提出竞争者可利用的三个机会。"
+      },
+      "draftPrd": {
+        "title": "将想法写成 PRD",
+        "description": "将一句话的功能想法整理成结构化规范。",
+        "prompt": "将这个功能想法整理成 PRD：“让用户安排每周通过邮件发送报告。”覆盖问题、用户、目标与非目标、需求、成功指标和待解决的问题，并保存为 Markdown 文件。"
+      },
+      "interviewGuide": {
+        "title": "规划客户访谈",
+        "description": "准备筛选问卷、访谈提纲和总结框架。",
+        "prompt": "为一款 B2B 费用报销工具规划客户探索访谈：编写五个筛选问题、带追问提示的 30 分钟访谈提纲，以及总结框架，全部放在同一份 Markdown 文档中。"
+      },
+      "landingPagePrototype": {
+        "title": "制作落地页原型",
+        "description": "制作可在浏览器中打开的精美响应式页面。",
+        "prompt": "为一个虚构的咖啡订阅品牌制作精美、响应式的单文件 HTML 落地页原型：包含首屏、功能、定价、用户评价和页脚。运行它，并告诉我如何在浏览器中打开。"
+      },
+      "designSystemStarter": {
+        "title": "搭建设计系统",
+        "description": "用一张参考页面展示颜色、字体和间距变量。",
+        "prompt": "制作单文件 HTML 形式的设计系统入门参考页：用 CSS 变量定义颜色、字体和间距，并展示浅色、深色主题下的按钮、输入框和卡片。运行它并告诉我如何打开。"
+      },
+      "critiqueSite": {
+        "title": "评估线上网站",
+        "description": "评估任意公开页面的用户体验，并提出具体改进。",
+        "prompt": "评估 https://stripe.com: 的用户体验，包括层级、文案、导航、无障碍和转化。按重要程度排列十个主要问题，并为每项提出具体改进。"
+      },
+      "saasModel": {
+        "title": "建立收入模型",
+        "description": "建立可调整输入的 24 个月 SaaS 模型。",
+        "prompt": "为 SaaS 初创企业创建 24 个月收入模型，并保存为 Excel 文件：输入包含初始客户数、增长率、流失率和各套餐价格，输出每月 MRR、ARR 和图表。使用合理且便于修改的示例数字。"
+      },
+      "unitEconomics": {
+        "title": "分析单位经济模型",
+        "description": "用示例数字和公式分析 CAC、LTV 和回本周期。",
+        "prompt": "使用示例数字讲解订阅业务的单位经济模型：计算 CAC、LTV、LTV/CAC 和回本周期，展示每个公式，并整理成可复用的电子表格。"
+      },
+      "budgetTemplate": {
+        "title": "创建预算与实际对比表",
+        "description": "创建带差异分析和图表、可直接填写的电子表格。",
+        "prompt": "为 20 人团队创建预算与实际对比表：按部门列出每月预算和实际支出、差异金额和比例，对超支应用条件格式，并提供汇总图表。填入示例数据。"
+      },
+      "launchPost": {
+        "title": "撰写发布文章",
+        "description": "为你描述的产品撰写简洁的发布公告。",
+        "prompt": "为虚构产品 Tidy 撰写发布博客文章，它是一款自动整理收件箱的应用。提供有吸引力的标题、约 400 个词的正文、三条社交帖子，以及一封发给现有客户的简短邮件。"
+      },
+      "contentCalendar": {
+        "title": "规划一个月的内容",
+        "description": "规划每周主题、渠道和首周内容草稿。",
+        "prompt": "为 B2B SaaS 品牌规划一个月的内容：用电子表格列出每周主题、渠道和帖子想法，并为第一周提供完整草稿。"
+      },
+      "objectionHandling": {
+        "title": "准备异议应对",
+        "description": "列出常见异议及简明回应。",
+        "prompt": "为 B2B SaaS 产品销售编写异议应对指南：列出十种常见异议（价格、时机、竞争者、安全等），每项提供简明回应和一个推动沟通继续的问题。"
+      },
+      "writeSop": {
+        "title": "编写 SOP",
+        "description": "编写明确责任人、步骤和检查清单的流程。",
+        "prompt": "为新员工第一周入职编写标准作业流程：包含责任人、每日分步任务、检查清单和常见问题，整理成清晰的 Markdown 文档。"
+      },
+      "mapProcess": {
+        "title": "绘制业务流程",
+        "description": "展示步骤和责任人的流程图，并提供简化版本。",
+        "prompt": "用 Mermaid 流程图绘制典型采购订单审批流程，标明责任人和交接点，指出瓶颈，并提供简化版本供对比。"
+      },
+      "statusTemplate": {
+        "title": "设计周报模板",
+        "description": "提供可复用的进展格式和填写示例。",
+        "prompt": "为运营团队设计可复用的每周进展报告：包括章节、各章节应回答的问题和填写示例，控制在两分钟内可以读完。"
+      },
+      "pitchOutline": {
+        "title": "规划路演幻灯片",
+        "description": "规划十页叙事和每页必须证明的内容。",
+        "prompt": "为种子轮融资规划十页路演幻灯片：列出叙事主线、每页必须证明的内容，以及投资人可能提出的问题。请先让我用一句话介绍公司。"
+      },
+      "researchTopic": {
+        "title": "研究任意主题",
+        "description": "为你感兴趣的主题整理有来源的简报。",
+        "prompt": "提供一页有来源的核聚变能源现状简报：技术进展、主要参与者，以及未来五年的关注点。引用最新资料。"
+      }
+    },
+    "workspaceIdeas": {
+      "dirtyBranch": {
+        "title": "完成 {{branch}} 上的工作",
+        "titleWithoutBranch": "完成 {{repo}} 中的修改",
+        "description": "已更改 {{fileCount}} 个文件。Droid 将完成工作并运行检查。",
+        "prompt": "我在分支 {{branch}} 上有 {{fileCount}} 个文件尚未提交。请审查修改，判断我正在进行的工作，完成它，并运行相关测试和检查。总结你的更改。",
+        "promptWithoutBranch": "我在 {{repo}} 中有 {{fileCount}} 个文件尚未提交。请审查修改，判断我正在进行的工作，完成它，并运行相关测试和检查。总结你的更改。"
+      },
+      "branchReview": {
+        "title": "在创建 PR 前审查 {{branch}}",
+        "description": "对比 {{defaultBranch}} 检查修改中的缺陷和遗漏。",
+        "prompt": "对比 {{defaultBranch}} 审查分支 {{branch}}：阅读提交，查找缺陷、缺失的测试和未完成的工作，并修复发现的问题。最后提供可直接粘贴的简短拉取请求描述。"
+      },
+      "runTests": {
+        "title": "运行 {{repo}} 的测试",
+        "description": "查明测试运行方式，执行测试并修复失败项。",
+        "descriptionWithCommand": "运行 {{command}} 并修复失败项。",
+        "descriptionWithToolchain": "查明使用 {{toolchain}} 运行测试的方式，执行测试并修复失败项。",
+        "prompt": "查明 {{repo}} 的测试运行方式，执行测试并修复所有失败项。总结修复内容。",
+        "promptWithCommand": "在 {{repo}} 中使用 `{{command}}` 运行测试。若有失败，请查明原因并修复，然后重新运行直至通过。总结修复内容。",
+        "promptWithToolchain": "查明 {{repo}} 的测试运行方式（项目使用 {{toolchain}}），执行测试并修复所有失败项。总结修复内容。"
+      },
+      "explainRepo": {
+        "title": "解释 {{repo}} 的工作方式",
+        "description": "介绍主要模块、连接关系及建议阅读起点。",
+        "prompt": "解释 {{repo}} 的结构：主要模块、模块之间的连接，以及请求或命令的流转过程。指出应该先阅读哪些文件。",
+        "promptWithLanguage": "解释这个 {{primaryLanguage}} 代码库 {{repo}} 的结构：主要模块、模块之间的连接，以及请求或命令的流转过程。指出应该先阅读哪些文件。"
+      },
+      "multiRepo": {
+        "title": "追踪 {{first}} 和 {{second}} 的连接关系",
+        "description": "用图展示两者之间的 API、调用和共享代码。",
+        "prompt": "此环境包含 {{repositories}}。请追踪它们之间的 API、调用和共享代码，用 Mermaid 图展示连接关系，并指出脆弱之处。"
+      },
+      "addTests": {
+        "title": "为 {{repo}} 添加测试",
+        "description": "覆盖尚未测试的重要代码。",
+        "prompt": "找出 {{repo}} 中最重要但尚无测试的代码，添加有针对性的测试并运行。说明覆盖了什么以及原因。"
+      },
+      "lint": {
+        "title": "修复 {{repo}} 的 lint 错误",
+        "description": "运行 {{command}} 并修复报告的问题。",
+        "prompt": "在 {{repo}} 中运行 `{{command}}`，在不改变行为的前提下修复所有报告的问题。重新运行以确认没有问题。"
+      },
+      "findBug": {
+        "title": "查找并修复 {{repo}} 的缺陷",
+        "description": "找到真实缺陷，解释并修复，再添加测试。",
+        "prompt": "检查 {{repo}}，找出一个真实缺陷，例如崩溃、错误结果或未处理的边界情况。解释原因，修复它，并添加能够发现该问题的测试。"
       }
     }
   },
@@ -214,7 +285,6 @@
     "missingSignInDetails": "此页面缺少登录信息，请重启 Factory Desktop 后重新登录。",
     "openDesktopApp": "打开桌面应用",
     "manageAccount": "管理账号",
-    "continueToWebApp": "继续前往网页应用",
     "signedInToFactory": "已登录 Factory",
     "authenticationFailed": "认证失败",
     "backToFactory": "返回 Factory"
@@ -233,5 +303,16 @@
     "accountOnlySubtitle": "你的账号可以在终端和桌面应用中使用 Droid。安装其中一个即可开始。",
     "desktopReturnSubtitle": "返回桌面应用，开始与 Droid 工作。",
     "finishingSetup": "正在完成设置"
+  },
+  "webEnvironmentSetup": {
+    "createFailed": "无法创建环境。请重试。",
+    "reposFailed": "无法加载你的仓库。",
+    "privateRepository": "私有",
+    "welcome": {
+      "intro": "你好，我是 Droid。正在为你的云计算机配置 {{repositories}}。",
+      "introWithMore": "你好，我是 Droid。正在为你的云计算机配置 {{repositories}} 等另外 {{count}} 项。",
+      "capabilities": "我可以探索代码、修复缺陷、编写测试并打开拉取请求，你可以在这里查看每个步骤。",
+      "question": "我们先做什么？"
+    }
   }
 }

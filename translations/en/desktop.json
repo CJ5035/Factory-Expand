@@ -23,6 +23,7 @@
   },
   "contextMenu": {
     "copyLink": "Copy Link",
+    "openInBrowserPanel": "Open in In-App Browser",
     "copyImage": "Copy Image",
     "learnSpelling": "Learn Spelling",
     "noGuessesFound": "No Guesses Found"
@@ -66,7 +67,9 @@
     "airgapDisabled": "Updates are unavailable while Airgap Mode is enabled.",
     "enterpriseDisabled": "Desktop updates are disabled by your organization.",
     "externalInstallDisabled": "This copy of Factory is managed outside the in-app updater. Update it with your package manager or reinstall it with the Factory install script.",
+    "userSettingDisabled": "Desktop updates are turned off by disableAutoUpdate in your Factory settings (~/.factory/settings.json).",
     "serverUnreachable": "Could not reach update server. Please try again.",
+    "restartFailed": "Could not restart into the update. Please try again.",
     "cannotUpdateTitle": "Cannot Update",
     "cannotUpdateMessage": "Factory cannot update from its current location.",
     "moveToApplications": "Move Factory.app to your Applications folder, then relaunch it to enable auto-updates.",

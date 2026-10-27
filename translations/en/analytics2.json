@@ -1,9 +1,54 @@
 {
   "companyCostTab": {
     "factoryStandardCreditConsumptionAcrossThe": "Factory Standard Credit consumption across the org.",
+    "factoryStandardCreditConsumptionAcrossYour": "Factory Standard Credit consumption across your root organization and its sub-organizations.",
     "consumption": "Consumption",
     "yourFactoryStandardCreditConsumption": "Your Factory Standard Credit consumption.",
     "usage": "Usage"
+  },
+  "enterpriseCost": {
+    "orgFilter": {
+      "label": "Organization",
+      "ariaLabel": "Filter by organization",
+      "all": "All organizations",
+      "noneInHierarchy": "None of the selected organizations are in your hierarchy anymore. Clear filters to see all organizations."
+    },
+    "filters": {
+      "all": "All",
+      "model": "Model",
+      "user": "User",
+      "userType": "User type",
+      "source": "Source",
+      "accessType": "Access type"
+    },
+    "rangeFilter": {
+      "label": "Date range",
+      "thisMonth": "This month",
+      "lastMonth": "Last month",
+      "last3Months": "Last 3 months",
+      "last6Months": "Last 6 months"
+    },
+    "organizationsPageSummary": "{{start}}–{{end}} of {{total}} organizations",
+    "kpi": {
+      "fscPerUserMonth": "FSC / user / month",
+      "fscPerUserMonthTooltip": "Average FSC billed per active user per month, over the complete calendar months in the selected date range; the month in progress is left out.",
+      "activeOrganizations": "Active organizations",
+      "activeOrganizationsTooltip": "Organizations with FSC in the selected date range, among the organizations in scope (the filtered selection, or the whole hierarchy)."
+    },
+    "leaderboard": {
+      "title": "Organization Leaderboard",
+      "subtitle": "Ranked by FSC",
+      "description": "Every organization in scope ranked by FSC over the selected date range, the root organization's own usage included. Active Users counts users with billed usage. FSC / User / Month is the average FSC billed per active user per month, over the complete calendar months in the range; the month in progress is left out.",
+      "tableLabel": "Organizations ranked by FSC",
+      "columns": {
+        "organization": "Organization",
+        "fsc": "FSC",
+        "share": "Share",
+        "activeUsers": "Active Users",
+        "fscPerUser": "FSC / User / Month",
+        "sessions": "Sessions"
+      }
+    }
   },
   "adoptionCapabilities": {
     "toolUsage": "Tool usage",
@@ -199,7 +244,7 @@
   "personalUsageOverview": {
     "shareOfYourFscByModel": "Share of your FSC by model over the selected date range (top 20 billed models); the rest fold into Other. Excludes models Factory runs under the hood (e.g. session-title generation), so it reflects models you deliberately used.",
     "modelMix": "Model Mix",
-    "shareOfYourFscByThe": "Share of your FSC by the labels on the tickets your sessions were attributed to. Sessions without an attributed labeled ticket show as Unclassified.",
+    "shareOfYourFscByThe": "Share of your FSC by the labels on the tickets your sessions were attributed to. Sessions without an attributed ticket are excluded; tickets with no labels show as No label.",
     "usageBySessionLabel": "Usage by Session Label",
     "usageAttribution": "Usage Attribution",
     "kpi": {
@@ -494,30 +539,50 @@
       "description": "Daily FSC spend over the selected date range. Overall shows the unsplit daily total; By Model and By User stack the top 7 by FSC with everything else folded into Others. By Source splits the product source behind each call (managed chat, BYOK, Compute, Prem, and Advanced Analytics, which combines live and backfill Local Signals), where FSC accrues to Factory-managed inference and so dominates by design, and By Access Type splits Human (interactive) vs API (programmatic) spend.",
       "title": "Spend Over Time"
     },
+    "enterprise": {
+      "description": "Daily or monthly FSC spend across your root organization and its sub-organizations over the selected date range; a month still in progress counts through today. Overall shows the unsplit total; By Organization, By Model, and By User stack the top 7 by FSC with everything else folded into Others. By User Type splits human users from service accounts, By Source splits the product source behind each call, and By Access Type splits Human (interactive) vs API (programmatic) spend."
+    },
     "personal": {
       "description": "Your daily FSC over the selected date range. Overall shows your unsplit daily total; By Model stacks your top 7 models by FSC with everything else folded into Others. The model split excludes models Factory runs under the hood (e.g. session-title generation), so it can total slightly less than Overall.",
       "title": "Usage Over Time"
     },
     "groups": {
       "overall": "Overall",
+      "byOrganization": "By Organization",
       "byModel": "By Model",
       "byUser": "By User",
+      "byUserType": "By User Type",
       "bySource": "By Source",
       "byAccessType": "By Access Type"
     },
     "totalFsc": "Total FSC",
-    "subtitle": "Daily (UTC) · Factory Standard Credits"
+    "subtitle": "Daily (UTC) · Factory Standard Credits",
+    "monthlySubtitle": "Monthly (UTC) · Factory Standard Credits",
+    "interval": {
+      "daily": "Daily",
+      "monthly": "Monthly"
+    },
+    "intervalLabel": "{{title}} interval",
+    "groupLabel": "{{title}} grouping"
   },
   "topUsers": {
     "title": "Top Users by Spend",
     "description": "Top 20 users by total FSC over the selected date range, with each user's share of company FSC, billed sessions, and share of all company sessions.",
+    "enterpriseDescription": "Every user with usage over the selected date range across your root organization and its sub-organizations, ranked by total FSC, with the organizations their spend landed in, each user's share of the combined FSC, billed sessions, and share of all sessions. FSC / Month is the user's average FSC per active month, over the complete calendar months in the range; the month in progress is left out.",
     "columns": {
       "user": "User",
       "fsc": "FSC",
       "fscPct": "FSC %",
+      "fscPerMonth": "FSC / Month",
       "sessions": "Sessions",
-      "sessionPct": "Session %"
-    }
+      "sessionPct": "Session %",
+      "organization": "Organization"
+    },
+    "organizationSpend": "{{name}}: {{fsc}}",
+    "moreOrganizations": "+{{extra}}",
+    "moreOrganizationsLabel": "Also spent in {{names}}",
+    "pageSummary": "{{start}}–{{end}} of {{total}} users",
+    "cappedSubtitle": "Top {{shown}} of {{total}} users by FSC"
   },
   "costCopy": {
     "unknownCategory": "(unknown)",
@@ -572,7 +637,7 @@
       },
       "myIntentBreakdown": {
         "title": "Sessions by Label",
-        "description": "How many of your sessions fall under each label on the tickets they were attributed to, with the FSC behind them."
+        "description": "How many of your sessions fall under each label on the tickets they were attributed to, with the FSC behind them. Sessions without an attributed ticket are excluded; tickets with no labels show as No label."
       },
       "myTopSessions": {
         "title": "Top 50 Sessions",

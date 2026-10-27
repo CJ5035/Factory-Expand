@@ -130,7 +130,6 @@
     "cannotVerifyMultiMachine": "Factory cannot verify whether your organization permits multi-machine missions. Agents run on the orchestrator machine. Ask an administrator to check Compliance Settings.",
     "remoteAccessNotAllowed": "Your organization doesn’t allow Remote Control of this computer. Agents run on the orchestrator machine.",
     "computerNotRegistered": "This computer isn’t registered for Remote Control. Agents run on the orchestrator machine. Open Settings › This Computer to register it.",
-    "settingsChangedDuringStartup": "Mission settings changed during startup. Review the required fields before continuing.",
     "chooseAvailableOrchestrator": "Choose an available orchestrator machine.",
     "missionDefaultsCouldNotLoad": "Your Mission Defaults could not load. Agents run on the orchestrator machine.",
     "startWithoutRemoteAgents": "Start without remote agents",
@@ -140,17 +139,6 @@
     "team": "Team",
     "teamHelper": "The team this mission is attributed to.",
     "noTeam": "No team",
-    "launch": {
-      "turnOnRemoteControl": "Turn on Remote Control",
-      "createComputer": "Create a computer from {{environment}}",
-      "setUpComputer": "Set up the orchestrator computer",
-      "connectToThisComputer": "Connect to this computer",
-      "connectToMachine": "Connect to {{machine}}",
-      "connectToComputer": "Connect to the orchestrator computer",
-      "startOrchestrator": "Start the orchestrator",
-      "openMission": "Open the mission",
-      "agentMachines": "Agent machines"
-    },
     "machineSummary": {
       "defaultAndYours_one": "Agents can use {{defaultMachine}} and one of your machines.",
       "defaultAndYours_other": "Agents can use {{defaultMachine}} and {{count}} of your machines.",
@@ -195,8 +183,21 @@
   },
   "newMissionComputerStartup": {
     "startTimedOut": "The orchestrator computer is taking too long to start. Retry to check its progress.",
-    "provisionFailed": "The orchestrator computer failed to provision. Choose another environment or retry.",
-    "preparing": "Preparing the orchestrator computer…"
+    "provisionFailed": "The orchestrator computer failed to provision. Choose another environment or retry."
+  },
+  "missionLaunch": {
+    "startFailed": "The mission could not start.",
+    "composerLocked": "Available once your mission is ready.",
+    "composerPlaceholder": "Setting up your mission…",
+    "step": {
+      "turnOnRemoteControl": "Turning on Remote Control",
+      "createComputer": "Creating a computer from {{environment}}",
+      "setUpComputer": "Setting up the computer",
+      "connectToThisComputer": "Connecting to this computer",
+      "connectToMachine": "Connecting to {{machine}}",
+      "connectToComputer": "Connecting to the computer",
+      "startMission": "Starting your mission"
+    }
   },
   "progressLog": {
     "missionAccepted": "Mission accepted",

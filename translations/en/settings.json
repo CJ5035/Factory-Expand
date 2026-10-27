@@ -1,4 +1,16 @@
 {
+  "subOrganizationLifecycle": {
+    "title": "Organization lifecycle",
+    "select": "Select an organization",
+    "deactivate": "Deactivate",
+    "confirmTitle": "Deactivate this organization?",
+    "cancel": "Cancel",
+    "acknowledge": "I understand this organization will no longer be accessible.",
+    "activeMembers": "Active members block deactivation. Remove their access first.",
+    "activeServiceAccounts": "Active customer-managed service accounts block deactivation. Deactivate them first.",
+    "activeDescendants": "Active descendants block deactivation. Deactivate organizations from the bottom up.",
+    "restored": "An organization with this name already exists. It has been reactivated."
+  },
   "openComputeBaseImages": {
     "loading": "Loading base images…",
     "title": "Base images",
@@ -42,6 +54,18 @@
     "customUpdated": "Custom image reference saved.",
     "customDeleted": "Custom image deleted."
   },
+  "privateBitbucket": {
+    "repositories": "Repository selection",
+    "setupInstructions": "Register a customer-owned Bitbucket OAuth application with the callback URL configured by your Factory Private administrator. Cloud uses https://bitbucket.org; Data Center uses your instance URL.",
+    "search": "Search repositories or workspaces/projects",
+    "enabledOnly": "Show enabled repositories only",
+    "enableAll": "Enable all repositories",
+    "sync": "Refresh repositories",
+    "loading": "Discovering repositories…",
+    "retry": "Retry",
+    "empty": "No repositories match.",
+    "paginationSummary": "{{start}}–{{end}} of {{total}}"
+  },
   "groupsSettings": {
     "title": "User Groups",
     "titleWithCount": "User Groups · {{count}}",
@@ -54,13 +78,12 @@
     "notInDirectory": "{{id}} (not in directory)",
     "notConfigured": "Not configured",
     "usageLimitDetail": "{{limit}} credits per member each month",
-    "usageLimitRange": "Varies by organization: {{min}} to {{max}} credits per member each month"
+    "usageLimitRange": "Varies by organization: {{min}} to {{max}} credits per member each month",
+    "modelAccessDetail": "{{allowed}} allowed, {{blocked}} blocked",
+    "modelAccessVaries": "Varies by organization"
   },
   "directoryGroupConfiguration": {
     "title": "Configure {{name}}",
-    "settingsStep": "Configure settings",
-    "organizationsStep": "Choose organizations",
-    "step": "Step {{step}} of {{total}}",
     "limitTitle": "Monthly usage limit",
     "limitDescription": "Members of the group get this limit unless they have an individual override. It takes precedence over the global user limit.",
     "limitLabel": "Limit per member (millions of credits)",
@@ -79,7 +102,20 @@
     "back": "Back",
     "saving": "Saving...",
     "save": "Save",
-    "next": "Next"
+    "next": "Next",
+    "limitOptional": "Leave blank for no group limit.",
+    "modelAccessTitle": "Model access",
+    "modelAccessDescription": "Allow or block models for members of the group on top of each organization's model policy. A member can use a model if any of their groups allows it, and individual user overrides take precedence.",
+    "searchModels": "Search models",
+    "clearModelAccess": "Clear all",
+    "nothingToSave": "Set a usage limit or model access to save this group.",
+    "nothingToSaveLimitOnly": "Set a usage limit to save this group.",
+    "limitRemovedChange": "{{group}} in {{organization}}: usage limit removed",
+    "limitInvalid": "Enter zero or a positive number of millions of credits.",
+    "limitAddedChange": "{{group}} in {{organization}}: usage limit of {{next}} credits added",
+    "modelAccessAddedChange": "{{group}} in {{organization}}: model access {{next}} added",
+    "modelAccessChange": "{{group}} in {{organization}}: model access changes from {{previous}} to {{next}}",
+    "modelAccessRemovedChange": "{{group}} in {{organization}}: model access removed"
   },
   "fleet": {
     "label": "Fleet",
@@ -221,6 +257,14 @@
     "inactive": "Inactive",
     "noActiveApiKeys": "No active API keys.",
     "noInactiveApiKeys": "No revoked or expired API keys."
+  },
+  "organizationPersonalKeys": {
+    "title": "Organization personal keys",
+    "description": "Revoke personal keys in this organization, including keys from previous identity providers. Owner details and roles are recorded at key creation.",
+    "ownerMetadata": "Owner: {{owner}} · Role at creation: {{role}} · Issuer: {{issuer}}",
+    "unknown": "Unknown",
+    "loadFailed": "Could not load organization personal keys. This deployment may need an update.",
+    "retry": "Retry"
   },
   "apiKeysSettings": {
     "createKey": "Create Key",
@@ -422,6 +466,7 @@
     "enterYourBitbucketOauthClientSecret": "Enter your Bitbucket OAuth client secret",
     "followTheDocumentation": "Follow the <anchor>Bitbucket Data Center documentation</anchor> to create an OAuth application and get the required credentials.",
     "configurationSaved": "Bitbucket Data Center configuration saved",
+    "cloudConfigurationSaved": "Bitbucket configuration saved",
     "saving": "Saving...",
     "saveConfiguration": "Save Configuration"
   },
@@ -1181,8 +1226,8 @@
       "environments": {
         "label": "Environments",
         "computersTab": "Computers",
-        "templatesTab": "Templates",
-        "description": "The computers and templates that Droid sessions run on."
+        "templatesTab": "Environments",
+        "description": "The computers and environments that Droid sessions run on."
       }
     },
     "enterpriseControlsGroups": {
@@ -1334,7 +1379,7 @@
       "computerSecretsChange": "Computer secrets",
       "organizationMonthlyUsageSettingsChange": "Organization usage settings",
       "delegationActivity": "Delegation",
-      "remoteDelegationConfigChange": "Delegation config",
+      "agentProfileChange": "Agent profile",
       "agentReadinessReportChange": "Agent Readiness reports"
     },
     "auditScope": {
@@ -1383,7 +1428,7 @@
       "medium": "Inherit (Medium)",
       "heavy": "Inherit (High)"
     },
-    "remoteDelegationConfigs": {
+    "agentProfiles": {
       "apps": {
         "title": "Apps",
         "description": "Powers Factory in Slack, Teams, Linear, and Jira."
@@ -1533,7 +1578,6 @@
   "explicitModelOptInModal": {
     "dataRetentionStep": "Data retention",
     "highCostStep": "Higher cost",
-    "stepLabel": "{{number}}. {{label}}",
     "title": "Explicit Model Approval: {{modelName}}",
     "highCostTitle": "High-Cost Model Approval: {{modelName}}",
     "continue": "Continue",
@@ -1680,7 +1724,7 @@
       "providersLoad": "Compute providers could not be loaded.",
       "repositoriesLoad": "Repositories could not be loaded. Try again.",
       "computersLoad": "Existing Droid Computers could not be loaded, so the name can't be checked yet. Try again.",
-      "templatesLoad": "Templates could not be loaded. Try again.",
+      "templatesLoad": "Environments could not be loaded. Try again.",
       "creationUnavailable": "Droid Computer creation is unavailable. Try again.",
       "creationStatusLoad": "Creation status could not be loaded. Check Droid Computers before retrying.",
       "createFailed": "Could not create Droid Computer."
@@ -2028,8 +2072,8 @@
     "cancel": "Cancel",
     "continue": "Continue",
     "back": "Back",
-    "text1TemplateDetails": "1. Environment details",
-    "text2BuildSteps": "2. Build steps",
+    "environmentDetails": "Environment details",
+    "buildSteps": "Build steps",
     "creating": "Creating…",
     "create": "Create",
     "createTemplate": "Create Environment"
@@ -2293,8 +2337,7 @@
     "createComputer": "Create computer"
   },
   "integrationCallback": {
-    "failedToCompleteIntegration": "Failed to complete integration. Please try again.",
-    "loading": "Finishing the connection"
+    "failedToCompleteIntegration": "Failed to complete integration. Please try again."
   },
   "integrationError": {
     "returnToSettings": "Return to settings",
@@ -2312,8 +2355,7 @@
     "memberAccess": "Member access"
   },
   "integrationStart": {
-    "failedToStartIntegration": "Failed to start integration. Please try again.",
-    "loading": "Starting the connection"
+    "failedToStartIntegration": "Failed to start integration. Please try again."
   },
   "jiraDelegationSetupSection": {
     "jiraAppStatus": "Jira app status",
@@ -2560,6 +2602,14 @@
     "next": "Next"
   },
   "notificationsSection": {
+    "desktopNotifications": "Desktop notifications",
+    "desktopNotificationsDescription": "Show a system notification when a new item arrives in your inbox and you are not already looking at it.",
+    "followInboxCategories": "Desktop notifications follow your <anchor>inbox categories</anchor>.",
+    "openSystemSettings": "Open system notification settings",
+    "preferencesSaved": "Notification preferences saved",
+    "systemSettings": "System notifications",
+    "systemSettingsDescription": "If notifications do not appear, make sure Factory is allowed to notify in your system settings.",
+    "systemUnsupportedDescription": "This system cannot show notifications for Factory.",
     "nativeNotificationsAreShownWhenThe": "Native notifications are shown when the app is not focused.",
     "notifications": "Notifications",
     "notifyWhenDroidFinishesWork": "Notify when Droid finishes work",
@@ -2920,7 +2970,11 @@
       "large": "Large (120%)",
       "extraLarge": "Extra Large (130%)"
     },
-    "keepAwakeSaveFailed": "Failed to save keep-awake preference"
+    "keepAwakeSaveFailed": "Failed to save keep-awake preference",
+    "automaticallyUpdate": "Automatically update",
+    "automaticallyUpdateDescription": "Download updates in the background so they are ready when you restart. Your organization's update settings still apply.",
+    "autoUpdateSaveFailed": "Failed to save automatic update preference",
+    "autoUpdateSaveFailedDescription": "Your previous setting was restored. Try again."
   },
   "providerSelector": {
     "computeProvider": "Compute provider",
@@ -2941,12 +2995,12 @@
     "rawConfiguration": "Raw Configuration",
     "validationErrors": "Validation Errors"
   },
-  "remoteDelegationConfigSection": {
+  "agentProfileSection": {
     "plugins": "Plugins",
-    "installedForEveryDelegatedSessionThat": "Installed for every delegated session that runs under this config, in addition to any plugin enabled org-wide under Enterprise Controls › Plugins.",
+    "installedForEveryDelegatedSessionThat": "Installed for every delegated session that runs under this profile, in addition to any plugin enabled org-wide under Enterprise Controls › Plugins.",
     "enabledOrgWide": "Enabled org-wide",
-    "addedByThisConfig": "Added by this config",
-    "noPluginsAddedByThisConfig": "No plugins added by this config.",
+    "addedByThisConfig": "Added by this profile",
+    "noPluginsAddedByThisConfig": "No plugins added by this profile.",
     "pluginName": "Plugin name",
     "pluginName2": "plugin-name",
     "marketplace": "Marketplace",
@@ -2956,11 +3010,11 @@
     "enterJustThePluginNameAnd": "Enter just the plugin name and pick its marketplace from the list.",
     "thatPluginIsAlreadyListed": "That plugin is already listed.",
     "thatPluginIsAlreadyEnabledOrg": "That plugin is already enabled org-wide, so every session gets it.",
-    "thatPluginIsTurnedOffFor": "That plugin is turned off for the whole organization, so this config cannot enable it.",
+    "thatPluginIsTurnedOffFor": "That plugin is turned off for the whole organization, so this profile cannot enable it.",
     "failedToLoadServiceAccountsRefresh": "Failed to load service accounts. Refresh the page to try again.",
     "loadingServiceAccounts": "Loading service accounts…",
     "identity": "Identity",
-    "delegatedSessionsRunAsThisService": "Delegated sessions run as this service account, and it owns every machine in the config’s pool.",
+    "delegatedSessionsRunAsThisService": "Delegated sessions run as this service account, and it owns every machine in the profile’s pool.",
     "useExistingServiceAccount": "Use Existing Service Account",
     "newServiceAccount": "New Service Account",
     "theRemoteDelegationsServiceAccountIs": "The delegations service account is not set up yet. Refresh the page to try again.",
@@ -2995,7 +3049,7 @@
     "templateInaccessible": "You can't access every repository in this environment, so it isn't in your environment list.",
     "perMachineParallelWorkerLimit": "Per machine parallel worker limit",
     "perMachineParallelWorkerLimitHelp": "Per machine parallel worker limit help",
-    "remoteDelegationConfigs": "Delegation Configs",
+    "agentProfiles": "Agent Profiles",
     "computerTypes": {
       "bringYourOwnMachine": "Remote Control",
       "managedByFactory": "Managed by Factory"
@@ -3017,15 +3071,15 @@
       "identity": "Identity",
       "compute": "Compute"
     },
-    "untitledConfig": "Untitled config",
+    "untitledConfig": "Untitled profile",
     "edit": "Edit",
     "setUp": "Set up",
     "editConfig": "Edit {{title}}",
     "setUpConfig": "Set up {{title}}",
     "removePlugin": "Remove {{pluginId}}",
     "unregisteredPluginsWillNotInstall": "These plugins will not install until their marketplace is registered in Enterprise Controls: {{pluginIds}}.",
-    "blockedPluginsWillNotInstall": "These plugins are turned off for the whole organization, which overrides this config, so they will not install: {{pluginIds}}.",
-    "maximumPluginsPerConfigReached": "Maximum of {{max}} plugins per config reached.",
+    "blockedPluginsWillNotInstall": "These plugins are turned off for the whole organization, which overrides this profile, so they will not install: {{pluginIds}}.",
+    "maximumPluginsPerConfigReached": "Maximum of {{max}} plugins per profile reached.",
     "creating": "Creating…",
     "createServiceAccount": "Create Service Account",
     "seeByomGuide": "<anchor>See Remote Control guide</anchor> to register your own computers",
@@ -3040,12 +3094,12 @@
     "chooseAnIdentityToContinue": "Choose an identity to continue.",
     "saving": "Saving…",
     "finish": "Finish",
-    "editModalTitle": "Edit Delegation Config - {{name}}",
-    "setUpModalTitle": "Set Up Delegation Config - {{name}}",
-    "oneTemplatePerConfig": "A config runs on one environment. Remove the selected environment to choose another.",
+    "editModalTitle": "Edit Agent Profile - {{name}}",
+    "setUpModalTitle": "Set Up Agent Profile - {{name}}",
+    "oneTemplatePerConfig": "A profile runs on one environment. Remove the selected environment to choose another.",
     "parallelWorkerLimitTooltip": "We recommend 3–5. Limits how many sessions are active on each machine at once. A session counts while it runs and for 30 minutes after it goes idle, so its follow-ups have room."
   },
-  "remoteDelegationConfigTag": {
+  "agentProfileTag": {
     "delegationApps": "Delegation apps",
     "softwareFactory": "Software Factory"
   },
@@ -3092,10 +3146,10 @@
     "continue": "Continue",
     "additionalRepositories": "Additional repositories",
     "cloneRepositories": "Clone repositories",
-    "additionalRepositoriesDescription": "Choose any additional repositories to clone. The template repositories below are already configured and do not need to be selected again.",
+    "additionalRepositoriesDescription": "Choose any additional repositories to clone. The environment repositories below are already configured and do not need to be selected again.",
     "cloneRepositoriesDescription": "Droid will clone selected repositories onto your computer after it comes online. This step is optional. You can continue without any.",
     "includedIn": "Included in {{name}}",
-    "templateHasNoRepositories": "This template does not include any repositories.",
+    "templateHasNoRepositories": "This environment does not include any repositories.",
     "includedRepositories_one": "{{count}} repository is already configured and will be available when the computer starts.",
     "includedRepositories_other": "{{count}} repositories are already configured and will be available when the computer starts.",
     "removeUrl": "Remove {{url}}",
@@ -3204,6 +3258,10 @@
     "manageTarget": "Manage {{target}}",
     "connectTarget": "Connect {{target}}",
     "connected": "Connected",
+    "bitbucketPersonalCompletion": {
+      "connected": "Your Bitbucket account is connected.",
+      "otherOrganization": "This Bitbucket connection was started in another organization. Switch to that organization, then open the link again."
+    },
     "targets": {
       "personalGithubAccount": "personal GitHub account",
       "personalGitlabAccount": "personal GitLab account",
@@ -3214,6 +3272,7 @@
       "gitlabOrganization": "GitLab organization",
       "selfHostedGitlab": "self-hosted GitLab",
       "bitbucketOrganization": "Bitbucket organization",
+      "bitbucketDataCenter": "Bitbucket Data Center",
       "azureDevopsOrganization": "Azure DevOps organization",
       "personalGitlabSelfHostedAccount": "personal GitLab Self-Hosted account"
     },
@@ -3221,6 +3280,8 @@
       "githubPersonal": "Access repositories, issues, and pull requests from your personal GitHub account.",
       "gitlabPersonal": "Access projects, issues, and merge requests from your personal GitLab account.",
       "bitbucketPersonal": "Access repositories and pull requests from your personal Bitbucket account.",
+      "bitbucketPersonalDisabled": "Turned off by your organization.",
+      "bitbucketPersonalNeedsOrganization": "Ask a manager to connect Bitbucket Cloud first.",
       "azureDevopsPersonal": "Access repositories and pull requests from your personal Azure DevOps account.",
       "githubOrg": "Give Factory access to repositories in your GitHub organization.",
       "githubSelfHosted": "Give Factory access to repositories in GitHub Enterprise Server.",
@@ -3272,6 +3333,11 @@
     "shield20UsOnlyUnavailable": "Not available for US-only inference: the classifier models are not served from a route pinned to the US. The deterministic Droid Shield scan is unaffected."
   },
   "serviceAccountApiKeysModal": {
+    "creationFailed": "Could not create the API key. Your draft has been kept.",
+    "creationUncertain": "The creation response was not received. A key may have been created, but its value cannot be recovered. Review the refreshed key list, revoke any unused key, then deliberately create a new one. This request will not be retried automatically.",
+    "reviewKeys": "Review keys before creating another",
+    "inactiveAccount": "This service account is inactive. You can review and revoke keys, but cannot create new keys.",
+    "failedToLoadKeys": "Could not load API keys. Refresh to try again.",
     "cancel": "Cancel",
     "close": "Close",
     "createKey": "Create Key",
@@ -3354,6 +3420,7 @@
     "couldNotLoadGitCredentials": "Couldn't load git credentials. Refresh to try again."
   },
   "serviceAccountRow": {
+    "privateDeleteDescription": "This permanently deletes the service account and revokes its keys. Its name stays reserved, and audit and usage records are retained. Existing daemon connections remain until they disconnect. No computers or other resources are deleted.",
     "editServiceAccount": "Edit Service Account",
     "name": "Name",
     "namesAreImmutableIdentifiersCreateA": "Names are immutable identifiers. Create a new service account if you need a different name.",
@@ -3868,7 +3935,8 @@
         "loadingStatuses": "Disable dynamic loading statuses",
         "filePreviews": "Auto-open file previews",
         "openLinksInDesktop": "Open links in the desktop app",
-        "keepAwake": "Keep droid running when screen is off"
+        "keepAwake": "Keep droid running when screen is off",
+        "autoUpdate": "Automatically update"
       },
       "keyboardShortcuts": {
         "title": "Keyboard Shortcuts",
@@ -3893,7 +3961,9 @@
       "notifications": {
         "title": "Notifications",
         "notifyComplete": "Notify when Droid finishes work",
-        "notifyInput": "Notify when Droid needs input"
+        "notifyInput": "Notify when Droid needs input",
+        "desktopNotifications": "Desktop notifications",
+        "systemNotifications": "System notifications"
       },
       "emailNotifications": {
         "title": "Email Notifications",
@@ -4135,8 +4205,8 @@
       "delegationApps": {
         "title": "Delegation Apps"
       },
-      "remoteDelegationConfig": {
-        "title": "Delegation Configs"
+      "agentProfile": {
+        "title": "Agent Profiles"
       }
     },
     "openCompute": {
